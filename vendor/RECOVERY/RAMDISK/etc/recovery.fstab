@@ -1,0 +1,12 @@
+# mount point	fstype		device			[device2]
+
+/boot		emmc		boot
+#/*BEGIN PN:SPBB-1154,Added by l00192645, 2012/11/24*/
+/cache		ext4		/dev/block/mmcblk0p6
+/data		ext4		/dev/block/mmcblk0p7
+/misc		emmc		misc
+/recovery	emmc		recovery
+/sdcard		vfat		/dev/block/mmcblk1p1    /dev/block/mmcblk1
+/system		ext4		/dev/block/mmcblk0p5
+/Insdcard       vfat		/dev/block/mmcblk0p8
+#/*END PN:SPBB-1154,Added by l00192645, 2012/11/24*/

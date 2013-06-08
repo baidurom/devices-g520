@@ -20294,6 +20294,10 @@
 
     .line 4254
     .local v19, dataPathString:Ljava/lang/String;
+
+    #CL-41990 begin: unpack native binaries for system applications
+    goto :cond_3c
+    #CL-41990 end
     invoke-static/range {p1 .. p1}, Lcom/android/server/pm/PackageManagerService;->isSystemApp(Landroid/content/pm/PackageParser$Package;)Z
 
     move-result v3

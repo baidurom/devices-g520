@@ -943,6 +943,7 @@
     .catch Ljava/lang/RuntimeException; {:try_start_a .. :try_end_a} :catch_2
 
     :goto_a
+    invoke-static {v4}, Lcom/baidu/service/YiServiceLoader;->main(Landroid/content/Context;)V
     move-object/from16 v126, v127
 
     .end local v127           #vibrator:Lcom/android/server/VibratorService;

@@ -171,6 +171,7 @@
 .field public static final PRIVATE_FLAG_FAKE_HARDWARE_ACCELERATED:I = 0x1
 
 .field public static final PRIVATE_FLAG_FORCE_HARDWARE_ACCELERATED:I = 0x2
+.field public static final PRIVATE_FLAG_NOT_RESPONSE_HOME_KEY:I = 0x10
 
 .field public static final PRIVATE_FLAG_SET_NEEDS_MENU_KEY:I = 0x8
 

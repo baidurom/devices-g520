@@ -4237,7 +4237,20 @@
 
     invoke-virtual {v0, v1, p1, p2}, Landroid/app/LoadedApk;->removeContextRegistrations(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1658
+    return-void
+.end method
+
+.method refreshFontCache()V
+    .locals 0
+
+    .prologue
+    .line 530
+    invoke-static {}, Landroid/graphics/Canvas;->freeCaches()V
+
+    .line 531
+    invoke-static {}, Landroid/graphics/Canvas;->freeTextLayoutCaches()V
+
+    .line 532
     return-void
 .end method
 

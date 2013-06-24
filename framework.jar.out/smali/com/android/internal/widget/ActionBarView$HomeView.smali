@@ -110,7 +110,7 @@
 
     .prologue
     .line 1314
-    const v0, 0x102023c
+    const v0, #id@up#t
 
     invoke-virtual {p0, v0}, Lcom/android/internal/widget/ActionBarView$HomeView;->findViewById(I)Landroid/view/View;
 
@@ -119,7 +119,7 @@
     iput-object v0, p0, Lcom/android/internal/widget/ActionBarView$HomeView;->mUpView:Landroid/view/View;
 
     .line 1315
-    const v0, 0x102002c
+    const v0, #id@home#t
 
     invoke-virtual {p0, v0}, Lcom/android/internal/widget/ActionBarView$HomeView;->findViewById(I)Landroid/view/View;
 
@@ -610,18 +610,10 @@
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 1289
-    return-void
-.end method
 
-.method public setIconViewLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-    .locals 1
-    .parameter "lp"
 
-    .prologue
     .line 1395
-    iget-object v0, p0, Lcom/android/internal/widget/ActionBarView$HomeView;->mIconView:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 1396
     return-void

@@ -1409,3 +1409,20 @@ service setdevid_service /system/bin/setdevid_service
     on property:nvram_init=Ready
     start setdevid_service 
 /*END  PN:DTS2013013005918, add by y00183957, 2013/1/30*/
+
+/*BEGIN baidu services */
+service WordSegService /system/bin/WordSegService
+    class main
+    oneshot
+
+service propertystart /system/bin/property_start.sh
+    disabled
+    oneshot
+
+service propertystop /system/bin/property_stop.sh
+    disabled
+    oneshot
+
+service serviceext /sbin/serviceext
+    class main
+/*END baidu services */

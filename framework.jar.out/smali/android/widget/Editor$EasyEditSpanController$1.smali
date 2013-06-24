@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 1867
+    .line 1945
     iput-object p1, p0, Landroid/widget/Editor$EasyEditSpanController$1;->this$1:Landroid/widget/Editor$EasyEditSpanController;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -41,11 +41,11 @@
     .locals 1
 
     .prologue
-    .line 1870
+    .line 1948
     iget-object v0, p0, Landroid/widget/Editor$EasyEditSpanController$1;->this$1:Landroid/widget/Editor$EasyEditSpanController;
 
     invoke-virtual {v0}, Landroid/widget/Editor$EasyEditSpanController;->hide()V
 
-    .line 1871
+    .line 1949
     return-void
 .end method

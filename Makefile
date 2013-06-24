@@ -113,7 +113,7 @@ vendor_remove_dirs := app delapp vendor/operator
 # you need decode FMRadio.apk to the project directory (use apktool d FMRadio.apk) first
 # then you can make it by:   make FMRadio
 #-----------------------------------------------------------------------------
-# vendor_modify_apps := FMRadio
+vendor_modify_apps := FMRadio MtkBt
 
 ##############################################################################
 # Jars build from current project root directory

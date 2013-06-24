@@ -106,6 +106,7 @@
 
     return-void
 .end method
+
 .method constructor <init>(Lcom/android/server/am/BroadcastQueue;Landroid/content/Intent;Lcom/android/server/am/ProcessRecord;Ljava/lang/String;IILjava/lang/String;Ljava/util/List;Landroid/content/IIntentReceiver;ILjava/lang/String;Landroid/os/Bundle;ZZZ)V
     .locals 2
     .parameter "_queue"
@@ -1091,6 +1092,7 @@
 
     goto :goto_1
 .end method
+
 .method public toString()Ljava/lang/String;
     .locals 2
 

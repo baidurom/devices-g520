@@ -6783,6 +6783,17 @@
     .restart local v24       #receivers:Ljava/util/List;
     :cond_17
     :goto_7
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/android/server/am/ActivityManagerService;->mLruProcesses:Ljava/util/ArrayList;
+
+    move-object/from16 v0, v24
+
+    move-object/from16 v1, v44
+
+    invoke-static {v0, v15, v1, v3}, Lcom/baidu/security/bm/BroadcastManagerService;->filterBroadcastReceiver(Ljava/util/List;Ljava/util/List;Landroid/content/Intent;Ljava/util/ArrayList;)I
+
+    .line 13780
     invoke-virtual/range {v44 .. v44}, Landroid/content/Intent;->getFlags()I
 
     move-result v3
@@ -6898,6 +6909,15 @@
 
     .line 13795
     .local v7, r:Lcom/android/server/am/BroadcastRecord;
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/am/ActivityManagerService;->isMmsHookEnabled()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_101
+
+    invoke-virtual {v7}, Lcom/android/server/am/BroadcastRecord;->hookMessageBroadcast()V
+
+    :cond_101
     sget-boolean v3, Lcom/android/server/am/ActivityManagerService;->DEBUG_BROADCAST:Z
 
     if-eqz v3, :cond_19
@@ -7569,6 +7589,15 @@
 
     .line 13885
     .restart local v7       #r:Lcom/android/server/am/BroadcastRecord;
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/am/ActivityManagerService;->isMmsHookEnabled()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_102
+
+    invoke-virtual {v7}, Lcom/android/server/am/BroadcastRecord;->hookMessageBroadcast()V
+
+    :cond_102
     sget-boolean v3, Lcom/android/server/am/ActivityManagerService;->DEBUG_BROADCAST:Z
 
     if-eqz v3, :cond_32
@@ -24347,6 +24376,32 @@
     goto :goto_0
 .end method
 
+.method private final isMmsHookEnabled()Z
+    .locals 3
+
+    .prologue
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v1
+
+    const-string v2, "system.mms"
+
+    invoke-static {v1, v2, v0}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :cond_0
+    return v0
+.end method
+
 .method private isReceivingBroadcast(Lcom/android/server/am/ProcessRecord;)Lcom/android/server/am/BroadcastQueue;
     .locals 6
     .parameter "app"
@@ -26045,7 +26100,7 @@
 
     .line 1458
     .local v1, context:Landroid/content/Context;
-    const v4, 0x103006b
+    const v4, 0x103012b
 
     invoke-virtual {v1, v4}, Landroid/content/Context;->setTheme(I)V
 
@@ -71661,6 +71716,16 @@
 
     .line 13495
     .local v7, r:Lcom/android/server/am/BroadcastRecord;
+    
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/am/ActivityManagerService;->isMmsHookEnabled()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_100
+
+    invoke-virtual {v7}, Lcom/android/server/am/BroadcastRecord;->hookMessageBroadcast()V
+
+    :cond_100
     invoke-virtual {v8, v7}, Lcom/android/server/am/BroadcastQueue;->enqueueParallelBroadcastLocked(Lcom/android/server/am/BroadcastRecord;)V
 
     .line 13496
@@ -84229,6 +84294,48 @@
 
     and-int v2, v2, v23
 
+    if-eqz v2, :cond_103
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    new-instance v9, Landroid/content/Intent;
+
+    const-string v2, "android.intent.action.THEME_CHANGED"
+
+    invoke-direct {v9, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x0
+
+    const/4 v12, 0x0
+
+    const/4 v13, 0x0
+
+    const/4 v14, 0x0
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0x0
+
+    const/16 v17, 0x0
+
+    sget v18, Lcom/android/server/am/ActivityManagerService;->MY_PID:I
+
+    const/16 v19, 0x3e8
+
+    const/16 v20, 0x0
+
+    move-object/from16 v6, p0
+
+    invoke-direct/range {v6 .. v20}, Lcom/android/server/am/ActivityManagerService;->broadcastIntentLocked(Lcom/android/server/am/ProcessRecord;Ljava/lang/String;Landroid/content/Intent;Ljava/lang/String;Landroid/content/IIntentReceiver;ILjava/lang/String;Landroid/os/Bundle;Ljava/lang/String;ZZIII)I
+
+    :cond_103
+    const/high16 v2, -0x8000
+
+    and-int v2, v2, v23
     if-eqz v2, :cond_f
 
     .line 14346

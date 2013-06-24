@@ -6489,7 +6489,11 @@
 
     .line 2204
     :cond_2
-    if-nez v4, :cond_3
+    and-int/lit8 v6, v1, 0x2
+    if-eqz v6, :cond_3
+    const/4 v4, 0x1
+    :cond_3
+    if-nez v4, :cond_4
 
     .line 2205
     iget-object v6, p0, Lcom/android/server/net/NetworkPolicyManagerService;->mUidRules:Landroid/util/SparseIntArray;
@@ -6500,7 +6504,7 @@
     :goto_1
     and-int/lit8 v6, v4, 0x1
 
-    if-eqz v6, :cond_4
+    if-eqz v6, :cond_5
 
     move v2, v5
 
@@ -6536,7 +6540,7 @@
 
     .line 2207
     .end local v2           #rejectMetered:Z
-    :cond_3
+    :cond_4
     iget-object v6, p0, Lcom/android/server/net/NetworkPolicyManagerService;->mUidRules:Landroid/util/SparseIntArray;
 
     invoke-virtual {v6, p1, v4}, Landroid/util/SparseIntArray;->put(II)V
@@ -6544,7 +6548,7 @@
     goto :goto_1
 
     .line 2210
-    :cond_4
+    :cond_5
     const/4 v2, 0x0
 
     goto :goto_2

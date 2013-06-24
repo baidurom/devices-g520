@@ -3946,7 +3946,7 @@
 .end method
 
 .method public enqueueNotificationInternal(Ljava/lang/String;IILjava/lang/String;ILandroid/app/Notification;[I)V
-    .locals 35
+    .locals 37
     .parameter "pkg"
     .parameter "callingUid"
     .parameter "callingPid"
@@ -4353,6 +4353,25 @@
 
     .line 956
     :cond_8
+    const-string v5, "android"
+    move-object/from16 v0, p1
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v5
+    if-nez v5, :cond_99
+    invoke-static {}, Lcom/baidu/notificationdefense/NotificationDefenseManager;->getInstance()Lcom/baidu/notificationdefense/NotificationDefenseManager;
+    move-result-object v35
+    .local v35, ndm:Lcom/baidu/notificationdefense/NotificationDefenseManager;
+    move-object/from16 v0, v35
+    move-object/from16 v1, p1
+    move/from16 v2, p5
+    move-object/from16 v3, p6
+    invoke-virtual {v0, v1, v2, v3}, Lcom/baidu/notificationdefense/NotificationDefenseManager;->defense(Ljava/lang/String;ILandroid/app/Notification;)Z
+    move-result v36
+    .local v36, blocked:Z
+    if-nez v36, :cond_0
+    .end local v36           #blocked:Z
+    .end local v35           #ndm:Lcom/baidu/notificationdefense/NotificationDefenseManager;
+    :cond_99
     move-object/from16 v0, p6
 
     iget v5, v0, Landroid/app/Notification;->priority:I

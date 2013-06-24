@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/pm/ShutdownThread;->running()V
+    value = Lcom/android/server/pm/ShutdownThread;->run()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 677
+    .line 356
     iput-object p1, p0, Lcom/android/server/pm/ShutdownThread$6;->this$0:Lcom/android/server/pm/ShutdownThread;
 
     invoke-direct {p0}, Landroid/os/storage/IMountShutdownObserver$Stub;-><init>()V
@@ -44,7 +44,7 @@
     .end annotation
 
     .prologue
-    .line 679
+    .line 358
     const-string v0, "ShutdownThread"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -73,20 +73,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 680
-    if-gez p1, :cond_0
-
-    .line 681
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Lcom/android/server/pm/ShutdownThread;->access$702(I)I
-
-    .line 683
-    :cond_0
+    .line 359
     iget-object v0, p0, Lcom/android/server/pm/ShutdownThread$6;->this$0:Lcom/android/server/pm/ShutdownThread;
 
     invoke-virtual {v0}, Lcom/android/server/pm/ShutdownThread;->actionDone()V
 
-    .line 684
+    .line 360
     return-void
 .end method

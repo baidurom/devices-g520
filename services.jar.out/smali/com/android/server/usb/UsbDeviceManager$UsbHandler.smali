@@ -2687,6 +2687,7 @@
     .locals 13
 
     .prologue
+    goto :goto_0
     const/4 v12, 0x0
 
     const/4 v11, 0x2

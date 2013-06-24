@@ -131,7 +131,7 @@ vendor_remove_dirs := app delapp vendor/operator
 # you need decode android.policy.jar to the project directory (use apktool d android.policy.jar) first
 # then you can make it by:   make android.policy
 #-----------------------------------------------------------------------------
-vendor_modify_jars := framework secondary-framework services android.policy
+vendor_modify_jars := framework secondary-framework services
 
 ##############################################################################
 # baidu_remove_apps: those baidu apk you want remove 
@@ -148,7 +148,7 @@ baidu_modify_apps := Phone
 # baidu_modify_jars: which base the baidu's jar
 # just append *.smali.part
 #-----------------------------------------------------------------------------
-# baidu_modify_jars := android.policy
+baidu_modify_jars := android.policy
 
 ##############################################################################
 # override_property: this property will override the build.prop

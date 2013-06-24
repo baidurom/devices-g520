@@ -80,7 +80,7 @@ PLATFORM := mtk
 # NULL, none boot.img/recovery.img
 #-----------------------------------------------------------------------------
 PREBUILT_BOOT_IMG := false
-PREBUILT_RECOVERY_IMG := 
+PREBUILT_RECOVERY_IMG := true
 
 ##############################################################################
 # Directorys which you want to remove in vendor directory

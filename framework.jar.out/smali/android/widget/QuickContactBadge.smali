@@ -15,6 +15,7 @@
 
 
 # static fields
+.field private static final ACTION_STRANGE_QUICK_CONTACT:Ljava/lang/String; = "com.baidu.contacts.action.STRANGE_QUICK_CONTACT"
 .field static final EMAIL_ID_COLUMN_INDEX:I = 0x0
 
 .field static final EMAIL_LOOKUP_PROJECTION:[Ljava/lang/String; = null
@@ -201,6 +202,21 @@
     return-void
 .end method
 
+.method static synthetic access$200(Landroid/widget/QuickContactBadge;Landroid/content/Context;Landroid/view/View;Landroid/net/Uri;I[Ljava/lang/String;)V
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+    .parameter "x2"
+    .parameter "x3"
+    .parameter "x4"
+    .parameter "x5"
+
+    .prologue
+    .line 57
+    invoke-direct/range {p0 .. p5}, Landroid/widget/QuickContactBadge;->showStrangeQuickContact(Landroid/content/Context;Landroid/view/View;Landroid/net/Uri;I[Ljava/lang/String;)V
+
+    return-void
+.end method
 .method private isAssigned()Z
     .locals 1
 
@@ -241,8 +257,169 @@
 
     invoke-virtual {p0, v0}, Landroid/widget/QuickContactBadge;->setEnabled(Z)V
 
-    .line 213
     return-void
+.end method
+
+.method private showStrangeQuickContact(Landroid/content/Context;Landroid/view/View;Landroid/net/Uri;I[Ljava/lang/String;)V
+    .locals 9
+    .parameter "context"
+    .parameter "target"
+    .parameter "createUri"
+    .parameter "mode"
+    .parameter "excludeMimes"
+
+    .prologue
+    const/4 v8, 0x1
+
+    const/4 v6, 0x0
+
+    const/high16 v7, 0x3f00
+
+    .line 361
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/content/res/Resources;->getCompatibilityInfo()Landroid/content/res/CompatibilityInfo;
+
+    move-result-object v5
+
+    iget v0, v5, Landroid/content/res/CompatibilityInfo;->applicationScale:F
+
+    .line 362
+    .local v0, appScale:F
+    const/4 v5, 0x2
+
+    new-array v3, v5, [I
+
+    .line 363
+    .local v3, pos:[I
+    invoke-virtual {p2, v3}, Landroid/view/View;->getLocationOnScreen([I)V
+
+    .line 365
+    new-instance v4, Landroid/graphics/Rect;
+
+    invoke-direct {v4}, Landroid/graphics/Rect;-><init>()V
+
+    .line 366
+    .local v4, rect:Landroid/graphics/Rect;
+    aget v5, v3, v6
+
+    int-to-float v5, v5
+
+    mul-float/2addr v5, v0
+
+    add-float/2addr v5, v7
+
+    float-to-int v5, v5
+
+    iput v5, v4, Landroid/graphics/Rect;->left:I
+
+    .line 367
+    aget v5, v3, v8
+
+    int-to-float v5, v5
+
+    mul-float/2addr v5, v0
+
+    add-float/2addr v5, v7
+
+    float-to-int v5, v5
+
+    iput v5, v4, Landroid/graphics/Rect;->top:I
+
+    .line 368
+    aget v5, v3, v6
+
+    invoke-virtual {p2}, Landroid/view/View;->getWidth()I
+
+    move-result v6
+
+    add-int/2addr v5, v6
+
+    int-to-float v5, v5
+
+    mul-float/2addr v5, v0
+
+    add-float/2addr v5, v7
+
+    float-to-int v5, v5
+
+    iput v5, v4, Landroid/graphics/Rect;->right:I
+
+    .line 369
+    aget v5, v3, v8
+
+    invoke-virtual {p2}, Landroid/view/View;->getHeight()I
+
+    move-result v6
+
+    add-int/2addr v5, v6
+
+    int-to-float v5, v5
+
+    mul-float/2addr v5, v0
+
+    add-float/2addr v5, v7
+
+    float-to-int v5, v5
+
+    iput v5, v4, Landroid/graphics/Rect;->bottom:I
+
+    .line 372
+    new-instance v2, Landroid/content/Intent;
+
+    const-string v5, "com.baidu.contacts.action.STRANGE_QUICK_CONTACT"
+
+    invoke-direct {v2, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    .line 373
+    .local v2, intent:Landroid/content/Intent;
+    const/high16 v5, 0x1420
+
+    invoke-virtual {v2, v5}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+
+    .line 376
+    invoke-virtual {v2, p3}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
+
+    .line 377
+    invoke-virtual {v2, v4}, Landroid/content/Intent;->setSourceBounds(Landroid/graphics/Rect;)V
+
+    .line 378
+    const-string/jumbo v5, "mode"
+
+    invoke-virtual {v2, v5, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 379
+    const-string v5, "exclude_mimes"
+
+    invoke-virtual {v2, v5, p5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 381
+    :try_start_0
+    invoke-virtual {p1, v2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    :try_end_0
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 385
+    :goto_0
+    return-void
+
+    .line 382
+    :catch_0
+    move-exception v1
+
+    .line 383
+    .local v1, e:Landroid/content/ActivityNotFoundException;
+    new-instance v5, Landroid/content/Intent;
+
+    const-string v6, "com.android.contacts.action.SHOW_OR_CREATE_CONTACT"
+
+    invoke-direct {v5, v6, p3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+
+    invoke-virtual {p1, v5}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    goto :goto_0
 .end method
 
 

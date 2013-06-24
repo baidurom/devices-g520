@@ -180,9 +180,10 @@
     iget-object v0, p0, Lcom/android/internal/widget/TransportControlView$1;->this$0:Lcom/android/internal/widget/TransportControlView;
 
     #getter for: Lcom/android/internal/widget/TransportControlView;->mAlbumArt:Landroid/widget/ImageView;
-    invoke-static {v0}, Lcom/android/internal/widget/TransportControlView;->access$600(Lcom/android/internal/widget/TransportControlView;)Landroid/widget/ImageView;
+    #CL-44636
+    #invoke-static {v0}, Lcom/android/internal/widget/TransportControlView;->access$600(Lcom/android/internal/widget/TransportControlView;)Landroid/widget/ImageView;
 
-    move-result-object v0
+    #move-result-object v0
 
     iget-object v1, p0, Lcom/android/internal/widget/TransportControlView$1;->this$0:Lcom/android/internal/widget/TransportControlView;
 
@@ -196,7 +197,8 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+    #CL-44636
+    #invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
     goto :goto_0
 

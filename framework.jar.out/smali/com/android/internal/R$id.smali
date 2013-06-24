@@ -133,6 +133,8 @@
 
 .field public static final cancel:I = 0x102026a
 
+.field public static final cancel_button:I = 0x10202b8
+
 .field public static final candidatesArea:I = 0x102001d
 
 .field public static final carrier:I = 0x10202b0
@@ -187,6 +189,7 @@
 
 .field public static final description:I = 0x102026d
 
+.field public static final description_target_unlock:I = 0x010404c9
 .field public static final divider:I = 0x102035b
 
 .field public static final dm_lock_prompt:I = 0x10202bc

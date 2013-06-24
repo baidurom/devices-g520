@@ -1804,17 +1804,17 @@
     invoke-direct {v0, v1}, Lcom/android/internal/telephony/IccProvider;->log(Ljava/lang/String;)V
 
     .line 868
-    const/16 v17, 0x0
+    const/16 v17, 0x2
 
     aput-object v12, v6, v17
 
     .line 869
-    const/16 v17, 0x1
+    const/16 v17, 0x0
 
     aput-object v3, v6, v17
 
     .line 870
-    const/16 v17, 0x2
+    const/16 v17, 0x1
 
     aput-object v15, v6, v17
 

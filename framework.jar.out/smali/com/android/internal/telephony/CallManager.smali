@@ -5051,6 +5051,11 @@
     return-void
 .end method
 
+.method public registerForLineControlInfo(Landroid/os/Handler;ILjava/lang/Object;)V
+    .locals 0
+    return-void
+.end method
+
 .method public registerForIncomingRing2(Landroid/os/Handler;ILjava/lang/Object;)V
     .locals 1
     .parameter "h"

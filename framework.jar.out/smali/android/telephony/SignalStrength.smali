@@ -2134,7 +2134,7 @@
 
     const/4 v5, 0x5
 
-    const/4 v4, 0x2
+    const/4 v4, 0x2 
 
     .line 512
     invoke-virtual {p0}, Landroid/telephony/SignalStrength;->getGsmSignalStrength()I
@@ -2156,6 +2156,8 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v2
+    
+    if-ge v2, v5, :cond_c
 
     .line 539
     .local v2, level:I
@@ -2240,7 +2242,7 @@
 
     if-lt v0, v3, :cond_8
 
-    const/4 v2, 0x5
+    const/4 v2, 0x4
 
     .restart local v2       #level:I
     goto :goto_0
@@ -2283,6 +2285,13 @@
     .end local v2           #level:I
     :cond_b
     const/4 v2, 0x1
+
+    .restart local v2       #level:I
+    goto :goto_0
+    
+    .end local v2           #level:I
+    :cond_c
+    const/4 v2, 0x4
 
     .restart local v2       #level:I
     goto :goto_0

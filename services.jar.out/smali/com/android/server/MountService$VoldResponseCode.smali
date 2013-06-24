@@ -19,8 +19,6 @@
 
 .field public static final AsecPathResult:I = 0xd3
 
-.field public static final CdromStatusResult:I = 0xd6
-
 .field public static final OpFailedMediaBlank:I = 0x192
 
 .field public static final OpFailedMediaCorrupt:I = 0x193
@@ -60,7 +58,7 @@
     .parameter
 
     .prologue
-    .line 151
+    .line 133
     iput-object p1, p0, Lcom/android/server/MountService$VoldResponseCode;->this$0:Lcom/android/server/MountService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V

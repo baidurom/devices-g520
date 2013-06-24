@@ -30,15 +30,15 @@
     .parameter "listener"
 
     .prologue
-    .line 912
+    .line 602
     iput-object p1, p0, Lcom/android/server/MountService$MountServiceBinderListener;->this$0:Lcom/android/server/MountService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 913
+    .line 603
     iput-object p2, p0, Lcom/android/server/MountService$MountServiceBinderListener;->mListener:Landroid/os/storage/IMountServiceListener;
 
-    .line 915
+    .line 605
     return-void
 .end method
 
@@ -48,28 +48,28 @@
     .locals 3
 
     .prologue
-    .line 919
+    .line 609
     iget-object v0, p0, Lcom/android/server/MountService$MountServiceBinderListener;->this$0:Lcom/android/server/MountService;
 
     #getter for: Lcom/android/server/MountService;->mListeners:Ljava/util/ArrayList;
-    invoke-static {v0}, Lcom/android/server/MountService;->access$3600(Lcom/android/server/MountService;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lcom/android/server/MountService;->access$1300(Lcom/android/server/MountService;)Ljava/util/ArrayList;
 
     move-result-object v1
 
     monitor-enter v1
 
-    .line 920
+    .line 610
     :try_start_0
     iget-object v0, p0, Lcom/android/server/MountService$MountServiceBinderListener;->this$0:Lcom/android/server/MountService;
 
     #getter for: Lcom/android/server/MountService;->mListeners:Ljava/util/ArrayList;
-    invoke-static {v0}, Lcom/android/server/MountService;->access$3600(Lcom/android/server/MountService;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lcom/android/server/MountService;->access$1300(Lcom/android/server/MountService;)Ljava/util/ArrayList;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 921
+    .line 611
     iget-object v0, p0, Lcom/android/server/MountService$MountServiceBinderListener;->mListener:Landroid/os/storage/IMountServiceListener;
 
     invoke-interface {v0}, Landroid/os/storage/IMountServiceListener;->asBinder()Landroid/os/IBinder;
@@ -80,13 +80,13 @@
 
     invoke-interface {v0, p0, v2}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 922
+    .line 612
     monitor-exit v1
 
-    .line 923
+    .line 613
     return-void
 
-    .line 922
+    .line 612
     :catchall_0
     move-exception v0
 

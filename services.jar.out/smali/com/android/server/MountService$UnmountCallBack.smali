@@ -35,26 +35,26 @@
     .parameter "removeEncryption"
 
     .prologue
-    .line 389
+    .line 351
     iput-object p1, p0, Lcom/android/server/MountService$UnmountCallBack;->this$0:Lcom/android/server/MountService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 390
+    .line 352
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/MountService$UnmountCallBack;->retries:I
 
-    .line 391
+    .line 353
     iput-object p2, p0, Lcom/android/server/MountService$UnmountCallBack;->path:Ljava/lang/String;
 
-    .line 392
+    .line 354
     iput-boolean p3, p0, Lcom/android/server/MountService$UnmountCallBack;->force:Z
 
-    .line 393
+    .line 355
     iput-boolean p4, p0, Lcom/android/server/MountService$UnmountCallBack;->removeEncryption:Z
 
-    .line 394
+    .line 356
     return-void
 .end method
 
@@ -64,32 +64,7 @@
     .locals 4
 
     .prologue
-    .line 397
-    const-string v0, "MountService"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Unmounting "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/android/server/MountService$UnmountCallBack;->path:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 398
+    .line 360
     iget-object v0, p0, Lcom/android/server/MountService$UnmountCallBack;->this$0:Lcom/android/server/MountService;
 
     iget-object v1, p0, Lcom/android/server/MountService$UnmountCallBack;->path:Ljava/lang/String;
@@ -101,6 +76,6 @@
     #calls: Lcom/android/server/MountService;->doUnmountVolume(Ljava/lang/String;ZZ)I
     invoke-static {v0, v1, v2, v3}, Lcom/android/server/MountService;->access$100(Lcom/android/server/MountService;Ljava/lang/String;ZZ)I
 
-    .line 406
+    .line 361
     return-void
 .end method

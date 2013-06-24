@@ -150,4 +150,26 @@ baidu_modify_apps := Phone
 #-----------------------------------------------------------------------------
 # baidu_modify_jars := android.policy
 
+##############################################################################
+# override_property: this property will override the build.prop
+#-----------------------------------------------------------------------------
+
+# property to show/hide feature of defaultWrite Settings
+override_property += \
+    ro.baidu.default_write.settable=true \
+    persist.sys.baidu.default_write=secondary_storage \
+    ro.baidu.2nd_storage.format=enable
+
+# modify for generate ota zip
+override_property += \
+    ro.product.device.alias=G520,g520
+
+##############################################################################
+# override_property: this property will override the build.prop
+#-----------------------------------------------------------------------------
+remove_property += \
+	ro.operator.optr \
+	ro.operator.spec \
+	ro.operator.seg
+
 include $(PORT_BUILD)/main.mk

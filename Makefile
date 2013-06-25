@@ -90,7 +90,7 @@ vendor_remove_dirs := app delapp vendor/operator
 ##############################################################################
 # Files which you want to remove in vendor directory
 #-----------------------------------------------------------------------------
-# vendor_remove_files := bin/zchgd
+vendor_remove_files := media/bootanimation_hw.zip
 
 ##############################################################################
 # Vendor apks you want to use

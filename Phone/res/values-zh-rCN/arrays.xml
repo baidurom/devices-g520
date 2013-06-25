@@ -5,4 +5,10 @@
         <item>仅限 GSM</item>
         <item>仅限 TD-SCDMA</item>
     </string-array>
+
+    <string-array name="gsm_umts_network_preferences_values">
+        <item>"3"</item>
+        <item>"1"</item>
+        <item>"2"</item>
+    </string-array>
 </resources>

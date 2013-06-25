@@ -30,7 +30,7 @@ BAIDU_BASE_DEVICE := C8813
 # This value define to trigger server to build timely and daily
 # if you want to enable server build, set BAIDU_SERVER_BUILD := true
 # ----------------------------------------------------------------------------
-# BAIDU_SERVER_BUILD_ENABLE := true
+BAIDU_SERVER_BUILD_ENABLE := true
 
 ##############################################################################
 # These values define for get new reference base package from server, only use for baidu internal

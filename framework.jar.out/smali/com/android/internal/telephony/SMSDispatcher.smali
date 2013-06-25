@@ -6736,9 +6736,9 @@
 
     sget-object v6, Lcom/android/internal/telephony/SMSDispatcher;->PDU_PROJECTION:[Ljava/lang/String;
 
-    const-string v7, "address=? AND reference_number=? AND sequence=? AND sim_id=?"
+    const-string v7, "address=? AND reference_number=? AND sequence=?"
 
-    const/4 v9, 0x4
+    const/4 v9, 0x3
 
     new-array v8, v9, [Ljava/lang/String;
 
@@ -6753,10 +6753,6 @@
     const/4 v9, 0x2
 
     aput-object v28, v8, v9
-
-    const/4 v9, 0x3
-
-    aput-object v29, v8, v9
 
     const/4 v9, 0x0
 
@@ -7179,21 +7175,6 @@
     const-string/jumbo v4, "sequence"
 
     invoke-static/range {p4 .. p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    move-object/from16 v0, v31
-
-    invoke-virtual {v0, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
-
-    .line 1140
-    const-string/jumbo v4, "sim_id"
-
-    move-object/from16 v0, p0
-
-    iget v5, v0, Lcom/android/internal/telephony/SMSDispatcher;->mSimId:I
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 

@@ -157,7 +157,7 @@ baidu_modify_jars := android.policy
 # property to show/hide feature of defaultWrite Settings
 override_property += \
     ro.baidu.default_write.settable=true \
-    persist.sys.baidu.default_write=secondary_storage \
+    persist.sys.baidu.default_write=first_storage \
     ro.baidu.2nd_storage.format=enable
 
 # modify for generate ota zip

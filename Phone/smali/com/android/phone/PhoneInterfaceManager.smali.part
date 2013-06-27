@@ -81,5 +81,38 @@
     return-object v0
 .end method
 
+.method public isTestIccCard()Z
+    .locals 3
 
+    .prologue
+    const/4 v1, 0x0
+
+    .line 2739
+    iget-object v2, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
+
+    invoke-interface {v2}, Lcom/android/internal/telephony/Phone;->getSubscriberId()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 2740
+    .local v0, imsi:Ljava/lang/String;
+    if-eqz v0, :cond_0
+
+    .line 2741
+    const/4 v2, 0x5
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "00101"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    .line 2743
+    :cond_0
+    return v1
+.end method
 

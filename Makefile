@@ -50,7 +50,7 @@ RELEASE_PATH		:= /ROM/rom-release-candidate
 # android 4.1: 28
 # htc t328t is special one
 #-----------------------------------------------------------------------------
-DALVIK_VM_BUILD := 28
+DALVIK_VM_BUILD := 27
 
 ##############################################################################
 # This value will control the method of pack or unpack image and so on

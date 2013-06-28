@@ -162,7 +162,7 @@ override_property += \
 
 # modify for generate ota zip
 override_property += \
-    ro.product.device.alias=G520,g520
+    ro.product.device.alias=G520,g520,hwG520,hwg520
 
 ##############################################################################
 # override_property: this property will override the build.prop

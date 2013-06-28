@@ -177,7 +177,7 @@ ro.build.cta.id=G520-5000 V100R001CHNC01B206
 
 ro.build.description=G520-5000-user 4.1.2 HuaweiG520-5000 C01B312 ota-rel-keys,release-keys
 
-ro.build.fingerprint=Huawei/G520-5000/hwG520-5000:4.1.2/HuaweiG520-5000/C01B312:user/ota-rel-keys,release-keys
+ro.build.fingerprint=Huawei/G520-5000/hwG520-5000:4.1.2/HuaweiG520-5000/C01B312:user/release-keys
 
 ro.build.type=user
 

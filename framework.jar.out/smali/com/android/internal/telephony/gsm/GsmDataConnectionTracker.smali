@@ -4307,6 +4307,7 @@
 
     .line 1261
     :cond_0
+    goto :goto_1000
     if-eqz p2, :cond_2
 
     const-string/jumbo v3, "spn"
@@ -4369,6 +4370,7 @@
     return-object v20
 
     .line 1264
+    :goto_1000
     :cond_2
     const-string/jumbo v3, "type"
 

@@ -158,7 +158,8 @@ baidu_modify_jars := android.policy
 override_property += \
     ro.baidu.default_write.settable=true \
     persist.sys.baidu.default_write=first_storage \
-    ro.baidu.2nd_storage.format=enable
+    ro.baidu.2nd_storage.format=enable \
+    ro.baidu.config.dsdsmode=single
 
 # modify for generate ota zip
 override_property += \

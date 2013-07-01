@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 4315
+    .line 4321
     iput-object p1, p0, Landroid/widget/Editor$2;->this$0:Landroid/widget/Editor;
 
     iput-object p2, p0, Landroid/widget/Editor$2;->val$magnifierView:Landroid/widget/MagnifierView2;
@@ -46,7 +46,7 @@
     .locals 3
 
     .prologue
-    .line 4318
+    .line 4324
     iget-object v0, p0, Landroid/widget/Editor$2;->val$magnifierView:Landroid/widget/MagnifierView2;
 
     iget-object v1, p0, Landroid/widget/Editor$2;->this$0:Landroid/widget/Editor;
@@ -65,6 +65,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/MagnifierView2;->updateMagnifierPosition(II)V
 
-    .line 4319
+    .line 4325
     return-void
 .end method

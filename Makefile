@@ -33,18 +33,6 @@ BAIDU_BASE_DEVICE := C8813
 BAIDU_SERVER_BUILD_ENABLE := true
 
 ##############################################################################
-# These values define for get new reference base package from server, only use for baidu internal
-# path with prefix of "ftp://" would be recognized as ftp server
-# Two ways to get package:
-# 1) package_path
-# 2) base_device + base_version + daily/timely/release_path
-#-----------------------------------------------------------------------------
-BAIDU_BASE_TYPE		:= target
-DAILY_PATH			:= ftp://getprod:getprod@buildprod.scm.baidu.com:/temp/data/prod-64/mc/yi/daily/rom-qc-4.1
-TIMELY_PATH			:= ftp://getprod:getprod@buildprod.scm.baidu.com:/temp/data/prod-64/mc/yi/timely/rom-qc-4.1
-RELEASE_PATH		:= /ROM/rom-release-candidate
-
-##############################################################################
 # Default DALVIK_VM_BUILD setting is 27
 # android 4.0: 27
 # android 4.1: 28

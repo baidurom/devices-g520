@@ -34,22 +34,22 @@
     .parameter "fileList"
 
     .prologue
-    .line 1941
+    .line 1663
     iput-object p1, p0, Landroid/media/MediaScanner$WplHandler;->this$0:Landroid/media/MediaScanner;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1942
+    .line 1664
     iput-object p2, p0, Landroid/media/MediaScanner$WplHandler;->playListDirectory:Ljava/lang/String;
 
-    .line 1944
+    .line 1666
     new-instance v2, Landroid/sax/RootElement;
 
     const-string/jumbo v4, "smil"
 
     invoke-direct {v2, v4}, Landroid/sax/RootElement;-><init>(Ljava/lang/String;)V
 
-    .line 1945
+    .line 1667
     .local v2, root:Landroid/sax/RootElement;
     const-string v4, "body"
 
@@ -57,7 +57,7 @@
 
     move-result-object v0
 
-    .line 1946
+    .line 1668
     .local v0, body:Landroid/sax/Element;
     const-string/jumbo v4, "seq"
 
@@ -65,7 +65,7 @@
 
     move-result-object v3
 
-    .line 1947
+    .line 1669
     .local v3, seq:Landroid/sax/Element;
     const-string/jumbo v4, "media"
 
@@ -73,18 +73,18 @@
 
     move-result-object v1
 
-    .line 1948
+    .line 1670
     .local v1, media:Landroid/sax/Element;
     invoke-virtual {v1, p0}, Landroid/sax/Element;->setElementListener(Landroid/sax/ElementListener;)V
 
-    .line 1950
+    .line 1672
     invoke-virtual {v2}, Landroid/sax/RootElement;->getContentHandler()Lorg/xml/sax/ContentHandler;
 
     move-result-object v4
 
     iput-object v4, p0, Landroid/media/MediaScanner$WplHandler;->handler:Lorg/xml/sax/ContentHandler;
 
-    .line 1951
+    .line 1673
     return-void
 .end method
 
@@ -94,7 +94,7 @@
     .locals 0
 
     .prologue
-    .line 1963
+    .line 1685
     return-void
 .end method
 
@@ -102,7 +102,7 @@
     .locals 1
 
     .prologue
-    .line 1966
+    .line 1688
     iget-object v0, p0, Landroid/media/MediaScanner$WplHandler;->handler:Lorg/xml/sax/ContentHandler;
 
     return-object v0
@@ -113,7 +113,7 @@
     .parameter "attributes"
 
     .prologue
-    .line 1955
+    .line 1677
     const-string v1, ""
 
     const-string/jumbo v2, "src"
@@ -122,19 +122,19 @@
 
     move-result-object v0
 
-    .line 1956
+    .line 1678
     .local v0, path:Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 1957
+    .line 1679
     iget-object v1, p0, Landroid/media/MediaScanner$WplHandler;->this$0:Landroid/media/MediaScanner;
 
     iget-object v2, p0, Landroid/media/MediaScanner$WplHandler;->playListDirectory:Ljava/lang/String;
 
     #calls: Landroid/media/MediaScanner;->cachePlaylistEntry(Ljava/lang/String;Ljava/lang/String;)V
-    invoke-static {v1, v0, v2}, Landroid/media/MediaScanner;->access$2700(Landroid/media/MediaScanner;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0, v2}, Landroid/media/MediaScanner;->access$2600(Landroid/media/MediaScanner;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1959
+    .line 1681
     :cond_0
     return-void
 .end method

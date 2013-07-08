@@ -73,7 +73,7 @@ PREBUILT_RECOVERY_IMG := true
 ##############################################################################
 # Directorys which you want to remove in vendor directory
 #-----------------------------------------------------------------------------
-vendor_remove_dirs := app delapp vendor/operator
+vendor_remove_dirs := app delapp vendor/operator media/audio/ui
 
 ##############################################################################
 # Files which you want to remove in vendor directory
@@ -120,6 +120,16 @@ vendor_modify_apps := FMRadio MtkBt
 # then you can make it by:   make android.policy
 #-----------------------------------------------------------------------------
 vendor_modify_jars := framework secondary-framework services
+
+##############################################################################
+# Directorys which you want to saved in baidu directory
+#-----------------------------------------------------------------------------
+baidu_saved_dirs := media/audio/ui
+
+##############################################################################
+# Files which you want to saved in baidu directory
+#-----------------------------------------------------------------------------
+# baidu_saved_files := lib/libwebcore.so
 
 ##############################################################################
 # baidu_remove_apps: those baidu apk you want remove 

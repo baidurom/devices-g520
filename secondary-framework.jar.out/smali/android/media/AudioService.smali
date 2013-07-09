@@ -13632,6 +13632,7 @@
     .parameter "event"
 
     .prologue
+	goto :goto_3
     const/4 v8, 0x2
 
     .line 5665

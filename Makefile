@@ -129,7 +129,7 @@ baidu_saved_dirs := media/audio/ui
 ##############################################################################
 # Files which you want to saved in baidu directory
 #-----------------------------------------------------------------------------
-# baidu_saved_files := lib/libwebcore.so
+baidu_saved_files := lib/libwvm.so
 
 ##############################################################################
 # baidu_remove_apps: those baidu apk you want remove 

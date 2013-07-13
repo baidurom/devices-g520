@@ -8,6 +8,8 @@ if [ "$apkBaseName" = "Phone" ];then
 	find $tempSmaliDir -name "*.xml" | xargs sed -i 's/ %[ )\%]/ /g'
 	find $tempSmaliDir -name "*.xml" | xargs sed -i 's/\(%[0-9]\$[ds]\)%/\1/g'
 	find $tempSmaliDir -name "*\.smali" | xargs sed -i 's#invoke-interface\(.*Lcom/android/internal/telephony/IccCard;->\)#invoke-virtual\1#g'
+        sed -i -e "/^\.method.*getIccPinPukRetryTimes()I/,/^\.end method/d" $tempSmaliDir/smali/com/android/phone/PhoneInterfaceManager.smali
+        sed -i -e "/^\.method.*getIccPin1RetryCount()I/,/^\.end method/d" $tempSmaliDir/smali/com/android/phone/PhoneInterfaceManager.smali
 
 	echo ">>> use vendor Bluetooth framework in Phone"
 	rm -rf $tempSmaliDir/smali/com/android/phone/Bluetooth*
@@ -20,5 +22,6 @@ elif [ "$apkBaseName" = "Settings" ];then
 		echo ">>> delete unlock_set_baidu_slide line in $tempSmaliDir/res/xml/security_settings_picker.xml"
 		sed -i '/unlock_set_baidu_slide/d' $tempSmaliDir/res/xml/security_settings_picker.xml
 	fi
+        find $tempSmaliDir -name "*\.smali" | xargs sed -i 's#invoke-interface\(.*Lcom/android/internal/telephony/IccCard;->\)#invoke-virtual\1#g'
 fi
 

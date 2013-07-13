@@ -417,6 +417,14 @@
     .end annotation
 .end method
 
+.method public abstract getIccPin1RetryCount()I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract getDataStateGemini(I)I
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -506,6 +514,14 @@
 .end method
 
 .method public abstract getLastError()I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract getIccPinPukRetryTimes()I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

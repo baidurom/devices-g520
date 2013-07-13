@@ -3881,6 +3881,60 @@
     throw v3
 .end method
 
+.method public getIccPinPukRetryTimes()I
+    .locals 2
+
+    .prologue
+    .line 637
+    const-string v0, "gsm.sim.retry.pin1"
+
+    const/16 v1, -0x64
+
+    invoke-static {v0, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, "gsm.sim.retry.puk1"
+
+    const/16 v1, -0x64
+
+    invoke-static {v0, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    :cond_0
+    return v0
+.end method
+
+.method public getIccPin1RetryCount()I
+    .locals 2
+
+    .prologue
+    .line 637
+    const-string v0, "gsm.sim.retry.pin1"
+
+    const/16 v1, -0x64
+
+    invoke-static {v0, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, "gsm.sim.retry.puk1"
+
+    const/16 v1, -0x64
+
+    invoke-static {v0, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    :cond_0
+    return v0
+.end method
+
 .method public getIccATR()Ljava/lang/String;
     .locals 6
     .annotation system Ldalvik/annotation/Throws;

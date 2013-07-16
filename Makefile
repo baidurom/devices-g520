@@ -119,7 +119,7 @@ vendor_modify_apps := FMRadio MtkBt
 # you need decode android.policy.jar to the project directory (use apktool d android.policy.jar) first
 # then you can make it by:   make android.policy
 #-----------------------------------------------------------------------------
-vendor_modify_jars := framework secondary-framework services
+vendor_modify_jars := framework secondary-framework services mediatek-framework
 
 ##############################################################################
 # Directorys which you want to saved in baidu directory

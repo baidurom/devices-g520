@@ -10,6 +10,7 @@ if [ "$apkBaseName" = "Phone" ];then
 	find $tempSmaliDir -name "*\.smali" | xargs sed -i 's#invoke-interface\(.*Lcom/android/internal/telephony/IccCard;->\)#invoke-virtual\1#g'
         sed -i -e "/^\.method.*getIccPinPukRetryTimes()I/,/^\.end method/d" $tempSmaliDir/smali/com/android/phone/PhoneInterfaceManager.smali
         sed -i -e "/^\.method.*getIccPin1RetryCount()I/,/^\.end method/d" $tempSmaliDir/smali/com/android/phone/PhoneInterfaceManager.smali
+        sed -i -e "/^\.method.*startRecording(ILjava\/lang\/String;)Ljava\/lang\/String/,/^\.end method/d" $tempSmaliDir/smali/com/android/phone/Recorder.smali
 
 	echo ">>> use vendor Bluetooth framework in Phone"
 	rm -rf $tempSmaliDir/smali/com/android/phone/Bluetooth*

@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/pm/ShutdownThread;->run()V
+    value = Lcom/android/server/pm/ShutdownThread;->running()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 294
+    .line 573
     iput-object p1, p0, Lcom/android/server/pm/ShutdownThread$5;->this$0:Lcom/android/server/pm/ShutdownThread;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,11 +40,11 @@
     .parameter "intent"
 
     .prologue
-    .line 297
+    .line 576
     iget-object v0, p0, Lcom/android/server/pm/ShutdownThread$5;->this$0:Lcom/android/server/pm/ShutdownThread;
 
     invoke-virtual {v0}, Lcom/android/server/pm/ShutdownThread;->actionDone()V
 
-    .line 298
+    .line 577
     return-void
 .end method

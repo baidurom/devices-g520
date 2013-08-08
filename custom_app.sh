@@ -24,5 +24,10 @@ elif [ "$apkBaseName" = "Settings" ];then
 		sed -i '/unlock_set_baidu_slide/d' $tempSmaliDir/res/xml/security_settings_picker.xml
 	fi
         find $tempSmaliDir -name "*\.smali" | xargs sed -i 's#invoke-interface\(.*Lcom/android/internal/telephony/IccCard;->\)#invoke-virtual\1#g'
+
+elif [ "$apkBaseName" = "SystemUI" ];then
+       echo ">>> in custom_app for SystemUI"
+       sed -i -e "/^\.method.*doInBackground(\[Lcom\/android\/systemui\/screenshot\/SaveImageInBackgroundData;)Lcom\/android\/systemui\/screenshot\/SaveImageInBackgroundData/,/^\.end method/d" $tempSmaliDir/smali/com/android/systemui/screenshot/SaveImageInBackgroundTask.smali
+
 fi
 

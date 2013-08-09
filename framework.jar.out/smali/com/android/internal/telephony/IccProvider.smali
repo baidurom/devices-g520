@@ -99,19 +99,19 @@
 
     new-array v0, v0, [Ljava/lang/String;
 
-    const-string v1, "index"
+    const-string v1, "name"
 
     aput-object v1, v0, v5
 
-    const-string/jumbo v1, "name"
+    const-string/jumbo v1, "number"
 
     aput-object v1, v0, v3
 
-    const-string/jumbo v1, "number"
+    const-string/jumbo v1, "emails"
 
     aput-object v1, v0, v4
 
-    const-string v1, "emails"
+    const-string v1, "_id"
 
     aput-object v1, v0, v6
 
@@ -127,7 +127,7 @@
 
     const/4 v1, 0x6
 
-    const-string v2, "_id"
+    const-string v2, "index"
 
     aput-object v2, v0, v1
 
@@ -1804,7 +1804,7 @@
     invoke-direct {v0, v1}, Lcom/android/internal/telephony/IccProvider;->log(Ljava/lang/String;)V
 
     .line 868
-    const/16 v17, 0x2
+    const/16 v17, 0x3
 
     aput-object v12, v6, v17
 
@@ -1888,7 +1888,7 @@
     .line 881
     .end local v7           #email:Ljava/lang/String;
     :cond_2
-    const/16 v17, 0x3
+    const/16 v17, 0x2
 
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

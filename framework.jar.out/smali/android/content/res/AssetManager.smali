@@ -252,7 +252,7 @@
     return-void
 .end method
 
-.method static synthetic access$100(Landroid/content/res/AssetManager;I)J
+.method static synthetic access$200(Landroid/content/res/AssetManager;I)J
     .locals 2
     .parameter "x0"
     .parameter "x1"
@@ -266,7 +266,7 @@
     return-wide v0
 .end method
 
-.method static synthetic access$200(Landroid/content/res/AssetManager;I)I
+.method static synthetic access$300(Landroid/content/res/AssetManager;I)I
     .locals 1
     .parameter "x0"
     .parameter "x1"
@@ -280,7 +280,7 @@
     return v0
 .end method
 
-.method static synthetic access$300(Landroid/content/res/AssetManager;I)J
+.method static synthetic access$400(Landroid/content/res/AssetManager;I)J
     .locals 2
     .parameter "x0"
     .parameter "x1"
@@ -294,7 +294,7 @@
     return-wide v0
 .end method
 
-.method static synthetic access$400(Landroid/content/res/AssetManager;I)V
+.method static synthetic access$500(Landroid/content/res/AssetManager;I)V
     .locals 0
     .parameter "x0"
     .parameter "x1"
@@ -306,7 +306,7 @@
     return-void
 .end method
 
-.method static synthetic access$500(Landroid/content/res/AssetManager;I)V
+.method static synthetic access$600(Landroid/content/res/AssetManager;I)V
     .locals 0
     .parameter "x0"
     .parameter "x1"
@@ -318,7 +318,7 @@
     return-void
 .end method
 
-.method static synthetic access$600(Landroid/content/res/AssetManager;IJI)J
+.method static synthetic access$700(Landroid/content/res/AssetManager;IJI)J
     .locals 2
     .parameter "x0"
     .parameter "x1"
@@ -334,7 +334,7 @@
     return-wide v0
 .end method
 
-.method static synthetic access$700(Landroid/content/res/AssetManager;I[BII)I
+.method static synthetic access$800(Landroid/content/res/AssetManager;I[BII)I
     .locals 1
     .parameter "x0"
     .parameter "x1"

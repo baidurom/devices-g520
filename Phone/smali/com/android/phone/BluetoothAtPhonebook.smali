@@ -1484,7 +1484,7 @@
     const/4 v6, 0x0
 
     .line 540
-    const-string v3, "indicate_phone_or_sim_contact=-1"
+    const-string v3, "in_visible_group=1"
 
     .line 558
     .local v3, where:Ljava/lang/String;
@@ -1612,7 +1612,7 @@
     const/4 v7, 0x1
 
     .line 552
-    const-string v3, "indicate_phone_or_sim_contact > 0"
+    const/4 v3, 0x0
 
     .restart local v3       #where:Ljava/lang/String;
     goto :goto_0

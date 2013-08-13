@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 313
+    .line 306
     iput-object p1, p0, Landroid/view/VolumePanel$4;->this$0:Landroid/view/VolumePanel;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -35,19 +35,21 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 4
+    .locals 5
     .parameter "context"
     .parameter "intent"
 
     .prologue
+    const/16 v4, 0x3e8
+
     const/4 v3, 0x6
 
-    .line 316
+    .line 309
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 318
+    .line 311
     .local v0, action:Ljava/lang/String;
     const-string v1, "android.media.RINGER_MODE_CHANGED"
 
@@ -55,14 +57,14 @@
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
-    .line 319
+    .line 312
     iget-object v1, p0, Landroid/view/VolumePanel$4;->this$0:Landroid/view/VolumePanel;
 
     invoke-virtual {v1, v3}, Landroid/view/VolumePanel;->removeMessages(I)V
 
-    .line 320
+    .line 313
     iget-object v1, p0, Landroid/view/VolumePanel$4;->this$0:Landroid/view/VolumePanel;
 
     iget-object v2, p0, Landroid/view/VolumePanel$4;->this$0:Landroid/view/VolumePanel;
@@ -73,53 +75,36 @@
 
     invoke-virtual {v1, v2}, Landroid/view/VolumePanel;->sendMessage(Landroid/os/Message;)Z
 
-    .line 324
+    .line 319
     :cond_0
-    const-string v1, "android.intent.action.SKIN_CHANGED"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    .line 325
-    iget-object v1, p0, Landroid/view/VolumePanel$4;->this$0:Landroid/view/VolumePanel;
-
-    #calls: Landroid/view/VolumePanel;->createSliders()V
-    invoke-static {v1}, Landroid/view/VolumePanel;->access$400(Landroid/view/VolumePanel;)V
-
-    .line 330
-    :cond_1
-    const-string v1, "android.intent.action.SCREEN_OFF"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    .line 331
-    iget-object v1, p0, Landroid/view/VolumePanel$4;->this$0:Landroid/view/VolumePanel;
-
-    #getter for: Landroid/view/VolumePanel;->mDialog:Landroid/app/Dialog;
-    invoke-static {v1}, Landroid/view/VolumePanel;->access$500(Landroid/view/VolumePanel;)Landroid/app/Dialog;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/app/Dialog;->isShowing()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    .line 332
-    iget-object v1, p0, Landroid/view/VolumePanel$4;->this$0:Landroid/view/VolumePanel;
-
-    #calls: Landroid/view/VolumePanel;->forceTimeout()V
-    invoke-static {v1}, Landroid/view/VolumePanel;->access$100(Landroid/view/VolumePanel;)V
-
-    .line 335
-    :cond_2
+    :goto_0
     return-void
+
+    .line 314
+    :cond_1
+    const-string v1, "android.intent.action.THEME_CHANGED"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 316
+    iget-object v1, p0, Landroid/view/VolumePanel$4;->this$0:Landroid/view/VolumePanel;
+
+    invoke-virtual {v1, v4}, Landroid/view/VolumePanel;->removeMessages(I)V
+
+    .line 317
+    iget-object v1, p0, Landroid/view/VolumePanel$4;->this$0:Landroid/view/VolumePanel;
+
+    iget-object v2, p0, Landroid/view/VolumePanel$4;->this$0:Landroid/view/VolumePanel;
+
+    invoke-virtual {v2, v4}, Landroid/view/VolumePanel;->obtainMessage(I)Landroid/os/Message;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Landroid/view/VolumePanel;->sendMessage(Landroid/os/Message;)Z
+
+    goto :goto_0
 .end method

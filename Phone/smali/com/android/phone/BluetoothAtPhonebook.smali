@@ -2006,7 +2006,7 @@
     const/4 v4, 0x0
 
     .line 287
-    const/4 v0, 0x2
+    const/4 v0, 0x1
 
     new-array v2, v0, [Ljava/lang/String;
 
@@ -2016,9 +2016,7 @@
 
     aput-object v1, v2, v0
 
-    const-string v0, "vtcall"
 
-    aput-object v0, v2, v10
 
     .line 290
     .local v2, projection:[Ljava/lang/String;

@@ -936,7 +936,7 @@
 .end method
 
 .method private final openIconAsset(Ljava/lang/String;Ljava/lang/String;Z)Ljava/io/InputStream;
-    .locals 6
+    .locals 8
     .parameter "fileName"
     .parameter "packageName"
     .parameter "isIcon"
@@ -948,7 +948,7 @@
     .line 891
     .local v2, inputStream:Ljava/io/InputStream;
     if-eqz p1, :cond_1
-
+    
     :try_start_0
     const-string v5, ""
 
@@ -957,7 +957,7 @@
     move-result v5
 
     if-nez v5, :cond_1
-
+    
     .line 893
     new-instance v4, Ljava/lang/StringBuffer;
 
@@ -974,17 +974,37 @@
     .line 896
     if-eqz p3, :cond_0
 
-    const-string p2, "icons"
+    const-string v5, "icons"  
 
-    .end local p2
     :cond_0
-    invoke-virtual {v4, p2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     .line 897
     sget-object v5, Ljava/io/File;->separator:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
+    const-string v6, "com.mediatek.FMRadio"
+
+    invoke-virtual {v6, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_2
+
+    const-string v6, "com.mediatek.FMRadio.png"
+
+    invoke-virtual {v6, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_2
+
+    const-string v6, "com.baidu.fm.png"
+
+    move-object p1, v6
+
+    :cond_2
     .line 898
     invoke-virtual {v4, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 

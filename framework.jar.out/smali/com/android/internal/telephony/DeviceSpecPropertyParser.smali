@@ -10,7 +10,13 @@
 
 .field protected static final MASK_AUTO_SELECT_NETWORK:I = 0x20000
 
+.field protected static final MASK_NEED_POLL_DATA_REGISTRATION:I = 0x80000
+
 .field protected static final MASK_PLAYTONE_AFTER_BLUETOOTH_TALKING:I = 0x10000
+
+.field protected static final MASK_RIL7_CARDAPP:I = 0x40000
+
+.field protected static final MASK_SWITCH_CDMA_GSM:I = 0x100000
 
 .field protected static device_spec_property:I
 
@@ -20,7 +26,7 @@
     .locals 1
 
     .prologue
-    .line 52
+    .line 63
     const/4 v0, 0x0
 
     sput v0, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
@@ -33,7 +39,7 @@
 
     .prologue
     .line 24
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -42,7 +48,7 @@
     .locals 3
 
     .prologue
-    .line 55
+    .line 66
     const-string/jumbo v0, "ro.baidu.telephony.dev_spec"
 
     const/4 v1, 0x0
@@ -53,7 +59,7 @@
 
     sput v0, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
 
-    .line 56
+    .line 67
     const-string v0, "DeviceSpecPropertyParser"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -78,7 +84,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 57
+    .line 68
     return-void
 .end method
 
@@ -86,10 +92,10 @@
     .locals 4
 
     .prologue
-    .line 67
+    .line 78
     const/4 v0, 0x0
 
-    .line 68
+    .line 79
     .local v0, result:Z
     sget v1, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
 
@@ -101,7 +107,7 @@
 
     const/4 v0, 0x1
 
-    .line 69
+    .line 80
     :goto_0
     const-string v1, "DeviceSpecPropertyParser"
 
@@ -125,10 +131,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 70
+    .line 81
     return v0
 
-    .line 68
+    .line 79
     :cond_0
     const/4 v0, 0x0
 
@@ -139,10 +145,10 @@
     .locals 4
 
     .prologue
-    .line 60
+    .line 71
     const/4 v0, 0x0
 
-    .line 61
+    .line 72
     .local v0, result:Z
     sget v1, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
 
@@ -154,7 +160,7 @@
 
     const/4 v0, 0x1
 
-    .line 62
+    .line 73
     :goto_0
     const-string v1, "DeviceSpecPropertyParser"
 
@@ -178,10 +184,169 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 63
+    .line 74
     return v0
 
-    .line 61
+    .line 72
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static isNeedPollDataReg()Z
+    .locals 4
+
+    .prologue
+    .line 92
+    const/4 v0, 0x0
+
+    .line 93
+    .local v0, result:Z
+    sget v1, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
+
+    const/high16 v2, 0x8
+
+    and-int/2addr v1, v2
+
+    if-eqz v1, :cond_0
+
+    const/4 v0, 0x1
+
+    .line 94
+    :goto_0
+    const-string v1, "DeviceSpecPropertyParser"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "isNeedPollDataReg result: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 95
+    return v0
+
+    .line 93
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static isRil7CardApp()Z
+    .locals 4
+
+    .prologue
+    .line 85
+    const/4 v0, 0x0
+
+    .line 86
+    .local v0, result:Z
+    sget v1, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
+
+    const/high16 v2, 0x4
+
+    and-int/2addr v1, v2
+
+    if-eqz v1, :cond_0
+
+    const/4 v0, 0x1
+
+    .line 87
+    :goto_0
+    const-string v1, "DeviceSpecPropertyParser"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "isRil7CardApp result: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 88
+    return v0
+
+    .line 86
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static isSwitchCdmaGsm()Z
+    .locals 4
+
+    .prologue
+    .line 99
+    const/4 v0, 0x0
+
+    .line 100
+    .local v0, result:Z
+    sget v1, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
+
+    const/high16 v2, 0x10
+
+    and-int/2addr v1, v2
+
+    if-eqz v1, :cond_0
+
+    const/4 v0, 0x1
+
+    .line 101
+    :goto_0
+    const-string v1, "DeviceSpecPropertyParser"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "isSwitchCdmaGsm result: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 102
+    return v0
+
+    .line 100
     :cond_0
     const/4 v0, 0x0
 

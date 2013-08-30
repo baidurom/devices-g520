@@ -67,6 +67,8 @@
     .end annotation
 .end field
 
+.field public static final BUTTON_LIGHT_OFF:Ljava/lang/String; = "button_light_off"
+
 .field public static final BOOT_UP_SELECT_MODE:Ljava/lang/String; = "boot_up_select_mode"
 
 .field public static final BOOT_UP_SELECT_MODE_DEFAULT:I = 0x0

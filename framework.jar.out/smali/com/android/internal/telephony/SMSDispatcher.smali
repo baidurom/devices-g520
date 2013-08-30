@@ -2952,7 +2952,15 @@
     const/16 v4, 0xb84
 
     if-ne v3, v4, :cond_2
+    
+    move-object/from16 v3, p1
+    
+    invoke-virtual {v3}, Lcom/android/internal/telephony/SmsMessageBase;->getDisplayOriginatingAddress()Ljava/lang/String;
 
+    move-result-object v4
+
+    sput-object v4, Lcom/baidu/internal/telephony/SMSPlugin;->msgAddress:Ljava/lang/String;
+    
     .line 989
     const-string v3, "SMS"
 
@@ -7560,6 +7568,8 @@
     if-ne v0, v4, :cond_16
 
     .line 1223
+    sput-object p2, Lcom/baidu/internal/telephony/SMSPlugin;->msgAddress:Ljava/lang/String;
+    
     new-instance v24, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct/range {v24 .. v24}, Ljava/io/ByteArrayOutputStream;-><init>()V

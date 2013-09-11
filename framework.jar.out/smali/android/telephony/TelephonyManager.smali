@@ -148,6 +148,8 @@
 
 .field private static final mtkGeminiSupport:Z
 
+.field protected static multiSimConfig:Ljava/lang/String;
+
 .field private static sContext:Landroid/content/Context;
 
 .field private static sInstance:Landroid/telephony/TelephonyManager;
@@ -164,6 +166,14 @@
     const/4 v0, 0x0
 
     sput v0, Landroid/telephony/TelephonyManager;->defaultSimId:I
+    
+    const-string/jumbo v0, "persist.multisim.config"
+
+    invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Landroid/telephony/TelephonyManager;->multiSimConfig:Ljava/lang/String;
 
     .line 167
     new-instance v0, Landroid/telephony/TelephonyManager;
@@ -202,7 +212,7 @@
     return-void
 .end method
 
-.method private constructor <init>()V
+.method protected constructor <init>()V
     .locals 0
 
     .prologue
@@ -3237,6 +3247,73 @@
         :pswitch_c
         :pswitch_e
     .end packed-switch
+.end method
+
+.method public getPhoneCount()I
+    .locals 2
+
+    .prologue
+    .line 114
+    const/4 v0, 0x1
+
+    .line 115
+    .local v0, phoneCount:I
+    invoke-static {}, Landroid/telephony/TelephonyManager;->isMultiSimEnabled()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 116
+    const/4 v0, 0x2
+
+    .line 118
+    :cond_0
+    return v0
+.end method
+
+.method public static isMultiSimEnabled()Z
+    .locals 4
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 102
+    const-string/jumbo v2, "ro.telephony.coolpad_single"
+
+    invoke-static {v2, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    .line 104
+    .local v0, is_coolpad5890_spec:Z
+    sget-object v2, Landroid/telephony/TelephonyManager;->multiSimConfig:Ljava/lang/String;
+
+    const-string v3, "dsds"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    sget-object v2, Landroid/telephony/TelephonyManager;->multiSimConfig:Ljava/lang/String;
+
+    const-string v3, "dsda"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    :cond_0
+    if-nez v0, :cond_1
+
+    const/4 v1, 0x1
+
+    :cond_1
+    return v1
 .end method
 
 .method public getPhoneType()I

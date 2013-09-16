@@ -9,6 +9,7 @@
         Lcom/android/internal/telephony/gsm/SIMRecords$1;,
         Lcom/android/internal/telephony/gsm/SIMRecords$SIMBroadCastReceiver;,
         Lcom/android/internal/telephony/gsm/SIMRecords$Get_Spn_Fsm_State;,
+        Lcom/android/internal/telephony/gsm/SIMRecords$QuickbootBroadcastReceiver;,
         Lcom/android/internal/telephony/gsm/SIMRecords$OplRecord;,
         Lcom/android/internal/telephony/gsm/SIMRecords$OperatorName;
     }
@@ -1484,6 +1485,8 @@
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/SIMRecords;->mSimReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v3, v4, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    
+    invoke-direct {p0, p2}, Lcom/android/internal/telephony/gsm/SIMRecords;->registerQbReceiver(Landroid/content/Context;)V
 
     .line 386
     :try_start_0
@@ -5178,6 +5181,35 @@
     add-int/lit8 v0, v0, 0x3
 
     goto :goto_1
+.end method
+
+.method private registerQbReceiver(Landroid/content/Context;)V
+    .locals 4
+    .parameter "context"
+
+    .prologue
+    .line 293
+    new-instance v0, Landroid/content/IntentFilter;
+
+    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
+
+    .line 294
+    .local v0, filter:Landroid/content/IntentFilter;
+    const-string v1, "android.intent.action.ACTION_QUICKBOOT_SHUTDOWN"
+
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    .line 295
+    new-instance v2, Lcom/android/internal/telephony/gsm/SIMRecords$QuickbootBroadcastReceiver;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, p0, v3}, Lcom/android/internal/telephony/gsm/SIMRecords$QuickbootBroadcastReceiver;-><init>(Lcom/android/internal/telephony/gsm/SIMRecords;Lcom/android/internal/telephony/gsm/SIMRecords$1;)V
+
+    invoke-virtual {p1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    .line 296
+    return-void
 .end method
 
 .method private processEfCspPlmnModeBitUrc(I)V

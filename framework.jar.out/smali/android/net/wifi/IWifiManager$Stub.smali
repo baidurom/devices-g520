@@ -124,6 +124,8 @@
 
 .field static final TRANSACTION_setWifiEnabledForIPO:I = 0x33
 
+.field static final TRANSACTION_setWifiEnabledForQb:I = 0x39
+
 .field static final TRANSACTION_startApWps:I = 0x34
 
 .field static final TRANSACTION_startScan:I = 0x7
@@ -1966,6 +1968,50 @@
 
     .restart local v0       #_arg0:Landroid/net/wifi/HotspotClient;
     goto :goto_10
+    
+    .end local v0           #_arg0:Landroid/net/wifi/HotspotClient;
+    :sswitch_39
+    const-string v10, "android.net.wifi.IWifiManager"
+
+    invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 179
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v10
+
+    if-eqz v10, :cond_90
+
+    move v0, v9
+
+    .line 180
+    .restart local v0       #_arg0:Z
+    :goto_90
+    invoke-virtual {p0, v0}, Landroid/net/wifi/IWifiManager$Stub;->setWifiEnabledForQb(Z)Z
+
+    move-result v4
+
+    .line 181
+    .restart local v4       #_result:Z
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 182
+    if-eqz v4, :cond_91
+
+    move v8, v9
+
+    :cond_91
+    invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto/16 :goto_0
+
+    .end local v0           #_arg0:Z
+    .end local v4           #_result:Z
+    :cond_90
+    move v0, v8
+
+    .line 179
+    goto :goto_90
 
     .line 43
     :sswitch_data_0
@@ -2026,6 +2072,7 @@
         0x36 -> :sswitch_36
         0x37 -> :sswitch_37
         0x38 -> :sswitch_38
+	0x39 -> :sswitch_39
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

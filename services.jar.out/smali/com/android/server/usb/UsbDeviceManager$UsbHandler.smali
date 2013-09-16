@@ -13,9 +13,20 @@
     name = "UsbHandler"
 .end annotation
 
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/android/server/usb/UsbDeviceManager$UsbHandler$QuickbootBroadcastReceiver;
+    }
+.end annotation
 
 # instance fields
+.field private final ACTION_QUICKBOOT_BOOT:Ljava/lang/String;
+
+.field private final ACTION_QUICKBOOT_SHUTDOWN:Ljava/lang/String;
+
 .field private mAdbNotificationShown:Z
+
+.field private final mBootCompletedReceiver:Landroid/content/BroadcastReceiver;
 
 .field private mConfigured:Z
 
@@ -26,6 +37,10 @@
 .field private mCurrentFunctions:Ljava/lang/String;
 
 .field private mDefaultFunctions:Ljava/lang/String;
+
+.field private mIsQbShutdown:Z
+
+.field private final mQuickbootReceiver:Landroid/content/BroadcastReceiver;
 
 .field private final mIntentReceiver:Landroid/content/BroadcastReceiver;
 
@@ -54,6 +69,33 @@
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     .line 417
+    const/4 v6, 0x0
+    
+    iput-boolean v6, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->mIsQbShutdown:Z
+    
+    const-string v6, "android.intent.action.ACTION_QUICKBOOT_SHUTDOWN"
+    
+    iput-object v6, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->ACTION_QUICKBOOT_SHUTDOWN:Ljava/lang/String;
+    
+    const-string v6, "android.intent.action.ACTION_QUICKBOOT_BOOT"
+    
+    iput-object v6, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->ACTION_QUICKBOOT_BOOT:Ljava/lang/String;
+    
+    new-instance v6, Lcom/android/server/usb/UsbDeviceManager$UsbHandler$1;
+
+    invoke-direct {v6, p0}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler$1;-><init>(Lcom/android/server/usb/UsbDeviceManager$UsbHandler;)V
+
+    iput-object v6, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->mBootCompletedReceiver:Landroid/content/BroadcastReceiver;
+
+    .line 309
+    new-instance v6, Lcom/android/server/usb/UsbDeviceManager$UsbHandler$QuickbootBroadcastReceiver;
+    
+    const/4 v7, 0x0
+
+    invoke-direct {v6, p0, v7}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler$QuickbootBroadcastReceiver;-><init>(Lcom/android/server/usb/UsbDeviceManager$UsbHandler;Lcom/android/server/usb/UsbDeviceManager$1;)V
+
+    iput-object v6, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->mQuickbootReceiver:Landroid/content/BroadcastReceiver;
+    
     new-instance v6, Lcom/android/server/usb/UsbDeviceManager$UsbHandler$1;
 
     invoke-direct {v6, p0}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler$1;-><init>(Lcom/android/server/usb/UsbDeviceManager$UsbHandler;)V
@@ -476,6 +518,12 @@
     iget-object v7, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->mIntentReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v6, v7, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    
+    iget-object v7, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->mBootCompletedReceiver:Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {v6, v7, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    
+    invoke-direct {p0}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->registerQbReceiver()V
 
     .line 585
     .end local v0           #config:Ljava/lang/String;
@@ -558,6 +606,18 @@
     return-void
 .end method
 
+.method static synthetic access$1102(Lcom/android/server/usb/UsbDeviceManager$UsbHandler;Z)Z
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 287
+    iput-boolean p1, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->mIsQbShutdown:Z
+
+    return p1
+.end method
+
 .method static synthetic access$1200(Lcom/android/server/usb/UsbDeviceManager$UsbHandler;)V
     .locals 0
     .parameter "x0"
@@ -634,6 +694,42 @@
     iget-boolean v0, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->mConnected:Z
 
     return v0
+.end method
+
+.method private registerQbReceiver()V
+    .locals 3
+
+    .prologue
+    .line 377
+    new-instance v0, Landroid/content/IntentFilter;
+
+    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
+
+    .line 378
+    .local v0, filter:Landroid/content/IntentFilter;
+    const-string v1, "android.intent.action.ACTION_QUICKBOOT_SHUTDOWN"
+
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    .line 379
+    const-string v1, "android.intent.action.ACTION_QUICKBOOT_BOOT"
+
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    .line 380
+    iget-object v1, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->this$0:Lcom/android/server/usb/UsbDeviceManager;
+
+    #getter for: Lcom/android/server/usb/UsbDeviceManager;->mContext:Landroid/content/Context;
+    invoke-static {v1}, Lcom/android/server/usb/UsbDeviceManager;->access$2400(Lcom/android/server/usb/UsbDeviceManager;)Landroid/content/Context;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->mQuickbootReceiver:Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    .line 381
+    return-void
 .end method
 
 .method private setAcmEnabled(Z)V
@@ -4657,6 +4753,13 @@
     .line 663
     .local v2, msg:Landroid/os/Message;
     :goto_0
+    iget-boolean v5, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->mIsQbShutdown:Z
+    
+    if-eqz v5, :cond_13
+    
+    goto :goto_1
+    
+    :cond_13
     invoke-virtual {p0, v8}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->removeMessages(I)V
 
     .line 664

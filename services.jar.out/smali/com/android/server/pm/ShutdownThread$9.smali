@@ -1,11 +1,11 @@
-.class Lcom/android/server/pm/ShutdownThread$7;
+.class Lcom/android/server/pm/ShutdownThread$9;
 .super Landroid/content/BroadcastReceiver;
 .source "ShutdownThread.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/pm/ShutdownThread;->quickbootShutdown()V
+    value = Lcom/android/server/pm/ShutdownThread;->normalShutdown()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,8 +24,8 @@
     .parameter
 
     .prologue
-    .line 435
-    iput-object p1, p0, Lcom/android/server/pm/ShutdownThread$7;->this$0:Lcom/android/server/pm/ShutdownThread;
+    .line 618
+    iput-object p1, p0, Lcom/android/server/pm/ShutdownThread$9;->this$0:Lcom/android/server/pm/ShutdownThread;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -40,11 +40,11 @@
     .parameter "intent"
 
     .prologue
-    .line 438
-    iget-object v0, p0, Lcom/android/server/pm/ShutdownThread$7;->this$0:Lcom/android/server/pm/ShutdownThread;
+    .line 621
+    iget-object v0, p0, Lcom/android/server/pm/ShutdownThread$9;->this$0:Lcom/android/server/pm/ShutdownThread;
 
     invoke-virtual {v0}, Lcom/android/server/pm/ShutdownThread;->actionDone()V
 
-    .line 439
+    .line 622
     return-void
 .end method

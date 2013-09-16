@@ -3,12 +3,12 @@
 .source "ShutdownThread.java"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/pm/ShutdownThread;->shutdownInner(Landroid/content/Context;Z)V
+    value = Lcom/android/server/pm/ShutdownThread;->createQbShutdownConfirmDialog(Landroid/content/Context;Landroid/app/AlertDialog;)Landroid/app/AlertDialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,50 +18,62 @@
 
 
 # instance fields
-.field final synthetic val$context:Landroid/content/Context;
+.field final synthetic val$text:Landroid/widget/TextView;
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;)V
+.method constructor <init>(Landroid/widget/TextView;)V
     .locals 0
     .parameter
 
     .prologue
-    .line 220
-    iput-object p1, p0, Lcom/android/server/pm/ShutdownThread$2;->val$context:Landroid/content/Context;
+    .line 176
+    iput-object p1, p0, Lcom/android/server/pm/ShutdownThread$2;->val$text:Landroid/widget/TextView;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 1
-    .parameter "dialog"
-    .parameter "which"
+.method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    .locals 2
+    .parameter "buttonView"
+    .parameter "isChecked"
 
     .prologue
-    .line 222
-    iget-object v0, p0, Lcom/android/server/pm/ShutdownThread$2;->val$context:Landroid/content/Context;
+    .line 179
+    invoke-static {p2}, Lcom/android/server/pm/ShutdownThread;->access$102(Z)Z
 
-    #calls: Lcom/android/server/pm/ShutdownThread;->beginShutdownSequence(Landroid/content/Context;)V
-    invoke-static {v0}, Lcom/android/server/pm/ShutdownThread;->access$300(Landroid/content/Context;)V
+    .line 180
+    invoke-static {}, Lcom/android/server/pm/ShutdownThread;->access$100()Z
 
-    .line 223
-    invoke-static {}, Lcom/android/server/pm/ShutdownThread;->access$200()Landroid/app/AlertDialog;
+    move-result v0
 
-    move-result-object v0
+    invoke-static {v0}, Lcom/android/server/pm/ShutdownThread;->access$202(Z)Z
 
-    if-eqz v0, :cond_0
+    .line 181
+    if-eqz p2, :cond_0
 
-    .line 224
-    const/4 v0, 0x0
+    .line 182
+    iget-object v0, p0, Lcom/android/server/pm/ShutdownThread$2;->val$text:Landroid/widget/TextView;
 
-    invoke-static {v0}, Lcom/android/server/pm/ShutdownThread;->access$202(Landroid/app/AlertDialog;)Landroid/app/AlertDialog;
+    const v1, -0xaba8a1
 
-    .line 226
-    :cond_0
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    .line 185
+    :goto_0
     return-void
+
+    .line 184
+    :cond_0
+    iget-object v0, p0, Lcom/android/server/pm/ShutdownThread$2;->val$text:Landroid/widget/TextView;
+
+    const v1, -0x4d4c48
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    goto :goto_0
 .end method

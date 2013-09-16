@@ -229,6 +229,8 @@
 
 .field public static mIPOWin:Landroid/view/View;
 
+.field public static mQbShutdownBgd:Landroid/view/View;
+
 .field static final mInterestingPids:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -6790,6 +6792,10 @@
     .restart local v24       #receivers:Ljava/util/List;
     :cond_17
     :goto_7
+    move-object/from16 v0, v44
+
+    invoke-static {v15, v0}, Lcom/android/server/am/QuickbootActivityManagerServiceHook;->filterReceiversForQbShutdown(Ljava/util/List;Landroid/content/Intent;)V
+    
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/am/ActivityManagerService;->mLruProcesses:Ljava/util/ArrayList;
@@ -40703,6 +40709,254 @@
     return v6
 .end method
 
+.method public final broadcastSpecificIntentLockedForQb(Lcom/android/server/am/ProcessRecord;Ljava/lang/String;Landroid/content/Intent;Ljava/lang/String;Landroid/content/IIntentReceiver;ILjava/lang/String;Landroid/os/Bundle;Ljava/lang/String;Ljava/util/List;Ljava/util/List;)I
+    .locals 17
+    .parameter "callerApp"
+    .parameter "callerPackage"
+    .parameter "intent"
+    .parameter "resolvedType"
+    .parameter "resultTo"
+    .parameter "resultCode"
+    .parameter "resultData"
+    .parameter "map"
+    .parameter "requiredPermission"
+    .parameter "receivers"
+    .parameter
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/android/server/am/ProcessRecord;",
+            "Ljava/lang/String;",
+            "Landroid/content/Intent;",
+            "Ljava/lang/String;",
+            "Landroid/content/IIntentReceiver;",
+            "I",
+            "Ljava/lang/String;",
+            "Landroid/os/Bundle;",
+            "Ljava/lang/String;",
+            "Ljava/util/List;",
+            "Ljava/util/List",
+            "<",
+            "Lcom/android/server/am/BroadcastFilter;",
+            ">;)I"
+        }
+    .end annotation
+
+    .prologue
+    .line 15503
+    .local p11, registeredReceivers:Ljava/util/List;,"Ljava/util/List<Lcom/android/server/am/BroadcastFilter;>;"
+    new-instance v3, Landroid/content/Intent;
+
+    move-object/from16 v0, p3
+
+    invoke-direct {v3, v0}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
+
+    .line 15504
+    .end local p3
+    .local v3, intent:Landroid/content/Intent;
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v3}, Lcom/android/server/am/ActivityManagerService;->broadcastQueueForIntent(Landroid/content/Intent;)Lcom/android/server/am/BroadcastQueue;
+
+    move-result-object v2
+
+    .line 15505
+    .local v2, queue:Lcom/android/server/am/BroadcastQueue;
+    if-eqz p11, :cond_0
+
+    invoke-interface/range {p11 .. p11}, Ljava/util/List;->size()I
+
+    move-result v4
+
+    if-lez v4, :cond_0
+
+    .line 15506
+    new-instance v1, Lcom/android/server/am/BroadcastRecord;
+
+    sget v6, Lcom/android/server/am/ActivityManagerService;->MY_PID:I
+
+    const/16 v7, 0x3e8
+
+    const/4 v14, 0x0
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0x0
+
+    move-object/from16 v4, p1
+
+    move-object/from16 v5, p2
+
+    move-object/from16 v8, p9
+
+    move-object/from16 v9, p11
+
+    move-object/from16 v10, p5
+
+    move/from16 v11, p6
+
+    move-object/from16 v12, p7
+
+    move-object/from16 v13, p8
+
+    invoke-direct/range {v1 .. v16}, Lcom/android/server/am/BroadcastRecord;-><init>(Lcom/android/server/am/BroadcastQueue;Landroid/content/Intent;Lcom/android/server/am/ProcessRecord;Ljava/lang/String;IILjava/lang/String;Ljava/util/List;Landroid/content/IIntentReceiver;ILjava/lang/String;Landroid/os/Bundle;ZZZ)V
+
+    .line 15511
+    .local v1, r:Lcom/android/server/am/BroadcastRecord;
+    const-string v4, "ActivityManager"
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "Enqueueing parallel broadcast "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    const-string v6, ": prev Parallel had "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    iget-object v6, v2, Lcom/android/server/am/BroadcastQueue;->mParallelBroadcasts:Ljava/util/ArrayList;
+
+    invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
+
+    move-result v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 15514
+    invoke-virtual {v2, v1}, Lcom/android/server/am/BroadcastQueue;->enqueueParallelBroadcastLocked(Lcom/android/server/am/BroadcastRecord;)V
+
+    .line 15515
+    invoke-virtual {v2}, Lcom/android/server/am/BroadcastQueue;->scheduleBroadcastsLocked()V
+
+    .line 15518
+    .end local v1           #r:Lcom/android/server/am/BroadcastRecord;
+    :cond_0
+    if-eqz p10, :cond_1
+
+    invoke-interface/range {p10 .. p10}, Ljava/util/List;->size()I
+
+    move-result v4
+
+    if-lez v4, :cond_1
+
+    .line 15519
+    new-instance v1, Lcom/android/server/am/BroadcastRecord;
+
+    sget v6, Lcom/android/server/am/ActivityManagerService;->MY_PID:I
+
+    const/16 v7, 0x3e8
+
+    const/4 v14, 0x0
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0x0
+
+    move-object/from16 v4, p1
+
+    move-object/from16 v5, p2
+
+    move-object/from16 v8, p9
+
+    move-object/from16 v9, p10
+
+    move-object/from16 v10, p5
+
+    move/from16 v11, p6
+
+    move-object/from16 v12, p7
+
+    move-object/from16 v13, p8
+
+    invoke-direct/range {v1 .. v16}, Lcom/android/server/am/BroadcastRecord;-><init>(Lcom/android/server/am/BroadcastQueue;Landroid/content/Intent;Lcom/android/server/am/ProcessRecord;Ljava/lang/String;IILjava/lang/String;Ljava/util/List;Landroid/content/IIntentReceiver;ILjava/lang/String;Landroid/os/Bundle;ZZZ)V
+
+    .line 15524
+    .restart local v1       #r:Lcom/android/server/am/BroadcastRecord;
+    const-string v4, "ActivityManager"
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "Enqueueing ordered broadcast "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    const-string v6, ": prev Ordered had "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    iget-object v6, v2, Lcom/android/server/am/BroadcastQueue;->mOrderedBroadcasts:Ljava/util/ArrayList;
+
+    invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
+
+    move-result v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    const-string v6, " receiver.size() = "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-interface/range {p10 .. p10}, Ljava/util/List;->size()I
+
+    move-result v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 15527
+    invoke-virtual {v2, v1}, Lcom/android/server/am/BroadcastQueue;->enqueueOrderedBroadcastLocked(Lcom/android/server/am/BroadcastRecord;)V
+
+    .line 15528
+    invoke-virtual {v2}, Lcom/android/server/am/BroadcastQueue;->scheduleBroadcastsLocked()V
+
+    .line 15531
+    .end local v1           #r:Lcom/android/server/am/BroadcastRecord;
+    :cond_1
+    const/4 v4, 0x0
+
+    return v4
+.end method
+
 .method public cancelIntentSender(Landroid/content/IIntentSender;)V
     .locals 8
     .parameter "sender"
@@ -44821,6 +45075,112 @@
     const/high16 v2, 0x1000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    goto :goto_0
+.end method
+
+.method public createQbShutdownBackground()V
+    .locals 7
+
+    .prologue
+    const/16 v6, 0x400
+
+    const/4 v5, -0x1
+
+    .line 15537
+    const-string v3, "ActivityManager"
+
+    const-string v4, "create Quickboot shutdown background!"
+
+    invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 15539
+    sget-object v3, Lcom/android/server/am/ActivityManagerService;->mQbShutdownBgd:Landroid/view/View;
+
+    if-eqz v3, :cond_0
+
+    .line 15540
+    const-string v3, "ActivityManager"
+
+    const-string v4, "mQbShutdownBgd already exist"
+
+    invoke-static {v3, v4}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 15566
+    :goto_0
+    return-void
+
+    .line 15544
+    :cond_0
+    iget-object v3, p0, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
+
+    invoke-static {v3}, Lcom/android/internal/policy/PolicyManager;->makeNewWindow(Landroid/content/Context;)Landroid/view/Window;
+
+    move-result-object v1
+
+    .line 15546
+    .local v1, win:Landroid/view/Window;
+    const/16 v3, 0x7ed
+
+    invoke-virtual {v1, v3}, Landroid/view/Window;->setType(I)V
+
+    .line 15547
+    invoke-virtual {v1, v6, v6}, Landroid/view/Window;->setFlags(II)V
+
+    .line 15549
+    invoke-virtual {v1, v5, v5}, Landroid/view/Window;->setLayout(II)V
+
+    .line 15553
+    const/4 v3, 0x1
+
+    invoke-virtual {v1, v3}, Landroid/view/Window;->requestFeature(I)Z
+
+    .line 15555
+    invoke-virtual {v1}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
+
+    move-result-object v0
+
+    .line 15556
+    .local v0, params:Landroid/view/WindowManager$LayoutParams;
+    const-string v3, "QbShutdownBackground"
+
+    invoke-virtual {v0, v3}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
+
+    .line 15557
+    const/16 v3, 0x418
+
+    iput v3, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
+
+    .line 15561
+    iget-object v3, p0, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
+
+    const-string v4, "window"
+
+    invoke-virtual {v3, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/view/WindowManager;
+
+    .line 15563
+    .local v2, wm:Landroid/view/WindowManager;
+    invoke-virtual {v1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v3
+
+    sput-object v3, Lcom/android/server/am/ActivityManagerService;->mQbShutdownBgd:Landroid/view/View;
+
+    .line 15564
+    sget-object v3, Lcom/android/server/am/ActivityManagerService;->mQbShutdownBgd:Landroid/view/View;
+
+    const/high16 v4, -0x100
+
+    invoke-virtual {v3, v4}, Landroid/view/View;->setBackgroundColor(I)V
+
+    .line 15565
+    sget-object v3, Lcom/android/server/am/ActivityManagerService;->mQbShutdownBgd:Landroid/view/View;
+
+    invoke-interface {v2, v3, v0}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     goto :goto_0
 .end method
@@ -73247,6 +73607,45 @@
     goto :goto_0
 .end method
 
+.method public rmQbShutdownBackground()V
+    .locals 3
+
+    .prologue
+    .line 15578
+    sget-object v1, Lcom/android/server/am/ActivityManagerService;->mQbShutdownBgd:Landroid/view/View;
+
+    if-nez v1, :cond_0
+
+    .line 15586
+    :goto_0
+    return-void
+
+    .line 15581
+    :cond_0
+    iget-object v1, p0, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
+
+    const-string v2, "window"
+
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/WindowManager;
+
+    .line 15583
+    .local v0, wm:Landroid/view/WindowManager;
+    sget-object v1, Lcom/android/server/am/ActivityManagerService;->mQbShutdownBgd:Landroid/view/View;
+
+    invoke-interface {v0, v1}, Landroid/view/WindowManager;->removeView(Landroid/view/View;)V
+
+    .line 15584
+    const/4 v1, 0x0
+
+    sput-object v1, Lcom/android/server/am/ActivityManagerService;->mQbShutdownBgd:Landroid/view/View;
+
+    goto :goto_0
+.end method
+
 .method final scheduleAppGcLocked(Lcom/android/server/am/ProcessRecord;)V
     .locals 6
     .parameter "app"
@@ -75701,6 +76100,59 @@
     .line 7699
     :catch_0
     move-exception v1
+    
+    goto :goto_0
+.end method
+
+.method public setQbBackgroundRes(I)V
+    .locals 3
+    .parameter "res"
+
+    .prologue
+    .line 15569
+    sget-object v0, Lcom/android/server/am/ActivityManagerService;->mQbShutdownBgd:Landroid/view/View;
+
+    if-eqz v0, :cond_0
+
+    .line 15570
+    const-string v0, "ActivityManager"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Set new background picture:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 15571
+    sget-object v0, Lcom/android/server/am/ActivityManagerService;->mQbShutdownBgd:Landroid/view/View;
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundResource(I)V
+
+    .line 15575
+    :goto_0
+    return-void
+
+    .line 15573
+    :cond_0
+    const-string v0, "ActivityManager"
+
+    const-string v1, "The mQbShutdownBgd is null!!!!"
+
+    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 .end method
@@ -80664,6 +81116,15 @@
 
     .prologue
     .line 8048
+    
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
+
+    sget-object v4, Lcom/android/server/am/ActivityManagerService;->mSelf:Lcom/android/server/am/ActivityManagerService;
+
+    invoke-static {v3, v4}, Lcom/android/server/am/QuickbootActivityManagerServiceHook;->createHook(Landroid/content/Context;Lcom/android/server/am/ActivityManagerService;)V
+
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/am/ActivityManagerService;->mAmPlus:Lcom/android/server/am/ActivityManagerPlus;

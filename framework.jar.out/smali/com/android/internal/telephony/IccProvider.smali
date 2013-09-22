@@ -111,11 +111,11 @@
 
     aput-object v1, v0, v4
 
-    const-string v1, "_id"
+    const-string v1, "additionalNumber"
 
     aput-object v1, v0, v6
 
-    const-string v1, "additionalNumber"
+    const-string v1, "_id"
 
     aput-object v1, v0, v7
 
@@ -1804,7 +1804,7 @@
     invoke-direct {v0, v1}, Lcom/android/internal/telephony/IccProvider;->log(Ljava/lang/String;)V
 
     .line 868
-    const/16 v17, 0x3
+    const/16 v17, 0x4
 
     aput-object v12, v6, v17
 
@@ -1902,7 +1902,7 @@
     .end local v11           #i$:I
     .end local v14           #len$:I
     :cond_3
-    const/16 v17, 0x4
+    const/16 v17, 0x3
 
     aput-object v4, v6, v17
 

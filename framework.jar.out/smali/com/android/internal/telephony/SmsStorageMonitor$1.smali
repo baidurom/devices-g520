@@ -62,7 +62,8 @@
     .line 156
     iget-object v0, p0, Lcom/android/internal/telephony/SmsStorageMonitor$1;->this$0:Lcom/android/internal/telephony/SmsStorageMonitor;
 
-    iput-boolean v2, v0, Lcom/android/internal/telephony/SmsStorageMonitor;->mStorageAvailable:Z
+    #setter for: Lcom/android/internal/telephony/SmsStorageMonitor;->mStorageAvailable:Z
+    invoke-static {v0, v2}, Lcom/android/internal/telephony/SmsStorageMonitor;->access$002(Lcom/android/internal/telephony/SmsStorageMonitor;Z)Z
 
     .line 157
     iget-object v0, p0, Lcom/android/internal/telephony/SmsStorageMonitor$1;->this$0:Lcom/android/internal/telephony/SmsStorageMonitor;
@@ -94,12 +95,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_2
 
     .line 159
     iget-object v0, p0, Lcom/android/internal/telephony/SmsStorageMonitor$1;->this$0:Lcom/android/internal/telephony/SmsStorageMonitor;
 
-    iput-boolean v3, v0, Lcom/android/internal/telephony/SmsStorageMonitor;->mStorageAvailable:Z
+    #setter for: Lcom/android/internal/telephony/SmsStorageMonitor;->mStorageAvailable:Z
+    invoke-static {v0, v3}, Lcom/android/internal/telephony/SmsStorageMonitor;->access$002(Lcom/android/internal/telephony/SmsStorageMonitor;Z)Z
 
     .line 160
     iget-object v0, p0, Lcom/android/internal/telephony/SmsStorageMonitor$1;->this$0:Lcom/android/internal/telephony/SmsStorageMonitor;
@@ -114,5 +116,45 @@
 
     invoke-interface {v0, v3, v1}, Lcom/android/internal/telephony/CommandsInterface;->reportSmsMemoryStatus(ZLandroid/os/Message;)V
 
+    goto :goto_0
+    
+    :cond_2
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+    
+    move-result-object v0
+    
+    const-string v1, "android.intent.action.DEVICE_STORAGE_NEARLY_FULL"
+    
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    
+    move-result v0
+    
+    if-eqz v0, :cond_3
+    
+    iget-object v0, p0, Lcom/android/internal/telephony/SmsStorageMonitor$1;->this$0:Lcom/android/internal/telephony/SmsStorageMonitor;
+    
+    #setter for: Lcom/android/internal/telephony/SmsStorageMonitor;->mStorageNearlyFull:Z
+    invoke-static {v0, v3}, Lcom/android/internal/telephony/SmsStorageMonitor;->access$102(Lcom/android/internal/telephony/SmsStorageMonitor;Z)Z
+    
+    goto :goto_0
+    
+    :cond_3
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+    
+    move-result-object v0
+    
+    const-string v1, "android.intent.action.DEVICE_STORAGE_NOT_NEARLY_FULL"
+    
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    
+    move-result v0
+    
+    if-eqz v0, :cond_0
+    
+    iget-object v0, p0, Lcom/android/internal/telephony/SmsStorageMonitor$1;->this$0:Lcom/android/internal/telephony/SmsStorageMonitor;
+    
+    #setter for: Lcom/android/internal/telephony/SmsStorageMonitor;->mStorageNearlyFull:Z
+    invoke-static {v0, v2}, Lcom/android/internal/telephony/SmsStorageMonitor;->access$102(Lcom/android/internal/telephony/SmsStorageMonitor;Z)Z
+    
     goto :goto_0
 .end method

@@ -4,19 +4,33 @@
 
 
 # static fields
-.field protected static final DEBUG:Z = true
+.field protected static final DEBUG:Z = false
 
 .field protected static final LOG_TAG:Ljava/lang/String; = "DeviceSpecPropertyParser"
 
 .field protected static final MASK_AUTO_SELECT_NETWORK:I = 0x20000
 
+.field protected static final MASK_CALLMUTE:I = 0x4
+
 .field protected static final MASK_NEED_POLL_DATA_REGISTRATION:I = 0x80000
+
+.field protected static final MASK_NOCALLDETAILS:I = 0x10
+
+.field protected static final MASK_NOSUBDEACTIVATED:I = 0x20
+
+.field protected static final MASK_NULLAPN:I = 0x8
+
+.field protected static final MASK_PINLOCKENABLE:I = 0x80
 
 .field protected static final MASK_PLAYTONE_AFTER_BLUETOOTH_TALKING:I = 0x10000
 
 .field protected static final MASK_RIL7_CARDAPP:I = 0x40000
 
+.field protected static final MASK_SINGLEPDP:I = 0x1
+
 .field protected static final MASK_SWITCH_CDMA_GSM:I = 0x100000
+
+.field protected static final MASK_USIMDATA:I = 0x2
 
 .field protected static device_spec_property:I
 
@@ -26,7 +40,7 @@
     .locals 1
 
     .prologue
-    .line 63
+    .line 75
     const/4 v0, 0x0
 
     sput v0, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
@@ -45,10 +59,10 @@
 .end method
 
 .method public static getDeviceSpecProp()V
-    .locals 3
+    .locals 2
 
     .prologue
-    .line 66
+    .line 78
     const-string/jumbo v0, "ro.baidu.telephony.dev_spec"
 
     const/4 v1, 0x0
@@ -59,43 +73,18 @@
 
     sput v0, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
 
-    .line 67
-    const-string v0, "DeviceSpecPropertyParser"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "device_spec_property : "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    sget v2, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 68
+    .line 80
     return-void
 .end method
 
 .method public static isAutoSelectNetwork()Z
-    .locals 4
+    .locals 3
 
     .prologue
-    .line 78
+    .line 139
     const/4 v0, 0x0
 
-    .line 79
+    .line 140
     .local v0, result:Z
     sget v1, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
 
@@ -107,34 +96,67 @@
 
     const/4 v0, 0x1
 
-    .line 80
+    .line 142
     :goto_0
-    const-string v1, "DeviceSpecPropertyParser"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "isNeedPlayToneAfterBtTalking result: "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 81
     return v0
 
-    .line 79
+    .line 140
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static isNeedCallMute()Z
+    .locals 2
+
+    .prologue
+    .line 97
+    const/4 v0, 0x0
+
+    .line 98
+    .local v0, result:Z
+    sget v1, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
+
+    and-int/lit8 v1, v1, 0x4
+
+    if-eqz v1, :cond_0
+
+    const/4 v0, 0x1
+
+    .line 100
+    :goto_0
+    return v0
+
+    .line 98
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static isNeedNullApn()Z
+    .locals 2
+
+    .prologue
+    .line 104
+    const/4 v0, 0x0
+
+    .line 105
+    .local v0, result:Z
+    sget v1, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
+
+    and-int/lit8 v1, v1, 0x8
+
+    if-eqz v1, :cond_0
+
+    const/4 v0, 0x1
+
+    .line 107
+    :goto_0
+    return v0
+
+    .line 105
     :cond_0
     const/4 v0, 0x0
 
@@ -142,13 +164,13 @@
 .end method
 
 .method public static isNeedPlayToneAfterBtTalking()Z
-    .locals 4
+    .locals 3
 
     .prologue
-    .line 71
+    .line 132
     const/4 v0, 0x0
 
-    .line 72
+    .line 133
     .local v0, result:Z
     sget v1, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
 
@@ -160,34 +182,11 @@
 
     const/4 v0, 0x1
 
-    .line 73
+    .line 135
     :goto_0
-    const-string v1, "DeviceSpecPropertyParser"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "isNeedPlayToneAfterBtTalking result: "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 74
     return v0
 
-    .line 72
+    .line 133
     :cond_0
     const/4 v0, 0x0
 
@@ -195,13 +194,13 @@
 .end method
 
 .method public static isNeedPollDataReg()Z
-    .locals 4
+    .locals 3
 
     .prologue
-    .line 92
+    .line 153
     const/4 v0, 0x0
 
-    .line 93
+    .line 154
     .local v0, result:Z
     sget v1, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
 
@@ -213,34 +212,151 @@
 
     const/4 v0, 0x1
 
-    .line 94
+    .line 156
     :goto_0
-    const-string v1, "DeviceSpecPropertyParser"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "isNeedPollDataReg result: "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 95
     return v0
 
+    .line 154
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static isNeedSinglePdp()Z
+    .locals 2
+
+    .prologue
+    .line 83
+    const/4 v0, 0x0
+
+    .line 84
+    .local v0, result:Z
+    sget v1, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
+
+    and-int/lit8 v1, v1, 0x1
+
+    if-eqz v1, :cond_0
+
+    const/4 v0, 0x1
+
+    .line 86
+    :goto_0
+    return v0
+
+    .line 84
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static isNeedUsimData()Z
+    .locals 2
+
+    .prologue
+    .line 90
+    const/4 v0, 0x0
+
+    .line 91
+    .local v0, result:Z
+    sget v1, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
+
+    and-int/lit8 v1, v1, 0x2
+
+    if-eqz v1, :cond_0
+
+    const/4 v0, 0x1
+
     .line 93
+    :goto_0
+    return v0
+
+    .line 91
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static isNoCallDetails()Z
+    .locals 2
+
+    .prologue
+    .line 111
+    const/4 v0, 0x0
+
+    .line 112
+    .local v0, result:Z
+    sget v1, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
+
+    and-int/lit8 v1, v1, 0x10
+
+    if-eqz v1, :cond_0
+
+    const/4 v0, 0x1
+
+    .line 114
+    :goto_0
+    return v0
+
+    .line 112
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static isNoSubDeactivated()Z
+    .locals 2
+
+    .prologue
+    .line 125
+    const/4 v0, 0x0
+
+    .line 126
+    .local v0, result:Z
+    sget v1, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
+
+    and-int/lit8 v1, v1, 0x20
+
+    if-eqz v1, :cond_0
+
+    const/4 v0, 0x1
+
+    .line 128
+    :goto_0
+    return v0
+
+    .line 126
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static isNotSupportPinLockEnable()Z
+    .locals 2
+
+    .prologue
+    .line 118
+    const/4 v0, 0x0
+
+    .line 119
+    .local v0, result:Z
+    sget v1, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
+
+    and-int/lit16 v1, v1, 0x80
+
+    if-eqz v1, :cond_0
+
+    const/4 v0, 0x1
+
+    .line 121
+    :goto_0
+    return v0
+
+    .line 119
     :cond_0
     const/4 v0, 0x0
 
@@ -248,13 +364,13 @@
 .end method
 
 .method public static isRil7CardApp()Z
-    .locals 4
+    .locals 3
 
     .prologue
-    .line 85
+    .line 146
     const/4 v0, 0x0
 
-    .line 86
+    .line 147
     .local v0, result:Z
     sget v1, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
 
@@ -266,34 +382,11 @@
 
     const/4 v0, 0x1
 
-    .line 87
+    .line 149
     :goto_0
-    const-string v1, "DeviceSpecPropertyParser"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "isRil7CardApp result: "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 88
     return v0
 
-    .line 86
+    .line 147
     :cond_0
     const/4 v0, 0x0
 
@@ -301,13 +394,13 @@
 .end method
 
 .method public static isSwitchCdmaGsm()Z
-    .locals 4
+    .locals 3
 
     .prologue
-    .line 99
+    .line 160
     const/4 v0, 0x0
 
-    .line 100
+    .line 161
     .local v0, result:Z
     sget v1, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
 
@@ -319,34 +412,11 @@
 
     const/4 v0, 0x1
 
-    .line 101
+    .line 163
     :goto_0
-    const-string v1, "DeviceSpecPropertyParser"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "isSwitchCdmaGsm result: "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 102
     return v0
 
-    .line 100
+    .line 161
     :cond_0
     const/4 v0, 0x0
 

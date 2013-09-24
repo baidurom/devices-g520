@@ -2112,8 +2112,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 1807    
-    invoke-static {p1, p3, p4}, Lcom/baidu/internal/telephony/SMSPlugin;->dispatchTrafficMonitorSmsPdu(Landroid/content/Context;[[BLjava/lang/String;)V
+    .line 1807  
+    const/4 v0, 0x0
+      
+    invoke-static {p1, p3, p4, v0}, Lcom/baidu/internal/telephony/SMSPlugin;->dispatchTrafficMonitorSmsPdu(Landroid/content/Context;[[BLjava/lang/String;I)V
 
     .line 1809
     :cond_0

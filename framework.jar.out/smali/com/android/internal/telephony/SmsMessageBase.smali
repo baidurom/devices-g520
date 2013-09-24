@@ -31,6 +31,8 @@
 
 .field protected isEmail:Z
 
+.field protected isInternationalAddress:Z
+
 .field protected isMwi:Z
 
 .field protected mPdu:[B
@@ -52,6 +54,8 @@
 .field protected pseudoSubject:Ljava/lang/String;
 
 .field protected relativeValidityPeriod:I
+
+.field protected recipientAddress:Lcom/android/internal/telephony/SmsAddress;
 
 .field protected scAddress:Ljava/lang/String;
 
@@ -322,6 +326,32 @@
     goto :goto_0
 .end method
 
+.method public getRecipientAddress()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 222
+    iget-object v0, p0, Lcom/android/internal/telephony/SmsMessageBase;->recipientAddress:Lcom/android/internal/telephony/SmsAddress;
+
+    if-nez v0, :cond_0
+
+    .line 223
+    const/4 v0, 0x0
+
+    .line 226
+    :goto_0
+    return-object v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/internal/telephony/SmsMessageBase;->recipientAddress:Lcom/android/internal/telephony/SmsAddress;
+
+    invoke-virtual {v0}, Lcom/android/internal/telephony/SmsAddress;->getAddressString()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
 .method public getServiceCenterAddress()Ljava/lang/String;
     .locals 1
 
@@ -384,6 +414,16 @@
     .prologue
     .line 285
     iget-boolean v0, p0, Lcom/android/internal/telephony/SmsMessageBase;->isEmail:Z
+    
+    return v0
+.end method
+
+.method public isInternationalAddress()Z
+    .locals 1
+
+    .prologue
+    .line 200
+    iget-boolean v0, p0, Lcom/android/internal/telephony/SmsMessageBase;->isInternationalAddress:Z
 
     return v0
 .end method

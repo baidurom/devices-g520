@@ -84,6 +84,16 @@
     return-void
 .end method
 
+.method static synthetic access$000(Lcom/android/internal/telephony/WapPushOverSms;)Lcom/android/internal/telephony/WapPushOverSms$WapPushConnection;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 41
+    iget-object v0, p0, Lcom/android/internal/telephony/WapPushOverSms;->mWapConn:Lcom/android/internal/telephony/WapPushOverSms$WapPushConnection;
+
+    return-object v0
+.end method
 
 # virtual methods
 .method public dispatchWapPdu([B)I

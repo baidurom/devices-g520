@@ -7,6 +7,7 @@
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Lcom/android/server/NotificationManagerService$WorkerHandler;,
+        Lcom/android/server/NotificationManagerService$QuickbootBroadcastReceiver;,
         Lcom/android/server/NotificationManagerService$SettingsObserver;,
         Lcom/android/server/NotificationManagerService$ToastRecord;,
         Lcom/android/server/NotificationManagerService$NotificationRecord;
@@ -101,6 +102,8 @@
 .field private mInCall:Z
 
 .field private mIntentReceiver:Landroid/content/BroadcastReceiver;
+
+.field private mIsQbShutdown:Z
 
 .field private mLedNotification:Lcom/android/server/NotificationManagerService$NotificationRecord;
 
@@ -215,6 +218,8 @@
     iput-boolean v8, p0, Lcom/android/server/NotificationManagerService;->mInCall:Z
 
     .line 138
+    iput-boolean v8, p0, Lcom/android/server/NotificationManagerService;->mIsQbShutdown:Z
+
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
@@ -483,6 +488,8 @@
     invoke-virtual {v6, v7, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 666
+    invoke-direct {p0}, Lcom/android/server/NotificationManagerService;->registerQbReceiver()V
+
     new-instance v4, Landroid/content/IntentFilter;
 
     const-string v6, "android.intent.action.EXTERNAL_APPLICATIONS_UNAVAILABLE"
@@ -627,6 +634,18 @@
     .prologue
     .line 87
     iput-boolean p1, p0, Lcom/android/server/NotificationManagerService;->mShutDown:Z
+
+    return p1
+.end method
+
+.method static synthetic access$1703(Lcom/android/server/NotificationManagerService;Z)Z
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 91
+    iput-boolean p1, p0, Lcom/android/server/NotificationManagerService;->mIsQbShutdown:Z
 
     return p1
 .end method
@@ -2114,6 +2133,39 @@
     goto :goto_2
 .end method
 
+.method private registerQbReceiver()V
+    .locals 3
+
+    .prologue
+    .line 647
+    new-instance v0, Landroid/content/IntentFilter;
+
+    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
+
+    .line 648
+    .local v0, filter:Landroid/content/IntentFilter;
+    const-string v1, "android.intent.action.ACTION_QUICKBOOT_SHUTDOWN"
+
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    .line 649
+    const-string v1, "android.intent.action.ACTION_QUICKBOOT_BOOT_COMPLETE"
+
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    .line 651
+    iget-object v1, p0, Lcom/android/server/NotificationManagerService;->mContext:Landroid/content/Context;
+
+    new-instance v2, Lcom/android/server/NotificationManagerService$QuickbootBroadcastReceiver;
+
+    invoke-direct {v2, p0}, Lcom/android/server/NotificationManagerService$QuickbootBroadcastReceiver;-><init>(Lcom/android/server/NotificationManagerService;)V
+
+    invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    .line 652
+    return-void
+.end method
+
 .method private scheduleTimeoutLocked(Lcom/android/server/NotificationManagerService$ToastRecord;Z)V
     .locals 5
     .parameter "r"
@@ -2449,6 +2501,21 @@
     .line 1385
     .end local v3           #n:I
     :cond_0
+    iget-boolean v4, p0, Lcom/android/server/NotificationManagerService;->mIsQbShutdown:Z
+
+    if-eqz v4, :cond_99
+
+    .line 1373
+    const-string v4, "NotificationService"
+
+    const-string v5, "In QuickBoot Shutdown do not update notification Light"
+
+    invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    .line 1379
+    :cond_99
     iget-object v4, p0, Lcom/android/server/NotificationManagerService;->mLedNotification:Lcom/android/server/NotificationManagerService$NotificationRecord;
 
     if-eqz v4, :cond_1

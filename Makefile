@@ -157,7 +157,8 @@ override_property += \
     ro.baidu.default_write.settable=true \
     persist.sys.baidu.default_write=first_storage \
     ro.baidu.2nd_storage.format=enable \
-    ro.baidu.config.dsdsmode=single
+    ro.baidu.config.dsdsmode=single \
+    persist.sys.prevent_wakeup=false
 
 # modify for generate ota zip
 override_property += \

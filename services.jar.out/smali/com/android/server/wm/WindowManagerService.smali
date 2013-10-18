@@ -39706,6 +39706,24 @@
     invoke-static {v0, v1, v2}, Lcom/android/server/pm/ShutdownThread;->reboot(Landroid/content/Context;Ljava/lang/String;Z)V
     return-void
 .end method
+
+.method public rebootRecoveryMode()V
+    .locals 3
+
+    .prologue
+    .line 5211
+    iget-object v0, p0, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
+
+    const-string v1, "recovery"
+
+    const/4 v2, 0x1
+
+    invoke-static {v0, v1, v2}, Lcom/android/server/pm/ShutdownThread;->reboot(Landroid/content/Context;Ljava/lang/String;Z)V
+
+    .line 5212
+    return-void
+.end method
+
 .method public rebootSafeMode()V
     .locals 2
 

@@ -190,6 +190,16 @@
     return p0
 .end method
 
+.method static synthetic access$402(Ljava/lang/String;)Ljava/lang/String;
+    .locals 0
+    .parameter "x0"
+    
+    .prologue
+    sput-object p0, Lcom/android/server/pm/ShutdownThread;->mRebootReason:Ljava/lang/String;
+    
+    return-object p0
+.end method
+
 .method private static beginShutdownSequence(Landroid/content/Context;)V
     .locals 6
     .parameter "context"
@@ -2216,14 +2226,14 @@
 .end method
 
 .method static shutdownInner(Landroid/content/Context;Z)V
-    .locals 9
+    .locals 10
     .parameter "context"
     .parameter "confirm"
 
     .prologue
-    const v8, #string@yes#t
+    const v9, #string@yes#t
 
-    const v7, #string@no#t
+    const v8, #string@no#t
 
     .line 208
     sget-object v5, Lcom/android/server/pm/ShutdownThread;->sIsStartedGuard:Ljava/lang/Object;
@@ -2333,13 +2343,13 @@
 
     invoke-direct {v5, p0}, Lcom/android/server/pm/ShutdownThread$3;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v4, v8, v5}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v4, v9, v5}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v4
 
     const/4 v5, 0x0
 
-    invoke-virtual {v4, v7, v5}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v4, v8, v5}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v4
 
@@ -2425,9 +2435,15 @@
 
     move-result-object v4
 
-    const v5, #string@reboot_confirm#t
+    const v5, #array@shutdown_reboot_options#t
 
-    invoke-virtual {v4, v5}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
+    const/4 v6, 0x0
+    
+    new-instance v7, Lcom/android/server/pm/ShutdownThread$12;
+    
+    invoke-direct {v7, p0}, Lcom/android/server/pm/ShutdownThread$12;-><init>(Landroid/content/Context;)V
+    
+    invoke-virtual {v4, v5, v6, v7}, Landroid/app/AlertDialog$Builder;->setSingleChoiceItems(IILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v4
 
@@ -2435,7 +2451,7 @@
 
     invoke-direct {v5, p0}, Lcom/android/server/pm/ShutdownThread$5;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v4, v8, v5}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v4, v9, v5}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v4
 
@@ -2443,7 +2459,7 @@
 
     invoke-direct {v5}, Lcom/android/server/pm/ShutdownThread$4;-><init>()V
 
-    invoke-virtual {v4, v7, v5}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v4, v8, v5}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v4
 

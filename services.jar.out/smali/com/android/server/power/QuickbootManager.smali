@@ -1289,6 +1289,12 @@
 
     .line 163
     :cond_6
+    const-string v6, "persist.sys.shutdown.state"
+    
+    const-string v7, "-1"
+    
+    invoke-static {v6, v7}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+    
     return-void
 
     .line 143
@@ -1393,6 +1399,16 @@
     invoke-static {v0, v1}, Lcom/android/server/power/QuickbootManager$Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 116
+    const-string v0, "persist.sys.shutdown.state"
+    
+    sget v1, Lcom/android/server/power/QuickbootManager;->mAdbState:I
+    
+    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    
+    move-result-object v1
+    
+    invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+    
     return-void
 .end method
 

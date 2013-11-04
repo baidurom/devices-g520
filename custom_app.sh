@@ -11,6 +11,8 @@ if [ "$apkBaseName" = "Phone" ];then
         sed -i -e "/^\.method.*getIccPinPukRetryTimes()I/,/^\.end method/d" $tempSmaliDir/smali/com/android/phone/PhoneInterfaceManager.smali
         sed -i -e "/^\.method.*getIccPin1RetryCount()I/,/^\.end method/d" $tempSmaliDir/smali/com/android/phone/PhoneInterfaceManager.smali
         sed -i -e "/^\.method.*startRecording(ILjava\/lang\/String;)Ljava\/lang\/String/,/^\.end method/d" $tempSmaliDir/smali/com/android/phone/Recorder.smali
+        sed -i -e "/^\.method.*getScAddress()Ljava\/lang\/String/,/^\.end method/d" $tempSmaliDir/smali/com/android/phone/PhoneInterfaceManager.smali
+        sed -i -e "/^\.method.*setScAddress(Ljava\/lang\/String;)V/,/^\.end method/d" $tempSmaliDir/smali/com/android/phone/PhoneInterfaceManager.smali
 
 	echo ">>> use vendor Bluetooth framework in Phone"
 	rm -rf $tempSmaliDir/smali/com/android/phone/Bluetooth*

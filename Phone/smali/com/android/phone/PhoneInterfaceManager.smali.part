@@ -169,3 +169,157 @@
     :cond_0
     return v0
 .end method
+
+.method public getScAddress()Ljava/lang/String;
+    .locals 9
+
+    .prologue
+    const/4 v8, 0x0
+
+    .line 882
+    const-string v4, "PhoneInterfaceManager"
+
+    const-string v5, "getScAddress: enter"
+
+    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 884
+    new-instance v0, Lcom/android/phone/PhoneInterfaceManager$ScAddr;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v0, p0, v4}, Lcom/android/phone/PhoneInterfaceManager$ScAddr;-><init>(Lcom/android/phone/PhoneInterfaceManager;Ljava/lang/String;)V
+
+    .line 886
+    .local v0, addr:Lcom/android/phone/PhoneInterfaceManager$ScAddr;
+    new-instance v3, Lcom/android/phone/PhoneInterfaceManager$1;
+
+    invoke-direct {v3, p0, v0}, Lcom/android/phone/PhoneInterfaceManager$1;-><init>(Lcom/android/phone/PhoneInterfaceManager;Lcom/android/phone/PhoneInterfaceManager$ScAddr;)V
+
+    .line 895
+    .local v3, sender:Ljava/lang/Thread;
+    invoke-virtual {v3}, Ljava/lang/Thread;->start()V
+
+    .line 897
+    :try_start_0
+    const-string v4, "PhoneInterfaceManager"
+
+    const-string v5, "[sca thread join"
+
+    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 898
+    invoke-virtual {v3}, Ljava/lang/Thread;->join()V
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 903
+    :goto_0
+    const-string v4, "PhoneInterfaceManager"
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "getScAddress: exit with "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    iget-object v6, v0, Lcom/android/phone/PhoneInterfaceManager$ScAddr;->scAddr:Ljava/lang/String;
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 905
+    iget-object v4, v0, Lcom/android/phone/PhoneInterfaceManager$ScAddr;->scAddr:Ljava/lang/String;
+
+    return-object v4
+
+    :catch_0
+    move-exception v1
+
+    .line 900
+    .local v1, e:Ljava/lang/InterruptedException;
+    const-string v4, "PhoneInterfaceManager"
+
+    const-string v5, "[sca throw interrupted exception"
+
+    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+.end method
+
+.method public setScAddress(Ljava/lang/String;)V
+    .locals 7
+    .parameter "address"
+
+    .prologue
+    .line 914
+    const-string v4, "PhoneInterfaceManager"
+
+    const-string v5, "setScAddress: enter"
+
+    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 915
+    new-instance v0, Lcom/android/phone/PhoneInterfaceManager$ScAddr;
+
+    invoke-direct {v0, p0, p1}, Lcom/android/phone/PhoneInterfaceManager$ScAddr;-><init>(Lcom/android/phone/PhoneInterfaceManager;Ljava/lang/String;)V
+
+    .line 921
+    .local v0, addr:Lcom/android/phone/PhoneInterfaceManager$ScAddr;
+    new-instance v2, Lcom/android/phone/PhoneInterfaceManager$2;
+
+    invoke-direct {v2, p0, v0}, Lcom/android/phone/PhoneInterfaceManager$2;-><init>(Lcom/android/phone/PhoneInterfaceManager;Lcom/android/phone/PhoneInterfaceManager$ScAddr;)V
+
+    .line 930
+    .local v2, sender:Ljava/lang/Thread;
+    invoke-virtual {v2}, Ljava/lang/Thread;->start()V
+
+    .line 932
+    :try_start_0
+    const-string v4, "PhoneInterfaceManager"
+
+    const-string v5, "[sca thread join"
+
+    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 933
+    invoke-virtual {v2}, Ljava/lang/Thread;->join()V
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 938
+    :goto_0
+    const-string v4, "PhoneInterfaceManager"
+
+    const-string v5, "setScAddress: exit"
+
+    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 939
+    return-void
+
+    .line 934
+    :catch_0
+    move-exception v1
+
+    .line 935
+    .local v1, e:Ljava/lang/InterruptedException;
+    const-string v4, "PhoneInterfaceManager"
+
+    const-string v5, "[sca throw interrupted exception"
+
+    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+.end method

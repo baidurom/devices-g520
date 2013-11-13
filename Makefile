@@ -164,6 +164,11 @@ override_property += \
 override_property += \
     ro.product.device.alias=G520,g520,hwG520,hwg520
 
+# reduce hwui cache size
+override_property += \
+    ro.hwui.layer_cache_size=10.0 \
+    ro.hwui.texture_cache_size=14.0
+
 ##############################################################################
 # override_property: this property will override the build.prop
 #-----------------------------------------------------------------------------

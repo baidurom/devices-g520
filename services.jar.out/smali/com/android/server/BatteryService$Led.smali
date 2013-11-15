@@ -62,6 +62,11 @@
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/BatteryService$Led;->mBatteryLight:Lcom/android/server/LightsService$Light;
+    
+    const/4 v0, 0x1
+
+    #setter for: Lcom/android/server/BatteryService;->mMultiColorLed:Z
+    invoke-static {p1, v0}, Lcom/android/server/BatteryService;->access$1003(Lcom/android/server/BatteryService;Z)Z
 
     .line 686
     #getter for: Lcom/android/server/BatteryService;->mContext:Landroid/content/Context;
@@ -383,7 +388,7 @@
 
 # virtual methods
 .method updateLightsLocked()V
-    .locals 8
+    .locals 12
 
     .prologue
     const/16 v7, 0x5a
@@ -430,6 +435,22 @@
     .line 709
     :cond_0
     iget-object v2, p0, Lcom/android/server/BatteryService$Led;->this$0:Lcom/android/server/BatteryService;
+    
+    #getter for: Lcom/android/server/BatteryService;->mLightEnabled:Z
+    invoke-static {v2}, Lcom/android/server/BatteryService;->access$1101(Lcom/android/server/BatteryService;)Z
+
+    move-result v2
+    
+    if-nez v2, :cond_b
+    
+    iget-object v2, p0, Lcom/android/server/BatteryService$Led;->mBatteryLight:Lcom/android/server/LightsService$Light;
+
+    invoke-virtual {v2}, Lcom/android/server/LightsService$Light;->turnOff()V
+
+    goto :goto_0
+    
+    :cond_b
+    iget-object v2, p0, Lcom/android/server/BatteryService$Led;->this$0:Lcom/android/server/BatteryService;
 
     #getter for: Lcom/android/server/BatteryService;->mLowBatteryWarningLevel:I
     invoke-static {v2}, Lcom/android/server/BatteryService;->access$300(Lcom/android/server/BatteryService;)I
@@ -437,8 +458,53 @@
     move-result v2
 
     if-ge v0, v2, :cond_2
+    
+    if-ne v1, v5, :cond_c
+    
+    iget-object v2, p0, Lcom/android/server/BatteryService$Led;->mBatteryLight:Lcom/android/server/LightsService$Light;
+
+    iget-object v3, p0, Lcom/android/server/BatteryService$Led;->this$0:Lcom/android/server/BatteryService;
+
+    #getter for: Lcom/android/server/BatteryService;->mBatteryLowARGB:I
+    invoke-static {v3}, Lcom/android/server/BatteryService;->access$1301(Lcom/android/server/BatteryService;)I
+
+    move-result v8
+
+    invoke-virtual {v2, v8}, Lcom/android/server/LightsService$Light;->setColor(I)V
+
+    goto :goto_0
+
+    :cond_c
+    iget-object v2, p0, Lcom/android/server/BatteryService$Led;->this$0:Lcom/android/server/BatteryService;
+
+    #getter for: Lcom/android/server/BatteryService;->mLedPulseEnabled:Z
+    invoke-static {v2}, Lcom/android/server/BatteryService;->access$1305(Lcom/android/server/BatteryService;)Z
+
+    move-result v2
+    
+    if-eqz v2, :cond_d 
+
+    iget-object v2, p0, Lcom/android/server/BatteryService$Led;->mBatteryLight:Lcom/android/server/LightsService$Light;
+
+    iget-object v8, p0, Lcom/android/server/BatteryService$Led;->this$0:Lcom/android/server/BatteryService;
+
+    #getter for: Lcom/android/server/BatteryService;->mBatteryLowARGB:I
+    invoke-static {v8}, Lcom/android/server/BatteryService;->access$1301(Lcom/android/server/BatteryService;)I
+
+    move-result v8
+
+    const/4 v9, 0x1
+
+    iget v10, p0, Lcom/android/server/BatteryService$Led;->mBatteryLedOn:I
+
+    iget v11, p0, Lcom/android/server/BatteryService$Led;->mBatteryLedOff:I
+
+    invoke-virtual {v2, v8, v9, v10, v11}, Lcom/android/server/LightsService$Light;->setFlashing(IIII)V
+
+    goto :goto_0
 
     .line 713
+    :cond_d 
     iget-object v2, p0, Lcom/android/server/BatteryService$Led;->this$0:Lcom/android/server/BatteryService;
 
     #getter for: Lcom/android/server/BatteryService;->mPlugType:I
@@ -456,8 +522,13 @@
     .line 717
     iget-object v2, p0, Lcom/android/server/BatteryService$Led;->mBatteryLight:Lcom/android/server/LightsService$Light;
 
-    iget v3, p0, Lcom/android/server/BatteryService$Led;->mBatteryLowARGB:I
+    iget-object v3, p0, Lcom/android/server/BatteryService$Led;->this$0:Lcom/android/server/BatteryService;
+    
+    #getter for: Lcom/android/server/BatteryService;->mBatteryLowARGB:I
+    invoke-static {v3}, Lcom/android/server/BatteryService;->access$1301(Lcom/android/server/BatteryService;)I
 
+    move-result v3
+    
     invoke-virtual {v2, v3}, Lcom/android/server/LightsService$Light;->setColor(I)V
 
     .line 758
@@ -477,14 +548,19 @@
     .line 722
     iget-object v2, p0, Lcom/android/server/BatteryService$Led;->mBatteryLight:Lcom/android/server/LightsService$Light;
 
-    iget v3, p0, Lcom/android/server/BatteryService$Led;->mBatteryLowARGB:I
+    iget-object v3, p0, Lcom/android/server/BatteryService$Led;->this$0:Lcom/android/server/BatteryService;
+    
+    #getter for: Lcom/android/server/BatteryService;->mBatteryLowARGB:I
+    invoke-static {v3}, Lcom/android/server/BatteryService;->access$1301(Lcom/android/server/BatteryService;)I
 
+    move-result v3
+    
     iget v4, p0, Lcom/android/server/BatteryService$Led;->mBatteryLedOn:I
 
     iget v5, p0, Lcom/android/server/BatteryService$Led;->mBatteryLedOff:I
 
     invoke-virtual {v2, v3, v6, v4, v5}, Lcom/android/server/LightsService$Light;->setFlashing(IIII)V
-
+    
     goto :goto_0
 
     .line 725
@@ -542,8 +618,13 @@
     .line 736
     iget-object v2, p0, Lcom/android/server/BatteryService$Led;->mBatteryLight:Lcom/android/server/LightsService$Light;
 
-    iget v3, p0, Lcom/android/server/BatteryService$Led;->mBatteryFullARGB:I
+    iget-object v3, p0, Lcom/android/server/BatteryService$Led;->this$0:Lcom/android/server/BatteryService;
+    
+    #getter for: Lcom/android/server/BatteryService;->mBatteryFullARGB:I
+    invoke-static {v3}, Lcom/android/server/BatteryService;->access$1405(Lcom/android/server/BatteryService;)I
 
+    move-result v3
+    
     invoke-virtual {v2, v3}, Lcom/android/server/LightsService$Light;->setColor(I)V
 
     goto :goto_0
@@ -555,8 +636,13 @@
     .line 740
     iget-object v2, p0, Lcom/android/server/BatteryService$Led;->mBatteryLight:Lcom/android/server/LightsService$Light;
 
-    iget v3, p0, Lcom/android/server/BatteryService$Led;->mBatteryMediumARGB:I
+    iget-object v3, p0, Lcom/android/server/BatteryService$Led;->this$0:Lcom/android/server/BatteryService;
+    
+    #getter for: Lcom/android/server/BatteryService;->mBatteryMediumARGB:I
+    invoke-static {v3}, Lcom/android/server/BatteryService;->access$1404(Lcom/android/server/BatteryService;)I
 
+    move-result v3
+    
     invoke-virtual {v2, v3}, Lcom/android/server/LightsService$Light;->setColor(I)V
 
     goto :goto_0
@@ -590,7 +676,12 @@
     :cond_8
     iget-object v2, p0, Lcom/android/server/BatteryService$Led;->mBatteryLight:Lcom/android/server/LightsService$Light;
 
-    iget v3, p0, Lcom/android/server/BatteryService$Led;->mBatteryFullARGB:I
+    iget-object v3, p0, Lcom/android/server/BatteryService$Led;->this$0:Lcom/android/server/BatteryService;
+    
+    #getter for: Lcom/android/server/BatteryService;->mBatteryFullARGB:I
+    invoke-static {v3}, Lcom/android/server/BatteryService;->access$1405(Lcom/android/server/BatteryService;)I
+
+    move-result v3
 
     invoke-virtual {v2, v3}, Lcom/android/server/LightsService$Light;->setColor(I)V
 
@@ -619,7 +710,12 @@
     :cond_a
     iget-object v2, p0, Lcom/android/server/BatteryService$Led;->mBatteryLight:Lcom/android/server/LightsService$Light;
 
-    iget v3, p0, Lcom/android/server/BatteryService$Led;->mBatteryMediumARGB:I
+    iget-object v3, p0, Lcom/android/server/BatteryService$Led;->this$0:Lcom/android/server/BatteryService;
+    
+    #getter for: Lcom/android/server/BatteryService;->mBatteryMediumARGB:I
+    invoke-static {v3}, Lcom/android/server/BatteryService;->access$1404(Lcom/android/server/BatteryService;)I
+
+    move-result v3
 
     invoke-virtual {v2, v3}, Lcom/android/server/LightsService$Light;->setColor(I)V
 
@@ -714,8 +810,13 @@
     .line 702
     iget-object v1, p0, Lcom/android/server/BatteryService$Led;->mBatteryLight:Lcom/android/server/LightsService$Light;
 
-    iget v2, p0, Lcom/android/server/BatteryService$Led;->mBatteryLowARGB:I
+    iget-object v2, p0, Lcom/android/server/BatteryService$Led;->this$0:Lcom/android/server/BatteryService;
+    
+    #getter for: Lcom/android/server/BatteryService;->mBatteryLowARGB:I
+    invoke-static {v2}, Lcom/android/server/BatteryService;->access$1301(Lcom/android/server/BatteryService;)I
 
+    move-result v2
+    
     invoke-virtual {v1, v2}, Lcom/android/server/LightsService$Light;->setColor(I)V
 
     goto :goto_0
@@ -729,8 +830,13 @@
     .line 705
     iget-object v1, p0, Lcom/android/server/BatteryService$Led;->mBatteryLight:Lcom/android/server/LightsService$Light;
 
-    iget v2, p0, Lcom/android/server/BatteryService$Led;->mBatteryFullARGB:I
+    iget-object v2, p0, Lcom/android/server/BatteryService$Led;->this$0:Lcom/android/server/BatteryService;
+    
+    #getter for: Lcom/android/server/BatteryService;->mBatteryFullARGB:I
+    invoke-static {v2}, Lcom/android/server/BatteryService;->access$1405(Lcom/android/server/BatteryService;)I
 
+    move-result v2
+    
     invoke-virtual {v1, v2}, Lcom/android/server/LightsService$Light;->setColor(I)V
 
     goto :goto_0
@@ -739,8 +845,13 @@
     :cond_2
     iget-object v1, p0, Lcom/android/server/BatteryService$Led;->mBatteryLight:Lcom/android/server/LightsService$Light;
 
-    iget v2, p0, Lcom/android/server/BatteryService$Led;->mBatteryMediumARGB:I
+    iget-object v2, p0, Lcom/android/server/BatteryService$Led;->this$0:Lcom/android/server/BatteryService;
+    
+    #getter for: Lcom/android/server/BatteryService;->mBatteryMediumARGB:I
+    invoke-static {v2}, Lcom/android/server/BatteryService;->access$1404(Lcom/android/server/BatteryService;)I
 
+    move-result v2
+    
     invoke-virtual {v1, v2}, Lcom/android/server/LightsService$Light;->setColor(I)V
 
     goto :goto_0

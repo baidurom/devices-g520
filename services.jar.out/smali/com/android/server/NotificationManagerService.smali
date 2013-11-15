@@ -9,6 +9,7 @@
         Lcom/android/server/NotificationManagerService$WorkerHandler;,
         Lcom/android/server/NotificationManagerService$QuickbootBroadcastReceiver;,
         Lcom/android/server/NotificationManagerService$SettingsObserver;,
+        Lcom/android/server/NotificationManagerService$NotificationLedValues;,
         Lcom/android/server/NotificationManagerService$ToastRecord;,
         Lcom/android/server/NotificationManagerService$NotificationRecord;
     }
@@ -133,7 +134,31 @@
     .end annotation
 .end field
 
+.field private mNotificationPulseCustomLedValues:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/android/server/NotificationManagerService$NotificationLedValues;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field private mNotificationPulseEnabled:Z
+
+.field private mPackageNameMappings:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field private mPolicyFile:Lcom/android/internal/os/AtomicFile;
 
@@ -367,7 +392,19 @@
 
     iput v6, p0, Lcom/android/server/NotificationManagerService;->mDefaultNotificationLedOff:I
 
+    new-instance v6, Ljava/util/HashMap;
+    
+    invoke-direct {v6}, Ljava/util/HashMap;-><init>()V
+    
+    iput-object v6, p0, Lcom/android/server/NotificationManagerService;->mNotificationPulseCustomLedValues:Ljava/util/HashMap;
+    
     .line 639
+    new-instance v6, Ljava/util/HashMap;
+    
+    invoke-direct {v6}, Ljava/util/HashMap;-><init>()V
+    
+    iput-object v6, p0, Lcom/android/server/NotificationManagerService;->mPackageNameMappings:Ljava/util/Map;
+    
     iget-object v6, p0, Lcom/android/server/NotificationManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -614,6 +651,17 @@
     return-object v0
 .end method
 
+.method static synthetic access$1501(Lcom/android/server/NotificationManagerService;)I
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 95
+    iget v0, p0, Lcom/android/server/NotificationManagerService;->mDefaultNotificationColor:I
+
+    return v0
+.end method
+
 .method static synthetic access$1602(Lcom/android/server/NotificationManagerService;Z)Z
     .locals 0
     .parameter "x0"
@@ -622,6 +670,41 @@
     .prologue
     .line 87
     iput-boolean p1, p0, Lcom/android/server/NotificationManagerService;->mIPOBootup:Z
+
+    return p1
+.end method
+
+.method static synthetic access$1603(Lcom/android/server/NotificationManagerService;I)I
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 95
+    iput p1, p0, Lcom/android/server/NotificationManagerService;->mDefaultNotificationColor:I
+
+    return p1
+.end method
+
+.method static synthetic access$1604(Lcom/android/server/NotificationManagerService;)I
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 95
+    iget v0, p0, Lcom/android/server/NotificationManagerService;->mDefaultNotificationLedOn:I
+
+    return v0
+.end method
+
+.method static synthetic access$1605(Lcom/android/server/NotificationManagerService;I)I
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 95
+    iput p1, p0, Lcom/android/server/NotificationManagerService;->mDefaultNotificationLedOn:I
 
     return p1
 .end method
@@ -650,6 +733,29 @@
     return p1
 .end method
 
+.method static synthetic access$1704(Lcom/android/server/NotificationManagerService;)I
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 95
+    iget v0, p0, Lcom/android/server/NotificationManagerService;->mDefaultNotificationLedOff:I
+
+    return v0
+.end method
+
+.method static synthetic access$1705(Lcom/android/server/NotificationManagerService;I)I
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 95
+    iput p1, p0, Lcom/android/server/NotificationManagerService;->mDefaultNotificationLedOff:I
+
+    return p1
+.end method
+
 .method static synthetic access$1800(Lcom/android/server/NotificationManagerService;)Lcom/android/server/LightsService$Light;
     .locals 1
     .parameter "x0"
@@ -657,6 +763,17 @@
     .prologue
     .line 87
     iget-object v0, p0, Lcom/android/server/NotificationManagerService;->mAttentionLight:Lcom/android/server/LightsService$Light;
+
+    return-object v0
+.end method
+
+.method static synthetic access$1801(Lcom/android/server/NotificationManagerService;)Ljava/util/HashMap;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 95
+    iget-object v0, p0, Lcom/android/server/NotificationManagerService;->mNotificationPulseCustomLedValues:Ljava/util/HashMap;
 
     return-object v0
 .end method
@@ -682,6 +799,18 @@
     iput-boolean p1, p0, Lcom/android/server/NotificationManagerService;->mNotificationPulseEnabled:Z
 
     return p1
+.end method
+
+.method static synthetic access$1903(Lcom/android/server/NotificationManagerService;Ljava/lang/String;)V
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 95
+    invoke-direct {p0, p1}, Lcom/android/server/NotificationManagerService;->parseNotificationPulseCustomValuesString(Ljava/lang/String;)V
+
+    return-void
 .end method
 
 .method static synthetic access$200(Lcom/android/server/NotificationManagerService;)I
@@ -1405,6 +1534,29 @@
     move p1, p0
 
     goto :goto_0
+.end method
+
+.method private getLedValuesForNotification(Lcom/android/server/NotificationManagerService$NotificationRecord;)Lcom/android/server/NotificationManagerService$NotificationLedValues;
+    .locals 2
+    .parameter "ledNotification"
+
+    .prologue
+    .line 1497
+    iget-object v0, p0, Lcom/android/server/NotificationManagerService;->mNotificationPulseCustomLedValues:Ljava/util/HashMap;
+
+    iget-object v1, p1, Lcom/android/server/NotificationManagerService$NotificationRecord;->pkg:Ljava/lang/String;
+
+    invoke-direct {p0, v1}, Lcom/android/server/NotificationManagerService;->mapPackage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/server/NotificationManagerService$NotificationLedValues;
+
+    return-object v0
 .end method
 
 .method private handleTimeout(Lcom/android/server/NotificationManagerService$ToastRecord;)V
@@ -2133,6 +2285,265 @@
     goto :goto_2
 .end method
 
+.method private mapPackage(Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+    .parameter "pkg"
+
+    .prologue
+    .line 1501
+    iget-object v0, p0, Lcom/android/server/NotificationManagerService;->mPackageNameMappings:Ljava/util/Map;
+
+    invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 1504
+    .end local p1
+    :goto_0
+    return-object p1
+
+    .restart local p1
+    :cond_0
+    iget-object v0, p0, Lcom/android/server/NotificationManagerService;->mPackageNameMappings:Ljava/util/Map;
+
+    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    move-object p1, v0
+
+    goto :goto_0
+.end method
+
+.method private parseNotificationPulseCustomValuesString(Ljava/lang/String;)V
+    .locals 12
+    .parameter "customLedValuesString"
+
+    .prologue
+    .line 1467
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v9
+
+    if-eqz v9, :cond_1
+
+    .line 1494
+    :cond_0
+    return-void
+
+    .line 1471
+    :cond_1
+    const-string v9, "\\|"
+
+    invoke-virtual {p1, v9}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v0
+
+    .local v0, arr$:[Ljava/lang/String;
+    array-length v4, v0
+
+    .local v4, len$:I
+    const/4 v2, 0x0
+
+    .local v2, i$:I
+    :goto_0
+    if-ge v2, v4, :cond_0
+
+    aget-object v7, v0, v2
+
+    .line 1472
+    .local v7, packageValuesString:Ljava/lang/String;
+    const-string v9, "="
+
+    invoke-virtual {v7, v9}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v6
+
+    .line 1473
+    .local v6, packageValues:[Ljava/lang/String;
+    array-length v9, v6
+
+    const/4 v10, 0x2
+
+    if-eq v9, v10, :cond_2
+
+    .line 1474
+    const-string v9, "NotificationService"
+
+    const-string v10, "Error parsing custom led values for unknown package"
+
+    invoke-static {v9, v10}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1471
+    :goto_1
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    .line 1477
+    :cond_2
+    const/4 v9, 0x0
+
+    aget-object v5, v6, v9
+
+    .line 1478
+    .local v5, packageName:Ljava/lang/String;
+    const/4 v9, 0x1
+
+    aget-object v9, v6, v9
+
+    const-string v10, ";"
+
+    invoke-virtual {v9, v10}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v8
+
+    .line 1479
+    .local v8, values:[Ljava/lang/String;
+    array-length v9, v8
+
+    const/4 v10, 0x3
+
+    if-eq v9, v10, :cond_3
+
+    .line 1480
+    const-string v9, "NotificationService"
+
+    new-instance v10, Ljava/lang/StringBuilder;
+
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v11, "Error parsing custom led values \'"
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v10
+
+    const/4 v11, 0x1
+
+    aget-object v11, v6, v11
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v10
+
+    const-string v11, "\' for "
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v10
+
+    invoke-virtual {v10, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v10
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-static {v9, v10}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_1
+
+    .line 1483
+    :cond_3
+    new-instance v3, Lcom/android/server/NotificationManagerService$NotificationLedValues;
+
+    invoke-direct {v3, p0}, Lcom/android/server/NotificationManagerService$NotificationLedValues;-><init>(Lcom/android/server/NotificationManagerService;)V
+
+    .line 1485
+    .local v3, ledValues:Lcom/android/server/NotificationManagerService$NotificationLedValues;
+    const/4 v9, 0x0
+
+    :try_start_0
+    aget-object v9, v8, v9
+
+    invoke-static {v9}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v9
+
+    iput v9, v3, Lcom/android/server/NotificationManagerService$NotificationLedValues;->color:I
+
+    .line 1486
+    const/4 v9, 0x1
+
+    aget-object v9, v8, v9
+
+    invoke-static {v9}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v9
+
+    iput v9, v3, Lcom/android/server/NotificationManagerService$NotificationLedValues;->onMS:I
+
+    .line 1487
+    const/4 v9, 0x2
+
+    aget-object v9, v8, v9
+
+    invoke-static {v9}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v9
+
+    iput v9, v3, Lcom/android/server/NotificationManagerService$NotificationLedValues;->offMS:I
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 1492
+    iget-object v9, p0, Lcom/android/server/NotificationManagerService;->mNotificationPulseCustomLedValues:Ljava/util/HashMap;
+
+    invoke-virtual {v9, v5, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_1
+
+    .line 1488
+    :catch_0
+    move-exception v1
+
+    .line 1489
+    .local v1, e:Ljava/lang/Exception;
+    const-string v9, "NotificationService"
+
+    new-instance v10, Ljava/lang/StringBuilder;
+
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v11, "Error parsing custom led values \'"
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v10
+
+    const/4 v11, 0x1
+
+    aget-object v11, v6, v11
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v10
+
+    const-string v11, "\' for "
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v10
+
+    invoke-virtual {v10, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v10
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-static {v9, v10}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto/16 :goto_1
+.end method
+
 .method private registerQbReceiver()V
     .locals 3
 
@@ -2469,183 +2880,228 @@
     .locals 7
 
     .prologue
-    .line 1373
-    iget-object v4, p0, Lcom/android/server/NotificationManagerService;->mLedNotification:Lcom/android/server/NotificationManagerService$NotificationRecord;
+    .line 1418
+    iget-object v5, p0, Lcom/android/server/NotificationManagerService;->mLedNotification:Lcom/android/server/NotificationManagerService$NotificationRecord;
 
-    if-nez v4, :cond_0
+    if-nez v5, :cond_0
 
-    .line 1375
-    iget-object v4, p0, Lcom/android/server/NotificationManagerService;->mLights:Ljava/util/ArrayList;
+    .line 1420
+    iget-object v5, p0, Lcom/android/server/NotificationManagerService;->mLights:Ljava/util/ArrayList;
 
-    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
-    move-result v3
+    move-result v4
 
-    .line 1376
-    .local v3, n:I
-    if-lez v3, :cond_0
+    .line 1421
+    .local v4, n:I
+    if-lez v4, :cond_0
 
-    .line 1377
-    iget-object v4, p0, Lcom/android/server/NotificationManagerService;->mLights:Ljava/util/ArrayList;
+    .line 1422
+    iget-object v5, p0, Lcom/android/server/NotificationManagerService;->mLights:Ljava/util/ArrayList;
 
-    add-int/lit8 v5, v3, -0x1
+    add-int/lit8 v6, v4, -0x1
 
-    invoke-virtual {v4, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v5, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object v5
 
-    check-cast v4, Lcom/android/server/NotificationManagerService$NotificationRecord;
+    check-cast v5, Lcom/android/server/NotificationManagerService$NotificationRecord;
 
-    iput-object v4, p0, Lcom/android/server/NotificationManagerService;->mLedNotification:Lcom/android/server/NotificationManagerService$NotificationRecord;
+    iput-object v5, p0, Lcom/android/server/NotificationManagerService;->mLedNotification:Lcom/android/server/NotificationManagerService$NotificationRecord;
 
-    .line 1385
-    .end local v3           #n:I
+    .line 1427
+    .end local v4           #n:I
     :cond_0
-    iget-boolean v4, p0, Lcom/android/server/NotificationManagerService;->mIsQbShutdown:Z
+    iget-boolean v5, p0, Lcom/android/server/NotificationManagerService;->mIsQbShutdown:Z
 
-    if-eqz v4, :cond_99
+    if-eqz v5, :cond_2
 
-    .line 1373
-    const-string v4, "NotificationService"
+    .line 1428
+    const-string v5, "NotificationService"
 
-    const-string v5, "In QuickBoot Shutdown do not update notification Light"
+    const-string v6, "In QuickBoot Shutdown do not update notification Light"
 
-    invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v5, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_0
-
-    .line 1379
-    :cond_99
-    iget-object v4, p0, Lcom/android/server/NotificationManagerService;->mLedNotification:Lcom/android/server/NotificationManagerService$NotificationRecord;
-
-    if-eqz v4, :cond_1
-
-    iget-boolean v4, p0, Lcom/android/server/NotificationManagerService;->mInCall:Z
-
-    if-nez v4, :cond_1
-
-    iget-boolean v4, p0, Lcom/android/server/NotificationManagerService;->mCallRinging:Z
-
-    if-nez v4, :cond_1
-
-    iget-boolean v4, p0, Lcom/android/server/NotificationManagerService;->mShutDown:Z
-
-    if-nez v4, :cond_1
-
-    iget-boolean v4, p0, Lcom/android/server/NotificationManagerService;->mScreenOn:Z
-
-    if-eqz v4, :cond_2
-
-    .line 1388
+    .line 1464
     :cond_1
-    iget-object v4, p0, Lcom/android/server/NotificationManagerService;->mNotificationLight:Lcom/android/server/LightsService$Light;
-
-    invoke-virtual {v4}, Lcom/android/server/LightsService$Light;->turnOff()V
-
-    .line 1411
     :goto_0
     return-void
 
-    .line 1390
+    .line 1434
     :cond_2
-    iget-object v4, p0, Lcom/android/server/NotificationManagerService;->mLedNotification:Lcom/android/server/NotificationManagerService$NotificationRecord;
+    iget-object v5, p0, Lcom/android/server/NotificationManagerService;->mLedNotification:Lcom/android/server/NotificationManagerService$NotificationRecord;
 
-    iget-object v4, v4, Lcom/android/server/NotificationManagerService$NotificationRecord;->notification:Landroid/app/Notification;
+    if-eqz v5, :cond_3
+    
+    iget-boolean v5, p0, Lcom/android/server/NotificationManagerService;->mInCall:Z
+    
+    if-nez v5, :cond_3
+    
+    iget-boolean v5, p0, Lcom/android/server/NotificationManagerService;->mCallRinging:Z
+    
+    if-nez v5, :cond_3
+    
+    iget-boolean v5, p0, Lcom/android/server/NotificationManagerService;->mShutDown:Z
 
-    iget v0, v4, Landroid/app/Notification;->ledARGB:I
+    if-nez v5, :cond_3
 
-    .line 1391
+    iget-boolean v5, p0, Lcom/android/server/NotificationManagerService;->mScreenOn:Z
+
+    if-eqz v5, :cond_4
+
+    .line 1435
+    :cond_3
+    iget-object v5, p0, Lcom/android/server/NotificationManagerService;->mNotificationLight:Lcom/android/server/LightsService$Light;
+
+    invoke-virtual {v5}, Lcom/android/server/LightsService$Light;->turnOff()V
+
+    goto :goto_0
+
+    .line 1441
+    :cond_4
+    iget-object v5, p0, Lcom/android/server/NotificationManagerService;->mLedNotification:Lcom/android/server/NotificationManagerService$NotificationRecord;
+
+    invoke-direct {p0, v5}, Lcom/android/server/NotificationManagerService;->getLedValuesForNotification(Lcom/android/server/NotificationManagerService$NotificationRecord;)Lcom/android/server/NotificationManagerService$NotificationLedValues;
+
+    move-result-object v3
+
+    .line 1442
+    .local v3, ledValues:Lcom/android/server/NotificationManagerService$NotificationLedValues;
+    if-eqz v3, :cond_8
+
+    .line 1443
+    iget v5, v3, Lcom/android/server/NotificationManagerService$NotificationLedValues;->color:I
+
+    if-eqz v5, :cond_5
+
+    iget v0, v3, Lcom/android/server/NotificationManagerService$NotificationLedValues;->color:I
+
+    .line 1444
     .local v0, ledARGB:I
-    iget-object v4, p0, Lcom/android/server/NotificationManagerService;->mLedNotification:Lcom/android/server/NotificationManagerService$NotificationRecord;
+    :goto_1
+    iget v5, v3, Lcom/android/server/NotificationManagerService$NotificationLedValues;->onMS:I
 
-    iget-object v4, v4, Lcom/android/server/NotificationManagerService$NotificationRecord;->notification:Landroid/app/Notification;
+    if-ltz v5, :cond_6
 
-    iget v2, v4, Landroid/app/Notification;->ledOnMS:I
+    iget v2, v3, Lcom/android/server/NotificationManagerService$NotificationLedValues;->onMS:I
 
-    .line 1392
+    .line 1445
     .local v2, ledOnMS:I
-    iget-object v4, p0, Lcom/android/server/NotificationManagerService;->mLedNotification:Lcom/android/server/NotificationManagerService$NotificationRecord;
+    :goto_2
+    iget v5, v3, Lcom/android/server/NotificationManagerService$NotificationLedValues;->offMS:I
 
-    iget-object v4, v4, Lcom/android/server/NotificationManagerService$NotificationRecord;->notification:Landroid/app/Notification;
+    if-ltz v5, :cond_7
 
-    iget v1, v4, Landroid/app/Notification;->ledOffMS:I
+    iget v1, v3, Lcom/android/server/NotificationManagerService$NotificationLedValues;->offMS:I
 
-    .line 1393
+    .line 1458
     .local v1, ledOffMS:I
-    iget-object v4, p0, Lcom/android/server/NotificationManagerService;->mLedNotification:Lcom/android/server/NotificationManagerService$NotificationRecord;
+    :goto_3
+    iget-boolean v5, p0, Lcom/android/server/NotificationManagerService;->mNotificationPulseEnabled:Z
 
-    iget-object v4, v4, Lcom/android/server/NotificationManagerService$NotificationRecord;->notification:Landroid/app/Notification;
+    if-eqz v5, :cond_a
 
-    iget v4, v4, Landroid/app/Notification;->defaults:I
+    .line 1460
+    iget-object v5, p0, Lcom/android/server/NotificationManagerService;->mNotificationLight:Lcom/android/server/LightsService$Light;
 
-    and-int/lit8 v4, v4, 0x4
+    const/4 v6, 0x1
 
-    if-eqz v4, :cond_3
+    invoke-virtual {v5, v0, v6, v2, v1}, Lcom/android/server/LightsService$Light;->setFlashing(IIII)V
 
-    .line 1394
+    goto :goto_0
+
+    .line 1443
+    .end local v0           #ledARGB:I
+    .end local v1           #ledOffMS:I
+    .end local v2           #ledOnMS:I
+    :cond_5
     iget v0, p0, Lcom/android/server/NotificationManagerService;->mDefaultNotificationColor:I
 
-    .line 1395
+    goto :goto_1
+
+    .line 1444
+    .restart local v0       #ledARGB:I
+    :cond_6
     iget v2, p0, Lcom/android/server/NotificationManagerService;->mDefaultNotificationLedOn:I
 
-    .line 1396
+    goto :goto_2
+
+    .line 1445
+    .restart local v2       #ledOnMS:I
+    :cond_7
     iget v1, p0, Lcom/android/server/NotificationManagerService;->mDefaultNotificationLedOff:I
 
-    .line 1398
-    :cond_3
-    iget-boolean v4, p0, Lcom/android/server/NotificationManagerService;->mNotificationPulseEnabled:Z
+    goto :goto_3
 
-    if-eqz v4, :cond_4
+    .line 1447
+    .end local v0           #ledARGB:I
+    .end local v2           #ledOnMS:I
+    :cond_8
+    iget-object v5, p0, Lcom/android/server/NotificationManagerService;->mLedNotification:Lcom/android/server/NotificationManagerService$NotificationRecord;
 
-    .line 1401
-    const-string v4, "NotificationService"
+    iget-object v5, v5, Lcom/android/server/NotificationManagerService$NotificationRecord;->notification:Landroid/app/Notification;
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    iget v5, v5, Landroid/app/Notification;->defaults:I
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+    and-int/lit8 v5, v5, 0x4
 
-    const-string v6, "notification setFlashing ledOnMS = "
+    if-eqz v5, :cond_9
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 1448
+    iget v0, p0, Lcom/android/server/NotificationManagerService;->mDefaultNotificationColor:I
 
-    move-result-object v5
+    .line 1449
+    .restart local v0       #ledARGB:I
+    iget v2, p0, Lcom/android/server/NotificationManagerService;->mDefaultNotificationLedOn:I
 
-    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .line 1450
+    .restart local v2       #ledOnMS:I
+    iget v1, p0, Lcom/android/server/NotificationManagerService;->mDefaultNotificationLedOff:I
 
-    move-result-object v5
+    .restart local v1       #ledOffMS:I
+    goto :goto_3
 
-    const-string v6, " ledOffMS = "
+    .line 1452
+    .end local v0           #ledARGB:I
+    .end local v1           #ledOffMS:I
+    .end local v2           #ledOnMS:I
+    :cond_9
+    iget-object v5, p0, Lcom/android/server/NotificationManagerService;->mLedNotification:Lcom/android/server/NotificationManagerService$NotificationRecord;
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v5, v5, Lcom/android/server/NotificationManagerService$NotificationRecord;->notification:Landroid/app/Notification;
 
-    move-result-object v5
+    iget v0, v5, Landroid/app/Notification;->ledARGB:I
 
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .line 1453
+    .restart local v0       #ledARGB:I
+    iget-object v5, p0, Lcom/android/server/NotificationManagerService;->mLedNotification:Lcom/android/server/NotificationManagerService$NotificationRecord;
 
-    move-result-object v5
+    iget-object v5, v5, Lcom/android/server/NotificationManagerService$NotificationRecord;->notification:Landroid/app/Notification;
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget v2, v5, Landroid/app/Notification;->ledOnMS:I
 
-    move-result-object v5
+    .line 1454
+    .restart local v2       #ledOnMS:I
+    iget-object v5, p0, Lcom/android/server/NotificationManagerService;->mLedNotification:Lcom/android/server/NotificationManagerService$NotificationRecord;
 
-    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    iget-object v5, v5, Lcom/android/server/NotificationManagerService$NotificationRecord;->notification:Landroid/app/Notification;
 
-    .line 1403
-    iget-object v4, p0, Lcom/android/server/NotificationManagerService;->mNotificationLight:Lcom/android/server/LightsService$Light;
+    iget v1, v5, Landroid/app/Notification;->ledOffMS:I
 
-    const/4 v5, 0x1
+    .restart local v1       #ledOffMS:I
+    goto :goto_3
+    
+    :cond_a
+    iget-object v5, p0, Lcom/android/server/NotificationManagerService;->mNotificationLight:Lcom/android/server/LightsService$Light;
+    
+    iget v2, p0, Lcom/android/server/NotificationManagerService;->mDefaultNotificationLedOn:I
+    
+    iget v0, p0, Lcom/android/server/NotificationManagerService;->mDefaultNotificationColor:I
 
-    invoke-virtual {v4, v0, v5, v2, v1}, Lcom/android/server/LightsService$Light;->setFlashing(IIII)V
+    invoke-virtual {v5, v0, v2}, Lcom/android/server/LightsService$Light;->pulse(II)V
 
-    goto :goto_0
-
-    .line 1408
-    :cond_4
-    iget-object v4, p0, Lcom/android/server/NotificationManagerService;->mNotificationLight:Lcom/android/server/LightsService$Light;
-
-    invoke-virtual {v4, v0, v2}, Lcom/android/server/LightsService$Light;->pulse(II)V
-
-    goto :goto_0
+    goto :goto_0  
 .end method
 
 .method private updateNotificationPulse()V

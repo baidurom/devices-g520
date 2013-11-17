@@ -49,6 +49,8 @@
 
 .field static final DEBUG_SCREEN_ON:Z = false
 
+.field private static final DEFAULT_AUTOMATIC_BRIGHTNESS_COE:I = 0x64
+
 .field private static final DEFAULT_SCREEN_BRIGHTNESS:I = 0xc0
 
 .field private static final DEFAULT_SCREEN_OFF_TIMEOUT:I = 0x3a98
@@ -94,6 +96,8 @@
 .field private static final LONG_KEYLIGHT_DELAY:I = 0x1770
 
 .field private static final LOW_BATTERY_THRESHOLD:I = 0xa
+
+.field private static final MAXIMUM_SCREEN_BRIGHTNESS:I = 0xff
 
 .field private static final MEDIUM_KEYLIGHT_DELAY:I = 0x3a98
 
@@ -178,6 +182,8 @@
 .field private mAutoBrightnessLevels:[I
 
 .field private mAutoBrightnessTask:Ljava/lang/Runnable;
+
+.field private mAutomaticBrightnessCoe:I
 
 .field private mBatteryService:Lcom/android/server/BatteryService;
 
@@ -1154,6 +1160,17 @@
     return v0
 .end method
 
+.method static synthetic access$1901(Lcom/android/server/PowerManagerService;)I
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 82
+    iget v0, p0, Lcom/android/server/PowerManagerService;->mAutomaticBrightnessCoe:I
+
+    return v0
+.end method
+
 .method static synthetic access$1902(Lcom/android/server/PowerManagerService;Z)Z
     .locals 0
     .parameter "x0"
@@ -1162,6 +1179,18 @@
     .prologue
     .line 100
     iput-boolean p1, p0, Lcom/android/server/PowerManagerService;->mWaitKeyguardDraw:Z
+
+    return p1
+.end method
+
+.method static synthetic access$1903(Lcom/android/server/PowerManagerService;I)I
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 82
+    iput p1, p0, Lcom/android/server/PowerManagerService;->mAutomaticBrightnessCoe:I
 
     return p1
 .end method
@@ -1188,6 +1217,17 @@
     return v0
 .end method
 
+.method static synthetic access$2001(Lcom/android/server/PowerManagerService;)F
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 82
+    iget v0, p0, Lcom/android/server/PowerManagerService;->mLightSensorValue:F
+
+    return v0
+.end method
+
 .method static synthetic access$2100(Lcom/android/server/PowerManagerService;I)I
     .locals 1
     .parameter "x0"
@@ -1198,6 +1238,22 @@
     invoke-direct {p0, p1}, Lcom/android/server/PowerManagerService;->screenOffFinishedAnimatingLocked(I)I
 
     move-result v0
+
+    return v0
+.end method
+
+.method static synthetic access$2101(Lcom/android/server/PowerManagerService;F)F
+    .locals 1
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 82
+    iget v0, p0, Lcom/android/server/PowerManagerService;->mLightSensorValue:F
+
+    add-float/2addr v0, p1
+
+    iput v0, p0, Lcom/android/server/PowerManagerService;->mLightSensorValue:F
 
     return v0
 .end method
@@ -5082,10 +5138,28 @@
     :goto_1
     invoke-direct {p0, p1, v4}, Lcom/android/server/PowerManagerService;->getAutoBrightnessValue(I[I)I
 
-    move-result v2
+    move-result v4
 
+    iget v5, p0, Lcom/android/server/PowerManagerService;->mAutomaticBrightnessCoe:I
+    
+    mul-int/2addr v4, v5
+    
+    div-int/lit8 v2, v4, 0x64
+    
     .line 3214
     .local v2, lcdValue:I
+    const/16 v4, 0xff
+    
+    invoke-static {v4, v2}, Ljava/lang/Math;->min(II)I
+    
+    move-result v2
+    
+    iget v4, p0, Lcom/android/server/PowerManagerService;->mScreenBrightnessDim:I
+    
+    invoke-static {v4, v2}, Ljava/lang/Math;->max(II)I
+    
+    move-result v2
+    
     const-string v4, "PowerManagerService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -5114,7 +5188,7 @@
 
     move-result-object v5
 
-    const-string v6, " lcdValue "
+    const-string v6, "lcdValue="
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -14546,9 +14620,9 @@
     .local v0, resolver:Landroid/content/ContentResolver;
     sget-object v1, Landroid/provider/Settings$System;->CONTENT_URI:Landroid/net/Uri;
 
-    const-string v3, "(name=?) or (name=?) or (name=?) or (name=?) or (name=?) or (name=?) or (name=?) or (name=?) or (name=?)"
+    const-string v3, "(name=?) or (name=?) or (name=?) or (name=?) or (name=?) or (name=?) or (name=?) or (name=?) or (name=?) or (name=?)"
 
-    const/16 v4, 0x8
+    const/16 v4, 0x9
 
     new-array v4, v4, [Ljava/lang/String;
 
@@ -14591,6 +14665,12 @@
     const/4 v5, 0x7
 
     const-string v11, "transition_animation_scale"
+
+    aput-object v11, v4, v5
+    
+    const/16 v5, 0x8
+
+    const-string v11, "auto_brightness_coe"
 
     aput-object v11, v4, v5
 

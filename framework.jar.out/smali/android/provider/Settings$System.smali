@@ -52,6 +52,8 @@
 
 .field public static final AUTO_SCREEN_BRIGHTNESS:Ljava/lang/String; = "auto_screen_brightness"
 
+.field public static final AUTO_BRIGHTNESS_COE:Ljava/lang/String; = "auto_brightness_coe"
+
 .field public static final AUTO_TIME:Ljava/lang/String; = "auto_time"
 
 .field public static final AUTO_TIME_GPS:Ljava/lang/String; = "auto_time_gps"
@@ -1125,7 +1127,7 @@
     sput-object v0, Landroid/provider/Settings$System;->DEFAULT_ALARM_ALERT_URI:Landroid/net/Uri;
 
     .line 2687
-    const/16 v0, 0x3b
+    const/16 v0, 0x3d
 
     new-array v0, v0, [Ljava/lang/String;
 
@@ -1464,8 +1466,23 @@
     const/16 v1, 0x39
 
     const-string/jumbo v2, "volume_revoke"
+    
     aput-object v2, v0, v1
+    
     const/16 v1, 0x3a
+    
+    const-string/jumbo v2, "prevent_wakeup"
+    
+    aput-object v2, v0, v1
+    
+    const/16 v1, 0x3b
+    
+    const-string v2, "auto_brightness_coe"
+    
+    aput-object v2, v0, v1
+    
+    const/16 v1, 0x3c
+    
     const-string/jumbo v2, "vibrate_when_ringing"
 
     aput-object v2, v0, v1

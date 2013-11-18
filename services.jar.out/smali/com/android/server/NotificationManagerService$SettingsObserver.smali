@@ -121,7 +121,7 @@
     iget-object v0, p0, Lcom/android/server/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/NotificationManagerService;
     
     #calls: Lcom/android/server/NotificationManagerService;->updateNotificationPulse()V
-    invoke-static {v0}, Lcom/android/server/NotificationManagerService;->access$1200(Lcom/android/server/NotificationManagerService;)V
+    invoke-static {v0}, Lcom/android/server/NotificationManagerService;->access$2600(Lcom/android/server/NotificationManagerService;)V
     
     return-void
 .end method

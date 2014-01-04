@@ -1743,6 +1743,12 @@
     invoke-static {v3, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 588
+    invoke-static {}, Landroid/app/ActivityManager;->isLowRamDeviceStatic()Z
+    
+    move-result v3
+    
+    if-nez v3, :cond_22
+    
     new-instance v70, Lcom/android/server/CountryDetectorService;
 
     move-object/from16 v0, v70
@@ -1768,6 +1774,7 @@
     .line 595
     .end local v70           #countryDetector:Lcom/android/server/CountryDetectorService;
     .restart local v69       #countryDetector:Lcom/android/server/CountryDetectorService;
+    :cond_22
     :goto_25
     :try_start_34
     const-string v3, "SystemServer"
@@ -1816,6 +1823,12 @@
 
     invoke-static {v3, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    invoke-static {}, Landroid/app/ActivityManager;->isLowRamDeviceStatic()Z
+    
+    move-result v3
+    
+    if-nez v3, :cond_23
+    
     .line 614
     const-string v3, "dropbox"
 
@@ -1834,6 +1847,7 @@
     .catch Ljava/lang/Throwable; {:try_start_36 .. :try_end_36} :catch_1e
 
     .line 620
+    :cond_23
     :goto_28
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -2391,6 +2405,15 @@
     const-string v9, "DiskStats Service"
 
     invoke-static {v3, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+     
+    invoke-static {}, Landroid/app/ActivityManager;->isLowRamDeviceStatic()Z
+
+    move-result v3
+
+    if-nez v3, :cond_24
+
+    
+    
 
     .line 768
     const-string v3, "diskstats"
@@ -2404,6 +2427,7 @@
     .catch Ljava/lang/Throwable; {:try_start_4b .. :try_end_4b} :catch_2f
 
     .line 778
+    :cond_24
     :goto_39
     :try_start_4c
     const-string v3, "SystemServer"
@@ -2413,6 +2437,12 @@
     invoke-static {v3, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 779
+    invoke-static {}, Landroid/app/ActivityManager;->isLowRamDeviceStatic()Z
+    
+    move-result v3
+    
+    if-nez v3, :cond_25
+    
     const-string v3, "samplingprofiler"
 
     new-instance v9, Lcom/android/server/SamplingProfilerService;
@@ -2424,6 +2454,7 @@
     .catch Ljava/lang/Throwable; {:try_start_4c .. :try_end_4c} :catch_30
 
     .line 786
+    :cond_25
     :goto_3a
     :try_start_4d
     const-string v3, "SystemServer"

@@ -903,6 +903,17 @@
     move-result v0
 
     sput-boolean v0, Lcom/android/server/am/ActivityManagerService;->IS_USER_BUILD:Z
+    
+    invoke-static {}, Landroid/app/ActivityManager;->isLowRamDeviceStatic()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    const/16 v0, 0xa
+
+    :goto_3
+    sput v0, Lcom/android/server/am/ActivityManagerService;->MAX_RECENT_TASKS:I
 
     .line 249
     sget-boolean v0, Lcom/android/server/am/ActivityManagerService;->DEBUG_POWER_QUICK:Z
@@ -1097,6 +1108,12 @@
 
     .line 257
     goto/16 :goto_2
+    
+    :cond_3
+    const/16 v0, 0x14
+
+    .line 257
+    goto/16 :goto_3
 
     .line 10976
     :array_0
@@ -36054,14 +36071,14 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 2760
+    .line 2578
     iget-object v3, p0, Lcom/android/server/am/ActivityManagerService;->mRecentTasks:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 2762
+    .line 2580
     .local v0, N:I
     if-lez v0, :cond_0
 
@@ -36073,11 +36090,11 @@
 
     if-ne v3, p1, :cond_0
 
-    .line 2785
+    .line 2606
     :goto_0
     return-void
 
-    .line 2766
+    .line 2584
     :cond_0
     const/4 v1, 0x0
 
@@ -36085,7 +36102,7 @@
     :goto_1
     if-ge v1, v0, :cond_4
 
-    .line 2767
+    .line 2585
     iget-object v3, p0, Lcom/android/server/am/ActivityManagerService;->mRecentTasks:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -36094,7 +36111,7 @@
 
     check-cast v2, Lcom/android/server/am/TaskRecord;
 
-    .line 2768
+    .line 2586
     .local v2, tr:Lcom/android/server/am/TaskRecord;
     iget v3, p1, Lcom/android/server/am/TaskRecord;->userId:I
 
@@ -36131,47 +36148,57 @@
 
     if-eqz v3, :cond_3
 
-    .line 2771
+    .line 2589
     :cond_2
     iget-object v3, p0, Lcom/android/server/am/ActivityManagerService;->mRecentTasks:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 2772
+    .line 2590
     add-int/lit8 v1, v1, -0x1
 
-    .line 2773
+    .line 2591
     add-int/lit8 v0, v0, -0x1
 
-    .line 2774
+    .line 2592
     iget-object v3, p1, Lcom/android/server/am/TaskRecord;->intent:Landroid/content/Intent;
 
     if-nez v3, :cond_3
 
-    .line 2777
+    .line 2595
     move-object p1, v2
 
-    .line 2766
+    .line 2584
     :cond_3
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 2781
+    .line 2599
     .end local v2           #tr:Lcom/android/server/am/TaskRecord;
     :cond_4
-    const/16 v3, 0x14
+    sget v3, Lcom/android/server/am/ActivityManagerService;->MAX_RECENT_TASKS:I
 
     if-lt v0, v3, :cond_5
 
-    .line 2782
+    .line 2601
     iget-object v3, p0, Lcom/android/server/am/ActivityManagerService;->mRecentTasks:Ljava/util/ArrayList;
 
     add-int/lit8 v4, v0, -0x1
 
-    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 2784
+    move-result-object v3
+
+    check-cast v3, Lcom/android/server/am/TaskRecord;
+
+    iget v3, v3, Lcom/android/server/am/TaskRecord;->taskId:I
+
+    const/4 v4, 0x1
+
+    invoke-virtual {p0, v3, v4}, Lcom/android/server/am/ActivityManagerService;->removeTask(II)Z
+
+    .line 2605
     :cond_5
     iget-object v3, p0, Lcom/android/server/am/ActivityManagerService;->mRecentTasks:Ljava/util/ArrayList;
 

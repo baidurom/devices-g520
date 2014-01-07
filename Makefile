@@ -138,4 +138,5 @@ remove_property += \
 	ro.operator.spec \
 	ro.operator.seg
 
+LOW_RAM_DEVICE := true
 include $(PORT_BUILD)/main.mk

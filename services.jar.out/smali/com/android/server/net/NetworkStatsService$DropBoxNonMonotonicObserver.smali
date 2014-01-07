@@ -203,6 +203,12 @@
 
     .line 1406
     .local v1, dropBox:Landroid/os/DropBoxManager;
+    if-nez v1, :cond_0
+    
+    :goto_0
+    return-void
+    
+    :cond_0
     const-string v2, "netstats_error"
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -211,6 +217,5 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/os/DropBoxManager;->addText(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1407
-    return-void
+    goto :goto_0
 .end method

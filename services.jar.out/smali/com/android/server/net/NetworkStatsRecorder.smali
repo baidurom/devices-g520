@@ -124,15 +124,7 @@
     iput-object v0, p0, Lcom/android/server/net/NetworkStatsRecorder;->mObserver:Landroid/net/NetworkStats$NonMonotonicObserver;
 
     .line 95
-    const-string v0, "missing DropBoxManager"
-
-    invoke-static {p3, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/os/DropBoxManager;
-
-    iput-object v0, p0, Lcom/android/server/net/NetworkStatsRecorder;->mDropBox:Landroid/os/DropBoxManager;
+    iput-object p3, p0, Lcom/android/server/net/NetworkStatsRecorder;->mDropBox:Landroid/os/DropBoxManager;
 
     .line 96
     iput-object p4, p0, Lcom/android/server/net/NetworkStatsRecorder;->mCookie:Ljava/lang/String;
@@ -174,12 +166,12 @@
     .locals 6
 
     .prologue
-    .line 400
+    .line 382
     new-instance v1, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v1}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 402
+    .line 384
     .local v1, os:Ljava/io/ByteArrayOutputStream;
     :try_start_0
     iget-object v2, p0, Lcom/android/server/net/NetworkStatsRecorder;->mRotator:Lcom/android/internal/util/FileRotator;
@@ -189,11 +181,43 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 407
+    .line 389
     :goto_0
     invoke-static {v1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 409
+    .line 392
+    iget-object v2, p0, Lcom/android/server/net/NetworkStatsRecorder;->mDropBox:Landroid/os/DropBoxManager;
+
+    if-nez v2, :cond_0
+
+    .line 400
+    :goto_1
+    return-void
+
+    .line 385
+    :catch_0
+    move-exception v0
+
+    .line 387
+    .local v0, e:Ljava/io/IOException;
+    :try_start_1
+    invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->reset()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_0
+
+    .line 389
+    .end local v0           #e:Ljava/io/IOException;
+    :catchall_0
+    move-exception v2
+
+    invoke-static {v1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
+
+    throw v2
+
+    .line 396
+    :cond_0
     iget-object v2, p0, Lcom/android/server/net/NetworkStatsRecorder;->mDropBox:Landroid/os/DropBoxManager;
 
     const-string v3, "netstats_dump"
@@ -206,35 +230,12 @@
 
     invoke-virtual {v2, v3, v4, v5}, Landroid/os/DropBoxManager;->addData(Ljava/lang/String;[BI)V
 
-    .line 412
+    .line 399
     iget-object v2, p0, Lcom/android/server/net/NetworkStatsRecorder;->mRotator:Lcom/android/internal/util/FileRotator;
 
     invoke-virtual {v2}, Lcom/android/internal/util/FileRotator;->deleteAll()V
 
-    .line 413
-    return-void
-
-    .line 403
-    :catch_0
-    move-exception v0
-
-    .line 405
-    .local v0, e:Ljava/io/IOException;
-    :try_start_1
-    invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->reset()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_0
-
-    .line 407
-    .end local v0           #e:Ljava/io/IOException;
-    :catchall_0
-    move-exception v2
-
-    invoke-static {v1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
-
-    throw v2
+    goto :goto_1
 .end method
 
 

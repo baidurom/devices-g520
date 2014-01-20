@@ -101,7 +101,7 @@ baidu_saved_files := lib/libwvm.so
 # baidu_modify_apps: which base the baidu's apk
 # just override the res, append *.smali.part
 #-----------------------------------------------------------------------------
-baidu_modify_apps := Phone Settings SystemUI
+baidu_modify_apps := Phone Settings
 
 ##############################################################################
 # baidu_modify_jars: which base the baidu's jar

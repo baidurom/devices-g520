@@ -32,6 +32,8 @@
 
 .field protected static final MASK_USIMDATA:I = 0x2
 
+.field protected static final MASK_VIDEO_SYMBOL_IN_CALL_LIST:I = 0x200000
+
 .field protected static device_spec_property:I
 
 
@@ -40,7 +42,7 @@
     .locals 1
 
     .prologue
-    .line 75
+    .line 77
     const/4 v0, 0x0
 
     sput v0, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
@@ -62,7 +64,7 @@
     .locals 2
 
     .prologue
-    .line 78
+    .line 80
     const-string/jumbo v0, "ro.baidu.telephony.dev_spec"
 
     const/4 v1, 0x0
@@ -73,7 +75,7 @@
 
     sput v0, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
 
-    .line 80
+    .line 82
     return-void
 .end method
 
@@ -81,10 +83,10 @@
     .locals 3
 
     .prologue
-    .line 139
+    .line 141
     const/4 v0, 0x0
 
-    .line 140
+    .line 142
     .local v0, result:Z
     sget v1, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
 
@@ -96,11 +98,11 @@
 
     const/4 v0, 0x1
 
-    .line 142
+    .line 144
     :goto_0
     return v0
 
-    .line 140
+    .line 142
     :cond_0
     const/4 v0, 0x0
 
@@ -111,10 +113,10 @@
     .locals 2
 
     .prologue
-    .line 97
+    .line 99
     const/4 v0, 0x0
 
-    .line 98
+    .line 100
     .local v0, result:Z
     sget v1, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
 
@@ -124,11 +126,11 @@
 
     const/4 v0, 0x1
 
-    .line 100
+    .line 102
     :goto_0
     return v0
 
-    .line 98
+    .line 100
     :cond_0
     const/4 v0, 0x0
 
@@ -139,10 +141,10 @@
     .locals 2
 
     .prologue
-    .line 104
+    .line 106
     const/4 v0, 0x0
 
-    .line 105
+    .line 107
     .local v0, result:Z
     sget v1, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
 
@@ -152,11 +154,11 @@
 
     const/4 v0, 0x1
 
-    .line 107
+    .line 109
     :goto_0
     return v0
 
-    .line 105
+    .line 107
     :cond_0
     const/4 v0, 0x0
 
@@ -167,10 +169,10 @@
     .locals 3
 
     .prologue
-    .line 132
+    .line 134
     const/4 v0, 0x0
 
-    .line 133
+    .line 135
     .local v0, result:Z
     sget v1, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
 
@@ -182,11 +184,11 @@
 
     const/4 v0, 0x1
 
-    .line 135
+    .line 137
     :goto_0
     return v0
 
-    .line 133
+    .line 135
     :cond_0
     const/4 v0, 0x0
 
@@ -197,10 +199,10 @@
     .locals 3
 
     .prologue
-    .line 153
+    .line 155
     const/4 v0, 0x0
 
-    .line 154
+    .line 156
     .local v0, result:Z
     sget v1, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
 
@@ -212,11 +214,11 @@
 
     const/4 v0, 0x1
 
-    .line 156
+    .line 158
     :goto_0
     return v0
 
-    .line 154
+    .line 156
     :cond_0
     const/4 v0, 0x0
 
@@ -227,10 +229,10 @@
     .locals 2
 
     .prologue
-    .line 83
+    .line 85
     const/4 v0, 0x0
 
-    .line 84
+    .line 86
     .local v0, result:Z
     sget v1, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
 
@@ -240,11 +242,11 @@
 
     const/4 v0, 0x1
 
-    .line 86
+    .line 88
     :goto_0
     return v0
 
-    .line 84
+    .line 86
     :cond_0
     const/4 v0, 0x0
 
@@ -255,10 +257,10 @@
     .locals 2
 
     .prologue
-    .line 90
+    .line 92
     const/4 v0, 0x0
 
-    .line 91
+    .line 93
     .local v0, result:Z
     sget v1, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
 
@@ -268,11 +270,11 @@
 
     const/4 v0, 0x1
 
-    .line 93
+    .line 95
     :goto_0
     return v0
 
-    .line 91
+    .line 93
     :cond_0
     const/4 v0, 0x0
 
@@ -283,10 +285,10 @@
     .locals 2
 
     .prologue
-    .line 111
+    .line 113
     const/4 v0, 0x0
 
-    .line 112
+    .line 114
     .local v0, result:Z
     sget v1, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
 
@@ -296,11 +298,11 @@
 
     const/4 v0, 0x1
 
-    .line 114
+    .line 116
     :goto_0
     return v0
 
-    .line 112
+    .line 114
     :cond_0
     const/4 v0, 0x0
 
@@ -311,10 +313,10 @@
     .locals 2
 
     .prologue
-    .line 125
+    .line 127
     const/4 v0, 0x0
 
-    .line 126
+    .line 128
     .local v0, result:Z
     sget v1, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
 
@@ -324,11 +326,11 @@
 
     const/4 v0, 0x1
 
-    .line 128
+    .line 130
     :goto_0
     return v0
 
-    .line 126
+    .line 128
     :cond_0
     const/4 v0, 0x0
 
@@ -339,10 +341,10 @@
     .locals 2
 
     .prologue
-    .line 118
+    .line 120
     const/4 v0, 0x0
 
-    .line 119
+    .line 121
     .local v0, result:Z
     sget v1, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
 
@@ -352,11 +354,11 @@
 
     const/4 v0, 0x1
 
-    .line 121
+    .line 123
     :goto_0
     return v0
 
-    .line 119
+    .line 121
     :cond_0
     const/4 v0, 0x0
 
@@ -367,10 +369,10 @@
     .locals 3
 
     .prologue
-    .line 146
+    .line 148
     const/4 v0, 0x0
 
-    .line 147
+    .line 149
     .local v0, result:Z
     sget v1, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
 
@@ -382,11 +384,11 @@
 
     const/4 v0, 0x1
 
-    .line 149
+    .line 151
     :goto_0
     return v0
 
-    .line 147
+    .line 149
     :cond_0
     const/4 v0, 0x0
 
@@ -397,10 +399,10 @@
     .locals 3
 
     .prologue
-    .line 160
+    .line 162
     const/4 v0, 0x0
 
-    .line 161
+    .line 163
     .local v0, result:Z
     sget v1, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
 
@@ -412,11 +414,41 @@
 
     const/4 v0, 0x1
 
-    .line 163
+    .line 165
     :goto_0
     return v0
 
-    .line 161
+    .line 163
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static isVideoSymbolInCallList()Z
+    .locals 3
+
+    .prologue
+    .line 169
+    const/4 v0, 0x0
+
+    .line 170
+    .local v0, result:Z
+    sget v1, Lcom/android/internal/telephony/DeviceSpecPropertyParser;->device_spec_property:I
+
+    const/high16 v2, 0x20
+
+    and-int/2addr v1, v2
+
+    if-eqz v1, :cond_0
+
+    const/4 v0, 0x1
+
+    .line 172
+    :goto_0
+    return v0
+
+    .line 170
     :cond_0
     const/4 v0, 0x0
 

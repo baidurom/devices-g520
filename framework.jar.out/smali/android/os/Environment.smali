@@ -4,6 +4,10 @@
 
 
 # static fields
+.field private static final ASEC_EXTERNAL_SD:I = 0x1
+
+.field private static final ASEC_PRIMARY_VOLUME:I = 0x0
+
 .field private static final DATA_DIRECTORY:Ljava/io/File; = null
 
 .field public static DIRECTORY_ALARMS:Ljava/lang/String; = null
@@ -65,6 +69,8 @@
 
 .field private static final TAG:Ljava/lang/String; = "Environment"
 
+.field private static final mAsecVolumeType:I
+
 .field private static final mLock:Ljava/lang/Object;
 
 .field private static volatile mPrimaryVolume:Landroid/os/storage/StorageVolume;
@@ -89,17 +95,28 @@
 
     sput-object v0, Landroid/os/Environment;->ROOT_DIRECTORY:Ljava/io/File;
 
-    .line 37
+    .line 39
+    const-string/jumbo v0, "ro.baidu.asec.type"
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    sput v0, Landroid/os/Environment;->mAsecVolumeType:I
+
+    .line 41
     new-instance v0, Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Landroid/os/Environment;->mLock:Ljava/lang/Object;
 
-    .line 39
+    .line 43
     sput-object v2, Landroid/os/Environment;->mPrimaryVolume:Landroid/os/storage/StorageVolume;
 
-    .line 41
+    .line 45
     sput-object v2, Landroid/os/Environment;->mSecondaryVolume:Landroid/os/storage/StorageVolume;
 
     .line 136
@@ -279,6 +296,120 @@
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+.method public static getAsecVolumeDirectory()Ljava/io/File;
+    .locals 2
+
+    .prologue
+    .line 596
+    sget v0, Landroid/os/Environment;->mAsecVolumeType:I
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 601
+    invoke-static {}, Landroid/os/Environment;->getPrimaryVolume()Landroid/os/storage/StorageVolume;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/storage/StorageVolume;->getPath()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "/mnt/sdcard"
+
+    invoke-static {v0, v1}, Landroid/os/Environment;->getDirectory(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    .line 598
+    :pswitch_0
+    invoke-static {}, Landroid/os/Environment;->getSDCardDirectory()Ljava/io/File;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 596
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static getAsecVolumeState()Ljava/lang/String;
+    .locals 3
+
+    .prologue
+    .line 576
+    sget v2, Landroid/os/Environment;->mAsecVolumeType:I
+
+    packed-switch v2, :pswitch_data_0
+
+    .line 582
+    :try_start_0
+    const-string/jumbo v2, "mount"
+
+    invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+
+    move-result-object v2
+
+    invoke-static {v2}, Landroid/os/storage/IMountService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/storage/IMountService;
+
+    move-result-object v0
+
+    .line 584
+    .local v0, mountService:Landroid/os/storage/IMountService;
+    invoke-static {}, Landroid/os/Environment;->getPrimaryVolume()Landroid/os/storage/StorageVolume;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/os/storage/StorageVolume;->getPath()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v0, v2}, Landroid/os/storage/IMountService;->getVolumeState(Ljava/lang/String;)Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v2
+
+    .line 586
+    :goto_0
+    return-object v2
+
+    .line 578
+    .end local v0           #mountService:Landroid/os/storage/IMountService;
+    :pswitch_0
+    invoke-static {}, Landroid/os/Environment;->getSDCardState()Ljava/lang/String;
+
+    move-result-object v2
+
+    goto :goto_0
+
+    .line 585
+    .restart local v0       #mountService:Landroid/os/storage/IMountService;
+    :catch_0
+    move-exception v1
+
+    .line 586
+    .local v1, rex:Ljava/lang/Exception;
+    const-string/jumbo v2, "removed"
+
+    goto :goto_0
+
+    .line 576
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 .method public static getDataDirectory()Ljava/io/File;
@@ -952,6 +1083,47 @@
         :pswitch_1
     .end packed-switch
 .end method
+
+.method public static isAsecVolumeAvailable()Z
+    .locals 2
+
+    .prologue
+    const/4 v0, 0x1
+
+    .line 609
+    sget v1, Landroid/os/Environment;->mAsecVolumeType:I
+
+    packed-switch v1, :pswitch_data_0
+
+    .line 614
+    invoke-static {}, Landroid/os/Environment;->getPrimaryVolume()Landroid/os/storage/StorageVolume;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/os/storage/StorageVolume;->isEmulated()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    :goto_0
+    :pswitch_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    .line 609
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
 .method public static isEncryptedFilesystemEnabled()Z
     .locals 2
 

@@ -748,6 +748,25 @@
 .method private final native getAssetRemainingLength(I)J
 .end method
 
+.method private getDecodeFileName(Ljava/lang/String;)Ljava/lang/String;
+    .locals 2
+    .parameter "fileName"
+
+    .prologue
+    .line 815
+    invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v0
+
+    const/4 v1, 0x2
+
+    invoke-static {v0, v1}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public static final native getGlobalAssetCount()I
 .end method
 
@@ -762,25 +781,41 @@
     .parameter "filename"
 
     .prologue
-    const/4 v2, 0x3
+    const/4 v3, 0x3
 
-    .line 814
+    .line 823
     const/4 v0, 0x0
 
-    .line 816
+    .line 825
     .local v0, file:Ljava/io/File;
     new-instance v0, Ljava/io/File;
 
     .end local v0           #file:Ljava/io/File;
-    const-string v1, "/data/system/channel/"
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {p0, p1, v1}, Landroid/content/res/AssetManager;->getNewFileName(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "/data/system/channel_files/"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-direct {p0, p1}, Landroid/content/res/AssetManager;->getNewFileName(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 817
+    .line 826
     .restart local v0       #file:Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -788,10 +823,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 818
+    .line 827
     const-string v1, "AssetManager"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+    invoke-static {v1, v3}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v1
 
@@ -804,6 +839,28 @@
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v3, "getNewFile: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    iget-object v3, p0, Landroid/content/res/AssetManager;->mPackageName:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, " "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, " to "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -826,24 +883,40 @@
     :cond_0
     move-object v1, v0
 
-    .line 827
+    .line 836
     :goto_0
     return-object v1
 
-    .line 822
+    .line 831
     :cond_1
     new-instance v0, Ljava/io/File;
 
     .end local v0           #file:Ljava/io/File;
-    const-string v1, "/system/etc/channel/"
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {p0, p1, v1}, Landroid/content/res/AssetManager;->getNewFileName(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "/system/etc/channel_files/"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-direct {p0, p1}, Landroid/content/res/AssetManager;->getNewFileName(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 823
+    .line 832
     .restart local v0       #file:Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -851,10 +924,10 @@
 
     if-eqz v1, :cond_3
 
-    .line 824
+    .line 833
     const-string v1, "AssetManager"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+    invoke-static {v1, v3}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v1
 
@@ -867,6 +940,28 @@
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v3, "getNewFile: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    iget-object v3, p0, Landroid/content/res/AssetManager;->mPackageName:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, " "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, " to "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -889,10 +984,10 @@
     :cond_2
     move-object v1, v0
 
-    .line 825
+    .line 834
     goto :goto_0
 
-    .line 827
+    .line 836
     :cond_3
     const/4 v1, 0x0
 
@@ -976,6 +1071,89 @@
     .line 806
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    return-object v3
+.end method
+
+.method private getNewFileName(Ljava/lang/String;)Ljava/lang/String;
+    .locals 5
+    .parameter "filename"
+
+    .prologue
+    .line 793
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    .line 794
+    .local v0, builder:Ljava/lang/StringBuilder;
+    iget-object v3, p0, Landroid/content/res/AssetManager;->mPackageName:Ljava/lang/String;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 795
+    const-string v3, "_"
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 796
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 799
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v2
+
+    .line 800
+    .local v2, len:I
+    iget-object v3, p0, Landroid/content/res/AssetManager;->mPackageName:Ljava/lang/String;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->indexOf(Ljava/lang/String;)I
+
+    move-result v1
+
+    .line 801
+    .local v1, i:I
+    :goto_0
+    if-ltz v1, :cond_1
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v3
+
+    if-ge v1, v3, :cond_1
+
+    .line 802
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->charAt(I)C
+
+    move-result v3
+
+    sget-char v4, Ljava/io/File;->separatorChar:C
+
+    if-ne v3, v4, :cond_0
+
+    .line 803
+    add-int/lit8 v3, v1, 0x1
+
+    const-string v4, "_"
+
+    invoke-virtual {v0, v1, v3, v4}, Ljava/lang/StringBuilder;->replace(IILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 801
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    .line 806
+    :cond_1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {p0, v3}, Landroid/content/res/AssetManager;->getDecodeFileName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 

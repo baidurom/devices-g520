@@ -100,12 +100,8 @@
     .line 184
     iget-object v1, p0, Lcom/android/server/AlarmManagerService$QuickbootBroadcastReceiver;->this$0:Lcom/android/server/AlarmManagerService;
 
-    #getter for: Lcom/android/server/AlarmManagerService;->mPoweroffAlarms:Ljava/util/ArrayList;
-    invoke-static {v1}, Lcom/android/server/AlarmManagerService;->access$501(Lcom/android/server/AlarmManagerService;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
+    #calls: Lcom/android/server/AlarmManagerService;->clearPoweroffAlarm()V
+    invoke-static {v1}, Lcom/android/server/AlarmManagerService;->access$502(Lcom/android/server/AlarmManagerService;)V
 
     .line 185
     iget-object v1, p0, Lcom/android/server/AlarmManagerService$QuickbootBroadcastReceiver;->this$0:Lcom/android/server/AlarmManagerService;
@@ -119,7 +115,15 @@
 
     invoke-virtual {v1, v3}, Lcom/android/server/AlarmManagerService;->remove(Landroid/app/PendingIntent;)V
 
-    .line 190
+    .line 200
+    iget-object v1, p0, Lcom/android/server/AlarmManagerService$QuickbootBroadcastReceiver;->this$0:Lcom/android/server/AlarmManagerService;
+
+    const/4 v3, 0x0
+
+    #setter for: Lcom/android/server/AlarmManagerService;->mPoweroffWakeAlarm:Landroid/app/PendingIntent;
+    invoke-static {v1, v3}, Lcom/android/server/AlarmManagerService;->access$503(Lcom/android/server/AlarmManagerService;Landroid/app/PendingIntent;)Landroid/app/PendingIntent;
+
+    .line 206
     :cond_0
     :goto_0
     monitor-exit v2

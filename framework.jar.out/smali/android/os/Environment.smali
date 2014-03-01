@@ -308,19 +308,17 @@
     packed-switch v0, :pswitch_data_0
 
     .line 601
+    new-instance v0, Ljava/io/File;
+
     invoke-static {}, Landroid/os/Environment;->getPrimaryVolume()Landroid/os/storage/StorageVolume;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Landroid/os/storage/StorageVolume;->getPath()Ljava/lang/String;
+    invoke-virtual {v1}, Landroid/os/storage/StorageVolume;->getPath()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    const-string v1, "/mnt/sdcard"
-
-    invoke-static {v0, v1}, Landroid/os/Environment;->getDirectory(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     :goto_0
     return-object v0
@@ -334,8 +332,6 @@
     goto :goto_0
 
     .line 596
-    nop
-
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

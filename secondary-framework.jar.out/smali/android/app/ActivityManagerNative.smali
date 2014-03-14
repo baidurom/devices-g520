@@ -247,6 +247,7 @@
     packed-switch p1, :pswitch_data_0
 
     .line 1734
+    :goto_59
     :pswitch_0
     invoke-super/range {p0 .. p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
@@ -8805,7 +8806,7 @@
     .line 1702
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    goto/16 :goto_0
+    goto/16 :goto_59
 
     .line 1700
     .end local v144           #persistent:Z

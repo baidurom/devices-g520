@@ -75873,6 +75873,75 @@
     throw v0
 .end method
 
+.method public setPersistent(Landroid/content/pm/ApplicationInfo;Z)V
+    .locals 3
+    .parameter "info"
+    .parameter "persistent"
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 15654
+    if-eqz p1, :cond_0
+
+    const-string v1, "com.baidu.home2"
+
+    iget-object v2, p1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget v1, p1, Landroid/content/pm/ApplicationInfo;->flags:I
+
+    and-int/lit8 v1, v1, 0x1
+
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_0
+
+    .line 15656
+    iget-object v1, p1, Landroid/content/pm/ApplicationInfo;->processName:Ljava/lang/String;
+
+    iget v2, p1, Landroid/content/pm/ApplicationInfo;->uid:I
+
+    invoke-virtual {p0, v1, v2}, Lcom/android/server/am/ActivityManagerService;->getProcessRecordLocked(Ljava/lang/String;I)Lcom/android/server/am/ProcessRecord;
+
+    move-result-object v0
+
+    .line 15657
+    .local v0, app:Lcom/android/server/am/ProcessRecord;
+    iput-boolean p2, v0, Lcom/android/server/am/ProcessRecord;->persistent:Z
+
+    .line 15658
+    if-eqz p2, :cond_1
+
+    const/16 v1, -0xc
+
+    :goto_0
+    iput v1, v0, Lcom/android/server/am/ProcessRecord;->maxAdj:I
+
+    .line 15659
+    invoke-direct {p0, v0}, Lcom/android/server/am/ActivityManagerService;->updateOomAdjLocked(Lcom/android/server/am/ProcessRecord;)Z
+
+    .line 15661
+    .end local v0           #app:Lcom/android/server/am/ProcessRecord;
+    :cond_0
+    return-void
+
+    .line 15658
+    .restart local v0       #app:Lcom/android/server/am/ProcessRecord;
+    :cond_1
+    const/16 v1, 0xf
+
+    goto :goto_0
+.end method
+
 .method public setProcessForeground(Landroid/os/IBinder;IZ)V
     .locals 8
     .parameter "token"

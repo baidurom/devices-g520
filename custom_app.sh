@@ -16,10 +16,7 @@ if [ "$apkBaseName" = "Phone" ];then
 
 elif [ "$apkBaseName" = "Settings" ];then
 	echo ">>> in custom_app for Settings"
-	if [ -f $tempSmaliDir/res/xml/security_settings_picker.xml ];then
-		echo ">>> delete unlock_set_baidu_slide line in $tempSmaliDir/res/xml/security_settings_picker.xml"
-		sed -i '/unlock_set_baidu_slide/d' $tempSmaliDir/res/xml/security_settings_picker.xml
-	fi
+
 	find $tempSmaliDir -name "*\.smali" | xargs sed -i 's#invoke-interface\(.*Lcom/android/internal/telephony/IccCard;->\)#invoke-virtual\1#g'
 
 fi

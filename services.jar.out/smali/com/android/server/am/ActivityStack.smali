@@ -17666,7 +17666,16 @@
 
     .prologue
     const/4 v3, 0x0
+    
+    invoke-static {}, Landroid/app/ActivityManager;->isLowRamDeviceStatic()Z
 
+    move-result v4
+
+    if-eqz v4, :cond_baidu_0
+    
+    goto :goto_0
+
+    :cond_baidu_0
     iget-boolean v4, p1, Lcom/android/server/am/ActivityRecord;->noDisplay:Z
 
     if-eqz v4, :cond_1

@@ -323,3 +323,128 @@
 
     goto :goto_0
 .end method
+
+.method public silenceRingerGemini(I)V
+    .locals 0
+    .parameter "simId"
+
+    .prologue
+    .line 2987
+    return-void
+.end method
+
+.method public showCallScreenWithDialpadGemini(ZI)Z
+    .locals 1
+    .parameter "showDialpad"
+    .parameter "simId"
+
+    .prologue
+    .line 2914
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public isRingingGemini(I)Z
+    .locals 1
+    .parameter "simId"
+
+    .prologue
+    .line 3038
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public isOffhookGemini(I)Z
+    .locals 1
+    .parameter "simId"
+
+    .prologue
+    .line 3012
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public isIdleGemini(I)Z
+    .locals 1
+    .parameter "simId"
+
+    .prologue
+    .line 3064
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getCallStateGemini(I)I
+    .locals 1
+    .parameter "simId"
+
+    .prologue
+    .line 3106
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getActivePhoneTypeGemini(I)I
+    .locals 1
+    .parameter "simId"
+
+    .prologue
+    .line 3131
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public endCallGemini(I)Z
+    .locals 1
+    .parameter "simId"
+
+    .prologue
+    .line 2950
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public dialGemini(Ljava/lang/String;I)V
+    .locals 0
+    .parameter "Number"
+    .parameter "simId"
+
+    .prologue
+    .line 2840
+    return-void
+.end method
+
+.method public cancelMissedCallsNotificationGemini(I)V
+    .locals 0
+    .parameter "simId"
+
+    .prologue
+    .line 3083
+    return-void
+.end method
+
+.method public callGemini(Ljava/lang/String;I)V
+    .locals 0
+    .parameter "number"
+    .parameter "simId"
+
+    .prologue
+    .line 2868
+    return-void
+.end method
+
+.method public answerRingingCallGemini(I)V
+    .locals 0
+    .parameter "simId"
+
+    .prologue
+    .line 2970
+    return-void
+.end method

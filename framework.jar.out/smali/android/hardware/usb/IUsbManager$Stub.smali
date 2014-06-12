@@ -52,11 +52,13 @@
 
 .field static final TRANSACTION_setAccessoryPackage:I = 0x6
 
+.field static final TRANSACTION_setAcmEnable:I = 0x10
+
 .field static final TRANSACTION_setCurrentFunction:I = 0xf
 
 .field static final TRANSACTION_setDevicePackage:I = 0x5
 
-.field static final TRANSACTION_setMassStorageBackingFile:I = 0x10
+.field static final TRANSACTION_setMassStorageBackingFile:I = 0x11
 
 
 # direct methods
@@ -152,7 +154,7 @@
     .line 39
     sparse-switch p1, :sswitch_data_0
 
-    .line 293
+    .line 302
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v5
@@ -886,20 +888,52 @@
     .line 285
     .end local v0           #_arg0:Ljava/lang/String;
     :sswitch_10
+    const-string v6, "android.hardware.usb.IUsbManager"
+
+    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 287
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v6
+
+    if-eqz v6, :cond_13
+
+    move v0, v5
+
+    .line 288
+    .local v0, _arg0:Z
+    :goto_d
+    invoke-virtual {p0, v0}, Landroid/hardware/usb/IUsbManager$Stub;->setAcmEnable(Z)V
+
+    .line 289
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto/16 :goto_0
+
+    .end local v0           #_arg0:Z
+    :cond_13
+    move v0, v4
+
+    .line 287
+    goto :goto_d
+
+    .line 294
+    :sswitch_11
     const-string v4, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 287
+    .line 296
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 288
-    .restart local v0       #_arg0:Ljava/lang/String;
+    .line 297
+    .local v0, _arg0:Ljava/lang/String;
     invoke-virtual {p0, v0}, Landroid/hardware/usb/IUsbManager$Stub;->setMassStorageBackingFile(Ljava/lang/String;)V
 
-    .line 289
+    .line 298
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
@@ -925,6 +959,7 @@
         0xe -> :sswitch_e
         0xf -> :sswitch_f
         0x10 -> :sswitch_10
+        0x11 -> :sswitch_11
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

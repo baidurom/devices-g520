@@ -611,6 +611,38 @@
     goto :goto_0
 .end method
 
+.method public setAcmEnable(Z)V
+    .locals 3
+    .parameter "enable"
+
+    .prologue
+    .line 493
+    :try_start_0
+    iget-object v1, p0, Landroid/hardware/usb/UsbManager;->mService:Landroid/hardware/usb/IUsbManager;
+
+    invoke-interface {v1, p1}, Landroid/hardware/usb/IUsbManager;->setAcmEnable(Z)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 497
+    :goto_0
+    return-void
+
+    .line 494
+    :catch_0
+    move-exception v0
+
+    .line 495
+    .local v0, e:Landroid/os/RemoteException;
+    const-string v1, "UsbManager"
+
+    const-string v2, "RemoteException in setCurrentFunction"
+
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_0
+.end method
+
 .method public setCurrentFunction(Ljava/lang/String;Z)V
     .locals 3
     .parameter "function"
@@ -649,7 +681,7 @@
     .parameter "path"
 
     .prologue
-    .line 500
+    .line 508
     :try_start_0
     iget-object v1, p0, Landroid/hardware/usb/UsbManager;->mService:Landroid/hardware/usb/IUsbManager;
 
@@ -657,15 +689,15 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 504
+    .line 512
     :goto_0
     return-void
 
-    .line 501
+    .line 509
     :catch_0
     move-exception v0
 
-    .line 502
+    .line 510
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "UsbManager"
 

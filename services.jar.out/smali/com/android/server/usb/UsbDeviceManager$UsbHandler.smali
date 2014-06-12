@@ -662,6 +662,18 @@
     return-object v0
 .end method
 
+.method static synthetic access$3800(Lcom/android/server/usb/UsbDeviceManager$UsbHandler;Z)V
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 405
+    invoke-direct {p0, p1}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->setAcmEnabled(Z)V
+
+    return-void
+.end method
+
 .method static synthetic access$800(Lcom/android/server/usb/UsbDeviceManager$UsbHandler;)I
     .locals 1
     .parameter "x0"

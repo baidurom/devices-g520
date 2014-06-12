@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:sharedUserId="android.uid.phone" android:versionCode="16" android:versionName="4.1.2-eng.huawei.1369813269" package="com.android.stk"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <original-package android:name="com.android.stk" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <application android:label="@string/app_name" android:icon="@drawable/ic_launcher_sim_toolkit" android:process="com.android.phone" android:clearTaskOnLaunch="true">
+        <activity android:theme="@*android:style/Theme.DeviceDefault.Light.NoActionBar" android:label="@string/app_name" android:name="StkLauncherActivity" android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@*android:style/Theme.DeviceDefault.Light.NoActionBar" android:name="StkMenuActivity" android:launchMode="singleTop" android:configChanges="locale|orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.PICK" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity-alias android:theme="@*android:style/Theme.DeviceDefault.Light.NoActionBar" android:name="AliasStkMenuActivity" android:excludeFromRecents="true" android:launchMode="singleTop" android:configChanges="locale|orientation|screenSize" android:targetActivity="StkMenuActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.PICK" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity-alias>
+        <activity android:theme="@*android:style/Theme.DeviceDefault.Light.NoActionBar" android:name="StkInputActivity" android:configChanges="locale|orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.EDIT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@*android:style/Theme.DeviceDefault.Light.Dialog" android:name="StkDialogActivity" android:launchMode="singleTop" android:configChanges="locale|orientation|screenSize" />
+        <activity android:theme="@*android:style/Theme.DeviceDefault.Light.Dialog" android:name="ToneDialog" android:configChanges="locale|orientation|screenSize" />
+        <activity android:theme="@*android:style/Theme.DeviceDefault.Light.Dialog" android:name="NotificationAlertActivity" />
+        <activity android:theme="@*android:style/Theme.DeviceDefault.Light.NoActionBar" android:label="@string/app_name" android:name="StkSettings">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEVELOPMENT_PREFERENCE" />
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.android.stk.StkCmdReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.stk.command" />
+                <action android:name="android.intent.action.stk.session_end" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.android.stk.EventReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.stk.USER_ACTIVITY" />
+                <action android:name="android.intent.action.LOCALE_CHANGED" />
+                <action android:name="android.intent.action.stk.IDLE_SCREEN_AVAILABLE" />
+                <action android:name="android.intent.action.stk.BROWSER_TERMINATION" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.android.stk.BootCompletedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.AIRPLANE_MODE" />
+                <action android:name="android.intent.action.SIM_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <service android:name="StkAppService" />
+    </application>
+</manifest>

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1805
+    .line 1807
     iput-object p1, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,13 +39,13 @@
     .parameter "duration"
 
     .prologue
-    .line 1862
+    .line 1864
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     #calls: Landroid/webkit/WebView;->awakenScrollBars(I)Z
     invoke-static {v0, p1}, Landroid/webkit/WebView;->access$1200(Landroid/webkit/WebView;I)Z
 
-    .line 1863
+    .line 1865
     return-void
 .end method
 
@@ -55,13 +55,13 @@
     .parameter "invalidate"
 
     .prologue
-    .line 1866
+    .line 1868
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     #calls: Landroid/webkit/WebView;->awakenScrollBars(IZ)Z
     invoke-static {v0, p1, p2}, Landroid/webkit/WebView;->access$1300(Landroid/webkit/WebView;IZ)Z
 
-    .line 1867
+    .line 1869
     return-void
 .end method
 
@@ -69,7 +69,7 @@
     .locals 1
 
     .prologue
-    .line 1874
+    .line 1876
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     #calls: Landroid/webkit/WebView;->getHorizontalScrollFactor()F
@@ -84,7 +84,7 @@
     .locals 1
 
     .prologue
-    .line 1886
+    .line 1888
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     #calls: Landroid/webkit/WebView;->getHorizontalScrollbarHeight()I
@@ -99,7 +99,7 @@
     .locals 1
 
     .prologue
-    .line 1870
+    .line 1872
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     #calls: Landroid/webkit/WebView;->getVerticalScrollFactor()F
@@ -118,12 +118,12 @@
     .parameter "oldt"
 
     .prologue
-    .line 1882
+    .line 1884
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/webkit/WebView;->onScrollChanged(IIII)V
 
-    .line 1883
+    .line 1885
     return-void
 .end method
 
@@ -140,7 +140,7 @@
     .parameter "isTouchEvent"
 
     .prologue
-    .line 1857
+    .line 1859
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     move v1, p1
@@ -164,7 +164,7 @@
     #calls: Landroid/webkit/WebView;->overScrollBy(IIIIIIIIZ)Z
     invoke-static/range {v0 .. v9}, Landroid/webkit/WebView;->access$1100(Landroid/webkit/WebView;IIIIIIIIZ)Z
 
-    .line 1859
+    .line 1861
     return-void
 .end method
 
@@ -174,13 +174,13 @@
     .parameter "measuredHeight"
 
     .prologue
-    .line 1878
+    .line 1880
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     #calls: Landroid/webkit/WebView;->setMeasuredDimension(II)V
     invoke-static {v0, p1, p2}, Landroid/webkit/WebView;->access$1600(Landroid/webkit/WebView;II)V
 
-    .line 1879
+    .line 1881
     return-void
 .end method
 
@@ -189,13 +189,13 @@
     .parameter "scrollX"
 
     .prologue
-    .line 1892
+    .line 1894
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     #setter for: Landroid/webkit/WebView;->mScrollX:I
     invoke-static {v0, p1}, Landroid/webkit/WebView;->access$1802(Landroid/webkit/WebView;I)I
 
-    .line 1893
+    .line 1895
     return-void
 .end method
 
@@ -204,13 +204,13 @@
     .parameter "scrollY"
 
     .prologue
-    .line 1897
+    .line 1899
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     #setter for: Landroid/webkit/WebView;->mScrollY:I
     invoke-static {v0, p1}, Landroid/webkit/WebView;->access$1902(Landroid/webkit/WebView;I)I
 
-    .line 1898
+    .line 1900
     return-void
 .end method
 
@@ -218,13 +218,13 @@
     .locals 1
 
     .prologue
-    .line 1816
+    .line 1818
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     #calls: Landroid/view/View;->computeScroll()V
     invoke-static {v0}, Landroid/webkit/WebView;->access$201(Landroid/webkit/WebView;)V
 
-    .line 1817
+    .line 1819
     return-void
 .end method
 
@@ -233,7 +233,7 @@
     .parameter "event"
 
     .prologue
-    .line 1836
+    .line 1838
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     #calls: Landroid/view/ViewGroup;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
@@ -248,7 +248,7 @@
     .locals 1
 
     .prologue
-    .line 1808
+    .line 1810
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     #calls: Landroid/view/View;->getScrollBarStyle()I
@@ -264,7 +264,7 @@
     .parameter "event"
 
     .prologue
-    .line 1840
+    .line 1842
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     #calls: Landroid/view/View;->onGenericMotionEvent(Landroid/view/MotionEvent;)Z
@@ -280,7 +280,7 @@
     .parameter "event"
 
     .prologue
-    .line 1820
+    .line 1822
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     #calls: Landroid/view/View;->onHoverEvent(Landroid/view/MotionEvent;)Z
@@ -297,7 +297,7 @@
     .parameter "arguments"
 
     .prologue
-    .line 1824
+    .line 1826
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     #calls: Landroid/view/View;->performAccessibilityAction(ILandroid/os/Bundle;)Z
@@ -312,7 +312,7 @@
     .locals 1
 
     .prologue
-    .line 1828
+    .line 1830
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     #calls: Landroid/view/View;->performLongClick()Z
@@ -329,7 +329,7 @@
     .parameter "previouslyFocusedRect"
 
     .prologue
-    .line 1844
+    .line 1846
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     #calls: Landroid/view/ViewGroup;->requestFocus(ILandroid/graphics/Rect;)Z
@@ -346,13 +346,13 @@
     .parameter "scrollY"
 
     .prologue
-    .line 1812
+    .line 1814
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     #calls: Landroid/view/View;->scrollTo(II)V
     invoke-static {v0, p1, p2}, Landroid/webkit/WebView;->access$101(Landroid/webkit/WebView;II)V
 
-    .line 1813
+    .line 1815
     return-void
 .end method
 
@@ -364,7 +364,7 @@
     .parameter "bottom"
 
     .prologue
-    .line 1832
+    .line 1834
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     #calls: Landroid/view/View;->setFrame(IIII)Z
@@ -380,12 +380,12 @@
     .parameter "params"
 
     .prologue
-    .line 1848
+    .line 1850
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     #calls: Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
     invoke-static {v0, p1}, Landroid/webkit/WebView;->access$1001(Landroid/webkit/WebView;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1849
+    .line 1851
     return-void
 .end method

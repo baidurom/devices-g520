@@ -3,7 +3,7 @@
 ro.custom.build.version=1353575071
 ro.build.version.sdk=16
 ro.build.version.codename=REL
-ro.build.date=Sun Apr 14 17:23:31 HKT 2013
+ro.build.date=Wed May 29 15:42:16 HKT 2013
 ro.build.date.utc=1353575130
 ro.build.user=huawei
 ro.build.host=sp20-Tecal-RH2285
@@ -167,11 +167,11 @@ ro.com.google.clientidbase=android-huawei
 ro.config.cust_check=true
 ro.config.3gmode=false
 
-ro.build.display.id=G520-5000 V100R001CHNC01B214
+ro.build.display.id=G520-5000 V100R001CHNC01B216
 
-ro.build.realversion.id=G520-5000 V100R001CHNC01B312
+ro.build.realversion.id=G520-5000 V100R001CHNC01B316
 
-ro.build.display.id2=G520-5000 V100R001CHNC01B312
+ro.build.display.id2=G520-5000 V100R001CHNC01B316
 
 ro.build.cta.id=G520-5000 V100R001CHNC01B206
 
@@ -185,7 +185,7 @@ ro.build.tags=ota-rel-keys,release-keys
 
 ro.build.version.incremental=C01B312
 
-ro.build.cust.id=G520-5000 V100R001CHNC01B312
+ro.build.cust.id=G520-5000 V100R001CHNC01B316
 
 ro.build.model=G520-5000
 
@@ -203,7 +203,7 @@ ro.product.device=hwG520-5000
 
 ro.build.version.release=4.1.2
 
-ro.build.time.cmcc=2013-04-15 02:00:00
+ro.build.time.cmcc=2013-05-29 02:00:00
 
 ro.build.kernel.version=3.4.5\nhuawei@sp20-Tecal-RH2285 #1
 

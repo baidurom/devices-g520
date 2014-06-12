@@ -27,13 +27,13 @@
     .parameter "remote"
 
     .prologue
-    .line 299
+    .line 308
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 300
+    .line 309
     iput-object p1, p0, Landroid/hardware/usb/IUsbManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    .line 301
+    .line 310
     return-void
 .end method
 
@@ -43,7 +43,7 @@
     .locals 1
 
     .prologue
-    .line 304
+    .line 313
     iget-object v0, p0, Landroid/hardware/usb/IUsbManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object v0
@@ -59,28 +59,28 @@
     .end annotation
 
     .prologue
-    .line 643
+    .line 652
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 644
+    .line 653
     .local v0, _data:Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 646
+    .line 655
     .local v1, _reply:Landroid/os/Parcel;
     :try_start_0
     const-string v2, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 647
+    .line 656
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 648
+    .line 657
     iget-object v2, p0, Landroid/hardware/usb/IUsbManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0xe
@@ -89,27 +89,27 @@
 
     invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 649
+    .line 658
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 652
+    .line 661
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 653
+    .line 662
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 655
+    .line 664
     return-void
 
-    .line 652
+    .line 661
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 653
+    .line 662
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v2
@@ -124,25 +124,25 @@
     .end annotation
 
     .prologue
-    .line 357
+    .line 366
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 358
+    .line 367
     .local v0, _data:Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 361
+    .line 370
     .local v1, _reply:Landroid/os/Parcel;
     :try_start_0
     const-string v3, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 362
+    .line 371
     iget-object v3, p0, Landroid/hardware/usb/IUsbManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v4, 0x3
@@ -151,17 +151,17 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 363
+    .line 372
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 364
+    .line 373
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 365
+    .line 374
     sget-object v3, Landroid/hardware/usb/UsbAccessory;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v3, v1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -172,18 +172,18 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 372
+    .line 381
     .local v2, _result:Landroid/hardware/usb/UsbAccessory;
     :goto_0
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 373
+    .line 382
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 375
+    .line 384
     return-object v2
 
-    .line 368
+    .line 377
     .end local v2           #_result:Landroid/hardware/usb/UsbAccessory;
     :cond_0
     const/4 v2, 0x0
@@ -191,14 +191,14 @@
     .restart local v2       #_result:Landroid/hardware/usb/UsbAccessory;
     goto :goto_0
 
-    .line 372
+    .line 381
     .end local v2           #_result:Landroid/hardware/usb/UsbAccessory;
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 373
+    .line 382
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -214,25 +214,25 @@
     .end annotation
 
     .prologue
-    .line 313
+    .line 322
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 314
+    .line 323
     .local v0, _data:Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 316
+    .line 325
     .local v1, _reply:Landroid/os/Parcel;
     :try_start_0
     const-string v2, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 317
+    .line 326
     iget-object v2, p0, Landroid/hardware/usb/IUsbManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v3, 0x1
@@ -241,38 +241,38 @@
 
     invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 318
+    .line 327
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 319
+    .line 328
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 320
+    .line 329
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->readFromParcel(Landroid/os/Parcel;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 324
+    .line 333
     :cond_0
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 325
+    .line 334
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 327
+    .line 336
     return-void
 
-    .line 324
+    .line 333
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 325
+    .line 334
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v2
@@ -282,7 +282,7 @@
     .locals 1
 
     .prologue
-    .line 308
+    .line 317
     const-string v0, "android.hardware.usb.IUsbManager"
 
     return-object v0
@@ -299,42 +299,42 @@
     .end annotation
 
     .prologue
-    .line 601
+    .line 610
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 602
+    .line 611
     .local v0, _data:Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 604
+    .line 613
     .local v1, _reply:Landroid/os/Parcel;
     :try_start_0
     const-string v2, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 605
+    .line 614
     if-eqz p1, :cond_0
 
-    .line 606
+    .line 615
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 607
+    .line 616
     const/4 v2, 0x0
 
     invoke-virtual {p1, v0, v2}, Landroid/hardware/usb/UsbAccessory;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 612
+    .line 621
     :goto_0
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 613
+    .line 622
     iget-object v2, p0, Landroid/hardware/usb/IUsbManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0xc
@@ -343,21 +343,21 @@
 
     invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 614
+    .line 623
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 617
+    .line 626
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 618
+    .line 627
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 620
+    .line 629
     return-void
 
-    .line 610
+    .line 619
     :cond_0
     const/4 v2, 0x0
 
@@ -368,13 +368,13 @@
 
     goto :goto_0
 
-    .line 617
+    .line 626
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 618
+    .line 627
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v2
@@ -391,42 +391,42 @@
     .end annotation
 
     .prologue
-    .line 578
+    .line 587
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 579
+    .line 588
     .local v0, _data:Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 581
+    .line 590
     .local v1, _reply:Landroid/os/Parcel;
     :try_start_0
     const-string v2, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 582
+    .line 591
     if-eqz p1, :cond_0
 
-    .line 583
+    .line 592
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 584
+    .line 593
     const/4 v2, 0x0
 
     invoke-virtual {p1, v0, v2}, Landroid/hardware/usb/UsbDevice;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 589
+    .line 598
     :goto_0
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 590
+    .line 599
     iget-object v2, p0, Landroid/hardware/usb/IUsbManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0xb
@@ -435,21 +435,21 @@
 
     invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 591
+    .line 600
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 594
+    .line 603
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 595
+    .line 604
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 597
+    .line 606
     return-void
 
-    .line 587
+    .line 596
     :cond_0
     const/4 v2, 0x0
 
@@ -460,13 +460,13 @@
 
     goto :goto_0
 
-    .line 594
+    .line 603
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 595
+    .line 604
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v2
@@ -486,38 +486,38 @@
 
     const/4 v3, 0x0
 
-    .line 487
+    .line 496
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 488
+    .line 497
     .local v0, _data:Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 491
+    .line 500
     .local v1, _reply:Landroid/os/Parcel;
     :try_start_0
     const-string v4, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 492
+    .line 501
     if-eqz p1, :cond_0
 
-    .line 493
+    .line 502
     const/4 v4, 0x1
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 494
+    .line 503
     const/4 v4, 0x0
 
     invoke-virtual {p1, v0, v4}, Landroid/hardware/usb/UsbAccessory;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 499
+    .line 508
     :goto_0
     iget-object v4, p0, Landroid/hardware/usb/IUsbManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
@@ -527,10 +527,10 @@
 
     invoke-interface {v4, v5, v0, v1, v6}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 500
+    .line 509
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 501
+    .line 510
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -539,18 +539,18 @@
 
     if-eqz v4, :cond_1
 
-    .line 504
+    .line 513
     .local v2, _result:Z
     :goto_1
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 505
+    .line 514
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 507
+    .line 516
     return v2
 
-    .line 497
+    .line 506
     .end local v2           #_result:Z
     :cond_0
     const/4 v4, 0x0
@@ -562,13 +562,13 @@
 
     goto :goto_0
 
-    .line 504
+    .line 513
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 505
+    .line 514
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -576,7 +576,7 @@
     :cond_1
     move v2, v3
 
-    .line 501
+    .line 510
     goto :goto_1
 .end method
 
@@ -592,28 +592,28 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 624
+    .line 633
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 625
+    .line 634
     .local v0, _data:Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 628
+    .line 637
     .local v1, _reply:Landroid/os/Parcel;
     :try_start_0
     const-string v3, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 629
+    .line 638
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 630
+    .line 639
     iget-object v3, p0, Landroid/hardware/usb/IUsbManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0xd
@@ -622,10 +622,10 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 631
+    .line 640
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 632
+    .line 641
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -636,25 +636,25 @@
 
     const/4 v2, 0x1
 
-    .line 635
+    .line 644
     .local v2, _result:Z
     :cond_0
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 636
+    .line 645
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 638
+    .line 647
     return v2
 
-    .line 635
+    .line 644
     .end local v2           #_result:Z
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 636
+    .line 645
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -674,38 +674,38 @@
 
     const/4 v3, 0x0
 
-    .line 462
+    .line 471
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 463
+    .line 472
     .local v0, _data:Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 466
+    .line 475
     .local v1, _reply:Landroid/os/Parcel;
     :try_start_0
     const-string v4, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 467
+    .line 476
     if-eqz p1, :cond_0
 
-    .line 468
+    .line 477
     const/4 v4, 0x1
 
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 469
+    .line 478
     const/4 v4, 0x0
 
     invoke-virtual {p1, v0, v4}, Landroid/hardware/usb/UsbDevice;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 474
+    .line 483
     :goto_0
     iget-object v4, p0, Landroid/hardware/usb/IUsbManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
@@ -715,10 +715,10 @@
 
     invoke-interface {v4, v5, v0, v1, v6}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 475
+    .line 484
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 476
+    .line 485
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -727,18 +727,18 @@
 
     if-eqz v4, :cond_1
 
-    .line 479
+    .line 488
     .local v2, _result:Z
     :goto_1
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 480
+    .line 489
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 482
+    .line 491
     return v2
 
-    .line 472
+    .line 481
     .end local v2           #_result:Z
     :cond_0
     const/4 v4, 0x0
@@ -750,13 +750,13 @@
 
     goto :goto_0
 
-    .line 479
+    .line 488
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 480
+    .line 489
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -764,7 +764,7 @@
     :cond_1
     move v2, v3
 
-    .line 476
+    .line 485
     goto :goto_1
 .end method
 
@@ -778,38 +778,38 @@
     .end annotation
 
     .prologue
-    .line 382
+    .line 391
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 383
+    .line 392
     .local v0, _data:Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 386
+    .line 395
     .local v1, _reply:Landroid/os/Parcel;
     :try_start_0
     const-string v3, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 387
+    .line 396
     if-eqz p1, :cond_0
 
-    .line 388
+    .line 397
     const/4 v3, 0x1
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 389
+    .line 398
     const/4 v3, 0x0
 
     invoke-virtual {p1, v0, v3}, Landroid/hardware/usb/UsbAccessory;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 394
+    .line 403
     :goto_0
     iget-object v3, p0, Landroid/hardware/usb/IUsbManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
@@ -819,17 +819,17 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 395
+    .line 404
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 396
+    .line 405
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 397
+    .line 406
     sget-object v3, Landroid/os/ParcelFileDescriptor;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v3, v1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -840,18 +840,18 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 404
+    .line 413
     .local v2, _result:Landroid/os/ParcelFileDescriptor;
     :goto_1
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 405
+    .line 414
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 407
+    .line 416
     return-object v2
 
-    .line 392
+    .line 401
     .end local v2           #_result:Landroid/os/ParcelFileDescriptor;
     :cond_0
     const/4 v3, 0x0
@@ -863,18 +863,18 @@
 
     goto :goto_0
 
-    .line 404
+    .line 413
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 405
+    .line 414
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
 
-    .line 400
+    .line 409
     :cond_1
     const/4 v2, 0x0
 
@@ -892,28 +892,28 @@
     .end annotation
 
     .prologue
-    .line 333
+    .line 342
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 334
+    .line 343
     .local v0, _data:Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 337
+    .line 346
     .local v1, _reply:Landroid/os/Parcel;
     :try_start_0
     const-string v3, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 338
+    .line 347
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 339
+    .line 348
     iget-object v3, p0, Landroid/hardware/usb/IUsbManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v4, 0x2
@@ -922,17 +922,17 @@
 
     invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 340
+    .line 349
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
-    .line 341
+    .line 350
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 342
+    .line 351
     sget-object v3, Landroid/os/ParcelFileDescriptor;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v3, v1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -943,18 +943,18 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 349
+    .line 358
     .local v2, _result:Landroid/os/ParcelFileDescriptor;
     :goto_0
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 350
+    .line 359
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 352
+    .line 361
     return-object v2
 
-    .line 345
+    .line 354
     .end local v2           #_result:Landroid/os/ParcelFileDescriptor;
     :cond_0
     const/4 v2, 0x0
@@ -962,14 +962,14 @@
     .restart local v2       #_result:Landroid/os/ParcelFileDescriptor;
     goto :goto_0
 
-    .line 349
+    .line 358
     .end local v2           #_result:Landroid/os/ParcelFileDescriptor;
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 350
+    .line 359
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -987,55 +987,55 @@
     .end annotation
 
     .prologue
-    .line 548
+    .line 557
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 549
+    .line 558
     .local v0, _data:Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 551
+    .line 560
     .local v1, _reply:Landroid/os/Parcel;
     :try_start_0
     const-string v2, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 552
+    .line 561
     if-eqz p1, :cond_0
 
-    .line 553
+    .line 562
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 554
+    .line 563
     const/4 v2, 0x0
 
     invoke-virtual {p1, v0, v2}, Landroid/hardware/usb/UsbAccessory;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 559
+    .line 568
     :goto_0
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 560
+    .line 569
     if-eqz p3, :cond_1
 
-    .line 561
+    .line 570
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 562
+    .line 571
     const/4 v2, 0x0
 
     invoke-virtual {p3, v0, v2}, Landroid/app/PendingIntent;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 567
+    .line 576
     :goto_1
     iget-object v2, p0, Landroid/hardware/usb/IUsbManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
@@ -1045,21 +1045,21 @@
 
     invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 568
+    .line 577
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 571
+    .line 580
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 572
+    .line 581
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 574
+    .line 583
     return-void
 
-    .line 557
+    .line 566
     :cond_0
     const/4 v2, 0x0
 
@@ -1070,18 +1070,18 @@
 
     goto :goto_0
 
-    .line 571
+    .line 580
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 572
+    .line 581
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v2
 
-    .line 565
+    .line 574
     :cond_1
     const/4 v2, 0x0
 
@@ -1105,55 +1105,55 @@
     .end annotation
 
     .prologue
-    .line 515
+    .line 524
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 516
+    .line 525
     .local v0, _data:Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 518
+    .line 527
     .local v1, _reply:Landroid/os/Parcel;
     :try_start_0
     const-string v2, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 519
+    .line 528
     if-eqz p1, :cond_0
 
-    .line 520
+    .line 529
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 521
+    .line 530
     const/4 v2, 0x0
 
     invoke-virtual {p1, v0, v2}, Landroid/hardware/usb/UsbDevice;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 526
+    .line 535
     :goto_0
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 527
+    .line 536
     if-eqz p3, :cond_1
 
-    .line 528
+    .line 537
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 529
+    .line 538
     const/4 v2, 0x0
 
     invoke-virtual {p3, v0, v2}, Landroid/app/PendingIntent;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 534
+    .line 543
     :goto_1
     iget-object v2, p0, Landroid/hardware/usb/IUsbManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
@@ -1163,21 +1163,21 @@
 
     invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 535
+    .line 544
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 538
+    .line 547
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 539
+    .line 548
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 541
+    .line 550
     return-void
 
-    .line 524
+    .line 533
     :cond_0
     const/4 v2, 0x0
 
@@ -1188,18 +1188,18 @@
 
     goto :goto_0
 
-    .line 538
+    .line 547
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 539
+    .line 548
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v2
 
-    .line 532
+    .line 541
     :cond_1
     const/4 v2, 0x0
 
@@ -1222,42 +1222,42 @@
     .end annotation
 
     .prologue
-    .line 439
+    .line 448
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 440
+    .line 449
     .local v0, _data:Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 442
+    .line 451
     .local v1, _reply:Landroid/os/Parcel;
     :try_start_0
     const-string v2, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 443
+    .line 452
     if-eqz p1, :cond_0
 
-    .line 444
+    .line 453
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 445
+    .line 454
     const/4 v2, 0x0
 
     invoke-virtual {p1, v0, v2}, Landroid/hardware/usb/UsbAccessory;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 450
+    .line 459
     :goto_0
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 451
+    .line 460
     iget-object v2, p0, Landroid/hardware/usb/IUsbManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v3, 0x6
@@ -1266,21 +1266,21 @@
 
     invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 452
+    .line 461
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 455
+    .line 464
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 456
+    .line 465
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 458
+    .line 467
     return-void
 
-    .line 448
+    .line 457
     :cond_0
     const/4 v2, 0x0
 
@@ -1291,13 +1291,86 @@
 
     goto :goto_0
 
-    .line 455
+    .line 464
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 456
+    .line 465
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw v2
+.end method
+
+.method public setAcmEnable(Z)V
+    .locals 5
+    .parameter "enable"
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    const/4 v2, 0x0
+
+    .line 685
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    .line 686
+    .local v0, _data:Landroid/os/Parcel;
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    .line 688
+    .local v1, _reply:Landroid/os/Parcel;
+    :try_start_0
+    const-string v3, "android.hardware.usb.IUsbManager"
+
+    invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    .line 689
+    if-eqz p1, :cond_0
+
+    const/4 v2, 0x1
+
+    :cond_0
+    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 690
+    iget-object v2, p0, Landroid/hardware/usb/IUsbManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+
+    const/16 v3, 0x10
+
+    const/4 v4, 0x0
+
+    invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    .line 691
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 694
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 695
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 697
+    return-void
+
+    .line 694
+    :catchall_0
+    move-exception v2
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 695
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v2
@@ -1316,28 +1389,28 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 659
+    .line 668
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 660
+    .line 669
     .local v0, _data:Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 662
+    .line 671
     .local v1, _reply:Landroid/os/Parcel;
     :try_start_0
     const-string v3, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 663
+    .line 672
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 664
+    .line 673
     if-eqz p2, :cond_0
 
     const/4 v2, 0x1
@@ -1345,7 +1418,7 @@
     :cond_0
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 665
+    .line 674
     iget-object v2, p0, Landroid/hardware/usb/IUsbManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0xf
@@ -1354,27 +1427,27 @@
 
     invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 666
+    .line 675
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 669
+    .line 678
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 670
+    .line 679
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 672
+    .line 681
     return-void
 
-    .line 669
+    .line 678
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 670
+    .line 679
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v2
@@ -1391,42 +1464,42 @@
     .end annotation
 
     .prologue
-    .line 414
+    .line 423
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 415
+    .line 424
     .local v0, _data:Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 417
+    .line 426
     .local v1, _reply:Landroid/os/Parcel;
     :try_start_0
     const-string v2, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 418
+    .line 427
     if-eqz p1, :cond_0
 
-    .line 419
+    .line 428
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 420
+    .line 429
     const/4 v2, 0x0
 
     invoke-virtual {p1, v0, v2}, Landroid/hardware/usb/UsbDevice;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 425
+    .line 434
     :goto_0
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 426
+    .line 435
     iget-object v2, p0, Landroid/hardware/usb/IUsbManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v3, 0x5
@@ -1435,21 +1508,21 @@
 
     invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 427
+    .line 436
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 430
+    .line 439
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 431
+    .line 440
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 433
+    .line 442
     return-void
 
-    .line 423
+    .line 432
     :cond_0
     const/4 v2, 0x0
 
@@ -1460,13 +1533,13 @@
 
     goto :goto_0
 
-    .line 430
+    .line 439
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 431
+    .line 440
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v2
@@ -1482,57 +1555,57 @@
     .end annotation
 
     .prologue
-    .line 676
+    .line 701
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 677
+    .line 702
     .local v0, _data:Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 679
+    .line 704
     .local v1, _reply:Landroid/os/Parcel;
     :try_start_0
     const-string v2, "android.hardware.usb.IUsbManager"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 680
+    .line 705
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 681
+    .line 706
     iget-object v2, p0, Landroid/hardware/usb/IUsbManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    const/16 v3, 0x10
+    const/16 v3, 0x11
 
     const/4 v4, 0x0
 
     invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 682
+    .line 707
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 685
+    .line 710
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 686
+    .line 711
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 688
+    .line 713
     return-void
 
-    .line 685
+    .line 710
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 686
+    .line 711
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v2

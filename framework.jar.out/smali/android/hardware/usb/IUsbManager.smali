@@ -119,6 +119,14 @@
     .end annotation
 .end method
 
+.method public abstract setAcmEnable(Z)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract setCurrentFunction(Ljava/lang/String;Z)V
     .annotation system Ldalvik/annotation/Throws;
         value = {

@@ -7929,6 +7929,7 @@
   />
   <!--END: PN:DTS2012120507770  modified by x00195216 2012/12/05-->
 <!-- BEGIN PN:DTS2012112707255, Added by d00208923, 2012/11/28 -->
+<!-- BEGIN PN:DTS2013042202545, Modified by d00208923, 2013/04/25 -->
   <apn carrier="CMDM"
       mcc="460"
       mnc="00"
@@ -7941,8 +7942,9 @@
       mmsproxy=""
       mmsport=""
       mmsc="http:"
-      type="default,supl,wap"
+      type="cmdm"
   />
+<!-- END PN:DTSDTS2013042202545, Modified by d00208923, 2013/04/25 -->
 <!-- END PN:DTS2012112707255, Added by d00208923, 2012/11/28 --> 
 <!-- END PN:DTS2012120504934, Modified by s00165231, 2012/12/07 -->
   <apn carrier="中国移动 CMMAIL"
@@ -7964,28 +7966,32 @@
       type="mms"
   />
 
-  <apn carrier="中国联通 3g 网络 (China Unicom)"
+<!-- BEGIN PN:DTS2013042200982 ,Modified by w81005239,2013/04/23 -->
+<!-- Modify the apns with the sim card of china unicom -->
+  <apn carrier="沃3G连接互联网"
       mcc="460"
       mnc="01"
       apn="3gnet"
-      type="default,supl,net"
+      type="default,supl"
   />
 
-  <apn carrier="中国联通 GPRS (China Unicom)"
+<!--
+   <apn carrier="中国联通 GPRS (China Unicom)"
       mcc="460"
       mnc="01"
       apn="uninet"
       type="default,supl,net"
   />
-  
-  <apn carrier="中国联通 Wap 网络 (China Unicom)"
+-->
+  <apn carrier="沃3G手机上网"
       mcc="460"
       mnc="01"
       apn="3gwap"
       proxy="10.0.0.172"
       port="80"
+      type="default,supl"
   />
-
+<!--
   <apn carrier="中国联通 Wap 网络 (China Unicom)"
       mcc="460"
       mnc="01"
@@ -7993,8 +7999,8 @@
       proxy="10.0.0.172"
       port="80"
   />
-
-  <apn carrier="中国联通 3g 彩信 (China Unicom)"
+-->
+  <apn carrier="联通彩信"
       mcc="460"
       mnc="01"
       apn="3gwap"
@@ -8003,7 +8009,7 @@
       mmsport="80"
       type="mms"
   />
-
+<!--
   <apn carrier="中国联通彩信 (China Unicom)"
       mcc="460"
       mnc="01"
@@ -8013,6 +8019,8 @@
       mmsport="80"
       type="mms"
   />
+-->
+<!-- END PN:DTS2013042200982 ,Modified by w81005239,2013/04/23 -->
 <!-- BEGIN PN:DTS2012120504934, Modified by s00165231, 2012/12/07 -->
   <apn carrier="CMNET"
       mcc="460"
@@ -8031,6 +8039,7 @@
   />
   <!--END: PN:DTS2012120507770  modified by x00195216 2012/12/05-->
 <!-- BEGIN PN:DTS2012112707255, Added by d00208923, 2012/11/28 -->
+<!-- BEGIN PN:DTS2013042202545, Modified by d00208923, 2013/04/25 -->
   <apn carrier="CMDM"
       mcc="460"
       mnc="02"
@@ -8043,8 +8052,9 @@
       mmsproxy=""
       mmsport=""
       mmsc="http:"
-      type="default,supl,wap"
+      type="cmdm"
   />
+<!-- END PN:DTS2013042202545, Modified by d00208923, 2013/04/25 -->
 <!-- END PN:DTS2012112707255, Added by d00208923, 2012/11/28 -->
 <!-- END PN:DTS2012120504934, Modified by s00165231, 2012/12/07 -->
   
@@ -8107,6 +8117,7 @@
   />
   <!--END: PN:DTS2012120507770  modified by x00195216 2012/12/05-->
 <!-- BEGIN PN:DTS2012112707255, Added by d00208923, 2012/11/28 -->
+<!-- BEGIN PN:DTS2013042202545, Modified by d00208923, 2013/04/25 -->
   <apn carrier="CMDM"
       mcc="460"
       mnc="07"
@@ -8119,8 +8130,9 @@
       mmsproxy=""
       mmsport=""
       mmsc="http:"
-      type="default,supl,wap"
+      type="cmdm"
   />
+<!-- END PN:DTS2013042202545, Modified by d00208923, 2013/04/25 -->
 <!-- END PN:DTS2012112707255, Added by d00208923, 2012/11/28 -->
 <!-- END PN:DTS2012120504934, Modified by s00165231, 2012/12/07 -->
 

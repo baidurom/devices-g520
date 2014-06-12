@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center" android:id="@id/imageView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:id="@id/linearLayoutMain" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:id="@id/empty1" android:layout_width="wrap_content" android:layout_height="50.0dip" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:id="@id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/number_zero" />
+            <SeekBar android:id="@id/seekBar_sharpness" android:layout_width="320.0dip" android:layout_height="wrap_content" android:max="100" android:progress="50" />
+            <TextView android:id="@id/textView_sharpness" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/textView_sharpness_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Sharpness" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:id="@id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/number_zero" />
+            <SeekBar android:id="@id/seekBar_color" android:layout_width="320.0dip" android:layout_height="wrap_content" android:max="100" android:progress="0" />
+            <TextView android:id="@id/textView_color" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/textView_color_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Color" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:id="@id/textView4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/number_zero" />
+            <SeekBar android:id="@id/seekBar_skinTone" android:layout_width="320.0dip" android:layout_height="wrap_content" android:max="100" android:progress="50" />
+            <TextView android:id="@id/textView_skinTone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/textView_skinTone_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/SkinTone" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:id="@id/textView1_skinSat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/number_zero" />
+            <SeekBar android:id="@id/seekBar_skinSat" android:layout_width="320.0dip" android:layout_height="wrap_content" android:max="100" android:progress="50" />
+            <TextView android:id="@id/textView_skinSat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/SGS_number" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/textView_skinSat_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Skin_tone_Sat" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:id="@id/textView5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/number_zero" />
+            <SeekBar android:id="@id/seekBar_grassTone" android:layout_width="320.0dip" android:layout_height="wrap_content" android:max="100" android:progress="50" />
+            <TextView android:id="@id/textView_grassTone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/textView_grassTone_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/GrassTone" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:id="@id/textView1_GrassSat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/number_zero" />
+            <SeekBar android:id="@id/seekBar_GrassSat" android:layout_width="320.0dip" android:layout_height="wrap_content" android:max="100" android:progress="50" />
+            <TextView android:id="@id/textView_GrassSat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/SGS_number" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/textView_GrassSat_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Grass_tone_Sat" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/number_zero" />
+            <SeekBar android:id="@id/seekBar_skyTone" android:layout_width="320.0dip" android:layout_height="wrap_content" android:max="100" android:progress="50" />
+            <TextView android:id="@id/textView_skyTone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/textView_skyTone_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/SkyTone" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:id="@id/textView1_skySat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/number_zero" />
+            <SeekBar android:id="@id/seekBar_skySat" android:layout_width="320.0dip" android:layout_height="wrap_content" android:max="100" android:progress="50" />
+            <TextView android:id="@id/textView_skySat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/SGS_number" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/textView_skySat_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Sky_tone_Sat" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

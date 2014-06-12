@@ -124,6 +124,8 @@
 
 .field public static final FORCE_DIGITAL_DOCK:I = 0x9
 
+.field public static final FORCE_EARPIECE:I = 0xc
+
 .field public static final FORCE_HEADPHONES:I = 0x2
 
 .field public static final FORCE_NONE:I = 0x0
@@ -158,7 +160,7 @@
 
 .field private static final NUM_DEVICE_STATES:I = 0x1
 
-.field private static final NUM_FORCE_CONFIG:I = 0xb
+.field private static final NUM_FORCE_CONFIG:I = 0xd
 
 .field private static final NUM_FORCE_USE:I = 0x4
 

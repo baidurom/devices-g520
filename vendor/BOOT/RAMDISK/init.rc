@@ -18,8 +18,10 @@ on early-init
     
 # create mountpoints
     mkdir /mnt 0775 root system
-    
-    mkdir /storage 0055 system sdcard_r
+#/* BEGIN PN: DTS2013031500642, Added by h00191479, 2013/03/15 */
+#   modified for system permission by h00191479 DTS2013011007176
+    mkdir /storage 0555 system sdcard_r
+#/* END PN: DTS2013031500642 ,Added by h00191479, 2013/03/15 */
     mkdir /storage/sdcard0 0000 system system
     mkdir /storage/sdcard1 0000 system system
     mkdir /mnt/cd-rom 0000 system system
@@ -712,6 +714,13 @@ on boot
 	chown system system /sys/class/leds/green/trigger
 	chown system system /sys/class/leds/blue/trigger
 
+    #/* BEGIN PN: DTS2013031500642 ,Added by h00191479, 2013/03/15 */
+    #BEGIN PN: DTS2013021700993 , Added by l00183577, 2013-02-17
+    chmod 0664 /sys/flashlight/led_lightness
+    chown system system /sys/flashlight/led_lightness
+    #END PN: DTS2013021700993 , Added by l00183577, 2013-02-17
+    #/* END PN: DTS2013031500642 ,Added by h00191479, 2013/03/15 */
+    
 # AGPS
     mkdir /data/agps_supl 0771 gps system
 
@@ -1421,14 +1430,6 @@ service setdevid_service /system/bin/setdevid_service
 /*BEGIN baidu services */
 service WordSegService /system/bin/WordSegService
     class main
-    oneshot
-
-service propertystart /system/bin/property_start.sh
-    disabled
-    oneshot
-
-service propertystop /system/bin/property_stop.sh
-    disabled
     oneshot
 
 service serviceext /sbin/serviceext

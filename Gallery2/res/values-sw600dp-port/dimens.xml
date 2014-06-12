@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="screen_on_margin_right">136.0dip</dimen>
+    <dimen name="screen_on_margin_left">88.0dip</dimen>
+</resources>

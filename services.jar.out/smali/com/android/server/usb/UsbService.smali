@@ -466,6 +466,44 @@
     return-void
 .end method
 
+.method public setAcmEnable(Z)V
+    .locals 3
+    .parameter "enable"
+
+    .prologue
+    .line 159
+    iget-object v0, p0, Lcom/android/server/usb/UsbService;->mContext:Landroid/content/Context;
+
+    const-string v1, "android.permission.MANAGE_USB"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 160
+    iget-object v0, p0, Lcom/android/server/usb/UsbService;->mDeviceManager:Lcom/android/server/usb/UsbDeviceManager;
+
+    if-eqz v0, :cond_0
+
+    .line 161
+    iget-object v0, p0, Lcom/android/server/usb/UsbService;->mDeviceManager:Lcom/android/server/usb/UsbDeviceManager;
+
+    invoke-virtual {v0, p1}, Lcom/android/server/usb/UsbDeviceManager;->setAcmEnable(Z)V
+
+    .line 165
+    return-void
+
+    .line 163
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "USB device mode not supported"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
 .method public setCurrentFunction(Ljava/lang/String;Z)V
     .locals 3
     .parameter "function"

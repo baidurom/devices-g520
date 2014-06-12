@@ -19,5 +19,10 @@ elif [ "$apkBaseName" = "Settings" ];then
 
 	find $tempSmaliDir -name "*\.smali" | xargs sed -i 's#invoke-interface\(.*Lcom/android/internal/telephony/IccCard;->\)#invoke-virtual\1#g'
 
+elif [ "$apkBaseName" = "HomePro" ];then
+	echo ">>> in custom_app $apkBaseName"
+
+	sed -i 's/className="com.baidu.camera.Camera" packageName="com.baidu.camera"/className="com.android.camera.CameraLauncher" packageName="com.android.gallery3d"/g' $tempSmaliDir/res/xml/default_workspace.xml
+     
 fi
 

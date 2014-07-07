@@ -1810,11 +1810,13 @@
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
+    iget v7, p0, Landroid/content/res/AssetManager;->mDpi:I
+    
     invoke-virtual {v5}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-direct {p0, p1, v6, p2, p4}, Landroid/content/res/AssetManager;->findAccurateRes(Landroid/util/TypedValue;Ljava/lang/String;Ljava/lang/String;Z)Ljava/io/File;
+    invoke-static {v7, p1, v6, p2, p4}, Landroid/content/res/AssetManager;->findAccurateRes(ILandroid/util/TypedValue;Ljava/lang/String;Ljava/lang/String;Z)Ljava/io/File;
 
     move-result-object v0
 
@@ -1867,7 +1869,6 @@
     invoke-direct {v4, v2}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
     .end local v3           #inputStream:Ljava/io/InputStream;
     .local v4, inputStream:Ljava/io/InputStream;
@@ -1896,15 +1897,6 @@
 
     .local v1, e:Ljava/io/FileNotFoundException;
     invoke-virtual {v1}, Ljava/io/FileNotFoundException;->printStackTrace()V
-
-    goto :goto_1
-
-    .end local v1           #e:Ljava/io/FileNotFoundException;
-    :catch_1
-    move-exception v1
-
-    .local v1, e:Ljava/io/IOException;
-    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_1
 .end method

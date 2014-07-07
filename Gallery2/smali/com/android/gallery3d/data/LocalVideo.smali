@@ -507,6 +507,8 @@
     .line 149
     sget-boolean v0, Lcom/android/gallery3d/data/LocalVideo;->IS_DRM_SUPPORTED:Z
 
+    const/4 v0, 0x0
+
     if-eqz v0, :cond_0
 
     .line 150
@@ -530,6 +532,8 @@
     .line 153
     :cond_0
     sget-boolean v0, Lcom/android/gallery3d/data/LocalVideo;->IS_STEREO_DISPLAY_SUPPORTED:Z
+
+    const/4 v0, 0x0
 
     if-eqz v0, :cond_1
 
@@ -1273,6 +1277,8 @@
     .line 192
     sget-boolean v1, Lcom/android/gallery3d/data/LocalVideo;->IS_DRM_SUPPORTED:Z
 
+    const/4 v1, 0x0
+
     if-eqz v1, :cond_0
 
     .line 193
@@ -1308,6 +1314,8 @@
     .line 196
     :cond_0
     sget-boolean v1, Lcom/android/gallery3d/data/LocalVideo;->IS_STEREO_DISPLAY_SUPPORTED:Z
+
+    const/4 v1, 0x0
 
     if-eqz v1, :cond_1
 

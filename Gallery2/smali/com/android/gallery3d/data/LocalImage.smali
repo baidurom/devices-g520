@@ -989,6 +989,8 @@
     .line 185
     sget-boolean v0, Lcom/android/gallery3d/data/LocalImage;->IS_DRM_SUPPORTED:Z
 
+    const/4 v0, 0x0
+
     if-eqz v0, :cond_0
 
     .line 186
@@ -1013,6 +1015,8 @@
     :cond_0
     sget-boolean v0, Lcom/android/gallery3d/data/LocalImage;->IS_STEREO_DISPLAY_SUPPORTED:Z
 
+    const/4 v0, 0x0
+
     if-eqz v0, :cond_1
 
     .line 191
@@ -1020,6 +1024,8 @@
 
     .line 193
     :cond_1
+    goto :goto_baidu_0
+
     const/16 v0, 0x10
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
@@ -1038,6 +1044,7 @@
     iput v0, p0, Lcom/android/gallery3d/data/LocalMediaItem;->stereoType:I
 
     .line 196
+    :goto_baidu_0
     return-void
 .end method
 
@@ -2366,6 +2373,8 @@
     :goto_0
     sget-boolean v1, Lcom/android/gallery3d/data/LocalImage;->IS_DRM_SUPPORTED:Z
 
+    const/4 v1, 0x0
+
     if-eqz v1, :cond_1
 
     .line 230
@@ -2409,6 +2418,8 @@
 
     .line 237
     :cond_2
+    goto :goto_baidu_0
+
     const/16 v1, 0x10
 
     invoke-interface {p1, v1}, Landroid/database/Cursor;->getInt(I)I
@@ -2433,6 +2444,7 @@
     iput v1, p0, Lcom/android/gallery3d/data/LocalMediaItem;->stereoType:I
 
     .line 240
+    :goto_baidu_0
     invoke-virtual {v0}, Lcom/android/gallery3d/util/UpdateHelper;->isUpdated()Z
 
     move-result v1

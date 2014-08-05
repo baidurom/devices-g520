@@ -62,11 +62,13 @@
     .line 1805
     sget-object v0, Lcom/android/internal/telephony/SMSPlugin;->msgAddress:[Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/android/internal/telephony/SMSDispatcher;->mPhone:Lcom/android/internal/telephony/PhoneBase;
+    #iget-object v1, p0, Lcom/android/internal/telephony/SMSDispatcher;->mPhone:Lcom/android/internal/telephony/Phone;
 
-    invoke-virtual {v1}, Lcom/android/internal/telephony/PhoneBase;->getSubscription()I
-
-    move-result v1
+    #invoke-interface {v1}, Lcom/android/internal/telephony/Phone;->getSubscription()I
+    
+    #move-result v1
+    
+    const/4 v1, -0x1
 
     invoke-virtual {p1}, Lcom/android/internal/telephony/SmsMessageBase;->getDisplayOriginatingAddress()Ljava/lang/String;
 
@@ -87,11 +89,13 @@
     .line 1801
     sget-object v0, Lcom/android/internal/telephony/SMSPlugin;->msgAddress:[Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/android/internal/telephony/SMSDispatcher;->mPhone:Lcom/android/internal/telephony/PhoneBase;
+    #iget-object v1, p0, Lcom/android/internal/telephony/SMSDispatcher;->mPhone:Lcom/android/internal/telephony/Phone;
 
-    invoke-virtual {v1}, Lcom/android/internal/telephony/PhoneBase;->getSubscription()I
+    #invoke-interface {v1}, Lcom/android/internal/telephony/Phone;->getSubscription()I
 
-    move-result v1
+    #move-result v1
+    
+    const/4 v1, -0x1
 
     aput-object p1, v0, v1
 
@@ -148,11 +152,13 @@
 
     const/4 v4, 0x0
 
-    iget-object v5, p0, Lcom/android/internal/telephony/SMSDispatcher;->mPhone:Lcom/android/internal/telephony/PhoneBase;
+    #iget-object v5, p0, Lcom/android/internal/telephony/SMSDispatcher;->mPhone:Lcom/android/internal/telephony/Phone;
 
-    invoke-virtual {v5}, Lcom/android/internal/telephony/PhoneBase;->getSubscription()I
+    #invoke-interface {v5}, Lcom/android/internal/telephony/Phone;->getSubscription()I
 
-    move-result v5
+    #move-result v5
+    
+    const/4 v5, -0x1
 
     invoke-static {v2, v3, v4, v5}, Lcom/android/internal/telephony/SMSPlugin;->isTrafficMonitorSms(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)Z
 

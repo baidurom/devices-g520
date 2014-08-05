@@ -45,11 +45,13 @@
 
     iget-object v1, p0, Lcom/android/internal/telephony/SMSDispatcher$BaiduInjector$1;->val$dispatcher:Lcom/android/internal/telephony/SMSDispatcher;
 
-    iget-object v1, v1, Lcom/android/internal/telephony/SMSDispatcher;->mPhone:Lcom/android/internal/telephony/PhoneBase;
+    #iget-object v1, v1, Lcom/android/internal/telephony/SMSDispatcher;->mPhone:Lcom/android/internal/telephony/Phone;
 
-    invoke-virtual {v1}, Lcom/android/internal/telephony/PhoneBase;->getSubscription()I
+    #invoke-interface {v1}, Lcom/android/internal/telephony/Phone;->getSubscription()I
 
-    move-result v1
+    #move-result v1
+
+    const/4 v1, -0x1
 
     const-string v2, "NUMBER"
 
@@ -64,11 +66,13 @@
 
     iget-object v1, p0, Lcom/android/internal/telephony/SMSDispatcher$BaiduInjector$1;->val$dispatcher:Lcom/android/internal/telephony/SMSDispatcher;
 
-    iget-object v1, v1, Lcom/android/internal/telephony/SMSDispatcher;->mPhone:Lcom/android/internal/telephony/PhoneBase;
+    #iget-object v1, v1, Lcom/android/internal/telephony/SMSDispatcher;->mPhone:Lcom/android/internal/telephony/Phone;
 
-    invoke-virtual {v1}, Lcom/android/internal/telephony/PhoneBase;->getSubscription()I
+    #invoke-interface {v1}, Lcom/android/internal/telephony/Phone;->getSubscription()I
 
-    move-result v1
+    #move-result v1
+
+    const/4 v1, -0x1
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -81,11 +85,13 @@
 
     iget-object v1, p0, Lcom/android/internal/telephony/SMSDispatcher$BaiduInjector$1;->val$dispatcher:Lcom/android/internal/telephony/SMSDispatcher;
 
-    iget-object v1, v1, Lcom/android/internal/telephony/SMSDispatcher;->mPhone:Lcom/android/internal/telephony/PhoneBase;
+    #iget-object v1, v1, Lcom/android/internal/telephony/SMSDispatcher;->mPhone:Lcom/android/internal/telephony/Phone;
 
-    invoke-virtual {v1}, Lcom/android/internal/telephony/PhoneBase;->getSubscription()I
+    #invoke-interface {v1}, Lcom/android/internal/telephony/Phone;->getSubscription()I
 
-    move-result v1
+    #move-result v1
+
+    const/4 v1, -0x1
 
     const-string v2, "TIME"
 
@@ -102,11 +108,13 @@
 
     iget-object v1, p0, Lcom/android/internal/telephony/SMSDispatcher$BaiduInjector$1;->val$dispatcher:Lcom/android/internal/telephony/SMSDispatcher;
 
-    iget-object v1, v1, Lcom/android/internal/telephony/SMSDispatcher;->mPhone:Lcom/android/internal/telephony/PhoneBase;
+    #iget-object v1, v1, Lcom/android/internal/telephony/SMSDispatcher;->mPhone:Lcom/android/internal/telephony/Phone;
 
-    invoke-virtual {v1}, Lcom/android/internal/telephony/PhoneBase;->getSubscription()I
+    #invoke-interface {v1}, Lcom/android/internal/telephony/Phone;->getSubscription()I
 
-    move-result v1
+    #move-result v1
+
+    const/4 v1, -0x1
 
     const-string v2, "DISCARD"
 

@@ -2946,7 +2946,7 @@
 
     move-result-object v1
 
-    const/4 v2, -0x1
+    const/4 v2, 0x0
 
     invoke-static {v0, v15, v1, v2}, Lcom/android/internal/telephony/SMSPlugin;->prehandleMsg(Landroid/content/Context;[[BLjava/lang/String;I)Z
 
@@ -7602,7 +7602,7 @@
 
     move-object/from16 v0, p0
 
-    const/4 v4, -0x1
+    const/4 v4, 0x0
 
     move-object/from16 v5, v25
 

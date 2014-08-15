@@ -4036,6 +4036,8 @@
     <public type="string" name="storage_phone" id="0x01040505" />
     <public type="string" name="storage_external_usb" id="0x01040506" />
     <public type="string" name="usb_storage_open_notification_title" id="0x01040507" />
+    <public type="string" name="keyguard_password_enter_pin_code_for_subscription" id="0x01040508" />
+    <public type="string" name="keyguard_password_enter_puk_code_for_subscription" id="0x01040509" />
     <public type="dimen" name="app_icon_size" id="0x01050000" />
     <public type="dimen" name="thumbnail_height" id="0x01050001" />
     <public type="dimen" name="thumbnail_width" id="0x01050002" />

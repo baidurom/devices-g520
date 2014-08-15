@@ -1313,4 +1313,6 @@ for account %s."</string>
     <string name="storage_phone">Phone storage</string>
     <string name="storage_external_usb">External USB storage</string>
     <string name="usb_storage_open_notification_title">Turn on USB storage</string>
+    <string name="keyguard_password_enter_pin_code_for_subscription">Enter PIN code for Subscription</string>
+    <string name="keyguard_password_enter_puk_code_for_subscription">Enter PUK and new PIN code for Subscription</string>
 </resources>

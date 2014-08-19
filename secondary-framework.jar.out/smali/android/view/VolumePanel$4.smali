@@ -62,18 +62,18 @@
     .line 312
     iget-object v1, p0, Landroid/view/VolumePanel$4;->this$0:Landroid/view/VolumePanel;
 
-    invoke-virtual {v1, v3}, Landroid/view/VolumePanel;->removeMessages(I)V
+    invoke-virtual {v1, v3}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 313
     iget-object v1, p0, Landroid/view/VolumePanel$4;->this$0:Landroid/view/VolumePanel;
 
     iget-object v2, p0, Landroid/view/VolumePanel$4;->this$0:Landroid/view/VolumePanel;
 
-    invoke-virtual {v2, v3}, Landroid/view/VolumePanel;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {v2, v3}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Landroid/view/VolumePanel;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     .line 319
     :cond_0
@@ -93,18 +93,18 @@
     .line 316
     iget-object v1, p0, Landroid/view/VolumePanel$4;->this$0:Landroid/view/VolumePanel;
 
-    invoke-virtual {v1, v4}, Landroid/view/VolumePanel;->removeMessages(I)V
+    invoke-virtual {v1, v4}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 317
     iget-object v1, p0, Landroid/view/VolumePanel$4;->this$0:Landroid/view/VolumePanel;
 
     iget-object v2, p0, Landroid/view/VolumePanel$4;->this$0:Landroid/view/VolumePanel;
 
-    invoke-virtual {v2, v4}, Landroid/view/VolumePanel;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {v2, v4}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Landroid/view/VolumePanel;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     goto :goto_0
 .end method

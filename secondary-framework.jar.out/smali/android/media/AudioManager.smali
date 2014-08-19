@@ -2024,6 +2024,17 @@
     goto :goto_0
 .end method
 
+.method public isFMActive()Z
+    .locals 1
+
+    .prologue
+    invoke-virtual {p0}, Landroid/media/AudioManager;->isFmActive()Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public isMasterMute()Z
     .locals 4
 

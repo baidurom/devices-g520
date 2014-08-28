@@ -17,62 +17,37 @@
 # instance fields
 .field public count:I
 
-.field public isPoweroffAlarm:Z
-
 .field public operation:Landroid/app/PendingIntent;
-
-.field public pid:I
 
 .field public repeatInterval:J
 
 .field public type:I
-
-.field public uid:I
 
 .field public when:J
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 3
+    .locals 2
 
     .prologue
-    const-wide/16 v1, 0x0
+    const-wide/16 v0, 0x0
 
-    .line 903
+    .line 756
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 900
-    const/4 v0, 0x0
+    .line 757
+    iput-wide v0, p0, Lcom/android/server/AlarmManagerService$Alarm;->when:J
 
-    iput-boolean v0, p0, Lcom/android/server/AlarmManagerService$Alarm;->isPoweroffAlarm:Z
+    .line 758
+    iput-wide v0, p0, Lcom/android/server/AlarmManagerService$Alarm;->repeatInterval:J
 
-    .line 904
-    iput-wide v1, p0, Lcom/android/server/AlarmManagerService$Alarm;->when:J
-
-    .line 905
-    iput-wide v1, p0, Lcom/android/server/AlarmManagerService$Alarm;->repeatInterval:J
-
-    .line 906
+    .line 759
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/AlarmManagerService$Alarm;->operation:Landroid/app/PendingIntent;
 
-    .line 907
-    invoke-static {}, Landroid/os/Binder;->getCallingUid()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/android/server/AlarmManagerService$Alarm;->uid:I
-
-    .line 908
-    invoke-static {}, Landroid/os/Binder;->getCallingPid()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/android/server/AlarmManagerService$Alarm;->pid:I
-
-    .line 909
+    .line 760
     return-void
 .end method
 

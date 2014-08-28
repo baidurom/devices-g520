@@ -279,7 +279,7 @@
 
 .field public static final TYPE_TOAST:I = 0x7d5
 
-.field public static final TYPE_TOP_MOST:I = 0x7ed
+.field public static final TYPE_TOP_MOST:I = 0x7e9
 
 .field public static final TYPE_VOLUME_OVERLAY:I = 0x7e4
 

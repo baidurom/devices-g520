@@ -42,8 +42,6 @@
 
 .field static final TRANSACTION_setTimeZone:I = 0x5
 
-.field static final TRANSACTION_getPoweroffAlarm:I = 0x9
-
 
 # direct methods
 .method public constructor <init>()V
@@ -468,34 +466,6 @@
     const/4 v0, 0x0
 
     goto :goto_5
-    
-    :sswitch_9
-    const-string v0, "android.app.IAlarmManager"
-
-    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    .line 144
-    invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
-
-    move-result-wide v7
-
-    .line 145
-    .restart local v7       #_arg0:J
-    invoke-virtual {p0, v7, v8}, Landroid/app/IAlarmManager$Stub;->getPoweroffAlarm(J)[J
-
-    move-result-object v9
-
-    .line 146
-    .local v9, _result:[J
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    .line 147
-    invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeLongArray([J)V
-
-    move v0, v10
-
-    .line 148
-    goto/16 :goto_0
 
     .line 43
     nop
@@ -510,7 +480,6 @@
         0x6 -> :sswitch_6
         0x7 -> :sswitch_7
         0x8 -> :sswitch_8
-	0x9 -> :sswitch_9
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

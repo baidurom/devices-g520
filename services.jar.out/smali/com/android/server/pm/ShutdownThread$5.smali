@@ -1,54 +1,50 @@
-.class final Lcom/android/server/pm/ShutdownThread$5;
-.super Ljava/lang/Object;
+.class Lcom/android/server/pm/ShutdownThread$5;
+.super Landroid/content/BroadcastReceiver;
 .source "ShutdownThread.java"
-
-# interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/pm/ShutdownThread;->shutdownInner(Landroid/content/Context;Z)V
+    value = Lcom/android/server/pm/ShutdownThread;->running()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic val$context:Landroid/content/Context;
+.field final synthetic this$0:Lcom/android/server/pm/ShutdownThread;
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;)V
+.method constructor <init>(Lcom/android/server/pm/ShutdownThread;)V
     .locals 0
     .parameter
 
     .prologue
-    .line 247
-    iput-object p1, p0, Lcom/android/server/pm/ShutdownThread$5;->val$context:Landroid/content/Context;
+    .line 573
+    iput-object p1, p0, Lcom/android/server/pm/ShutdownThread$5;->this$0:Lcom/android/server/pm/ShutdownThread;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
-    .parameter "dialog"
-    .parameter "which"
+    .parameter "context"
+    .parameter "intent"
 
     .prologue
-    .line 249
-    iget-object v0, p0, Lcom/android/server/pm/ShutdownThread$5;->val$context:Landroid/content/Context;
+    .line 576
+    iget-object v0, p0, Lcom/android/server/pm/ShutdownThread$5;->this$0:Lcom/android/server/pm/ShutdownThread;
 
-    #calls: Lcom/android/server/pm/ShutdownThread;->beginShutdownSequence(Landroid/content/Context;)V
-    invoke-static {v0}, Lcom/android/server/pm/ShutdownThread;->access$000(Landroid/content/Context;)V
+    invoke-virtual {v0}, Lcom/android/server/pm/ShutdownThread;->actionDone()V
 
-    .line 250
+    .line 577
     return-void
 .end method

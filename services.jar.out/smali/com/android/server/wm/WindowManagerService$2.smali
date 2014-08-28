@@ -89,73 +89,7 @@
 
     #setter for: Lcom/android/server/wm/WindowManagerService;->mKeyguardDisabled:Z
     invoke-static {v0, v2}, Lcom/android/server/wm/WindowManagerService;->access$102(Lcom/android/server/wm/WindowManagerService;Z)Z
-    
-    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
-    
-    move-result-object v2
-    
-    const-string v0, "android.intent.action.ACTION_QUICKBOOT_SHUTDOWN"
-    
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-    
-    move-result v0
 
-    if-eqz v0, :cond_33
-    
-    iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$2;->this$0:Lcom/android/server/wm/WindowManagerService;
-
-    const/4 v2, 0x1
-
-    #setter for: Lcom/android/server/wm/WindowManagerService;->mNeedResetRotation:Z
-    invoke-static {v0, v2}, Lcom/android/server/wm/WindowManagerService;->access$303(Lcom/android/server/wm/WindowManagerService;Z)Z
-    
-    goto :goto_34
-    
-    :cond_33
-    const-string v0, "android.intent.action.SCREEN_OFF"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_34
-    
-    iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$2;->this$0:Lcom/android/server/wm/WindowManagerService;
-
-    #getter for: Lcom/android/server/wm/WindowManagerService;->mNeedResetRotation:Z
-    invoke-static {v0}, Lcom/android/server/wm/WindowManagerService;->access$304(Lcom/android/server/wm/WindowManagerService;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_34
-    
-    iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$2;->this$0:Lcom/android/server/wm/WindowManagerService;
-
-    const/4 v2, 0x0
-
-    iput v2, v0, Lcom/android/server/wm/WindowManagerService;->mRotation:I
-
-    .line 328
-    iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$2;->this$0:Lcom/android/server/wm/WindowManagerService;
-
-    iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mPolicy:Landroid/view/WindowManagerPolicy;
-
-    iget-object v2, p0, Lcom/android/server/wm/WindowManagerService$2;->this$0:Lcom/android/server/wm/WindowManagerService;
-
-    iget v2, v2, Lcom/android/server/wm/WindowManagerService;->mRotation:I
-
-    invoke-interface {v0, v2}, Landroid/view/WindowManagerPolicy;->setRotationLw(I)V
-
-    .line 329
-    iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$2;->this$0:Lcom/android/server/wm/WindowManagerService;
-
-    const/4 v2, 0x0
-
-    #setter for: Lcom/android/server/wm/WindowManagerService;->mNeedResetRotation:Z
-    invoke-static {v0, v2}, Lcom/android/server/wm/WindowManagerService;->access$303(Lcom/android/server/wm/WindowManagerService;Z)Z
-    
-    :cond_34
-    :goto_34
     .line 340
     monitor-exit v1
 

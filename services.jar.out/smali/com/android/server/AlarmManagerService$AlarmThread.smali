@@ -457,14 +457,19 @@
     .local v13, alarm:Lcom/android/server/AlarmManagerService$Alarm;
     move-object/from16 v0, p0
 
+    iget-object v2, v0, Lcom/android/server/AlarmManagerService$AlarmThread;->this$0:Lcom/android/server/AlarmManagerService;
+
+    move-object/from16 v0, p0
+
     iget-object v4, v0, Lcom/android/server/AlarmManagerService$AlarmThread;->this$0:Lcom/android/server/AlarmManagerService;
 
-    #calls: Lcom/android/server/AlarmManagerService;->handlerPoweroffAlarm(Lcom/android/server/AlarmManagerService$Alarm;J)Z
-    invoke-static {v4, v13, v5, v6}, Lcom/android/server/AlarmManagerService;->access$2101(Lcom/android/server/AlarmManagerService;Lcom/android/server/AlarmManagerService$Alarm;J)Z
-    
-    move-result v2
+    #getter for: Lcom/android/server/AlarmManagerService;->mPoweroffAlarmMap:Ljava/util/HashMap;
+    invoke-static {v4}, Lcom/android/server/AlarmManagerService;->access$1600(Lcom/android/server/AlarmManagerService;)Ljava/util/HashMap;
 
-    if-nez v2, :cond_7
+    move-result-object v4
+
+    #calls: Lcom/android/server/AlarmManagerService;->updatePoweroffAlarm(Lcom/android/server/AlarmManagerService$Alarm;Ljava/util/HashMap;)V
+    invoke-static {v2, v13, v4}, Lcom/android/server/AlarmManagerService;->access$1700(Lcom/android/server/AlarmManagerService;Lcom/android/server/AlarmManagerService$Alarm;Ljava/util/HashMap;)V
 
     .line 860
     move-object/from16 v0, p0
@@ -485,7 +490,7 @@
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/AlarmManagerService$AlarmThread;->this$0:Lcom/android/server/AlarmManagerService;
-    
+
     #getter for: Lcom/android/server/AlarmManagerService;->mDMEnable:Z
     invoke-static {v2}, Lcom/android/server/AlarmManagerService;->access$1900(Lcom/android/server/AlarmManagerService;)Z
 

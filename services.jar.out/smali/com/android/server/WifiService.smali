@@ -165,8 +165,6 @@
 
 .field private mWifiFwkExt:Lcom/mediatek/common/wifi/IWifiFwkExt;
 
-.field private mWifiOffForQb:Z
-
 .field private final mWifiStateMachine:Landroid/net/wifi/WifiStateMachine;
 
 .field private mWifiStateMachineChannel:Lcom/android/internal/util/AsyncChannel;
@@ -256,8 +254,6 @@
 
     iput-object v4, p0, Lcom/android/server/WifiService;->mClients:Ljava/util/List;
 
-    iput-boolean v10, p0, Lcom/android/server/WifiService;->mWifiOffForQb:Z
-    
     .line 374
     new-instance v4, Landroid/os/WorkSource;
 
@@ -3532,13 +3528,9 @@
     move-result-object v7
 
     invoke-static {v6, v7}, Lcom/mediatek/xlog/SXlog;->d(Ljava/lang/String;Ljava/lang/String;)I
-    
-    if-eqz v2, :cond_9
-    
-    iget-boolean v2, p0, Lcom/android/server/WifiService;->mWifiOffForQb:Z
 
     .line 1232
-    if-nez v2, :cond_9
+    if-eqz v2, :cond_9
 
     .line 1233
     if-eqz v3, :cond_8
@@ -6622,104 +6614,6 @@
     monitor-exit p0
 
     throw v2
-.end method
-
-.method public declared-synchronized setWifiEnabledForQb(Z)Z
-    .locals 3
-    .parameter "enable"
-
-    .prologue
-    const/4 v2, 0x1
-
-    .line 618
-    monitor-enter p0
-
-    :try_start_0
-    invoke-direct {p0}, Lcom/android/server/WifiService;->enforceChangePermission()V
-
-    .line 620
-    if-eqz p1, :cond_1
-
-    .line 621
-    invoke-direct {p0}, Lcom/android/server/WifiService;->reportStartWorkSource()V
-
-    .line 622
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/android/server/WifiService;->mWifiOffForQb:Z
-
-    .line 627
-    :goto_0
-    iget-object v0, p0, Lcom/android/server/WifiService;->mWifiStateMachine:Landroid/net/wifi/WifiStateMachine;
-
-    invoke-virtual {v0, p1}, Landroid/net/wifi/WifiStateMachine;->setWifiEnabled(Z)V
-
-    .line 629
-    if-eqz p1, :cond_2
-
-    .line 630
-    iget-boolean v0, p0, Lcom/android/server/WifiService;->mIsReceiverRegistered:Z
-
-    if-nez v0, :cond_0
-
-    .line 631
-    invoke-direct {p0}, Lcom/android/server/WifiService;->registerForBroadcasts()V
-
-    .line 632
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/android/server/WifiService;->mIsReceiverRegistered:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 639
-    :cond_0
-    :goto_1
-    monitor-exit p0
-
-    return v2
-
-    .line 624
-    :cond_1
-    const/4 v0, 0x1
-
-    :try_start_1
-    iput-boolean v0, p0, Lcom/android/server/WifiService;->mWifiOffForQb:Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_0
-
-    .line 618
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
-
-    .line 634
-    :cond_2
-    :try_start_2
-    iget-boolean v0, p0, Lcom/android/server/WifiService;->mIsReceiverRegistered:Z
-
-    if-eqz v0, :cond_0
-
-    .line 635
-    iget-object v0, p0, Lcom/android/server/WifiService;->mContext:Landroid/content/Context;
-
-    iget-object v1, p0, Lcom/android/server/WifiService;->mReceiver:Landroid/content/BroadcastReceiver;
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
-
-    .line 636
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/android/server/WifiService;->mIsReceiverRegistered:Z
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    goto :goto_1
 .end method
 
 .method public startApWps(Landroid/net/wifi/WpsInfo;)V

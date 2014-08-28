@@ -1,4 +1,4 @@
-.class final Lcom/android/server/pm/ShutdownThread$2;
+.class Lcom/android/server/pm/ShutdownThread$BaiduInjector$1PositiveClickListener;
 .super Ljava/lang/Object;
 .source "ShutdownThread.java"
 
@@ -8,12 +8,12 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/pm/ShutdownThread;->shutdownInner(Landroid/content/Context;Z)V
+    value = Lcom/android/server/pm/ShutdownThread$BaiduInjector;->createRebootDialogBaidu(Landroid/content/Context;Landroid/app/AlertDialog;)Landroid/app/AlertDialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
-    name = null
+    accessFlags = 0x0
+    name = "PositiveClickListener"
 .end annotation
 
 
@@ -25,12 +25,17 @@
 .method constructor <init>(Landroid/content/Context;)V
     .locals 0
     .parameter
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 
     .prologue
-    .line 220
-    iput-object p1, p0, Lcom/android/server/pm/ShutdownThread$2;->val$context:Landroid/content/Context;
+    .line 225
+    iput-object p1, p0, Lcom/android/server/pm/ShutdownThread$BaiduInjector$1PositiveClickListener;->val$context:Landroid/content/Context;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -43,25 +48,12 @@
     .parameter "which"
 
     .prologue
-    .line 222
-    iget-object v0, p0, Lcom/android/server/pm/ShutdownThread$2;->val$context:Landroid/content/Context;
+    .line 227
+    iget-object v0, p0, Lcom/android/server/pm/ShutdownThread$BaiduInjector$1PositiveClickListener;->val$context:Landroid/content/Context;
 
     #calls: Lcom/android/server/pm/ShutdownThread;->beginShutdownSequence(Landroid/content/Context;)V
     invoke-static {v0}, Lcom/android/server/pm/ShutdownThread;->access$300(Landroid/content/Context;)V
 
-    .line 223
-    invoke-static {}, Lcom/android/server/pm/ShutdownThread;->access$200()Landroid/app/AlertDialog;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 224
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Lcom/android/server/pm/ShutdownThread;->access$202(Landroid/app/AlertDialog;)Landroid/app/AlertDialog;
-
-    .line 226
-    :cond_0
+    .line 228
     return-void
 .end method

@@ -68,8 +68,6 @@
 
 .field static final TRANSACTION_setStayOnSetting:I = 0xb
 
-.field static final TRANSACTION_shutdown:I = 0x19
-
 .field static final TRANSACTION_updateWakeLockWorkSource:I = 0x2
 
 .field static final TRANSACTION_userActivity:I = 0x6
@@ -930,58 +928,7 @@
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
-    
-    .end local v0           #_arg0:I
-    :sswitch_19
-    const-string v9, "android.os.IPowerManager"
 
-    invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    .line 217
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result v9
-
-    if-eqz v9, :cond_97
-
-    move v0, v7
-
-    .line 219
-    .local v0, _arg0:Z
-    :goto_97
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result v9
-
-    if-eqz v9, :cond_98
-
-    move v2, v7
-
-    .line 220
-    .local v2, _arg1:Z
-    :goto_98
-    invoke-virtual {p0, v0, v2}, Landroid/os/IPowerManager$Stub;->shutdown(ZZ)V
-
-    .line 221
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    goto/16 :goto_0
-
-    .end local v0           #_arg0:Z
-    .end local v2           #_arg1:Z
-    :cond_97
-    move v0, v8
-
-    .line 217
-    goto :goto_97
-
-    .restart local v0       #_arg0:Z
-    :cond_98
-    move v2, v8
-
-    .line 219
-    goto :goto_98
-    
     .line 39
     :sswitch_data_0
     .sparse-switch
@@ -1009,7 +956,6 @@
         0x16 -> :sswitch_16
         0x17 -> :sswitch_17
         0x18 -> :sswitch_18
-	0x19 -> :sswitch_19
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

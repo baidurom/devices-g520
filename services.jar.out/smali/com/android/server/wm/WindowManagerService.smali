@@ -12,7 +12,6 @@
     value = {
         Lcom/android/server/wm/WindowManagerService$OnHardKeyboardStatusChangeListener;,
         Lcom/android/server/wm/WindowManagerService$H;,
-        Lcom/android/server/wm/WindowManagerService$QuickbootBroadcastReceiver;,
         Lcom/android/server/wm/WindowManagerService$PolicyThread;,
         Lcom/android/server/wm/WindowManagerService$WMThread;,
         Lcom/android/server/wm/WindowManagerService$WindowChangeListener;,
@@ -479,8 +478,6 @@
 
 .field mLowerWallpaperTarget:Lcom/android/server/wm/WindowState;
 
-.field private mNeedResetRotation:Z
-
 .field mNextAppTransition:I
 
 .field mNextAppTransitionCallback:Landroid/os/IRemoteCallback;
@@ -538,8 +535,6 @@
 .field final mPolicy:Landroid/view/WindowManagerPolicy;
 
 .field mPowerManager:Lcom/android/server/PowerManagerService;
-
-.field private mQbReceiver:Landroid/content/BroadcastReceiver;
 
 .field final mRealDisplayMetrics:Landroid/util/DisplayMetrics;
 
@@ -870,10 +865,6 @@
     iput-object v3, p0, Lcom/android/server/wm/WindowManagerService;->mKeyguardTokenWatcher:Landroid/os/TokenWatcher;
 
     .line 331
-    const/4 v3, 0x0
-    
-    iput-boolean v3, p0, Lcom/android/server/wm/WindowManagerService;->mNeedResetRotation:Z
-    
     new-instance v3, Lcom/android/server/wm/WindowManagerService$2;
 
     invoke-direct {v3, p0}, Lcom/android/server/wm/WindowManagerService$2;-><init>(Lcom/android/server/wm/WindowManagerService;)V
@@ -1442,14 +1433,6 @@
     invoke-direct {v3}, Landroid/content/res/Configuration;-><init>()V
 
     iput-object v3, p0, Lcom/android/server/wm/WindowManagerService;->mTempConfiguration:Landroid/content/res/Configuration;
-    
-    new-instance v3, Lcom/android/server/wm/WindowManagerService$QuickbootBroadcastReceiver;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v3, p0, v4}, Lcom/android/server/wm/WindowManagerService$QuickbootBroadcastReceiver;-><init>(Lcom/android/server/wm/WindowManagerService;Lcom/android/server/wm/WindowManagerService$1;)V
-
-    iput-object v3, p0, Lcom/android/server/wm/WindowManagerService;->mQbReceiver:Landroid/content/BroadcastReceiver;
 
     .line 842
     new-instance v3, Ljava/util/ArrayList;
@@ -1655,8 +1638,6 @@
     invoke-virtual {v3, v4, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 998
-    invoke-direct {p0}, Lcom/android/server/wm/WindowManagerService;->registerQbReceiver()V
-    
     const v3, 0x2000000a
 
     const-string v4, "KEEP_SCREEN_ON_FLAG"
@@ -1911,29 +1892,6 @@
     iput-boolean p1, p0, Lcom/android/server/wm/WindowManagerService;->mIsAlarmBooting:Z
 
     return p1
-.end method
-
-.method static synthetic access$303(Lcom/android/server/wm/WindowManagerService;Z)Z
-    .locals 0
-    .parameter "x0"
-    .parameter "x1"
-
-    .prologue
-    .line 156
-    iput-boolean p1, p0, Lcom/android/server/wm/WindowManagerService;->mNeedResetRotation:Z
-
-    return p1
-.end method
-
-.method static synthetic access$304(Lcom/android/server/wm/WindowManagerService;)Z
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 156
-    iget-boolean v0, p0, Lcom/android/server/wm/WindowManagerService;->mNeedResetRotation:Z
-
-    return v0
 .end method
 
 .method static synthetic access$600(Lcom/android/server/wm/WindowManagerService;)V
@@ -14821,37 +14779,6 @@
 
     .restart local v6       #screenLayoutLong:Z
     goto :goto_0
-.end method
-
-.method private registerQbReceiver()V
-    .locals 3
-
-    .prologue
-    .line 960
-    new-instance v0, Landroid/content/IntentFilter;
-
-    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
-
-    .line 961
-    .local v0, filter:Landroid/content/IntentFilter;
-    const-string v1, "android.intent.action.ACTION_QUICKBOOT_SHUTDOWN"
-
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    .line 962
-    const-string v1, "android.intent.action.SCREEN_OFF"
-
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    .line 963
-    iget-object v1, p0, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
-
-    iget-object v2, p0, Lcom/android/server/wm/WindowManagerService;->mQbReceiver:Landroid/content/BroadcastReceiver;
-
-    invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
-
-    .line 964
-    return-void
 .end method
 
 .method private removeAppTokensLocked(Ljava/util/List;)V

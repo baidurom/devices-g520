@@ -9,8 +9,7 @@
         Lcom/android/server/accessibility/AccessibilityManagerService$SecurityPolicy;,
         Lcom/android/server/accessibility/AccessibilityManagerService$Service;,
         Lcom/android/server/accessibility/AccessibilityManagerService$MainHanler;,
-        Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityConnectionWrapper;,
-        Lcom/android/server/accessibility/AccessibilityManagerService$QuickbootBroadcastReceiver;
+        Lcom/android/server/accessibility/AccessibilityManagerService$AccessibilityConnectionWrapper;
     }
 .end annotation
 
@@ -332,8 +331,6 @@
 
     .line 195
     invoke-direct {p0, p1}, Lcom/android/server/accessibility/AccessibilityManagerService;->registerIPOReceiver(Landroid/content/Context;)V
-    
-    invoke-direct {p0}, Lcom/android/server/accessibility/AccessibilityManagerService;->registerQbReceiver()V
 
     .line 198
     return-void
@@ -634,18 +631,6 @@
     iget-boolean v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService;->mIsAccessibilityEnabled:Z
 
     return v0
-.end method
-
-.method static synthetic access$3601(Lcom/android/server/accessibility/AccessibilityManagerService;Z)Z
-    .locals 0
-    .parameter "x0"
-    .parameter "x1"
-
-    .prologue
-    .line 99
-    iput-boolean p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService;->mIsAccessibilityEnabled:Z
-
-    return p1
 .end method
 
 .method static synthetic access$3700(Lcom/android/server/accessibility/AccessibilityManagerService;)V
@@ -1650,41 +1635,6 @@
     invoke-virtual {v3, v2, v0, v5, v4}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
     .line 296
-    return-void
-.end method
-
-.method private registerQbReceiver()V
-    .locals 4
-
-    .prologue
-    .line 197
-    new-instance v0, Landroid/content/IntentFilter;
-
-    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
-
-    .line 198
-    .local v0, filter:Landroid/content/IntentFilter;
-    const-string v1, "android.intent.action.ACTION_QUICKBOOT_BOOT"
-
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    .line 199
-    const-string v1, "android.intent.action.ACTION_QUICKBOOT_SHUTDOWN"
-
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    .line 200
-    iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService;->mContext:Landroid/content/Context;
-
-    new-instance v2, Lcom/android/server/accessibility/AccessibilityManagerService$QuickbootBroadcastReceiver;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, p0, v3}, Lcom/android/server/accessibility/AccessibilityManagerService$QuickbootBroadcastReceiver;-><init>(Lcom/android/server/accessibility/AccessibilityManagerService;Lcom/android/server/accessibility/AccessibilityManagerService$1;)V
-
-    invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
-
-    .line 201
     return-void
 .end method
 

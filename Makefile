@@ -22,6 +22,18 @@ BAIDU_SERVER_BUILD_ENABLE := true
 DALVIK_VM_BUILD := 27
 
 ##############################################################################
+# Default DENSITY setting is hdpi
+# this depends on the device's resolution
+#-----------------------------------------------------------------------------
+DENSITY := hdpi
+
+##############################################################################
+# Default RESOLUTION setting is nothing
+# this used to config the bootanimation
+#-----------------------------------------------------------------------------
+RESOLUTION := 480x854
+
+##############################################################################
 # customize weather use prebuilt image or pack from BOOT/RECOVERY directory
 # Support Values:
 # vendor_modify_images := boot recovery

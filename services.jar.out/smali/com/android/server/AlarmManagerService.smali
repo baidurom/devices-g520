@@ -2368,7 +2368,7 @@
 
     move-object/from16 v1, p0
 
-    invoke-direct/range {v1 .. v7}, Lcom/android/server/AlarmManagerService;->set(IIJJ)V
+    invoke-direct/range {v1 .. v7}, Lcom/android/server/AlarmManagerService;->setBaidu(IIJJ)V
 
     .line 1355
     :goto_2
@@ -2493,7 +2493,7 @@
 
     move-object/from16 v1, p0
 
-    invoke-direct/range {v1 .. v7}, Lcom/android/server/AlarmManagerService;->set(IIJJ)V
+    invoke-direct/range {v1 .. v7}, Lcom/android/server/AlarmManagerService;->setBaidu(IIJJ)V
 
     goto :goto_2
 
@@ -2568,7 +2568,7 @@
 
     move-object/from16 v1, p0
 
-    invoke-direct/range {v1 .. v7}, Lcom/android/server/AlarmManagerService;->set(IIJJ)V
+    invoke-direct/range {v1 .. v7}, Lcom/android/server/AlarmManagerService;->setBaidu(IIJJ)V
 
     goto/16 :goto_2
 
@@ -3543,7 +3543,7 @@
 
     move-wide v5, v3
 
-    invoke-direct/range {v0 .. v6}, Lcom/android/server/AlarmManagerService;->set(IIJJ)V
+    invoke-direct/range {v0 .. v6}, Lcom/android/server/AlarmManagerService;->setBaidu(IIJJ)V
 
     .line 1403
     :cond_0
@@ -3591,7 +3591,7 @@
 
     move-wide v5, v3
 
-    invoke-direct/range {v0 .. v6}, Lcom/android/server/AlarmManagerService;->set(IIJJ)V
+    invoke-direct/range {v0 .. v6}, Lcom/android/server/AlarmManagerService;->setBaidu(IIJJ)V
 
     goto :goto_0
 
@@ -3612,7 +3612,7 @@
 
     move-wide v5, v3
 
-    invoke-direct/range {v0 .. v6}, Lcom/android/server/AlarmManagerService;->set(IIJJ)V
+    invoke-direct/range {v0 .. v6}, Lcom/android/server/AlarmManagerService;->setBaidu(IIJJ)V
 
     goto :goto_0
 

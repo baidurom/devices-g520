@@ -1,0 +1,37 @@
+.method public static hasMultipleConnections(Lcom/android/internal/telephony/Call;)Z
+    .locals 3
+    .parameter "call"
+
+    .prologue
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    .line 3980
+    if-nez p0, :cond_0
+
+    .line 3984
+    :goto_0
+    return v1
+
+    :cond_0
+    invoke-virtual {p0}, Lcom/android/internal/telephony/Call;->getConnections()Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    if-le v2, v0, :cond_1
+
+    :goto_1
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_1
+    move v0, v1
+
+    goto :goto_1
+.end method

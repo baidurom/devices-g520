@@ -2822,10 +2822,8 @@
     const/16 v2, 0xb84
 
     if-ne v1, v2, :cond_2
-    
-    move-object/from16 v0, p1
-    
-    invoke-static {v0}, Lcom/android/internal/telephony/SMSDispatcher$BaiduInjector;->setMsgAddress(Lcom/android/internal/telephony/SmsMessageBase;)V
+
+    invoke-static/range {p0 .. p1}, Lcom/android/internal/telephony/SMSDispatcher$BaiduInjector;->setMsgAddress(Lcom/android/internal/telephony/SMSDispatcher;Lcom/android/internal/telephony/SmsMessageBase;)V
 
     .line 995
     const-string v1, "SMS"

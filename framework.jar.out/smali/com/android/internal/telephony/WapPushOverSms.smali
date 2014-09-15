@@ -745,11 +745,11 @@
 
     .line 285
     .local v17, permission:Ljava/lang/String;
-    invoke-static {v14}, Lcom/baidu/internal/telephony/SMSPlugin;->getMmsNotiWapPushAddress([B)Ljava/lang/String;
+    invoke-static {v14}, Lcom/android/internal/telephony/SMSPlugin;->getMmsNotiWapPushAddress([B)Ljava/lang/String;
 
     move-result-object v24
 
-    sput-object v24, Lcom/baidu/internal/telephony/SMSPlugin;->msgAddress:Ljava/lang/String;
+    #sput-object v24, Lcom/android/internal/telephony/SMSPlugin;->msgAddress:Ljava/lang/String;
 
     .line 290
     :goto_4
@@ -778,7 +778,7 @@
 
     move-object/from16 v24, v0
 
-    sget-object v25, Lcom/baidu/internal/telephony/SMSPlugin;->msgAddress:Ljava/lang/String;
+    sget-object v25, Lcom/android/internal/telephony/SMSPlugin;->msgAddress:Ljava/lang/String;
 
     move-object/from16 v0, v24
 
@@ -829,7 +829,7 @@
 
     move/from16 v2, v26
 
-    invoke-static {v0, v15, v14, v1, v2}, Lcom/baidu/internal/telephony/SMSPlugin;->dispatchDisturbWapPdu(Landroid/content/Context;Ljava/lang/String;[BII)V
+    invoke-static {v0, v15, v14, v1, v2}, Lcom/android/internal/telephony/SMSPlugin;->dispatchDisturbWapPdu(Landroid/content/Context;Ljava/lang/String;[BII)V
 
     .line 295
     const/16 v24, 0x1
@@ -941,7 +941,7 @@
     .line 305
     const-string v24, "address"
 
-    sget-object v25, Lcom/baidu/internal/telephony/SMSPlugin;->msgAddress:Ljava/lang/String;
+    sget-object v25, Lcom/android/internal/telephony/SMSPlugin;->msgAddress:Ljava/lang/String;
 
     move-object/from16 v0, v24
 

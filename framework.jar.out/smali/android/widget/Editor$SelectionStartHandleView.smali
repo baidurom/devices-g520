@@ -20,24 +20,19 @@
 
 # direct methods
 .method public constructor <init>(Landroid/widget/Editor;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
-    .locals 1
+    .locals 0
     .parameter
     .parameter "drawableLtr"
     .parameter "drawableRtl"
 
     .prologue
-    .line 3669
+    .line 3934
     iput-object p1, p0, Landroid/widget/Editor$SelectionStartHandleView;->this$0:Landroid/widget/Editor;
 
-    .line 3670
+    .line 3935
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/Editor$HandleView;-><init>(Landroid/widget/Editor;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 3671
-    const/4 v0, 0x0
-
-    iput v0, p0, Landroid/widget/Editor$SelectionStartHandleView;->mCursorType:I
-
-    .line 3672
+    .line 3936
     return-void
 .end method
 
@@ -47,7 +42,7 @@
     .locals 1
 
     .prologue
-    .line 3801
+    .line 3993
     iget-object v0, p0, Landroid/widget/Editor$SelectionStartHandleView;->mActionPopupWindow:Landroid/widget/Editor$ActionPopupWindow;
 
     return-object v0
@@ -57,11 +52,11 @@
     .locals 1
 
     .prologue
-    .line 3748
+    .line 3971
     iget-object v0, p0, Landroid/widget/Editor$SelectionStartHandleView;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v0}, Landroid/widget/Editor;->access$700(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v0}, Landroid/widget/Editor;->access$000(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v0
 
@@ -78,17 +73,17 @@
     .parameter "isRtlRun"
 
     .prologue
-    .line 3676
+    .line 3940
     if-eqz p2, :cond_0
 
-    .line 3677
+    .line 3941
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v0
 
     div-int/lit8 v0, v0, 0x4
 
-    .line 3679
+    .line 3943
     :goto_0
     return v0
 
@@ -109,12 +104,12 @@
     .parameter "ev"
 
     .prologue
-    .line 3686
+    .line 3950
     invoke-super {p0, p1}, Landroid/widget/Editor$HandleView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
-    .line 3688
+    .line 3952
     .local v0, result:Z
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
@@ -122,17 +117,17 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 3701
+    .line 3965
     :goto_0
     return v0
 
-    .line 3690
+    .line 3954
     :pswitch_0
-    invoke-virtual {p0}, Landroid/widget/Editor$SelectionStartHandleView;->dismissActionPopupWindow()V
+    invoke-virtual {p0}, Landroid/widget/Editor$SelectionStartHandleView;->hideActionPopupWindow()V
 
     goto :goto_0
 
-    .line 3693
+    .line 3957
     :pswitch_1
     iget-object v1, p0, Landroid/widget/Editor$SelectionStartHandleView;->mActionPopupWindow:Landroid/widget/Editor$ActionPopupWindow;
 
@@ -140,11 +135,11 @@
 
     iget-object v1, p0, Landroid/widget/Editor$SelectionStartHandleView;->mActionPopupWindow:Landroid/widget/Editor$ActionPopupWindow;
 
-    iget v2, p0, Landroid/widget/Editor$SelectionStartHandleView;->mCursorType:I
+    const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/widget/Editor$ActionPopupWindow;->updatePositionFlag(I)V
 
-    .line 3694
+    .line 3958
     :cond_0
     const/16 v1, 0xc8
 
@@ -152,9 +147,7 @@
 
     goto :goto_0
 
-    .line 3688
-    nop
-
+    .line 3952
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -170,11 +163,11 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 3791
+    .line 3983
     iget-object v2, p0, Landroid/widget/Editor$SelectionStartHandleView;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v2}, Landroid/widget/Editor;->access$700(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v2}, Landroid/widget/Editor;->access$000(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v2
 
@@ -182,12 +175,12 @@
 
     move-result v0
 
-    .line 3794
+    .line 3986
     .local v0, offset:I
     iget-object v2, p0, Landroid/widget/Editor$SelectionStartHandleView;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v2}, Landroid/widget/Editor;->access$700(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v2}, Landroid/widget/Editor;->access$000(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v2
 
@@ -195,7 +188,7 @@
 
     move-result v1
 
-    .line 3795
+    .line 3987
     .local v1, selectionEnd:I
     if-lt v0, v1, :cond_0
 
@@ -205,11 +198,11 @@
 
     move-result v0
 
-    .line 3797
+    .line 3989
     :cond_0
-    invoke-virtual {p0, v0, v3}, Landroid/widget/Editor$SelectionStartHandleView;->positionAtCursorOffset(IZ)Z
+    invoke-virtual {p0, v0, v3}, Landroid/widget/Editor$SelectionStartHandleView;->positionAtCursorOffset(IZ)V
 
-    .line 3798
+    .line 3990
     return-void
 .end method
 
@@ -218,11 +211,11 @@
     .parameter "offset"
 
     .prologue
-    .line 3753
+    .line 3976
     iget-object v0, p0, Landroid/widget/Editor$SelectionStartHandleView;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v0}, Landroid/widget/Editor;->access$700(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v0}, Landroid/widget/Editor;->access$000(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v0
 
@@ -235,7 +228,7 @@
     iget-object v1, p0, Landroid/widget/Editor$SelectionStartHandleView;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v1}, Landroid/widget/Editor;->access$700(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v1}, Landroid/widget/Editor;->access$000(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v1
 
@@ -245,9 +238,9 @@
 
     invoke-static {v0, p1, v1}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;II)V
 
-    .line 3755
+    .line 3978
     invoke-virtual {p0}, Landroid/widget/Editor$SelectionStartHandleView;->updateDrawable()V
 
-    .line 3756
+    .line 3979
     return-void
 .end method

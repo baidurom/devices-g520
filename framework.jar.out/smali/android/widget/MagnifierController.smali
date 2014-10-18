@@ -90,7 +90,7 @@
 
     const/4 v2, 0x0
 
-    const v3, 0x10102c8
+    const v3, #android:attr@textSelectHandleWindowStyle#t
 
     invoke-direct {v0, v1, v2, v3}, Landroid/widget/PopupWindow;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -141,24 +141,24 @@
     .parameter "max"
 
     .prologue
-    .line 241
+    .line 242
     if-gt p1, p2, :cond_1
 
-    .line 242
+    .line 243
     add-int/lit8 p1, p2, 0x1
 
-    .line 246
+    .line 247
     .end local p1
     :cond_0
     :goto_0
     return p1
 
-    .line 243
+    .line 244
     .restart local p1
     :cond_1
     if-lt p1, p3, :cond_0
 
-    .line 244
+    .line 245
     add-int/lit8 p1, p3, -0x1
 
     goto :goto_0
@@ -169,14 +169,14 @@
     .parameter "r"
 
     .prologue
-    .line 220
+    .line 221
     iget-object v2, p0, Landroid/widget/MagnifierController;->mParent:Landroid/widget/TextView;
 
     invoke-virtual {v2}, Landroid/widget/TextView;->viewportToContentHorizontalOffset()I
 
     move-result v0
 
-    .line 221
+    .line 222
     .local v0, horizontalOffset:I
     iget v2, p1, Landroid/graphics/Rect;->left:I
 
@@ -184,21 +184,21 @@
 
     iput v2, p1, Landroid/graphics/Rect;->left:I
 
-    .line 222
+    .line 223
     iget v2, p1, Landroid/graphics/Rect;->right:I
 
     add-int/2addr v2, v0
 
     iput v2, p1, Landroid/graphics/Rect;->right:I
 
-    .line 224
+    .line 225
     iget-object v2, p0, Landroid/widget/MagnifierController;->mParent:Landroid/widget/TextView;
 
     invoke-virtual {v2}, Landroid/widget/TextView;->viewportToContentVerticalOffset()I
 
     move-result v1
 
-    .line 225
+    .line 226
     .local v1, verticalOffset:I
     iget v2, p1, Landroid/graphics/Rect;->top:I
 
@@ -206,14 +206,14 @@
 
     iput v2, p1, Landroid/graphics/Rect;->top:I
 
-    .line 226
+    .line 227
     iget v2, p1, Landroid/graphics/Rect;->bottom:I
 
     add-int/2addr v2, v1
 
     iput v2, p1, Landroid/graphics/Rect;->bottom:I
 
-    .line 227
+    .line 228
     return-void
 .end method
 
@@ -221,21 +221,21 @@
     .locals 3
 
     .prologue
-    .line 231
+    .line 232
     const-string v0, "MagnifierController"
 
     const-string v1, "==============================="
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 232
+    .line 233
     const-string v0, "MagnifierController"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "mBounds.left = "
+    const-string/jumbo v2, "mBounds.left = "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -255,14 +255,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 233
+    .line 234
     const-string v0, "MagnifierController"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "mBounds.right = "
+    const-string/jumbo v2, "mBounds.right = "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -282,14 +282,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 234
+    .line 235
     const-string v0, "MagnifierController"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "mBounds.top = "
+    const-string/jumbo v2, "mBounds.top = "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -309,14 +309,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 235
+    .line 236
     const-string v0, "MagnifierController"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "mBounds.bottom = "
+    const-string/jumbo v2, "mBounds.bottom = "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -336,14 +336,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 236
+    .line 237
     const-string v0, "MagnifierController"
 
     const-string v1, "==============================="
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 238
+    .line 239
     return-void
 .end method
 
@@ -439,19 +439,20 @@
 
     invoke-virtual {v6, p3}, Landroid/text/Layout;->getLineTop(I)I
 
-    move-result v6
-
-    iget v7, v1, Landroid/util/DisplayMetrics;->density:F
-
-    float-to-int v7, v7
-
-    mul-int/lit8 v7, v7, 0x28
-
-    sub-int v4, v6, v7
+    move-result v4
 
     .line 184
     .local v4, lineTop:I
     :goto_0
+    iget v6, v1, Landroid/util/DisplayMetrics;->density:F
+
+    float-to-int v6, v6
+
+    mul-int/lit8 v6, v6, 0x14
+
+    sub-int/2addr v4, v6
+
+    .line 185
     iget-object v6, p0, Landroid/widget/MagnifierController;->mParent:Landroid/widget/TextView;
 
     invoke-virtual {v6}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
@@ -469,7 +470,7 @@
 
     move-result v3
 
-    .line 185
+    .line 186
     .local v3, lineBottom:I
     iget-object v6, p0, Landroid/widget/MagnifierController;->mParent:Landroid/widget/TextView;
 
@@ -499,7 +500,7 @@
 
     if-eqz v6, :cond_6
 
-    .line 186
+    .line 187
     :cond_0
     iget v6, v1, Landroid/util/DisplayMetrics;->density:F
 
@@ -509,7 +510,7 @@
 
     float-to-int v5, v6
 
-    .line 187
+    .line 188
     .local v5, offsetToBaseLine:I
     iget-object v6, p0, Landroid/widget/MagnifierController;->mParent:Landroid/widget/TextView;
 
@@ -529,18 +530,18 @@
 
     add-int v3, v6, v5
 
-    .line 192
+    .line 193
     .end local v5           #offsetToBaseLine:I
     :goto_3
     new-array v0, v8, [I
 
-    .line 193
+    .line 194
     .local v0, coords:[I
     iget-object v6, p0, Landroid/widget/MagnifierController;->mParent:Landroid/widget/TextView;
 
     invoke-virtual {v6, v0}, Landroid/widget/TextView;->getLocationInWindow([I)V
 
-    .line 195
+    .line 196
     iget-object v6, p0, Landroid/widget/MagnifierController;->mBounds:Landroid/graphics/Rect;
 
     iget-object v7, p0, Landroid/widget/MagnifierController;->mParent:Landroid/widget/TextView;
@@ -565,7 +566,7 @@
 
     iput v7, v6, Landroid/graphics/Rect;->left:I
 
-    .line 196
+    .line 197
     iget-object v7, p0, Landroid/widget/MagnifierController;->mBounds:Landroid/graphics/Rect;
 
     if-eqz p1, :cond_8
@@ -577,7 +578,7 @@
     :goto_4
     iput v6, v7, Landroid/graphics/Rect;->top:I
 
-    .line 198
+    .line 199
     iget-object v6, p0, Landroid/widget/MagnifierController;->mBounds:Landroid/graphics/Rect;
 
     iget-object v7, p0, Landroid/widget/MagnifierController;->mBounds:Landroid/graphics/Rect;
@@ -590,7 +591,7 @@
 
     iput v7, v6, Landroid/graphics/Rect;->right:I
 
-    .line 199
+    .line 200
     iget-object v6, p0, Landroid/widget/MagnifierController;->mBounds:Landroid/graphics/Rect;
 
     iget-object v7, p0, Landroid/widget/MagnifierController;->mBounds:Landroid/graphics/Rect;
@@ -603,12 +604,12 @@
 
     iput v7, v6, Landroid/graphics/Rect;->bottom:I
 
-    .line 201
+    .line 202
     iget-object v6, p0, Landroid/widget/MagnifierController;->mBounds:Landroid/graphics/Rect;
 
     invoke-direct {p0, v6}, Landroid/widget/MagnifierController;->convertFromViewportToContentCoordinates(Landroid/graphics/Rect;)V
 
-    .line 203
+    .line 204
     iget-object v6, p0, Landroid/widget/MagnifierController;->mBounds:Landroid/graphics/Rect;
 
     iget v7, v6, Landroid/graphics/Rect;->left:I
@@ -619,7 +620,7 @@
 
     iput v7, v6, Landroid/graphics/Rect;->left:I
 
-    .line 204
+    .line 205
     iget-object v6, p0, Landroid/widget/MagnifierController;->mBounds:Landroid/graphics/Rect;
 
     iget v7, v6, Landroid/graphics/Rect;->top:I
@@ -632,7 +633,7 @@
 
     iput v7, v6, Landroid/graphics/Rect;->top:I
 
-    .line 206
+    .line 207
     iget-object v6, p0, Landroid/widget/MagnifierController;->mBounds:Landroid/graphics/Rect;
 
     iget v6, v6, Landroid/graphics/Rect;->left:I
@@ -647,7 +648,7 @@
 
     if-ge v6, v7, :cond_1
 
-    .line 207
+    .line 208
     const-string v6, "MagnifierController"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -674,7 +675,7 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 208
+    .line 209
     iget-object v6, p0, Landroid/widget/MagnifierController;->mBounds:Landroid/graphics/Rect;
 
     aget v7, v0, v10
@@ -687,7 +688,7 @@
 
     iput v7, v6, Landroid/graphics/Rect;->left:I
 
-    .line 209
+    .line 210
     iget-object v6, p0, Landroid/widget/MagnifierController;->mBounds:Landroid/graphics/Rect;
 
     iget-object v7, p0, Landroid/widget/MagnifierController;->mBounds:Landroid/graphics/Rect;
@@ -700,7 +701,7 @@
 
     iput v7, v6, Landroid/graphics/Rect;->right:I
 
-    .line 212
+    .line 213
     :cond_1
     iget-object v6, p0, Landroid/widget/MagnifierController;->mBounds:Landroid/graphics/Rect;
 
@@ -732,7 +733,7 @@
 
     if-le v6, v7, :cond_2
 
-    .line 213
+    .line 214
     const-string v6, "MagnifierController"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -759,7 +760,7 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 214
+    .line 215
     iget-object v6, p0, Landroid/widget/MagnifierController;->mBounds:Landroid/graphics/Rect;
 
     aget v7, v0, v10
@@ -788,7 +789,7 @@
 
     iput v7, v6, Landroid/graphics/Rect;->left:I
 
-    .line 215
+    .line 216
     iget-object v6, p0, Landroid/widget/MagnifierController;->mBounds:Landroid/graphics/Rect;
 
     iget-object v7, p0, Landroid/widget/MagnifierController;->mBounds:Landroid/graphics/Rect;
@@ -801,7 +802,7 @@
 
     iput v7, v6, Landroid/graphics/Rect;->right:I
 
-    .line 217
+    .line 218
     :cond_2
     return-void
 
@@ -827,7 +828,7 @@
     :cond_4
     move v6, p4
 
-    .line 184
+    .line 185
     goto/16 :goto_1
 
     .restart local v3       #lineBottom:I
@@ -835,10 +836,10 @@
     :cond_5
     move p3, p4
 
-    .line 187
+    .line 188
     goto/16 :goto_2
 
-    .line 189
+    .line 190
     .end local v5           #offsetToBaseLine:I
     :cond_6
     iget-object v6, p0, Landroid/widget/MagnifierController;->mParent:Landroid/widget/TextView;
@@ -865,7 +866,7 @@
 
     goto :goto_5
 
-    .line 196
+    .line 197
     .end local p3
     .restart local v0       #coords:[I
     :cond_8

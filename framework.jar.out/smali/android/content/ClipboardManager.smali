@@ -101,6 +101,111 @@
     return-object v0
 .end method
 
+.method private addExtra(Landroid/content/ClipData;)V
+    .locals 8
+    .parameter "clip"
+
+    .prologue
+    const/4 v5, 0x1
+
+    const/4 v6, 0x0
+
+    .line 115
+    invoke-virtual {p0}, Landroid/content/ClipboardManager;->getPrimaryClip()Landroid/content/ClipData;
+
+    move-result-object v1
+
+    .line 116
+    .local v1, currClip:Landroid/content/ClipData;
+    if-nez v1, :cond_1
+
+    .line 128
+    :cond_0
+    return-void
+
+    .line 120
+    :cond_1
+    invoke-virtual {v1, v6}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Landroid/content/ClipData$Item;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v7
+
+    if-eqz v7, :cond_2
+
+    move v3, v5
+
+    .line 121
+    .local v3, isCurrText:Z
+    :goto_0
+    invoke-virtual {p1, v6}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Landroid/content/ClipData$Item;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v7
+
+    if-eqz v7, :cond_3
+
+    move v4, v5
+
+    .line 122
+    .local v4, isNewText:Z
+    :goto_1
+    if-eqz v3, :cond_0
+
+    if-eqz v4, :cond_0
+
+    .line 123
+    invoke-virtual {v1}, Landroid/content/ClipData;->getItemCount()I
+
+    move-result v0
+
+    .line 124
+    .local v0, N:I
+    const/4 v2, 0x0
+
+    .local v2, i:I
+    :goto_2
+    if-ge v2, v0, :cond_0
+
+    const/4 v5, 0x2
+
+    if-ge v2, v5, :cond_0
+
+    .line 125
+    invoke-virtual {v1, v2}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
+
+    move-result-object v5
+
+    invoke-virtual {p1, v5}, Landroid/content/ClipData;->addItem(Landroid/content/ClipData$Item;)V
+
+    .line 124
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_2
+
+    .end local v0           #N:I
+    .end local v2           #i:I
+    .end local v3           #isCurrText:Z
+    .end local v4           #isNewText:Z
+    :cond_2
+    move v3, v6
+
+    .line 120
+    goto :goto_0
+
+    .restart local v3       #isCurrText:Z
+    :cond_3
+    move v4, v6
+
+    .line 121
+    goto :goto_1
+.end method
+
 .method private static getService()Landroid/content/IClipboard;
     .locals 3
 
@@ -550,7 +655,10 @@
     .parameter "clip"
 
     .prologue
-    .line 121
+    .line 138
+    invoke-direct {p0, p1}, Landroid/content/ClipboardManager;->addExtra(Landroid/content/ClipData;)V
+
+    .line 140
     :try_start_0
     invoke-static {}, Landroid/content/ClipboardManager;->getService()Landroid/content/IClipboard;
 

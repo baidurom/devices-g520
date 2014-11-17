@@ -6773,7 +6773,9 @@
 
     move-object/from16 v1, v44
 
-    invoke-static {v0, v15, v1, v3}, Lcom/baidu/security/bm/BroadcastManagerService;->filterBroadcastReceiver(Ljava/util/List;Ljava/util/List;Landroid/content/Intent;Ljava/util/ArrayList;)I
+    move/from16 v9, p13
+
+    invoke-static {v0, v15, v1, v3, v9}, Lcom/baidu/security/bm/BroadcastManagerService;->filterBroadcastReceiver(Ljava/util/List;Ljava/util/List;Landroid/content/Intent;Ljava/util/ArrayList;I)I
 
     .line 13780
     invoke-virtual/range {v44 .. v44}, Landroid/content/Intent;->getFlags()I
@@ -76467,7 +76469,7 @@
 
     move-result-object v2
 
-    const v3, 0x109009d
+    const v3, #android:layout@safe_mode#t
 
     const/4 v4, 0x0
 
@@ -82058,7 +82060,7 @@
 
     move-result-object v3
 
-    const v4, 0x1040338
+    const v4, #android:string@factorytest_not_system#t
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -82078,7 +82080,7 @@
 
     move-result-object v3
 
-    const v4, 0x1040339
+    const v4, #android:string@factorytest_no_action#t
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -87197,7 +87199,7 @@
 
     iget-object v2, p0, Lcom/android/server/am/ActivityManagerService;->mLruProcesses:Ljava/util/ArrayList;
 
-    invoke-static {v0, v2}, Lcom/baidu/security/bm/BroadcastManagerService;->filterService(Ljava/lang/String;Ljava/util/ArrayList;)I
+    invoke-static {v0, v2, p4}, Lcom/baidu/security/bm/BroadcastManagerService;->filterService(Ljava/lang/String;Ljava/util/ArrayList;I)I
 
     move-result v2
 

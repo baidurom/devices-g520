@@ -155,3 +155,4 @@ LOW_RAM_DEVICE := true
 FORMAT_PARAM_NUM := 4
 
 include $(PORT_BUILD)/main.mk
+include $(PORT_BUILD)/autopatch.mk

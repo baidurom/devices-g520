@@ -40,7 +40,7 @@
     .line 60
     new-instance v0, Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lcom/mediatek/geocoding/GeoCodingQuery;->mInstanceObjectSync:Ljava/lang/Object;
 
@@ -58,7 +58,7 @@
 
     .prologue
     .line 63
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 57
     const/4 v0, 0x0
@@ -100,7 +100,7 @@
     .line 155
     iget-object v0, p0, Lcom/mediatek/geocoding/GeoCodingQuery;->mDbHelper:Lcom/mediatek/geocoding/GeoCodingQuery$DBHelper;
 
-    invoke-virtual {v0}, Lcom/mediatek/geocoding/GeoCodingQuery$DBHelper;->close()V
+    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteOpenHelper;->close()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

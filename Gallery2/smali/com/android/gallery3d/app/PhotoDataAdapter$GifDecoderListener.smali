@@ -3,8 +3,8 @@
 .source "PhotoDataAdapter.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
 .implements Lcom/android/gallery3d/util/FutureListener;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -56,7 +56,7 @@
     .line 1906
     iput-object p1, p0, Lcom/android/gallery3d/app/PhotoDataAdapter$GifDecoderListener;->this$0:Lcom/android/gallery3d/app/PhotoDataAdapter;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1907
     iput-object p2, p0, Lcom/android/gallery3d/app/PhotoDataAdapter$GifDecoderListener;->mPath:Lcom/android/gallery3d/data/Path;

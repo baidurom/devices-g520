@@ -33,7 +33,7 @@
     .line 628
     iput-object p1, p0, Lcom/android/internal/telephony/cat/BipManager$ConnectivityChangeThread;->this$0:Lcom/android/internal/telephony/cat/BipManager;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 629
     const-string v0, "[BIP]"
@@ -246,7 +246,7 @@
 
     move-result-object v9
 
-    invoke-virtual {v7, v8, v4, v10, v9}, Lcom/android/internal/telephony/cat/CatService;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
+    invoke-virtual {v7, v8, v4, v10, v9}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v3
 
@@ -258,7 +258,7 @@
 
     move-result-object v7
 
-    invoke-virtual {v7, v3}, Lcom/android/internal/telephony/cat/CatService;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v7, v3}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     goto/16 :goto_0
 
@@ -345,7 +345,7 @@
 
     move-result-object v9
 
-    invoke-virtual {v7, v8, v4, v10, v9}, Lcom/android/internal/telephony/cat/CatService;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
+    invoke-virtual {v7, v8, v4, v10, v9}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v3
 
@@ -357,7 +357,7 @@
 
     move-result-object v7
 
-    invoke-virtual {v7, v3}, Lcom/android/internal/telephony/cat/CatService;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v7, v3}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     goto/16 :goto_0
 

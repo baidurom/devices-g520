@@ -30,7 +30,7 @@
     .line 151
     iput-object p1, p0, Lcom/android/gallery3d/data/ClusterAlbum$2;->this$0:Lcom/android/gallery3d/data/ClusterAlbum;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -44,7 +44,7 @@
 
     .prologue
     .line 153
-    invoke-virtual {p2}, Lcom/android/gallery3d/data/MediaItem;->getSupportedOperations()I
+    invoke-virtual {p2}, Lcom/android/gallery3d/data/MediaObject;->getSupportedOperations()I
 
     move-result v0
 
@@ -53,7 +53,7 @@
     if-eqz v0, :cond_0
 
     .line 154
-    invoke-virtual {p2}, Lcom/android/gallery3d/data/MediaItem;->delete()V
+    invoke-virtual {p2}, Lcom/android/gallery3d/data/MediaObject;->delete()V
 
     .line 156
     :cond_0

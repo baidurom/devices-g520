@@ -66,7 +66,7 @@
 
     .prologue
     .line 174
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 175
     new-instance v0, Ljava/util/HashMap;
@@ -85,7 +85,7 @@
 
     .prologue
     .line 183
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 184
     if-eqz p1, :cond_0
@@ -408,7 +408,7 @@
     .line 317
     iget-object v4, p0, Landroid/net/LinkCapabilities;->mCapabilities:Ljava/util/HashMap;
 
-    invoke-virtual {v4}, Ljava/util/HashMap;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/util/AbstractMap;->toString()Ljava/lang/String;
 
     move-result-object v4
 

@@ -50,7 +50,7 @@
     .line 121
     new-instance v0, Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/net/http/HttpsConnection;->mSuspendLock:Ljava/lang/Object;
 
@@ -166,10 +166,10 @@
 
     const/4 v5, 0x0
 
-    invoke-virtual {v2, v4, v3, v5}, Lorg/apache/harmony/xnet/provider/jsse/OpenSSLContextImpl;->engineInit([Ljavax/net/ssl/KeyManager;[Ljavax/net/ssl/TrustManager;Ljava/security/SecureRandom;)V
+    invoke-virtual {v2, v4, v3, v5}, Lorg/apache/harmony/xnet/provider/jsse/SSLContextImpl;->engineInit([Ljavax/net/ssl/KeyManager;[Ljavax/net/ssl/TrustManager;Ljava/security/SecureRandom;)V
 
     .line 102
-    invoke-virtual {v2}, Lorg/apache/harmony/xnet/provider/jsse/OpenSSLContextImpl;->engineGetClientSessionContext()Lorg/apache/harmony/xnet/provider/jsse/ClientSessionContext;
+    invoke-virtual {v2}, Lorg/apache/harmony/xnet/provider/jsse/SSLContextImpl;->engineGetClientSessionContext()Lorg/apache/harmony/xnet/provider/jsse/ClientSessionContext;
 
     move-result-object v4
 
@@ -288,7 +288,7 @@
 
     .line 395
     .local v0, e:Ljava/io/IOException;
-    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 .end method
@@ -462,7 +462,7 @@
 
     move-object/from16 v26, v0
 
-    invoke-virtual/range {v26 .. v26}, Lorg/apache/http/message/BasicHttpRequest;->getAllHeaders()[Lorg/apache/http/Header;
+    invoke-virtual/range {v26 .. v26}, Lorg/apache/http/message/AbstractHttpMessage;->getAllHeaders()[Lorg/apache/http/Header;
 
     move-result-object v5
 
@@ -524,7 +524,7 @@
     :cond_0
     move-object/from16 v0, v19
 
-    invoke-virtual {v0, v11}, Lorg/apache/http/message/BasicHttpRequest;->addHeader(Lorg/apache/http/Header;)V
+    invoke-virtual {v0, v11}, Lorg/apache/http/message/AbstractHttpMessage;->addHeader(Lorg/apache/http/Header;)V
     :try_end_3
     .catch Lorg/apache/http/ParseException; {:try_start_3 .. :try_end_3} :catch_1
     .catch Lorg/apache/http/HttpException; {:try_start_3 .. :try_end_3} :catch_2
@@ -564,7 +564,7 @@
 
     .line 192
     :cond_2
-    invoke-virtual {v8}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v8}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v10
 
@@ -814,7 +814,7 @@
 
     .line 231
     .local v8, e:Lorg/apache/http/ParseException;
-    invoke-virtual {v8}, Lorg/apache/http/ParseException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v8}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v10
 
@@ -843,7 +843,7 @@
 
     .line 239
     .local v8, e:Lorg/apache/http/HttpException;
-    invoke-virtual {v8}, Lorg/apache/http/HttpException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v8}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v10
 
@@ -872,7 +872,7 @@
 
     .line 247
     .local v8, e:Ljava/io/IOException;
-    invoke-virtual {v8}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v8}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v10
 
@@ -912,7 +912,7 @@
 
     .line 265
     :cond_9
-    invoke-virtual {v8}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v8}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v10
 
@@ -1041,7 +1041,7 @@
 
     move-result v28
 
-    invoke-virtual/range {v26 .. v28}, Ljavax/net/ssl/SSLSocketFactory;->createSocket(Ljava/lang/String;I)Ljava/net/Socket;
+    invoke-virtual/range {v26 .. v28}, Ljavax/net/SocketFactory;->createSocket(Ljava/lang/String;I)Ljava/net/Socket;
 
     move-result-object v26
 
@@ -1058,7 +1058,7 @@
 
     move/from16 v1, v26
 
-    invoke-virtual {v0, v1}, Ljavax/net/ssl/SSLSocket;->setSoTimeout(I)V
+    invoke-virtual {v0, v1}, Ljava/net/Socket;->setSoTimeout(I)V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_5
 
@@ -1073,11 +1073,11 @@
     if-eqz v22, :cond_d
 
     .line 297
-    invoke-virtual/range {v22 .. v22}, Ljavax/net/ssl/SSLSocket;->close()V
+    invoke-virtual/range {v22 .. v22}, Ljava/net/Socket;->close()V
 
     .line 300
     :cond_d
-    invoke-virtual {v8}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v8}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v10
 
@@ -1194,7 +1194,7 @@
     if-eqz v26, :cond_11
 
     .line 356
-    invoke-virtual/range {v22 .. v22}, Ljavax/net/ssl/SSLSocket;->close()V
+    invoke-virtual/range {v22 .. v22}, Ljava/net/Socket;->close()V
 
     .line 357
     new-instance v26, Landroid/net/http/SSLConnectionClosedByUserException;
@@ -1250,7 +1250,7 @@
 
     move/from16 v2, v27
 
-    invoke-virtual {v0, v1, v2}, Lorg/apache/http/params/BasicHttpParams;->setIntParameter(Ljava/lang/String;I)Lorg/apache/http/params/HttpParams;
+    invoke-virtual {v0, v1, v2}, Lorg/apache/http/params/AbstractHttpParams;->setIntParameter(Ljava/lang/String;I)Lorg/apache/http/params/HttpParams;
 
     .line 366
     move-object/from16 v0, v22

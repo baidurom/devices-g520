@@ -37,7 +37,7 @@
     const/4 v0, -0x1
 
     .line 50
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 51
     iput v0, p0, Lcom/android/gallery3d/data/BitmapPool;->mWidth:I
@@ -72,7 +72,7 @@
 
     .prologue
     .line 41
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 42
     iput p1, p0, Lcom/android/gallery3d/data/BitmapPool;->mWidth:I

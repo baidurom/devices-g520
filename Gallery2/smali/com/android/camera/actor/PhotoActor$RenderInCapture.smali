@@ -41,7 +41,7 @@
     .line 164
     :goto_0
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/camera/actor/PhotoActor$RenderInCapture;->isInterrupted()Z
+    invoke-virtual {p0}, Ljava/lang/Thread;->isInterrupted()Z
 
     move-result v1
 

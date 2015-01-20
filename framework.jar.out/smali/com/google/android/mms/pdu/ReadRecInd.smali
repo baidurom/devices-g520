@@ -24,16 +24,16 @@
     .line 40
     const/16 v0, 0x87
 
-    invoke-virtual {p0, v0}, Lcom/google/android/mms/pdu/ReadRecInd;->setMessageType(I)V
+    invoke-virtual {p0, v0}, Lcom/google/android/mms/pdu/GenericPdu;->setMessageType(I)V
 
     .line 41
-    invoke-virtual {p0, p1}, Lcom/google/android/mms/pdu/ReadRecInd;->setFrom(Lcom/google/android/mms/pdu/EncodedStringValue;)V
+    invoke-virtual {p0, p1}, Lcom/google/android/mms/pdu/GenericPdu;->setFrom(Lcom/google/android/mms/pdu/EncodedStringValue;)V
 
     .line 42
     invoke-virtual {p0, p2}, Lcom/google/android/mms/pdu/ReadRecInd;->setMessageId([B)V
 
     .line 43
-    invoke-virtual {p0, p3}, Lcom/google/android/mms/pdu/ReadRecInd;->setMmsVersion(I)V
+    invoke-virtual {p0, p3}, Lcom/google/android/mms/pdu/GenericPdu;->setMmsVersion(I)V
 
     .line 44
     invoke-virtual {p0, p5}, Lcom/google/android/mms/pdu/ReadRecInd;->setTo([Lcom/google/android/mms/pdu/EncodedStringValue;)V

@@ -58,7 +58,7 @@
 
     .prologue
     .line 51
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 36
     new-instance v0, Landroid/graphics/Path;
@@ -306,7 +306,7 @@
     .line 100
     iget-object v2, p0, Lcom/android/gallery3d/photoeditor/actions/Doodle;->points:Ljava/util/Vector;
 
-    invoke-virtual {v2}, Ljava/util/Vector;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v2}, Ljava/util/AbstractList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 

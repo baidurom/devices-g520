@@ -60,7 +60,7 @@
     .line 93
     iget-object v0, p0, Lcom/android/stk/StkDialogActivity$1;->this$0:Lcom/android/stk/StkDialogActivity;
 
-    invoke-virtual {v0}, Lcom/android/stk/StkDialogActivity;->finish()V
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 

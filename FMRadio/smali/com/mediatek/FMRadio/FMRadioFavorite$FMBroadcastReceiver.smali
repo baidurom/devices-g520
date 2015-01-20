@@ -109,7 +109,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/app/AlertDialog;->isShowing()Z
+    invoke-virtual {v2}, Landroid/app/Dialog;->isShowing()Z
 
     move-result v2
 
@@ -123,12 +123,12 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/app/AlertDialog;->dismiss()V
+    invoke-virtual {v2}, Landroid/app/Dialog;->dismiss()V
 
     .line 131
     iget-object v2, p0, Lcom/mediatek/FMRadio/FMRadioFavorite$FMBroadcastReceiver;->this$0:Lcom/mediatek/FMRadio/FMRadioFavorite;
 
-    invoke-virtual {v2}, Lcom/mediatek/FMRadio/FMRadioFavorite;->onBackPressed()V
+    invoke-virtual {v2}, Landroid/app/Activity;->onBackPressed()V
 
     .line 138
     .end local v1           #mValueHeadSetPlug:I
@@ -143,7 +143,7 @@
 
     const/4 v3, 0x2
 
-    invoke-virtual {v2, v3}, Lcom/mediatek/FMRadio/FMRadioFavorite;->showDialog(I)V
+    invoke-virtual {v2, v3}, Landroid/app/Activity;->showDialog(I)V
 
     goto :goto_0
 .end method

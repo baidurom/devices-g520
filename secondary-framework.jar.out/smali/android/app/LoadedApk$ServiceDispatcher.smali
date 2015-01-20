@@ -65,7 +65,7 @@
 
     .prologue
     .line 989
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 985
     new-instance v0, Ljava/util/HashMap;
@@ -102,7 +102,7 @@
     .line 995
     iget-object v0, p0, Landroid/app/LoadedApk$ServiceDispatcher;->mLocation:Landroid/app/ServiceConnectionLeaked;
 
-    invoke-virtual {v0}, Landroid/app/ServiceConnectionLeaked;->fillInStackTrace()Ljava/lang/Throwable;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->fillInStackTrace()Ljava/lang/Throwable;
 
     .line 996
     iput p4, p0, Landroid/app/LoadedApk$ServiceDispatcher;->mFlags:I

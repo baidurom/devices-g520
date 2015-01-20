@@ -68,7 +68,7 @@
 
     .prologue
     .line 731
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 732
     return-void
@@ -101,7 +101,7 @@
     :try_start_0
     sget-object v1, Lcom/android/internal/util/AsyncChannel$SyncMessenger;->sStack:Ljava/util/Stack;
 
-    invoke-virtual {v1}, Ljava/util/Stack;->isEmpty()Z
+    invoke-virtual {v1}, Ljava/util/Vector;->isEmpty()Z
 
     move-result v1
 
@@ -147,7 +147,7 @@
     .line 766
     iget-object v1, v0, Lcom/android/internal/util/AsyncChannel$SyncMessenger;->mHandlerThread:Landroid/os/HandlerThread;
 
-    invoke-virtual {v1}, Landroid/os/HandlerThread;->start()V
+    invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
     .line 767
     new-instance v1, Lcom/android/internal/util/AsyncChannel$SyncMessenger$SyncHandler;

@@ -217,7 +217,7 @@
     .line 154
     new-instance v0, Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Landroid/content/pm/PackageParser;->mSync:Ljava/lang/Object;
 
@@ -239,7 +239,7 @@
 
     .prologue
     .line 230
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 152
     const/4 v0, 0x1
@@ -2884,7 +2884,7 @@
 
     array-length v4, p3
 
-    invoke-virtual {v1, p3, v3, v4}, Ljava/io/FilterInputStream;->read([BII)I
+    invoke-virtual {v1, p3, v3, v4}, Ljava/io/BufferedInputStream;->read([BII)I
 
     move-result v3
 
@@ -2929,7 +2929,7 @@
 
     move-result-object v4
 
-    invoke-virtual {p2}, Ljava/util/jar/JarEntry;->getName()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
 
     move-result-object v5
 
@@ -2943,7 +2943,7 @@
 
     move-result-object v4
 
-    invoke-virtual {p1}, Ljava/util/jar/JarFile;->getName()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/util/zip/ZipFile;->getName()Ljava/lang/String;
 
     move-result-object v5
 
@@ -2978,7 +2978,7 @@
 
     move-result-object v4
 
-    invoke-virtual {p2}, Ljava/util/jar/JarEntry;->getName()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
 
     move-result-object v5
 
@@ -2992,7 +2992,7 @@
 
     move-result-object v4
 
-    invoke-virtual {p1}, Ljava/util/jar/JarFile;->getName()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/util/zip/ZipFile;->getName()Ljava/lang/String;
 
     move-result-object v5
 
@@ -3912,7 +3912,7 @@
 
     .line 2218
     :cond_1b
-    invoke-virtual {v7}, Landroid/content/pm/PackageParser$ActivityIntentInfo;->countActions()I
+    invoke-virtual {v7}, Landroid/content/IntentFilter;->countActions()I
 
     move-result v2
 
@@ -4952,7 +4952,7 @@
 
     .line 2391
     :cond_11
-    invoke-virtual {v7}, Landroid/content/pm/PackageParser$ActivityIntentInfo;->countActions()I
+    invoke-virtual {v7}, Landroid/content/IntentFilter;->countActions()I
 
     move-result v2
 
@@ -6987,7 +6987,7 @@
     .local v7, priority:I
     move-object/from16 v0, p5
 
-    invoke-virtual {v0, v7}, Landroid/content/pm/PackageParser$IntentInfo;->setPriority(I)V
+    invoke-virtual {v0, v7}, Landroid/content/IntentFilter;->setPriority(I)V
 
     .line 2978
     const/4 v13, 0x0
@@ -7145,7 +7145,7 @@
     .line 3010
     move-object/from16 v0, p5
 
-    invoke-virtual {v0, v12}, Landroid/content/pm/PackageParser$IntentInfo;->addAction(Ljava/lang/String;)V
+    invoke-virtual {v0, v12}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -7199,7 +7199,7 @@
     .line 3020
     move-object/from16 v0, p5
 
-    invoke-virtual {v0, v12}, Landroid/content/pm/PackageParser$IntentInfo;->addCategory(Ljava/lang/String;)V
+    invoke-virtual {v0, v12}, Landroid/content/IntentFilter;->addCategory(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -7242,7 +7242,7 @@
     :try_start_0
     move-object/from16 v0, p5
 
-    invoke-virtual {v0, v9}, Landroid/content/pm/PackageParser$IntentInfo;->addDataType(Ljava/lang/String;)V
+    invoke-virtual {v0, v9}, Landroid/content/IntentFilter;->addDataType(Ljava/lang/String;)V
     :try_end_0
     .catch Landroid/content/IntentFilter$MalformedMimeTypeException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -7262,7 +7262,7 @@
     .line 3041
     move-object/from16 v0, p5
 
-    invoke-virtual {v0, v9}, Landroid/content/pm/PackageParser$IntentInfo;->addDataScheme(Ljava/lang/String;)V
+    invoke-virtual {v0, v9}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
     .line 3044
     :cond_a
@@ -7291,7 +7291,7 @@
     .line 3049
     move-object/from16 v0, p5
 
-    invoke-virtual {v0, v3, v6}, Landroid/content/pm/PackageParser$IntentInfo;->addDataAuthority(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v3, v6}, Landroid/content/IntentFilter;->addDataAuthority(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3052
     :cond_b
@@ -7311,7 +7311,7 @@
 
     move-object/from16 v0, p5
 
-    invoke-virtual {v0, v9, v13}, Landroid/content/pm/PackageParser$IntentInfo;->addDataPath(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v13}, Landroid/content/IntentFilter;->addDataPath(Ljava/lang/String;I)V
 
     .line 3058
     :cond_c
@@ -7331,7 +7331,7 @@
 
     move-object/from16 v0, p5
 
-    invoke-virtual {v0, v9, v13}, Landroid/content/pm/PackageParser$IntentInfo;->addDataPath(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v13}, Landroid/content/IntentFilter;->addDataPath(Ljava/lang/String;I)V
 
     .line 3064
     :cond_d
@@ -7351,7 +7351,7 @@
 
     move-object/from16 v0, p5
 
-    invoke-virtual {v0, v9, v13}, Landroid/content/pm/PackageParser$IntentInfo;->addDataPath(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v13}, Landroid/content/IntentFilter;->addDataPath(Ljava/lang/String;I)V
 
     .line 3070
     :cond_e
@@ -7372,7 +7372,7 @@
     .local v2, e:Landroid/content/IntentFilter$MalformedMimeTypeException;
     const/4 v13, 0x0
 
-    invoke-virtual {v2}, Landroid/content/IntentFilter$MalformedMimeTypeException;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v14
 
@@ -7456,7 +7456,7 @@
 
     move-object/from16 v0, p5
 
-    invoke-virtual {v0, v13}, Landroid/content/pm/PackageParser$IntentInfo;->hasCategory(Ljava/lang/String;)Z
+    invoke-virtual {v0, v13}, Landroid/content/IntentFilter;->hasCategory(Ljava/lang/String;)Z
 
     move-result v13
 
@@ -10589,9 +10589,9 @@
     .line 724
     .local v23, assmgr:Landroid/content/res/AssetManager;
     :try_start_0
-    new-instance v5, Landroid/content/res/AssetManager;
+    new-instance v5, Landroid/content/res/BaiduAssetManager;
 
-    invoke-direct {v5}, Landroid/content/res/AssetManager;-><init>()V
+    invoke-direct {v5}, Landroid/content/res/BaiduAssetManager;-><init>()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -10635,39 +10635,32 @@
 
     invoke-virtual/range {v5 .. v22}, Landroid/content/res/AssetManager;->setConfiguration(IILjava/lang/String;IIIIIIIIIIIIII)V
 
-    .line 728
     move-object/from16 v0, p0
 
     invoke-virtual {v5, v0}, Landroid/content/res/AssetManager;->addAssetPath(Ljava/lang/String;)I
 
     move-result v25
 
-    .line 729
     .local v25, cookie:I
     if-nez v25, :cond_1
 
-    .line 730
     const/16 v29, 0x0
 
-    .line 761
     .end local v25           #cookie:I
     :cond_0
     :goto_0
     return-object v29
 
-    .line 733
     .restart local v25       #cookie:I
     :cond_1
     new-instance v28, Landroid/util/DisplayMetrics;
 
     invoke-direct/range {v28 .. v28}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 734
     .local v28, metrics:Landroid/util/DisplayMetrics;
     invoke-virtual/range {v28 .. v28}, Landroid/util/DisplayMetrics;->setToDefaults()V
 
-    .line 735
-    new-instance v31, Landroid/content/res/Resources;
+    new-instance v31, Landroid/content/res/BaiduResources;
 
     const/4 v6, 0x0
 
@@ -10675,7 +10668,7 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v5, v1, v6}, Landroid/content/res/Resources;-><init>(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;)V
+    invoke-direct {v0, v5, v1, v6}, Landroid/content/res/BaiduResources;-><init>(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;)V
 
     .line 736
     .local v31, res:Landroid/content/res/Resources;
@@ -11043,6 +11036,14 @@
 
     if-nez v4, :cond_6
 
+    const-string v4, "yi"
+
+    invoke-virtual {v4, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_baidu_0
+
     .line 817
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -11078,6 +11079,7 @@
 
     .line 822
     :cond_6
+    :cond_baidu_0
     invoke-virtual {v1}, Ljava/lang/String;->intern()Ljava/lang/String;
 
     move-result-object v3
@@ -14039,7 +14041,7 @@
     sput-object v18, Landroid/content/pm/PackageParser;->mReadBuffer:Ljava/lang/ref/WeakReference;
 
     .line 580
-    invoke-virtual/range {v17 .. v17}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual/range {v17 .. v17}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v18
 
@@ -14154,7 +14156,7 @@
 
     move-result-object v19
 
-    invoke-virtual {v10}, Ljava/util/jar/JarEntry;->getName()Ljava/lang/String;
+    invoke-virtual {v10}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
 
     move-result-object v20
 
@@ -14247,14 +14249,14 @@
 
     .line 625
     .local v12, je:Ljava/util/jar/JarEntry;
-    invoke-virtual {v12}, Ljava/util/jar/JarEntry;->isDirectory()Z
+    invoke-virtual {v12}, Ljava/util/zip/ZipEntry;->isDirectory()Z
 
     move-result v18
 
     if-nez v18, :cond_3
 
     .line 627
-    invoke-virtual {v12}, Ljava/util/jar/JarEntry;->getName()Ljava/lang/String;
+    invoke-virtual {v12}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
 
     move-result-object v15
 
@@ -14342,7 +14344,7 @@
 
     move-result-object v19
 
-    invoke-virtual {v12}, Ljava/util/jar/JarEntry;->getName()Ljava/lang/String;
+    invoke-virtual {v12}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
 
     move-result-object v20
 
@@ -14485,7 +14487,7 @@
 
     move-result-object v19
 
-    invoke-virtual {v12}, Ljava/util/jar/JarEntry;->getName()Ljava/lang/String;
+    invoke-virtual {v12}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
 
     move-result-object v20
 
@@ -15041,9 +15043,9 @@
     .line 506
     .local v23, assetError:Z
     :try_start_0
-    new-instance v5, Landroid/content/res/AssetManager;
+    new-instance v5, Landroid/content/res/BaiduAssetManager;
 
-    invoke-direct {v5}, Landroid/content/res/AssetManager;-><init>()V
+    invoke-direct {v5}, Landroid/content/res/BaiduAssetManager;-><init>()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
 
@@ -15059,12 +15061,10 @@
 
     move-result v25
 
-    .line 508
     .local v25, cookie:I
     if-eqz v25, :cond_4
 
-    .line 509
-    new-instance v32, Landroid/content/res/Resources;
+    new-instance v32, Landroid/content/res/BaiduResources;
 
     const/4 v6, 0x0
 
@@ -15072,7 +15072,7 @@
 
     move-object/from16 v1, p3
 
-    invoke-direct {v0, v5, v1, v6}, Landroid/content/res/Resources;-><init>(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;)V
+    invoke-direct {v0, v5, v1, v6}, Landroid/content/res/BaiduResources;-><init>(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 

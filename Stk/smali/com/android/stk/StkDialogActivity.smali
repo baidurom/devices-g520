@@ -138,7 +138,7 @@
     const/4 v6, 0x3
 
     .line 159
-    invoke-virtual {p0}, Lcom/android/stk/StkDialogActivity;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v3
 
@@ -156,7 +156,7 @@
     .local v1, mMessageView:Landroid/widget/TextView;
     const v4, 0x7f070006
 
-    invoke-virtual {p0, v4}, Lcom/android/stk/StkDialogActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v4}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -166,7 +166,7 @@
     .local v2, okButton:Landroid/widget/Button;
     const v4, 0x7f070012
 
-    invoke-virtual {p0, v4}, Lcom/android/stk/StkDialogActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v4}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -174,17 +174,17 @@
 
     .line 166
     .local v0, cancelButton:Landroid/widget/Button;
-    invoke-virtual {v2, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v2, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 167
-    invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 169
     iget-object v4, p0, Lcom/android/stk/StkDialogActivity;->mTextMsg:Lcom/android/internal/telephony/cat/TextMessage;
 
     iget-object v4, v4, Lcom/android/internal/telephony/cat/TextMessage;->title:Ljava/lang/String;
 
-    invoke-virtual {p0, v4}, Lcom/android/stk/StkDialogActivity;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v4}, Landroid/app/Activity;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 170
     iget-object v4, p0, Lcom/android/stk/StkDialogActivity;->mTextMsg:Lcom/android/internal/telephony/cat/TextMessage;
@@ -319,7 +319,7 @@
 
     .line 314
     :cond_0
-    invoke-virtual {p0}, Lcom/android/stk/StkDialogActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 .end method
@@ -603,7 +603,7 @@
 
     .line 209
     .local v1, intent:Landroid/content/Intent;
-    invoke-virtual {p0, v1}, Lcom/android/stk/StkDialogActivity;->sendBroadcast(Landroid/content/Intent;)V
+    invoke-virtual {p0, v1}, Landroid/content/ContextWrapper;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 211
     .end local v1           #intent:Landroid/content/Intent;
@@ -613,7 +613,7 @@
     invoke-direct {p0, v4, v2}, Lcom/android/stk/StkDialogActivity;->sendResponse(IZ)V
 
     .line 212
-    invoke-virtual {p0}, Lcom/android/stk/StkDialogActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 
@@ -629,7 +629,7 @@
     invoke-direct {p0, v4, v2}, Lcom/android/stk/StkDialogActivity;->sendResponse(IZ)V
 
     .line 217
-    invoke-virtual {p0}, Lcom/android/stk/StkDialogActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 
@@ -683,7 +683,7 @@
     invoke-static {p0, v5}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 114
-    invoke-virtual {p0}, Lcom/android/stk/StkDialogActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v5
 
@@ -695,7 +695,7 @@
     if-nez v5, :cond_0
 
     .line 116
-    invoke-virtual {p0}, Lcom/android/stk/StkDialogActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 156
     :goto_0
@@ -703,10 +703,10 @@
 
     .line 120
     :cond_0
-    invoke-virtual {p0, v7}, Lcom/android/stk/StkDialogActivity;->requestWindowFeature(I)Z
+    invoke-virtual {p0, v7}, Landroid/app/Activity;->requestWindowFeature(I)Z
 
     .line 121
-    invoke-virtual {p0}, Lcom/android/stk/StkDialogActivity;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v4
 
@@ -714,7 +714,7 @@
     .local v4, window:Landroid/view/Window;
     const v5, 0x7f030005
 
-    invoke-virtual {p0, v5}, Lcom/android/stk/StkDialogActivity;->setContentView(I)V
+    invoke-virtual {p0, v5}, Landroid/app/Activity;->setContentView(I)V
 
     .line 124
     const v5, 0x7f070010
@@ -729,7 +729,7 @@
     .local v2, mMessageView:Landroid/widget/TextView;
     const v5, 0x7f070006
 
-    invoke-virtual {p0, v5}, Lcom/android/stk/StkDialogActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v5}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
@@ -739,7 +739,7 @@
     .local v3, okButton:Landroid/widget/Button;
     const v5, 0x7f070012
 
-    invoke-virtual {p0, v5}, Lcom/android/stk/StkDialogActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v5}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -747,17 +747,17 @@
 
     .line 130
     .local v0, cancelButton:Landroid/widget/Button;
-    invoke-virtual {v3, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v3, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 132
-    invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 134
     iget-object v5, p0, Lcom/android/stk/StkDialogActivity;->mTextMsg:Lcom/android/internal/telephony/cat/TextMessage;
 
     iget-object v5, v5, Lcom/android/internal/telephony/cat/TextMessage;->title:Ljava/lang/String;
 
-    invoke-virtual {p0, v5}, Lcom/android/stk/StkDialogActivity;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v5}, Landroid/app/Activity;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 135
     iget-object v5, p0, Lcom/android/stk/StkDialogActivity;->mTextMsg:Lcom/android/internal/telephony/cat/TextMessage;
@@ -836,7 +836,7 @@
     .local v1, intentFilter:Landroid/content/IntentFilter;
     iget-object v5, p0, Lcom/android/stk/StkDialogActivity;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v5, v1}, Lcom/android/stk/StkDialogActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v5, v1}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     goto :goto_0
 
@@ -918,7 +918,7 @@
     .line 262
     iget-object v0, p0, Lcom/android/stk/StkDialogActivity;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/android/stk/StkDialogActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 263
     return-void
@@ -946,7 +946,7 @@
     invoke-direct {p0, v0}, Lcom/android/stk/StkDialogActivity;->sendResponse(I)V
 
     .line 227
-    invoke-virtual {p0}, Lcom/android/stk/StkDialogActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 
@@ -979,7 +979,7 @@
     if-nez v0, :cond_0
 
     .line 193
-    invoke-virtual {p0}, Lcom/android/stk/StkDialogActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 197
     :goto_0

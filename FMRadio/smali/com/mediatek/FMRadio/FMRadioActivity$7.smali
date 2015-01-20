@@ -30,7 +30,7 @@
     .line 1904
     iput-object p1, p0, Lcom/mediatek/FMRadio/FMRadioActivity$7;->this$0:Lcom/mediatek/FMRadio/FMRadioActivity;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -59,7 +59,7 @@
 
     const v7, 0x7f06002a
 
-    invoke-virtual {v5, v7}, Landroid/app/AlertDialog;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v5, v7}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
 
     move-result-object v5
 
@@ -90,7 +90,7 @@
 
     const v6, 0x7f06002c
 
-    invoke-virtual {v5, v6}, Landroid/app/AlertDialog;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v5, v6}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
 
     move-result-object v5
 
@@ -130,7 +130,7 @@
 
     const v7, 0x7f040017
 
-    invoke-virtual {v6, v7}, Lcom/mediatek/FMRadio/FMRadioActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {v6, v7}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
@@ -257,7 +257,7 @@
 
     move-result-object v5
 
-    invoke-virtual {v5}, Landroid/app/AlertDialog;->cancel()V
+    invoke-virtual {v5}, Landroid/app/Dialog;->cancel()V
 
     .line 1936
     return-void
@@ -303,7 +303,7 @@
 
     .line 1920
     .local v0, e:Ljava/lang/Exception;
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_1
 
@@ -314,7 +314,7 @@
     :cond_4
     iget-object v5, p0, Lcom/mediatek/FMRadio/FMRadioActivity$7;->this$0:Lcom/mediatek/FMRadio/FMRadioActivity;
 
-    invoke-virtual {v5}, Lcom/mediatek/FMRadio/FMRadioActivity;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {v5}, Landroid/content/ContextWrapper;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v5
 

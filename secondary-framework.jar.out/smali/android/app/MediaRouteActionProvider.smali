@@ -279,7 +279,7 @@
     .line 103
     const-string v2, "android:MediaRouteChooserDialogFragment"
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/internal/app/MediaRouteChooserDialogFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Landroid/app/DialogFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
     .line 104
     const/4 v2, 0x1

@@ -3,8 +3,8 @@
 .source "LoaderManager.java"
 
 # interfaces
-.implements Landroid/content/Loader$OnLoadCompleteListener;
 .implements Landroid/content/Loader$OnLoadCanceledListener;
+.implements Landroid/content/Loader$OnLoadCompleteListener;
 
 
 # annotations
@@ -105,7 +105,7 @@
     .local p4, callbacks:Landroid/app/LoaderManager$LoaderCallbacks;,"Landroid/app/LoaderManager$LoaderCallbacks<Ljava/lang/Object;>;"
     iput-object p1, p0, Landroid/app/LoaderManagerImpl$LoaderInfo;->this$0:Landroid/app/LoaderManagerImpl;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 242
     iput p2, p0, Landroid/app/LoaderManagerImpl$LoaderInfo;->mId:I

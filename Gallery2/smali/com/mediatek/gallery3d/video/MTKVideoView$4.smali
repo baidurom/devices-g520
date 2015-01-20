@@ -30,7 +30,7 @@
     .line 237
     iput-object p1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView$4;->this$0:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -46,7 +46,7 @@
     .line 239
     iget-object v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView$4;->this$0:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    #setter for: Lcom/mediatek/gallery3d/video/MTKVideoView;->mCurrentBufferPercentage:I
+    #setter for: Landroid/widget/VideoView;->mCurrentBufferPercentage:I
     invoke-static {v0, p2}, Lcom/mediatek/gallery3d/video/MTKVideoView;->access$2802(Lcom/mediatek/gallery3d/video/MTKVideoView;I)I
 
     .line 240
@@ -108,7 +108,7 @@
 
     iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView$4;->this$0:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    #getter for: Lcom/mediatek/gallery3d/video/MTKVideoView;->mTargetState:I
+    #getter for: Landroid/widget/VideoView;->mTargetState:I
     invoke-static {v2}, Lcom/mediatek/gallery3d/video/MTKVideoView;->access$3000(Lcom/mediatek/gallery3d/video/MTKVideoView;)I
 
     move-result v2
@@ -138,7 +138,7 @@
 
     iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView$4;->this$0:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    #getter for: Lcom/mediatek/gallery3d/video/MTKVideoView;->mCurrentState:I
+    #getter for: Landroid/widget/VideoView;->mCurrentState:I
     invoke-static {v2}, Lcom/mediatek/gallery3d/video/MTKVideoView;->access$3100(Lcom/mediatek/gallery3d/video/MTKVideoView;)I
 
     move-result v2

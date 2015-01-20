@@ -253,7 +253,7 @@
 
     .prologue
     .line 364
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 353
     const/4 v0, 0x0
@@ -551,7 +551,7 @@
 
     invoke-direct {v0, p0}, Landroid/net/wifi/WifiMonitor$MonitorThread;-><init>(Landroid/net/wifi/WifiMonitor;)V
 
-    invoke-virtual {v0}, Landroid/net/wifi/WifiMonitor$MonitorThread;->start()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     .line 371
     return-void

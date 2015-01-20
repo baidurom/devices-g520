@@ -49,7 +49,7 @@
     const/4 v7, -0x1
 
     .line 62
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 57
     iput-boolean v1, p0, Lcom/android/internal/telephony/MessageWaitingIndication;->mwiDontStore:Z

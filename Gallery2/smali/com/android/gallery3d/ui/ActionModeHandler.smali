@@ -87,7 +87,7 @@
 
     .prologue
     .line 91
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 88
     const/4 v0, 0x0
@@ -922,7 +922,7 @@
 
     check-cast v2, Landroid/app/Activity;
 
-    invoke-virtual {v2, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+    invoke-virtual {v2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1197,7 +1197,7 @@
 
     const v3, 0x7f0c0265
 
-    invoke-virtual {v2, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1310,7 +1310,7 @@
 
     .line 473
     .local v2, dialog:Landroid/app/AlertDialog;
-    invoke-virtual {v2}, Landroid/app/AlertDialog;->show()V
+    invoke-virtual {v2}, Landroid/app/Dialog;->show()V
 
     .line 474
     return-void

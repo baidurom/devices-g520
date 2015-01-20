@@ -828,7 +828,7 @@
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/data/LocalVideo;->isDrm()Z
+    invoke-virtual {p0}, Lcom/android/gallery3d/data/LocalMediaItem;->isDrm()Z
 
     move-result v1
 
@@ -871,7 +871,7 @@
 
     .line 307
     .local v0, operation:I
-    invoke-virtual {p0}, Lcom/android/gallery3d/data/LocalVideo;->isDrm()Z
+    invoke-virtual {p0}, Lcom/android/gallery3d/data/LocalMediaItem;->isDrm()Z
 
     move-result v1
 
@@ -995,7 +995,7 @@
 
     iget-object v1, p0, Lcom/android/gallery3d/data/LocalVideo;->mApplication:Lcom/android/gallery3d/app/GalleryApp;
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/data/LocalVideo;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {p0}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v2
 
@@ -1032,7 +1032,7 @@
 
     iget-object v1, p0, Lcom/android/gallery3d/data/LocalVideo;->mApplication:Lcom/android/gallery3d/app/GalleryApp;
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/data/LocalVideo;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {p0}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v2
 

@@ -82,7 +82,7 @@
 
     invoke-direct {v1, v2, v3}, Ljava/sql/Date;-><init>(J)V
 
-    invoke-virtual {v0, v1}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object v0
 

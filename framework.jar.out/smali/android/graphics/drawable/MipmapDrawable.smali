@@ -51,7 +51,7 @@
     iput-object v0, p0, Landroid/graphics/drawable/MipmapDrawable;->mMipmapContainerState:Landroid/graphics/drawable/MipmapDrawable$MipmapContainerState;
 
     .line 309
-    invoke-virtual {p0, v0}, Landroid/graphics/drawable/MipmapDrawable;->setConstantState(Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;)V
+    invoke-virtual {p0, v0}, Landroid/graphics/drawable/DrawableContainer;->setConstantState(Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;)V
 
     .line 310
     invoke-direct {p0}, Landroid/graphics/drawable/MipmapDrawable;->onDrawableAdded()V
@@ -80,10 +80,10 @@
     .line 114
     const/4 v0, -0x1
 
-    invoke-virtual {p0, v0}, Landroid/graphics/drawable/MipmapDrawable;->selectDrawable(I)Z
+    invoke-virtual {p0, v0}, Landroid/graphics/drawable/DrawableContainer;->selectDrawable(I)Z
 
     .line 115
-    invoke-virtual {p0}, Landroid/graphics/drawable/MipmapDrawable;->getBounds()Landroid/graphics/Rect;
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
@@ -134,7 +134,7 @@
     const/4 v8, 0x0
 
     .line 134
-    invoke-super {p0, p1, p2, p3}, Landroid/graphics/drawable/DrawableContainer;->inflate(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;)V
+    invoke-super {p0, p1, p2, p3}, Landroid/graphics/drawable/Drawable;->inflate(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;)V
 
     .line 138
     invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
@@ -315,7 +315,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, [I->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -348,7 +348,7 @@
 
     .line 125
     .local v0, index:I
-    invoke-virtual {p0, v0}, Landroid/graphics/drawable/MipmapDrawable;->selectDrawable(I)Z
+    invoke-virtual {p0, v0}, Landroid/graphics/drawable/DrawableContainer;->selectDrawable(I)Z
 
     .line 127
     invoke-super {p0, p1}, Landroid/graphics/drawable/DrawableContainer;->onBoundsChange(Landroid/graphics/Rect;)V

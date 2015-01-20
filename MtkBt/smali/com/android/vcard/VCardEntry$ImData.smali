@@ -40,7 +40,7 @@
 
     .prologue
     .line 881
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 882
     iput p1, p0, Lcom/android/vcard/VCardEntry$ImData;->mProtocol:I

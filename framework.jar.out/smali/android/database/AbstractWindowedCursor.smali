@@ -88,7 +88,7 @@
     .line 184
     iget-object v0, p0, Landroid/database/AbstractWindowedCursor;->mWindow:Landroid/database/CursorWindow;
 
-    invoke-virtual {v0}, Landroid/database/CursorWindow;->close()V
+    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteClosable;->close()V
 
     .line 185
     const/4 v0, 0x0

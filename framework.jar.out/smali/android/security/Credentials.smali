@@ -65,7 +65,7 @@
 
     .prologue
     .line 42
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -132,7 +132,7 @@
 
     .line 163
     :cond_0
-    invoke-virtual {v2}, Lcom/android/org/bouncycastle/openssl/PEMReader;->close()V
+    invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
 
     .line 164
     return-object v4
@@ -195,7 +195,7 @@
     .line 145
     .end local v4           #o:Ljava/lang/Object;
     :cond_0
-    invoke-virtual {v5}, Lcom/android/org/bouncycastle/openssl/PEMWriter;->close()V
+    invoke-virtual {v5}, Ljava/io/BufferedWriter;->close()V
 
     .line 146
     invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
@@ -260,7 +260,7 @@
     .local v0, e:Landroid/content/ActivityNotFoundException;
     const-string v2, "Credentials"
 
-    invoke-virtual {v0}, Landroid/content/ActivityNotFoundException;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v3
 
@@ -304,7 +304,7 @@
     .local v0, e:Landroid/content/ActivityNotFoundException;
     const-string v2, "Credentials"
 
-    invoke-virtual {v0}, Landroid/content/ActivityNotFoundException;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v3
 
@@ -370,7 +370,7 @@
     .local v0, e:Landroid/content/ActivityNotFoundException;
     const-string v2, "Credentials"
 
-    invoke-virtual {v0}, Landroid/content/ActivityNotFoundException;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v3
 
@@ -411,7 +411,7 @@
     .local v0, e:Landroid/content/ActivityNotFoundException;
     const-string v2, "Credentials"
 
-    invoke-virtual {v0}, Landroid/content/ActivityNotFoundException;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v3
 

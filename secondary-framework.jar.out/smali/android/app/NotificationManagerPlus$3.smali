@@ -35,7 +35,7 @@
 
     iput-object p2, p0, Landroid/app/NotificationManagerPlus$3;->val$pending:Landroid/app/PendingIntent;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -96,7 +96,7 @@
 
     .line 275
     .local v0, e:Landroid/app/PendingIntent$CanceledException;
-    invoke-virtual {v0}, Landroid/app/PendingIntent$CanceledException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 .end method

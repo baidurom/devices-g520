@@ -126,7 +126,7 @@
     .line 223
     new-instance v0, Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Landroid/widget/ActivityChooserModel;->sRegistryLock:Ljava/lang/Object;
 
@@ -158,7 +158,7 @@
     .line 234
     new-instance v0, Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/widget/ActivityChooserModel;->mInstanceLock:Ljava/lang/Object;
 
@@ -355,7 +355,7 @@
     invoke-direct {p0}, Landroid/widget/ActivityChooserModel;->sortActivitiesIfNeeded()Z
 
     .line 745
-    invoke-virtual {p0}, Landroid/widget/ActivityChooserModel;->notifyChanged()V
+    invoke-virtual {p0}, Landroid/database/DataSetObservable;->notifyChanged()V
 
     .line 747
     :cond_0
@@ -389,7 +389,7 @@
     invoke-direct {p0}, Landroid/widget/ActivityChooserModel;->sortActivitiesIfNeeded()Z
 
     .line 671
-    invoke-virtual {p0}, Landroid/widget/ActivityChooserModel;->notifyChanged()V
+    invoke-virtual {p0}, Landroid/database/DataSetObservable;->notifyChanged()V
 
     .line 673
     :cond_0
@@ -607,7 +607,7 @@
 
     aput-object v4, v2, v3
 
-    invoke-virtual {v0, v1, v2}, Landroid/widget/ActivityChooserModel$PersistHistoryAsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v0, v1, v2}, Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     goto :goto_0
 .end method
@@ -1636,7 +1636,7 @@
     if-eqz v0, :cond_1
 
     .line 599
-    invoke-virtual {p0}, Landroid/widget/ActivityChooserModel;->notifyChanged()V
+    invoke-virtual {p0}, Landroid/database/DataSetObservable;->notifyChanged()V
 
     .line 601
     :cond_1
@@ -1805,7 +1805,7 @@
     if-eqz v0, :cond_1
 
     .line 625
-    invoke-virtual {p0}, Landroid/widget/ActivityChooserModel;->notifyChanged()V
+    invoke-virtual {p0}, Landroid/database/DataSetObservable;->notifyChanged()V
 
     .line 627
     :cond_1

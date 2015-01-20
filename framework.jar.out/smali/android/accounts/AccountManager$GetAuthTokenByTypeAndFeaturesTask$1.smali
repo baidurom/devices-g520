@@ -153,7 +153,7 @@
     .local v10, e:Landroid/accounts/OperationCanceledException;
     iget-object v0, p0, Landroid/accounts/AccountManager$GetAuthTokenByTypeAndFeaturesTask$1;->this$1:Landroid/accounts/AccountManager$GetAuthTokenByTypeAndFeaturesTask;
 
-    #calls: Landroid/accounts/AccountManager$GetAuthTokenByTypeAndFeaturesTask;->setException(Ljava/lang/Throwable;)V
+    #calls: Ljava/util/concurrent/FutureTask;->setException(Ljava/lang/Throwable;)V
     invoke-static {v0, v10}, Landroid/accounts/AccountManager$GetAuthTokenByTypeAndFeaturesTask;->access$900(Landroid/accounts/AccountManager$GetAuthTokenByTypeAndFeaturesTask;Ljava/lang/Throwable;)V
 
     goto :goto_0
@@ -167,7 +167,7 @@
     .local v10, e:Ljava/io/IOException;
     iget-object v0, p0, Landroid/accounts/AccountManager$GetAuthTokenByTypeAndFeaturesTask$1;->this$1:Landroid/accounts/AccountManager$GetAuthTokenByTypeAndFeaturesTask;
 
-    #calls: Landroid/accounts/AccountManager$GetAuthTokenByTypeAndFeaturesTask;->setException(Ljava/lang/Throwable;)V
+    #calls: Ljava/util/concurrent/FutureTask;->setException(Ljava/lang/Throwable;)V
     invoke-static {v0, v10}, Landroid/accounts/AccountManager$GetAuthTokenByTypeAndFeaturesTask;->access$1000(Landroid/accounts/AccountManager$GetAuthTokenByTypeAndFeaturesTask;Ljava/lang/Throwable;)V
 
     goto :goto_0
@@ -181,7 +181,7 @@
     .local v10, e:Landroid/accounts/AuthenticatorException;
     iget-object v0, p0, Landroid/accounts/AccountManager$GetAuthTokenByTypeAndFeaturesTask$1;->this$1:Landroid/accounts/AccountManager$GetAuthTokenByTypeAndFeaturesTask;
 
-    #calls: Landroid/accounts/AccountManager$GetAuthTokenByTypeAndFeaturesTask;->setException(Ljava/lang/Throwable;)V
+    #calls: Ljava/util/concurrent/FutureTask;->setException(Ljava/lang/Throwable;)V
     invoke-static {v0, v10}, Landroid/accounts/AccountManager$GetAuthTokenByTypeAndFeaturesTask;->access$1100(Landroid/accounts/AccountManager$GetAuthTokenByTypeAndFeaturesTask;Ljava/lang/Throwable;)V
 
     goto :goto_0

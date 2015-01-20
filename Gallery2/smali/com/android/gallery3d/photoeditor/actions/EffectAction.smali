@@ -100,7 +100,7 @@
 
     const v0, 0x7f0b007e
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/photoeditor/actions/EffectAction;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -121,18 +121,18 @@
     iput-object p3, p0, Lcom/android/gallery3d/photoeditor/actions/EffectAction;->listener:Lcom/android/gallery3d/photoeditor/actions/EffectAction$ActionListener;
 
     .line 68
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/EffectAction;->getTag()Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 69
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/EffectAction;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/EffectAction;->getTag()Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 

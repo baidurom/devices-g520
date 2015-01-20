@@ -306,7 +306,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/android/internal/telephony/Phone$State;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/Enum;->toString()Ljava/lang/String;
 
     move-result-object v4
 
@@ -423,7 +423,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/android/internal/telephony/Phone$DataState;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/Enum;->toString()Ljava/lang/String;
 
     move-result-object v3
 

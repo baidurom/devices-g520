@@ -142,7 +142,7 @@
     iput v0, p0, Lcom/android/gallery3d/ui/PositionController$Platform;->mFlingOffset:I
 
     .line 1602
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/PositionController$Platform;->advanceAnimation()Z
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/PositionController$Animatable;->advanceAnimation()Z
 
     .line 1603
     const/4 v0, 0x1

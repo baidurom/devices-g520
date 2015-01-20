@@ -35,7 +35,7 @@
 
     iput p2, p0, Lcom/mediatek/gallery3d/video/SettingsActivity$4;->val$type:I
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

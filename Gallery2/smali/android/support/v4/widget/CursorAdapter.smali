@@ -3,8 +3,8 @@
 .source "CursorAdapter.java"
 
 # interfaces
-.implements Landroid/widget/Filterable;
 .implements Landroid/support/v4/widget/CursorFilter$CursorFilterClient;
+.implements Landroid/widget/Filterable;
 
 
 # annotations
@@ -796,7 +796,7 @@
     iput-boolean v1, p0, Landroid/support/v4/widget/CursorAdapter;->mDataValid:Z
 
     .line 347
-    invoke-virtual {p0}, Landroid/support/v4/widget/CursorAdapter;->notifyDataSetChanged()V
+    invoke-virtual {p0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
 
     goto :goto_0
 
@@ -812,7 +812,7 @@
     iput-boolean v1, p0, Landroid/support/v4/widget/CursorAdapter;->mDataValid:Z
 
     .line 352
-    invoke-virtual {p0}, Landroid/support/v4/widget/CursorAdapter;->notifyDataSetInvalidated()V
+    invoke-virtual {p0}, Landroid/widget/BaseAdapter;->notifyDataSetInvalidated()V
 
     goto :goto_0
 .end method

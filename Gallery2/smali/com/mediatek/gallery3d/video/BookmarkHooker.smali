@@ -59,7 +59,7 @@
     .line 69
     const-string v1, "logo-bitmap"
 
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/BookmarkHooker;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/mediatek/gallery3d/ext/ActivityHooker;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -72,7 +72,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
     .line 70
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/BookmarkHooker;->getContext()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/mediatek/gallery3d/ext/ActivityHooker;->getContext()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -94,10 +94,10 @@
     const/4 v2, 0x0
 
     .line 24
-    invoke-super {p0, p1}, Lcom/mediatek/gallery3d/video/MovieHooker;->onCreateOptionsMenu(Landroid/view/Menu;)Z
+    invoke-super {p0, p1}, Lcom/mediatek/gallery3d/ext/ActivityHooker;->onCreateOptionsMenu(Landroid/view/Menu;)Z
 
     .line 25
-    invoke-virtual {p0, v3}, Lcom/mediatek/gallery3d/video/BookmarkHooker;->getMenuActivityId(I)I
+    invoke-virtual {p0, v3}, Lcom/mediatek/gallery3d/ext/ActivityHooker;->getMenuActivityId(I)I
 
     move-result v0
 
@@ -112,7 +112,7 @@
     .line 26
     const/4 v0, 0x2
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/video/BookmarkHooker;->getMenuActivityId(I)I
+    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/ext/ActivityHooker;->getMenuActivityId(I)I
 
     move-result v0
 
@@ -136,14 +136,14 @@
     const/4 v0, 0x1
 
     .line 51
-    invoke-super {p0, p1}, Lcom/mediatek/gallery3d/video/MovieHooker;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    invoke-super {p0, p1}, Lcom/mediatek/gallery3d/ext/ActivityHooker;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     .line 52
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v1
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/gallery3d/video/BookmarkHooker;->getMenuOriginalId(I)I
+    invoke-virtual {p0, v1}, Lcom/mediatek/gallery3d/ext/ActivityHooker;->getMenuOriginalId(I)I
 
     move-result v1
 
@@ -157,7 +157,7 @@
 
     .line 54
     :pswitch_0
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/BookmarkHooker;->getPlayer()Lcom/mediatek/gallery3d/ext/IMoviePlayer;
+    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/MovieHooker;->getPlayer()Lcom/mediatek/gallery3d/ext/IMoviePlayer;
 
     move-result-object v1
 
@@ -191,10 +191,10 @@
     const/4 v2, 0x1
 
     .line 31
-    invoke-super {p0, p1}, Lcom/mediatek/gallery3d/video/MovieHooker;->onPrepareOptionsMenu(Landroid/view/Menu;)Z
+    invoke-super {p0, p1}, Lcom/mediatek/gallery3d/ext/ActivityHooker;->onPrepareOptionsMenu(Landroid/view/Menu;)Z
 
     .line 32
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/BookmarkHooker;->getMovieItem()Lcom/mediatek/gallery3d/ext/IMovieItem;
+    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/MovieHooker;->getMovieItem()Lcom/mediatek/gallery3d/ext/IMovieItem;
 
     move-result-object v0
 
@@ -202,7 +202,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/BookmarkHooker;->getMovieItem()Lcom/mediatek/gallery3d/ext/IMovieItem;
+    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/MovieHooker;->getMovieItem()Lcom/mediatek/gallery3d/ext/IMovieItem;
 
     move-result-object v1
 

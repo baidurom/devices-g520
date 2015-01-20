@@ -216,7 +216,7 @@
     .line 22
     sget-object v0, Landroid/util/JsonScope;->$VALUES:[Landroid/util/JsonScope;
 
-    invoke-virtual {v0}, [Landroid/util/JsonScope;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

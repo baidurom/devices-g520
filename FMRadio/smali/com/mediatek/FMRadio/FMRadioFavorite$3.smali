@@ -30,7 +30,7 @@
     .line 463
     iput-object p1, p0, Lcom/mediatek/FMRadio/FMRadioFavorite$3;->this$0:Lcom/mediatek/FMRadio/FMRadioFavorite;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

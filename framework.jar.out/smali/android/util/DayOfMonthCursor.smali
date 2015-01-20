@@ -22,14 +22,14 @@
     invoke-direct {p0, p1, p2, p4}, Landroid/util/MonthDisplayHelper;-><init>(III)V
 
     .line 50
-    invoke-virtual {p0, p3}, Landroid/util/DayOfMonthCursor;->getRowOf(I)I
+    invoke-virtual {p0, p3}, Landroid/util/MonthDisplayHelper;->getRowOf(I)I
 
     move-result v0
 
     iput v0, p0, Landroid/util/DayOfMonthCursor;->mRow:I
 
     .line 51
-    invoke-virtual {p0, p3}, Landroid/util/DayOfMonthCursor;->getColumnOf(I)I
+    invoke-virtual {p0, p3}, Landroid/util/MonthDisplayHelper;->getColumnOf(I)I
 
     move-result v0
 
@@ -54,7 +54,7 @@
 
     iget v2, p0, Landroid/util/DayOfMonthCursor;->mColumn:I
 
-    invoke-virtual {p0, v1, v2}, Landroid/util/DayOfMonthCursor;->isWithinCurrentMonth(II)Z
+    invoke-virtual {p0, v1, v2}, Landroid/util/MonthDisplayHelper;->isWithinCurrentMonth(II)Z
 
     move-result v1
 
@@ -73,7 +73,7 @@
 
     .line 127
     :cond_0
-    invoke-virtual {p0}, Landroid/util/DayOfMonthCursor;->nextMonth()V
+    invoke-virtual {p0}, Landroid/util/MonthDisplayHelper;->nextMonth()V
 
     .line 128
     iput v0, p0, Landroid/util/DayOfMonthCursor;->mRow:I
@@ -84,7 +84,7 @@
 
     iget v1, p0, Landroid/util/DayOfMonthCursor;->mColumn:I
 
-    invoke-virtual {p0, v0, v1}, Landroid/util/DayOfMonthCursor;->isWithinCurrentMonth(II)Z
+    invoke-virtual {p0, v0, v1}, Landroid/util/MonthDisplayHelper;->isWithinCurrentMonth(II)Z
 
     move-result v0
 
@@ -125,7 +125,7 @@
 
     iget v1, p0, Landroid/util/DayOfMonthCursor;->mColumn:I
 
-    invoke-virtual {p0, v0, v1}, Landroid/util/DayOfMonthCursor;->getDayAt(II)I
+    invoke-virtual {p0, v0, v1}, Landroid/util/MonthDisplayHelper;->getDayAt(II)I
 
     move-result v0
 
@@ -141,7 +141,7 @@
 
     iget v1, p0, Landroid/util/DayOfMonthCursor;->mColumn:I
 
-    invoke-virtual {p0, v0, v1}, Landroid/util/DayOfMonthCursor;->isWithinCurrentMonth(II)Z
+    invoke-virtual {p0, v0, v1}, Landroid/util/MonthDisplayHelper;->isWithinCurrentMonth(II)Z
 
     move-result v0
 
@@ -235,7 +235,7 @@
 
     iget v2, p0, Landroid/util/DayOfMonthCursor;->mColumn:I
 
-    invoke-virtual {p0, v1, v2}, Landroid/util/DayOfMonthCursor;->isWithinCurrentMonth(II)Z
+    invoke-virtual {p0, v1, v2}, Landroid/util/MonthDisplayHelper;->isWithinCurrentMonth(II)Z
 
     move-result v1
 
@@ -260,23 +260,23 @@
 
     .line 153
     :cond_1
-    invoke-virtual {p0}, Landroid/util/DayOfMonthCursor;->previousMonth()V
+    invoke-virtual {p0}, Landroid/util/MonthDisplayHelper;->previousMonth()V
 
     .line 154
-    invoke-virtual {p0}, Landroid/util/DayOfMonthCursor;->getNumberOfDaysInMonth()I
+    invoke-virtual {p0}, Landroid/util/MonthDisplayHelper;->getNumberOfDaysInMonth()I
 
     move-result v0
 
     .line 155
     .local v0, lastDay:I
-    invoke-virtual {p0, v0}, Landroid/util/DayOfMonthCursor;->getRowOf(I)I
+    invoke-virtual {p0, v0}, Landroid/util/MonthDisplayHelper;->getRowOf(I)I
 
     move-result v1
 
     iput v1, p0, Landroid/util/DayOfMonthCursor;->mRow:I
 
     .line 156
-    invoke-virtual {p0, v0}, Landroid/util/DayOfMonthCursor;->getColumnOf(I)I
+    invoke-virtual {p0, v0}, Landroid/util/MonthDisplayHelper;->getColumnOf(I)I
 
     move-result v1
 
@@ -317,7 +317,7 @@
 
     iget v2, p0, Landroid/util/DayOfMonthCursor;->mColumn:I
 
-    invoke-virtual {p0, v1, v2}, Landroid/util/DayOfMonthCursor;->isWithinCurrentMonth(II)Z
+    invoke-virtual {p0, v1, v2}, Landroid/util/MonthDisplayHelper;->isWithinCurrentMonth(II)Z
 
     move-result v1
 
@@ -339,7 +339,7 @@
 
     .line 178
     :cond_1
-    invoke-virtual {p0}, Landroid/util/DayOfMonthCursor;->nextMonth()V
+    invoke-virtual {p0}, Landroid/util/MonthDisplayHelper;->nextMonth()V
 
     .line 179
     iput v0, p0, Landroid/util/DayOfMonthCursor;->mRow:I
@@ -353,7 +353,7 @@
 
     iget v1, p0, Landroid/util/DayOfMonthCursor;->mColumn:I
 
-    invoke-virtual {p0, v0, v1}, Landroid/util/DayOfMonthCursor;->isWithinCurrentMonth(II)Z
+    invoke-virtual {p0, v0, v1}, Landroid/util/MonthDisplayHelper;->isWithinCurrentMonth(II)Z
 
     move-result v0
 
@@ -381,14 +381,14 @@
 
     .prologue
     .line 87
-    invoke-virtual {p0, p1}, Landroid/util/DayOfMonthCursor;->getRowOf(I)I
+    invoke-virtual {p0, p1}, Landroid/util/MonthDisplayHelper;->getRowOf(I)I
 
     move-result v0
 
     iput v0, p0, Landroid/util/DayOfMonthCursor;->mRow:I
 
     .line 88
-    invoke-virtual {p0, p1}, Landroid/util/DayOfMonthCursor;->getColumnOf(I)I
+    invoke-virtual {p0, p1}, Landroid/util/MonthDisplayHelper;->getColumnOf(I)I
 
     move-result v0
 
@@ -425,7 +425,7 @@
 
     iget v1, p0, Landroid/util/DayOfMonthCursor;->mColumn:I
 
-    invoke-virtual {p0, v0, v1}, Landroid/util/DayOfMonthCursor;->isWithinCurrentMonth(II)Z
+    invoke-virtual {p0, v0, v1}, Landroid/util/MonthDisplayHelper;->isWithinCurrentMonth(II)Z
 
     move-result v0
 
@@ -447,7 +447,7 @@
 
     .line 107
     :cond_0
-    invoke-virtual {p0}, Landroid/util/DayOfMonthCursor;->previousMonth()V
+    invoke-virtual {p0}, Landroid/util/MonthDisplayHelper;->previousMonth()V
 
     .line 108
     const/4 v0, 0x5
@@ -460,7 +460,7 @@
 
     iget v1, p0, Landroid/util/DayOfMonthCursor;->mColumn:I
 
-    invoke-virtual {p0, v0, v1}, Landroid/util/DayOfMonthCursor;->isWithinCurrentMonth(II)Z
+    invoke-virtual {p0, v0, v1}, Landroid/util/MonthDisplayHelper;->isWithinCurrentMonth(II)Z
 
     move-result v0
 

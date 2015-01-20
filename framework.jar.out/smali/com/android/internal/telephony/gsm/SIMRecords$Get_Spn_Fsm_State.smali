@@ -168,7 +168,7 @@
     .line 2285
     sget-object v0, Lcom/android/internal/telephony/gsm/SIMRecords$Get_Spn_Fsm_State;->$VALUES:[Lcom/android/internal/telephony/gsm/SIMRecords$Get_Spn_Fsm_State;
 
-    invoke-virtual {v0}, [Lcom/android/internal/telephony/gsm/SIMRecords$Get_Spn_Fsm_State;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

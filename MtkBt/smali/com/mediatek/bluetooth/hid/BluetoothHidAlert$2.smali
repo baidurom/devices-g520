@@ -68,7 +68,7 @@
     .line 280
     iget-object v0, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidAlert$2;->this$0:Lcom/mediatek/bluetooth/hid/BluetoothHidAlert;
 
-    invoke-virtual {v0}, Lcom/mediatek/bluetooth/hid/BluetoothHidAlert;->finish()V
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
     .line 282
     :cond_0

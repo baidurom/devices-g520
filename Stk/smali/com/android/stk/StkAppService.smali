@@ -619,7 +619,7 @@
     .line 576
     iget-object v1, p0, Lcom/android/stk/StkAppService;->mServiceHandler:Lcom/android/stk/StkAppService$ServiceHandler;
 
-    invoke-virtual {v1}, Lcom/android/stk/StkAppService$ServiceHandler;->obtainMessage()Landroid/os/Message;
+    invoke-virtual {v1}, Landroid/os/Handler;->obtainMessage()Landroid/os/Message;
 
     move-result-object v0
 
@@ -632,7 +632,7 @@
     .line 578
     iget-object v1, p0, Lcom/android/stk/StkAppService;->mServiceHandler:Lcom/android/stk/StkAppService$ServiceHandler;
 
-    invoke-virtual {v1, v0}, Lcom/android/stk/StkAppService$ServiceHandler;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     .line 579
     return-void
@@ -804,7 +804,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/internal/telephony/cat/AppInterface$CommandType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -1061,7 +1061,7 @@
 
     .prologue
     .line 298
-    invoke-virtual {p0}, Lcom/android/stk/StkAppService;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -1091,7 +1091,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/android/internal/telephony/cat/AppInterface$CommandType;->ordinal()I
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
 
     move-result v2
 
@@ -1106,7 +1106,7 @@
 
     .line 1992
     :pswitch_1
-    invoke-virtual {p0}, Lcom/android/stk/StkAppService;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -1121,7 +1121,7 @@
 
     .line 1995
     :pswitch_2
-    invoke-virtual {p0}, Lcom/android/stk/StkAppService;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -1136,7 +1136,7 @@
 
     .line 1998
     :pswitch_3
-    invoke-virtual {p0}, Lcom/android/stk/StkAppService;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -1337,7 +1337,7 @@
 
     move-result-object v10
 
-    invoke-virtual {v10}, Lcom/android/internal/telephony/cat/AppInterface$CommandType;->name()Ljava/lang/String;
+    invoke-virtual {v10}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v10
 
@@ -1350,7 +1350,7 @@
 
     move-result-object v11
 
-    invoke-virtual {v11}, Lcom/android/internal/telephony/cat/AppInterface$CommandType;->ordinal()I
+    invoke-virtual {v11}, Ljava/lang/Enum;->ordinal()I
 
     move-result v11
 
@@ -1911,7 +1911,7 @@
 
     if-eqz v10, :cond_f
 
-    invoke-virtual {p0}, Lcom/android/stk/StkAppService;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v10
 
@@ -1930,7 +1930,7 @@
 
     iget-object v11, v11, Lcom/android/internal/telephony/cat/CatCmdMessage$BrowserSettings;->mode:Lcom/android/internal/telephony/cat/LaunchBrowserMode;
 
-    invoke-virtual {v11}, Lcom/android/internal/telephony/cat/LaunchBrowserMode;->ordinal()I
+    invoke-virtual {v11}, Ljava/lang/Enum;->ordinal()I
 
     move-result v11
 
@@ -2180,7 +2180,7 @@
 
     move-result-object v10
 
-    invoke-virtual {v10}, Lcom/android/internal/telephony/cat/AppInterface$CommandType;->ordinal()I
+    invoke-virtual {v10}, Ljava/lang/Enum;->ordinal()I
 
     move-result v10
 
@@ -2333,7 +2333,7 @@
 
     move-result-object v10
 
-    invoke-virtual {v10}, Lcom/android/internal/telephony/cat/AppInterface$CommandType;->ordinal()I
+    invoke-virtual {v10}, Ljava/lang/Enum;->ordinal()I
 
     move-result v10
 
@@ -2466,7 +2466,7 @@
 
     move-result-object v10
 
-    invoke-virtual {v10}, Lcom/android/internal/telephony/cat/AppInterface$CommandType;->ordinal()I
+    invoke-virtual {v10}, Ljava/lang/Enum;->ordinal()I
 
     move-result v10
 
@@ -3094,7 +3094,7 @@
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
     .line 2117
-    invoke-virtual {p0}, Lcom/android/stk/StkAppService;->getBaseContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -3165,7 +3165,7 @@
     .line 2130
     iget-object v1, p0, Lcom/android/stk/StkAppService;->mSIMStateChangeReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v1, v0}, Lcom/android/stk/StkAppService;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v1, v0}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 2131
     return-void
@@ -3228,7 +3228,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/internal/telephony/cat/AppInterface$CommandType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -3332,7 +3332,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/internal/telephony/cat/AppInterface$CommandType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -3518,7 +3518,7 @@
 
     iget-object v4, p1, Lcom/android/internal/telephony/cat/CatCmdMessage$BrowserSettings;->mode:Lcom/android/internal/telephony/cat/LaunchBrowserMode;
 
-    invoke-virtual {v4}, Lcom/android/internal/telephony/cat/LaunchBrowserMode;->ordinal()I
+    invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
 
     move-result v4
 
@@ -3528,7 +3528,7 @@
 
     .line 1809
     :goto_2
-    invoke-virtual {p0, v1}, Lcom/android/stk/StkAppService;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v1}, Landroid/content/ContextWrapper;->startActivity(Landroid/content/Intent;)V
 
     .line 1815
     const-wide/16 v3, 0x2710
@@ -3778,7 +3778,7 @@
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
     .line 1758
-    invoke-virtual {p0, v0}, Lcom/android/stk/StkAppService;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->startActivity(Landroid/content/Intent;)V
 
     .line 1759
     return-void
@@ -3903,7 +3903,7 @@
 
     move-result-object v7
 
-    invoke-virtual {v7}, Lcom/android/internal/telephony/cat/AppInterface$CommandType;->ordinal()I
+    invoke-virtual {v7}, Ljava/lang/Enum;->ordinal()I
 
     move-result v7
 
@@ -4400,7 +4400,7 @@
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
     .line 1551
-    invoke-virtual {p0, v1}, Lcom/android/stk/StkAppService;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v1}, Landroid/content/ContextWrapper;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_0
 .end method
@@ -4453,7 +4453,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
     .line 1944
-    invoke-virtual {p0, v0}, Lcom/android/stk/StkAppService;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->startActivity(Landroid/content/Intent;)V
 
     .line 1945
     return-void
@@ -4623,7 +4623,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/android/internal/telephony/cat/AppInterface$CommandType;->name()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v2
 
@@ -4714,7 +4714,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/android/internal/telephony/cat/AppInterface$CommandType;->name()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v2
 
@@ -4800,7 +4800,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/android/internal/telephony/cat/AppInterface$CommandType;->name()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v2
 
@@ -4962,7 +4962,7 @@
     .line 1211
     sget-object v3, Lcom/android/stk/StkAppService$4;->$SwitchMap$com$android$internal$telephony$Call$State:[I
 
-    invoke-virtual {v0}, Lcom/android/internal/telephony/Call$State;->ordinal()I
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v4
 
@@ -5197,7 +5197,7 @@
     .local v0, callState:Lcom/android/internal/telephony/Call$State;
     sget-object v2, Lcom/android/stk/StkAppService$4;->$SwitchMap$com$android$internal$telephony$Call$State:[I
 
-    invoke-virtual {v0}, Lcom/android/internal/telephony/Call$State;->ordinal()I
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v3
 
@@ -5314,7 +5314,7 @@
     .local v0, callState:Lcom/android/internal/telephony/Call$State;
     sget-object v1, Lcom/android/stk/StkAppService$4;->$SwitchMap$com$android$internal$telephony$Call$State:[I
 
-    invoke-virtual {v0}, Lcom/android/internal/telephony/Call$State;->ordinal()I
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v2
 
@@ -5457,7 +5457,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/android/internal/telephony/cat/AppInterface$CommandType;->name()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v3
 
@@ -5599,7 +5599,7 @@
     .local v1, txtMsg:Lcom/android/internal/telephony/cat/TextMessage;
     sget-object v2, Lcom/android/stk/StkAppService$4;->$SwitchMap$com$android$internal$telephony$Call$State:[I
 
-    invoke-virtual {v0}, Lcom/android/internal/telephony/Call$State;->ordinal()I
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v3
 
@@ -5820,7 +5820,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/android/internal/telephony/cat/AppInterface$CommandType;->ordinal()I
+    invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
 
     move-result v4
 
@@ -5882,7 +5882,7 @@
     .line 1048
     sget-object v3, Lcom/android/stk/StkAppService$4;->$SwitchMap$com$android$internal$telephony$Call$State:[I
 
-    invoke-virtual {v2}, Lcom/android/internal/telephony/Call$State;->ordinal()I
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
 
     move-result v4
 
@@ -6113,7 +6113,7 @@
     .line 1077
     sget-object v1, Lcom/android/stk/StkAppService$4;->$SwitchMap$com$android$internal$telephony$Phone$SuppService:[I
 
-    invoke-virtual {v0}, Lcom/android/internal/telephony/Phone$SuppService;->ordinal()I
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v2
 
@@ -6212,7 +6212,7 @@
     .line 1687
     iget-object v1, p0, Lcom/android/stk/StkAppService;->mServiceHandler:Lcom/android/stk/StkAppService$ServiceHandler;
 
-    invoke-virtual {v1}, Lcom/android/stk/StkAppService$ServiceHandler;->obtainMessage()Landroid/os/Message;
+    invoke-virtual {v1}, Landroid/os/Handler;->obtainMessage()Landroid/os/Message;
 
     move-result-object v0
 
@@ -6225,7 +6225,7 @@
     .line 1689
     iget-object v1, p0, Lcom/android/stk/StkAppService;->mServiceHandler:Lcom/android/stk/StkAppService$ServiceHandler;
 
-    invoke-virtual {v1, v0}, Lcom/android/stk/StkAppService$ServiceHandler;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     .line 1690
     return-void
@@ -6612,7 +6612,7 @@
 
     invoke-direct {v1, p0}, Lcom/android/stk/StkAppService$1;-><init>(Lcom/android/stk/StkAppService;)V
 
-    invoke-virtual {p0, v1, v0}, Lcom/android/stk/StkAppService;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v1, v0}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 314
     return-void
@@ -6781,7 +6781,7 @@
     const/4 v10, 0x1
 
     .line 1578
-    invoke-virtual {p0}, Lcom/android/stk/StkAppService;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v8
 
@@ -7168,7 +7168,7 @@
 
     .line 1633
     .local v3, e:Landroid/content/pm/PackageManager$NameNotFoundException;
-    invoke-virtual {v3}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
+    invoke-virtual {v3}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 .end method
@@ -7246,7 +7246,7 @@
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
     .line 262
-    invoke-virtual {p0}, Lcom/android/stk/StkAppService;->getBaseContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -7317,7 +7317,7 @@
     .line 275
     iget-object v1, p0, Lcom/android/stk/StkAppService;->mSIMStateChangeReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v1, v0}, Lcom/android/stk/StkAppService;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v1, v0}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     goto :goto_0
 .end method
@@ -7329,7 +7329,7 @@
     .line 362
     iget-object v0, p0, Lcom/android/stk/StkAppService;->mSIMStateChangeReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/android/stk/StkAppService;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 363
     invoke-direct {p0}, Lcom/android/stk/StkAppService;->waitForLooper()V
@@ -7383,7 +7383,7 @@
     .line 338
     iget-object v2, p0, Lcom/android/stk/StkAppService;->mServiceHandler:Lcom/android/stk/StkAppService$ServiceHandler;
 
-    invoke-virtual {v2}, Lcom/android/stk/StkAppService$ServiceHandler;->obtainMessage()Landroid/os/Message;
+    invoke-virtual {v2}, Landroid/os/Handler;->obtainMessage()Landroid/os/Message;
 
     move-result-object v1
 
@@ -7419,7 +7419,7 @@
     :pswitch_1
     iget-object v2, p0, Lcom/android/stk/StkAppService;->mServiceHandler:Lcom/android/stk/StkAppService$ServiceHandler;
 
-    invoke-virtual {v2, v1}, Lcom/android/stk/StkAppService$ServiceHandler;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v2, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     goto :goto_0
 
@@ -7526,7 +7526,7 @@
     :cond_0
     iget-object v1, p0, Lcom/android/stk/StkAppService;->mServiceHandler:Lcom/android/stk/StkAppService$ServiceHandler;
 
-    invoke-virtual {v1, v4, p1, v4, p2}, Lcom/android/stk/StkAppService$ServiceHandler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
+    invoke-virtual {v1, v4, p1, v4, p2}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v0
 
@@ -7534,7 +7534,7 @@
     .local v0, msg:Landroid/os/Message;
     iget-object v1, p0, Lcom/android/stk/StkAppService;->mServiceHandler:Lcom/android/stk/StkAppService$ServiceHandler;
 
-    invoke-virtual {v1, v0}, Lcom/android/stk/StkAppService$ServiceHandler;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     .line 2140
     return-void

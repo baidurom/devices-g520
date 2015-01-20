@@ -137,7 +137,7 @@
     .line 147
     new-instance v0, Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/NetworkManagementService;->mQuotaLock:Ljava/lang/Object;
 
@@ -2799,7 +2799,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v3
 
@@ -2874,7 +2874,7 @@
 
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mActiveQuotas:Ljava/util/HashMap;
 
-    invoke-virtual {v2}, Ljava/util/HashMap;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/util/AbstractMap;->toString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -2887,7 +2887,7 @@
 
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mActiveAlerts:Ljava/util/HashMap;
 
-    invoke-virtual {v2}, Ljava/util/HashMap;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/util/AbstractMap;->toString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -3242,7 +3242,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v3
 

@@ -54,7 +54,7 @@
     .line 44
     const v0, 0x106000d
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/ui/RotateLayout;->setBackgroundResource(I)V
+    invoke-virtual {p0, v0}, Landroid/view/View;->setBackgroundResource(I)V
 
     .line 45
     return-void
@@ -81,7 +81,7 @@
     .line 56
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/ui/RotateLayout;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -180,7 +180,7 @@
 
     .line 100
     :goto_0
-    invoke-virtual {p0, v1, v0}, Lcom/android/camera/ui/RotateLayout;->setMeasuredDimension(II)V
+    invoke-virtual {p0, v1, v0}, Landroid/view/View;->setMeasuredDimension(II)V
 
     .line 102
     iget v2, p0, Lcom/android/camera/ui/RotateLayout;->mOrientation:I
@@ -206,7 +206,7 @@
     :sswitch_0
     iget-object v2, p0, Lcom/android/camera/ui/RotateLayout;->mChild:Landroid/view/View;
 
-    invoke-virtual {p0, v2, p1, p2}, Lcom/android/camera/ui/RotateLayout;->measureChild(Landroid/view/View;II)V
+    invoke-virtual {p0, v2, p1, p2}, Landroid/view/ViewGroup;->measureChild(Landroid/view/View;II)V
 
     .line 88
     iget-object v2, p0, Lcom/android/camera/ui/RotateLayout;->mChild:Landroid/view/View;
@@ -229,7 +229,7 @@
     :sswitch_1
     iget-object v2, p0, Lcom/android/camera/ui/RotateLayout;->mChild:Landroid/view/View;
 
-    invoke-virtual {p0, v2, p2, p1}, Lcom/android/camera/ui/RotateLayout;->measureChild(Landroid/view/View;II)V
+    invoke-virtual {p0, v2, p2, p1}, Landroid/view/ViewGroup;->measureChild(Landroid/view/View;II)V
 
     .line 94
     iget-object v2, p0, Lcom/android/camera/ui/RotateLayout;->mChild:Landroid/view/View;
@@ -505,7 +505,7 @@
     iput p1, p0, Lcom/android/camera/ui/RotateLayout;->mOrientation:I
 
     .line 139
-    invoke-virtual {p0}, Lcom/android/camera/ui/RotateLayout;->requestLayout()V
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 
     goto :goto_0
 .end method

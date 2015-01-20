@@ -65,7 +65,7 @@
     .line 89
     .local p0, this:Lcom/mediatek/activity/ServiceActivityHelper;,"Lcom/mediatek/activity/ServiceActivityHelper<TServiceInterface;>;"
     .local p1, serviceActivity:Lcom/mediatek/activity/ServiceActivityHelper$ServiceActivity;,"Lcom/mediatek/activity/ServiceActivityHelper$ServiceActivity<TServiceInterface;>;"
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 81
     const/4 v0, 0x0
@@ -264,7 +264,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setCancelable(Z)V
+    invoke-virtual {v0, v1}, Landroid/app/Dialog;->setCancelable(Z)V
 
     .line 225
     iget-object v0, p0, Lcom/mediatek/activity/ServiceActivityHelper;->busyDialog:Landroid/app/ProgressDialog;
@@ -319,7 +319,7 @@
 
     iget-object v0, p0, Lcom/mediatek/activity/ServiceActivityHelper;->busyDialog:Landroid/app/ProgressDialog;
 
-    invoke-virtual {v0}, Landroid/app/ProgressDialog;->isShowing()Z
+    invoke-virtual {v0}, Landroid/app/Dialog;->isShowing()Z
 
     move-result v0
 

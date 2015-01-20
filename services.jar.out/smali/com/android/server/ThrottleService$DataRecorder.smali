@@ -50,7 +50,7 @@
 
     .prologue
     .line 815
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 811
     const/4 v0, 0x0
@@ -513,7 +513,7 @@
 
     move-result-object v5
 
-    invoke-virtual {v4, v5}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
+    invoke-virtual {v4, v5}, Ljava/io/Writer;->write(Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
@@ -682,7 +682,7 @@
     :try_start_1
     move-object/from16 v0, v17
 
-    invoke-virtual {v0, v2}, Ljava/io/FileInputStream;->read([B)I
+    invoke-virtual {v0, v2}, Ljava/io/InputStream;->read([B)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_6

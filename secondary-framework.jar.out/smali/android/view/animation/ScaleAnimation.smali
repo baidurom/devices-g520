@@ -630,7 +630,7 @@
 
     .line 244
     .local v2, sy:F
-    invoke-virtual {p0}, Landroid/view/animation/ScaleAnimation;->getScaleFactor()F
+    invoke-virtual {p0}, Landroid/view/animation/Animation;->getScaleFactor()F
 
     move-result v0
 
@@ -826,7 +826,7 @@
 
     iget v1, p0, Landroid/view/animation/ScaleAnimation;->mPivotXValue:F
 
-    invoke-virtual {p0, v0, v1, p1, p3}, Landroid/view/animation/ScaleAnimation;->resolveSize(IFII)F
+    invoke-virtual {p0, v0, v1, p1, p3}, Landroid/view/animation/Animation;->resolveSize(IFII)F
 
     move-result v0
 
@@ -837,7 +837,7 @@
 
     iget v1, p0, Landroid/view/animation/ScaleAnimation;->mPivotYValue:F
 
-    invoke-virtual {p0, v0, v1, p2, p4}, Landroid/view/animation/ScaleAnimation;->resolveSize(IFII)F
+    invoke-virtual {p0, v0, v1, p2, p4}, Landroid/view/animation/Animation;->resolveSize(IFII)F
 
     move-result v0
 

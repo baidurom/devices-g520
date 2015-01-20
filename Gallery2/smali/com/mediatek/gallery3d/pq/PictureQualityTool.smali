@@ -1116,7 +1116,7 @@
 
     iget-object v1, p0, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->hueSeekBarTouchBase:Lcom/mediatek/gallery3d/pq/SeekBarTouchBase;
 
-    invoke-virtual {v0, v1}, Landroid/widget/SeekBar;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     .line 630
     new-instance v0, Lcom/mediatek/gallery3d/pq/SeekBarTouchBase;
@@ -1140,7 +1140,7 @@
 
     iget-object v1, p0, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->saturationSeekBarTouchBase:Lcom/mediatek/gallery3d/pq/SeekBarTouchBase;
 
-    invoke-virtual {v0, v1}, Landroid/widget/SeekBar;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     .line 633
     new-instance v6, Lcom/mediatek/gallery3d/pq/PictureQualityTool$SeekBarTouchVisibleLisenter;
@@ -1198,7 +1198,7 @@
     .line 355
     const v0, 0x7f04003d
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->setContentView(I)V
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->setContentView(I)V
 
     .line 356
     invoke-direct {p0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->initPQToolViewADVMode()V
@@ -1214,7 +1214,7 @@
     .line 350
     const v0, 0x7f04003c
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->setContentView(I)V
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->setContentView(I)V
 
     .line 351
     invoke-direct {p0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->initPQToolView()V
@@ -1510,7 +1510,7 @@
     .line 375
     const v0, 0x7f0b002f
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1521,7 +1521,7 @@
     .line 376
     const v0, 0x7f0b0095
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1532,7 +1532,7 @@
     .line 377
     const v0, 0x7f0b009d
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1543,7 +1543,7 @@
     .line 379
     const v0, 0x7f0b008a
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1554,7 +1554,7 @@
     .line 380
     const v0, 0x7f0b008f
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1565,7 +1565,7 @@
     .line 381
     const v0, 0x7f0b0093
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1576,7 +1576,7 @@
     .line 382
     const v0, 0x7f0b00a6
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1587,7 +1587,7 @@
     .line 383
     const v0, 0x7f0b0097
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1598,7 +1598,7 @@
     .line 384
     const v0, 0x7f0b009f
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1609,7 +1609,7 @@
     .line 386
     const v0, 0x7f0b009b
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1620,7 +1620,7 @@
     .line 387
     const v0, 0x7f0b00a3
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1631,7 +1631,7 @@
     .line 388
     const v0, 0x7f0b00aa
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1642,7 +1642,7 @@
     .line 391
     const v0, 0x7f0b0090
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1653,7 +1653,7 @@
     .line 392
     const v0, 0x7f0b008e
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1664,7 +1664,7 @@
     .line 395
     const v0, 0x7f0b00a7
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1675,7 +1675,7 @@
     .line 396
     const v0, 0x7f0b00a5
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1686,7 +1686,7 @@
     .line 399
     const v0, 0x7f0b00a0
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1697,7 +1697,7 @@
     .line 400
     const v0, 0x7f0b009e
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1708,7 +1708,7 @@
     .line 403
     const v0, 0x7f0b0098
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1719,7 +1719,7 @@
     .line 404
     const v0, 0x7f0b0096
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1730,7 +1730,7 @@
     .line 407
     const v0, 0x7f0b0094
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1741,7 +1741,7 @@
     .line 408
     const v0, 0x7f0b0092
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1752,7 +1752,7 @@
     .line 410
     const v0, 0x7f0b009c
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1763,7 +1763,7 @@
     .line 411
     const v0, 0x7f0b009a
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1774,7 +1774,7 @@
     .line 413
     const v0, 0x7f0b00a4
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1785,7 +1785,7 @@
     .line 414
     const v0, 0x7f0b00a2
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1796,7 +1796,7 @@
     .line 416
     const v0, 0x7f0b00ab
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1807,7 +1807,7 @@
     .line 417
     const v0, 0x7f0b00a9
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1834,7 +1834,7 @@
     .line 421
     const v0, 0x7f0b00ac
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1845,7 +1845,7 @@
     .line 422
     const-string v0, "layout_inflater"
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v7
 
@@ -1859,7 +1859,7 @@
 
     .line 424
     .local v9, v:Landroid/view/View;
-    invoke-virtual {p0, v2}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v8
 
@@ -1867,11 +1867,11 @@
 
     .line 425
     .local v8, mRelativeLayout:Landroid/widget/RelativeLayout;
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->getLayoutInflater()Landroid/view/LayoutInflater;
+    invoke-virtual {p0}, Landroid/app/Activity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v1
 
@@ -1886,11 +1886,11 @@
     invoke-virtual {v0, v1, v2}, Landroid/view/Window;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 426
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->getLayoutInflater()Landroid/view/LayoutInflater;
+    invoke-virtual {p0}, Landroid/app/Activity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v1
 
@@ -1907,11 +1907,11 @@
     invoke-virtual {v0, v1, v2}, Landroid/view/Window;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 427
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->getLayoutInflater()Landroid/view/LayoutInflater;
+    invoke-virtual {p0}, Landroid/app/Activity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v1
 
@@ -1953,12 +1953,12 @@
 
     iget-object v1, p0, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->mImageViewTouchBase:Lcom/mediatek/gallery3d/pq/ImageViewTouchBase;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     .line 431
     const v0, 0x7f0b00bd
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1969,7 +1969,7 @@
     .line 432
     const v0, 0x7f0b00c5
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1980,7 +1980,7 @@
     .line 433
     const v0, 0x7f0b00c6
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1991,7 +1991,7 @@
     .line 434
     const v0, 0x7f0b00c7
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -2002,7 +2002,7 @@
     .line 436
     const v0, 0x7f0b00be
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -2013,7 +2013,7 @@
     .line 437
     const v0, 0x7f0b00bf
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -2024,7 +2024,7 @@
     .line 438
     const v0, 0x7f0b00c0
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -2070,7 +2070,7 @@
     .line 449
     const v0, 0x7f0b00c1
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -2081,7 +2081,7 @@
     .line 450
     const v0, 0x7f0b00c8
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -2092,7 +2092,7 @@
     .line 451
     const v0, 0x7f0b00c9
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -2103,7 +2103,7 @@
     .line 452
     const v0, 0x7f0b00ca
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -2114,7 +2114,7 @@
     .line 454
     const v0, 0x7f0b00c2
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -2125,7 +2125,7 @@
     .line 455
     const v0, 0x7f0b00c3
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -2136,7 +2136,7 @@
     .line 456
     const v0, 0x7f0b00c4
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -2269,7 +2269,7 @@
     .prologue
     .line 589
     :try_start_0
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -2385,7 +2385,7 @@
     .end local v1           #mMessage:Landroid/os/Message;
     :cond_0
     :try_start_1
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
     :try_end_1
     .catch Ljava/lang/NullPointerException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
@@ -2406,7 +2406,7 @@
     invoke-static {v3, v4}, Lcom/mediatek/gallery3d/util/MtkLog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 597
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 
@@ -2424,7 +2424,7 @@
     invoke-static {v3, v4}, Lcom/mediatek/gallery3d/util/MtkLog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 600
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 
@@ -2462,7 +2462,7 @@
     invoke-static {v3, v4}, Lcom/mediatek/gallery3d/util/MtkLog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 603
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 .end method
@@ -2577,7 +2577,7 @@
     .line 623
     const/4 v2, -0x1
 
-    invoke-virtual {p0, v2, v1}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->setResult(ILandroid/content/Intent;)V
+    invoke-virtual {p0, v2, v1}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
 
     .line 624
     return-void
@@ -3018,7 +3018,7 @@
 
     div-int/2addr v1, v2
 
-    invoke-virtual {v0, v1}, Landroid/widget/SeekBar;->setProgress(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setProgress(I)V
 
     .line 536
     const-string v0, "PictureQualityTool"
@@ -3150,7 +3150,7 @@
 
     div-int/2addr v1, v2
 
-    invoke-virtual {v0, v1}, Landroid/widget/SeekBar;->setProgress(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setProgress(I)V
 
     .line 542
     iget-object v0, p0, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->mTextViewGrassTone:Landroid/widget/TextView;
@@ -3214,7 +3214,7 @@
 
     div-int/2addr v1, v2
 
-    invoke-virtual {v0, v1}, Landroid/widget/SeekBar;->setProgress(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setProgress(I)V
 
     .line 546
     iget-object v0, p0, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->mTextViewSkinTone:Landroid/widget/TextView;
@@ -3278,7 +3278,7 @@
 
     div-int/2addr v1, v2
 
-    invoke-virtual {v0, v1}, Landroid/widget/SeekBar;->setProgress(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setProgress(I)V
 
     .line 549
     iget-object v0, p0, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->mTextViewGlobal:Landroid/widget/TextView;
@@ -3330,7 +3330,7 @@
 
     div-int/2addr v1, v2
 
-    invoke-virtual {v0, v1}, Landroid/widget/SeekBar;->setProgress(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setProgress(I)V
 
     .line 551
     const-string v0, "PictureQualityTool"
@@ -3455,7 +3455,7 @@
 
     div-int/2addr v1, v2
 
-    invoke-virtual {v0, v1}, Landroid/widget/SeekBar;->setProgress(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setProgress(I)V
 
     .line 559
     iget-object v0, p0, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->mTextViewGrassSat:Landroid/widget/TextView;
@@ -3507,7 +3507,7 @@
 
     div-int/2addr v1, v2
 
-    invoke-virtual {v0, v1}, Landroid/widget/SeekBar;->setProgress(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setProgress(I)V
 
     .line 562
     iget-object v0, p0, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->mTextViewSkySat:Landroid/widget/TextView;
@@ -3559,7 +3559,7 @@
 
     div-int/2addr v1, v2
 
-    invoke-virtual {v0, v1}, Landroid/widget/SeekBar;->setProgress(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setProgress(I)V
 
     .line 566
     return-void
@@ -3650,7 +3650,7 @@
 
     div-int/2addr v1, v2
 
-    invoke-virtual {v0, v1}, Landroid/widget/SeekBar;->setProgress(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setProgress(I)V
 
     .line 493
     iget-object v0, p0, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->textView_saturation:Landroid/widget/TextView;
@@ -3715,7 +3715,7 @@
 
     div-int/2addr v1, v2
 
-    invoke-virtual {v0, v1}, Landroid/widget/SeekBar;->setProgress(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setProgress(I)V
 
     .line 497
     iget-object v0, p0, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->textView_hue_temple:Landroid/widget/TextView;
@@ -3844,12 +3844,12 @@
     .line 238
     const/16 v2, 0x8
 
-    invoke-virtual {p0, v2}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->requestWindowFeature(I)Z
+    invoke-virtual {p0, v2}, Landroid/app/Activity;->requestWindowFeature(I)Z
 
     .line 239
     const/16 v2, 0x9
 
-    invoke-virtual {p0, v2}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->requestWindowFeature(I)Z
+    invoke-virtual {p0, v2}, Landroid/app/Activity;->requestWindowFeature(I)Z
 
     .line 240
     new-instance v1, Landroid/util/DisplayMetrics;
@@ -3858,7 +3858,7 @@
 
     .line 241
     .local v1, outMetrics:Landroid/util/DisplayMetrics;
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->getWindowManager()Landroid/view/WindowManager;
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindowManager()Landroid/view/WindowManager;
 
     move-result-object v2
 
@@ -3916,17 +3916,17 @@
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 245
-    invoke-virtual {p0, v6}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v6}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->mView:Landroid/view/View;
 
     .line 246
-    invoke-virtual {p0, v6}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->setContentView(I)V
+    invoke-virtual {p0, v6}, Landroid/app/Activity;->setContentView(I)V
 
     .line 247
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -4016,7 +4016,7 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreateOptionsMenu(Landroid/view/Menu;)Z
 
     .line 277
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->getMenuInflater()Landroid/view/MenuInflater;
+    invoke-virtual {p0}, Landroid/app/Activity;->getMenuInflater()Landroid/view/MenuInflater;
 
     move-result-object v0
 
@@ -4115,7 +4115,7 @@
 
     .line 291
     :sswitch_0
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 
@@ -4127,7 +4127,7 @@
     invoke-direct {p0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->onSaveClicked()V
 
     .line 296
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 
@@ -4136,7 +4136,7 @@
     invoke-direct {p0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->onSaveClicked()V
 
     .line 300
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 

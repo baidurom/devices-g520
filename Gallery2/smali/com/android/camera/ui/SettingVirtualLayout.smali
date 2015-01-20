@@ -274,7 +274,7 @@
     .line 233
     aget-object v5, v0, v2
 
-    invoke-virtual {v5, v8}, Landroid/widget/RadioButton;->setChecked(Z)V
+    invoke-virtual {v5, v8}, Landroid/widget/CompoundButton;->setChecked(Z)V
 
     .line 231
     :cond_3
@@ -352,7 +352,7 @@
     .line 60
     const v0, 0x7f0b00e0
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/ui/SettingVirtualLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -405,7 +405,7 @@
     :cond_1
     iget-object v2, p0, Lcom/android/camera/ui/SettingVirtualLayout;->mAdapter:Lcom/android/camera/ui/SettingVirtualLayout$MyAdapter;
 
-    invoke-virtual {v2}, Lcom/android/camera/ui/SettingVirtualLayout$MyAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v2}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
 
     .line 193
     return-void

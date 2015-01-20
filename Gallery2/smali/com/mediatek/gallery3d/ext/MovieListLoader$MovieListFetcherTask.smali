@@ -253,7 +253,7 @@
     .restart local v15       #movieList:Lcom/mediatek/gallery3d/ext/IMovieList;
     :goto_1
     :try_start_2
-    invoke-virtual {v10}, Landroid/database/sqlite/SQLiteException;->printStackTrace()V
+    invoke-virtual {v10}, Ljava/lang/Throwable;->printStackTrace()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
@@ -910,7 +910,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/ext/MovieListLoader$MovieListFetcherTask;->isCancelled()Z
+    invoke-virtual {p0}, Landroid/os/AsyncTask;->isCancelled()Z
 
     move-result v2
 
@@ -925,7 +925,7 @@
     invoke-static {v0, v1}, Lcom/mediatek/gallery3d/ext/MtkLog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 88
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/ext/MovieListLoader$MovieListFetcherTask;->isCancelled()Z
+    invoke-virtual {p0}, Landroid/os/AsyncTask;->isCancelled()Z
 
     move-result v0
 

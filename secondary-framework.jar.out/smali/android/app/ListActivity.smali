@@ -71,7 +71,7 @@
     :cond_0
     const v0, 0x1090066
 
-    invoke-virtual {p0, v0}, Landroid/app/ListActivity;->setContentView(I)V
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->setContentView(I)V
 
     goto :goto_0
 .end method
@@ -108,7 +108,7 @@
     .line 290
     iget-object v0, p0, Landroid/app/ListActivity;->mList:Landroid/widget/ListView;
 
-    invoke-virtual {v0}, Landroid/widget/ListView;->getSelectedItemId()J
+    invoke-virtual {v0}, Landroid/widget/AdapterView;->getSelectedItemId()J
 
     move-result-wide v0
 
@@ -122,7 +122,7 @@
     .line 283
     iget-object v0, p0, Landroid/app/ListActivity;->mList:Landroid/widget/ListView;
 
-    invoke-virtual {v0}, Landroid/widget/ListView;->getSelectedItemPosition()I
+    invoke-virtual {v0}, Landroid/widget/AdapterView;->getSelectedItemPosition()I
 
     move-result v0
 
@@ -139,7 +139,7 @@
     .line 240
     const v1, 0x1020004
 
-    invoke-virtual {p0, v1}, Landroid/app/ListActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -147,7 +147,7 @@
     .local v0, emptyView:Landroid/view/View;
     const v1, 0x102000a
 
-    invoke-virtual {p0, v1}, Landroid/app/ListActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -176,7 +176,7 @@
     .line 248
     iget-object v1, p0, Landroid/app/ListActivity;->mList:Landroid/widget/ListView;
 
-    invoke-virtual {v1, v0}, Landroid/widget/ListView;->setEmptyView(Landroid/view/View;)V
+    invoke-virtual {v1, v0}, Landroid/widget/AdapterView;->setEmptyView(Landroid/view/View;)V
 
     .line 250
     :cond_1
@@ -184,7 +184,7 @@
 
     iget-object v2, p0, Landroid/app/ListActivity;->mOnClickListener:Landroid/widget/AdapterView$OnItemClickListener;
 
-    invoke-virtual {v1, v2}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
+    invoke-virtual {v1, v2}, Landroid/widget/AdapterView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 251
     iget-boolean v1, p0, Landroid/app/ListActivity;->mFinishedStart:Z

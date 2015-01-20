@@ -169,7 +169,7 @@
 
     .prologue
     .line 55
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 282
     return-void
@@ -229,7 +229,7 @@
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 130
-    invoke-virtual {v0}, Ljava/lang/ExceptionInInitializerError;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 .end method
@@ -714,7 +714,7 @@
     if-nez v1, :cond_1
 
     .line 658
-    invoke-virtual {p2}, Lcom/android/gallery3d/data/MediaItem;->getContentUri()Landroid/net/Uri;
+    invoke-virtual {p2}, Lcom/android/gallery3d/data/MediaObject;->getContentUri()Landroid/net/Uri;
 
     move-result-object v0
 

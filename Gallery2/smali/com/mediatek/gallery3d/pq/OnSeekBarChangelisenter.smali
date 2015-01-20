@@ -19,7 +19,7 @@
 
     .prologue
     .line 11
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 12
     iput-object p1, p0, Lcom/mediatek/gallery3d/pq/OnSeekBarChangelisenter;->mLisenter:Lcom/mediatek/gallery3d/pq/SeekBarChangeInterface;

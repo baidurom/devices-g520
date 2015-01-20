@@ -30,7 +30,7 @@
     .line 182
     iput-object p1, p0, Lcom/mediatek/FMRadio/dialogs/EditFavoriteDialog$3;->this$0:Lcom/mediatek/FMRadio/dialogs/EditFavoriteDialog;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -71,7 +71,7 @@
     .line 185
     iget-object v8, p0, Lcom/mediatek/FMRadio/dialogs/EditFavoriteDialog$3;->this$0:Lcom/mediatek/FMRadio/dialogs/EditFavoriteDialog;
 
-    invoke-virtual {v8}, Lcom/mediatek/FMRadio/dialogs/EditFavoriteDialog;->getDialog()Landroid/app/Dialog;
+    invoke-virtual {v8}, Landroid/app/DialogFragment;->getDialog()Landroid/app/Dialog;
 
     move-result-object v8
 
@@ -130,7 +130,7 @@
     .local v7, station:I
     iget-object v8, p0, Lcom/mediatek/FMRadio/dialogs/EditFavoriteDialog$3;->this$0:Lcom/mediatek/FMRadio/dialogs/EditFavoriteDialog;
 
-    invoke-virtual {v8}, Lcom/mediatek/FMRadio/dialogs/EditFavoriteDialog;->getDialog()Landroid/app/Dialog;
+    invoke-virtual {v8}, Landroid/app/DialogFragment;->getDialog()Landroid/app/Dialog;
 
     move-result-object v8
 
@@ -158,7 +158,7 @@
     .line 204
     const/4 v8, 0x1
 
-    invoke-virtual {v6, v8}, Landroid/widget/Button;->setEnabled(Z)V
+    invoke-virtual {v6, v8}, Landroid/widget/TextView;->setEnabled(Z)V
 
     goto :goto_0
 
@@ -172,7 +172,7 @@
 
     .line 193
     .local v4, e:Ljava/lang/NumberFormatException;
-    invoke-virtual {v4}, Ljava/lang/NumberFormatException;->printStackTrace()V
+    invoke-virtual {v4}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_1
 
@@ -186,17 +186,17 @@
     if-eqz v6, :cond_3
 
     .line 209
-    invoke-virtual {v6, v10}, Landroid/widget/Button;->setEnabled(Z)V
+    invoke-virtual {v6, v10}, Landroid/widget/TextView;->setEnabled(Z)V
 
     .line 211
     :cond_3
     iget-object v8, p0, Lcom/mediatek/FMRadio/dialogs/EditFavoriteDialog$3;->this$0:Lcom/mediatek/FMRadio/dialogs/EditFavoriteDialog;
 
-    invoke-virtual {v8}, Lcom/mediatek/FMRadio/dialogs/EditFavoriteDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v8}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
-    invoke-virtual {v8}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {v8}, Landroid/content/ContextWrapper;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 

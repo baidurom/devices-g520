@@ -19,7 +19,7 @@
     .line 37
     const/16 v0, 0x82
 
-    invoke-virtual {p0, v0}, Lcom/google/android/mms/pdu/NotificationInd;->setMessageType(I)V
+    invoke-virtual {p0, v0}, Lcom/google/android/mms/pdu/GenericPdu;->setMessageType(I)V
 
     .line 38
     return-void

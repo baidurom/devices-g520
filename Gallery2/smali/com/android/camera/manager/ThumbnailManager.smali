@@ -4,9 +4,9 @@
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
-.implements Lcom/android/camera/FileSaver$FileSaverListener;
-.implements Lcom/android/camera/Camera$Resumable;
 .implements Lcom/android/camera/Camera$OnFullScreenChangedListener;
+.implements Lcom/android/camera/Camera$Resumable;
+.implements Lcom/android/camera/FileSaver$FileSaverListener;
 
 
 # annotations
@@ -127,7 +127,7 @@
     .line 85
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/manager/ThumbnailManager;->setFileter(Z)V
+    invoke-virtual {p0, v0}, Lcom/android/camera/manager/ViewManager;->setFileter(Z)V
 
     .line 86
     invoke-virtual {p1, p0}, Lcom/android/camera/Camera;->addResumable(Lcom/android/camera/Camera$Resumable;)Z
@@ -329,7 +329,7 @@
 
     new-array v1, v1, [Ljava/lang/Void;
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/manager/ThumbnailManager$LoadThumbnailTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     move-result-object v0
 
@@ -396,7 +396,7 @@
 
     new-array v1, v2, [Ljava/lang/Void;
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/manager/ThumbnailManager$LoadThumbnailTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     move-result-object v0
 
@@ -471,7 +471,7 @@
 
     aput-object v3, v1, v2
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/manager/ThumbnailManager$SaveThumbnailTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     .line 284
     :cond_1
@@ -554,7 +554,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/ThumbnailManager;->isShowing()Z
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->isShowing()Z
 
     move-result v2
 
@@ -575,7 +575,7 @@
     if-eqz v0, :cond_1
 
     .line 172
-    invoke-virtual {p0}, Lcom/android/camera/manager/ThumbnailManager;->isShowing()Z
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->isShowing()Z
 
     move-result v0
 
@@ -610,7 +610,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/ui/RotateImageView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 183
     :goto_0
@@ -633,7 +633,7 @@
 
     iget-object v2, p0, Lcom/android/camera/manager/ThumbnailManager;->mThumbnailView:Lcom/android/camera/ui/RotateImageView;
 
-    invoke-virtual {v2}, Lcom/android/camera/ui/RotateImageView;->getVisibility()I
+    invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
 
     move-result v2
 
@@ -662,7 +662,7 @@
     .line 178
     iget-object v0, p0, Lcom/android/camera/manager/ThumbnailManager;->mThumbnailView:Lcom/android/camera/ui/RotateImageView;
 
-    invoke-virtual {v0, v3}, Lcom/android/camera/ui/RotateImageView;->setVisibility(I)V
+    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
     goto :goto_0
 
@@ -670,7 +670,7 @@
     :cond_3
     iget-object v0, p0, Lcom/android/camera/manager/ThumbnailManager;->mThumbnailView:Lcom/android/camera/ui/RotateImageView;
 
-    invoke-virtual {v0, v3}, Lcom/android/camera/ui/RotateImageView;->setVisibility(I)V
+    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
     goto :goto_0
 .end method
@@ -695,7 +695,7 @@
 
     .line 108
     .local v0, t:Landroid/os/HandlerThread;
-    invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     .line 109
     new-instance v1, Lcom/android/camera/manager/ThumbnailManager$WorkerHandler;
@@ -726,7 +726,7 @@
     .line 149
     iget-object v0, p0, Lcom/android/camera/manager/ThumbnailManager;->mWorkerHandler:Lcom/android/camera/manager/ThumbnailManager$WorkerHandler;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/ThumbnailManager$WorkerHandler;->getLooper()Landroid/os/Looper;
+    invoke-virtual {v0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
     move-result-object v0
 
@@ -755,7 +755,7 @@
     .line 155
     const v1, 0x7f040052
 
-    invoke-virtual {p0, v1}, Lcom/android/camera/manager/ThumbnailManager;->inflate(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/camera/manager/ViewManager;->inflate(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -774,7 +774,7 @@
     .line 157
     iget-object v1, p0, Lcom/android/camera/manager/ThumbnailManager;->mThumbnailView:Lcom/android/camera/ui/RotateImageView;
 
-    invoke-virtual {v1, p0}, Lcom/android/camera/ui/RotateImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 158
     return-object v0
@@ -815,11 +815,11 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/ThumbnailManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/android/camera/Camera;->isUIEnabled()Z
+    invoke-virtual {v2}, Lcom/android/camera/ActivityBase;->isUIEnabled()Z
 
     move-result v2
 
@@ -835,17 +835,17 @@
 
     .line 385
     :cond_0
-    invoke-virtual {p0}, Lcom/android/camera/manager/ThumbnailManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/camera/Camera;->isFullScreen()Z
+    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->isFullScreen()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/ThumbnailManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v0
 
@@ -860,7 +860,7 @@
     if-eqz v0, :cond_2
 
     .line 387
-    invoke-virtual {p0}, Lcom/android/camera/manager/ThumbnailManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v0
 
@@ -871,7 +871,7 @@
     if-eqz v0, :cond_1
 
     .line 388
-    invoke-virtual {p0}, Lcom/android/camera/manager/ThumbnailManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v0
 
@@ -883,11 +883,11 @@
 
     .line 390
     :cond_1
-    invoke-virtual {p0}, Lcom/android/camera/manager/ThumbnailManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v0
 
-    #invoke-virtual {v0}, Lcom/android/camera/Camera;->gotoGallery()V
+    #invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->gotoGallery()V
 
     new-instance v1, Landroid/content/Intent;
 
@@ -981,12 +981,12 @@
     .line 306
     iget-object v0, p0, Lcom/android/camera/manager/ThumbnailManager;->mWorkerHandler:Lcom/android/camera/manager/ThumbnailManager$WorkerHandler;
 
-    invoke-virtual {v0, v3}, Lcom/android/camera/manager/ThumbnailManager$WorkerHandler;->removeMessages(I)V
+    invoke-virtual {v0, v3}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 307
     iget-object v0, p0, Lcom/android/camera/manager/ThumbnailManager;->mWorkerHandler:Lcom/android/camera/manager/ThumbnailManager$WorkerHandler;
 
-    invoke-virtual {v0, v3}, Lcom/android/camera/manager/ThumbnailManager$WorkerHandler;->sendEmptyMessage(I)Z
+    invoke-virtual {v0, v3}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     .line 309
     :cond_1
@@ -1032,7 +1032,7 @@
 
     const/4 v1, 0x2
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/manager/ThumbnailManager$WorkerHandler;->sendEmptyMessage(I)Z
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     goto :goto_0
 .end method
@@ -1053,7 +1053,7 @@
 
     .prologue
     .line 123
-    invoke-virtual {p0}, Lcom/android/camera/manager/ThumbnailManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v1
 
@@ -1102,7 +1102,7 @@
 
     .prologue
     .line 115
-    invoke-virtual {p0}, Lcom/android/camera/manager/ThumbnailManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v1
 
@@ -1163,7 +1163,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/ThumbnailManager;->isEnabled()Z
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->isEnabled()Z
 
     move-result v2
 
@@ -1189,12 +1189,12 @@
     .line 139
     iget-object v0, p0, Lcom/android/camera/manager/ThumbnailManager;->mThumbnailView:Lcom/android/camera/ui/RotateImageView;
 
-    invoke-virtual {v0, p1}, Lcom/android/camera/ui/RotateImageView;->setEnabled(Z)V
+    invoke-virtual {v0, p1}, Lcom/android/camera/ui/TwoStateImageView;->setEnabled(Z)V
 
     .line 141
     iget-object v0, p0, Lcom/android/camera/manager/ThumbnailManager;->mThumbnailView:Lcom/android/camera/ui/RotateImageView;
 
-    invoke-virtual {v0, p1}, Lcom/android/camera/ui/RotateImageView;->setClickable(Z)V
+    invoke-virtual {v0, p1}, Landroid/view/View;->setClickable(Z)V
 
     .line 144
     :cond_1

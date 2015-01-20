@@ -1060,7 +1060,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/data/LocalImage;->isDrm()Z
+    invoke-virtual {p0}, Lcom/android/gallery3d/data/LocalMediaItem;->isDrm()Z
 
     move-result v1
 
@@ -1086,7 +1086,7 @@
     .line 673
     const/4 v1, 0x1
 
-    invoke-virtual {p0, v1}, Lcom/android/gallery3d/data/LocalImage;->isDrmMethod(I)Z
+    invoke-virtual {p0, v1}, Lcom/android/gallery3d/data/LocalMediaItem;->isDrmMethod(I)Z
 
     move-result v1
 
@@ -1545,7 +1545,7 @@
 
     if-eqz v5, :cond_2
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/data/LocalImage;->isDrm()Z
+    invoke-virtual {p0}, Lcom/android/gallery3d/data/LocalMediaItem;->isDrm()Z
 
     move-result v5
 
@@ -1757,7 +1757,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/data/LocalImage;->isDrm()Z
+    invoke-virtual {p0}, Lcom/android/gallery3d/data/LocalMediaItem;->isDrm()Z
 
     move-result v1
 

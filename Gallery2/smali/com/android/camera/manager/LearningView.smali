@@ -46,7 +46,7 @@
     .line 26
     const v1, 0x7f040005
 
-    invoke-virtual {p0, v1}, Lcom/android/camera/manager/LearningView;->inflate(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/camera/manager/ViewManager;->inflate(I)Landroid/view/View;
 
     move-result-object v0
 

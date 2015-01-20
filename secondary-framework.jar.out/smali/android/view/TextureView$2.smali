@@ -30,7 +30,7 @@
     .line 349
     iput-object p1, p0, Landroid/view/TextureView$2;->this$0:Landroid/view/TextureView;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -80,7 +80,7 @@
     .line 359
     iget-object v0, p0, Landroid/view/TextureView$2;->this$0:Landroid/view/TextureView;
 
-    invoke-virtual {v0}, Landroid/view/TextureView;->invalidate()V
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
     .line 363
     :goto_0
@@ -101,7 +101,7 @@
     :cond_0
     iget-object v0, p0, Landroid/view/TextureView$2;->this$0:Landroid/view/TextureView;
 
-    invoke-virtual {v0}, Landroid/view/TextureView;->postInvalidate()V
+    invoke-virtual {v0}, Landroid/view/View;->postInvalidate()V
 
     goto :goto_0
 .end method

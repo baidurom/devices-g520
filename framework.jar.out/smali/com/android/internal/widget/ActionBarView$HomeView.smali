@@ -50,34 +50,6 @@
     return-void
 .end method
 
-.method private getOffset()I
-    .locals 2
-
-    .prologue
-    .line 1300
-    const/high16 v0, 0x40c0
-
-    invoke-virtual {p0}, Lcom/android/internal/widget/ActionBarView$HomeView;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    float-to-int v0, v0
-
-    return v0
-.end method
-
 
 # virtual methods
 .method public dispatchHoverEvent(Landroid/view/MotionEvent;)Z
@@ -111,7 +83,8 @@
     .locals 2
 
     .prologue
-    .line 1319
+    invoke-static/range {p0 .. p0}, Lcom/android/internal/widget/ActionBarView$BaiduInjector;->getOffset(Lcom/android/internal/widget/ActionBarView$HomeView;)V
+
     iget-object v0, p0, Lcom/android/internal/widget/ActionBarView$HomeView;->mUpView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
@@ -122,9 +95,7 @@
 
     if-ne v0, v1, :cond_0
 
-    invoke-direct {p0}, Lcom/android/internal/widget/ActionBarView$HomeView;->getOffset()I
-
-    move-result v0
+    iget v0, p0, Lcom/android/internal/widget/ActionBarView$HomeView;->mUpWidth:I
 
     :goto_0
     return v0
@@ -139,8 +110,7 @@
     .locals 1
 
     .prologue
-    .line 1314
-    const v0, #id@up#t
+    const v0, #android:id@up#t
 
     invoke-virtual {p0, v0}, Lcom/android/internal/widget/ActionBarView$HomeView;->findViewById(I)Landroid/view/View;
 
@@ -148,8 +118,7 @@
 
     iput-object v0, p0, Lcom/android/internal/widget/ActionBarView$HomeView;->mUpView:Landroid/view/View;
 
-    .line 1315
-    const v0, #id@home#t
+    const v0, #android:id@home#t
 
     invoke-virtual {p0, v0}, Lcom/android/internal/widget/ActionBarView$HomeView;->findViewById(I)Landroid/view/View;
 
@@ -640,10 +609,18 @@
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 1289
+    return-void
+.end method
 
+.method public setIconViewLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    .locals 1
+    .parameter "lp"
 
+    .prologue
     .line 1395
+    iget-object v0, p0, Lcom/android/internal/widget/ActionBarView$HomeView;->mIconView:Landroid/widget/ImageView;
 
+    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 1396
     return-void
@@ -672,4 +649,14 @@
     const/16 v0, 0x8
 
     goto :goto_0
+.end method
+
+.method setmUpWidth(I)V
+    .locals 0
+    .parameter "w"
+
+    .prologue
+    iput p1, p0, Lcom/android/internal/widget/ActionBarView$HomeView;->mUpWidth:I
+
+    return-void
 .end method

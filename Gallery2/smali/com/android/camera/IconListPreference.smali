@@ -139,7 +139,7 @@
     monitor-enter p0
 
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/camera/IconListPreference;->getOriginalEntryValues()[Ljava/lang/CharSequence;
+    invoke-virtual {p0}, Lcom/android/camera/ListPreference;->getOriginalEntryValues()[Ljava/lang/CharSequence;
 
     move-result-object v3
 

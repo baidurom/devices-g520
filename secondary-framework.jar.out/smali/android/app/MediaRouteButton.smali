@@ -168,7 +168,7 @@
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 84
-    invoke-virtual {p0, v5}, Landroid/app/MediaRouteButton;->setClickable(Z)V
+    invoke-virtual {p0, v5}, Landroid/view/View;->setClickable(Z)V
 
     .line 86
     invoke-virtual {p0, v1}, Landroid/app/MediaRouteButton;->setRouteTypes(I)V
@@ -194,7 +194,7 @@
 
     .prologue
     .line 346
-    invoke-virtual {p0}, Landroid/app/MediaRouteButton;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -265,7 +265,7 @@
     .line 92
     iget-object v0, p0, Landroid/app/MediaRouteButton;->mRemoteIndicator:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {p0, v0}, Landroid/app/MediaRouteButton;->unscheduleDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p0, v0}, Landroid/view/View;->unscheduleDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 94
     :cond_0
@@ -278,14 +278,14 @@
     invoke-virtual {p1, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
     .line 97
-    invoke-virtual {p0}, Landroid/app/MediaRouteButton;->getDrawableState()[I
+    invoke-virtual {p0}, Landroid/view/View;->getDrawableState()[I
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
     .line 98
-    invoke-virtual {p0}, Landroid/app/MediaRouteButton;->getVisibility()I
+    invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
 
     move-result v0
 
@@ -298,7 +298,7 @@
 
     .line 101
     :cond_1
-    invoke-virtual {p0}, Landroid/app/MediaRouteButton;->refreshDrawableState()V
+    invoke-virtual {p0}, Landroid/view/View;->refreshDrawableState()V
 
     .line 102
     return-void
@@ -339,7 +339,7 @@
     if-eqz v1, :cond_0
 
     .line 202
-    invoke-virtual {p0}, Landroid/app/MediaRouteButton;->getDrawableState()[I
+    invoke-virtual {p0}, Landroid/view/View;->getDrawableState()[I
 
     move-result-object v0
 
@@ -350,7 +350,7 @@
     invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
     .line 204
-    invoke-virtual {p0}, Landroid/app/MediaRouteButton;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     .line 206
     .end local v0           #myDrawableState:[I
@@ -499,17 +499,17 @@
 
     .line 295
     :cond_0
-    invoke-virtual {p0}, Landroid/app/MediaRouteButton;->getPaddingLeft()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
 
     move-result v5
 
     .line 296
     .local v5, left:I
-    invoke-virtual {p0}, Landroid/app/MediaRouteButton;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v8
 
-    invoke-virtual {p0}, Landroid/app/MediaRouteButton;->getPaddingRight()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
 
     move-result v9
 
@@ -517,17 +517,17 @@
 
     .line 297
     .local v6, right:I
-    invoke-virtual {p0}, Landroid/app/MediaRouteButton;->getPaddingTop()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
 
     move-result v7
 
     .line 298
     .local v7, top:I
-    invoke-virtual {p0}, Landroid/app/MediaRouteButton;->getHeight()I
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result v8
 
-    invoke-virtual {p0}, Landroid/app/MediaRouteButton;->getPaddingBottom()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
 
     move-result v9
 
@@ -661,13 +661,13 @@
     sparse-switch v6, :sswitch_data_0
 
     .line 268
-    invoke-virtual {p0}, Landroid/app/MediaRouteButton;->getPaddingLeft()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
 
     move-result v8
 
     add-int/2addr v8, v4
 
-    invoke-virtual {p0}, Landroid/app/MediaRouteButton;->getPaddingRight()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
 
     move-result v9
 
@@ -679,13 +679,13 @@
     sparse-switch v1, :sswitch_data_1
 
     .line 282
-    invoke-virtual {p0}, Landroid/app/MediaRouteButton;->getPaddingTop()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
 
     move-result v8
 
     add-int/2addr v8, v3
 
-    invoke-virtual {p0}, Landroid/app/MediaRouteButton;->getPaddingBottom()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
 
     move-result v9
 
@@ -694,7 +694,7 @@
     .line 286
     .local v0, height:I
     :goto_2
-    invoke-virtual {p0, v5, v0}, Landroid/app/MediaRouteButton;->setMeasuredDimension(II)V
+    invoke-virtual {p0, v5, v0}, Landroid/view/View;->setMeasuredDimension(II)V
 
     .line 287
     return-void
@@ -722,13 +722,13 @@
     .line 264
     .end local v5           #width:I
     :sswitch_1
-    invoke-virtual {p0}, Landroid/app/MediaRouteButton;->getPaddingLeft()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
 
     move-result v8
 
     add-int/2addr v8, v4
 
-    invoke-virtual {p0}, Landroid/app/MediaRouteButton;->getPaddingRight()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
 
     move-result v9
 
@@ -753,13 +753,13 @@
     .line 278
     .end local v0           #height:I
     :sswitch_3
-    invoke-virtual {p0}, Landroid/app/MediaRouteButton;->getPaddingTop()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
 
     move-result v8
 
     add-int/2addr v8, v3
 
-    invoke-virtual {p0}, Landroid/app/MediaRouteButton;->getPaddingBottom()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
 
     move-result v9
 
@@ -806,7 +806,7 @@
     .line 109
     const/4 v4, 0x0
 
-    invoke-virtual {p0, v4}, Landroid/app/MediaRouteButton;->playSoundEffect(I)V
+    invoke-virtual {p0, v4}, Landroid/view/View;->playSoundEffect(I)V
 
     .line 112
     :cond_0
@@ -998,7 +998,7 @@
     .line 223
     iget-object v2, p0, Landroid/app/MediaRouteButton;->mRemoteIndicator:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {p0}, Landroid/app/MediaRouteButton;->getVisibility()I
+    invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
 
     move-result v0
 
@@ -1103,7 +1103,7 @@
 
     const-string v2, "android:MediaRouteChooserDialogFragment"
 
-    invoke-virtual {v1, v0, v2}, Lcom/android/internal/app/MediaRouteChooserDialogFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {v1, v0, v2}, Landroid/app/DialogFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -1142,7 +1142,7 @@
     iput-boolean v0, p0, Landroid/app/MediaRouteButton;->mRemoteActive:Z
 
     .line 164
-    invoke-virtual {p0}, Landroid/app/MediaRouteButton;->refreshDrawableState()V
+    invoke-virtual {p0}, Landroid/view/View;->refreshDrawableState()V
 
     .line 166
     :cond_0
@@ -1239,7 +1239,7 @@
     move v4, v5
 
     :goto_2
-    invoke-virtual {p0, v4}, Landroid/app/MediaRouteButton;->setEnabled(Z)V
+    invoke-virtual {p0, v4}, Landroid/view/View;->setEnabled(Z)V
 
     .line 185
     const/4 v4, 0x2

@@ -76,7 +76,7 @@
     .line 203
     iput-object p1, p0, Lcom/android/camera/FileSaver$RequestOperator;->this$0:Lcom/android/camera/FileSaver;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

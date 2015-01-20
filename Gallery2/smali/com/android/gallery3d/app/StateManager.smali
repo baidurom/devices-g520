@@ -49,7 +49,7 @@
 
     .prologue
     .line 45
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 34
     const/4 v0, 0x0
@@ -80,7 +80,7 @@
     .line 96
     iget-object v0, p0, Lcom/android/gallery3d/app/StateManager;->mStack:Ljava/util/Stack;
 
-    invoke-virtual {v0}, Ljava/util/Stack;->isEmpty()Z
+    invoke-virtual {v0}, Ljava/util/Vector;->isEmpty()Z
 
     move-result v0
 
@@ -120,7 +120,7 @@
     :goto_0
     iget-object v0, p0, Lcom/android/gallery3d/app/StateManager;->mStack:Ljava/util/Stack;
 
-    invoke-virtual {v0}, Ljava/util/Stack;->isEmpty()Z
+    invoke-virtual {v0}, Ljava/util/Vector;->isEmpty()Z
 
     move-result v0
 
@@ -145,7 +145,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/gallery3d/app/StateManager;->mStack:Ljava/util/Stack;
 
-    invoke-virtual {v0}, Ljava/util/Stack;->clear()V
+    invoke-virtual {v0}, Ljava/util/Vector;->clear()V
 
     .line 222
     return-void
@@ -161,7 +161,7 @@
     .line 151
     iget-object v2, p0, Lcom/android/gallery3d/app/StateManager;->mStack:Ljava/util/Stack;
 
-    invoke-virtual {v2}, Ljava/util/Stack;->size()I
+    invoke-virtual {v2}, Ljava/util/Vector;->size()I
 
     move-result v2
 
@@ -360,7 +360,7 @@
     .line 183
     iget-object v2, p0, Lcom/android/gallery3d/app/StateManager;->mStack:Ljava/util/Stack;
 
-    invoke-virtual {v2}, Ljava/util/Stack;->isEmpty()Z
+    invoke-virtual {v2}, Ljava/util/Vector;->isEmpty()Z
 
     move-result v2
 
@@ -395,7 +395,7 @@
     .line 126
     iget-object v0, p0, Lcom/android/gallery3d/app/StateManager;->mStack:Ljava/util/Stack;
 
-    invoke-virtual {v0}, Ljava/util/Stack;->size()I
+    invoke-virtual {v0}, Ljava/util/Vector;->size()I
 
     move-result v0
 
@@ -409,7 +409,7 @@
     .line 277
     iget-object v0, p0, Lcom/android/gallery3d/app/StateManager;->mStack:Ljava/util/Stack;
 
-    invoke-virtual {v0}, Ljava/util/Stack;->isEmpty()Z
+    invoke-virtual {v0}, Ljava/util/Vector;->isEmpty()Z
 
     move-result v0
 
@@ -458,7 +458,7 @@
     .local p1, klass:Ljava/lang/Class;,"Ljava/lang/Class<+Lcom/android/gallery3d/app/ActivityState;>;"
     iget-object v2, p0, Lcom/android/gallery3d/app/StateManager;->mStack:Ljava/util/Stack;
 
-    invoke-virtual {v2}, Ljava/util/Stack;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v2}, Ljava/util/AbstractList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
@@ -510,7 +510,7 @@
     .line 130
     iget-object v1, p0, Lcom/android/gallery3d/app/StateManager;->mStack:Ljava/util/Stack;
 
-    invoke-virtual {v1}, Ljava/util/Stack;->isEmpty()Z
+    invoke-virtual {v1}, Ljava/util/Vector;->isEmpty()Z
 
     move-result v1
 
@@ -545,7 +545,7 @@
     .line 133
     iget-object v1, p0, Lcom/android/gallery3d/app/StateManager;->mStack:Ljava/util/Stack;
 
-    invoke-virtual {v1}, Ljava/util/Stack;->size()I
+    invoke-virtual {v1}, Ljava/util/Vector;->size()I
 
     move-result v1
 
@@ -592,7 +592,7 @@
     .line 143
     iget-object v0, p0, Lcom/android/gallery3d/app/StateManager;->mStack:Ljava/util/Stack;
 
-    invoke-virtual {v0}, Ljava/util/Stack;->isEmpty()Z
+    invoke-virtual {v0}, Ljava/util/Vector;->isEmpty()Z
 
     move-result v0
 
@@ -618,7 +618,7 @@
     .line 104
     iget-object v2, p0, Lcom/android/gallery3d/app/StateManager;->mStack:Ljava/util/Stack;
 
-    invoke-virtual {v2}, Ljava/util/Stack;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v2}, Ljava/util/AbstractList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
@@ -673,7 +673,7 @@
     .line 118
     iget-object v0, p0, Lcom/android/gallery3d/app/StateManager;->mStack:Ljava/util/Stack;
 
-    invoke-virtual {v0}, Ljava/util/Stack;->isEmpty()Z
+    invoke-virtual {v0}, Ljava/util/Vector;->isEmpty()Z
 
     move-result v0
 
@@ -859,7 +859,7 @@
     .line 112
     iget-object v0, p0, Lcom/android/gallery3d/app/StateManager;->mStack:Ljava/util/Stack;
 
-    invoke-virtual {v0}, Ljava/util/Stack;->isEmpty()Z
+    invoke-virtual {v0}, Ljava/util/Vector;->isEmpty()Z
 
     move-result v0
 
@@ -889,7 +889,7 @@
     .line 252
     iget-object v7, p0, Lcom/android/gallery3d/app/StateManager;->mStack:Ljava/util/Stack;
 
-    invoke-virtual {v7}, Ljava/util/Stack;->size()I
+    invoke-virtual {v7}, Ljava/util/Vector;->size()I
 
     move-result v7
 
@@ -903,7 +903,7 @@
     .local v2, i:I
     iget-object v7, p0, Lcom/android/gallery3d/app/StateManager;->mStack:Ljava/util/Stack;
 
-    invoke-virtual {v7}, Ljava/util/Stack;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v7}, Ljava/util/AbstractList;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
 
@@ -1078,7 +1078,7 @@
     .restart local v1       #state:Lcom/android/gallery3d/app/ActivityState;
     iget-object v3, p0, Lcom/android/gallery3d/app/StateManager;->mStack:Ljava/util/Stack;
 
-    invoke-virtual {v3}, Ljava/util/Stack;->isEmpty()Z
+    invoke-virtual {v3}, Ljava/util/Vector;->isEmpty()Z
 
     move-result v3
 
@@ -1231,7 +1231,7 @@
     .line 82
     iget-object v3, p0, Lcom/android/gallery3d/app/StateManager;->mStack:Ljava/util/Stack;
 
-    invoke-virtual {v3}, Ljava/util/Stack;->isEmpty()Z
+    invoke-virtual {v3}, Ljava/util/Vector;->isEmpty()Z
 
     move-result v3
 

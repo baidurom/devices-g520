@@ -166,7 +166,7 @@
 
     .line 116
     .local v0, m:I
-    invoke-virtual {v1}, Ljava/util/TreeMap;->values()Ljava/util/Collection;
+    invoke-virtual {v1}, Ljava/util/AbstractMap;->values()Ljava/util/Collection;
 
     move-result-object v4
 

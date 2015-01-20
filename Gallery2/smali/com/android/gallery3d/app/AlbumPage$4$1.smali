@@ -40,7 +40,7 @@
 
     iput-object p3, p0, Lcom/android/gallery3d/app/AlbumPage$4$1;->val$convertedUri:Landroid/net/Uri;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -90,7 +90,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/app/ProgressDialog;->dismiss()V
+    invoke-virtual {v1}, Landroid/app/Dialog;->dismiss()V
 
     .line 434
     :cond_0

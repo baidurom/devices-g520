@@ -77,7 +77,7 @@
 
     .line 384
     :cond_0
-    invoke-virtual {p0}, Landroid/app/ListFragment;->getView()Landroid/view/View;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getView()Landroid/view/View;
 
     move-result-object v2
 
@@ -118,7 +118,7 @@
 
     iget-object v4, p0, Landroid/app/ListFragment;->mOnClickListener:Landroid/widget/AdapterView$OnItemClickListener;
 
-    invoke-virtual {v3, v4}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
+    invoke-virtual {v3, v4}, Landroid/widget/AdapterView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 421
     iget-object v3, p0, Landroid/app/ListFragment;->mAdapter:Landroid/widget/ListAdapter;
@@ -224,7 +224,7 @@
 
     const/16 v4, 0x8
 
-    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v3, v4}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_3
 
@@ -261,7 +261,7 @@
 
     iget-object v4, p0, Landroid/app/ListFragment;->mEmptyView:Landroid/view/View;
 
-    invoke-virtual {v3, v4}, Landroid/widget/ListView;->setEmptyView(Landroid/view/View;)V
+    invoke-virtual {v3, v4}, Landroid/widget/AdapterView;->setEmptyView(Landroid/view/View;)V
 
     goto :goto_1
 
@@ -283,7 +283,7 @@
 
     iget-object v4, p0, Landroid/app/ListFragment;->mStandardEmptyView:Landroid/widget/TextView;
 
-    invoke-virtual {v3, v4}, Landroid/widget/ListView;->setEmptyView(Landroid/view/View;)V
+    invoke-virtual {v3, v4}, Landroid/widget/AdapterView;->setEmptyView(Landroid/view/View;)V
 
     goto/16 :goto_1
 
@@ -354,7 +354,7 @@
     .line 348
     iget-object v0, p0, Landroid/app/ListFragment;->mProgressContainer:Landroid/view/View;
 
-    invoke-virtual {p0}, Landroid/app/ListFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -367,7 +367,7 @@
     .line 350
     iget-object v0, p0, Landroid/app/ListFragment;->mListContainer:Landroid/view/View;
 
-    invoke-virtual {p0}, Landroid/app/ListFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -410,7 +410,7 @@
     .line 360
     iget-object v0, p0, Landroid/app/ListFragment;->mProgressContainer:Landroid/view/View;
 
-    invoke-virtual {p0}, Landroid/app/ListFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -423,7 +423,7 @@
     .line 362
     iget-object v0, p0, Landroid/app/ListFragment;->mListContainer:Landroid/view/View;
 
-    invoke-virtual {p0}, Landroid/app/ListFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -495,7 +495,7 @@
     .line 273
     iget-object v0, p0, Landroid/app/ListFragment;->mList:Landroid/widget/ListView;
 
-    invoke-virtual {v0}, Landroid/widget/ListView;->getSelectedItemId()J
+    invoke-virtual {v0}, Landroid/widget/AdapterView;->getSelectedItemId()J
 
     move-result-wide v0
 
@@ -512,7 +512,7 @@
     .line 265
     iget-object v0, p0, Landroid/app/ListFragment;->mList:Landroid/widget/ListView;
 
-    invoke-virtual {v0}, Landroid/widget/ListView;->getSelectedItemPosition()I
+    invoke-virtual {v0}, Landroid/widget/AdapterView;->getSelectedItemPosition()I
 
     move-result v0
 
@@ -642,7 +642,7 @@
 
     iget-object v1, p0, Landroid/app/ListFragment;->mStandardEmptyView:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setEmptyView(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Landroid/widget/AdapterView;->setEmptyView(Landroid/view/View;)V
 
     .line 298
     :cond_1
@@ -691,7 +691,7 @@
     if-nez v0, :cond_1
 
     .line 244
-    invoke-virtual {p0}, Landroid/app/ListFragment;->getView()Landroid/view/View;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getView()Landroid/view/View;
 
     move-result-object v3
 

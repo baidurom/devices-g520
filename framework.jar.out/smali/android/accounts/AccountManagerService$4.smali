@@ -183,7 +183,7 @@
 
     const-string/jumbo v1, "the type and name should not be empty"
 
-    invoke-virtual {p0, v0, v1}, Landroid/accounts/AccountManagerService$4;->onError(ILjava/lang/String;)V
+    invoke-virtual {p0, v0, v1}, Landroid/accounts/AccountManagerService$Session;->onError(ILjava/lang/String;)V
 
     goto :goto_0
 

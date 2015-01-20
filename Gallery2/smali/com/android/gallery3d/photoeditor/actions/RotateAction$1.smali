@@ -46,7 +46,7 @@
 
     iput-object p3, p0, Lcom/android/gallery3d/photoeditor/actions/RotateAction$1;->val$rotateView:Lcom/android/gallery3d/photoeditor/actions/RotateView;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 48
     iget-object v0, p0, Lcom/android/gallery3d/photoeditor/actions/RotateAction$1;->this$0:Lcom/android/gallery3d/photoeditor/actions/RotateAction;
@@ -122,7 +122,7 @@
 
     iget-object v1, p0, Lcom/android/gallery3d/photoeditor/actions/RotateAction$1;->val$filter:Lcom/android/gallery3d/photoeditor/filters/RotateFilter;
 
-    invoke-virtual {v0, v1}, Lcom/android/gallery3d/photoeditor/actions/RotateAction;->notifyChanged(Lcom/android/gallery3d/photoeditor/filters/Filter;)V
+    invoke-virtual {v0, v1}, Lcom/android/gallery3d/photoeditor/actions/EffectAction;->notifyChanged(Lcom/android/gallery3d/photoeditor/filters/Filter;)V
 
     .line 57
     :cond_0
@@ -194,7 +194,7 @@
 
     iget-object v1, p0, Lcom/android/gallery3d/photoeditor/actions/RotateAction$1;->val$filter:Lcom/android/gallery3d/photoeditor/filters/RotateFilter;
 
-    invoke-virtual {v0, v1}, Lcom/android/gallery3d/photoeditor/actions/RotateAction;->notifyChanged(Lcom/android/gallery3d/photoeditor/filters/Filter;)V
+    invoke-virtual {v0, v1}, Lcom/android/gallery3d/photoeditor/actions/EffectAction;->notifyChanged(Lcom/android/gallery3d/photoeditor/filters/Filter;)V
 
     .line 74
     return-void

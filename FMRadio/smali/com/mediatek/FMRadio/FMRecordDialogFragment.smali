@@ -336,7 +336,7 @@
 
     invoke-direct {v1, p0}, Lcom/mediatek/FMRadio/FMRecordDialogFragment$1;-><init>(Lcom/mediatek/FMRadio/FMRecordDialogFragment;)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     .line 260
     return-void
@@ -371,7 +371,7 @@
 
     .line 104
     .local v0, e:Ljava/lang/ClassCastException;
-    invoke-virtual {v0}, Ljava/lang/ClassCastException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 .end method
@@ -396,7 +396,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {p0, v0, v1}, Lcom/mediatek/FMRadio/FMRecordDialogFragment;->setStyle(II)V
+    invoke-virtual {p0, v0, v1}, Landroid/app/DialogFragment;->setStyle(II)V
 
     .line 118
     if-eqz p1, :cond_0
@@ -473,7 +473,7 @@
 
     iget-object v4, p0, Lcom/mediatek/FMRadio/FMRecordDialogFragment;->mButtonOnClickListener:Landroid/view/View$OnClickListener;
 
-    invoke-virtual {v3, v4}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v3, v4}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 140
     const v3, 0x7f060013
@@ -491,7 +491,7 @@
 
     iget-object v4, p0, Lcom/mediatek/FMRadio/FMRecordDialogFragment;->mButtonOnClickListener:Landroid/view/View$OnClickListener;
 
-    invoke-virtual {v3, v4}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v3, v4}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 143
     const v3, 0x7f060011
@@ -536,11 +536,11 @@
     iput-object v3, p0, Lcom/mediatek/FMRadio/FMRecordDialogFragment;->mTitleTextView:Landroid/widget/TextView;
 
     .line 152
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRecordDialogFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {v3}, Landroid/content/ContextWrapper;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -603,7 +603,7 @@
     invoke-static {v0, v1}, Lcom/mediatek/FMRadio/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 228
-    invoke-super {p0}, Landroid/app/DialogFragment;->onDestroy()V
+    invoke-super {p0}, Landroid/app/Fragment;->onDestroy()V
 
     .line 229
     return-void
@@ -616,7 +616,7 @@
     const/4 v3, 0x0
 
     .line 166
-    invoke-super {p0}, Landroid/app/DialogFragment;->onResume()V
+    invoke-super {p0}, Landroid/app/Fragment;->onResume()V
 
     .line 167
     const-string v0, "FmRx/RecordDlg"
@@ -635,7 +635,7 @@
     .line 171
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRecordDialogFragment;->mStorageWarningTextView:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
 
     .line 175
     :cond_0
@@ -643,7 +643,7 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setSingleLine(Z)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setSingleLine(Z)V
 
     .line 177
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRecordDialogFragment;->mDefaultRecordingName:Ljava/lang/String;
@@ -660,7 +660,7 @@
 
     iget-object v1, p0, Lcom/mediatek/FMRadio/FMRecordDialogFragment;->mRecordingNameToSave:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 181
     const-string v0, ""
@@ -676,7 +676,7 @@
     .line 182
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRecordDialogFragment;->mButtonSave:Landroid/widget/Button;
 
-    invoke-virtual {v0, v3}, Landroid/widget/Button;->setEnabled(Z)V
+    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setEnabled(Z)V
 
     .line 188
     :cond_1
@@ -689,11 +689,11 @@
     :cond_2
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRecordDialogFragment;->mRecordingNameEditText:Landroid/widget/EditText;
 
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRecordDialogFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v1}, Landroid/content/ContextWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -703,25 +703,25 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setHint(Ljava/lang/CharSequence;)V
 
     .line 192
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRecordDialogFragment;->mRecordingNameEditText:Landroid/widget/EditText;
 
-    invoke-virtual {v0}, Landroid/widget/EditText;->requestFocus()Z
+    invoke-virtual {v0}, Landroid/view/View;->requestFocus()Z
 
     .line 193
     invoke-direct {p0}, Lcom/mediatek/FMRadio/FMRecordDialogFragment;->setTextChangedCallback()V
 
     .line 194
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRecordDialogFragment;->getDialog()Landroid/app/Dialog;
+    invoke-virtual {p0}, Landroid/app/DialogFragment;->getDialog()Landroid/app/Dialog;
 
     move-result-object v0
 
     invoke-virtual {v0, v3}, Landroid/app/Dialog;->setCanceledOnTouchOutside(Z)V
 
     .line 195
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRecordDialogFragment;->getDialog()Landroid/app/Dialog;
+    invoke-virtual {p0}, Landroid/app/DialogFragment;->getDialog()Landroid/app/Dialog;
 
     move-result-object v0
 
@@ -749,7 +749,7 @@
 
     iget-object v1, p0, Lcom/mediatek/FMRadio/FMRecordDialogFragment;->mDefaultRecordingName:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 .end method
@@ -767,7 +767,7 @@
     invoke-static {v1, v2}, Lcom/mediatek/FMRadio/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 204
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRecordDialogFragment;->getDialog()Landroid/app/Dialog;
+    invoke-virtual {p0}, Landroid/app/DialogFragment;->getDialog()Landroid/app/Dialog;
 
     move-result-object v0
 

@@ -793,7 +793,7 @@
     .line 201
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Landroid/view/SurfaceView;->setWillNotDraw(Z)V
+    invoke-virtual {p0, v0}, Landroid/view/View;->setWillNotDraw(Z)V
 
     .line 202
     return-void
@@ -819,7 +819,7 @@
 
     .line 415
     :cond_1
-    invoke-virtual/range {p0 .. p0}, Landroid/view/SurfaceView;->getViewRootImpl()Landroid/view/ViewRootImpl;
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getViewRootImpl()Landroid/view/ViewRootImpl;
 
     move-result-object v34
 
@@ -867,7 +867,7 @@
     .local v26, myWidth:I
     if-gtz v26, :cond_4
 
-    invoke-virtual/range {p0 .. p0}, Landroid/view/SurfaceView;->getWidth()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getWidth()I
 
     move-result v26
 
@@ -883,7 +883,7 @@
     .local v25, myHeight:I
     if-gtz v25, :cond_5
 
-    invoke-virtual/range {p0 .. p0}, Landroid/view/SurfaceView;->getHeight()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getHeight()I
 
     move-result v25
 
@@ -893,7 +893,7 @@
 
     iget v3, v0, Landroid/view/SurfaceView;->mLastWidth:I
 
-    invoke-virtual/range {p0 .. p0}, Landroid/view/SurfaceView;->getWidth()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getWidth()I
 
     move-result v4
 
@@ -903,7 +903,7 @@
 
     iget v3, v0, Landroid/view/SurfaceView;->mLastHeight:I
 
-    invoke-virtual/range {p0 .. p0}, Landroid/view/SurfaceView;->getHeight()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getHeight()I
 
     move-result v4
 
@@ -921,7 +921,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v3}, Landroid/view/SurfaceView;->getLocationInWindow([I)V
+    invoke-virtual {v0, v3}, Landroid/view/View;->getLocationInWindow([I)V
 
     .line 432
     move-object/from16 v0, p0
@@ -1293,7 +1293,7 @@
     iput v0, v1, Landroid/view/SurfaceView;->mHeight:I
 
     .line 462
-    invoke-virtual/range {p0 .. p0}, Landroid/view/SurfaceView;->getWidth()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getWidth()I
 
     move-result v3
 
@@ -1302,7 +1302,7 @@
     iput v3, v0, Landroid/view/SurfaceView;->mLastWidth:I
 
     .line 463
-    invoke-virtual/range {p0 .. p0}, Landroid/view/SurfaceView;->getHeight()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getHeight()I
 
     move-result v3
 
@@ -1346,7 +1346,7 @@
 
     iget-object v3, v0, Landroid/view/SurfaceView;->mLayout:Landroid/view/WindowManager$LayoutParams;
 
-    invoke-virtual/range {p0 .. p0}, Landroid/view/SurfaceView;->getWidth()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getWidth()I
 
     move-result v4
 
@@ -1357,7 +1357,7 @@
 
     iget-object v3, v0, Landroid/view/SurfaceView;->mLayout:Landroid/view/WindowManager$LayoutParams;
 
-    invoke-virtual/range {p0 .. p0}, Landroid/view/SurfaceView;->getHeight()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getHeight()I
 
     move-result v4
 
@@ -1405,7 +1405,7 @@
     iput v4, v3, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     .line 486
-    invoke-virtual/range {p0 .. p0}, Landroid/view/SurfaceView;->getContext()Landroid/content/Context;
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -1488,7 +1488,7 @@
 
     iget-object v5, v0, Landroid/view/SurfaceView;->mWindow:Landroid/view/SurfaceView$MyWindow;
 
-    iget v5, v5, Landroid/view/SurfaceView$MyWindow;->mSeq:I
+    iget v5, v5, Lcom/android/internal/view/BaseIWindow;->mSeq:I
 
     move-object/from16 v0, p0
 
@@ -1592,7 +1592,7 @@
 
     iget-object v5, v0, Landroid/view/SurfaceView;->mWindow:Landroid/view/SurfaceView$MyWindow;
 
-    iget v5, v5, Landroid/view/SurfaceView$MyWindow;->mSeq:I
+    iget v5, v5, Lcom/android/internal/view/BaseIWindow;->mSeq:I
 
     move-object/from16 v0, p0
 
@@ -2749,13 +2749,13 @@
     if-eqz p1, :cond_2
 
     .line 321
-    invoke-virtual {p0}, Landroid/view/SurfaceView;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v8
 
     .line 322
     .local v8, w:I
-    invoke-virtual {p0}, Landroid/view/SurfaceView;->getHeight()I
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result v6
 
@@ -2768,7 +2768,7 @@
     .line 324
     iget-object v0, p0, Landroid/view/SurfaceView;->mLocation:[I
 
-    invoke-virtual {p0, v0}, Landroid/view/SurfaceView;->getLocationInWindow([I)V
+    invoke-virtual {p0, v0}, Landroid/view/View;->getLocationInWindow([I)V
 
     .line 326
     iget-object v0, p0, Landroid/view/SurfaceView;->mLocation:[I
@@ -2865,7 +2865,7 @@
     invoke-interface {v1, p0}, Landroid/view/ViewParent;->requestTransparentRegion(Landroid/view/View;)V
 
     .line 218
-    invoke-virtual {p0}, Landroid/view/SurfaceView;->getWindowSession()Landroid/view/IWindowSession;
+    invoke-virtual {p0}, Landroid/view/View;->getWindowSession()Landroid/view/IWindowSession;
 
     move-result-object v1
 
@@ -2874,7 +2874,7 @@
     .line 219
     iget-object v1, p0, Landroid/view/SurfaceView;->mLayout:Landroid/view/WindowManager$LayoutParams;
 
-    invoke-virtual {p0}, Landroid/view/SurfaceView;->getWindowToken()Landroid/os/IBinder;
+    invoke-virtual {p0}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
 
     move-result-object v3
 
@@ -2888,7 +2888,7 @@
     invoke-virtual {v1, v3}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 221
-    invoke-virtual {p0}, Landroid/view/SurfaceView;->getVisibility()I
+    invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
 
     move-result v1
 
@@ -2905,7 +2905,7 @@
     if-nez v1, :cond_0
 
     .line 224
-    invoke-virtual {p0}, Landroid/view/SurfaceView;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+    invoke-virtual {p0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v0
 
@@ -2949,7 +2949,7 @@
     if-eqz v1, :cond_0
 
     .line 268
-    invoke-virtual {p0}, Landroid/view/SurfaceView;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+    invoke-virtual {p0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v0
 
@@ -3054,7 +3054,7 @@
     .line 299
     .local v0, height:I
     :goto_1
-    invoke-virtual {p0, v1, v0}, Landroid/view/SurfaceView;->setMeasuredDimension(II)V
+    invoke-virtual {p0, v1, v0}, Landroid/view/View;->setMeasuredDimension(II)V
 
     .line 300
     return-void
@@ -3201,7 +3201,7 @@
     if-eq v0, v1, :cond_0
 
     .line 251
-    invoke-virtual {p0}, Landroid/view/SurfaceView;->requestLayout()V
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 
     .line 253
     :cond_0

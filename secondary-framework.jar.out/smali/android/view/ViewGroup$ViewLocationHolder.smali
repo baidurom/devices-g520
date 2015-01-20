@@ -57,7 +57,7 @@
     .line 6081
     new-instance v0, Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Landroid/view/ViewGroup$ViewLocationHolder;->sPoolLock:Ljava/lang/Object;
 
@@ -69,7 +69,7 @@
 
     .prologue
     .line 6077
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 6091
     new-instance v0, Landroid/graphics/Rect;
@@ -121,7 +121,7 @@
     iput-object p2, p0, Landroid/view/ViewGroup$ViewLocationHolder;->mView:Landroid/view/View;
 
     .line 6185
-    invoke-virtual {p1}, Landroid/view/ViewGroup;->getResolvedLayoutDirection()I
+    invoke-virtual {p1}, Landroid/view/View;->getResolvedLayoutDirection()I
 
     move-result v1
 

@@ -90,10 +90,10 @@
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 591
-    #iget-object v2, p0, Lcom/mediatek/audioprofile/AudioProfileService$7;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
+    iget-object v2, p0, Lcom/mediatek/audioprofile/AudioProfileService$7;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     #calls: Lcom/mediatek/audioprofile/AudioProfileService;->persistValues(Z)V
-    #invoke-static {v2, v5}, Lcom/mediatek/audioprofile/AudioProfileService;->access$1900(Lcom/mediatek/audioprofile/AudioProfileService;Z)V
+    invoke-static {v2, v5}, Lcom/mediatek/audioprofile/AudioProfileService;->access$1900(Lcom/mediatek/audioprofile/AudioProfileService;Z)V
 
     .line 594
     iget-object v2, p0, Lcom/mediatek/audioprofile/AudioProfileService$7;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;

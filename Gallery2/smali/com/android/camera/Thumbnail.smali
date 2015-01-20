@@ -51,7 +51,7 @@
     .line 62
     new-instance v0, Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lcom/android/camera/Thumbnail;->sLock:Ljava/lang/Object;
 
@@ -66,7 +66,7 @@
 
     .prologue
     .line 64
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 58
     const/4 v0, 0x0
@@ -387,7 +387,7 @@
     .line 287
     .local v1, ex:Ljava/lang/IllegalArgumentException;
     :try_start_3
-    invoke-virtual {v1}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
@@ -405,7 +405,7 @@
 
     .line 296
     .local v1, ex:Ljava/lang/RuntimeException;
-    invoke-virtual {v1}, Ljava/lang/RuntimeException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_1
 
@@ -416,7 +416,7 @@
 
     .line 296
     .restart local v1       #ex:Ljava/lang/RuntimeException;
-    invoke-virtual {v1}, Ljava/lang/RuntimeException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_1
 
@@ -428,7 +428,7 @@
     .line 290
     .restart local v1       #ex:Ljava/lang/RuntimeException;
     :try_start_5
-    invoke-virtual {v1}, Ljava/lang/RuntimeException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
@@ -445,7 +445,7 @@
     move-exception v1
 
     .line 296
-    invoke-virtual {v1}, Ljava/lang/RuntimeException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_1
 
@@ -470,7 +470,7 @@
 
     .line 296
     .restart local v1       #ex:Ljava/lang/RuntimeException;
-    invoke-virtual {v1}, Ljava/lang/RuntimeException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_3
 
@@ -1167,7 +1167,7 @@
     if-nez v12, :cond_0
 
     .line 154
-    invoke-virtual {v5}, Ljava/io/DataInputStream;->close()V
+    invoke-virtual {v5}, Ljava/io/FilterInputStream;->close()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_5
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_7
@@ -1220,7 +1220,7 @@
     move-result-object v3
 
     .line 158
-    invoke-virtual {v5}, Ljava/io/DataInputStream;->close()V
+    invoke-virtual {v5}, Ljava/io/FilterInputStream;->close()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_7
@@ -1820,7 +1820,7 @@
     invoke-virtual {v8, v10, v11, v3}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
     .line 119
-    invoke-virtual {v3}, Ljava/io/DataOutputStream;->close()V
+    invoke-virtual {v3}, Ljava/io/FilterOutputStream;->close()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_5
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_3

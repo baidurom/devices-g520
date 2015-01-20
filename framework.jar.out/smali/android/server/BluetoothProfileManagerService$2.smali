@@ -39,7 +39,7 @@
 
     sget-object v1, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_HEADSET:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    invoke-virtual {v1}, Landroid/bluetooth/BluetoothProfileManager$Profile;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -55,7 +55,7 @@
 
     sget-object v1, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_A2DP:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    invoke-virtual {v1}, Landroid/bluetooth/BluetoothProfileManager$Profile;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -71,7 +71,7 @@
 
     sget-object v1, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_HID:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    invoke-virtual {v1}, Landroid/bluetooth/BluetoothProfileManager$Profile;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -87,7 +87,7 @@
 
     sget-object v1, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_FTP_Client:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    invoke-virtual {v1}, Landroid/bluetooth/BluetoothProfileManager$Profile;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -103,7 +103,7 @@
 
     sget-object v1, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_FTP_Server:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    invoke-virtual {v1}, Landroid/bluetooth/BluetoothProfileManager$Profile;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -119,7 +119,7 @@
 
     sget-object v1, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_BIP_Initiator:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    invoke-virtual {v1}, Landroid/bluetooth/BluetoothProfileManager$Profile;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -135,7 +135,7 @@
 
     sget-object v1, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_BIP_Responder:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    invoke-virtual {v1}, Landroid/bluetooth/BluetoothProfileManager$Profile;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -151,7 +151,7 @@
 
     sget-object v1, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_SIMAP:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    invoke-virtual {v1}, Landroid/bluetooth/BluetoothProfileManager$Profile;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -167,7 +167,7 @@
 
     sget-object v1, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_PBAP:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    invoke-virtual {v1}, Landroid/bluetooth/BluetoothProfileManager$Profile;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -183,7 +183,7 @@
 
     sget-object v1, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_OPP_Server:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    invoke-virtual {v1}, Landroid/bluetooth/BluetoothProfileManager$Profile;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -199,7 +199,7 @@
 
     sget-object v1, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_OPP_Client:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    invoke-virtual {v1}, Landroid/bluetooth/BluetoothProfileManager$Profile;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -215,7 +215,7 @@
 
     sget-object v1, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_DUN:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    invoke-virtual {v1}, Landroid/bluetooth/BluetoothProfileManager$Profile;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -231,7 +231,7 @@
 
     sget-object v1, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_PRXM:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    invoke-virtual {v1}, Landroid/bluetooth/BluetoothProfileManager$Profile;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -247,7 +247,7 @@
 
     sget-object v1, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_PRXR:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    invoke-virtual {v1}, Landroid/bluetooth/BluetoothProfileManager$Profile;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -263,7 +263,7 @@
 
     sget-object v1, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_PAN_NAP:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    invoke-virtual {v1}, Landroid/bluetooth/BluetoothProfileManager$Profile;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -279,7 +279,7 @@
 
     sget-object v1, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_PAN_GN:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    invoke-virtual {v1}, Landroid/bluetooth/BluetoothProfileManager$Profile;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 

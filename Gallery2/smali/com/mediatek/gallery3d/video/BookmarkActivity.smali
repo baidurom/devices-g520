@@ -145,12 +145,12 @@
     .local v1, dataView:Landroid/widget/EditText;
     iget-object v6, p1, Lcom/mediatek/gallery3d/video/BookmarkActivity$ViewHolder;->mTitle:Ljava/lang/String;
 
-    invoke-virtual {v4, v6}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v4, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 221
     iget-object v6, p1, Lcom/mediatek/gallery3d/video/BookmarkActivity$ViewHolder;->mData:Ljava/lang/String;
 
-    invoke-virtual {v1, v6}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 223
     new-instance v0, Landroid/app/AlertDialog$Builder;
@@ -192,7 +192,7 @@
 
     .line 238
     .local v2, dialog:Landroid/app/AlertDialog;
-    invoke-virtual {v2}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
+    invoke-virtual {v2}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object v6
 
@@ -206,7 +206,7 @@
     invoke-virtual {v2, v6}, Landroid/app/AlertDialog;->setInverseBackgroundForced(Z)V
 
     .line 240
-    invoke-virtual {v2}, Landroid/app/AlertDialog;->show()V
+    invoke-virtual {v2}, Landroid/app/Dialog;->show()V
 
     goto :goto_0
 .end method
@@ -323,10 +323,10 @@
     .line 53
     const v0, 0x7f040007
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/video/BookmarkActivity;->setContentView(I)V
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->setContentView(I)V
 
     .line 55
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/BookmarkActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
@@ -343,13 +343,13 @@
     if-eqz v7, :cond_0
 
     .line 57
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/BookmarkActivity;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
     new-instance v1, Landroid/graphics/drawable/BitmapDrawable;
 
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/BookmarkActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -361,7 +361,7 @@
     :cond_0
     const v0, 0x102000a
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/video/BookmarkActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -372,7 +372,7 @@
     .line 61
     const v0, 0x1020004
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/video/BookmarkActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -420,7 +420,7 @@
 
     iget-object v1, p0, Lcom/mediatek/gallery3d/video/BookmarkActivity;->mEmptyView:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setEmptyView(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Landroid/widget/AdapterView;->setEmptyView(Landroid/view/View;)V
 
     .line 67
     iget-object v0, p0, Lcom/mediatek/gallery3d/video/BookmarkActivity;->mListView:Landroid/widget/ListView;
@@ -439,12 +439,12 @@
     .line 70
     iget-object v0, p0, Lcom/mediatek/gallery3d/video/BookmarkActivity;->mListView:Landroid/widget/ListView;
 
-    invoke-virtual {v0, p0}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
+    invoke-virtual {v0, p0}, Landroid/widget/AdapterView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 71
     iget-object v0, p0, Lcom/mediatek/gallery3d/video/BookmarkActivity;->mListView:Landroid/widget/ListView;
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/video/BookmarkActivity;->registerForContextMenu(Landroid/view/View;)V
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->registerForContextMenu(Landroid/view/View;)V
 
     .line 72
     return-void
@@ -567,7 +567,7 @@
 
     .line 166
     .local v0, holder:Lcom/mediatek/gallery3d/video/BookmarkActivity$ViewHolder;
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/BookmarkActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 167
     new-instance v1, Landroid/content/Intent;
@@ -619,7 +619,7 @@
     invoke-virtual {v1, v4, v2}, Landroid/content/Intent;->setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 174
-    invoke-virtual {p0, v1}, Lcom/mediatek/gallery3d/video/BookmarkActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
     .line 177
     .end local v0           #holder:Lcom/mediatek/gallery3d/video/BookmarkActivity$ViewHolder;

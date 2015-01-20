@@ -39,7 +39,7 @@
 
     sget-object v1, Lcom/android/gallery3d/photoeditor/actions/EffectToolKit$ScaleType;->LIGHT:Lcom/android/gallery3d/photoeditor/actions/EffectToolKit$ScaleType;
 
-    invoke-virtual {v1}, Lcom/android/gallery3d/photoeditor/actions/EffectToolKit$ScaleType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -55,7 +55,7 @@
 
     sget-object v1, Lcom/android/gallery3d/photoeditor/actions/EffectToolKit$ScaleType;->SHADOW:Lcom/android/gallery3d/photoeditor/actions/EffectToolKit$ScaleType;
 
-    invoke-virtual {v1}, Lcom/android/gallery3d/photoeditor/actions/EffectToolKit$ScaleType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -71,7 +71,7 @@
 
     sget-object v1, Lcom/android/gallery3d/photoeditor/actions/EffectToolKit$ScaleType;->COLOR:Lcom/android/gallery3d/photoeditor/actions/EffectToolKit$ScaleType;
 
-    invoke-virtual {v1}, Lcom/android/gallery3d/photoeditor/actions/EffectToolKit$ScaleType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 

@@ -242,7 +242,7 @@
 
     .prologue
     .line 164
-    invoke-virtual {p0}, Landroid/app/FragmentBreadCrumbs;->getChildCount()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v2
 
@@ -255,7 +255,7 @@
     if-ge v4, v2, :cond_0
 
     .line 166
-    invoke-virtual {p0, v4}, Landroid/app/FragmentBreadCrumbs;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v4}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -315,7 +315,7 @@
 
     .prologue
     .line 176
-    invoke-virtual {p0}, Landroid/app/FragmentBreadCrumbs;->getChildCount()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v1
 
@@ -340,7 +340,7 @@
     if-ge v2, v1, :cond_1
 
     .line 184
-    invoke-virtual {p0, v2}, Landroid/app/FragmentBreadCrumbs;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -355,7 +355,7 @@
     if-eq v6, v7, :cond_0
 
     .line 186
-    invoke-virtual {p0, v0, p1, p2}, Landroid/app/FragmentBreadCrumbs;->measureChild(Landroid/view/View;II)V
+    invoke-virtual {p0, v0, p1, p2}, Landroid/view/ViewGroup;->measureChild(Landroid/view/View;II)V
 
     .line 187
     invoke-virtual {v0}, Landroid/view/View;->getMeasuredWidth()I
@@ -411,7 +411,7 @@
     add-int/2addr v3, v6
 
     .line 199
-    invoke-virtual {p0}, Landroid/app/FragmentBreadCrumbs;->getSuggestedMinimumHeight()I
+    invoke-virtual {p0}, Landroid/view/View;->getSuggestedMinimumHeight()I
 
     move-result v6
 
@@ -420,7 +420,7 @@
     move-result v3
 
     .line 200
-    invoke-virtual {p0}, Landroid/app/FragmentBreadCrumbs;->getSuggestedMinimumWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getSuggestedMinimumWidth()I
 
     move-result v6
 
@@ -439,7 +439,7 @@
 
     move-result v7
 
-    invoke-virtual {p0, v6, v7}, Landroid/app/FragmentBreadCrumbs;->setMeasuredDimension(II)V
+    invoke-virtual {p0, v6, v7}, Landroid/view/View;->setMeasuredDimension(II)V
 
     .line 205
     return-void
@@ -482,7 +482,7 @@
     .line 95
     iget-object v0, p0, Landroid/app/FragmentBreadCrumbs;->mContainer:Landroid/widget/LinearLayout;
 
-    invoke-virtual {p0, v0}, Landroid/app/FragmentBreadCrumbs;->addView(Landroid/view/View;)V
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     .line 96
     invoke-virtual {p1}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
@@ -499,7 +499,7 @@
 
     invoke-direct {v0}, Landroid/animation/LayoutTransition;-><init>()V
 
-    invoke-virtual {p0, v0}, Landroid/app/FragmentBreadCrumbs;->setLayoutTransition(Landroid/animation/LayoutTransition;)V
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->setLayoutTransition(Landroid/animation/LayoutTransition;)V
 
     .line 99
     return-void
@@ -623,7 +623,7 @@
 
     move-object/from16 v18, v0
 
-    invoke-virtual/range {v18 .. v18}, Landroid/widget/LinearLayout;->getChildCount()I
+    invoke-virtual/range {v18 .. v18}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v13
 
@@ -662,7 +662,7 @@
 
     move-object/from16 v0, v18
 
-    invoke-virtual {v0, v7}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v0, v7}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v16
 
@@ -692,7 +692,7 @@
 
     move-object/from16 v0, v18
 
-    invoke-virtual {v0, v7}, Landroid/widget/LinearLayout;->removeViewAt(I)V
+    invoke-virtual {v0, v7}, Landroid/view/ViewGroup;->removeViewAt(I)V
 
     .line 248
     add-int/lit8 v9, v9, 0x1
@@ -776,7 +776,7 @@
     invoke-virtual {v15, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 260
-    invoke-virtual {v15, v4}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
+    invoke-virtual {v15, v4}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     .line 261
     if-nez v7, :cond_3
@@ -804,7 +804,7 @@
 
     move-object/from16 v0, v18
 
-    invoke-virtual {v0, v8}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+    invoke-virtual {v0, v8}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     .line 265
     move-object/from16 v0, p0
@@ -815,7 +815,7 @@
 
     move-object/from16 v0, v18
 
-    invoke-virtual {v15, v0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v15, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 240
     .end local v8           #item:Landroid/view/View;
@@ -838,7 +838,7 @@
 
     move-object/from16 v18, v0
 
-    invoke-virtual/range {v18 .. v18}, Landroid/widget/LinearLayout;->getChildCount()I
+    invoke-virtual/range {v18 .. v18}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v13
 
@@ -857,7 +857,7 @@
 
     add-int/lit8 v19, v13, -0x1
 
-    invoke-virtual/range {v18 .. v19}, Landroid/widget/LinearLayout;->removeViewAt(I)V
+    invoke-virtual/range {v18 .. v19}, Landroid/view/ViewGroup;->removeViewAt(I)V
 
     .line 272
     add-int/lit8 v13, v13, -0x1
@@ -880,7 +880,7 @@
 
     move-object/from16 v0, v18
 
-    invoke-virtual {v0, v7}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v0, v7}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v5
 

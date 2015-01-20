@@ -123,7 +123,7 @@
 
     move-object/from16 v0, p2
 
-    invoke-virtual {v0, v3}, Landroid/content/SyncAdaptersCache;->getServiceInfo(Ljava/lang/Object;)Landroid/content/pm/RegisteredServicesCache$ServiceInfo;
+    invoke-virtual {v0, v3}, Landroid/content/pm/RegisteredServicesCache;->getServiceInfo(Ljava/lang/Object;)Landroid/content/pm/RegisteredServicesCache$ServiceInfo;
 
     move-result-object v20
 

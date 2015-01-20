@@ -3,8 +3,8 @@
 .source "SinglePhotoDataAdapter.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
 .implements Lcom/android/gallery3d/util/FutureListener;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -53,7 +53,7 @@
     .line 500
     iput-object p1, p0, Lcom/android/gallery3d/app/SinglePhotoDataAdapter$GifDecoderListener;->this$0:Lcom/android/gallery3d/app/SinglePhotoDataAdapter;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

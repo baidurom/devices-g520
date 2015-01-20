@@ -136,7 +136,7 @@
     .line 205
     new-instance v0, Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Landroid/view/inputmethod/InputMethodManager;->mInstanceSync:Ljava/lang/Object;
 
@@ -154,7 +154,7 @@
     const/4 v1, 0x0
 
     .line 527
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 251
     iput-boolean v1, p0, Landroid/view/inputmethod/InputMethodManager;->mActive:Z
@@ -621,7 +621,7 @@
 
     const/4 v4, 0x0
 
-    invoke-virtual {v2, v3, p3, v4, v1}, Landroid/view/inputmethod/InputMethodManager$H;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
+    invoke-virtual {v2, v3, p3, v4, v1}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v0
 
@@ -636,7 +636,7 @@
 
     const-wide/16 v3, 0x9c4
 
-    invoke-virtual {v2, v0, v3, v4}, Landroid/view/inputmethod/InputMethodManager$H;->sendMessageDelayed(Landroid/os/Message;J)Z
+    invoke-virtual {v2, v0, v3, v4}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     .line 1719
     return-void
@@ -677,7 +677,7 @@
 
     const/4 v4, 0x5
 
-    invoke-virtual {v2, v4, v1}, Landroid/view/inputmethod/InputMethodManager$H;->removeMessages(ILjava/lang/Object;)V
+    invoke-virtual {v2, v4, v1}, Landroid/os/Handler;->removeMessages(ILjava/lang/Object;)V
 
     .line 1673
     iget-object v0, v1, Landroid/view/inputmethod/InputMethodManager$PendingEvent;->mCallback:Lcom/android/internal/view/IInputMethodCallback;

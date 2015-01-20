@@ -318,7 +318,7 @@
     .line 82
     iget-object v0, p0, Lcom/android/vcard/VCardParser_V30;->mVCardParserImpl:Lcom/android/vcard/VCardParserImpl_V30;
 
-    invoke-virtual {v0, p1}, Lcom/android/vcard/VCardParserImpl_V30;->addInterpreter(Lcom/android/vcard/VCardInterpreter;)V
+    invoke-virtual {v0, p1}, Lcom/android/vcard/VCardParserImpl_V21;->addInterpreter(Lcom/android/vcard/VCardInterpreter;)V
 
     .line 83
     return-void
@@ -331,7 +331,7 @@
     .line 97
     iget-object v0, p0, Lcom/android/vcard/VCardParser_V30;->mVCardParserImpl:Lcom/android/vcard/VCardParserImpl_V30;
 
-    invoke-virtual {v0}, Lcom/android/vcard/VCardParserImpl_V30;->cancel()V
+    invoke-virtual {v0}, Lcom/android/vcard/VCardParserImpl_V21;->cancel()V
 
     .line 98
     return-void
@@ -351,7 +351,7 @@
     .line 87
     iget-object v0, p0, Lcom/android/vcard/VCardParser_V30;->mVCardParserImpl:Lcom/android/vcard/VCardParserImpl_V30;
 
-    invoke-virtual {v0, p1}, Lcom/android/vcard/VCardParserImpl_V30;->parse(Ljava/io/InputStream;)V
+    invoke-virtual {v0, p1}, Lcom/android/vcard/VCardParserImpl_V21;->parse(Ljava/io/InputStream;)V
 
     .line 88
     return-void
@@ -371,7 +371,7 @@
     .line 92
     iget-object v0, p0, Lcom/android/vcard/VCardParser_V30;->mVCardParserImpl:Lcom/android/vcard/VCardParserImpl_V30;
 
-    invoke-virtual {v0, p1}, Lcom/android/vcard/VCardParserImpl_V30;->parseOne(Ljava/io/InputStream;)V
+    invoke-virtual {v0, p1}, Lcom/android/vcard/VCardParserImpl_V21;->parseOne(Ljava/io/InputStream;)V
 
     .line 93
     return-void

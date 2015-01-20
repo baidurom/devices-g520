@@ -126,7 +126,7 @@
 
     .prologue
     .line 140
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 49
     new-instance v0, Lcom/android/gallery3d/app/GalleryActionBar$ClusterAdapter;
@@ -937,7 +937,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
+    invoke-virtual {v1}, Landroid/app/Dialog;->show()V
 
     .line 226
     return-void

@@ -3,9 +3,9 @@
 .source "PhotoPage.java"
 
 # interfaces
-.implements Lcom/android/gallery3d/ui/PhotoView$Listener;
-.implements Lcom/android/gallery3d/app/OrientationManager$Listener;
 .implements Lcom/android/gallery3d/app/AppBridge$Server;
+.implements Lcom/android/gallery3d/app/OrientationManager$Listener;
+.implements Lcom/android/gallery3d/ui/PhotoView$Listener;
 .implements Lcom/android/gallery3d/ui/PhotoView$StereoModeChangeListener;
 
 
@@ -648,7 +648,7 @@
     :cond_1
     iget-object v1, p0, Lcom/android/gallery3d/app/PhotoPage;->mCurrentPhoto:Lcom/android/gallery3d/data/MediaItem;
 
-    invoke-virtual {v1}, Lcom/android/gallery3d/data/MediaItem;->getMediaType()I
+    invoke-virtual {v1}, Lcom/android/gallery3d/data/MediaObject;->getMediaType()I
 
     move-result v1
 
@@ -997,7 +997,7 @@
 
     const/4 v6, 0x2
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/data/MediaItem;->getMediaType()I
+    invoke-virtual {v0}, Lcom/android/gallery3d/data/MediaObject;->getMediaType()I
 
     move-result v7
 
@@ -1082,7 +1082,7 @@
 
     check-cast v2, Landroid/app/Activity;
 
-    invoke-virtual {v2, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+    invoke-virtual {v2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1188,7 +1188,7 @@
 
     check-cast v2, Landroid/app/Activity;
 
-    invoke-virtual {v2, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+    invoke-virtual {v2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1368,7 +1368,7 @@
     .line 637
     new-instance v1, Landroid/os/Bundle;
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/PhotoPage;->getData()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/android/gallery3d/app/ActivityState;->getData()Landroid/os/Bundle;
 
     move-result-object v6
 
@@ -1711,7 +1711,7 @@
     .local v0, e:Landroid/content/ActivityNotFoundException;
     const v2, 0x7f0c0213
 
-    invoke-virtual {p0, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1851,7 +1851,7 @@
 
     const v3, 0x7f0c0265
 
-    invoke-virtual {v2, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -2009,7 +2009,7 @@
     :cond_0
     const/4 v1, -0x1
 
-    invoke-virtual {p0, v1, v0}, Lcom/android/gallery3d/app/PhotoPage;->setStateResult(ILandroid/content/Intent;)V
+    invoke-virtual {p0, v1, v0}, Lcom/android/gallery3d/app/ActivityState;->setStateResult(ILandroid/content/Intent;)V
 
     .line 690
     return-void
@@ -2095,7 +2095,7 @@
 
     const v6, 0x7f0c0211
 
-    invoke-virtual {v5, v6}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+    invoke-virtual {v5, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -2115,7 +2115,7 @@
 
     aput-object v3, v7, v8
 
-    invoke-virtual {v5, v6, v7}, Landroid/app/Activity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v5, v6, v7}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -2148,7 +2148,7 @@
 
     .line 1457
     .local v4, dialog:Landroid/app/AlertDialog;
-    invoke-virtual {v4}, Landroid/app/AlertDialog;->show()V
+    invoke-virtual {v4}, Landroid/app/Dialog;->show()V
 
     .line 1458
     return-void
@@ -2182,7 +2182,7 @@
 
     const v6, 0x7f0c020e
 
-    invoke-virtual {v5, v6}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+    invoke-virtual {v5, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -2202,7 +2202,7 @@
 
     aput-object v4, v7, v8
 
-    invoke-virtual {v5, v6, v7}, Landroid/app/Activity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v5, v6, v7}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -2235,7 +2235,7 @@
 
     .line 1495
     .local v3, dialog:Landroid/app/AlertDialog;
-    invoke-virtual {v3}, Landroid/app/AlertDialog;->show()V
+    invoke-virtual {v3}, Landroid/app/Dialog;->show()V
 
     .line 1496
     return-void
@@ -2380,7 +2380,7 @@
 
     .line 1669
     .local v2, dialog:Landroid/app/AlertDialog;
-    invoke-virtual {v2}, Landroid/app/AlertDialog;->show()V
+    invoke-virtual {v2}, Landroid/app/Dialog;->show()V
 
     .line 1670
     return-void
@@ -2431,13 +2431,13 @@
     invoke-virtual {v1, v0, v3}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
     .line 1464
-    invoke-virtual {p1}, Lcom/android/gallery3d/data/MediaItem;->getContentUri()Landroid/net/Uri;
+    invoke-virtual {p1}, Lcom/android/gallery3d/data/MediaObject;->getContentUri()Landroid/net/Uri;
 
     move-result-object v2
 
     .line 1465
     .local v2, uri:Landroid/net/Uri;
-    invoke-virtual {p1}, Lcom/android/gallery3d/data/MediaItem;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {p1}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v3
 
@@ -2570,7 +2570,7 @@
     .line 1415
     iget-object v1, p0, Lcom/android/gallery3d/app/PhotoPage;->mCurrentPhoto:Lcom/android/gallery3d/data/MediaItem;
 
-    invoke-virtual {v1}, Lcom/android/gallery3d/data/MediaItem;->getSupportedOperations()I
+    invoke-virtual {v1}, Lcom/android/gallery3d/data/MediaObject;->getSupportedOperations()I
 
     move-result v0
 
@@ -2687,7 +2687,7 @@
     .line 472
     iget-object v1, p0, Lcom/android/gallery3d/app/PhotoPage;->mCurrentPhoto:Lcom/android/gallery3d/data/MediaItem;
 
-    invoke-virtual {v1}, Lcom/android/gallery3d/data/MediaItem;->getSupportedOperations()I
+    invoke-virtual {v1}, Lcom/android/gallery3d/data/MediaObject;->getSupportedOperations()I
 
     move-result v0
 
@@ -2710,7 +2710,7 @@
     .end local v0           #supportedOperations:I
     :cond_3
     :goto_1
-    invoke-virtual {p1}, Lcom/android/gallery3d/data/MediaItem;->getSupportedOperations()I
+    invoke-virtual {p1}, Lcom/android/gallery3d/data/MediaObject;->getSupportedOperations()I
 
     move-result v1
 
@@ -2719,7 +2719,7 @@
     if-eqz v1, :cond_0
 
     .line 480
-    invoke-virtual {p1}, Lcom/android/gallery3d/data/MediaItem;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {p1}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v1
 
@@ -2785,7 +2785,7 @@
     .line 501
     iget-object v2, p0, Lcom/android/gallery3d/app/PhotoPage;->mCurrentPhoto:Lcom/android/gallery3d/data/MediaItem;
 
-    invoke-virtual {v2}, Lcom/android/gallery3d/data/MediaItem;->getSupportedOperations()I
+    invoke-virtual {v2}, Lcom/android/gallery3d/data/MediaObject;->getSupportedOperations()I
 
     move-result v1
 
@@ -2812,7 +2812,7 @@
 
     iget-object v3, p0, Lcom/android/gallery3d/app/PhotoPage;->mCurrentPhoto:Lcom/android/gallery3d/data/MediaItem;
 
-    invoke-virtual {v3}, Lcom/android/gallery3d/data/MediaItem;->getMediaType()I
+    invoke-virtual {v3}, Lcom/android/gallery3d/data/MediaObject;->getMediaType()I
 
     move-result v3
 
@@ -4412,7 +4412,7 @@
 
     .line 778
     .local v5, currentIndex:I
-    invoke-virtual {v4}, Lcom/android/gallery3d/data/MediaItem;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {v4}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v10
 
@@ -4468,7 +4468,7 @@
 
     iget-object v15, v0, Lcom/android/gallery3d/app/PhotoPage;->mMediaSet:Lcom/android/gallery3d/data/FilterDeleteSet;
 
-    invoke-virtual {v15}, Lcom/android/gallery3d/data/FilterDeleteSet;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {v15}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v15
 
@@ -5057,7 +5057,7 @@
     invoke-virtual {v2, v3}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 1229
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/PhotoPage;->isFinishing()Z
+    invoke-virtual {p0}, Lcom/android/gallery3d/app/ActivityState;->isFinishing()Z
 
     move-result v2
 
@@ -5204,7 +5204,7 @@
     .line 1273
     iget-object v0, p0, Lcom/android/gallery3d/app/PhotoPage;->mRootPane:Lcom/android/gallery3d/ui/GLView;
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/app/PhotoPage;->setContentPane(Lcom/android/gallery3d/ui/GLView;)V
+    invoke-virtual {p0, v0}, Lcom/android/gallery3d/app/ActivityState;->setContentPane(Lcom/android/gallery3d/ui/GLView;)V
 
     .line 1275
     iget-object v0, p0, Lcom/android/gallery3d/app/PhotoPage;->mModel:Lcom/android/gallery3d/app/PhotoPage$Model;
@@ -5312,7 +5312,7 @@
     .line 1738
     iget-object v1, p0, Lcom/android/gallery3d/app/PhotoPage;->mCurrentPhoto:Lcom/android/gallery3d/data/MediaItem;
 
-    invoke-virtual {v1}, Lcom/android/gallery3d/data/MediaItem;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {v1}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v0
 
@@ -5383,7 +5383,7 @@
     if-eq v2, v7, :cond_0
 
     .line 932
-    invoke-virtual {v2}, Lcom/android/gallery3d/data/MediaItem;->getSupportedOperations()I
+    invoke-virtual {v2}, Lcom/android/gallery3d/data/MediaObject;->getSupportedOperations()I
 
     move-result v7
 
@@ -5401,7 +5401,7 @@
     .line 938
     iget-object v7, p0, Lcom/android/gallery3d/app/PhotoPage;->mPhotoView:Lcom/android/gallery3d/ui/PhotoView;
 
-    invoke-virtual {v7}, Lcom/android/gallery3d/ui/PhotoView;->getWidth()I
+    invoke-virtual {v7}, Lcom/android/gallery3d/ui/GLView;->getWidth()I
 
     move-result v4
 
@@ -5409,7 +5409,7 @@
     .local v4, w:I
     iget-object v7, p0, Lcom/android/gallery3d/app/PhotoPage;->mPhotoView:Lcom/android/gallery3d/ui/PhotoView;
 
-    invoke-virtual {v7}, Lcom/android/gallery3d/ui/PhotoView;->getHeight()I
+    invoke-virtual {v7}, Lcom/android/gallery3d/ui/GLView;->getHeight()I
 
     move-result v1
 
@@ -5466,7 +5466,7 @@
 
     check-cast v5, Landroid/app/Activity;
 
-    invoke-virtual {v2}, Lcom/android/gallery3d/data/MediaItem;->getPlayUri()Landroid/net/Uri;
+    invoke-virtual {v2}, Lcom/android/gallery3d/data/MediaObject;->getPlayUri()Landroid/net/Uri;
 
     move-result-object v6
 
@@ -5509,7 +5509,7 @@
     .local v0, consume:Z
     iget-object v7, p0, Lcom/android/gallery3d/app/PhotoPage;->mPhotoView:Lcom/android/gallery3d/ui/PhotoView;
 
-    invoke-virtual {v7}, Lcom/android/gallery3d/ui/PhotoView;->getWidth()I
+    invoke-virtual {v7}, Lcom/android/gallery3d/ui/GLView;->getWidth()I
 
     move-result v4
 
@@ -5517,7 +5517,7 @@
     .restart local v4       #w:I
     iget-object v7, p0, Lcom/android/gallery3d/app/PhotoPage;->mPhotoView:Lcom/android/gallery3d/ui/PhotoView;
 
-    invoke-virtual {v7}, Lcom/android/gallery3d/ui/PhotoView;->getHeight()I
+    invoke-virtual {v7}, Lcom/android/gallery3d/ui/GLView;->getHeight()I
 
     move-result v1
 
@@ -6113,7 +6113,7 @@
 
     if-nez v1, :cond_0
 
-    invoke-virtual {p1}, Lcom/android/gallery3d/data/MediaItem;->getSupportedOperations()I
+    invoke-virtual {p1}, Lcom/android/gallery3d/data/MediaObject;->getSupportedOperations()I
 
     move-result v1
 

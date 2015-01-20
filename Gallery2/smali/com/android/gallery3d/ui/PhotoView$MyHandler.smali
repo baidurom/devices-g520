@@ -141,7 +141,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2, v8}, Lcom/android/gallery3d/ui/SynchronizedHandler;->removeMessages(I)V
+    invoke-virtual {v2, v8}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 369
     iget-object v2, p0, Lcom/android/gallery3d/ui/PhotoView$MyHandler;->this$0:Lcom/android/gallery3d/ui/PhotoView;
@@ -151,7 +151,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2, v8}, Lcom/android/gallery3d/ui/SynchronizedHandler;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {v2, v8}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v0
 
@@ -166,7 +166,7 @@
 
     const-wide/16 v5, 0x7d0
 
-    invoke-virtual {v2, v0, v5, v6}, Lcom/android/gallery3d/ui/SynchronizedHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
+    invoke-virtual {v2, v0, v5, v6}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     .line 372
     iget-object v2, p0, Lcom/android/gallery3d/ui/PhotoView$MyHandler;->this$0:Lcom/android/gallery3d/ui/PhotoView;
@@ -268,7 +268,7 @@
 
     const/4 v3, 0x5
 
-    invoke-virtual {v2, v3}, Lcom/android/gallery3d/ui/SynchronizedHandler;->hasMessages(I)Z
+    invoke-virtual {v2, v3}, Landroid/os/Handler;->hasMessages(I)Z
 
     move-result v2
 

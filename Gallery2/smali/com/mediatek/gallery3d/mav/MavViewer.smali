@@ -542,7 +542,7 @@
     invoke-virtual {v3, p0}, Lcom/mediatek/gallery3d/mav/MAVView;->configChanged(Landroid/content/Context;)V
 
     .line 374
-    invoke-virtual {p0, v5}, Lcom/mediatek/gallery3d/mav/MavViewer;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v5}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -614,7 +614,7 @@
     .line 79
     const v0, 0x7f040020
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/mav/MavViewer;->setContentView(I)V
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->setContentView(I)V
 
     .line 81
     const-wide/16 v2, 0x0
@@ -631,7 +631,7 @@
     .line 84
     const-string v0, "sensor"
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/mav/MavViewer;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -711,7 +711,7 @@
     .line 90
     const v0, 0x7f0b0032
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/mav/MavViewer;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -722,7 +722,7 @@
     .line 91
     const v0, 0x7f0b0033
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/mav/MavViewer;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -744,7 +744,7 @@
 
     .line 99
     :cond_0
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/mav/MavViewer;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v10
 
@@ -790,7 +790,7 @@
     invoke-static {v0, v2}, Lcom/android/gallery3d/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 109
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/mav/MavViewer;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 318
     .end local v1           #uri:Landroid/net/Uri;
@@ -830,7 +830,7 @@
     .line 116
     .local v6, c:Landroid/database/Cursor;
     :try_start_0
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/mav/MavViewer;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -976,7 +976,7 @@
     invoke-static {v0, v2}, Lcom/android/gallery3d/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 143
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/mav/MavViewer;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto/16 :goto_1
 
@@ -1001,7 +1001,7 @@
     iput-boolean v0, p0, Lcom/mediatek/gallery3d/mav/MavViewer;->mDecodeUri:Z
 
     .line 138
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/mav/MavViewer;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -1041,7 +1041,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {p0, v0, v2}, Lcom/mediatek/gallery3d/mav/MavViewer;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-virtual {p0, v0, v2}, Landroid/content/ContextWrapper;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v13
 
@@ -1064,7 +1064,7 @@
     :goto_3
     const v0, 0x7f0b0034
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/mav/MavViewer;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v8
 
@@ -1188,7 +1188,7 @@
     .line 364
     const v1, 0x7f0b0034
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/gallery3d/mav/MavViewer;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 

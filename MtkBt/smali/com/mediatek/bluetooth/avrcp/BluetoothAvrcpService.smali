@@ -463,7 +463,7 @@
     .line 231
     iget v2, p0, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService;->mStartId:I
 
-    invoke-virtual {p0, v2}, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService;->stopSelf(I)V
+    invoke-virtual {p0, v2}, Landroid/app/Service;->stopSelf(I)V
 
     goto :goto_0
 
@@ -1086,7 +1086,7 @@
 
     const-string v2, "[BT][AVRCP] Excpetion "
 
-    invoke-virtual {v0}, Ljava/lang/InterruptedException;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v3
 
@@ -5505,7 +5505,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 158
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 

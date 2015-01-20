@@ -259,18 +259,18 @@
     iput v0, p0, Lcom/android/gallery3d/ui/GLRootView;->mFlags:I
 
     .line 121
-    invoke-virtual {p0, v3}, Lcom/android/gallery3d/ui/GLRootView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p0, v3}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 122
     iget-object v0, p0, Lcom/android/gallery3d/ui/GLRootView;->mEglConfigChooser:Lcom/android/gallery3d/ui/GalleryEGLConfigChooser;
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/ui/GLRootView;->setEGLConfigChooser(Landroid/opengl/GLSurfaceView$EGLConfigChooser;)V
+    invoke-virtual {p0, v0}, Landroid/opengl/GLSurfaceView;->setEGLConfigChooser(Landroid/opengl/GLSurfaceView$EGLConfigChooser;)V
 
     .line 123
-    invoke-virtual {p0, p0}, Lcom/android/gallery3d/ui/GLRootView;->setRenderer(Landroid/opengl/GLSurfaceView$Renderer;)V
+    invoke-virtual {p0, p0}, Landroid/opengl/GLSurfaceView;->setRenderer(Landroid/opengl/GLSurfaceView$Renderer;)V
 
     .line 124
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLRootView;->getHolder()Landroid/view/SurfaceHolder;
+    invoke-virtual {p0}, Landroid/view/SurfaceView;->getHolder()Landroid/view/SurfaceHolder;
 
     move-result-object v0
 
@@ -431,13 +431,13 @@
     iput v5, p0, Lcom/android/gallery3d/ui/GLRootView;->mFlags:I
 
     .line 205
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLRootView;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v4
 
     .line 206
     .local v4, w:I
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLRootView;->getHeight()I
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result v2
 
@@ -748,7 +748,7 @@
 
     check-cast v4, Lcom/android/gallery3d/anim/CanvasAnimation;
 
-    invoke-virtual {v4, v2, v3}, Lcom/android/gallery3d/anim/CanvasAnimation;->setStartTime(J)V
+    invoke-virtual {v4, v2, v3}, Lcom/android/gallery3d/anim/Animation;->setStartTime(J)V
 
     .line 396
     add-int/lit8 v0, v0, 0x1
@@ -918,13 +918,13 @@
     .line 680
     iget-object v0, p0, Lcom/android/gallery3d/ui/GLRootView;->mCanvas:Lcom/android/gallery3d/ui/GLCanvas;
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLRootView;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v1
 
     div-int/lit8 v1, v1, 0x2
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLRootView;->getHeight()I
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result v2
 
@@ -953,7 +953,7 @@
     .line 691
     iget-object v0, p0, Lcom/android/gallery3d/ui/GLRootView;->mCanvas:Lcom/android/gallery3d/ui/GLCanvas;
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLRootView;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v1
 
@@ -961,13 +961,13 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLRootView;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v3
 
     div-int/lit8 v3, v3, 0x2
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLRootView;->getHeight()I
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result v4
 
@@ -1047,11 +1047,11 @@
     .line 702
     iget-object v0, p0, Lcom/android/gallery3d/ui/GLRootView;->mCanvas:Lcom/android/gallery3d/ui/GLCanvas;
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLRootView;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v1
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLRootView;->getHeight()I
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result v2
 
@@ -1077,13 +1077,13 @@
 
     .line 422
     :cond_0
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLRootView;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v3
 
     .line 423
     .local v3, w:I
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLRootView;->getHeight()I
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result v2
 
@@ -1197,7 +1197,7 @@
     invoke-static {v1, v2}, Lcom/android/gallery3d/ui/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 675
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/ui/GLRootView;->set3DLayout(I)V
+    invoke-virtual {p0, v0}, Landroid/view/SurfaceView;->set3DLayout(I)V
 
     .line 676
     return-void
@@ -1229,7 +1229,7 @@
     .line 751
     iget-object v0, p0, Lcom/android/gallery3d/ui/GLRootView;->mCanvas:Lcom/android/gallery3d/ui/GLCanvas;
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLRootView;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v1
 
@@ -1307,7 +1307,7 @@
     const/4 v1, 0x0
 
     .line 437
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLRootView;->isEnabled()Z
+    invoke-virtual {p0}, Landroid/view/View;->isEnabled()Z
 
     move-result v3
 
@@ -1604,7 +1604,7 @@
 
     invoke-direct {v1, p0}, Lcom/android/gallery3d/ui/GLRootView$1;-><init>(Lcom/android/gallery3d/ui/GLRootView;)V
 
-    invoke-virtual {p0, v1}, Lcom/android/gallery3d/ui/GLRootView;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {p0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
     .line 369
     :cond_1
@@ -1830,7 +1830,7 @@
     .line 277
     const/4 v1, 0x0
 
-    invoke-virtual {p0, v1}, Lcom/android/gallery3d/ui/GLRootView;->setRenderMode(I)V
+    invoke-virtual {p0, v1}, Landroid/opengl/GLSurfaceView;->setRenderMode(I)V
 
     .line 279
     return-void
@@ -2066,7 +2066,7 @@
     .line 561
     .local v0, flags:I
     :goto_0
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/ui/GLRootView;->setSystemUiVisibility(I)V
+    invoke-virtual {p0, v0}, Landroid/view/View;->setSystemUiVisibility(I)V
 
     .line 562
     return-void

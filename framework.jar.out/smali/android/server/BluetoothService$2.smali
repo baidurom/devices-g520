@@ -99,7 +99,7 @@
 
     const/16 v5, 0x37
 
-    invoke-virtual {v4, v5}, Landroid/server/BluetoothAdapterStateMachine;->sendMessage(I)V
+    invoke-virtual {v4, v5}, Lcom/android/internal/util/StateMachine;->sendMessage(I)V
 
     goto :goto_0
 
@@ -114,7 +114,7 @@
 
     const/16 v5, 0x38
 
-    invoke-virtual {v4, v5}, Landroid/server/BluetoothAdapterStateMachine;->sendMessage(I)V
+    invoke-virtual {v4, v5}, Lcom/android/internal/util/StateMachine;->sendMessage(I)V
 
     goto :goto_0
 

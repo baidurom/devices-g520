@@ -30,7 +30,7 @@
     .line 1844
     iput-object p1, p0, Lcom/android/camera/Camera$13;->this$0:Lcom/android/camera/Camera;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -71,7 +71,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/SettingManager;->refresh()V
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->refresh()V
 
     .line 1851
     return-void

@@ -36,7 +36,7 @@
 
     .prologue
     .line 62
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -69,7 +69,7 @@
 
     .line 202
     :cond_0
-    invoke-virtual {p1}, Ljavax/net/ssl/SSLSocket;->close()V
+    invoke-virtual {p1}, Ljava/net/Socket;->close()V
 
     .line 205
     .end local v0           #session:Ljavax/net/ssl/SSLSession;

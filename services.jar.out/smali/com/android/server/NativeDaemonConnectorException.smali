@@ -121,7 +121,7 @@
     .line 56
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {p0}, Lcom/android/server/NativeDaemonConnectorException;->getMessage()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v1
 

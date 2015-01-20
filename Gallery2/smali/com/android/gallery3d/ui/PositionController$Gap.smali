@@ -109,7 +109,7 @@
     iput v0, p0, Lcom/android/gallery3d/ui/PositionController$Animatable;->mAnimationDuration:I
 
     .line 1859
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/PositionController$Gap;->advanceAnimation()Z
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/PositionController$Animatable;->advanceAnimation()Z
 
     .line 1860
     const/4 v0, 0x1

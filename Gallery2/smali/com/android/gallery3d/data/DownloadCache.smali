@@ -210,7 +210,7 @@
 
     .prologue
     .line 81
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 69
     new-instance v0, Lcom/android/gallery3d/common/LruCache;
@@ -268,7 +268,7 @@
 
     invoke-direct {v0, p0, v1}, Lcom/android/gallery3d/data/DownloadCache$DatabaseHelper;-><init>(Lcom/android/gallery3d/data/DownloadCache;Landroid/content/Context;)V
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/data/DownloadCache$DatabaseHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 

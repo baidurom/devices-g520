@@ -30,7 +30,7 @@
     .line 8670
     iput-object p1, p0, Landroid/webkit/WebViewClassic$InvokeListBox$2;->this$1:Landroid/webkit/WebViewClassic$InvokeListBox;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

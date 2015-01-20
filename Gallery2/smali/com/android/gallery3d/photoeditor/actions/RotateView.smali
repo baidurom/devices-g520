@@ -286,7 +286,7 @@
 
     .line 216
     :cond_0
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/RotateView;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     .line 217
     return-void
@@ -300,7 +300,7 @@
 
     .prologue
     .line 137
-    invoke-super {p0, p1}, Lcom/android/gallery3d/photoeditor/actions/FullscreenToolView;->onDraw(Landroid/graphics/Canvas;)V
+    invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
     .line 139
     iget-boolean v0, p0, Lcom/android/gallery3d/photoeditor/actions/RotateView;->drawGrids:Z
@@ -436,7 +436,7 @@
     .line 116
     iget-object v4, p0, Lcom/android/gallery3d/photoeditor/actions/RotateView;->referenceLine:Landroid/graphics/Path;
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/RotateView;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v5
 
@@ -475,7 +475,7 @@
 
     int-to-float v5, v5
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/RotateView;->getHeight()I
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result v6
 
@@ -602,10 +602,10 @@
     const/4 v4, 0x1
 
     .line 173
-    invoke-super {p0, p1}, Lcom/android/gallery3d/photoeditor/actions/FullscreenToolView;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    invoke-super {p0, p1}, Landroid/view/View;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     .line 175
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/RotateView;->isEnabled()Z
+    invoke-virtual {p0}, Landroid/view/View;->isEnabled()Z
 
     move-result v2
 
@@ -735,7 +735,7 @@
     iput-boolean p1, p0, Lcom/android/gallery3d/photoeditor/actions/RotateView;->drawGrids:Z
 
     .line 101
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/RotateView;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     .line 102
     return-void

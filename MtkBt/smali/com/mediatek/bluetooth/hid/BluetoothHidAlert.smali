@@ -132,7 +132,7 @@
     const/4 v5, 0x0
 
     .line 161
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/hid/BluetoothHidAlert;->getLayoutInflater()Landroid/view/LayoutInflater;
+    invoke-virtual {p0}, Landroid/app/Activity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v2
 
@@ -187,7 +187,7 @@
 
     aput-object v4, v3, v5
 
-    invoke-virtual {p0, v2, v3}, Lcom/mediatek/bluetooth/hid/BluetoothHidAlert;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v2, v3}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -223,7 +223,7 @@
 
     aput-object v4, v3, v5
 
-    invoke-virtual {p0, v2, v3}, Lcom/mediatek/bluetooth/hid/BluetoothHidAlert;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v2, v3}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -250,7 +250,7 @@
 
     aput-object v4, v3, v5
 
-    invoke-virtual {p0, v2, v3}, Lcom/mediatek/bluetooth/hid/BluetoothHidAlert;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v2, v3}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -336,7 +336,7 @@
 
     .line 190
     .local v0, e:Landroid/os/RemoteException;
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 
@@ -433,7 +433,7 @@
 
     .line 205
     .restart local v0       #e:Landroid/os/RemoteException;
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 
@@ -468,7 +468,7 @@
     if-eqz v2, :cond_7
 
     .line 98
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/hid/BluetoothHidAlert;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -542,7 +542,7 @@
 
     .line 110
     :cond_1
-    iget-object v1, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidAlert;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
+    iget-object v1, p0, Lcom/android/internal/app/AlertActivity;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
 
     .line 111
     .local v1, p:Lcom/android/internal/app/AlertController$AlertParams;
@@ -569,7 +569,7 @@
     .line 114
     const v2, 0x7f050008
 
-    invoke-virtual {p0, v2}, Lcom/mediatek/bluetooth/hid/BluetoothHidAlert;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -588,7 +588,7 @@
     :cond_3
     const v2, 0x7f05000e
 
-    invoke-virtual {p0, v2}, Lcom/mediatek/bluetooth/hid/BluetoothHidAlert;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -600,7 +600,7 @@
     .line 125
     const v2, 0x7f05000f
 
-    invoke-virtual {p0, v2}, Lcom/mediatek/bluetooth/hid/BluetoothHidAlert;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -615,7 +615,7 @@
     sput-boolean v2, Lcom/mediatek/bluetooth/hid/BluetoothHidAlert;->sOnlyOnce:Z
 
     .line 128
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/hid/BluetoothHidAlert;->setupAlert()V
+    invoke-virtual {p0}, Lcom/android/internal/app/AlertActivity;->setupAlert()V
 
     .line 133
     .end local v0           #data:Landroid/os/Bundle;
@@ -646,7 +646,7 @@
     .line 116
     const v2, 0x7f050009
 
-    invoke-virtual {p0, v2}, Lcom/mediatek/bluetooth/hid/BluetoothHidAlert;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -669,7 +669,7 @@
     .line 118
     const v2, 0x7f05000a
 
-    invoke-virtual {p0, v2}, Lcom/mediatek/bluetooth/hid/BluetoothHidAlert;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -681,10 +681,10 @@
     .end local v0           #data:Landroid/os/Bundle;
     .end local v1           #p:Lcom/android/internal/app/AlertController$AlertParams;
     :cond_7
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/hid/BluetoothHidAlert;->dismiss()V
+    invoke-virtual {p0}, Lcom/android/internal/app/AlertActivity;->dismiss()V
 
     .line 131
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/hid/BluetoothHidAlert;->cancel()V
+    invoke-virtual {p0}, Lcom/android/internal/app/AlertActivity;->cancel()V
 
     goto :goto_2
 .end method
@@ -694,7 +694,7 @@
 
     .prologue
     .line 227
-    invoke-super {p0}, Lcom/android/internal/app/AlertActivity;->onDestroy()V
+    invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
     .line 229
     const-string v0, "[BT][HID][BluetoothHidAlert]"
@@ -754,7 +754,7 @@
     sput-boolean v1, Lcom/mediatek/bluetooth/hid/BluetoothHidAlert;->sOnlyOnce:Z
 
     .line 267
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/hid/BluetoothHidAlert;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 269
     :cond_2
@@ -770,7 +770,7 @@
 
     .line 264
     .local v0, e:Landroid/os/RemoteException;
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 .end method
@@ -780,7 +780,7 @@
 
     .prologue
     .line 235
-    invoke-super {p0}, Lcom/android/internal/app/AlertActivity;->onPause()V
+    invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
     .line 237
     const-string v0, "[BT][HID][BluetoothHidAlert]"
@@ -800,7 +800,7 @@
     const/4 v4, 0x1
 
     .line 136
-    invoke-super {p0}, Lcom/android/internal/app/AlertActivity;->onStart()V
+    invoke-super {p0}, Landroid/app/Activity;->onStart()V
 
     .line 138
     const-string v2, "[BT][HID][BluetoothHidAlert]"
@@ -828,7 +828,7 @@
     invoke-virtual {v2}, Landroid/widget/Toast;->show()V
 
     .line 143
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/hid/BluetoothHidAlert;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 158
     :goto_0
@@ -853,7 +853,7 @@
 
     iget-object v3, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidAlert;->mHidServerNotifyConn:Landroid/content/ServiceConnection;
 
-    invoke-virtual {p0, v2, v3, v4}, Lcom/mediatek/bluetooth/hid/BluetoothHidAlert;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
+    invoke-virtual {p0, v2, v3, v4}, Landroid/content/ContextWrapper;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
     move-result v2
 
@@ -878,14 +878,14 @@
     .line 157
     iget-object v2, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidAlert;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v2, v0}, Lcom/mediatek/bluetooth/hid/BluetoothHidAlert;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v2, v0}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     goto :goto_0
 
     .line 152
     .end local v0           #filter:Landroid/content/IntentFilter;
     :cond_2
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/hid/BluetoothHidAlert;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_1
 .end method
@@ -895,7 +895,7 @@
 
     .prologue
     .line 244
-    invoke-super {p0}, Lcom/android/internal/app/AlertActivity;->onStop()V
+    invoke-super {p0}, Landroid/app/Activity;->onStop()V
 
     .line 246
     const-string v0, "[BT][HID][BluetoothHidAlert]"
@@ -917,7 +917,7 @@
     .line 250
     iget-object v0, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidAlert;->mHidServerNotifyConn:Landroid/content/ServiceConnection;
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/hid/BluetoothHidAlert;->unbindService(Landroid/content/ServiceConnection;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->unbindService(Landroid/content/ServiceConnection;)V
 
     .line 252
     :cond_0
@@ -928,7 +928,7 @@
     .line 253
     iget-object v0, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidAlert;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/hid/BluetoothHidAlert;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 254
     return-void

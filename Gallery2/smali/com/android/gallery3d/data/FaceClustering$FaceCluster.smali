@@ -47,7 +47,7 @@
     .line 43
     iput-object p1, p0, Lcom/android/gallery3d/data/FaceClustering$FaceCluster;->this$0:Lcom/android/gallery3d/data/FaceClustering;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 37
     new-instance v0, Ljava/util/ArrayList;
@@ -72,7 +72,7 @@
 
     .prologue
     .line 48
-    invoke-virtual {p1}, Lcom/android/gallery3d/data/MediaItem;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {p1}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v2
 

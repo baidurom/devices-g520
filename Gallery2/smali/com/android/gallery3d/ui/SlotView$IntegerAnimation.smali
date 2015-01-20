@@ -172,10 +172,10 @@
     .line 760
     const/16 v0, 0xb4
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/ui/SlotView$IntegerAnimation;->setDuration(I)V
+    invoke-virtual {p0, v0}, Lcom/android/gallery3d/anim/Animation;->setDuration(I)V
 
     .line 761
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/SlotView$IntegerAnimation;->start()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/anim/Animation;->start()V
 
     goto :goto_0
 .end method

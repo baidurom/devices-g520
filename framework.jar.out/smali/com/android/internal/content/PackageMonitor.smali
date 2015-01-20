@@ -83,7 +83,7 @@
     .line 39
     new-instance v0, Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lcom/android/internal/content/PackageMonitor;->sLock:Ljava/lang/Object;
 
@@ -962,7 +962,7 @@
 
     const/4 v7, -0x1
 
-    invoke-virtual {p0, v7}, Lcom/android/internal/content/PackageMonitor;->setResultCode(I)V
+    invoke-virtual {p0, v7}, Landroid/content/BroadcastReceiver;->setResultCode(I)V
 
     goto/16 :goto_1
 
@@ -1204,7 +1204,7 @@
     .line 78
     sget-object v0, Lcom/android/internal/content/PackageMonitor;->sBackgroundThread:Landroid/os/HandlerThread;
 
-    invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     .line 79
     new-instance v0, Landroid/os/Handler;

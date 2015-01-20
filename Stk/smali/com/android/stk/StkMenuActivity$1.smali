@@ -124,7 +124,7 @@
     .line 120
     iget-object v1, p0, Lcom/android/stk/StkMenuActivity$1;->this$0:Lcom/android/stk/StkMenuActivity;
 
-    invoke-virtual {v1}, Lcom/android/stk/StkMenuActivity;->finish()V
+    invoke-virtual {v1}, Landroid/app/Activity;->finish()V
 
     .line 123
     .end local v0           #simState:Ljava/lang/String;

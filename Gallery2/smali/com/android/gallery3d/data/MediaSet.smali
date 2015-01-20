@@ -830,7 +830,7 @@
     if-eqz v0, :cond_1
 
     :cond_0
-    invoke-virtual {p1}, Lcom/android/gallery3d/data/MediaSet;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {p1}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v0
 

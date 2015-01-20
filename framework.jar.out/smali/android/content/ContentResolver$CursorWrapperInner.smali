@@ -70,7 +70,7 @@
 
     .prologue
     .line 1864
-    invoke-super {p0}, Landroid/database/CrossProcessCursorWrapper;->close()V
+    invoke-super {p0}, Landroid/database/CursorWrapper;->close()V
 
     .line 1866
     iget-object v0, p0, Landroid/content/ContentResolver$CursorWrapperInner;->this$0:Landroid/content/ContentResolver;

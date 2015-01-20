@@ -61,7 +61,7 @@
 
     .prologue
     .line 38
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 60
     return-void
@@ -111,7 +111,7 @@
     .line 272
     .local v0, buf:[B
     :cond_0
-    invoke-virtual {v3, v0}, Ljava/util/zip/CheckedInputStream;->read([B)I
+    invoke-virtual {v3, v0}, Ljava/io/InputStream;->read([B)I
 
     move-result v4
 
@@ -129,7 +129,7 @@
 
     .line 279
     :try_start_2
-    invoke-virtual {v3}, Ljava/util/zip/CheckedInputStream;->close()V
+    invoke-virtual {v3}, Ljava/io/FilterInputStream;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
@@ -150,7 +150,7 @@
 
     .line 279
     :try_start_3
-    invoke-virtual {v2}, Ljava/util/zip/CheckedInputStream;->close()V
+    invoke-virtual {v2}, Ljava/io/FilterInputStream;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
 
@@ -308,7 +308,7 @@
     move-exception v5
 
     :try_start_2
-    invoke-virtual {v3}, Ljava/io/FileOutputStream;->flush()V
+    invoke-virtual {v3}, Ljava/io/OutputStream;->flush()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
@@ -343,7 +343,7 @@
     .restart local v1       #bytesRead:I
     .restart local v3       #out:Ljava/io/FileOutputStream;
     :cond_1
-    invoke-virtual {v3}, Ljava/io/FileOutputStream;->flush()V
+    invoke-virtual {v3}, Ljava/io/OutputStream;->flush()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
 
@@ -499,7 +499,7 @@
 
     .line 202
     .local v1, data:[B
-    invoke-virtual {v2, v1}, Ljava/io/FileInputStream;->read([B)I
+    invoke-virtual {v2, v1}, Ljava/io/InputStream;->read([B)I
 
     move-result v5
 
@@ -629,7 +629,7 @@
 
     .line 215
     :cond_9
-    invoke-virtual {v2, v1}, Ljava/io/FileInputStream;->read([B)I
+    invoke-virtual {v2, v1}, Ljava/io/InputStream;->read([B)I
 
     move-result v4
 
@@ -766,7 +766,7 @@
     .line 232
     .restart local v1       #data:[B
     :cond_10
-    invoke-virtual {v2, v1}, Ljava/io/FileInputStream;->read([B)I
+    invoke-virtual {v2, v1}, Ljava/io/InputStream;->read([B)I
 
     move-result v4
 
@@ -833,12 +833,12 @@
     .line 252
     .local v0, out:Ljava/io/FileWriter;
     :try_start_0
-    invoke-virtual {v0, p1}, Ljava/io/FileWriter;->write(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 254
-    invoke-virtual {v0}, Ljava/io/FileWriter;->close()V
+    invoke-virtual {v0}, Ljava/io/OutputStreamWriter;->close()V
 
     .line 256
     return-void
@@ -847,7 +847,7 @@
     :catchall_0
     move-exception v1
 
-    invoke-virtual {v0}, Ljava/io/FileWriter;->close()V
+    invoke-virtual {v0}, Ljava/io/OutputStreamWriter;->close()V
 
     throw v1
 .end method

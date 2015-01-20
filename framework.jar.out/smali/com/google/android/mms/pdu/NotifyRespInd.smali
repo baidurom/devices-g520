@@ -22,10 +22,10 @@
     .line 40
     const/16 v0, 0x83
 
-    invoke-virtual {p0, v0}, Lcom/google/android/mms/pdu/NotifyRespInd;->setMessageType(I)V
+    invoke-virtual {p0, v0}, Lcom/google/android/mms/pdu/GenericPdu;->setMessageType(I)V
 
     .line 41
-    invoke-virtual {p0, p1}, Lcom/google/android/mms/pdu/NotifyRespInd;->setMmsVersion(I)V
+    invoke-virtual {p0, p1}, Lcom/google/android/mms/pdu/GenericPdu;->setMmsVersion(I)V
 
     .line 42
     invoke-virtual {p0, p2}, Lcom/google/android/mms/pdu/NotifyRespInd;->setTransactionId([B)V

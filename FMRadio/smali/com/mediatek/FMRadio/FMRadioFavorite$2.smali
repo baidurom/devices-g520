@@ -30,7 +30,7 @@
     .line 216
     iput-object p1, p0, Lcom/mediatek/FMRadio/FMRadioFavorite$2;->this$0:Lcom/mediatek/FMRadio/FMRadioFavorite;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -63,7 +63,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/mediatek/FMRadio/FMRadioFavorite$ChannelListAdapter;->getCursor()Landroid/database/Cursor;
+    invoke-virtual {v2}, Landroid/widget/CursorAdapter;->getCursor()Landroid/database/Cursor;
 
     move-result-object v0
 

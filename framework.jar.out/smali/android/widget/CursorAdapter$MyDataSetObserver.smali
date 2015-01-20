@@ -60,7 +60,7 @@
     .line 467
     iget-object v0, p0, Landroid/widget/CursorAdapter$MyDataSetObserver;->this$0:Landroid/widget/CursorAdapter;
 
-    invoke-virtual {v0}, Landroid/widget/CursorAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
 
     .line 468
     return-void
@@ -80,7 +80,7 @@
     .line 473
     iget-object v0, p0, Landroid/widget/CursorAdapter$MyDataSetObserver;->this$0:Landroid/widget/CursorAdapter;
 
-    invoke-virtual {v0}, Landroid/widget/CursorAdapter;->notifyDataSetInvalidated()V
+    invoke-virtual {v0}, Landroid/widget/BaseAdapter;->notifyDataSetInvalidated()V
 
     .line 474
     return-void

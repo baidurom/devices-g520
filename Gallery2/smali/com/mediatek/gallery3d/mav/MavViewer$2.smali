@@ -30,7 +30,7 @@
     .line 387
     iput-object p1, p0, Lcom/mediatek/gallery3d/mav/MavViewer$2;->this$0:Lcom/mediatek/gallery3d/mav/MavViewer;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -57,7 +57,7 @@
     .line 391
     iget-object v0, p0, Lcom/mediatek/gallery3d/mav/MavViewer$2;->this$0:Lcom/mediatek/gallery3d/mav/MavViewer;
 
-    invoke-virtual {v0}, Lcom/mediatek/gallery3d/mav/MavViewer;->finish()V
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
     .line 392
     return-void

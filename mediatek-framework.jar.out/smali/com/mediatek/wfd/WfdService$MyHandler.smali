@@ -546,7 +546,7 @@
 
     move-result-object v6
 
-    invoke-virtual {v6, v11}, Lcom/mediatek/wfd/WfdService$MyHandler;->hasMessages(I)Z
+    invoke-virtual {v6, v11}, Landroid/os/Handler;->hasMessages(I)Z
 
     move-result v6
 
@@ -560,7 +560,7 @@
 
     move-result-object v6
 
-    invoke-virtual {v6, v11}, Lcom/mediatek/wfd/WfdService$MyHandler;->removeMessages(I)V
+    invoke-virtual {v6, v11}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 1470
     :cond_3
@@ -573,7 +573,7 @@
 
     const-wide/16 v7, 0x3e8
 
-    invoke-virtual {v6, v11, v7, v8}, Lcom/mediatek/wfd/WfdService$MyHandler;->sendEmptyMessageDelayed(IJ)Z
+    invoke-virtual {v6, v11, v7, v8}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
     .line 1472
     :cond_4

@@ -233,7 +233,7 @@
     .line 447
     iget-object v1, p0, Lcom/android/stk/StkMenuActivity;->mTitleTextView:Landroid/widget/TextView;
 
-    invoke-virtual {v1, v3}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
 
     .line 448
     iget-object v1, p0, Lcom/android/stk/StkMenuActivity;->mStkMenu:Lcom/android/internal/telephony/cat/Menu;
@@ -269,14 +269,14 @@
 
     .line 460
     .local v0, adapter:Lcom/android/stk/StkMenuAdapter;
-    invoke-virtual {p0, v0}, Lcom/android/stk/StkMenuActivity;->setListAdapter(Landroid/widget/ListAdapter;)V
+    invoke-virtual {p0, v0}, Landroid/app/ListActivity;->setListAdapter(Landroid/widget/ListAdapter;)V
 
     .line 462
     iget-object v1, p0, Lcom/android/stk/StkMenuActivity;->mStkMenu:Lcom/android/internal/telephony/cat/Menu;
 
     iget v1, v1, Lcom/android/internal/telephony/cat/Menu;->defaultItem:I
 
-    invoke-virtual {p0, v1}, Lcom/android/stk/StkMenuActivity;->setSelection(I)V
+    invoke-virtual {p0, v1}, Landroid/app/ListActivity;->setSelection(I)V
 
     .line 464
     .end local v0           #adapter:Lcom/android/stk/StkMenuAdapter;
@@ -311,7 +311,7 @@
 
     const/4 v2, 0x4
 
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_1
 .end method
@@ -407,7 +407,7 @@
     if-ne v0, v1, :cond_0
 
     .line 471
-    invoke-virtual {p0}, Lcom/android/stk/StkMenuActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 476
     :cond_0
@@ -416,7 +416,7 @@
 
     .line 474
     :cond_1
-    invoke-virtual {p0}, Lcom/android/stk/StkMenuActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 .end method
@@ -622,7 +622,7 @@
     const/4 v3, 0x0
 
     .line 531
-    invoke-virtual {p0}, Lcom/android/stk/StkMenuActivity;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -705,7 +705,7 @@
 
     .line 321
     :cond_0
-    invoke-super {p0, p1}, Landroid/app/ListActivity;->onContextItemSelected(Landroid/view/MenuItem;)Z
+    invoke-super {p0, p1}, Landroid/app/Activity;->onContextItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v2
 
@@ -758,7 +758,7 @@
     const/4 v3, 0x1
 
     .line 148
-    invoke-super {p0, p1}, Landroid/app/ListActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 150
     const-string v1, "onCreate"
@@ -766,17 +766,17 @@
     invoke-static {p0, v1}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 152
-    invoke-virtual {p0, v3}, Lcom/android/stk/StkMenuActivity;->requestWindowFeature(I)Z
+    invoke-virtual {p0, v3}, Landroid/app/Activity;->requestWindowFeature(I)Z
 
     .line 154
     const v1, 0x7f030004
 
-    invoke-virtual {p0, v1}, Lcom/android/stk/StkMenuActivity;->setContentView(I)V
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->setContentView(I)V
 
     .line 156
     const v1, 0x7f070016
 
-    invoke-virtual {p0, v1}, Lcom/android/stk/StkMenuActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -787,7 +787,7 @@
     .line 157
     const v1, 0x7f070015
 
-    invoke-virtual {p0, v1}, Lcom/android/stk/StkMenuActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -798,7 +798,7 @@
     .line 158
     const v1, 0x7f070018
 
-    invoke-virtual {p0, v1}, Lcom/android/stk/StkMenuActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -807,23 +807,23 @@
     iput-object v1, p0, Lcom/android/stk/StkMenuActivity;->mProgressView:Landroid/widget/ProgressBar;
 
     .line 159
-    invoke-virtual {p0}, Lcom/android/stk/StkMenuActivity;->getBaseContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/stk/StkMenuActivity;->mContext:Landroid/content/Context;
 
     .line 160
-    invoke-virtual {p0}, Lcom/android/stk/StkMenuActivity;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Landroid/app/ListActivity;->getListView()Landroid/widget/ListView;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/android/stk/StkMenuActivity;->mOnCreateContextMenuListener:Landroid/view/View$OnCreateContextMenuListener;
 
-    invoke-virtual {v1, v2}, Landroid/widget/ListView;->setOnCreateContextMenuListener(Landroid/view/View$OnCreateContextMenuListener;)V
+    invoke-virtual {v1, v2}, Landroid/view/View;->setOnCreateContextMenuListener(Landroid/view/View$OnCreateContextMenuListener;)V
 
     .line 161
-    invoke-virtual {p0}, Lcom/android/stk/StkMenuActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -843,14 +843,14 @@
     .local v0, intentFilter:Landroid/content/IntentFilter;
     iget-object v1, p0, Lcom/android/stk/StkMenuActivity;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v1, v0}, Lcom/android/stk/StkMenuActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v1, v0}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 172
     iget-object v1, p0, Lcom/android/stk/StkMenuActivity;->mSIMStateChangeReceiver:Landroid/content/BroadcastReceiver;
 
     iget-object v2, p0, Lcom/android/stk/StkMenuActivity;->mSIMStateChangeFilter:Landroid/content/IntentFilter;
 
-    invoke-virtual {p0, v1, v2}, Lcom/android/stk/StkMenuActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v1, v2}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 173
     return-void
@@ -870,7 +870,7 @@
     const/4 v1, 0x0
 
     .line 326
-    invoke-super {p0, p1}, Landroid/app/ListActivity;->onCreateOptionsMenu(Landroid/view/Menu;)Z
+    invoke-super {p0, p1}, Landroid/app/Activity;->onCreateOptionsMenu(Landroid/view/Menu;)Z
 
     .line 327
     const v0, 0x7f060034
@@ -901,12 +901,12 @@
     .line 283
     iget-object v0, p0, Lcom/android/stk/StkMenuActivity;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/android/stk/StkMenuActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 284
     iget-object v0, p0, Lcom/android/stk/StkMenuActivity;->mSIMStateChangeReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/android/stk/StkMenuActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 285
     const-string v0, "onDestroy"
@@ -940,7 +940,7 @@
 
     .line 222
     :goto_1
-    invoke-super {p0, p1, p2}, Landroid/app/ListActivity;->onKeyDown(ILandroid/view/KeyEvent;)Z
+    invoke-super {p0, p1, p2}, Landroid/app/Activity;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
     move-result v0
 
@@ -1047,7 +1047,7 @@
 
     .prologue
     .line 177
-    invoke-super {p0, p1}, Landroid/app/ListActivity;->onNewIntent(Landroid/content/Intent;)V
+    invoke-super {p0, p1}, Landroid/app/Activity;->onNewIntent(Landroid/content/Intent;)V
 
     .line 179
     const-string v0, "onNewIntent"
@@ -1098,7 +1098,7 @@
     .line 407
     :cond_2
     :pswitch_0
-    invoke-super {p0, p1}, Landroid/app/ListActivity;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    invoke-super {p0, p1}, Landroid/app/Activity;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v3
 
@@ -1207,7 +1207,7 @@
 
     .prologue
     .line 274
-    invoke-super {p0}, Landroid/app/ListActivity;->onPause()V
+    invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
     .line 276
     iget-object v0, p0, Lcom/android/stk/StkMenuActivity;->appService:Lcom/android/stk/StkAppService;
@@ -1235,7 +1235,7 @@
     const/4 v5, 0x1
 
     .line 335
-    invoke-super {p0, p1}, Landroid/app/ListActivity;->onPrepareOptionsMenu(Landroid/view/Menu;)Z
+    invoke-super {p0, p1}, Landroid/app/Activity;->onPrepareOptionsMenu(Landroid/view/Menu;)Z
 
     .line 336
     const/4 v0, 0x0
@@ -1416,7 +1416,7 @@
     const/4 v2, 0x1
 
     .line 227
-    invoke-super {p0}, Landroid/app/ListActivity;->onResume()V
+    invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
     .line 228
     const-string v0, "Stk-MA "
@@ -1444,14 +1444,14 @@
     .line 232
     const v0, 0x7f06002e
 
-    invoke-virtual {p0, v0}, Lcom/android/stk/StkMenuActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/android/stk/StkMenuActivity;->showTextToast(Ljava/lang/String;)V
 
     .line 233
-    invoke-virtual {p0}, Lcom/android/stk/StkMenuActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 270
     :goto_0
@@ -1475,14 +1475,14 @@
     .line 239
     const v0, 0x7f06002d
 
-    invoke-virtual {p0, v0}, Lcom/android/stk/StkMenuActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/android/stk/StkMenuActivity;->showTextToast(Ljava/lang/String;)V
 
     .line 241
-    invoke-virtual {p0}, Lcom/android/stk/StkMenuActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 
@@ -1500,7 +1500,7 @@
     invoke-static {v0, v1}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 247
-    invoke-virtual {p0}, Lcom/android/stk/StkMenuActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 
@@ -1527,14 +1527,14 @@
     .line 254
     const v0, 0x7f06002b
 
-    invoke-virtual {p0, v0}, Lcom/android/stk/StkMenuActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/android/stk/StkMenuActivity;->showTextToast(Ljava/lang/String;)V
 
     .line 255
-    invoke-virtual {p0}, Lcom/android/stk/StkMenuActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 

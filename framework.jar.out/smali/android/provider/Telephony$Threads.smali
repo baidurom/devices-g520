@@ -98,7 +98,7 @@
 
     .prologue
     .line 1768
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1769
     return-void

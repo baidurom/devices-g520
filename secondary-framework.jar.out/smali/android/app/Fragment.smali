@@ -155,7 +155,7 @@
     const/4 v1, -0x1
 
     .line 544
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 354
     const/4 v0, 0x0
@@ -1021,7 +1021,7 @@
     :cond_0
     iget-object v0, p0, Landroid/app/Fragment;->mActivity:Landroid/app/Activity;
 
-    invoke-virtual {v0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0}, Landroid/content/ContextWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 

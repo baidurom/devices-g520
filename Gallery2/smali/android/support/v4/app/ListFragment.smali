@@ -85,7 +85,7 @@
 
     .line 326
     :cond_0
-    invoke-virtual {p0}, Landroid/support/v4/app/ListFragment;->getView()Landroid/view/View;
+    invoke-virtual {p0}, Landroid/support/v4/app/Fragment;->getView()Landroid/view/View;
 
     move-result-object v2
 
@@ -126,7 +126,7 @@
 
     iget-object v4, p0, Landroid/support/v4/app/ListFragment;->mOnClickListener:Landroid/widget/AdapterView$OnItemClickListener;
 
-    invoke-virtual {v3, v4}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
+    invoke-virtual {v3, v4}, Landroid/widget/AdapterView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 362
     iget-object v3, p0, Landroid/support/v4/app/ListFragment;->mAdapter:Landroid/widget/ListAdapter;
@@ -235,7 +235,7 @@
 
     const/16 v4, 0x8
 
-    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v3, v4}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_3
 
@@ -267,7 +267,7 @@
 
     iget-object v4, p0, Landroid/support/v4/app/ListFragment;->mEmptyView:Landroid/view/View;
 
-    invoke-virtual {v3, v4}, Landroid/widget/ListView;->setEmptyView(Landroid/view/View;)V
+    invoke-virtual {v3, v4}, Landroid/widget/AdapterView;->setEmptyView(Landroid/view/View;)V
 
     goto :goto_1
 
@@ -289,7 +289,7 @@
 
     iget-object v4, p0, Landroid/support/v4/app/ListFragment;->mStandardEmptyView:Landroid/widget/TextView;
 
-    invoke-virtual {v3, v4}, Landroid/widget/ListView;->setEmptyView(Landroid/view/View;)V
+    invoke-virtual {v3, v4}, Landroid/widget/AdapterView;->setEmptyView(Landroid/view/View;)V
 
     goto/16 :goto_1
 
@@ -360,7 +360,7 @@
     .line 290
     iget-object v0, p0, Landroid/support/v4/app/ListFragment;->mProgressContainer:Landroid/view/View;
 
-    invoke-virtual {p0}, Landroid/support/v4/app/ListFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    invoke-virtual {p0}, Landroid/support/v4/app/Fragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v1
 
@@ -373,7 +373,7 @@
     .line 292
     iget-object v0, p0, Landroid/support/v4/app/ListFragment;->mListContainer:Landroid/view/View;
 
-    invoke-virtual {p0}, Landroid/support/v4/app/ListFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    invoke-virtual {p0}, Landroid/support/v4/app/Fragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v1
 
@@ -416,7 +416,7 @@
     .line 302
     iget-object v0, p0, Landroid/support/v4/app/ListFragment;->mProgressContainer:Landroid/view/View;
 
-    invoke-virtual {p0}, Landroid/support/v4/app/ListFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    invoke-virtual {p0}, Landroid/support/v4/app/Fragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v1
 
@@ -429,7 +429,7 @@
     .line 304
     iget-object v0, p0, Landroid/support/v4/app/ListFragment;->mListContainer:Landroid/view/View;
 
-    invoke-virtual {p0}, Landroid/support/v4/app/ListFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    invoke-virtual {p0}, Landroid/support/v4/app/Fragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v1
 
@@ -501,7 +501,7 @@
     .line 215
     iget-object v0, p0, Landroid/support/v4/app/ListFragment;->mList:Landroid/widget/ListView;
 
-    invoke-virtual {v0}, Landroid/widget/ListView;->getSelectedItemId()J
+    invoke-virtual {v0}, Landroid/widget/AdapterView;->getSelectedItemId()J
 
     move-result-wide v0
 
@@ -518,7 +518,7 @@
     .line 207
     iget-object v0, p0, Landroid/support/v4/app/ListFragment;->mList:Landroid/widget/ListView;
 
-    invoke-virtual {v0}, Landroid/widget/ListView;->getSelectedItemPosition()I
+    invoke-virtual {v0}, Landroid/widget/AdapterView;->getSelectedItemPosition()I
 
     move-result v0
 
@@ -539,7 +539,7 @@
     const/4 v9, -0x1
 
     .line 91
-    invoke-virtual {p0}, Landroid/support/v4/app/ListFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    invoke-virtual {p0}, Landroid/support/v4/app/Fragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
 
@@ -559,7 +559,7 @@
     .local v3, pframe:Landroid/widget/LinearLayout;
     const v7, 0xff0002
 
-    invoke-virtual {v3, v7}, Landroid/widget/LinearLayout;->setId(I)V
+    invoke-virtual {v3, v7}, Landroid/view/View;->setId(I)V
 
     .line 99
     const/4 v7, 0x1
@@ -569,7 +569,7 @@
     .line 100
     const/16 v7, 0x8
 
-    invoke-virtual {v3, v7}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    invoke-virtual {v3, v7}, Landroid/view/View;->setVisibility(I)V
 
     .line 101
     invoke-virtual {v3, v11}, Landroid/widget/LinearLayout;->setGravity(I)V
@@ -589,14 +589,14 @@
 
     invoke-direct {v7, v10, v10}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    invoke-virtual {v3, v4, v7}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v3, v4, v7}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 108
     new-instance v7, Landroid/widget/FrameLayout$LayoutParams;
 
     invoke-direct {v7, v9, v9}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    invoke-virtual {v5, v3, v7}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v5, v3, v7}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 113
     new-instance v1, Landroid/widget/FrameLayout;
@@ -607,12 +607,12 @@
     .local v1, lframe:Landroid/widget/FrameLayout;
     const v7, 0xff0003
 
-    invoke-virtual {v1, v7}, Landroid/widget/FrameLayout;->setId(I)V
+    invoke-virtual {v1, v7}, Landroid/view/View;->setId(I)V
 
     .line 116
     new-instance v6, Landroid/widget/TextView;
 
-    invoke-virtual {p0}, Landroid/support/v4/app/ListFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    invoke-virtual {p0}, Landroid/support/v4/app/Fragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v7
 
@@ -622,7 +622,7 @@
     .local v6, tv:Landroid/widget/TextView;
     const v7, 0xff0001
 
-    invoke-virtual {v6, v7}, Landroid/widget/TextView;->setId(I)V
+    invoke-virtual {v6, v7}, Landroid/view/View;->setId(I)V
 
     .line 118
     invoke-virtual {v6, v11}, Landroid/widget/TextView;->setGravity(I)V
@@ -632,12 +632,12 @@
 
     invoke-direct {v7, v9, v9}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    invoke-virtual {v1, v6, v7}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v1, v6, v7}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 122
     new-instance v2, Landroid/widget/ListView;
 
-    invoke-virtual {p0}, Landroid/support/v4/app/ListFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    invoke-virtual {p0}, Landroid/support/v4/app/Fragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v7
 
@@ -647,33 +647,33 @@
     .local v2, lv:Landroid/widget/ListView;
     const v7, 0x102000a
 
-    invoke-virtual {v2, v7}, Landroid/widget/ListView;->setId(I)V
+    invoke-virtual {v2, v7}, Landroid/view/View;->setId(I)V
 
     .line 124
     const/4 v7, 0x0
 
-    invoke-virtual {v2, v7}, Landroid/widget/ListView;->setDrawSelectorOnTop(Z)V
+    invoke-virtual {v2, v7}, Landroid/widget/AbsListView;->setDrawSelectorOnTop(Z)V
 
     .line 125
     new-instance v7, Landroid/widget/FrameLayout$LayoutParams;
 
     invoke-direct {v7, v9, v9}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    invoke-virtual {v1, v2, v7}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v1, v2, v7}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 128
     new-instance v7, Landroid/widget/FrameLayout$LayoutParams;
 
     invoke-direct {v7, v9, v9}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    invoke-virtual {v5, v1, v7}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v5, v1, v7}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 133
     new-instance v7, Landroid/widget/FrameLayout$LayoutParams;
 
     invoke-direct {v7, v9, v9}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    invoke-virtual {v5, v7}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v5, v7}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 136
     return-object v5
@@ -783,7 +783,7 @@
 
     iget-object v1, p0, Landroid/support/v4/app/ListFragment;->mStandardEmptyView:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setEmptyView(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Landroid/widget/AdapterView;->setEmptyView(Landroid/view/View;)V
 
     .line 240
     :cond_1
@@ -832,7 +832,7 @@
     if-nez v0, :cond_1
 
     .line 186
-    invoke-virtual {p0}, Landroid/support/v4/app/ListFragment;->getView()Landroid/view/View;
+    invoke-virtual {p0}, Landroid/support/v4/app/Fragment;->getView()Landroid/view/View;
 
     move-result-object v3
 

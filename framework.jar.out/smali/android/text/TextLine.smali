@@ -90,7 +90,7 @@
 
     .prologue
     .line 45
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 59
     new-instance v0, Landroid/text/TextPaint;
@@ -556,7 +556,7 @@
 
     move/from16 v7, p5
 
-    invoke-virtual/range {v2 .. v8}, Landroid/text/TextPaint;->getTextRunCursor([CIIIII)I
+    invoke-virtual/range {v2 .. v8}, Landroid/graphics/Paint;->getTextRunCursor([CIIIII)I
 
     move-result v20
 
@@ -799,7 +799,7 @@
 
     move v15, v8
 
-    invoke-virtual/range {v9 .. v15}, Landroid/text/TextPaint;->getTextRunCursor(Ljava/lang/CharSequence;IIIII)I
+    invoke-virtual/range {v9 .. v15}, Landroid/graphics/Paint;->getTextRunCursor(Ljava/lang/CharSequence;IIIII)I
 
     move-result v3
 
@@ -1346,7 +1346,7 @@
     :cond_7
     move-object/from16 v0, v28
 
-    invoke-virtual {v0, v3}, Landroid/text/style/MetricAffectingSpan;->updateDrawState(Landroid/text/TextPaint;)V
+    invoke-virtual {v0, v3}, Landroid/text/style/CharacterStyle;->updateDrawState(Landroid/text/TextPaint;)V
 
     goto :goto_4
 
@@ -1761,7 +1761,7 @@
 
     move/from16 v6, p4
 
-    invoke-virtual/range {v2 .. v10}, Landroid/text/TextPaint;->getTextRunAdvances([CIIIII[FI)F
+    invoke-virtual/range {v2 .. v10}, Landroid/graphics/Paint;->getTextRunAdvances([CIIIII[FI)F
 
     move-result v26
 
@@ -1786,13 +1786,13 @@
     if-eqz v2, :cond_6
 
     .line 767
-    invoke-virtual/range {p1 .. p1}, Landroid/text/TextPaint;->getColor()I
+    invoke-virtual/range {p1 .. p1}, Landroid/graphics/Paint;->getColor()I
 
     move-result v24
 
     .line 768
     .local v24, previousColor:I
-    invoke-virtual/range {p1 .. p1}, Landroid/text/TextPaint;->getStyle()Landroid/graphics/Paint$Style;
+    invoke-virtual/range {p1 .. p1}, Landroid/graphics/Paint;->getStyle()Landroid/graphics/Paint$Style;
 
     move-result-object v25
 
@@ -1804,14 +1804,14 @@
 
     move-object/from16 v0, p1
 
-    invoke-virtual {v0, v2}, Landroid/text/TextPaint;->setColor(I)V
+    invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 771
     sget-object v2, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     move-object/from16 v0, p1
 
-    invoke-virtual {v0, v2}, Landroid/text/TextPaint;->setStyle(Landroid/graphics/Paint$Style;)V
+    invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
     .line 772
     move/from16 v0, p9
@@ -1837,14 +1837,14 @@
 
     move-object/from16 v1, v25
 
-    invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setStyle(Landroid/graphics/Paint$Style;)V
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
     .line 775
     move-object/from16 v0, p1
 
     move/from16 v1, v24
 
-    invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setColor(I)V
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 778
     .end local v24           #previousColor:I
@@ -1867,7 +1867,7 @@
 
     const v3, 0x3de38e39
 
-    invoke-virtual/range {p1 .. p1}, Landroid/text/TextPaint;->getTextSize()F
+    invoke-virtual/range {p1 .. p1}, Landroid/graphics/Paint;->getTextSize()F
 
     move-result v4
 
@@ -1877,19 +1877,19 @@
 
     .line 782
     .local v11, underlineTop:F
-    invoke-virtual/range {p1 .. p1}, Landroid/text/TextPaint;->getColor()I
+    invoke-virtual/range {p1 .. p1}, Landroid/graphics/Paint;->getColor()I
 
     move-result v24
 
     .line 783
     .restart local v24       #previousColor:I
-    invoke-virtual/range {p1 .. p1}, Landroid/text/TextPaint;->getStyle()Landroid/graphics/Paint$Style;
+    invoke-virtual/range {p1 .. p1}, Landroid/graphics/Paint;->getStyle()Landroid/graphics/Paint$Style;
 
     move-result-object v25
 
     .line 784
     .restart local v25       #previousStyle:Landroid/graphics/Paint$Style;
-    invoke-virtual/range {p1 .. p1}, Landroid/text/TextPaint;->isAntiAlias()Z
+    invoke-virtual/range {p1 .. p1}, Landroid/graphics/Paint;->isAntiAlias()Z
 
     move-result v23
 
@@ -1899,14 +1899,14 @@
 
     move-object/from16 v0, p1
 
-    invoke-virtual {v0, v2}, Landroid/text/TextPaint;->setStyle(Landroid/graphics/Paint$Style;)V
+    invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
     .line 787
     const/4 v2, 0x1
 
     move-object/from16 v0, p1
 
-    invoke-virtual {v0, v2}, Landroid/text/TextPaint;->setAntiAlias(Z)V
+    invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
     .line 789
     move-object/from16 v0, p1
@@ -1915,7 +1915,7 @@
 
     move-object/from16 v0, p1
 
-    invoke-virtual {v0, v2}, Landroid/text/TextPaint;->setColor(I)V
+    invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 790
     add-float v12, p8, v26
@@ -1939,21 +1939,21 @@
 
     move-object/from16 v1, v25
 
-    invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setStyle(Landroid/graphics/Paint$Style;)V
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
     .line 793
     move-object/from16 v0, p1
 
     move/from16 v1, v24
 
-    invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setColor(I)V
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 794
     move-object/from16 v0, p1
 
     move/from16 v1, v23
 
-    invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setAntiAlias(Z)V
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
     .line 797
     .end local v11           #underlineTop:F
@@ -2036,7 +2036,7 @@
 
     move v15, v8
 
-    invoke-virtual/range {v9 .. v17}, Landroid/text/TextPaint;->getTextRunAdvances(Ljava/lang/CharSequence;IIIII[FI)F
+    invoke-virtual/range {v9 .. v17}, Landroid/graphics/Paint;->getTextRunAdvances(Ljava/lang/CharSequence;IIIII[FI)F
 
     move-result v26
 
@@ -2319,7 +2319,7 @@
     .line 1016
     iget-object v6, p0, Landroid/text/TextLine;->mPaint:Landroid/text/TextPaint;
 
-    invoke-virtual {v6}, Landroid/text/TextPaint;->ascent()F
+    invoke-virtual {v6}, Landroid/graphics/Paint;->ascent()F
 
     move-result v6
 
@@ -2355,7 +2355,7 @@
     .line 1022
     iget-object v6, p0, Landroid/text/TextLine;->mPaint:Landroid/text/TextPaint;
 
-    invoke-virtual {v6}, Landroid/text/TextPaint;->ascent()F
+    invoke-virtual {v6}, Landroid/graphics/Paint;->ascent()F
 
     move-result v6
 
@@ -2398,7 +2398,7 @@
     .line 1030
     .end local v3           #span:Landroid/text/style/MetricAffectingSpan;
     :cond_2
-    invoke-virtual {v5}, Landroid/text/TextPaint;->ascent()F
+    invoke-virtual {v5}, Landroid/graphics/Paint;->ascent()F
 
     move-result v6
 

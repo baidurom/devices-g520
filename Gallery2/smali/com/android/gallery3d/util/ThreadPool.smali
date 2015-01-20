@@ -67,7 +67,7 @@
     const/4 v1, 0x2
 
     .line 80
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 37
     new-instance v0, Lcom/android/gallery3d/util/ThreadPool$ResourceCounter;

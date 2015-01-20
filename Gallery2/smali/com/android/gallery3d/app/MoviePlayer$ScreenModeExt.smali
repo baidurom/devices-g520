@@ -39,7 +39,7 @@
     .line 1183
     iput-object p1, p0, Lcom/android/gallery3d/app/MoviePlayer$ScreenModeExt;->this$0:Lcom/android/gallery3d/app/MoviePlayer;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1185
     const/4 v0, 0x1

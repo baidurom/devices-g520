@@ -30,7 +30,7 @@
     .line 80
     iput-object p1, p0, Lcom/android/stk/NotificationAlertActivity$1;->this$0:Lcom/android/stk/NotificationAlertActivity;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -45,7 +45,7 @@
     .line 82
     iget-object v0, p0, Lcom/android/stk/NotificationAlertActivity$1;->this$0:Lcom/android/stk/NotificationAlertActivity;
 
-    invoke-virtual {v0}, Lcom/android/stk/NotificationAlertActivity;->finish()V
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
     .line 83
     return-void

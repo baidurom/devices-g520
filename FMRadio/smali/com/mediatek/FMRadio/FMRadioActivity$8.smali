@@ -30,7 +30,7 @@
     .line 1970
     iput-object p1, p0, Lcom/mediatek/FMRadio/FMRadioActivity$8;->this$0:Lcom/mediatek/FMRadio/FMRadioActivity;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -90,7 +90,7 @@
 
     .line 1979
     .local v1, e:Ljava/lang/Exception;
-    invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 

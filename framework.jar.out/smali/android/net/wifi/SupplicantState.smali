@@ -324,7 +324,7 @@
     .line 198
     sget-object v0, Landroid/net/wifi/SupplicantState$2;->$SwitchMap$android$net$wifi$SupplicantState:[I
 
-    invoke-virtual {p0}, Landroid/net/wifi/SupplicantState;->ordinal()I
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -383,7 +383,7 @@
     .line 220
     sget-object v0, Landroid/net/wifi/SupplicantState$2;->$SwitchMap$android$net$wifi$SupplicantState:[I
 
-    invoke-virtual {p0}, Landroid/net/wifi/SupplicantState;->ordinal()I
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -442,7 +442,7 @@
     .line 176
     sget-object v0, Landroid/net/wifi/SupplicantState$2;->$SwitchMap$android$net$wifi$SupplicantState:[I
 
-    invoke-virtual {p0}, Landroid/net/wifi/SupplicantState;->ordinal()I
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -542,7 +542,7 @@
     .line 33
     sget-object v0, Landroid/net/wifi/SupplicantState;->$VALUES:[Landroid/net/wifi/SupplicantState;
 
-    invoke-virtual {v0}, [Landroid/net/wifi/SupplicantState;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -570,7 +570,7 @@
 
     .prologue
     .line 248
-    invoke-virtual {p0}, Landroid/net/wifi/SupplicantState;->name()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v0
 

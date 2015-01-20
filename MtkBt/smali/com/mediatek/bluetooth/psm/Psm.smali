@@ -42,7 +42,7 @@
 
     .prologue
     .line 80
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 83
     iput p1, p0, Lcom/mediatek/bluetooth/psm/Psm;->profile:I
@@ -350,7 +350,7 @@
     .line 218
     iget-object v0, p0, Lcom/mediatek/bluetooth/psm/Psm;->psmService:Lcom/mediatek/bluetooth/psm/PsmService;
 
-    invoke-virtual {v0, p1}, Lcom/mediatek/bluetooth/psm/PsmService;->send(Lcom/mediatek/bluetooth/ilm/Message;)V
+    invoke-virtual {v0, p1}, Lcom/mediatek/bluetooth/ilm/MessageService;->send(Lcom/mediatek/bluetooth/ilm/Message;)V
 
     .line 219
     return-void

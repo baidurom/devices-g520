@@ -30,7 +30,7 @@
     .line 2809
     iput-object p1, p0, Lcom/android/camera/Camera$19;->this$0:Lcom/android/camera/Camera;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -59,7 +59,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/RemainingManager;->hide()V
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->hide()V
 
     .line 2814
     iget-object v0, p0, Lcom/android/camera/Camera$19;->this$0:Lcom/android/camera/Camera;
@@ -78,7 +78,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/PickerManager;->show()V
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->show()V
 
     .line 2817
     :cond_0
@@ -101,7 +101,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/IndicatorManager;->show()V
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->show()V
 
     .line 2820
     :cond_1

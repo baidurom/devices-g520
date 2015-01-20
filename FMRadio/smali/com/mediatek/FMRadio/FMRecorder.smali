@@ -86,7 +86,7 @@
     const/4 v1, 0x0
 
     .line 63
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 93
     iput-boolean v2, p0, Lcom/mediatek/FMRadio/FMRecorder;->mDeleteUponSDInsertion:Z
@@ -2670,7 +2670,7 @@
     .local v17, simpleDateFormat:Ljava/text/SimpleDateFormat;
     move-object/from16 v0, v17
 
-    invoke-virtual {v0, v7}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+    invoke-virtual {v0, v7}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object v19
 
@@ -3016,7 +3016,7 @@
     invoke-static/range {v20 .. v21}, Lcom/mediatek/FMRadio/LogUtils;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 172
-    invoke-virtual {v10}, Ljava/io/IOException;->printStackTrace()V
+    invoke-virtual {v10}, Ljava/lang/Throwable;->printStackTrace()V
 
     .line 173
     const/16 v20, 0x2

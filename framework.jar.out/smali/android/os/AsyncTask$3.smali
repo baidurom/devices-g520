@@ -53,7 +53,7 @@
     :try_start_0
     iget-object v1, p0, Landroid/os/AsyncTask$3;->this$0:Landroid/os/AsyncTask;
 
-    invoke-virtual {p0}, Landroid/os/AsyncTask$3;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/util/concurrent/FutureTask;->get()Ljava/lang/Object;
 
     move-result-object v2
 
@@ -91,7 +91,7 @@
 
     const-string v2, "An error occured while executing doInBackground()"
 
-    invoke-virtual {v0}, Ljava/util/concurrent/ExecutionException;->getCause()Ljava/lang/Throwable;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
     move-result-object v3
 

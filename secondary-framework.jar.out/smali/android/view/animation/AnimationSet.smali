@@ -835,7 +835,7 @@
     invoke-virtual {v7}, Landroid/view/animation/Transformation;->clear()V
 
     .line 384
-    invoke-virtual {p0}, Landroid/view/animation/AnimationSet;->getScaleFactor()F
+    invoke-virtual {p0}, Landroid/view/animation/Animation;->getScaleFactor()F
 
     move-result v10
 
@@ -1163,7 +1163,7 @@
     if-eqz v20, :cond_0
 
     .line 437
-    invoke-virtual/range {p0 .. p0}, Landroid/view/animation/AnimationSet;->ensureInterpolator()V
+    invoke-virtual/range {p0 .. p0}, Landroid/view/animation/Animation;->ensureInterpolator()V
 
     .line 440
     :cond_0

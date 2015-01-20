@@ -117,7 +117,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 205
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/pbap/BluetoothAuthenticating;->getLayoutInflater()Landroid/view/LayoutInflater;
+    invoke-virtual {p0}, Landroid/app/Activity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v0
 
@@ -212,7 +212,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 130
-    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/pbap/BluetoothAuthenticating;->sendBroadcast(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 131
     const/4 v1, 0x1
@@ -237,7 +237,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 189
-    iget-object v0, p0, Lcom/mediatek/bluetooth/pbap/BluetoothAuthenticating;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
+    iget-object v0, p0, Lcom/android/internal/app/AlertActivity;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object v0, p0, Lcom/mediatek/bluetooth/pbap/BluetoothAuthenticating;->mPara:Lcom/android/internal/app/AlertController$AlertParams;
 
@@ -253,7 +253,7 @@
 
     const v1, 0x7f050067
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/bluetooth/pbap/BluetoothAuthenticating;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -264,7 +264,7 @@
 
     const v1, 0x7f05006d
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/bluetooth/pbap/BluetoothAuthenticating;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -280,7 +280,7 @@
 
     const v1, 0x7f05006e
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/bluetooth/pbap/BluetoothAuthenticating;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -301,7 +301,7 @@
     iput-object v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mView:Landroid/view/View;
 
     .line 199
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/pbap/BluetoothAuthenticating;->setupAlert()V
+    invoke-virtual {p0}, Lcom/android/internal/app/AlertActivity;->setupAlert()V
 
     .line 200
     return-void
@@ -361,7 +361,7 @@
     .line 227
     :cond_0
     :goto_0
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/pbap/BluetoothAuthenticating;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 228
     return-void
@@ -414,7 +414,7 @@
     invoke-super {p0, p1}, Lcom/android/internal/app/AlertActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 140
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/pbap/BluetoothAuthenticating;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -509,7 +509,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 171
-    invoke-super {p0}, Lcom/android/internal/app/AlertActivity;->onDestroy()V
+    invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
     .line 172
     return-void
@@ -527,7 +527,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 162
-    invoke-super {p0}, Lcom/android/internal/app/AlertActivity;->onStart()V
+    invoke-super {p0}, Landroid/app/Activity;->onStart()V
 
     .line 163
     iget-object v0, p0, Lcom/mediatek/bluetooth/pbap/BluetoothAuthenticating;->mCancelFilter:Landroid/content/IntentFilter;
@@ -539,7 +539,7 @@
 
     iget-object v1, p0, Lcom/mediatek/bluetooth/pbap/BluetoothAuthenticating;->mCancelFilter:Landroid/content/IntentFilter;
 
-    invoke-virtual {p0, v0, v1}, Lcom/mediatek/bluetooth/pbap/BluetoothAuthenticating;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v0, v1}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 166
     :cond_0
@@ -565,7 +565,7 @@
     .line 178
     iget-object v0, p0, Lcom/mediatek/bluetooth/pbap/BluetoothAuthenticating;->mCancelReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/pbap/BluetoothAuthenticating;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 181
     :cond_0
@@ -574,7 +574,7 @@
     invoke-direct {p0, v0}, Lcom/mediatek/bluetooth/pbap/BluetoothAuthenticating;->sendResult(I)V
 
     .line 182
-    invoke-super {p0}, Lcom/android/internal/app/AlertActivity;->onStop()V
+    invoke-super {p0}, Landroid/app/Activity;->onStop()V
 
     .line 183
     return-void

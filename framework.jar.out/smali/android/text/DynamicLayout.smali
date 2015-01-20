@@ -336,7 +336,7 @@
     if-eqz p10, :cond_0
 
     .line 132
-    invoke-virtual/range {p0 .. p0}, Landroid/text/DynamicLayout;->getText()Ljava/lang/CharSequence;
+    invoke-virtual/range {p0 .. p0}, Landroid/text/Layout;->getText()Ljava/lang/CharSequence;
 
     move-result-object v13
 
@@ -692,7 +692,7 @@
     const/4 v5, 0x0
 
     .line 404
-    invoke-virtual {p0, p1}, Landroid/text/DynamicLayout;->getLineForOffset(I)I
+    invoke-virtual {p0, p1}, Landroid/text/Layout;->getLineForOffset(I)I
 
     move-result v1
 
@@ -1127,7 +1127,7 @@
 
     move/from16 v1, p2
 
-    invoke-virtual {v0, v1}, Landroid/text/DynamicLayout;->getLineForOffset(I)I
+    invoke-virtual {v0, v1}, Landroid/text/Layout;->getLineForOffset(I)I
 
     move-result v36
 
@@ -1147,7 +1147,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v5}, Landroid/text/DynamicLayout;->getLineForOffset(I)I
+    invoke-virtual {v0, v5}, Landroid/text/Layout;->getLineForOffset(I)I
 
     move-result v22
 
@@ -1224,23 +1224,23 @@
     :goto_5
     add-int v6, p2, p4
 
-    invoke-virtual/range {p0 .. p0}, Landroid/text/DynamicLayout;->getPaint()Landroid/text/TextPaint;
+    invoke-virtual/range {p0 .. p0}, Landroid/text/Layout;->getPaint()Landroid/text/TextPaint;
 
     move-result-object v7
 
-    invoke-virtual/range {p0 .. p0}, Landroid/text/DynamicLayout;->getWidth()I
+    invoke-virtual/range {p0 .. p0}, Landroid/text/Layout;->getWidth()I
 
     move-result v8
 
-    invoke-virtual/range {p0 .. p0}, Landroid/text/DynamicLayout;->getTextDirectionHeuristic()Landroid/text/TextDirectionHeuristic;
+    invoke-virtual/range {p0 .. p0}, Landroid/text/Layout;->getTextDirectionHeuristic()Landroid/text/TextDirectionHeuristic;
 
     move-result-object v9
 
-    invoke-virtual/range {p0 .. p0}, Landroid/text/DynamicLayout;->getSpacingMultiplier()F
+    invoke-virtual/range {p0 .. p0}, Landroid/text/Layout;->getSpacingMultiplier()F
 
     move-result v10
 
-    invoke-virtual/range {p0 .. p0}, Landroid/text/DynamicLayout;->getSpacingAdd()F
+    invoke-virtual/range {p0 .. p0}, Landroid/text/Layout;->getSpacingAdd()F
 
     move-result v11
 

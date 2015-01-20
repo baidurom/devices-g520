@@ -184,7 +184,7 @@
     .local v11, pathPerm:Ljava/lang/String;
     if-eqz v11, :cond_3
 
-    invoke-virtual {v13, v10}, Landroid/content/pm/PathPermission;->match(Ljava/lang/String;)Z
+    invoke-virtual {v13, v10}, Landroid/os/PatternMatcher;->match(Ljava/lang/String;)Z
 
     move-result v16
 
@@ -531,7 +531,7 @@
     .local v11, pathPerm:Ljava/lang/String;
     if-eqz v11, :cond_3
 
-    invoke-virtual {v13, v10}, Landroid/content/pm/PathPermission;->match(Ljava/lang/String;)Z
+    invoke-virtual {v13, v10}, Landroid/os/PatternMatcher;->match(Ljava/lang/String;)Z
 
     move-result v16
 

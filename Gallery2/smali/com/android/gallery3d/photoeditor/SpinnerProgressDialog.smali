@@ -70,12 +70,12 @@
 
     invoke-direct {v3, v4, v4}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    invoke-virtual {p0, v2, v3}, Lcom/android/gallery3d/photoeditor/SpinnerProgressDialog;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p0, v2, v3}, Landroid/app/Dialog;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 53
     const/4 v2, 0x0
 
-    invoke-virtual {p0, v2}, Lcom/android/gallery3d/photoeditor/SpinnerProgressDialog;->setCancelable(Z)V
+    invoke-virtual {p0, v2}, Landroid/app/Dialog;->setCancelable(Z)V
 
     .line 55
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;

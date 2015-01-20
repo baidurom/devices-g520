@@ -88,7 +88,7 @@
     .line 442
     iget-object v1, p0, Lcom/android/stk/StkInputActivity$AirplaneBroadcastReceiver;->this$0:Lcom/android/stk/StkInputActivity;
 
-    invoke-virtual {v1}, Lcom/android/stk/StkInputActivity;->finish()V
+    invoke-virtual {v1}, Landroid/app/Activity;->finish()V
 
     .line 444
     :cond_0

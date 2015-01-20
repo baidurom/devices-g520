@@ -50,7 +50,7 @@
 
     iput-object p3, p0, Lcom/android/gallery3d/ui/ActionModeHandler$3;->val$item:Landroid/view/MenuItem;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

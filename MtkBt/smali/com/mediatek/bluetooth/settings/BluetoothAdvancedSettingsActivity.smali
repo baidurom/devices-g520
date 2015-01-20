@@ -167,7 +167,7 @@
 
     iget-object v1, p0, Lcom/mediatek/bluetooth/settings/BluetoothAdvancedSettingsActivity;->filter:Landroid/content/IntentFilter;
 
-    invoke-virtual {p0, v0, v1}, Lcom/mediatek/bluetooth/settings/BluetoothAdvancedSettingsActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v0, v1}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 109
     return-void
@@ -181,7 +181,7 @@
     :try_start_0
     iget-object v0, p0, Lcom/mediatek/bluetooth/settings/BluetoothAdvancedSettingsActivity;->receiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/settings/BluetoothAdvancedSettingsActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

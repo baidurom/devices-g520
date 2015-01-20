@@ -209,20 +209,18 @@
 
     iput-object v1, p0, Lcom/android/internal/telephony/PhoneProxy;->mIccPhoneBookInterfaceManagerProxy:Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
 
-    .line 127
-    new-instance v1, Lcom/android/internal/telephony/PhoneSubInfoProxy;
+    new-instance v1, Lcom/android/internal/telephony/BaiduExtPhoneSubInfo;
 
     invoke-interface {p1}, Lcom/android/internal/telephony/Phone;->getPhoneSubInfo()Lcom/android/internal/telephony/PhoneSubInfo;
 
     move-result-object v2
 
-    invoke-direct {v1, v2, v0}, Lcom/android/internal/telephony/PhoneSubInfoProxy;-><init>(Lcom/android/internal/telephony/PhoneSubInfo;I)V
+    invoke-direct {v1, v2, v0}, Lcom/android/internal/telephony/BaiduExtPhoneSubInfo;-><init>(Lcom/android/internal/telephony/PhoneSubInfo;I)V
 
     iput-object v1, p0, Lcom/android/internal/telephony/PhoneProxy;->mPhoneSubInfoProxy:Lcom/android/internal/telephony/PhoneSubInfoProxy;
 
     goto :goto_0
 
-    .line 129
     .end local v0           #simId:I
     :cond_1
     new-instance v1, Lcom/android/internal/telephony/IccSmsInterfaceManagerProxy;
@@ -235,7 +233,6 @@
 
     iput-object v1, p0, Lcom/android/internal/telephony/PhoneProxy;->mIccSmsInterfaceManagerProxy:Lcom/android/internal/telephony/IccSmsInterfaceManagerProxy;
 
-    .line 131
     new-instance v1, Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
 
     invoke-interface {p1}, Lcom/android/internal/telephony/Phone;->getIccPhoneBookInterfaceManager()Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
@@ -246,6 +243,7 @@
 
     iput-object v1, p0, Lcom/android/internal/telephony/PhoneProxy;->mIccPhoneBookInterfaceManagerProxy:Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
 
+    .line 127
     .line 133
     new-instance v1, Lcom/android/internal/telephony/PhoneSubInfoProxy;
 

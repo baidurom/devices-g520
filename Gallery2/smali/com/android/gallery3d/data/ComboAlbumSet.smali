@@ -243,7 +243,7 @@
 
     .prologue
     .line 87
-    invoke-virtual {p0}, Lcom/android/gallery3d/data/ComboAlbumSet;->notifyContentChanged()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/data/MediaSet;->notifyContentChanged()V
 
     .line 88
     return-void
@@ -331,7 +331,7 @@
     .line 92
     iget-object v0, p0, Lcom/android/gallery3d/data/ComboAlbumSet;->mSets:[Lcom/android/gallery3d/data/MediaSet;
 
-    invoke-virtual {p0, v0, p1}, Lcom/android/gallery3d/data/ComboAlbumSet;->requestSyncOnMultipleSets([Lcom/android/gallery3d/data/MediaSet;Lcom/android/gallery3d/data/MediaSet$SyncListener;)Lcom/android/gallery3d/util/Future;
+    invoke-virtual {p0, v0, p1}, Lcom/android/gallery3d/data/MediaSet;->requestSyncOnMultipleSets([Lcom/android/gallery3d/data/MediaSet;Lcom/android/gallery3d/data/MediaSet$SyncListener;)Lcom/android/gallery3d/util/Future;
 
     move-result-object v0
 
@@ -363,7 +363,7 @@
 
     aget-object v5, v5, v1
 
-    invoke-virtual {v5}, Lcom/android/gallery3d/data/MediaSet;->synchronizedAlbumData()J
+    invoke-virtual {v5}, Lcom/android/gallery3d/data/MediaObject;->synchronizedAlbumData()J
 
     move-result-wide v3
 

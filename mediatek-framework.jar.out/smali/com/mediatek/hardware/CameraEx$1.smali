@@ -30,7 +30,7 @@
     .line 80
     iput-object p1, p0, Lcom/mediatek/hardware/CameraEx$1;->val$cb:Lcom/mediatek/hardware/CameraEx$MavCallback;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

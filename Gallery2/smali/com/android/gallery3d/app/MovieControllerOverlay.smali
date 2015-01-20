@@ -3,9 +3,9 @@
 .source "MovieControllerOverlay.java"
 
 # interfaces
-.implements Lcom/android/gallery3d/app/ControllerOverlay;
 .implements Landroid/view/View$OnClickListener;
 .implements Landroid/view/animation/Animation$AnimationListener;
+.implements Lcom/android/gallery3d/app/ControllerOverlay;
 .implements Lcom/android/gallery3d/app/TimeBar$Listener;
 
 
@@ -168,7 +168,7 @@
     .line 109
     iget-object v4, p0, Lcom/android/gallery3d/app/MovieControllerOverlay;->background:Landroid/view/View;
 
-    invoke-virtual {p0, v4, v0}, Lcom/android/gallery3d/app/MovieControllerOverlay;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p0, v4, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 111
     new-instance v4, Lcom/android/gallery3d/app/TimeBar;
@@ -180,7 +180,7 @@
     .line 112
     iget-object v4, p0, Lcom/android/gallery3d/app/MovieControllerOverlay;->timeBar:Lcom/android/gallery3d/app/TimeBar;
 
-    invoke-virtual {p0, v4, v3}, Lcom/android/gallery3d/app/MovieControllerOverlay;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p0, v4, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 114
     new-instance v4, Landroid/widget/LinearLayout;
@@ -211,12 +211,12 @@
     .line 119
     iget-object v4, p0, Lcom/android/gallery3d/app/MovieControllerOverlay;->loadingView:Landroid/widget/LinearLayout;
 
-    invoke-virtual {v4, v2, v3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v4, v2, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 124
     iget-object v4, p0, Lcom/android/gallery3d/app/MovieControllerOverlay;->loadingView:Landroid/widget/LinearLayout;
 
-    invoke-virtual {p0, v4, v3}, Lcom/android/gallery3d/app/MovieControllerOverlay;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p0, v4, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 126
     new-instance v4, Landroid/widget/ImageView;
@@ -242,22 +242,22 @@
     .line 129
     iget-object v4, p0, Lcom/android/gallery3d/app/MovieControllerOverlay;->playPauseReplayView:Landroid/widget/ImageView;
 
-    invoke-virtual {v4, v7}, Landroid/widget/ImageView;->setFocusable(Z)V
+    invoke-virtual {v4, v7}, Landroid/view/View;->setFocusable(Z)V
 
     .line 130
     iget-object v4, p0, Lcom/android/gallery3d/app/MovieControllerOverlay;->playPauseReplayView:Landroid/widget/ImageView;
 
-    invoke-virtual {v4, v7}, Landroid/widget/ImageView;->setClickable(Z)V
+    invoke-virtual {v4, v7}, Landroid/view/View;->setClickable(Z)V
 
     .line 131
     iget-object v4, p0, Lcom/android/gallery3d/app/MovieControllerOverlay;->playPauseReplayView:Landroid/widget/ImageView;
 
-    invoke-virtual {v4, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v4, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 132
     iget-object v4, p0, Lcom/android/gallery3d/app/MovieControllerOverlay;->playPauseReplayView:Landroid/widget/ImageView;
 
-    invoke-virtual {p0, v4, v3}, Lcom/android/gallery3d/app/MovieControllerOverlay;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p0, v4, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 134
     invoke-direct {p0, p1}, Lcom/android/gallery3d/app/MovieControllerOverlay;->createOverlayTextView(Landroid/content/Context;)Landroid/widget/TextView;
@@ -269,7 +269,7 @@
     .line 135
     iget-object v4, p0, Lcom/android/gallery3d/app/MovieControllerOverlay;->errorView:Landroid/widget/TextView;
 
-    invoke-virtual {p0, v4, v0}, Lcom/android/gallery3d/app/MovieControllerOverlay;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p0, v4, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 137
     new-instance v4, Landroid/os/Handler;
@@ -306,7 +306,7 @@
 
     .line 149
     .local v1, params:Landroid/widget/RelativeLayout$LayoutParams;
-    invoke-virtual {p0, v1}, Lcom/android/gallery3d/app/MovieControllerOverlay;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 151
     invoke-static {p1}, Lcom/mediatek/gallery3d/video/ExtensionHelper;->getMovieStrategy(Landroid/content/Context;)Lcom/mediatek/gallery3d/ext/IMovieStrategy;
@@ -521,7 +521,7 @@
     .line 318
     iget-object v0, p0, Lcom/android/gallery3d/app/MovieControllerOverlay;->timeBar:Lcom/android/gallery3d/app/TimeBar;
 
-    invoke-virtual {v0, v2}, Lcom/android/gallery3d/app/TimeBar;->setAnimation(Landroid/view/animation/Animation;)V
+    invoke-virtual {v0, v2}, Landroid/view/View;->setAnimation(Landroid/view/animation/Animation;)V
 
     .line 319
     iget-object v0, p0, Lcom/android/gallery3d/app/MovieControllerOverlay;->mScreenModeExt:Lcom/android/gallery3d/app/MovieControllerOverlay$ScreenModeExt;
@@ -542,7 +542,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/gallery3d/app/MovieControllerOverlay;->playPauseReplayView:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setAnimation(Landroid/view/animation/Animation;)V
+    invoke-virtual {v0, v2}, Landroid/view/View;->setAnimation(Landroid/view/animation/Animation;)V
 
     .line 325
     return-void
@@ -705,7 +705,7 @@
     move v0, v1
 
     :goto_0
-    invoke-virtual {v3, v0}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v3, v0}, Landroid/view/View;->setVisibility(I)V
 
     .line 264
     iget-object v3, p0, Lcom/android/gallery3d/app/MovieControllerOverlay;->loadingView:Landroid/widget/LinearLayout;
@@ -719,7 +719,7 @@
     move v0, v1
 
     :goto_1
-    invoke-virtual {v3, v0}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    invoke-virtual {v3, v0}, Landroid/view/View;->setVisibility(I)V
 
     .line 265
     iget-object v0, p0, Lcom/android/gallery3d/app/MovieControllerOverlay;->playPauseReplayView:Landroid/widget/ImageView;
@@ -857,7 +857,7 @@
     .line 503
     iget-object v0, p0, Lcom/android/gallery3d/app/MovieControllerOverlay;->timeBar:Lcom/android/gallery3d/app/TimeBar;
 
-    invoke-virtual {v0, v1}, Lcom/android/gallery3d/app/TimeBar;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     .line 504
     iget-object v2, p0, Lcom/android/gallery3d/app/MovieControllerOverlay;->playPauseReplayView:Landroid/widget/ImageView;
@@ -931,7 +931,7 @@
 
     .line 518
     :cond_3
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/MovieControllerOverlay;->requestLayout()V
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 
     .line 520
     const-string v0, "Gallery3D/MovieControllerOverlay"
@@ -1077,7 +1077,7 @@
     .line 236
     iget-object v1, p0, Lcom/android/gallery3d/app/MovieControllerOverlay;->loadingView:Landroid/widget/LinearLayout;
 
-    invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
     .line 238
     iget-object v1, p0, Lcom/android/gallery3d/app/MovieControllerOverlay;->mOverlayExt:Lcom/android/gallery3d/app/MovieControllerOverlay$OverlayExtension;
@@ -1089,7 +1089,7 @@
     if-nez v1, :cond_0
 
     .line 241
-    invoke-virtual {p0, v2}, Lcom/android/gallery3d/app/MovieControllerOverlay;->setVisibility(I)V
+    invoke-virtual {p0, v2}, Landroid/view/View;->setVisibility(I)V
 
     .line 244
     :cond_0
@@ -1100,7 +1100,7 @@
     .line 245
     iget-object v1, p0, Lcom/android/gallery3d/app/MovieControllerOverlay;->timeBar:Lcom/android/gallery3d/app/TimeBar;
 
-    invoke-virtual {v1, v2}, Lcom/android/gallery3d/app/TimeBar;->setVisibility(I)V
+    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
     .line 246
     iget-object v1, p0, Lcom/android/gallery3d/app/MovieControllerOverlay;->mScreenModeExt:Lcom/android/gallery3d/app/MovieControllerOverlay$ScreenModeExt;
@@ -1119,10 +1119,10 @@
 
     .line 251
     :cond_1
-    invoke-virtual {p0, v3}, Lcom/android/gallery3d/app/MovieControllerOverlay;->setFocusable(Z)V
+    invoke-virtual {p0, v3}, Landroid/view/View;->setFocusable(Z)V
 
     .line 252
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/MovieControllerOverlay;->requestFocus()Z
+    invoke-virtual {p0}, Landroid/view/View;->requestFocus()Z
 
     .line 253
     iget-object v1, p0, Lcom/android/gallery3d/app/MovieControllerOverlay;->listener:Lcom/android/gallery3d/app/ControllerOverlay$Listener;
@@ -1368,7 +1368,7 @@
 
     .line 398
     :cond_0
-    invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onKeyDown(ILandroid/view/KeyEvent;)Z
+    invoke-super {p0, p1, p2}, Landroid/view/View;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
     move-result v0
 
@@ -1389,7 +1389,7 @@
 
     check-cast v0, Lcom/android/gallery3d/app/MovieActivity;
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/app/MovieActivity;->getWindowManager()Landroid/view/WindowManager;
+    invoke-virtual {v0}, Landroid/app/Activity;->getWindowManager()Landroid/view/WindowManager;
 
     move-result-object v0
 
@@ -1433,7 +1433,7 @@
     .local v4, w:I
     iget-object v0, p0, Lcom/android/gallery3d/app/MovieControllerOverlay;->errorView:Landroid/widget/TextView;
 
-    invoke-virtual {v0}, Landroid/widget/TextView;->getVisibility()I
+    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
 
     move-result v0
 
@@ -1492,7 +1492,7 @@
 
     sub-int v3, v13, v3
 
-    invoke-virtual {v0, v9, v1, v2, v3}, Lcom/android/gallery3d/app/TimeBar;->layout(IIII)V
+    invoke-virtual {v0, v9, v1, v2, v3}, Landroid/view/View;->layout(IIII)V
 
     .line 470
     iget-object v0, p0, Lcom/android/gallery3d/app/MovieControllerOverlay;->mControllerRewindAndForwardExt:Lcom/android/gallery3d/app/MovieControllerOverlay$ControllerRewindAndForwardExt;
@@ -1585,7 +1585,7 @@
 
     sub-int/2addr v2, v3
 
-    invoke-virtual {v0, v9, v1, v2, v13}, Lcom/android/gallery3d/app/TimeBar;->layout(IIII)V
+    invoke-virtual {v0, v9, v1, v2, v13}, Landroid/view/View;->layout(IIII)V
 
     goto :goto_1
 .end method
@@ -1600,7 +1600,7 @@
     invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
     .line 495
-    invoke-virtual {p0, p1, p2}, Lcom/android/gallery3d/app/MovieControllerOverlay;->measureChildren(II)V
+    invoke-virtual {p0, p1, p2}, Landroid/view/ViewGroup;->measureChildren(II)V
 
     .line 496
     return-void
@@ -1664,7 +1664,7 @@
     const/4 v2, 0x1
 
     .line 403
-    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    invoke-super {p0, p1}, Landroid/view/View;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
@@ -1795,7 +1795,7 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setEnabled(Z)V
 
     .line 391
     :cond_0
@@ -1916,7 +1916,7 @@
     .line 373
     iget-object v0, p0, Lcom/android/gallery3d/app/MovieControllerOverlay;->playPauseReplayView:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setEnabled(Z)V
+    invoke-virtual {v0, p1}, Landroid/view/View;->setEnabled(Z)V
 
     .line 374
     iget-boolean v0, p0, Lcom/android/gallery3d/app/MovieControllerOverlay;->enableRewindAndForward:Z
@@ -1950,10 +1950,10 @@
     invoke-direct {p0}, Lcom/android/gallery3d/app/MovieControllerOverlay;->updateViews()V
 
     .line 275
-    invoke-virtual {p0, v1}, Lcom/android/gallery3d/app/MovieControllerOverlay;->setVisibility(I)V
+    invoke-virtual {p0, v1}, Landroid/view/View;->setVisibility(I)V
 
     .line 276
-    invoke-virtual {p0, v1}, Lcom/android/gallery3d/app/MovieControllerOverlay;->setFocusable(Z)V
+    invoke-virtual {p0, v1}, Landroid/view/View;->setFocusable(Z)V
 
     .line 277
     iget-object v1, p0, Lcom/android/gallery3d/app/MovieControllerOverlay;->listener:Lcom/android/gallery3d/app/ControllerOverlay$Listener;
@@ -2088,7 +2088,7 @@
     iput-object v1, p0, Lcom/android/gallery3d/app/MovieControllerOverlay;->state:Lcom/android/gallery3d/app/MovieControllerOverlay$State;
 
     .line 222
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/MovieControllerOverlay;->getMeasuredWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v1
 
@@ -2106,13 +2106,13 @@
 
     iget-object v2, p0, Lcom/android/gallery3d/app/MovieControllerOverlay;->errorView:Landroid/widget/TextView;
 
-    invoke-virtual {v2}, Landroid/widget/TextView;->getPaddingTop()I
+    invoke-virtual {v2}, Landroid/view/View;->getPaddingTop()I
 
     move-result v2
 
     iget-object v3, p0, Lcom/android/gallery3d/app/MovieControllerOverlay;->errorView:Landroid/widget/TextView;
 
-    invoke-virtual {v3}, Landroid/widget/TextView;->getPaddingBottom()I
+    invoke-virtual {v3}, Landroid/view/View;->getPaddingBottom()I
 
     move-result v3
 

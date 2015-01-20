@@ -3,9 +3,9 @@
 .source "SettingListLayout.java"
 
 # interfaces
-.implements Lcom/android/camera/ui/InLineSettingItem$Listener;
-.implements Landroid/widget/AdapterView$OnItemClickListener;
 .implements Landroid/widget/AbsListView$OnScrollListener;
+.implements Landroid/widget/AdapterView$OnItemClickListener;
+.implements Lcom/android/camera/ui/InLineSettingItem$Listener;
 
 
 # annotations
@@ -162,7 +162,7 @@
 
     .prologue
     .line 158
-    invoke-virtual {p0}, Lcom/android/camera/ui/SettingListLayout;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -233,19 +233,19 @@
     .line 182
     iget-object v3, p0, Lcom/android/camera/ui/SettingListLayout;->mSettingList:Landroid/widget/ListView;
 
-    invoke-virtual {v3, p0}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
+    invoke-virtual {v3, p0}, Landroid/widget/AdapterView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 183
     iget-object v3, p0, Lcom/android/camera/ui/SettingListLayout;->mSettingList:Landroid/widget/ListView;
 
     const v4, 0x106000d
 
-    invoke-virtual {v3, v4}, Landroid/widget/ListView;->setSelector(I)V
+    invoke-virtual {v3, v4}, Landroid/widget/AbsListView;->setSelector(I)V
 
     .line 184
     iget-object v3, p0, Lcom/android/camera/ui/SettingListLayout;->mSettingList:Landroid/widget/ListView;
 
-    invoke-virtual {v3, p0}, Landroid/widget/ListView;->setOnScrollListener(Landroid/widget/AbsListView$OnScrollListener;)V
+    invoke-virtual {v3, p0}, Landroid/widget/AbsListView;->setOnScrollListener(Landroid/widget/AbsListView$OnScrollListener;)V
 
     .line 185
     return-void
@@ -305,12 +305,12 @@
 
     .prologue
     .line 61
-    invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
+    invoke-super {p0}, Landroid/view/View;->onFinishInflate()V
 
     .line 62
     const v0, 0x7f0b00e0
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/ui/SettingListLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -596,7 +596,7 @@
     .line 205
     iget-object v4, p0, Lcom/android/camera/ui/SettingListLayout;->mSettingList:Landroid/widget/ListView;
 
-    invoke-virtual {v4}, Landroid/widget/ListView;->getChildCount()I
+    invoke-virtual {v4}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
 
@@ -624,7 +624,7 @@
     .line 209
     iget-object v4, p0, Lcom/android/camera/ui/SettingListLayout;->mSettingList:Landroid/widget/ListView;
 
-    invoke-virtual {v4, v1}, Landroid/widget/ListView;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v4, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 

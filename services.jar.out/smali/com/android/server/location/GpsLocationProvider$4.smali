@@ -156,7 +156,7 @@
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1934
-    invoke-virtual {p0}, Lcom/android/server/location/GpsLocationProvider$4;->getResultCode()I
+    invoke-virtual {p0}, Landroid/content/BroadcastReceiver;->getResultCode()I
 
     move-result v4
 

@@ -30,7 +30,7 @@
 
     .prologue
     .line 92
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/mmi/OppCancelActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -97,7 +97,7 @@
     .line 126
     :cond_0
     :goto_0
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/mmi/OppCancelActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 127
     :goto_1
@@ -106,7 +106,7 @@
     .line 111
     :cond_1
     :try_start_0
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/mmi/OppCancelActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -147,7 +147,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/mmi/OppCancelActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v3
 
@@ -161,7 +161,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0}, Ljava/lang/NumberFormatException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v3
 
@@ -248,13 +248,13 @@
     const/4 v0, 0x0
 
     .line 57
-    invoke-super {p0}, Lcom/mediatek/activity/CancelableActivity;->onResume()V
+    invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
     .line 58
-    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/opp/mmi/OppCancelActivity;->setVisible(Z)V
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->setVisible(Z)V
 
     .line 59
-    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/opp/mmi/OppCancelActivity;->showDialog(I)V
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->showDialog(I)V
 
     .line 60
     return-void

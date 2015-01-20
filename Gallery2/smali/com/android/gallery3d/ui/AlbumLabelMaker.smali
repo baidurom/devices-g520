@@ -54,7 +54,7 @@
 
     .prologue
     .line 60
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 61
     iput-object p1, p0, Lcom/android/gallery3d/ui/AlbumLabelMaker;->mContext:Landroid/content/Context;
@@ -247,7 +247,7 @@
     .line 145
     int-to-float v0, p1
 
-    invoke-virtual {p5}, Landroid/text/TextPaint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
+    invoke-virtual {p5}, Landroid/graphics/Paint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
 
     move-result-object v1
 
@@ -381,20 +381,20 @@
     .local v0, paint:Landroid/text/TextPaint;
     int-to-float v1, p0
 
-    invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setTextSize(F)V
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextSize(F)V
 
     .line 98
-    invoke-virtual {v0, v4}, Landroid/text/TextPaint;->setAntiAlias(Z)V
+    invoke-virtual {v0, v4}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
     .line 99
-    invoke-virtual {v0, p1}, Landroid/text/TextPaint;->setColor(I)V
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 100
     const/high16 v1, 0x4000
 
     const/high16 v2, -0x100
 
-    invoke-virtual {v0, v1, v3, v3, v2}, Landroid/text/TextPaint;->setShadowLayer(FFFI)V
+    invoke-virtual {v0, v1, v3, v3, v2}, Landroid/graphics/Paint;->setShadowLayer(FFFI)V
 
     .line 101
     if-eqz p2, :cond_0
@@ -404,7 +404,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
     .line 104
     :cond_0

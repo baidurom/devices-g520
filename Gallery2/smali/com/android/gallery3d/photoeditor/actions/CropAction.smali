@@ -38,7 +38,7 @@
 
     .line 40
     .local v2, filter:Lcom/android/gallery3d/photoeditor/filters/CropFilter;
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/CropAction;->disableFilterOutput()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/EffectAction;->disableFilterOutput()V
 
     .line 42
     iget-object v3, p0, Lcom/android/gallery3d/photoeditor/actions/EffectAction;->toolKit:Lcom/android/gallery3d/photoeditor/actions/EffectToolKit;
@@ -68,7 +68,7 @@
     invoke-virtual {v2, v0}, Lcom/android/gallery3d/photoeditor/filters/CropFilter;->setCropBounds(Landroid/graphics/RectF;)V
 
     .line 57
-    invoke-virtual {p0, v2}, Lcom/android/gallery3d/photoeditor/actions/CropAction;->notifyChanged(Lcom/android/gallery3d/photoeditor/filters/Filter;)V
+    invoke-virtual {p0, v2}, Lcom/android/gallery3d/photoeditor/actions/EffectAction;->notifyChanged(Lcom/android/gallery3d/photoeditor/filters/Filter;)V
 
     .line 58
     return-void

@@ -635,7 +635,7 @@
 
     const-string v1, "hidConnectTimeoutThread"
 
-    invoke-virtual {v0, v1}, Lcom/mediatek/bluetooth/hid/BluetoothHidService$ActionTimeoutThread;->setName(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
 
     .line 261
     iget-object v0, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->mConnectTimeout:Lcom/mediatek/bluetooth/hid/BluetoothHidService$ActionTimeoutThread;
@@ -688,7 +688,7 @@
     .line 277
     iget-object v0, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->mConnectTimeout:Lcom/mediatek/bluetooth/hid/BluetoothHidService$ActionTimeoutThread;
 
-    invoke-virtual {v0}, Lcom/mediatek/bluetooth/hid/BluetoothHidService$ActionTimeoutThread;->isAlive()Z
+    invoke-virtual {v0}, Ljava/lang/Thread;->isAlive()Z
 
     move-result v0
 
@@ -697,7 +697,7 @@
     .line 278
     iget-object v0, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->mConnectTimeout:Lcom/mediatek/bluetooth/hid/BluetoothHidService$ActionTimeoutThread;
 
-    invoke-virtual {v0}, Lcom/mediatek/bluetooth/hid/BluetoothHidService$ActionTimeoutThread;->start()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     .line 280
     :cond_1
@@ -843,7 +843,7 @@
 
     const-string v1, "hidDisconnectTimeoutThread"
 
-    invoke-virtual {v0, v1}, Lcom/mediatek/bluetooth/hid/BluetoothHidService$ActionTimeoutThread;->setName(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
 
     .line 289
     iget-object v0, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->mDisconnectTimeout:Lcom/mediatek/bluetooth/hid/BluetoothHidService$ActionTimeoutThread;
@@ -889,7 +889,7 @@
     .line 308
     iget-object v0, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->mDisconnectTimeout:Lcom/mediatek/bluetooth/hid/BluetoothHidService$ActionTimeoutThread;
 
-    invoke-virtual {v0}, Lcom/mediatek/bluetooth/hid/BluetoothHidService$ActionTimeoutThread;->isAlive()Z
+    invoke-virtual {v0}, Ljava/lang/Thread;->isAlive()Z
 
     move-result v0
 
@@ -898,7 +898,7 @@
     .line 309
     iget-object v0, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->mDisconnectTimeout:Lcom/mediatek/bluetooth/hid/BluetoothHidService$ActionTimeoutThread;
 
-    invoke-virtual {v0}, Lcom/mediatek/bluetooth/hid/BluetoothHidService$ActionTimeoutThread;->start()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     .line 316
     :cond_1
@@ -929,7 +929,7 @@
 
     .prologue
     .line 1115
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -998,7 +998,7 @@
     move-result-object v0
 
     .line 1127
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->getPackageName()Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getPackageName()Ljava/lang/String;
 
     move-result-object v8
 
@@ -1022,14 +1022,14 @@
     .line 1131
     const v8, 0x7f050010
 
-    invoke-virtual {p0, v8}, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
     .line 1132
     const v8, 0x7f050011
 
-    invoke-virtual {p0, v8}, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1057,7 +1057,7 @@
     invoke-virtual {v6, v8, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 1137
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v8
 
@@ -1078,7 +1078,7 @@
 
     aput-object p2, v9, v10
 
-    invoke-virtual {p0, v8, v9}, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v8, v9}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v8
 
@@ -1102,14 +1102,14 @@
     .line 1142
     const v8, 0x7f050012
 
-    invoke-virtual {p0, v8}, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
     .line 1143
     const v8, 0x7f050013
 
-    invoke-virtual {p0, v8}, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1155,7 +1155,7 @@
     invoke-virtual {v6, v8, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 1152
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v8
 
@@ -1176,7 +1176,7 @@
 
     aput-object p2, v9, v10
 
-    invoke-virtual {p0, v8, v9}, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v8, v9}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v8
 
@@ -1212,7 +1212,7 @@
     .line 1169
     const-string v4, "BT_HID_SETTING_INFO"
 
-    invoke-virtual {p0, v4, v5}, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-virtual {p0, v4, v5}, Landroid/content/ContextWrapper;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v2
 
@@ -1703,7 +1703,7 @@
     invoke-direct {p0, v1, v2}, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->printLog(Ljava/lang/String;I)V
 
     .line 486
-    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->sendBroadcast(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 487
     return-void
@@ -1791,7 +1791,7 @@
 
     .line 434
     :goto_0
-    invoke-virtual {p0, v3}, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->sendBroadcast(Landroid/content/Intent;)V
+    invoke-virtual {p0, v3}, Landroid/content/ContextWrapper;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 435
     const-string v4, "updateSettingsState"
@@ -1926,7 +1926,7 @@
     .line 682
     iget-object v3, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->mSocketListener:Lcom/mediatek/bluetooth/hid/BluetoothHidService$SocketListenerThread;
 
-    invoke-virtual {v3}, Lcom/mediatek/bluetooth/hid/BluetoothHidService$SocketListenerThread;->join()V
+    invoke-virtual {v3}, Ljava/lang/Thread;->join()V
 
     .line 683
     const/4 v3, 0x0
@@ -1965,7 +1965,7 @@
     .line 694
     iget-object v3, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->mConnectTimeout:Lcom/mediatek/bluetooth/hid/BluetoothHidService$ActionTimeoutThread;
 
-    invoke-virtual {v3}, Lcom/mediatek/bluetooth/hid/BluetoothHidService$ActionTimeoutThread;->join()V
+    invoke-virtual {v3}, Ljava/lang/Thread;->join()V
 
     .line 695
     const/4 v3, 0x0
@@ -2004,7 +2004,7 @@
     .line 706
     iget-object v3, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->mDisconnectTimeout:Lcom/mediatek/bluetooth/hid/BluetoothHidService$ActionTimeoutThread;
 
-    invoke-virtual {v3}, Lcom/mediatek/bluetooth/hid/BluetoothHidService$ActionTimeoutThread;->join()V
+    invoke-virtual {v3}, Ljava/lang/Thread;->join()V
 
     .line 707
     const/4 v3, 0x0
@@ -2134,7 +2134,7 @@
     .line 724
     iget-object v0, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->mUpdateStateIntent:Landroid/content/Intent;
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->sendBroadcast(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 725
     invoke-direct {p0}, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->initServiceNative()Z
@@ -2167,7 +2167,7 @@
 
     const-string v1, "BTHidSocketListener"
 
-    invoke-virtual {v0, v1}, Lcom/mediatek/bluetooth/hid/BluetoothHidService$SocketListenerThread;->setName(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
 
     .line 730
     iget-object v0, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->mSocketListener:Lcom/mediatek/bluetooth/hid/BluetoothHidService$SocketListenerThread;
@@ -2177,7 +2177,7 @@
     .line 731
     iget-object v0, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->mSocketListener:Lcom/mediatek/bluetooth/hid/BluetoothHidService$SocketListenerThread;
 
-    invoke-virtual {v0}, Lcom/mediatek/bluetooth/hid/BluetoothHidService$SocketListenerThread;->start()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     .line 732
     const-string v0, "SocketListener started."
@@ -2289,7 +2289,7 @@
     .line 608
     const-string v2, "notification"
 
-    invoke-virtual {p0, v2}, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v2}, Landroid/content/ContextWrapper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -2319,7 +2319,7 @@
     invoke-direct {p0, v2, v3}, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->printLog(Ljava/lang/String;I)V
 
     .line 616
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->stopSelf()V
+    invoke-virtual {p0}, Landroid/app/Service;->stopSelf()V
 
     .line 619
     :cond_0
@@ -2341,7 +2341,7 @@
     .line 622
     iget-object v2, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v2, v1}, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v2, v1}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 624
     invoke-virtual {p0}, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->localCreateService()V
@@ -2410,7 +2410,7 @@
     .line 639
     iget-object v0, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 640
     invoke-virtual {p0}, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->localClearService()V

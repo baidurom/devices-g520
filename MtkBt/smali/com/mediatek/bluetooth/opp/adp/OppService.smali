@@ -212,7 +212,7 @@
     .line 122
     iget-object v1, p0, Lcom/mediatek/bluetooth/opp/adp/OppService;->mSdcardBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v1, v0}, Lcom/mediatek/bluetooth/opp/adp/OppService;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v1, v0}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 123
     return-void
@@ -235,7 +235,7 @@
     .line 131
     iget-object v0, p0, Lcom/mediatek/bluetooth/opp/adp/OppService;->mSdcardBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/opp/adp/OppService;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 133
     :cond_0
@@ -283,7 +283,7 @@
     invoke-static {p0, v1, v3}, Lcom/mediatek/bluetooth/opp/adp/BluetoothOppService;->sendActivationBroadcast(Landroid/content/Context;ZI)V
 
     .line 151
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/adp/OppService;->stopSelf()V
+    invoke-virtual {p0}, Landroid/app/Service;->stopSelf()V
 
     .line 201
     :goto_0
@@ -314,7 +314,7 @@
     invoke-static {p0, v2, v4}, Lcom/mediatek/bluetooth/opp/adp/BluetoothOppService;->sendActivationBroadcast(Landroid/content/Context;ZI)V
 
     .line 166
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/adp/OppService;->oppcEnable()Z
+    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/adp/OppServiceNative;->oppcEnable()Z
 
     move-result v0
 
@@ -328,7 +328,7 @@
     invoke-static {p0, v1, v4}, Lcom/mediatek/bluetooth/opp/adp/BluetoothOppService;->sendActivationBroadcast(Landroid/content/Context;ZI)V
 
     .line 177
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/adp/OppService;->oppsEnable()Z
+    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/adp/OppServiceNative;->oppsEnable()Z
 
     move-result v0
 
@@ -354,7 +354,7 @@
     .line 188
     iget-object v0, p0, Lcom/mediatek/bluetooth/opp/adp/OppService;->mOppcWorker:Lcom/mediatek/bluetooth/opp/adp/OppTaskWorkerThread;
 
-    invoke-virtual {v0}, Lcom/mediatek/bluetooth/opp/adp/OppTaskWorkerThread;->start()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     .line 189
     new-instance v0, Lcom/mediatek/bluetooth/opp/adp/OppTaskWorkerThread;
@@ -372,7 +372,7 @@
     .line 190
     iget-object v0, p0, Lcom/mediatek/bluetooth/opp/adp/OppService;->mOppsWorker:Lcom/mediatek/bluetooth/opp/adp/OppTaskWorkerThread;
 
-    invoke-virtual {v0}, Lcom/mediatek/bluetooth/opp/adp/OppTaskWorkerThread;->start()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     .line 200
     const-string v0, "OppService.onCreate()[-]"
@@ -429,12 +429,12 @@
     .line 216
     iget-object v0, p0, Lcom/mediatek/bluetooth/opp/adp/OppService;->mOppcWorker:Lcom/mediatek/bluetooth/opp/adp/OppTaskWorkerThread;
 
-    invoke-virtual {v0}, Lcom/mediatek/bluetooth/opp/adp/OppTaskWorkerThread;->interrupt()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
 
     .line 217
     iget-object v0, p0, Lcom/mediatek/bluetooth/opp/adp/OppService;->mOppsWorker:Lcom/mediatek/bluetooth/opp/adp/OppTaskWorkerThread;
 
-    invoke-virtual {v0}, Lcom/mediatek/bluetooth/opp/adp/OppTaskWorkerThread;->interrupt()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
 
     .line 219
     iput-boolean v1, p0, Lcom/mediatek/bluetooth/opp/adp/OppService;->mIsTaskWorkThreadInterrupted:Z
@@ -445,7 +445,7 @@
     invoke-static {v0}, Lcom/mediatek/bluetooth/opp/mmi/OppLog;->d(Ljava/lang/String;)V
 
     .line 223
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/adp/OppService;->oppcDisable()Z
+    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/adp/OppServiceNative;->oppcDisable()Z
 
     move-result v0
 
@@ -456,7 +456,7 @@
 
     .line 231
     :goto_0
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/adp/OppService;->oppsDisable()Z
+    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/adp/OppServiceNative;->oppsDisable()Z
 
     move-result v0
 
@@ -580,7 +580,7 @@
     invoke-static {v1}, Lcom/mediatek/bluetooth/opp/mmi/OppLog;->i(Ljava/lang/String;)V
 
     .line 289
-    invoke-super {p0, p1, p2, p3}, Lcom/mediatek/bluetooth/opp/adp/OppServiceNative;->onStartCommand(Landroid/content/Intent;II)I
+    invoke-super {p0, p1, p2, p3}, Landroid/app/Service;->onStartCommand(Landroid/content/Intent;II)I
 
     move-result v1
 
@@ -598,7 +598,7 @@
     if-eqz v1, :cond_1
 
     .line 275
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/adp/OppService;->oppsStopListenDisconnect()V
+    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/adp/OppServiceNative;->oppsStopListenDisconnect()V
 
     .line 276
     iget-object v1, p0, Lcom/mediatek/bluetooth/opp/adp/OppService;->mOppsWorker:Lcom/mediatek/bluetooth/opp/adp/OppTaskWorkerThread;

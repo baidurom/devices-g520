@@ -240,7 +240,7 @@
     .local v1, delay:J
     const/4 v8, 0x0
 
-    invoke-virtual {p0, v8, v1, v2}, Lcom/android/camera/manager/ThumbnailManager$WorkerHandler;->sendEmptyMessageDelayed(IJ)Z
+    invoke-virtual {p0, v8, v1, v2}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
     goto :goto_0
 
@@ -299,7 +299,7 @@
 
     move-result-object v8
 
-    invoke-virtual {v8}, Lcom/android/camera/ui/RotateImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v8}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v8
 
@@ -403,11 +403,11 @@
 
     iget-object v9, p0, Lcom/android/camera/manager/ThumbnailManager$WorkerHandler;->this$0:Lcom/android/camera/manager/ThumbnailManager;
 
-    invoke-virtual {v9}, Lcom/android/camera/manager/ThumbnailManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {v9}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v9
 
-    invoke-virtual {v9}, Lcom/android/camera/Camera;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v9}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v9
 

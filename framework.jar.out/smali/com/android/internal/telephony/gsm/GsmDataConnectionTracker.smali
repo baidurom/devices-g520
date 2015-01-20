@@ -3032,36 +3032,34 @@
 
     .line 1209
     :cond_3
-    goto :goto_3
-    
     const-string/jumbo v4, "spn"
-    
+
     move-object/from16 v0, p1
-    
+
     invoke-interface {v0, v4}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
-    
+
     move-result v4
-    
+
     move-object/from16 v0, p1
-    
+
     invoke-interface {v0, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-    
+
     move-result-object v30
-    
+
+    .line 1210
     .local v30, strSPN:Ljava/lang/String;
-    
     if-eqz v30, :cond_6
-    
+
     const-string v4, ""
-    
+
     move-object/from16 v0, v30
-    
+
     invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-    
+
     move-result v4
-    
+
     if-nez v4, :cond_6
-    
+
     .line 1251
     :cond_4
     :goto_1
@@ -3166,7 +3164,6 @@
 
     .line 1222
     :cond_8
-    :goto_3
     const-string/jumbo v4, "type"
 
     move-object/from16 v0, p1
@@ -4307,7 +4304,6 @@
 
     .line 1261
     :cond_0
-    goto :goto_1000
     if-eqz p2, :cond_2
 
     const-string/jumbo v3, "spn"
@@ -4370,7 +4366,6 @@
     return-object v20
 
     .line 1264
-    :goto_1000
     :cond_2
     const-string/jumbo v3, "type"
 

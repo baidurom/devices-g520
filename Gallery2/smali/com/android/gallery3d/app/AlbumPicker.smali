@@ -33,10 +33,10 @@
     .line 34
     const v3, 0x7f0c01f7
 
-    invoke-virtual {p0, v3}, Lcom/android/gallery3d/app/AlbumPicker;->setTitle(I)V
+    invoke-virtual {p0, v3}, Landroid/app/Activity;->setTitle(I)V
 
     .line 35
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/AlbumPicker;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -64,7 +64,7 @@
     .line 40
     const-string v3, "media-path"
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/AlbumPicker;->getDataManager()Lcom/android/gallery3d/data/DataManager;
+    invoke-virtual {p0}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->getDataManager()Lcom/android/gallery3d/data/DataManager;
 
     move-result-object v4
 
@@ -78,7 +78,7 @@
     invoke-static {p0, v0, v2}, Lcom/mediatek/gallery3d/util/MediatekFeature;->checkForOtherPickActions(Lcom/android/gallery3d/app/PickerActivity;Landroid/os/Bundle;Landroid/content/Intent;)Z
 
     .line 43
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/AlbumPicker;->getStateManager()Lcom/android/gallery3d/app/StateManager;
+    invoke-virtual {p0}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->getStateManager()Lcom/android/gallery3d/app/StateManager;
 
     move-result-object v3
 

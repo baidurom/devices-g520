@@ -34,7 +34,7 @@
 
     .line 39
     .local v2, filter:Lcom/android/gallery3d/photoeditor/filters/DoodleFilter;
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/DoodleAction;->disableFilterOutput()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/EffectAction;->disableFilterOutput()V
 
     .line 41
     iget-object v3, p0, Lcom/android/gallery3d/photoeditor/actions/EffectAction;->toolKit:Lcom/android/gallery3d/photoeditor/actions/EffectToolKit;

@@ -96,7 +96,7 @@
     .line 293
     iget v2, p0, Landroid/net/wifi/SupplicantStateTracker$HandshakeState;->mLoopDetectIndex:I
 
-    invoke-virtual {v0}, Landroid/net/wifi/SupplicantState;->ordinal()I
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v3
 
@@ -134,7 +134,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v0}, Landroid/net/wifi/SupplicantState;->ordinal()I
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v4
 
@@ -203,7 +203,7 @@
 
     .line 303
     :cond_2
-    invoke-virtual {v0}, Landroid/net/wifi/SupplicantState;->ordinal()I
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v2
 

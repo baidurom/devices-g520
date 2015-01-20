@@ -32,7 +32,7 @@
     .line 230
     iput-object p1, p0, Lcom/mediatek/bluetooth/opp/mmi/OppClientActivity$1$2;->this$1:Lcom/mediatek/bluetooth/opp/mmi/OppClientActivity$1;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 232
     const v0, 0x7f050038
@@ -82,7 +82,7 @@
 
     aput-object v0, v4, v7
 
-    invoke-virtual {v2, v3, v4}, Lcom/mediatek/bluetooth/opp/mmi/OppClientActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v2, v3, v4}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -116,13 +116,13 @@
 
     const v6, 0x7f05003a
 
-    invoke-virtual {v5, v6}, Lcom/mediatek/bluetooth/opp/mmi/OppClientActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {v5, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
     aput-object v5, v4, v7
 
-    invoke-virtual {v2, v3, v4}, Lcom/mediatek/bluetooth/opp/mmi/OppClientActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v2, v3, v4}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 

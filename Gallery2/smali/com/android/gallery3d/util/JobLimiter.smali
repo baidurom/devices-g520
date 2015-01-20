@@ -49,7 +49,7 @@
 
     .prologue
     .line 131
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 37
     new-instance v0, Ljava/util/LinkedList;
@@ -87,7 +87,7 @@
 
     iget-object v1, p0, Lcom/android/gallery3d/util/JobLimiter;->mJobs:Ljava/util/LinkedList;
 
-    invoke-virtual {v1}, Ljava/util/LinkedList;->isEmpty()Z
+    invoke-virtual {v1}, Ljava/util/AbstractCollection;->isEmpty()Z
 
     move-result v1
 

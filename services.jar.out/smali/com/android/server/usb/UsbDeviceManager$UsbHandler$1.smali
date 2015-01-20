@@ -80,7 +80,7 @@
 
     const/4 v3, 0x4
 
-    invoke-virtual {v2, v3}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->sendEmptyMessage(I)Z
+    invoke-virtual {v2, v3}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     .line 439
     :cond_0
@@ -368,12 +368,12 @@
     .line 459
     iget-object v2, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler$1;->this$1:Lcom/android/server/usb/UsbDeviceManager$UsbHandler;
 
-    invoke-virtual {v2, v5}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->removeMessages(I)V
+    invoke-virtual {v2, v5}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 460
     iget-object v2, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler$1;->this$1:Lcom/android/server/usb/UsbDeviceManager$UsbHandler;
 
-    invoke-virtual {v2, v7}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->removeMessages(I)V
+    invoke-virtual {v2, v7}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 461
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
@@ -461,7 +461,7 @@
 
     const-wide/16 v3, 0x3e8
 
-    invoke-virtual {v2, v1, v3, v4}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
+    invoke-virtual {v2, v1, v3, v4}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     .line 485
     .end local v1           #msg:Landroid/os/Message;
@@ -733,7 +733,7 @@
     .line 473
     iget-object v2, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler$1;->this$1:Lcom/android/server/usb/UsbDeviceManager$UsbHandler;
 
-    invoke-virtual {v2, v7}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->removeMessages(I)V
+    invoke-virtual {v2, v7}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 474
     iget-object v2, p0, Lcom/android/server/usb/UsbDeviceManager$UsbHandler$1;->this$1:Lcom/android/server/usb/UsbDeviceManager$UsbHandler;

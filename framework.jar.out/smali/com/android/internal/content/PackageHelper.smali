@@ -37,7 +37,7 @@
 
     .prologue
     .line 43
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -131,7 +131,7 @@
     .restart local v3       #num:I
     :cond_1
     :try_start_1
-    invoke-virtual {p2}, Ljava/util/zip/ZipOutputStream;->flush()V
+    invoke-virtual {p2}, Ljava/util/zip/DeflaterOutputStream;->flush()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -620,7 +620,7 @@
     invoke-virtual {v3}, Ljava/util/zip/ZipOutputStream;->finish()V
 
     .line 245
-    invoke-virtual {v3}, Ljava/util/zip/ZipOutputStream;->flush()V
+    invoke-virtual {v3}, Ljava/util/zip/DeflaterOutputStream;->flush()V
 
     .line 246
     invoke-static {v0}, Landroid/os/FileUtils;->sync(Ljava/io/FileOutputStream;)Z

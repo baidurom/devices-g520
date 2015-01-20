@@ -43,10 +43,10 @@
     invoke-virtual {v0, v1, v2}, Lcom/android/gallery3d/photoeditor/filters/DuotoneFilter;->setDuotone(II)V
 
     .line 41
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/photoeditor/actions/DuotoneAction;->notifyChanged(Lcom/android/gallery3d/photoeditor/filters/Filter;)V
+    invoke-virtual {p0, v0}, Lcom/android/gallery3d/photoeditor/actions/EffectAction;->notifyChanged(Lcom/android/gallery3d/photoeditor/filters/Filter;)V
 
     .line 42
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/DuotoneAction;->notifyOk()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/EffectAction;->notifyOk()V
 
     .line 43
     return-void

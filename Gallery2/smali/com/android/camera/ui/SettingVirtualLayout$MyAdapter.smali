@@ -203,21 +203,21 @@
 
     iget-object v6, p0, Lcom/android/camera/ui/SettingVirtualLayout$MyAdapter;->this$0:Lcom/android/camera/ui/SettingVirtualLayout;
 
-    invoke-virtual {v5, v6}, Landroid/widget/RadioButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v5, v6}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 98
     iget-object v5, v1, Lcom/android/camera/ui/SettingVirtualLayout$ViewHolder;->mRadio2:Landroid/widget/RadioButton;
 
     iget-object v6, p0, Lcom/android/camera/ui/SettingVirtualLayout$MyAdapter;->this$0:Lcom/android/camera/ui/SettingVirtualLayout;
 
-    invoke-virtual {v5, v6}, Landroid/widget/RadioButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v5, v6}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 99
     iget-object v5, v1, Lcom/android/camera/ui/SettingVirtualLayout$ViewHolder;->mRadio3:Landroid/widget/RadioButton;
 
     iget-object v6, p0, Lcom/android/camera/ui/SettingVirtualLayout$MyAdapter;->this$0:Lcom/android/camera/ui/SettingVirtualLayout;
 
-    invoke-virtual {v5, v6}, Landroid/widget/RadioButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v5, v6}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 100
     invoke-virtual {p2, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
@@ -240,7 +240,7 @@
     .line 106
     iget-object v5, v1, Lcom/android/camera/ui/SettingVirtualLayout$ViewHolder;->mTitle:Landroid/widget/TextView;
 
-    invoke-virtual {v3}, Lcom/android/camera/ListPreference;->getTitle()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/android/camera/CameraPreference;->getTitle()Ljava/lang/String;
 
     move-result-object v6
 
@@ -284,17 +284,17 @@
     .line 110
     iget-object v5, v1, Lcom/android/camera/ui/SettingVirtualLayout$ViewHolder;->mRadio1:Landroid/widget/RadioButton;
 
-    invoke-virtual {v5, v8}, Landroid/widget/RadioButton;->setChecked(Z)V
+    invoke-virtual {v5, v8}, Landroid/widget/CompoundButton;->setChecked(Z)V
 
     .line 111
     iget-object v5, v1, Lcom/android/camera/ui/SettingVirtualLayout$ViewHolder;->mRadio2:Landroid/widget/RadioButton;
 
-    invoke-virtual {v5, v8}, Landroid/widget/RadioButton;->setChecked(Z)V
+    invoke-virtual {v5, v8}, Landroid/widget/CompoundButton;->setChecked(Z)V
 
     .line 112
     iget-object v5, v1, Lcom/android/camera/ui/SettingVirtualLayout$ViewHolder;->mRadio3:Landroid/widget/RadioButton;
 
-    invoke-virtual {v5, v8}, Landroid/widget/RadioButton;->setChecked(Z)V
+    invoke-virtual {v5, v8}, Landroid/widget/CompoundButton;->setChecked(Z)V
 
     .line 113
     invoke-virtual {v3}, Lcom/android/camera/ListPreference;->getOverrideValue()Ljava/lang/String;
@@ -371,23 +371,23 @@
     :pswitch_0
     iget-object v5, v1, Lcom/android/camera/ui/SettingVirtualLayout$ViewHolder;->mRadio1:Landroid/widget/RadioButton;
 
-    invoke-virtual {v5, v9}, Landroid/widget/RadioButton;->setChecked(Z)V
+    invoke-virtual {v5, v9}, Landroid/widget/CompoundButton;->setChecked(Z)V
 
     .line 131
     :goto_1
     iget-object v5, v1, Lcom/android/camera/ui/SettingVirtualLayout$ViewHolder;->mRadio1:Landroid/widget/RadioButton;
 
-    invoke-virtual {v5, v1}, Landroid/widget/RadioButton;->setTag(Ljava/lang/Object;)V
+    invoke-virtual {v5, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     .line 132
     iget-object v5, v1, Lcom/android/camera/ui/SettingVirtualLayout$ViewHolder;->mRadio2:Landroid/widget/RadioButton;
 
-    invoke-virtual {v5, v1}, Landroid/widget/RadioButton;->setTag(Ljava/lang/Object;)V
+    invoke-virtual {v5, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     .line 133
     iget-object v5, v1, Lcom/android/camera/ui/SettingVirtualLayout$ViewHolder;->mRadio3:Landroid/widget/RadioButton;
 
-    invoke-virtual {v5, v1}, Landroid/widget/RadioButton;->setTag(Ljava/lang/Object;)V
+    invoke-virtual {v5, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     .line 134
     iget-object v5, p0, Lcom/android/camera/ui/SettingVirtualLayout$MyAdapter;->this$0:Lcom/android/camera/ui/SettingVirtualLayout;
@@ -407,17 +407,17 @@
     .local v0, enabled:Z
     iget-object v5, v1, Lcom/android/camera/ui/SettingVirtualLayout$ViewHolder;->mRadio1:Landroid/widget/RadioButton;
 
-    invoke-virtual {v5, v0}, Landroid/widget/RadioButton;->setEnabled(Z)V
+    invoke-virtual {v5, v0}, Landroid/widget/TextView;->setEnabled(Z)V
 
     .line 136
     iget-object v5, v1, Lcom/android/camera/ui/SettingVirtualLayout$ViewHolder;->mRadio2:Landroid/widget/RadioButton;
 
-    invoke-virtual {v5, v0}, Landroid/widget/RadioButton;->setEnabled(Z)V
+    invoke-virtual {v5, v0}, Landroid/widget/TextView;->setEnabled(Z)V
 
     .line 137
     iget-object v5, v1, Lcom/android/camera/ui/SettingVirtualLayout$ViewHolder;->mRadio3:Landroid/widget/RadioButton;
 
-    invoke-virtual {v5, v0}, Landroid/widget/RadioButton;->setEnabled(Z)V
+    invoke-virtual {v5, v0}, Landroid/widget/TextView;->setEnabled(Z)V
 
     .line 139
     return-object p2
@@ -427,7 +427,7 @@
     :pswitch_1
     iget-object v5, v1, Lcom/android/camera/ui/SettingVirtualLayout$ViewHolder;->mRadio2:Landroid/widget/RadioButton;
 
-    invoke-virtual {v5, v9}, Landroid/widget/RadioButton;->setChecked(Z)V
+    invoke-virtual {v5, v9}, Landroid/widget/CompoundButton;->setChecked(Z)V
 
     goto :goto_1
 
@@ -435,7 +435,7 @@
     :pswitch_2
     iget-object v5, v1, Lcom/android/camera/ui/SettingVirtualLayout$ViewHolder;->mRadio3:Landroid/widget/RadioButton;
 
-    invoke-virtual {v5, v9}, Landroid/widget/RadioButton;->setChecked(Z)V
+    invoke-virtual {v5, v9}, Landroid/widget/CompoundButton;->setChecked(Z)V
 
     goto :goto_1
 

@@ -66,7 +66,7 @@
     .line 142
     sget-object v0, Landroid/os/FileObserver;->s_observerThread:Landroid/os/FileObserver$ObserverThread;
 
-    invoke-virtual {v0}, Landroid/os/FileObserver$ObserverThread;->start()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     .line 143
     return-void
@@ -93,7 +93,7 @@
 
     .prologue
     .line 165
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 166
     iput-object p1, p0, Landroid/os/FileObserver;->m_path:Ljava/lang/String;

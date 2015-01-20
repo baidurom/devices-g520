@@ -73,7 +73,7 @@
 
     .prologue
     .line 47
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 48
     new-instance v0, Ljava/util/HashMap;
@@ -103,7 +103,7 @@
 
     .prologue
     .line 52
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 53
     if-eqz p1, :cond_1
@@ -172,7 +172,7 @@
     .prologue
     .line 63
     .local p1, infos:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/net/wifi/p2p/wfd/WfdAutoConnectInfo;>;"
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 64
     new-instance v2, Ljava/util/HashMap;
@@ -444,7 +444,7 @@
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 101
-    invoke-virtual {v2}, Ljava/io/FileReader;->close()V
+    invoke-virtual {v2}, Ljava/io/InputStreamReader;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -597,7 +597,7 @@
     :cond_0
     iget-object v5, p0, Landroid/net/wifi/p2p/wfd/WfdAutoConnectInfoList;->sortedInfos:Ljava/util/TreeMap;
 
-    invoke-virtual {v5, v4}, Ljava/util/TreeMap;->putAll(Ljava/util/Map;)V
+    invoke-virtual {v5, v4}, Ljava/util/AbstractMap;->putAll(Ljava/util/Map;)V
 
     .line 153
     return-void
@@ -892,7 +892,7 @@
     .local v4, fw:Ljava/io/FileWriter;
     const-string v8, ""
 
-    invoke-virtual {v4, v8}, Ljava/io/FileWriter;->write(Ljava/lang/String;)V
+    invoke-virtual {v4, v8}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
     .line 121
     new-instance v2, Ljava/io/BufferedWriter;
@@ -976,7 +976,7 @@
 
     move-result-object v8
 
-    invoke-virtual {v2, v8}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
+    invoke-virtual {v2, v8}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
     .line 129
     invoke-virtual {v2}, Ljava/io/BufferedWriter;->newLine()V
@@ -1032,7 +1032,7 @@
     .restart local v7       #wfdFile:Ljava/io/File;
     :cond_2
     :try_start_1
-    invoke-virtual {v4}, Ljava/io/FileWriter;->close()V
+    invoke-virtual {v4}, Ljava/io/OutputStreamWriter;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 

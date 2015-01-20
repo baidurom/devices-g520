@@ -3,9 +3,9 @@
 .source "PickerManager.java"
 
 # interfaces
-.implements Lcom/android/camera/ui/PickerButton$Listener;
-.implements Lcom/android/camera/Camera$OnPreferenceReadyListener;
 .implements Lcom/android/camera/Camera$OnParametersReadyListener;
+.implements Lcom/android/camera/Camera$OnPreferenceReadyListener;
+.implements Lcom/android/camera/ui/PickerButton$Listener;
 
 
 # annotations
@@ -216,7 +216,7 @@
     .line 42
     const v1, 0x7f040027
 
-    invoke-virtual {p0, v1}, Lcom/android/camera/manager/PickerManager;->inflate(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/camera/manager/ViewManager;->inflate(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -507,7 +507,7 @@
     if-eqz v3, :cond_0
 
     .line 134
-    invoke-virtual {p0}, Lcom/android/camera/manager/PickerManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v3
 
@@ -592,7 +592,7 @@
     if-eqz v3, :cond_2
 
     .line 147
-    invoke-virtual {p0}, Lcom/android/camera/manager/PickerManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v3
 
@@ -609,7 +609,7 @@
     move v3, v4
 
     :goto_0
-    invoke-virtual {v6, v3}, Lcom/android/camera/ui/PickerButton;->setVisibility(I)V
+    invoke-virtual {v6, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 150
     .end local v2           #visible:Z
@@ -619,7 +619,7 @@
     if-eqz v3, :cond_3
 
     .line 151
-    invoke-virtual {p0}, Lcom/android/camera/manager/PickerManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v3
 
@@ -634,7 +634,7 @@
     if-eqz v2, :cond_5
 
     :goto_1
-    invoke-virtual {v3, v4}, Lcom/android/camera/ui/PickerButton;->setVisibility(I)V
+    invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 154
     .end local v2           #visible:Z
@@ -725,12 +725,12 @@
     .line 167
     iget-object v0, p0, Lcom/android/camera/manager/PickerManager;->mFlashPicker:Lcom/android/camera/ui/PickerButton;
 
-    invoke-virtual {v0, p1}, Lcom/android/camera/ui/PickerButton;->setEnabled(Z)V
+    invoke-virtual {v0, p1}, Lcom/android/camera/ui/TwoStateImageView;->setEnabled(Z)V
 
     .line 168
     iget-object v0, p0, Lcom/android/camera/manager/PickerManager;->mFlashPicker:Lcom/android/camera/ui/PickerButton;
 
-    invoke-virtual {v0, p1}, Lcom/android/camera/ui/PickerButton;->setClickable(Z)V
+    invoke-virtual {v0, p1}, Landroid/view/View;->setClickable(Z)V
 
     .line 170
     :cond_0
@@ -741,12 +741,12 @@
     .line 171
     iget-object v0, p0, Lcom/android/camera/manager/PickerManager;->mCameraPicker:Lcom/android/camera/ui/PickerButton;
 
-    invoke-virtual {v0, p1}, Lcom/android/camera/ui/PickerButton;->setEnabled(Z)V
+    invoke-virtual {v0, p1}, Lcom/android/camera/ui/TwoStateImageView;->setEnabled(Z)V
 
     .line 172
     iget-object v0, p0, Lcom/android/camera/manager/PickerManager;->mCameraPicker:Lcom/android/camera/ui/PickerButton;
 
-    invoke-virtual {v0, p1}, Lcom/android/camera/ui/PickerButton;->setClickable(Z)V
+    invoke-virtual {v0, p1}, Landroid/view/View;->setClickable(Z)V
 
     .line 174
     :cond_1
@@ -757,12 +757,12 @@
     .line 175
     iget-object v0, p0, Lcom/android/camera/manager/PickerManager;->mStereoPicker:Lcom/android/camera/ui/PickerButton;
 
-    invoke-virtual {v0, p1}, Lcom/android/camera/ui/PickerButton;->setEnabled(Z)V
+    invoke-virtual {v0, p1}, Lcom/android/camera/ui/TwoStateImageView;->setEnabled(Z)V
 
     .line 176
     iget-object v0, p0, Lcom/android/camera/manager/PickerManager;->mStereoPicker:Lcom/android/camera/ui/PickerButton;
 
-    invoke-virtual {v0, p1}, Lcom/android/camera/ui/PickerButton;->setClickable(Z)V
+    invoke-virtual {v0, p1}, Landroid/view/View;->setClickable(Z)V
 
     .line 179
     :cond_2

@@ -104,7 +104,7 @@
     .line 323
     sget-object v1, Lcom/mediatek/bluetooth/BluetoothShareGatewayActivity;->sIntent:Landroid/content/Intent;
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/bluetooth/BluetoothShareGatewayActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
     .line 325
     return-void
@@ -153,7 +153,7 @@
     invoke-virtual {v0, v2}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
     .line 285
-    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/BluetoothShareGatewayActivity;->sendBroadcast(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 286
     const-string v3, "BluetoothShareGatewayActivity"
@@ -213,7 +213,7 @@
     invoke-virtual {v1, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 300
-    invoke-virtual {p0, v1}, Lcom/mediatek/bluetooth/BluetoothShareGatewayActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
     .line 301
     return-void
@@ -256,7 +256,7 @@
 
     .line 273
     :cond_1
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/BluetoothShareGatewayActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 .end method
@@ -266,7 +266,7 @@
 
     .prologue
     .line 90
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/BluetoothShareGatewayActivity;->isResumed()Z
+    invoke-virtual {p0}, Landroid/app/Activity;->isResumed()Z
 
     move-result v0
 
@@ -303,7 +303,7 @@
     sput-boolean v11, Lcom/mediatek/bluetooth/BluetoothShareGatewayActivity;->sReentry:Z
 
     .line 102
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/BluetoothShareGatewayActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v3
 
@@ -445,7 +445,7 @@
     invoke-static {v8, v9}, Lcom/mediatek/xlog/Xlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 150
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/BluetoothShareGatewayActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 213
     :goto_2
@@ -681,7 +681,7 @@
     invoke-direct {p0, v4}, Lcom/mediatek/bluetooth/BluetoothShareGatewayActivity;->profileDispatcher(Landroid/bluetooth/BluetoothDevice;)V
 
     .line 165
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/BluetoothShareGatewayActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto/16 :goto_2
 
@@ -710,7 +710,7 @@
 
     .line 172
     .local v2, in:Landroid/content/Intent;
-    invoke-virtual {p0, v2, v12}, Lcom/mediatek/bluetooth/BluetoothShareGatewayActivity;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v2, v12}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
 
     goto/16 :goto_2
 
@@ -806,14 +806,14 @@
 
     .line 207
     :goto_4
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/BluetoothShareGatewayActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto/16 :goto_2
 
     .line 183
     .end local v4           #remoteDevice:Landroid/bluetooth/BluetoothDevice;
     :cond_c
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/BluetoothShareGatewayActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto/16 :goto_2
 
@@ -850,7 +850,7 @@
     invoke-static {v8, v9}, Lcom/mediatek/xlog/Xlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 211
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/BluetoothShareGatewayActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto/16 :goto_2
 .end method
@@ -918,7 +918,7 @@
     invoke-static {v0, v1}, Lcom/mediatek/xlog/Xlog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 234
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/BluetoothShareGatewayActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 236
     :cond_0

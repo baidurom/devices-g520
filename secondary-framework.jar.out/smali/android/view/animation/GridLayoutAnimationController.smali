@@ -157,7 +157,7 @@
 
     .prologue
     .line 346
-    invoke-virtual {p0}, Landroid/view/animation/GridLayoutAnimationController;->getOrder()I
+    invoke-virtual {p0}, Landroid/view/animation/LayoutAnimationController;->getOrder()I
 
     move-result v2
 
@@ -256,7 +256,7 @@
 
     .prologue
     .line 372
-    invoke-virtual {p0}, Landroid/view/animation/GridLayoutAnimationController;->getOrder()I
+    invoke-virtual {p0}, Landroid/view/animation/LayoutAnimationController;->getOrder()I
 
     move-result v2
 

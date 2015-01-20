@@ -328,7 +328,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/adp/OppManager$OppcTaskTransferThread;->getName()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Thread;->getName()Ljava/lang/String;
 
     move-result-object v1
 
@@ -361,7 +361,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/adp/OppManager$OppcTaskTransferThread;->getName()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Thread;->getName()Ljava/lang/String;
 
     move-result-object v1
 

@@ -81,7 +81,7 @@
 
     .prologue
     .line 47
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 48
     new-instance v0, Ljava/util/LinkedList;
@@ -140,7 +140,7 @@
     .line 134
     sget-object v1, Landroid/webkit/ByteArrayBuilder;->sPool:Ljava/util/LinkedList;
 
-    invoke-virtual {v1}, Ljava/util/LinkedList;->isEmpty()Z
+    invoke-virtual {v1}, Ljava/util/AbstractCollection;->isEmpty()Z
 
     move-result v1
 
@@ -155,7 +155,7 @@
 
     check-cast v1, Ljava/lang/ref/SoftReference;
 
-    invoke-virtual {v1}, Ljava/lang/ref/SoftReference;->get()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -269,7 +269,7 @@
     .local v1, c:Landroid/webkit/ByteArrayBuilder$Chunk;
     iget-object v2, p0, Landroid/webkit/ByteArrayBuilder;->mChunks:Ljava/util/LinkedList;
 
-    invoke-virtual {v2}, Ljava/util/LinkedList;->isEmpty()Z
+    invoke-virtual {v2}, Ljava/util/AbstractCollection;->isEmpty()Z
 
     move-result v2
 
@@ -554,7 +554,7 @@
     :try_start_0
     iget-object v0, p0, Landroid/webkit/ByteArrayBuilder;->mChunks:Ljava/util/LinkedList;
 
-    invoke-virtual {v0}, Ljava/util/LinkedList;->isEmpty()Z
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->isEmpty()Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -603,7 +603,7 @@
     :try_start_0
     iget-object v0, p0, Landroid/webkit/ByteArrayBuilder;->mChunks:Ljava/util/LinkedList;
 
-    invoke-virtual {v0}, Ljava/util/LinkedList;->isEmpty()Z
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->isEmpty()Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

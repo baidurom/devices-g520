@@ -90,7 +90,7 @@
     sparse-switch p1, :sswitch_data_0
 
     .line 135
-    invoke-virtual {p0, p1}, Lcom/android/internal/telephony/gsm/SIMFileHandler;->getCommonIccEFPath(I)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lcom/android/internal/telephony/IccFileHandler;->getCommonIccEFPath(I)Ljava/lang/String;
 
     move-result-object v1
 

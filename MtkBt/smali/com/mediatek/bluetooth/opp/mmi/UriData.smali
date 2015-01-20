@@ -20,7 +20,7 @@
 
     .prologue
     .line 50
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 52
     iput-object p1, p0, Lcom/mediatek/bluetooth/opp/mmi/UriData;->mUri:Landroid/net/Uri;

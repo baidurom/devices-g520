@@ -35,7 +35,7 @@
 
     iput p2, p0, Lcom/android/internal/telephony/CallManager$2;->val$value:I
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -74,10 +74,10 @@
 
     .line 2640
     .local v3, fw:Ljava/io/FileWriter;
-    invoke-virtual {v3, v5}, Ljava/io/FileWriter;->write(Ljava/lang/String;)V
+    invoke-virtual {v3, v5}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
     .line 2641
-    invoke-virtual {v3}, Ljava/io/FileWriter;->close()V
+    invoke-virtual {v3}, Ljava/io/OutputStreamWriter;->close()V
 
     .line 2642
     const-string v7, "CallManager"
@@ -133,10 +133,10 @@
 
     .line 2652
     .local v4, fw2:Ljava/io/FileWriter;
-    invoke-virtual {v4, v6}, Ljava/io/FileWriter;->write(Ljava/lang/String;)V
+    invoke-virtual {v4, v6}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
     .line 2653
-    invoke-virtual {v4}, Ljava/io/FileWriter;->close()V
+    invoke-virtual {v4}, Ljava/io/OutputStreamWriter;->close()V
 
     .line 2654
     const-string v7, "CallManager"

@@ -56,7 +56,7 @@
 
     invoke-direct {v0, p0}, Lcom/android/gallery3d/photoeditor/Toolbar$1;-><init>(Lcom/android/gallery3d/photoeditor/Toolbar;)V
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/photoeditor/Toolbar;->setOnHierarchyChangeListener(Landroid/view/ViewGroup$OnHierarchyChangeListener;)V
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->setOnHierarchyChangeListener(Landroid/view/ViewGroup$OnHierarchyChangeListener;)V
 
     .line 64
     new-instance v0, Lcom/android/gallery3d/photoeditor/Toolbar$ToolbarIdleHandler;
@@ -135,7 +135,7 @@
     invoke-virtual {v0}, Lcom/android/gallery3d/photoeditor/Toolbar$ToolbarIdleHandler;->killIdle()V
 
     .line 95
-    invoke-super {p0, p1}, Landroid/widget/RelativeLayout;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
+    invoke-super {p0, p1}, Landroid/view/ViewGroup;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
@@ -154,7 +154,7 @@
     .line 71
     new-instance v0, Lcom/android/gallery3d/photoeditor/SpinnerProgressDialog;
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/Toolbar;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -207,7 +207,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/Toolbar;->getAlpha()F
+    invoke-virtual {p0}, Landroid/view/View;->getAlpha()F
 
     move-result v2
 
@@ -229,7 +229,7 @@
     .line 172
     iget-object v1, p0, Lcom/android/gallery3d/photoeditor/Toolbar;->idleHandler:Lcom/android/gallery3d/photoeditor/Toolbar$ToolbarIdleHandler;
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/Toolbar;->getAlpha()F
+    invoke-virtual {p0}, Landroid/view/View;->getAlpha()F
 
     move-result v0
 

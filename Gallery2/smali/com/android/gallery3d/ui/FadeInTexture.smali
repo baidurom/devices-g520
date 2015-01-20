@@ -43,7 +43,7 @@
 
     .prologue
     .line 34
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/FadeInTexture;->isAnimating()Z
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/FadeTexture;->isAnimating()Z
 
     move-result v0
 
@@ -54,7 +54,7 @@
 
     iget v2, p0, Lcom/android/gallery3d/ui/FadeInTexture;->mColor:I
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/FadeInTexture;->getRatio()F
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/FadeTexture;->getRatio()F
 
     move-result v3
 

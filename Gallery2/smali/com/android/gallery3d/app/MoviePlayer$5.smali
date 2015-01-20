@@ -30,7 +30,7 @@
     .line 182
     iput-object p1, p0, Lcom/android/gallery3d/app/MoviePlayer$5;->this$0:Lcom/android/gallery3d/app/MoviePlayer;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -51,7 +51,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/mediatek/gallery3d/video/MTKVideoView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/view/SurfaceView;->setVisibility(I)V
 
     .line 186
     return-void

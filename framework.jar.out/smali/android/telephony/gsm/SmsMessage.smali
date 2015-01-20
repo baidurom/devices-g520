@@ -92,7 +92,7 @@
 
     .prologue
     .line 170
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 171
     iput-object p1, p0, Landroid/telephony/gsm/SmsMessage;->mWrappedSmsMessage:Lcom/android/internal/telephony/SmsMessageBase;
@@ -576,7 +576,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/telephony/SmsMessage$MessageClass;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v0
 

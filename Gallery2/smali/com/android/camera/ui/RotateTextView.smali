@@ -197,38 +197,38 @@
 
     .line 93
     :goto_1
-    invoke-virtual {p0}, Lcom/android/camera/ui/RotateTextView;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     .line 99
     .end local v1           #degree:I
     .end local v6           #time:J
     :cond_0
     :goto_2
-    invoke-virtual {p0}, Lcom/android/camera/ui/RotateTextView;->getPaddingLeft()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
 
     move-result v4
 
     .line 100
     .local v4, left:I
-    invoke-virtual {p0}, Lcom/android/camera/ui/RotateTextView;->getPaddingTop()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
 
     move-result v8
 
     .line 101
     .local v8, top:I
-    invoke-virtual {p0}, Lcom/android/camera/ui/RotateTextView;->getPaddingRight()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
 
     move-result v5
 
     .line 102
     .local v5, right:I
-    invoke-virtual {p0}, Lcom/android/camera/ui/RotateTextView;->getPaddingBottom()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
 
     move-result v0
 
     .line 103
     .local v0, bottom:I
-    invoke-virtual {p0}, Lcom/android/camera/ui/RotateTextView;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v10
 
@@ -238,7 +238,7 @@
 
     .line 104
     .local v9, width:I
-    invoke-virtual {p0}, Lcom/android/camera/ui/RotateTextView;->getHeight()I
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result v10
 
@@ -345,7 +345,7 @@
 
     .prologue
     .line 120
-    invoke-virtual {p0}, Lcom/android/camera/ui/RotateTextView;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -452,7 +452,7 @@
     iput-wide v1, p0, Lcom/android/camera/ui/RotateTextView;->mAnimationEndTime:J
 
     .line 77
-    invoke-virtual {p0}, Lcom/android/camera/ui/RotateTextView;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     goto :goto_1
 

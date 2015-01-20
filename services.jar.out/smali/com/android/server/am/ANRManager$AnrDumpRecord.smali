@@ -50,7 +50,7 @@
     .line 509
     iput-object p1, p0, Lcom/android/server/am/ANRManager$AnrDumpRecord;->this$0:Lcom/android/server/am/ANRManager;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 502
     const/4 v0, 0x0

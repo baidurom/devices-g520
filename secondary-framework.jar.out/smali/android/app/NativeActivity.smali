@@ -3,8 +3,8 @@
 .source "NativeActivity.java"
 
 # interfaces
-.implements Landroid/view/SurfaceHolder$Callback2;
 .implements Landroid/view/InputQueue$Callback;
+.implements Landroid/view/SurfaceHolder$Callback2;
 .implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 
 
@@ -201,7 +201,7 @@
     iput-boolean v1, p0, Landroid/app/NativeActivity;->mDispatchingUnhandledKey:Z
 
     .line 350
-    invoke-virtual {p0}, Landroid/app/NativeActivity;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v1
 
@@ -256,7 +256,7 @@
 
     iget-object v1, p0, Landroid/app/NativeActivity;->mNativeContentView:Landroid/app/NativeActivity$NativeContentView;
 
-    invoke-virtual {v1}, Landroid/app/NativeActivity$NativeContentView;->getWindowToken()Landroid/os/IBinder;
+    invoke-virtual {v1}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
 
     move-result-object v1
 
@@ -307,7 +307,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v1}, Landroid/app/NativeActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -329,7 +329,7 @@
     iput-object v1, v0, Landroid/app/NativeActivity;->mInputMethodCallback:Landroid/app/NativeActivity$InputMethodCallback;
 
     .line 152
-    invoke-virtual/range {p0 .. p0}, Landroid/app/NativeActivity;->getWindow()Landroid/view/Window;
+    invoke-virtual/range {p0 .. p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v1
 
@@ -338,7 +338,7 @@
     invoke-virtual {v1, v0}, Landroid/view/Window;->takeSurface(Landroid/view/SurfaceHolder$Callback2;)V
 
     .line 153
-    invoke-virtual/range {p0 .. p0}, Landroid/app/NativeActivity;->getWindow()Landroid/view/Window;
+    invoke-virtual/range {p0 .. p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v1
 
@@ -347,7 +347,7 @@
     invoke-virtual {v1, v0}, Landroid/view/Window;->takeInputQueue(Landroid/view/InputQueue$Callback;)V
 
     .line 154
-    invoke-virtual/range {p0 .. p0}, Landroid/app/NativeActivity;->getWindow()Landroid/view/Window;
+    invoke-virtual/range {p0 .. p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v1
 
@@ -356,7 +356,7 @@
     invoke-virtual {v1, v4}, Landroid/view/Window;->setFormat(I)V
 
     .line 155
-    invoke-virtual/range {p0 .. p0}, Landroid/app/NativeActivity;->getWindow()Landroid/view/Window;
+    invoke-virtual/range {p0 .. p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v1
 
@@ -391,21 +391,21 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v1}, Landroid/app/NativeActivity;->setContentView(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Landroid/app/Activity;->setContentView(Landroid/view/View;)V
 
     .line 162
     move-object/from16 v0, p0
 
     iget-object v1, v0, Landroid/app/NativeActivity;->mNativeContentView:Landroid/app/NativeActivity$NativeContentView;
 
-    invoke-virtual {v1}, Landroid/app/NativeActivity$NativeContentView;->requestFocus()Z
+    invoke-virtual {v1}, Landroid/view/View;->requestFocus()Z
 
     .line 163
     move-object/from16 v0, p0
 
     iget-object v1, v0, Landroid/app/NativeActivity;->mNativeContentView:Landroid/app/NativeActivity$NativeContentView;
 
-    invoke-virtual {v1}, Landroid/app/NativeActivity$NativeContentView;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+    invoke-virtual {v1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v1
 
@@ -415,11 +415,11 @@
 
     .line 166
     :try_start_0
-    invoke-virtual/range {p0 .. p0}, Landroid/app/NativeActivity;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual/range {p0 .. p0}, Landroid/content/ContextWrapper;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
-    invoke-virtual/range {p0 .. p0}, Landroid/app/NativeActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual/range {p0 .. p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v4
 
@@ -435,12 +435,12 @@
 
     .line 168
     .local v11, ai:Landroid/content/pm/ActivityInfo;
-    iget-object v1, v11, Landroid/content/pm/ActivityInfo;->metaData:Landroid/os/Bundle;
+    iget-object v1, v11, Landroid/content/pm/PackageItemInfo;->metaData:Landroid/os/Bundle;
 
     if-eqz v1, :cond_1
 
     .line 169
-    iget-object v1, v11, Landroid/content/pm/ActivityInfo;->metaData:Landroid/os/Bundle;
+    iget-object v1, v11, Landroid/content/pm/PackageItemInfo;->metaData:Landroid/os/Bundle;
 
     const-string v4, "android.app.lib_name"
 
@@ -456,7 +456,7 @@
 
     .line 171
     :cond_0
-    iget-object v1, v11, Landroid/content/pm/ActivityInfo;->metaData:Landroid/os/Bundle;
+    iget-object v1, v11, Landroid/content/pm/PackageItemInfo;->metaData:Landroid/os/Bundle;
 
     const-string v4, "android.app.func_name"
 
@@ -572,7 +572,7 @@
 
     move-result-object v4
 
-    invoke-virtual/range {p0 .. p0}, Landroid/app/NativeActivity;->getFilesDir()Ljava/io/File;
+    invoke-virtual/range {p0 .. p0}, Landroid/content/ContextWrapper;->getFilesDir()Ljava/io/File;
 
     move-result-object v1
 
@@ -580,7 +580,7 @@
 
     move-result-object v5
 
-    invoke-virtual/range {p0 .. p0}, Landroid/app/NativeActivity;->getObbDir()Ljava/io/File;
+    invoke-virtual/range {p0 .. p0}, Landroid/content/ContextWrapper;->getObbDir()Ljava/io/File;
 
     move-result-object v1
 
@@ -588,7 +588,7 @@
 
     move-result-object v6
 
-    iget-object v1, v11, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
+    iget-object v1, v11, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/os/Environment;->getExternalStorageAppFilesDirectory(Ljava/lang/String;)Ljava/io/File;
 
@@ -600,7 +600,7 @@
 
     sget v8, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-virtual/range {p0 .. p0}, Landroid/app/NativeActivity;->getAssets()Landroid/content/res/AssetManager;
+    invoke-virtual/range {p0 .. p0}, Landroid/content/ContextWrapper;->getAssets()Landroid/content/res/AssetManager;
 
     move-result-object v9
 
@@ -732,12 +732,12 @@
 
     iget-object v1, p0, Landroid/app/NativeActivity;->mLocation:[I
 
-    invoke-virtual {v0, v1}, Landroid/app/NativeActivity$NativeContentView;->getLocationInWindow([I)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->getLocationInWindow([I)V
 
     .line 332
     iget-object v0, p0, Landroid/app/NativeActivity;->mNativeContentView:Landroid/app/NativeActivity$NativeContentView;
 
-    invoke-virtual {v0}, Landroid/app/NativeActivity$NativeContentView;->getWidth()I
+    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
     move-result v7
 
@@ -745,7 +745,7 @@
     .local v7, w:I
     iget-object v0, p0, Landroid/app/NativeActivity;->mNativeContentView:Landroid/app/NativeActivity$NativeContentView;
 
-    invoke-virtual {v0}, Landroid/app/NativeActivity$NativeContentView;->getHeight()I
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
 
     move-result v6
 
@@ -1039,7 +1039,7 @@
 
     .prologue
     .line 367
-    invoke-virtual {p0}, Landroid/app/NativeActivity;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
@@ -1055,7 +1055,7 @@
 
     .prologue
     .line 371
-    invoke-virtual {p0}, Landroid/app/NativeActivity;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 

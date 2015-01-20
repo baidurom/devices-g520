@@ -115,7 +115,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v3, v5, v2, v1, v0}, Lcom/android/gallery3d/ui/SlotView;->layout(IIII)V
+    invoke-virtual {v3, v5, v2, v1, v0}, Lcom/android/gallery3d/ui/GLView;->layout(IIII)V
 
     .line 192
     iget-object v3, p0, Lcom/android/gallery3d/app/AlbumPage$2;->mMatrix:[F
@@ -228,7 +228,7 @@
 
     .line 211
     :cond_0
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/AlbumPage$2;->invalidate()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->invalidate()V
 
     .line 213
     .end local v0           #more:Z

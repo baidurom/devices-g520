@@ -30,7 +30,7 @@
     .line 145
     iput-object p1, p0, Lcom/android/gallery3d/app/AlbumPage$1;->this$0:Lcom/android/gallery3d/app/AlbumPage;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -91,7 +91,7 @@
     .local v2, item:Lcom/android/gallery3d/data/MediaItem;
     if-eqz v2, :cond_0
 
-    invoke-virtual {v2}, Lcom/android/gallery3d/data/MediaItem;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {v2}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v4
 
@@ -145,7 +145,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/android/gallery3d/ui/SlotView;->bounds()Landroid/graphics/Rect;
+    invoke-virtual {v2}, Lcom/android/gallery3d/ui/GLView;->bounds()Landroid/graphics/Rect;
 
     move-result-object v0
 

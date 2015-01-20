@@ -39,7 +39,7 @@
     iput-object p1, p0, Lcom/android/camera/ui/SettingListLayout$SettingsListAdapter;->this$0:Lcom/android/camera/ui/SettingListLayout;
 
     .line 69
-    invoke-virtual {p1}, Lcom/android/camera/ui/SettingListLayout;->getContext()Landroid/content/Context;
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -53,7 +53,7 @@
     invoke-direct {p0, v0, v1, v2}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;ILjava/util/List;)V
 
     .line 70
-    invoke-virtual {p0}, Lcom/android/camera/ui/SettingListLayout$SettingsListAdapter;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/ArrayAdapter;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -386,7 +386,7 @@
     .line 139
     const/high16 v3, 0x7f0b
 
-    invoke-virtual {v1, v3}, Lcom/android/camera/ui/InLineSettingItem;->setId(I)V
+    invoke-virtual {v1, v3}, Landroid/view/View;->setId(I)V
 
     .line 142
     :cond_8

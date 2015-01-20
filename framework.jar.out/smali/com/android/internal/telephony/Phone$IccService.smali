@@ -244,7 +244,7 @@
     .line 154
     sget-object v0, Lcom/android/internal/telephony/Phone$IccService;->$VALUES:[Lcom/android/internal/telephony/Phone$IccService;
 
-    invoke-virtual {v0}, [Lcom/android/internal/telephony/Phone$IccService;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -266,7 +266,7 @@
     .local v0, nIndex:I
     sget-object v1, Lcom/android/internal/telephony/Phone$1;->$SwitchMap$com$android$internal$telephony$Phone$IccService:[I
 
-    invoke-virtual {p0}, Lcom/android/internal/telephony/Phone$IccService;->ordinal()I
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v2
 

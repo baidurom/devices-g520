@@ -74,7 +74,7 @@
 
     .prologue
     .line 95
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 96
     iput-object p1, p0, Lcom/android/internal/os/ZygoteConnection;->mSocket:Landroid/net/LocalSocket;
@@ -1000,7 +1000,7 @@
 
     .line 923
     :try_start_1
-    invoke-virtual {v6}, Ljava/io/DataInputStream;->close()V
+    invoke-virtual {v6}, Ljava/io/FilterInputStream;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
 
@@ -1043,7 +1043,7 @@
 
     .line 923
     :try_start_3
-    invoke-virtual {v6}, Ljava/io/DataInputStream;->close()V
+    invoke-virtual {v6}, Ljava/io/FilterInputStream;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
 
@@ -1062,7 +1062,7 @@
 
     .line 923
     :try_start_4
-    invoke-virtual {v6}, Ljava/io/DataInputStream;->close()V
+    invoke-virtual {v6}, Ljava/io/FilterInputStream;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_5
 
@@ -1609,7 +1609,7 @@
 
     move-result-object v12
 
-    invoke-virtual {v3}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v13
 

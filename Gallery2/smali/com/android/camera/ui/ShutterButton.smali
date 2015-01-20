@@ -31,7 +31,7 @@
     invoke-direct {p0, p1, p2}, Lcom/android/camera/ui/RotateImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 48
-    invoke-virtual {p0, p0}, Lcom/android/camera/ui/ShutterButton;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
+    invoke-virtual {p0, p0}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
     .line 49
     return-void
@@ -76,10 +76,10 @@
 
     .prologue
     .line 62
-    invoke-super {p0}, Lcom/android/camera/ui/RotateImageView;->drawableStateChanged()V
+    invoke-super {p0}, Landroid/widget/ImageView;->drawableStateChanged()V
 
     .line 63
-    invoke-virtual {p0}, Lcom/android/camera/ui/ShutterButton;->isPressed()Z
+    invoke-virtual {p0}, Landroid/view/View;->isPressed()Z
 
     move-result v0
 
@@ -97,7 +97,7 @@
 
     invoke-direct {v1, p0, v0}, Lcom/android/camera/ui/ShutterButton$1;-><init>(Lcom/android/camera/ui/ShutterButton;Z)V
 
-    invoke-virtual {p0, v1}, Lcom/android/camera/ui/ShutterButton;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {p0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
     .line 96
     :goto_0
@@ -124,13 +124,13 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/ShutterButton;->isEnabled()Z
+    invoke-virtual {p0}, Landroid/view/View;->isEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/ShutterButton;->isClickable()Z
+    invoke-virtual {p0}, Landroid/view/View;->isClickable()Z
 
     move-result v0
 
@@ -153,7 +153,7 @@
 
     .prologue
     .line 108
-    invoke-super {p0}, Lcom/android/camera/ui/RotateImageView;->performClick()Z
+    invoke-super {p0}, Landroid/view/View;->performClick()Z
 
     move-result v0
 
@@ -163,13 +163,13 @@
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/ShutterButton;->isEnabled()Z
+    invoke-virtual {p0}, Landroid/view/View;->isEnabled()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/ShutterButton;->isClickable()Z
+    invoke-virtual {p0}, Landroid/view/View;->isClickable()Z
 
     move-result v1
 

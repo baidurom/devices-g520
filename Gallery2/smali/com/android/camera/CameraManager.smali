@@ -137,7 +137,7 @@
 
     .prologue
     .line 114
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 60
     new-instance v1, Landroid/os/ConditionVariable;
@@ -155,7 +155,7 @@
 
     .line 116
     .local v0, ht:Landroid/os/HandlerThread;
-    invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     .line 117
     new-instance v1, Lcom/android/camera/CameraManager$CameraHandler;

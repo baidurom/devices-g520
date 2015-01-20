@@ -795,7 +795,7 @@
 
     .prologue
     .line 82
-    invoke-virtual {p0, p1}, Landroid/view/GLES20RecordingCanvas;->getDisplayList(I)I
+    invoke-virtual {p0, p1}, Landroid/view/GLES20Canvas;->getDisplayList(I)I
 
     move-result v0
 
@@ -844,7 +844,7 @@
     iput-object v0, p0, Landroid/view/GLES20RecordingCanvas;->mDisplayList:Landroid/view/GLES20DisplayList;
 
     .line 73
-    invoke-virtual {p0}, Landroid/view/GLES20RecordingCanvas;->resetDisplayListRenderer()V
+    invoke-virtual {p0}, Landroid/view/GLES20Canvas;->resetDisplayListRenderer()V
 
     .line 74
     sget-object v0, Landroid/view/GLES20RecordingCanvas;->sPool:Landroid/util/Pool;

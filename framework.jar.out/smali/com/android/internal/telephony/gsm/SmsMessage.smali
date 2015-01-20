@@ -4821,7 +4821,7 @@
     if-eqz v5, :cond_0
 
     .line 1274
-    invoke-virtual {p0}, Lcom/android/internal/telephony/gsm/SmsMessage;->parseMessageBody()V
+    invoke-virtual {p0}, Lcom/android/internal/telephony/SmsMessageBase;->parseMessageBody()V
 
     .line 1277
     :cond_0
@@ -5599,7 +5599,7 @@
     .line 979
     const-string v1, " "
 
-    invoke-virtual {p0}, Lcom/android/internal/telephony/gsm/SmsMessage;->getMessageBody()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/internal/telephony/SmsMessageBase;->getMessageBody()Ljava/lang/String;
 
     move-result-object v2
 

@@ -52,10 +52,10 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 53
-    invoke-virtual {p0, v5}, Lcom/android/stk/NotificationAlertActivity;->requestWindowFeature(I)Z
+    invoke-virtual {p0, v5}, Landroid/app/Activity;->requestWindowFeature(I)Z
 
     .line 54
-    invoke-virtual {p0}, Lcom/android/stk/NotificationAlertActivity;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v3
 
@@ -63,12 +63,12 @@
     .local v3, window:Landroid/view/Window;
     const v4, 0x7f030005
 
-    invoke-virtual {p0, v4}, Lcom/android/stk/NotificationAlertActivity;->setContentView(I)V
+    invoke-virtual {p0, v4}, Landroid/app/Activity;->setContentView(I)V
 
     .line 57
     const v4, 0x7f070010
 
-    invoke-virtual {p0, v4}, Lcom/android/stk/NotificationAlertActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v4}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -78,7 +78,7 @@
     .local v1, mMessageView:Landroid/widget/TextView;
     const v4, 0x7f070006
 
-    invoke-virtual {p0, v4}, Lcom/android/stk/NotificationAlertActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v4}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -88,7 +88,7 @@
     .local v2, okButton:Landroid/widget/Button;
     const v4, 0x7f070012
 
-    invoke-virtual {p0, v4}, Lcom/android/stk/NotificationAlertActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v4}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -113,17 +113,17 @@
     .line 72
     iget-object v4, p0, Lcom/android/stk/NotificationAlertActivity;->mTitle:Ljava/lang/String;
 
-    invoke-virtual {p0, v4}, Lcom/android/stk/NotificationAlertActivity;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v4}, Landroid/app/Activity;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 74
     iget-object v4, p0, Lcom/android/stk/NotificationAlertActivity;->mButtonClicked:Landroid/view/View$OnClickListener;
 
-    invoke-virtual {v2, v4}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v2, v4}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 75
     iget-object v4, p0, Lcom/android/stk/NotificationAlertActivity;->mButtonClicked:Landroid/view/View$OnClickListener;
 
-    invoke-virtual {v0, v4}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v4}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 77
     iget-object v4, p0, Lcom/android/stk/NotificationAlertActivity;->mNotificationMessage:Ljava/lang/String;

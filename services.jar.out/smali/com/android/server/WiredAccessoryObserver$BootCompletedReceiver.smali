@@ -110,7 +110,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lcom/android/server/WiredAccessoryObserver;->startObserving(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Landroid/os/UEventObserver;->startObserving(Ljava/lang/String;)V
 
     .line 165
     add-int/lit8 v0, v0, 0x1

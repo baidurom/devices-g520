@@ -132,7 +132,7 @@
     .line 68
     sget-object v0, Landroid/text/TextDirectionHeuristics$TriState;->$VALUES:[Landroid/text/TextDirectionHeuristics$TriState;
 
-    invoke-virtual {v0}, [Landroid/text/TextDirectionHeuristics$TriState;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

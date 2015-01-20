@@ -35,7 +35,7 @@
 
     iput-object p2, p0, Lcom/android/server/location/LocationBasedCountryDetector$3;->val$location:Landroid/location/Location;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -89,7 +89,7 @@
 
     iget-object v2, v2, Lcom/android/server/location/CountryDetectorBase;->mDetectedCountry:Landroid/location/Country;
 
-    invoke-virtual {v1, v2}, Lcom/android/server/location/LocationBasedCountryDetector;->notifyListener(Landroid/location/Country;)V
+    invoke-virtual {v1, v2}, Lcom/android/server/location/CountryDetectorBase;->notifyListener(Landroid/location/Country;)V
 
     .line 238
     iget-object v1, p0, Lcom/android/server/location/LocationBasedCountryDetector$3;->this$0:Lcom/android/server/location/LocationBasedCountryDetector;

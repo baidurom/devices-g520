@@ -63,7 +63,7 @@
 
     .prologue
     .line 38
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 29
     new-instance v0, Lcom/android/camera/WfdManagerLocal$1;
@@ -403,7 +403,7 @@
 
     iget-object v1, p0, Lcom/android/camera/WfdManagerLocal;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/Camera;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {v0, v1}, Landroid/content/ContextWrapper;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 101
     const/4 v0, 0x0
@@ -489,7 +489,7 @@
 
     iget-object v2, p0, Lcom/android/camera/WfdManagerLocal;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {v1, v2, v0}, Lcom/android/camera/Camera;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {v1, v2, v0}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 113
     invoke-virtual {p0}, Lcom/android/camera/WfdManagerLocal;->isWfdEnabled()Z

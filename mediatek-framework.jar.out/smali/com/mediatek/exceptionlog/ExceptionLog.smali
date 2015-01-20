@@ -40,7 +40,7 @@
 
     .prologue
     .line 63
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -197,7 +197,7 @@
 
     move-result-object v12
 
-    invoke-virtual {v11, v12}, Ljava/io/Writer;->write(Ljava/lang/String;)V
+    invoke-virtual {v11, v12}, Ljava/io/StringWriter;->write(Ljava/lang/String;)V
 
     .line 131
     move-object v0, v3
@@ -240,7 +240,7 @@
 
     move-result-object v12
 
-    invoke-virtual {v11, v12}, Ljava/io/Writer;->write(Ljava/lang/String;)V
+    invoke-virtual {v11, v12}, Ljava/io/StringWriter;->write(Ljava/lang/String;)V
 
     .line 131
     add-int/lit8 v6, v6, 0x1
@@ -264,7 +264,7 @@
     :cond_1
     const-string v12, "\n"
 
-    invoke-virtual {v11, v12}, Ljava/io/Writer;->write(Ljava/lang/String;)V
+    invoke-virtual {v11, v12}, Ljava/io/StringWriter;->write(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_1
@@ -303,7 +303,7 @@
     .line 142
     .end local v4           #err:Ljava/lang/OutOfMemoryError;
     :cond_2
-    invoke-virtual {v11}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {v11}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
 
     move-result-object v12
 

@@ -40,7 +40,7 @@
 
     iput-object p3, p0, Lcom/android/gallery3d/data/ClusterAlbumSet$1;->val$existingMediaItem:Ljava/util/HashMap;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -56,7 +56,7 @@
     .line 159
     iget-object v0, p0, Lcom/android/gallery3d/data/ClusterAlbumSet$1;->val$existing:Ljava/util/HashSet;
 
-    invoke-virtual {p2}, Lcom/android/gallery3d/data/MediaItem;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {p2}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v1
 
@@ -65,7 +65,7 @@
     .line 160
     iget-object v0, p0, Lcom/android/gallery3d/data/ClusterAlbumSet$1;->val$existingMediaItem:Ljava/util/HashMap;
 
-    invoke-virtual {p2}, Lcom/android/gallery3d/data/MediaItem;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {p2}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v1
 

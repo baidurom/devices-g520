@@ -156,7 +156,7 @@
 
     .prologue
     .line 89
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 52
     new-instance v0, Lcom/android/gallery3d/common/LruCache;
@@ -325,7 +325,7 @@
     .line 218
     iget-object v0, p0, Lcom/android/gallery3d/common/FileCache;->mDbHelper:Lcom/android/gallery3d/common/FileCache$DatabaseHelper;
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/common/FileCache$DatabaseHelper;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteOpenHelper;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -483,7 +483,7 @@
     .line 237
     iget-object v0, p0, Lcom/android/gallery3d/common/FileCache;->mDbHelper:Lcom/android/gallery3d/common/FileCache$DatabaseHelper;
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/common/FileCache$DatabaseHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -638,7 +638,7 @@
     :try_start_2
     iget-object v0, p0, Lcom/android/gallery3d/common/FileCache;->mDbHelper:Lcom/android/gallery3d/common/FileCache$DatabaseHelper;
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/common/FileCache$DatabaseHelper;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteOpenHelper;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -752,7 +752,7 @@
     .local v4, whereArgs:[Ljava/lang/String;
     iget-object v0, p0, Lcom/android/gallery3d/common/FileCache;->mDbHelper:Lcom/android/gallery3d/common/FileCache$DatabaseHelper;
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/common/FileCache$DatabaseHelper;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteOpenHelper;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -856,7 +856,7 @@
     .line 184
     iget-object v1, p0, Lcom/android/gallery3d/common/FileCache;->mDbHelper:Lcom/android/gallery3d/common/FileCache$DatabaseHelper;
 
-    invoke-virtual {v1}, Lcom/android/gallery3d/common/FileCache$DatabaseHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v1}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v1
 
@@ -891,7 +891,7 @@
     .line 96
     iget-object v0, p0, Lcom/android/gallery3d/common/FileCache;->mDbHelper:Lcom/android/gallery3d/common/FileCache$DatabaseHelper;
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/common/FileCache$DatabaseHelper;->close()V
+    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteOpenHelper;->close()V
 
     .line 97
     return-void
@@ -1074,7 +1074,7 @@
     :try_start_6
     iget-object v1, p0, Lcom/android/gallery3d/common/FileCache;->mDbHelper:Lcom/android/gallery3d/common/FileCache$DatabaseHelper;
 
-    invoke-virtual {v1}, Lcom/android/gallery3d/common/FileCache$DatabaseHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v1}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v1
 
@@ -1361,7 +1361,7 @@
 
     iget-object v3, p0, Lcom/android/gallery3d/common/FileCache;->mDbHelper:Lcom/android/gallery3d/common/FileCache$DatabaseHelper;
 
-    invoke-virtual {v3}, Lcom/android/gallery3d/common/FileCache$DatabaseHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v3}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v3
 

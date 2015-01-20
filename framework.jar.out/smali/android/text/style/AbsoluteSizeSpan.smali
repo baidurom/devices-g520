@@ -145,7 +145,7 @@
 
     mul-float/2addr v0, v1
 
-    invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setTextSize(F)V
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setTextSize(F)V
 
     .line 79
     :goto_0
@@ -157,7 +157,7 @@
 
     int-to-float v0, v0
 
-    invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setTextSize(F)V
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setTextSize(F)V
 
     goto :goto_0
 .end method
@@ -181,7 +181,7 @@
 
     mul-float/2addr v0, v1
 
-    invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setTextSize(F)V
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setTextSize(F)V
 
     .line 88
     :goto_0
@@ -193,7 +193,7 @@
 
     int-to-float v0, v0
 
-    invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setTextSize(F)V
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setTextSize(F)V
 
     goto :goto_0
 .end method

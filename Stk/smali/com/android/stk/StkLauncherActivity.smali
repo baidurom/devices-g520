@@ -48,10 +48,10 @@
 
     move-result-object v1
 
-    invoke-virtual {p0, v1}, Lcom/android/stk/StkLauncherActivity;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+    invoke-virtual {p0, v1}, Landroid/content/ContextWrapper;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
     .line 67
-    invoke-virtual {p0}, Lcom/android/stk/StkLauncherActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 68
     return-void

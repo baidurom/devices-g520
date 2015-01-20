@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 57
+    .line 64
     iput-object p1, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$1;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
 
     invoke-direct {p0}, Landroid/os/storage/StorageEventListener;-><init>()V
@@ -41,7 +41,7 @@
     .parameter "newState"
 
     .prologue
-    .line 60
+    .line 67
     const-string v0, "ExternalStorageFormatter"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -84,11 +84,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 63
+    .line 70
     iget-object v0, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$1;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
 
     invoke-virtual {v0}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->updateProgressState()V
 
-    .line 64
+    .line 71
     return-void
 .end method

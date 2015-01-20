@@ -170,7 +170,7 @@
 
     const v4, 0x7f050075
 
-    invoke-virtual {p0, v4}, Lcom/mediatek/bluetooth/pbap/BluetoothServerAuthorize;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -190,7 +190,7 @@
 
     aput-object p1, v5, v7
 
-    invoke-virtual {p0, v4, v5}, Lcom/mediatek/bluetooth/pbap/BluetoothServerAuthorize;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v4, v5}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -265,7 +265,7 @@
 
     .prologue
     .line 154
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/pbap/BluetoothServerAuthorize;->getLayoutInflater()Landroid/view/LayoutInflater;
+    invoke-virtual {p0}, Landroid/app/Activity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v0
 
@@ -326,7 +326,7 @@
 
     iget-boolean v1, p0, Lcom/mediatek/bluetooth/pbap/BluetoothServerAuthorize;->mAlwaysAllowedValue:Z
 
-    invoke-virtual {v0, v1}, Landroid/widget/CheckBox;->setChecked(Z)V
+    invoke-virtual {v0, v1}, Landroid/widget/CompoundButton;->setChecked(Z)V
 
     .line 162
     iget-object v0, p0, Lcom/mediatek/bluetooth/pbap/BluetoothServerAuthorize;->mAlwaysAllowed:Landroid/widget/CheckBox;
@@ -335,7 +335,7 @@
 
     invoke-direct {v1, p0}, Lcom/mediatek/bluetooth/pbap/BluetoothServerAuthorize$3;-><init>(Lcom/mediatek/bluetooth/pbap/BluetoothServerAuthorize;)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/CheckBox;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
+    invoke-virtual {v0, v1}, Landroid/widget/CompoundButton;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
     .line 173
     :cond_1
@@ -404,7 +404,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 140
-    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/pbap/BluetoothServerAuthorize;->sendBroadcast(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 141
     const/4 v1, 0x1
@@ -491,7 +491,7 @@
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 215
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/pbap/BluetoothServerAuthorize;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -598,12 +598,12 @@
     .line 237
     iget-object v4, p0, Lcom/mediatek/bluetooth/pbap/BluetoothServerAuthorize;->mInfoDialog:Landroid/app/AlertDialog;
 
-    invoke-virtual {v4, p0}, Landroid/app/AlertDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+    invoke-virtual {v4, p0}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
     .line 238
     iget-object v4, p0, Lcom/mediatek/bluetooth/pbap/BluetoothServerAuthorize;->mInfoDialog:Landroid/app/AlertDialog;
 
-    invoke-virtual {v4}, Landroid/app/AlertDialog;->show()V
+    invoke-virtual {v4}, Landroid/app/Dialog;->show()V
 
     .line 241
     if-lez v3, :cond_0
@@ -660,7 +660,7 @@
 
     .prologue
     .line 294
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/pbap/BluetoothServerAuthorize;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 295
     return-void
@@ -684,7 +684,7 @@
     :try_start_0
     iget-object v1, p0, Lcom/mediatek/bluetooth/pbap/BluetoothServerAuthorize;->mCancelReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/bluetooth/pbap/BluetoothServerAuthorize;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v1}, Landroid/content/ContextWrapper;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -697,7 +697,7 @@
     .line 265
     iget-object v1, p0, Lcom/mediatek/bluetooth/pbap/BluetoothServerAuthorize;->mInfoDialog:Landroid/app/AlertDialog;
 
-    invoke-virtual {v1}, Landroid/app/AlertDialog;->dismiss()V
+    invoke-virtual {v1}, Landroid/app/Dialog;->dismiss()V
 
     .line 266
     return-void
@@ -741,7 +741,7 @@
 
     iget-object v1, p0, Lcom/mediatek/bluetooth/pbap/BluetoothServerAuthorize;->mCancelFilter:Landroid/content/IntentFilter;
 
-    invoke-virtual {p0, v0, v1}, Lcom/mediatek/bluetooth/pbap/BluetoothServerAuthorize;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v0, v1}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 253
     :cond_0

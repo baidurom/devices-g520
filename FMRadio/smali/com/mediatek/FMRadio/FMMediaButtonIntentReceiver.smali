@@ -236,7 +236,7 @@
     .end local v5           #i:Landroid/content/Intent;
     :cond_2
     :goto_3
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMMediaButtonIntentReceiver;->abortBroadcast()V
+    invoke-virtual {p0}, Landroid/content/BroadcastReceiver;->abortBroadcast()V
 
     goto :goto_0
 

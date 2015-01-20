@@ -3,8 +3,8 @@
 .source "AlignmentSpan.java"
 
 # interfaces
-.implements Landroid/text/style/AlignmentSpan;
 .implements Landroid/text/ParcelableSpan;
+.implements Landroid/text/style/AlignmentSpan;
 
 
 # annotations
@@ -29,7 +29,7 @@
 
     .prologue
     .line 33
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 34
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -52,7 +52,7 @@
 
     .prologue
     .line 29
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 30
     iput-object p1, p0, Landroid/text/style/AlignmentSpan$Standard;->mAlignment:Landroid/text/Layout$Alignment;
@@ -102,7 +102,7 @@
     .line 46
     iget-object v0, p0, Landroid/text/style/AlignmentSpan$Standard;->mAlignment:Landroid/text/Layout$Alignment;
 
-    invoke-virtual {v0}, Landroid/text/Layout$Alignment;->name()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v0
 

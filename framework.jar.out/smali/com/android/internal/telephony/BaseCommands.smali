@@ -239,7 +239,7 @@
 
     .prologue
     .line 200
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 84
     sget-object v0, Lcom/android/internal/telephony/CommandsInterface$RadioState;->RADIO_UNAVAILABLE:Lcom/android/internal/telephony/CommandsInterface$RadioState;
@@ -264,7 +264,7 @@
     .line 88
     new-instance v0, Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/telephony/BaseCommands;->mStateMonitor:Ljava/lang/Object;
 
@@ -831,7 +831,7 @@
 
     .line 917
     .local v0, buffer:[B
-    invoke-virtual {v6, v0}, Ljava/io/FileInputStream;->read([B)I
+    invoke-virtual {v6, v0}, Ljava/io/InputStream;->read([B)I
 
     move-result v3
 

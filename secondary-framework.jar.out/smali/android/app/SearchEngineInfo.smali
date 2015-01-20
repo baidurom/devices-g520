@@ -95,7 +95,7 @@
     const/4 v9, 0x3
 
     .line 107
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 108
     iput-object p2, p0, Landroid/app/SearchEngineInfo;->mName:Ljava/lang/String;
@@ -401,7 +401,7 @@
 
     .prologue
     .line 259
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 260
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -428,7 +428,7 @@
 
     .prologue
     .line 99
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 100
     iput-object p1, p0, Landroid/app/SearchEngineInfo;->mName:Ljava/lang/String;

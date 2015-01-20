@@ -153,7 +153,7 @@
 
     .prologue
     .line 2179
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2184
     invoke-direct {p0, p1}, Landroid/os/Parcel;->init(I)V
@@ -4731,7 +4731,7 @@
 
     .line 1328
     :cond_6
-    invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v1
 

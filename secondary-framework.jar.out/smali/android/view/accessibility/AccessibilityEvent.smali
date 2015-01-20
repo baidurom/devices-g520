@@ -109,7 +109,7 @@
     .line 635
     new-instance v0, Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Landroid/view/accessibility/AccessibilityEvent;->sPoolLock:Ljava/lang/Object;
 
@@ -733,7 +733,7 @@
 
     .prologue
     .line 704
-    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityEvent;->enforceNotSealed()V
+    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityRecord;->enforceNotSealed()V
 
     .line 705
     iget-object v0, p0, Landroid/view/accessibility/AccessibilityEvent;->mRecords:Ljava/util/ArrayList;
@@ -1129,7 +1129,7 @@
 
     .prologue
     .line 810
-    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityEvent;->enforceNotSealed()V
+    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityRecord;->enforceNotSealed()V
 
     .line 811
     iput p1, p0, Landroid/view/accessibility/AccessibilityEvent;->mAction:I
@@ -1144,7 +1144,7 @@
 
     .prologue
     .line 756
-    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityEvent;->enforceNotSealed()V
+    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityRecord;->enforceNotSealed()V
 
     .line 757
     iput-wide p1, p0, Landroid/view/accessibility/AccessibilityEvent;->mEventTime:J
@@ -1159,7 +1159,7 @@
 
     .prologue
     .line 735
-    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityEvent;->enforceNotSealed()V
+    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityRecord;->enforceNotSealed()V
 
     .line 736
     iput p1, p0, Landroid/view/accessibility/AccessibilityEvent;->mEventType:I
@@ -1174,7 +1174,7 @@
 
     .prologue
     .line 789
-    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityEvent;->enforceNotSealed()V
+    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityRecord;->enforceNotSealed()V
 
     .line 790
     iput p1, p0, Landroid/view/accessibility/AccessibilityEvent;->mMovementGranularity:I
@@ -1189,7 +1189,7 @@
 
     .prologue
     .line 777
-    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityEvent;->enforceNotSealed()V
+    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityRecord;->enforceNotSealed()V
 
     .line 778
     iput-object p1, p0, Landroid/view/accessibility/AccessibilityEvent;->mPackageName:Ljava/lang/CharSequence;
@@ -1351,7 +1351,7 @@
     const/4 v4, 0x0
 
     .line 979
-    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityEvent;->isSealed()Z
+    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityRecord;->isSealed()Z
 
     move-result v3
 

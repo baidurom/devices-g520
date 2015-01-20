@@ -232,7 +232,7 @@
 
     .line 562
     :goto_0
-    invoke-virtual {p0}, Lcom/android/internal/telephony/cat/UdpChannel;->checkBufferSize()I
+    invoke-virtual {p0}, Lcom/android/internal/telephony/cat/Channel;->checkBufferSize()I
 
     move-result v1
 
@@ -278,7 +278,7 @@
 
     .line 559
     .local v0, e:Ljava/lang/Exception;
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 .end method
@@ -1097,7 +1097,7 @@
 
     .line 648
     .local v3, e:Ljava/lang/Exception;
-    invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
+    invoke-virtual {v3}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_1
 
@@ -1389,7 +1389,7 @@
 
     .line 686
     .local v6, e:Ljava/lang/Exception;
-    invoke-virtual {v6}, Ljava/lang/Exception;->printStackTrace()V
+    invoke-virtual {v6}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_1
 

@@ -3723,7 +3723,7 @@
 
     .prologue
     .line 1765
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1766
     iput-object p1, p0, Lcom/android/camera/SettingChecker;->mContext:Lcom/android/camera/Camera;
@@ -8377,7 +8377,7 @@
 
     .line 1430
     .local v10, mPreferences:Lcom/android/camera/ComboPreferences;
-    invoke-virtual {v3}, Lcom/android/camera/Camera;->getIntent()Landroid/content/Intent;
+    invoke-virtual {v3}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v9
 
@@ -9077,7 +9077,7 @@
 
     invoke-direct {v5, p0}, Lcom/android/camera/SettingChecker$1;-><init>(Lcom/android/camera/SettingChecker;)V
 
-    invoke-virtual {v4, v5}, Lcom/android/camera/Camera;->runOnUiThread(Ljava/lang/Runnable;)V
+    invoke-virtual {v4, v5}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
     .line 1842
     return-void

@@ -73,13 +73,13 @@
     invoke-virtual {v1, v6}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 146
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/Wallpaper;->getWallpaperDesiredMinimumWidth()I
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getWallpaperDesiredMinimumWidth()I
 
     move-result v5
 
     .line 147
     .local v5, width:I
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/Wallpaper;->getWallpaperDesiredMinimumHeight()I
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getWallpaperDesiredMinimumHeight()I
 
     move-result v0
 
@@ -91,7 +91,7 @@
 
     .line 149
     .local v2, size:Landroid/graphics/Point;
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/Wallpaper;->getWindowManager()Landroid/view/WindowManager;
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindowManager()Landroid/view/WindowManager;
 
     move-result-object v6
 
@@ -215,10 +215,10 @@
 
     .line 177
     :cond_1
-    invoke-virtual {p0, v1}, Lcom/android/gallery3d/app/Wallpaper;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
     .line 178
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/Wallpaper;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 179
     return v9
@@ -239,10 +239,10 @@
     if-eq p2, v0, :cond_1
 
     .line 123
-    invoke-virtual {p0, p2}, Lcom/android/gallery3d/app/Wallpaper;->setResult(I)V
+    invoke-virtual {p0, p2}, Landroid/app/Activity;->setResult(I)V
 
     .line 124
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/Wallpaper;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 133
     :cond_0
@@ -316,7 +316,7 @@
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
     .line 67
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/Wallpaper;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -398,7 +398,7 @@
 
     .line 88
     :cond_2
-    invoke-virtual {p0, v2, v10}, Lcom/android/gallery3d/app/Wallpaper;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v2, v10}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
 
     goto :goto_0
 
@@ -409,13 +409,13 @@
 
     .line 95
     :pswitch_1
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/Wallpaper;->getWallpaperDesiredMinimumWidth()I
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getWallpaperDesiredMinimumWidth()I
 
     move-result v6
 
     .line 96
     .local v6, width:I
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/Wallpaper;->getWallpaperDesiredMinimumHeight()I
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getWallpaperDesiredMinimumHeight()I
 
     move-result v0
 
@@ -427,7 +427,7 @@
 
     .line 98
     .local v3, size:Landroid/graphics/Point;
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/Wallpaper;->getWindowManager()Landroid/view/WindowManager;
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindowManager()Landroid/view/WindowManager;
 
     move-result-object v7
 
@@ -540,10 +540,10 @@
 
     .line 114
     .restart local v2       #request:Landroid/content/Intent;
-    invoke-virtual {p0, v2}, Lcom/android/gallery3d/app/Wallpaper;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v2}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
     .line 115
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/Wallpaper;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto/16 :goto_0
 

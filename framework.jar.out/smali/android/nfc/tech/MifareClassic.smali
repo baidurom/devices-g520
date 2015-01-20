@@ -317,7 +317,7 @@
     invoke-static {p1}, Landroid/nfc/tech/MifareClassic;->validateSector(I)V
 
     .line 371
-    invoke-virtual {p0}, Landroid/nfc/tech/MifareClassic;->checkConnected()V
+    invoke-virtual {p0}, Landroid/nfc/tech/BasicTagTechnology;->checkConnected()V
 
     .line 373
     const/16 v5, 0xc
@@ -371,7 +371,7 @@
     const/4 v5, 0x0
 
     :try_start_0
-    invoke-virtual {p0, v0, v5}, Landroid/nfc/tech/MifareClassic;->transceive([BZ)[B
+    invoke-virtual {p0, v0, v5}, Landroid/nfc/tech/BasicTagTechnology;->transceive([BZ)[B
     :try_end_0
     .catch Landroid/nfc/TagLostException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
@@ -686,7 +686,7 @@
     invoke-static {p2}, Landroid/nfc/tech/MifareClassic;->validateValueOperand(I)V
 
     .line 502
-    invoke-virtual {p0}, Landroid/nfc/tech/MifareClassic;->checkConnected()V
+    invoke-virtual {p0}, Landroid/nfc/tech/BasicTagTechnology;->checkConnected()V
 
     .line 504
     const/4 v1, 0x6
@@ -721,7 +721,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {p0, v1, v2}, Landroid/nfc/tech/MifareClassic;->transceive([BZ)[B
+    invoke-virtual {p0, v1, v2}, Landroid/nfc/tech/BasicTagTechnology;->transceive([BZ)[B
 
     .line 511
     return-void
@@ -770,7 +770,7 @@
 
     .prologue
     .line 584
-    invoke-virtual {p0}, Landroid/nfc/tech/MifareClassic;->getMaxTransceiveLengthInternal()I
+    invoke-virtual {p0}, Landroid/nfc/tech/BasicTagTechnology;->getMaxTransceiveLengthInternal()I
 
     move-result v0
 
@@ -918,7 +918,7 @@
     invoke-static {p2}, Landroid/nfc/tech/MifareClassic;->validateValueOperand(I)V
 
     .line 474
-    invoke-virtual {p0}, Landroid/nfc/tech/MifareClassic;->checkConnected()V
+    invoke-virtual {p0}, Landroid/nfc/tech/BasicTagTechnology;->checkConnected()V
 
     .line 476
     const/4 v1, 0x6
@@ -953,7 +953,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {p0, v1, v2}, Landroid/nfc/tech/MifareClassic;->transceive([BZ)[B
+    invoke-virtual {p0, v1, v2}, Landroid/nfc/tech/BasicTagTechnology;->transceive([BZ)[B
 
     .line 483
     return-void
@@ -997,7 +997,7 @@
     invoke-static {p1}, Landroid/nfc/tech/MifareClassic;->validateBlock(I)V
 
     .line 422
-    invoke-virtual {p0}, Landroid/nfc/tech/MifareClassic;->checkConnected()V
+    invoke-virtual {p0}, Landroid/nfc/tech/BasicTagTechnology;->checkConnected()V
 
     .line 424
     const/4 v1, 0x2
@@ -1016,7 +1016,7 @@
 
     .line 425
     .local v0, cmd:[B
-    invoke-virtual {p0, v0, v3}, Landroid/nfc/tech/MifareClassic;->transceive([BZ)[B
+    invoke-virtual {p0, v0, v3}, Landroid/nfc/tech/BasicTagTechnology;->transceive([BZ)[B
 
     move-result-object v1
 
@@ -1054,7 +1054,7 @@
     invoke-static {p1}, Landroid/nfc/tech/MifareClassic;->validateBlock(I)V
 
     .line 550
-    invoke-virtual {p0}, Landroid/nfc/tech/MifareClassic;->checkConnected()V
+    invoke-virtual {p0}, Landroid/nfc/tech/BasicTagTechnology;->checkConnected()V
 
     .line 552
     const/4 v1, 0x2
@@ -1073,7 +1073,7 @@
 
     .line 554
     .local v0, cmd:[B
-    invoke-virtual {p0, v0, v3}, Landroid/nfc/tech/MifareClassic;->transceive([BZ)[B
+    invoke-virtual {p0, v0, v3}, Landroid/nfc/tech/BasicTagTechnology;->transceive([BZ)[B
 
     .line 555
     return-void
@@ -1172,7 +1172,7 @@
     .line 576
     const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, v0}, Landroid/nfc/tech/MifareClassic;->transceive([BZ)[B
+    invoke-virtual {p0, p1, v0}, Landroid/nfc/tech/BasicTagTechnology;->transceive([BZ)[B
 
     move-result-object v0
 
@@ -1195,7 +1195,7 @@
     invoke-static {p1}, Landroid/nfc/tech/MifareClassic;->validateBlock(I)V
 
     .line 528
-    invoke-virtual {p0}, Landroid/nfc/tech/MifareClassic;->checkConnected()V
+    invoke-virtual {p0}, Landroid/nfc/tech/BasicTagTechnology;->checkConnected()V
 
     .line 530
     const/4 v1, 0x2
@@ -1214,7 +1214,7 @@
 
     .line 532
     .local v0, cmd:[B
-    invoke-virtual {p0, v0, v3}, Landroid/nfc/tech/MifareClassic;->transceive([BZ)[B
+    invoke-virtual {p0, v0, v3}, Landroid/nfc/tech/BasicTagTechnology;->transceive([BZ)[B
 
     .line 533
     return-void
@@ -1237,7 +1237,7 @@
     invoke-static {p1}, Landroid/nfc/tech/MifareClassic;->validateBlock(I)V
 
     .line 444
-    invoke-virtual {p0}, Landroid/nfc/tech/MifareClassic;->checkConnected()V
+    invoke-virtual {p0}, Landroid/nfc/tech/BasicTagTechnology;->checkConnected()V
 
     .line 445
     array-length v1, p2
@@ -1284,7 +1284,7 @@
     invoke-static {p2, v3, v0, v1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 454
-    invoke-virtual {p0, v0, v3}, Landroid/nfc/tech/MifareClassic;->transceive([BZ)[B
+    invoke-virtual {p0, v0, v3}, Landroid/nfc/tech/BasicTagTechnology;->transceive([BZ)[B
 
     .line 455
     return-void

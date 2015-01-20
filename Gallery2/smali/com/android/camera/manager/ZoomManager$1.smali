@@ -35,7 +35,7 @@
 
     iput p2, p0, Lcom/android/camera/manager/ZoomManager$1;->val$zoomValue:I
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -49,7 +49,7 @@
     .line 122
     iget-object v0, p0, Lcom/android/camera/manager/ZoomManager$1;->this$0:Lcom/android/camera/manager/ZoomManager;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/ZoomManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v0
 
@@ -61,7 +61,7 @@
 
     iget-object v0, p0, Lcom/android/camera/manager/ZoomManager$1;->this$0:Lcom/android/camera/manager/ZoomManager;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/ZoomManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v0
 
@@ -93,7 +93,7 @@
 
     iget-object v2, p0, Lcom/android/camera/manager/ZoomManager$1;->this$0:Lcom/android/camera/manager/ZoomManager;
 
-    invoke-virtual {v2}, Lcom/android/camera/manager/ZoomManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {v2}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v2
 
@@ -119,7 +119,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/camera/manager/ZoomManager$1;->this$0:Lcom/android/camera/manager/ZoomManager;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/ZoomManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v0
 
@@ -135,7 +135,7 @@
 
     iget-object v0, p0, Lcom/android/camera/manager/ZoomManager$1;->this$0:Lcom/android/camera/manager/ZoomManager;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/ZoomManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v0
 
@@ -154,7 +154,7 @@
     .line 129
     iget-object v0, p0, Lcom/android/camera/manager/ZoomManager$1;->this$0:Lcom/android/camera/manager/ZoomManager;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/ZoomManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v0
 
@@ -164,7 +164,7 @@
 
     iget-object v1, p0, Lcom/android/camera/manager/ZoomManager$1;->this$0:Lcom/android/camera/manager/ZoomManager;
 
-    invoke-virtual {v1}, Lcom/android/camera/manager/ZoomManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {v1}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v1
 

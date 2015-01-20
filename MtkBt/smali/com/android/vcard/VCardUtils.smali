@@ -716,7 +716,7 @@
 
     .prologue
     .line 862
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 863
     return-void
@@ -1652,7 +1652,7 @@
 
     .line 850
     .local v0, byteBuffer:Ljava/nio/ByteBuffer;
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->remaining()I
+    invoke-virtual {v0}, Ljava/nio/Buffer;->remaining()I
 
     move-result v4
 

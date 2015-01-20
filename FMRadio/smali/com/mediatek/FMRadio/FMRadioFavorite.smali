@@ -5,8 +5,8 @@
 # interfaces
 .implements Landroid/app/LoaderManager$LoaderCallbacks;
 .implements Lcom/mediatek/FMRadio/dialogs/AddFavoriteDialog$AddFavoriteListener;
-.implements Lcom/mediatek/FMRadio/dialogs/EditFavoriteDialog$EditFavoriteListener;
 .implements Lcom/mediatek/FMRadio/dialogs/DeleteFavoriteDialog$DeleteFavoriteListener;
+.implements Lcom/mediatek/FMRadio/dialogs/EditFavoriteDialog$EditFavoriteListener;
 
 
 # annotations
@@ -188,7 +188,7 @@
 
     .prologue
     .line 504
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRadioFavorite;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v4
 
@@ -211,7 +211,7 @@
 
     .line 509
     :cond_1
-    invoke-virtual {v1}, Lcom/mediatek/FMRadio/dialogs/AddFavoriteDialog;->getDialog()Landroid/app/Dialog;
+    invoke-virtual {v1}, Landroid/app/DialogFragment;->getDialog()Landroid/app/Dialog;
 
     move-result-object v0
 
@@ -271,7 +271,7 @@
     .line 531
     iget-object v4, p0, Lcom/mediatek/FMRadio/FMRadioFavorite;->mAdapter:Lcom/mediatek/FMRadio/FMRadioFavorite$ChannelListAdapter;
 
-    invoke-virtual {v4}, Lcom/mediatek/FMRadio/FMRadioFavorite$ChannelListAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v4}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
 
     goto :goto_0
 .end method
@@ -292,7 +292,7 @@
     .line 620
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioFavorite;->mAdapter:Lcom/mediatek/FMRadio/FMRadioFavorite$ChannelListAdapter;
 
-    invoke-virtual {v0}, Lcom/mediatek/FMRadio/FMRadioFavorite$ChannelListAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
 
     .line 621
     return-void
@@ -316,7 +316,7 @@
     .line 629
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioFavorite;->mAdapter:Lcom/mediatek/FMRadio/FMRadioFavorite$ChannelListAdapter;
 
-    invoke-virtual {v0}, Lcom/mediatek/FMRadio/FMRadioFavorite$ChannelListAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
 
     .line 630
     return-void
@@ -331,7 +331,7 @@
     const/4 v12, 0x2
 
     .line 538
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRadioFavorite;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v9
 
@@ -354,7 +354,7 @@
 
     .line 542
     :cond_1
-    invoke-virtual {v1}, Lcom/mediatek/FMRadio/dialogs/EditFavoriteDialog;->getDialog()Landroid/app/Dialog;
+    invoke-virtual {v1}, Landroid/app/DialogFragment;->getDialog()Landroid/app/Dialog;
 
     move-result-object v0
 
@@ -484,7 +484,7 @@
     .line 584
     iget-object v9, p0, Lcom/mediatek/FMRadio/FMRadioFavorite;->mAdapter:Lcom/mediatek/FMRadio/FMRadioFavorite$ChannelListAdapter;
 
-    invoke-virtual {v9}, Lcom/mediatek/FMRadio/FMRadioFavorite$ChannelListAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v9}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
 
     goto :goto_0
 
@@ -495,7 +495,7 @@
 
     .line 568
     .local v2, e:Ljava/lang/NumberFormatException;
-    invoke-virtual {v2}, Ljava/lang/NumberFormatException;->printStackTrace()V
+    invoke-virtual {v2}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_1
 
@@ -520,7 +520,7 @@
 
     .line 586
     :cond_5
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRadioFavorite;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v9
 
@@ -697,7 +697,7 @@
     :pswitch_3
     const/4 v4, 0x1
 
-    invoke-virtual {p0, v4}, Lcom/mediatek/FMRadio/FMRadioFavorite;->showDialog(I)V
+    invoke-virtual {p0, v4}, Landroid/app/Activity;->showDialog(I)V
 
     goto :goto_0
 
@@ -765,15 +765,15 @@
     .line 155
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioFavorite;->mBroadcastReceiver:Lcom/mediatek/FMRadio/FMRadioFavorite$FMBroadcastReceiver;
 
-    invoke-virtual {p0, v0, v8}, Lcom/mediatek/FMRadio/FMRadioFavorite;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v0, v8}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 158
     const/16 v0, 0xa
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/FMRadio/FMRadioFavorite;->setVolumeControlStream(I)V
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->setVolumeControlStream(I)V
 
     .line 159
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRadioFavorite;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
@@ -784,10 +784,10 @@
     .line 160
     const v0, 0x7f030002
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/FMRadio/FMRadioFavorite;->setContentView(I)V
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->setContentView(I)V
 
     .line 162
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRadioFavorite;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v6
 
@@ -801,7 +801,7 @@
     invoke-virtual {v6, v5}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
 
     .line 165
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRadioFavorite;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -872,7 +872,7 @@
     .line 179
     const v0, 0x7f06000b
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/FMRadio/FMRadioFavorite;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -883,7 +883,7 @@
     .line 180
     const v0, 0x7f06000c
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/FMRadio/FMRadioFavorite;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v7
 
@@ -893,7 +893,7 @@
     .local v7, emptyView:Landroid/widget/TextView;
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioFavorite;->mLvFavorites:Landroid/widget/ListView;
 
-    invoke-virtual {v0, v7}, Landroid/widget/ListView;->setEmptyView(Landroid/view/View;)V
+    invoke-virtual {v0, v7}, Landroid/widget/AdapterView;->setEmptyView(Landroid/view/View;)V
 
     .line 182
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioFavorite;->mLvFavorites:Landroid/widget/ListView;
@@ -903,7 +903,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 183
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRadioFavorite;->getLoaderManager()Landroid/app/LoaderManager;
+    invoke-virtual {p0}, Landroid/app/Activity;->getLoaderManager()Landroid/app/LoaderManager;
 
     move-result-object v0
 
@@ -916,7 +916,7 @@
 
     invoke-direct {v1, p0}, Lcom/mediatek/FMRadio/FMRadioFavorite$1;-><init>(Lcom/mediatek/FMRadio/FMRadioFavorite;)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
+    invoke-virtual {v0, v1}, Landroid/widget/AdapterView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 209
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioFavorite;->mLvFavorites:Landroid/widget/ListView;
@@ -925,7 +925,7 @@
 
     invoke-direct {v1, p0}, Lcom/mediatek/FMRadio/FMRadioFavorite$2;-><init>(Lcom/mediatek/FMRadio/FMRadioFavorite;)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnCreateContextMenuListener(Landroid/view/View$OnCreateContextMenuListener;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnCreateContextMenuListener(Landroid/view/View$OnCreateContextMenuListener;)V
 
     .line 240
     const-string v0, "FmRx/Favorite"
@@ -1050,7 +1050,7 @@
 
     .line 470
     .local v0, dialog:Landroid/app/AlertDialog;
-    invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
+    invoke-virtual {v0}, Landroid/app/Dialog;->show()V
 
     .line 490
     .end local v0           #dialog:Landroid/app/AlertDialog;
@@ -1209,7 +1209,7 @@
     .line 610
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioFavorite;->mBroadcastReceiver:Lcom/mediatek/FMRadio/FMRadioFavorite$FMBroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/FMRadio/FMRadioFavorite;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 611
     const/4 v0, 0x0
@@ -1249,7 +1249,7 @@
     .local p1, loader:Landroid/content/Loader;,"Landroid/content/Loader<Landroid/database/Cursor;>;"
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioFavorite;->mAdapter:Lcom/mediatek/FMRadio/FMRadioFavorite$ChannelListAdapter;
 
-    invoke-virtual {v0, p2}, Lcom/mediatek/FMRadio/FMRadioFavorite$ChannelListAdapter;->swapCursor(Landroid/database/Cursor;)Landroid/database/Cursor;
+    invoke-virtual {v0, p2}, Landroid/widget/SimpleCursorAdapter;->swapCursor(Landroid/database/Cursor;)Landroid/database/Cursor;
 
     .line 336
     return-void
@@ -1290,7 +1290,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/mediatek/FMRadio/FMRadioFavorite$ChannelListAdapter;->swapCursor(Landroid/database/Cursor;)Landroid/database/Cursor;
+    invoke-virtual {v0, v1}, Landroid/widget/SimpleCursorAdapter;->swapCursor(Landroid/database/Cursor;)Landroid/database/Cursor;
 
     .line 346
     return-void
@@ -1429,13 +1429,13 @@
 
     .line 419
     .local v0, fragment:Lcom/mediatek/FMRadio/dialogs/AddFavoriteDialog;
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRadioFavorite;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v1
 
     const-string v2, "AddFavorite"
 
-    invoke-virtual {v0, v1, v2}, Lcom/mediatek/FMRadio/dialogs/AddFavoriteDialog;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Landroid/app/DialogFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
     .line 421
     return-void
@@ -1452,13 +1452,13 @@
 
     .line 436
     .local v0, newFragment:Lcom/mediatek/FMRadio/dialogs/DeleteFavoriteDialog;
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRadioFavorite;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v1
 
     const-string v2, "DeleteFavorite"
 
-    invoke-virtual {v0, v1, v2}, Lcom/mediatek/FMRadio/dialogs/DeleteFavoriteDialog;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Landroid/app/DialogFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
     .line 437
     return-void
@@ -1479,13 +1479,13 @@
 
     .line 428
     .local v0, newFragment:Lcom/mediatek/FMRadio/dialogs/EditFavoriteDialog;
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRadioFavorite;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v1
 
     const-string v2, "EditFavorite"
 
-    invoke-virtual {v0, v1, v2}, Lcom/mediatek/FMRadio/dialogs/EditFavoriteDialog;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Landroid/app/DialogFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
     .line 429
     return-void

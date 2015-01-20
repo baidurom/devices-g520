@@ -90,7 +90,7 @@
     .local p0, this:Lcom/android/gallery3d/util/JobLimiter$JobWrapper;,"Lcom/android/gallery3d/util/JobLimiter$JobWrapper<TT;>;"
     .local p1, job:Lcom/android/gallery3d/util/ThreadPool$Job;,"Lcom/android/gallery3d/util/ThreadPool$Job<TT;>;"
     .local p2, listener:Lcom/android/gallery3d/util/FutureListener;,"Lcom/android/gallery3d/util/FutureListener<TT;>;"
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 42
     const/4 v0, 0x0

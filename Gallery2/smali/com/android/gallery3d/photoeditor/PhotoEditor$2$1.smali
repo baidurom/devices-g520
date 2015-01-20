@@ -35,7 +35,7 @@
 
     iput-object p2, p0, Lcom/android/gallery3d/photoeditor/PhotoEditor$2$1;->val$result:Landroid/graphics/Bitmap;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -75,7 +75,7 @@
     const/4 v0, 0x1
 
     :goto_0
-    invoke-virtual {v1, v0}, Lcom/android/gallery3d/photoeditor/EffectsBar;->setEnabled(Z)V
+    invoke-virtual {v1, v0}, Landroid/view/View;->setEnabled(Z)V
 
     .line 105
     return-void

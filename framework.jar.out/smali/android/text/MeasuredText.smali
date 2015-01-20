@@ -60,7 +60,7 @@
 
     .prologue
     .line 44
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 45
     new-instance v0, Landroid/text/TextPaint;
@@ -304,7 +304,7 @@
 
     move v10, v4
 
-    invoke-virtual/range {v2 .. v10}, Landroid/text/TextPaint;->getTextRunAdvances([CIIIII[FI)F
+    invoke-virtual/range {v2 .. v10}, Landroid/graphics/Paint;->getTextRunAdvances([CIIIII[FI)F
 
     move-result v21
 
@@ -393,7 +393,7 @@
 
     move/from16 v17, v11
 
-    invoke-virtual/range {v9 .. v17}, Landroid/text/TextPaint;->getTextRunAdvances([CIIIII[FI)F
+    invoke-virtual/range {v9 .. v17}, Landroid/graphics/Paint;->getTextRunAdvances([CIIIII[FI)F
 
     move-result v2
 

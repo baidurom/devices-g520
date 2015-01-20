@@ -321,7 +321,7 @@
     .line 28
     const v1, 0x7f040045
 
-    invoke-virtual {p0, v1}, Lcom/android/camera/manager/RecordingView;->inflate(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/camera/manager/ViewManager;->inflate(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -351,7 +351,7 @@
     .line 31
     iget-object v1, p0, Lcom/android/camera/manager/RecordingView;->mPauseResume:Landroid/widget/ImageView;
 
-    invoke-virtual {v1, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 32
     return-object v0
@@ -370,7 +370,7 @@
 
     const/4 v1, 0x4
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     .line 114
     :goto_0
@@ -382,7 +382,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_0
 .end method
@@ -447,11 +447,11 @@
     .line 44
     iget-object v2, p0, Lcom/android/camera/manager/RecordingView;->mRecordingView:Landroid/widget/TextView;
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/RecordingView;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/android/camera/Camera;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v3}, Landroid/content/ContextWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -528,7 +528,7 @@
     iput-boolean p1, p0, Lcom/android/camera/manager/RecordingView;->mRecordinging:Z
 
     .line 68
-    invoke-virtual {p0}, Lcom/android/camera/manager/RecordingView;->show()V
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->show()V
 
     .line 69
     return-void

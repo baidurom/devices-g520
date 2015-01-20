@@ -15,7 +15,7 @@
 
     .prologue
     .line 35
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -757,7 +757,7 @@
 
     .line 76
     .local v2, rnf:Landroid/content/res/Resources$NotFoundException;
-    invoke-virtual {v2, v0}, Landroid/content/res/Resources$NotFoundException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v2, v0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     .line 77
     throw v2
@@ -812,7 +812,7 @@
 
     .line 81
     .restart local v2       #rnf:Landroid/content/res/Resources$NotFoundException;
-    invoke-virtual {v2, v0}, Landroid/content/res/Resources$NotFoundException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v2, v0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     .line 82
     throw v2
@@ -898,7 +898,7 @@
 
     .line 275
     .local v2, rnf:Landroid/content/res/Resources$NotFoundException;
-    invoke-virtual {v2, v0}, Landroid/content/res/Resources$NotFoundException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v2, v0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     .line 276
     throw v2
@@ -953,7 +953,7 @@
 
     .line 280
     .restart local v2       #rnf:Landroid/content/res/Resources$NotFoundException;
-    invoke-virtual {v2, v0}, Landroid/content/res/Resources$NotFoundException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v2, v0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     .line 281
     throw v2
@@ -1039,7 +1039,7 @@
 
     .line 154
     .local v2, rnf:Landroid/content/res/Resources$NotFoundException;
-    invoke-virtual {v2, v0}, Landroid/content/res/Resources$NotFoundException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v2, v0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     .line 155
     throw v2
@@ -1094,7 +1094,7 @@
 
     .line 159
     .restart local v2       #rnf:Landroid/content/res/Resources$NotFoundException;
-    invoke-virtual {v2, v0}, Landroid/content/res/Resources$NotFoundException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v2, v0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     .line 160
     throw v2

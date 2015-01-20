@@ -133,7 +133,7 @@
 
     .line 119
     :cond_0
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/DoodleView;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     .line 121
     :cond_1
@@ -220,7 +220,7 @@
 
     .line 108
     :cond_0
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/DoodleView;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     .line 110
     :cond_1
@@ -271,7 +271,7 @@
     const/4 v2, 0x0
 
     .line 156
-    invoke-super {p0, p1}, Lcom/android/gallery3d/photoeditor/actions/FullscreenToolView;->onDraw(Landroid/graphics/Canvas;)V
+    invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
     .line 158
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
@@ -327,11 +327,11 @@
     .line 70
     new-instance v0, Landroid/graphics/RectF;
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/DoodleView;->getPhotoWidth()F
+    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/FullscreenToolView;->getPhotoWidth()F
 
     move-result v1
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/DoodleView;->getPhotoHeight()F
+    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/FullscreenToolView;->getPhotoHeight()F
 
     move-result v2
 
@@ -412,10 +412,10 @@
     const/high16 v3, 0x3f80
 
     .line 125
-    invoke-super {p0, p1}, Lcom/android/gallery3d/photoeditor/actions/FullscreenToolView;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    invoke-super {p0, p1}, Landroid/view/View;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     .line 127
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/DoodleView;->isEnabled()Z
+    invoke-virtual {p0}, Landroid/view/View;->isEnabled()Z
 
     move-result v2
 
@@ -455,7 +455,7 @@
     :pswitch_0
     iget-object v2, p0, Lcom/android/gallery3d/photoeditor/actions/DoodleView;->lastPoint:Landroid/graphics/PointF;
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/android/gallery3d/photoeditor/actions/DoodleView;->mapPhotoPoint(FFLandroid/graphics/PointF;)V
+    invoke-virtual {p0, v0, v1, v2}, Lcom/android/gallery3d/photoeditor/actions/FullscreenToolView;->mapPhotoPoint(FFLandroid/graphics/PointF;)V
 
     .line 134
     invoke-direct {p0}, Lcom/android/gallery3d/photoeditor/actions/DoodleView;->startDoodle()V
@@ -466,7 +466,7 @@
     :pswitch_1
     iget-object v2, p0, Lcom/android/gallery3d/photoeditor/actions/DoodleView;->lastPoint:Landroid/graphics/PointF;
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/android/gallery3d/photoeditor/actions/DoodleView;->mapPhotoPoint(FFLandroid/graphics/PointF;)V
+    invoke-virtual {p0, v0, v1, v2}, Lcom/android/gallery3d/photoeditor/actions/FullscreenToolView;->mapPhotoPoint(FFLandroid/graphics/PointF;)V
 
     .line 139
     invoke-direct {p0}, Lcom/android/gallery3d/photoeditor/actions/DoodleView;->addLastPointIntoDoodle()V
@@ -481,7 +481,7 @@
 
     iget-object v4, p0, Lcom/android/gallery3d/photoeditor/actions/DoodleView;->lastPoint:Landroid/graphics/PointF;
 
-    invoke-virtual {p0, v2, v3, v4}, Lcom/android/gallery3d/photoeditor/actions/DoodleView;->mapPhotoPoint(FFLandroid/graphics/PointF;)V
+    invoke-virtual {p0, v2, v3, v4}, Lcom/android/gallery3d/photoeditor/actions/FullscreenToolView;->mapPhotoPoint(FFLandroid/graphics/PointF;)V
 
     .line 146
     invoke-direct {p0}, Lcom/android/gallery3d/photoeditor/actions/DoodleView;->addLastPointIntoDoodle()V

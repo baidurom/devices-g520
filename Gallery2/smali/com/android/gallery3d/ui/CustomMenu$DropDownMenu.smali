@@ -32,7 +32,7 @@
 
     .prologue
     .line 42
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 43
     iput-object p2, p0, Lcom/android/gallery3d/ui/CustomMenu$DropDownMenu;->mButton:Landroid/widget/Button;
@@ -78,7 +78,7 @@
 
     invoke-direct {v1, p0}, Lcom/android/gallery3d/ui/CustomMenu$DropDownMenu$1;-><init>(Lcom/android/gallery3d/ui/CustomMenu$DropDownMenu;)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 53
     return-void
@@ -120,7 +120,7 @@
     .line 60
     iget-object v0, p0, Lcom/android/gallery3d/ui/CustomMenu$DropDownMenu;->mButton:Landroid/widget/Button;
 
-    invoke-virtual {v0, p1}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 61
     return-void

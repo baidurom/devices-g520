@@ -30,7 +30,7 @@
     .line 67
     iput-object p1, p0, Lcom/mediatek/bluetooth/opp/mmi/OppCancelActivity$3;->this$0:Lcom/mediatek/bluetooth/opp/mmi/OppCancelActivity;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -52,7 +52,7 @@
     .line 72
     iget-object v0, p0, Lcom/mediatek/bluetooth/opp/mmi/OppCancelActivity$3;->this$0:Lcom/mediatek/bluetooth/opp/mmi/OppCancelActivity;
 
-    invoke-virtual {v0}, Lcom/mediatek/bluetooth/opp/mmi/OppCancelActivity;->finish()V
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
     .line 73
     return-void

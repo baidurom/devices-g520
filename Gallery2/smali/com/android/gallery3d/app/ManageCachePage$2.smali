@@ -70,7 +70,7 @@
     .line 203
     const/4 v0, 0x2
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/app/ManageCachePage$2;->removeMessages(I)V
+    invoke-virtual {p0, v0}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 204
     iget-object v0, p0, Lcom/android/gallery3d/app/ManageCachePage$2;->this$0:Lcom/android/gallery3d/app/ManageCachePage;

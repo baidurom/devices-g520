@@ -9,13 +9,13 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroid/widget/QuickContactBadge$BaiduInjector;,
         Landroid/widget/QuickContactBadge$QueryHandler;
     }
 .end annotation
 
 
 # static fields
-.field private static final ACTION_STRANGE_QUICK_CONTACT:Ljava/lang/String; = "com.baidu.contacts.action.STRANGE_QUICK_CONTACT"
 .field static final EMAIL_ID_COLUMN_INDEX:I = 0x0
 
 .field static final EMAIL_LOOKUP_PROJECTION:[Ljava/lang/String; = null
@@ -172,10 +172,10 @@
 
     iput-object v1, p0, Landroid/widget/QuickContactBadge;->mQueryHandler:Landroid/widget/QuickContactBadge$QueryHandler;
 
-    .line 93
     invoke-virtual {p0, p0}, Landroid/widget/QuickContactBadge;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 94
+    invoke-direct/range {p0 .. p0}, Landroid/widget/QuickContactBadge;->initPadding()V
+
     return-void
 .end method
 
@@ -202,21 +202,6 @@
     return-void
 .end method
 
-.method static synthetic access$200(Landroid/widget/QuickContactBadge;Landroid/content/Context;Landroid/view/View;Landroid/net/Uri;I[Ljava/lang/String;)V
-    .locals 0
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
-    .parameter "x3"
-    .parameter "x4"
-    .parameter "x5"
-
-    .prologue
-    .line 57
-    invoke-direct/range {p0 .. p5}, Landroid/widget/QuickContactBadge;->showStrangeQuickContact(Landroid/content/Context;Landroid/view/View;Landroid/net/Uri;I[Ljava/lang/String;)V
-
-    return-void
-.end method
 .method private isAssigned()Z
     .locals 1
 
@@ -257,169 +242,8 @@
 
     invoke-virtual {p0, v0}, Landroid/widget/QuickContactBadge;->setEnabled(Z)V
 
+    .line 213
     return-void
-.end method
-
-.method private showStrangeQuickContact(Landroid/content/Context;Landroid/view/View;Landroid/net/Uri;I[Ljava/lang/String;)V
-    .locals 9
-    .parameter "context"
-    .parameter "target"
-    .parameter "createUri"
-    .parameter "mode"
-    .parameter "excludeMimes"
-
-    .prologue
-    const/4 v8, 0x1
-
-    const/4 v6, 0x0
-
-    const/high16 v7, 0x3f00
-
-    .line 361
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getCompatibilityInfo()Landroid/content/res/CompatibilityInfo;
-
-    move-result-object v5
-
-    iget v0, v5, Landroid/content/res/CompatibilityInfo;->applicationScale:F
-
-    .line 362
-    .local v0, appScale:F
-    const/4 v5, 0x2
-
-    new-array v3, v5, [I
-
-    .line 363
-    .local v3, pos:[I
-    invoke-virtual {p2, v3}, Landroid/view/View;->getLocationOnScreen([I)V
-
-    .line 365
-    new-instance v4, Landroid/graphics/Rect;
-
-    invoke-direct {v4}, Landroid/graphics/Rect;-><init>()V
-
-    .line 366
-    .local v4, rect:Landroid/graphics/Rect;
-    aget v5, v3, v6
-
-    int-to-float v5, v5
-
-    mul-float/2addr v5, v0
-
-    add-float/2addr v5, v7
-
-    float-to-int v5, v5
-
-    iput v5, v4, Landroid/graphics/Rect;->left:I
-
-    .line 367
-    aget v5, v3, v8
-
-    int-to-float v5, v5
-
-    mul-float/2addr v5, v0
-
-    add-float/2addr v5, v7
-
-    float-to-int v5, v5
-
-    iput v5, v4, Landroid/graphics/Rect;->top:I
-
-    .line 368
-    aget v5, v3, v6
-
-    invoke-virtual {p2}, Landroid/view/View;->getWidth()I
-
-    move-result v6
-
-    add-int/2addr v5, v6
-
-    int-to-float v5, v5
-
-    mul-float/2addr v5, v0
-
-    add-float/2addr v5, v7
-
-    float-to-int v5, v5
-
-    iput v5, v4, Landroid/graphics/Rect;->right:I
-
-    .line 369
-    aget v5, v3, v8
-
-    invoke-virtual {p2}, Landroid/view/View;->getHeight()I
-
-    move-result v6
-
-    add-int/2addr v5, v6
-
-    int-to-float v5, v5
-
-    mul-float/2addr v5, v0
-
-    add-float/2addr v5, v7
-
-    float-to-int v5, v5
-
-    iput v5, v4, Landroid/graphics/Rect;->bottom:I
-
-    .line 372
-    new-instance v2, Landroid/content/Intent;
-
-    const-string v5, "com.baidu.contacts.action.STRANGE_QUICK_CONTACT"
-
-    invoke-direct {v2, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    .line 373
-    .local v2, intent:Landroid/content/Intent;
-    const/high16 v5, 0x1420
-
-    invoke-virtual {v2, v5}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
-
-    .line 376
-    invoke-virtual {v2, p3}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
-
-    .line 377
-    invoke-virtual {v2, v4}, Landroid/content/Intent;->setSourceBounds(Landroid/graphics/Rect;)V
-
-    .line 378
-    const-string/jumbo v5, "mode"
-
-    invoke-virtual {v2, v5, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 379
-    const-string v5, "exclude_mimes"
-
-    invoke-virtual {v2, v5, p5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 381
-    :try_start_0
-    invoke-virtual {p1, v2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-    :try_end_0
-    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 385
-    :goto_0
-    return-void
-
-    .line 382
-    :catch_0
-    move-exception v1
-
-    .line 383
-    .local v1, e:Landroid/content/ActivityNotFoundException;
-    new-instance v5, Landroid/content/Intent;
-
-    const-string v6, "com.android.contacts.action.SHOW_OR_CREATE_CONTACT"
-
-    invoke-direct {v5, v6, p3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
-
-    invoke-virtual {p1, v5}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-
-    goto :goto_0
 .end method
 
 
@@ -692,22 +516,25 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 112
     invoke-super {p0, p1}, Landroid/widget/ImageView;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 114
+    invoke-static {}, Landroid/widget/QuickContactBadge$BaiduInjector;->enable()Z
+
+    move-result v1
+
+    if-nez v1, :cond_baidu_0
+
     invoke-virtual {p0}, Landroid/widget/QuickContactBadge;->isEnabled()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 136
     :cond_0
     :goto_0
+    :goto_baidu_0
     return-void
 
-    .line 119
     :cond_1
     iget-object v1, p0, Landroid/widget/QuickContactBadge;->mOverlay:Landroid/graphics/drawable/Drawable;
 
@@ -788,6 +615,11 @@
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
     goto :goto_0
+
+    :cond_baidu_0
+    invoke-static/range {p0 .. p1}, Landroid/widget/QuickContactBadge$BaiduInjector;->onDraw(Landroid/widget/QuickContactBadge;Landroid/graphics/Canvas;)V
+
+    goto :goto_baidu_0
 .end method
 
 .method public onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
@@ -858,7 +690,7 @@
 
     move-result-object v0
 
-    const v1, 0x10802bd
+    const v1, #android:drawable@ic_contact_picture#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -882,5 +714,98 @@
 
     .prologue
     .line 108
+    return-void
+.end method
+
+.method static synthetic access$iget-mOverlay-5af51b(Landroid/widget/QuickContactBadge;)Landroid/graphics/drawable/Drawable;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    iget-object v0, p0, Landroid/widget/QuickContactBadge;->mOverlay:Landroid/graphics/drawable/Drawable;
+
+    return-object v0
+.end method
+
+.method private initPadding()V
+    .locals 4
+
+    .prologue
+    iget v0, p0, Landroid/widget/QuickContactBadge;->mPaddingLeft:I
+
+    iget v1, p0, Landroid/widget/QuickContactBadge;->mPaddingTop:I
+
+    iget v2, p0, Landroid/widget/QuickContactBadge;->mPaddingRight:I
+
+    iget v3, p0, Landroid/widget/QuickContactBadge;->mPaddingBottom:I
+
+    invoke-virtual {p0, v0, v1, v2, v3}, Landroid/widget/QuickContactBadge;->setPadding(IIII)V
+
+    return-void
+.end method
+
+.method public setImageToDefault(J)V
+    .locals 3
+    .parameter "cid"
+
+    .prologue
+    const-wide/16 v1, 0x0
+
+    cmp-long v1, p1, v1
+
+    if-gtz v1, :cond_0
+
+    invoke-virtual {p0}, Landroid/widget/QuickContactBadge;->setImageToDefault()V
+
+    :goto_0
+    return-void
+
+    :cond_0
+    sget-object v1, Landroid/widget/QuickContactBadge$BaiduInjector;->res_id:[I
+
+    array-length v1, v1
+
+    int-to-long v1, v1
+
+    rem-long v1, p1, v1
+
+    long-to-int v0, v1
+
+    .local v0, index:I
+    sget-object v1, Landroid/widget/QuickContactBadge$BaiduInjector;->res_id:[I
+
+    aget v1, v1, v0
+
+    invoke-virtual {p0, v1}, Landroid/widget/QuickContactBadge;->setImageResource(I)V
+
+    goto :goto_0
+.end method
+
+.method public setPadding(IIII)V
+    .locals 4
+    .parameter "left"
+    .parameter "top"
+    .parameter "right"
+    .parameter "bottom"
+
+    .prologue
+    invoke-static {p1}, Landroid/widget/QuickContactBadge$BaiduInjector;->getMax(I)I
+
+    move-result v0
+
+    invoke-static {p2}, Landroid/widget/QuickContactBadge$BaiduInjector;->getMax(I)I
+
+    move-result v1
+
+    invoke-static {p3}, Landroid/widget/QuickContactBadge$BaiduInjector;->getMax(I)I
+
+    move-result v2
+
+    invoke-static {p4}, Landroid/widget/QuickContactBadge$BaiduInjector;->getMax(I)I
+
+    move-result v3
+
+    invoke-super {p0, v0, v1, v2, v3}, Landroid/widget/ImageView;->setPadding(IIII)V
+
     return-void
 .end method

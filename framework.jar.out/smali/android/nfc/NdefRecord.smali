@@ -428,7 +428,7 @@
 
     .prologue
     .line 515
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 517
     if-nez p2, :cond_0
@@ -497,7 +497,7 @@
     const/4 v3, 0x0
 
     .line 548
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 549
     invoke-static {p1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
@@ -514,7 +514,7 @@
 
     .line 552
     .local v1, rs:[Landroid/nfc/NdefRecord;
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->remaining()I
+    invoke-virtual {v0}, Ljava/nio/Buffer;->remaining()I
 
     move-result v2
 
@@ -2393,7 +2393,7 @@
     .line 591
     iget-object v0, p0, Landroid/nfc/NdefRecord;->mId:[B
 
-    invoke-virtual {v0}, [B->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2409,7 +2409,7 @@
     .line 601
     iget-object v0, p0, Landroid/nfc/NdefRecord;->mPayload:[B
 
-    invoke-virtual {v0}, [B->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2435,7 +2435,7 @@
     .line 581
     iget-object v0, p0, Landroid/nfc/NdefRecord;->mType:[B
 
-    invoke-virtual {v0}, [B->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

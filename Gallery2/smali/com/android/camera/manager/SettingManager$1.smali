@@ -104,7 +104,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
@@ -113,7 +113,7 @@
     .line 75
     iget-object v0, p0, Lcom/android/camera/manager/SettingManager$1;->this$0:Lcom/android/camera/manager/SettingManager;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/SettingManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v0
 

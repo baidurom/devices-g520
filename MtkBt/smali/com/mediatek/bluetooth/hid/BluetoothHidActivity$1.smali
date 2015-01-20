@@ -30,7 +30,7 @@
     .line 415
     iput-object p1, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity$1;->this$0:Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

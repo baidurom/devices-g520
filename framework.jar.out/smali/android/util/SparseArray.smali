@@ -40,7 +40,7 @@
     .line 27
     new-instance v0, Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Landroid/util/SparseArray;->DELETED:Ljava/lang/Object;
 
@@ -70,7 +70,7 @@
     const/4 v1, 0x0
 
     .line 46
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 28
     iput-boolean v1, p0, Landroid/util/SparseArray;->mGarbage:Z
@@ -454,7 +454,7 @@
     .line 60
     iget-object v2, p0, Landroid/util/SparseArray;->mKeys:[I
 
-    invoke-virtual {v2}, [I->clone()Ljava/lang/Object;
+    invoke-virtual {v2}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v2
 
@@ -465,7 +465,7 @@
     .line 61
     iget-object v2, p0, Landroid/util/SparseArray;->mValues:[Ljava/lang/Object;
 
-    invoke-virtual {v2}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-virtual {v2}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v2
 

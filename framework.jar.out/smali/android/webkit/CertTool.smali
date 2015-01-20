@@ -78,7 +78,7 @@
 
     .prologue
     .line 78
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -196,7 +196,7 @@
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/android/org/bouncycastle/asn1/DERObject;->getDEREncoded()[B
+    invoke-virtual {v5}, Lcom/android/org/bouncycastle/asn1/ASN1Encodable;->getDEREncoded()[B
 
     move-result-object v4
 

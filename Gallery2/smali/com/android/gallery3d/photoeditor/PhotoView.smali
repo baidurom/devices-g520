@@ -38,17 +38,17 @@
     .line 40
     const/4 v0, 0x2
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/photoeditor/PhotoView;->setEGLContextClientVersion(I)V
+    invoke-virtual {p0, v0}, Landroid/opengl/GLSurfaceView;->setEGLContextClientVersion(I)V
 
     .line 41
     iget-object v0, p0, Lcom/android/gallery3d/photoeditor/PhotoView;->renderer:Lcom/android/gallery3d/photoeditor/PhotoView$PhotoRenderer;
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/photoeditor/PhotoView;->setRenderer(Landroid/opengl/GLSurfaceView$Renderer;)V
+    invoke-virtual {p0, v0}, Landroid/opengl/GLSurfaceView;->setRenderer(Landroid/opengl/GLSurfaceView$Renderer;)V
 
     .line 42
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/photoeditor/PhotoView;->setRenderMode(I)V
+    invoke-virtual {p0, v0}, Landroid/opengl/GLSurfaceView;->setRenderMode(I)V
 
     .line 43
     return-void
@@ -139,7 +139,7 @@
     invoke-virtual {v0, p1}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
     .line 59
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/PhotoView;->requestRender()V
+    invoke-virtual {p0}, Landroid/opengl/GLSurfaceView;->requestRender()V
 
     .line 60
     return-void

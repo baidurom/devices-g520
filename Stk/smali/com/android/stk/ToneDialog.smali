@@ -97,7 +97,7 @@
     if-nez p1, :cond_0
 
     .line 202
-    invoke-virtual {p0}, Lcom/android/stk/ToneDialog;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 204
     :cond_0
@@ -202,7 +202,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0, v1}, Lcom/android/stk/ToneDialog;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+    invoke-virtual {p0, v1}, Landroid/content/ContextWrapper;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
     goto :goto_0
 .end method
@@ -247,7 +247,7 @@
     invoke-static {p0, v5}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 110
-    invoke-virtual {p0}, Lcom/android/stk/ToneDialog;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v5
 
@@ -256,7 +256,7 @@
     .line 113
     const v5, 0x1020016
 
-    invoke-virtual {p0, v5}, Lcom/android/stk/ToneDialog;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v5}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
@@ -269,12 +269,12 @@
     .line 120
     const v5, 0x7f030007
 
-    invoke-virtual {p0, v5}, Lcom/android/stk/ToneDialog;->setContentView(I)V
+    invoke-virtual {p0, v5}, Landroid/app/Activity;->setContentView(I)V
 
     .line 122
     const v5, 0x7f070019
 
-    invoke-virtual {p0, v5}, Lcom/android/stk/ToneDialog;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v5}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v4
 
@@ -284,7 +284,7 @@
     .local v4, tv:Landroid/widget/TextView;
     const v5, 0x7f07000a
 
-    invoke-virtual {p0, v5}, Lcom/android/stk/ToneDialog;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v5}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -341,7 +341,7 @@
     invoke-static {p0, v5}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 142
-    invoke-virtual {p0}, Lcom/android/stk/ToneDialog;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 145
     :cond_1
@@ -385,7 +385,7 @@
     .line 153
     const-string v5, "vibrator"
 
-    invoke-virtual {p0, v5}, Lcom/android/stk/ToneDialog;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v5}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v5
 
@@ -433,7 +433,7 @@
     .local v0, intentFilter:Landroid/content/IntentFilter;
     iget-object v5, p0, Lcom/android/stk/ToneDialog;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v5, v0}, Lcom/android/stk/ToneDialog;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v5, v0}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 166
     return-void
@@ -612,7 +612,7 @@
     :cond_2
     iget-object v0, p0, Lcom/android/stk/ToneDialog;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/android/stk/ToneDialog;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 187
     return-void
@@ -640,7 +640,7 @@
     invoke-direct {p0, v0}, Lcom/android/stk/ToneDialog;->sendResponse(I)V
 
     .line 194
-    invoke-virtual {p0}, Lcom/android/stk/ToneDialog;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 

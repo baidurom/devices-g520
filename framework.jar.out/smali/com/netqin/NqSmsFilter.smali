@@ -42,7 +42,7 @@
 
     .prologue
     .line 25
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 26
     iput-object p1, p0, Lcom/netqin/NqSmsFilter;->ctx:Landroid/content/Context;
@@ -136,7 +136,7 @@
 
     .line 100
     .local v1, e:Ljava/io/IOException;
-    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 .end method

@@ -32,7 +32,7 @@
 
     .prologue
     .line 31
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/FadeOutTexture;->isAnimating()Z
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/FadeTexture;->isAnimating()Z
 
     move-result v0
 
@@ -44,7 +44,7 @@
     invoke-interface {p1, v0}, Lcom/android/gallery3d/ui/GLCanvas;->save(I)V
 
     .line 33
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/FadeOutTexture;->getRatio()F
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/FadeTexture;->getRatio()F
 
     move-result v0
 

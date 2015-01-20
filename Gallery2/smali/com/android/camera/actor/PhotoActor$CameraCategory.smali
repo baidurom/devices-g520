@@ -27,7 +27,7 @@
     .line 1503
     iput-object p1, p0, Lcom/android/camera/actor/PhotoActor$CameraCategory;->this$0:Lcom/android/camera/actor/PhotoActor;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -117,7 +117,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/camera/actor/PhotoActor$RenderInCapture;->start()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     .line 1516
     iget-object v0, p0, Lcom/android/camera/actor/PhotoActor$CameraCategory;->this$0:Lcom/android/camera/actor/PhotoActor;

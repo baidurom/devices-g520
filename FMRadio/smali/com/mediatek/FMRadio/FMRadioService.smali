@@ -1119,7 +1119,7 @@
     .line 414
     iget-object v1, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v1}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->getLooper()Landroid/os/Looper;
+    invoke-virtual {v1}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
     move-result-object v1
 
@@ -1155,7 +1155,7 @@
     invoke-static {v1, v2}, Lcom/mediatek/FMRadio/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 593
-    invoke-virtual {p0, v0}, Lcom/mediatek/FMRadio/FMRadioService;->sendBroadcast(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 594
     return-void
@@ -1393,17 +1393,17 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v2}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
     .line 1535
     iget-object v1, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v1, v3}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->removeMessages(I)V
+    invoke-virtual {v1, v3}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 1536
     iget-object v1, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v1, v3}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->sendEmptyMessage(I)Z
+    invoke-virtual {v1, v3}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     .line 1538
     const-string v1, "FmRx/Service"
@@ -1493,28 +1493,28 @@
 
     const/16 v2, 0x18
 
-    invoke-virtual {v1, v2}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->removeMessages(I)V
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 2340
     iget-object v1, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
     const/16 v2, 0x19
 
-    invoke-virtual {v1, v2}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->removeMessages(I)V
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 2341
     iget-object v1, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
     const/16 v2, 0x16
 
-    invoke-virtual {v1, v2}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->removeMessages(I)V
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 2342
     iget-object v1, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
     const/16 v2, 0x17
 
-    invoke-virtual {v1, v2}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->removeMessages(I)V
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 2343
     invoke-direct {p0, v4}, Lcom/mediatek/FMRadio/FMRadioService;->setRecordingMode(Z)V
@@ -2124,7 +2124,7 @@
     .local v5, ops:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/content/ContentProviderOperation;>;"
     const v7, 0x7f040017
 
-    invoke-virtual {p0, v7}, Lcom/mediatek/FMRadio/FMRadioService;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v7}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -2786,7 +2786,7 @@
     .line 1859
     const-string v1, "audio"
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/FMRadio/FMRadioService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Landroid/content/ContextWrapper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2871,7 +2871,7 @@
     .line 1928
     iget-object v1, p0, Lcom/mediatek/FMRadio/FMRadioService;->mSDListener:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v1, v0}, Lcom/mediatek/FMRadio/FMRadioService;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v1, v0}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 1929
     const-string v1, "FmRx/Service"
@@ -2967,7 +2967,7 @@
     .line 1842
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/FMRadio/FMRadioService;->stopForeground(Z)V
+    invoke-virtual {p0, v0}, Landroid/app/Service;->stopForeground(Z)V
 
     .line 1843
     return-void
@@ -3216,7 +3216,7 @@
 
     .line 602
     .local v1, intentToMusic:Landroid/content/Intent;
-    invoke-virtual {p0, v1}, Lcom/mediatek/FMRadio/FMRadioService;->sendBroadcast(Landroid/content/Intent;)V
+    invoke-virtual {p0, v1}, Landroid/content/ContextWrapper;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 608
     new-instance v0, Landroid/content/Intent;
@@ -3227,7 +3227,7 @@
 
     .line 609
     .local v0, intentToFMTx:Landroid/content/Intent;
-    invoke-virtual {p0, v0}, Lcom/mediatek/FMRadio/FMRadioService;->sendBroadcast(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 611
     return-void
@@ -3765,7 +3765,7 @@
 
     .line 1826
     .local v1, notificationIntent:Landroid/content/Intent;
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRadioService;->getPackageName()Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
 
@@ -3778,7 +3778,7 @@
     invoke-virtual {v1, v4, v5}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 1827
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRadioService;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v4
 
@@ -3835,11 +3835,11 @@
 
     .line 1831
     .local v3, text:Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRadioService;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v4
 
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRadioService;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -3861,7 +3861,7 @@
     .line 1834
     const/4 v4, 0x1
 
-    invoke-virtual {p0, v4, v0}, Lcom/mediatek/FMRadio/FMRadioService;->startForeground(ILandroid/app/Notification;)V
+    invoke-virtual {p0, v4, v0}, Landroid/app/Service;->startForeground(ILandroid/app/Notification;)V
 
     .line 1835
     return-void
@@ -4268,7 +4268,7 @@
 
     .line 1986
     .local v1, intent:Landroid/content/Intent;
-    invoke-virtual {p0, v1}, Lcom/mediatek/FMRadio/FMRadioService;->sendBroadcast(Landroid/content/Intent;)V
+    invoke-virtual {p0, v1}, Landroid/content/ContextWrapper;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 1988
     iget-boolean v2, p0, Lcom/mediatek/FMRadio/FMRadioService;->mIsScanning:Z
@@ -4324,14 +4324,14 @@
 
     const/16 v3, 0x16
 
-    invoke-virtual {v2, v3}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->removeMessages(I)V
+    invoke-virtual {v2, v3}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 2004
     iget-object v2, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
     const/16 v3, 0x17
 
-    invoke-virtual {v2, v3}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->removeMessages(I)V
+    invoke-virtual {v2, v3}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 2005
     invoke-direct {p0}, Lcom/mediatek/FMRadio/FMRadioService;->stopRecording()Z
@@ -4347,14 +4347,14 @@
 
     const/16 v3, 0x18
 
-    invoke-virtual {v2, v3}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->removeMessages(I)V
+    invoke-virtual {v2, v3}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 2009
     iget-object v2, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
     const/16 v3, 0x19
 
-    invoke-virtual {v2, v3}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->removeMessages(I)V
+    invoke-virtual {v2, v3}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 2010
     invoke-direct {p0}, Lcom/mediatek/FMRadio/FMRadioService;->stopPlayback()V
@@ -4722,7 +4722,7 @@
     .line 1871
     const-string v1, "audio"
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/FMRadio/FMRadioService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Landroid/content/ContextWrapper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -4925,7 +4925,7 @@
     .local v1, bundleSize:I
     iget-object v3, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v3, v4}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->removeMessages(I)V
+    invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 2129
     new-instance v0, Landroid/os/Bundle;
@@ -4943,7 +4943,7 @@
     .line 2131
     iget-object v3, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v3, v4}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {v3, v4}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v2
 
@@ -4954,7 +4954,7 @@
     .line 2133
     iget-object v3, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v3, v2}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v3, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     .line 2134
     return-void
@@ -5015,12 +5015,12 @@
     .line 959
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v0, v1}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->removeMessages(I)V
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 960
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v0, v1}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->sendEmptyMessage(I)Z
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     .line 961
     return-void
@@ -5874,7 +5874,7 @@
     invoke-static {v4, v5}, Lcom/mediatek/FMRadio/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1413
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRadioService;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v4
 
@@ -5883,7 +5883,7 @@
     .line 1414
     const-string v4, "audio"
 
-    invoke-virtual {p0, v4}, Lcom/mediatek/FMRadio/FMRadioService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v4}, Landroid/content/ContextWrapper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -5894,7 +5894,7 @@
     .line 1415
     const-string v4, "power"
 
-    invoke-virtual {p0, v4}, Lcom/mediatek/FMRadio/FMRadioService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v4}, Landroid/content/ContextWrapper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -5968,7 +5968,7 @@
 
     .line 1444
     .local v2, handlerThread:Landroid/os/HandlerThread;
-    invoke-virtual {v2}, Landroid/os/HandlerThread;->start()V
+    invoke-virtual {v2}, Ljava/lang/Thread;->start()V
 
     .line 1445
     new-instance v4, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
@@ -6041,7 +6041,7 @@
     .line 1470
     iget-object v4, p0, Lcom/mediatek/FMRadio/FMRadioService;->mBroadcastReceiver:Lcom/mediatek/FMRadio/FMRadioService$FMServiceBroadcastReceiver;
 
-    invoke-virtual {p0, v4, v1}, Lcom/mediatek/FMRadio/FMRadioService;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v4, v1}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 1474
     invoke-direct {p0}, Lcom/mediatek/FMRadio/FMRadioService;->registerSDListener()V
@@ -6214,7 +6214,7 @@
     .line 1489
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioService;->mBroadcastReceiver:Lcom/mediatek/FMRadio/FMRadioService$FMServiceBroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/FMRadio/FMRadioService;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 1490
     iput-object v2, p0, Lcom/mediatek/FMRadio/FMRadioService;->mBroadcastReceiver:Lcom/mediatek/FMRadio/FMRadioService$FMServiceBroadcastReceiver;
@@ -6243,7 +6243,7 @@
     .line 1500
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioService;->mSDListener:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/FMRadio/FMRadioService;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 1503
     :cond_2
@@ -6681,7 +6681,7 @@
 
     .line 1608
     .local v2, i:Landroid/content/Intent;
-    invoke-virtual {p0, v2}, Lcom/mediatek/FMRadio/FMRadioService;->sendBroadcast(Landroid/content/Intent;)V
+    invoke-virtual {p0, v2}, Landroid/content/ContextWrapper;->sendBroadcast(Landroid/content/Intent;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -6695,7 +6695,7 @@
 
     .line 1610
     .local v1, e:Ljava/lang/Exception;
-    invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto/16 :goto_0
 .end method
@@ -6835,19 +6835,19 @@
     .line 622
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v0, v2}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->removeMessages(I)V
+    invoke-virtual {v0, v2}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 623
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
     const/16 v1, 0x9
 
-    invoke-virtual {v0, v1}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->removeMessages(I)V
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 624
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v0, v2}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->sendEmptyMessage(I)Z
+    invoke-virtual {v0, v2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     .line 625
     return-void
@@ -6881,7 +6881,7 @@
 
     .line 498
     .local v2, intent_hw:Landroid/content/Intent;
-    invoke-virtual {p0, v2}, Lcom/mediatek/FMRadio/FMRadioService;->sendBroadcast(Landroid/content/Intent;)V
+    invoke-virtual {p0, v2}, Landroid/content/ContextWrapper;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 500
     const/4 v1, 0x1
@@ -6890,14 +6890,14 @@
     .local v1, bundleSize:I
     iget-object v4, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v4, v7}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->removeMessages(I)V
+    invoke-virtual {v4, v7}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 502
     iget-object v4, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
     const/16 v5, 0xa
 
-    invoke-virtual {v4, v5}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->removeMessages(I)V
+    invoke-virtual {v4, v5}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 503
     new-instance v0, Landroid/os/Bundle;
@@ -6913,7 +6913,7 @@
     .line 505
     iget-object v4, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v4, v7}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {v4, v7}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v3
 
@@ -6924,7 +6924,7 @@
     .line 507
     iget-object v4, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v4, v3}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v4, v3}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     .line 508
     return-void
@@ -7151,7 +7151,7 @@
     .line 1296
     iget-object v3, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v3, v4}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->removeMessages(I)V
+    invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 1297
     const/4 v1, 0x1
@@ -7173,7 +7173,7 @@
     .line 1300
     iget-object v3, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v3, v4}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {v3, v4}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v2
 
@@ -7184,7 +7184,7 @@
     .line 1302
     iget-object v3, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v3, v2}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v3, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     .line 1303
     return-void
@@ -7201,7 +7201,7 @@
     .line 754
     iget-object v3, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v3, v4}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->removeMessages(I)V
+    invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 755
     const/4 v1, 0x2
@@ -7228,7 +7228,7 @@
     .line 759
     iget-object v3, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v3, v4}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {v3, v4}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v2
 
@@ -7239,7 +7239,7 @@
     .line 761
     iget-object v3, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v3, v2}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v3, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     .line 762
     return-void
@@ -7255,7 +7255,7 @@
     .line 1153
     iget-object v3, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v3, v4}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->removeMessages(I)V
+    invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 1154
     const/4 v1, 0x1
@@ -7277,7 +7277,7 @@
     .line 1158
     iget-object v3, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v3, v4}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {v3, v4}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v2
 
@@ -7288,7 +7288,7 @@
     .line 1160
     iget-object v3, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v3, v2}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v3, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     .line 1161
     return-void
@@ -7316,7 +7316,7 @@
     .line 982
     iget-object v3, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v3, v4}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->removeMessages(I)V
+    invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 983
     const/4 v1, 0x1
@@ -7338,7 +7338,7 @@
     .line 986
     iget-object v3, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v3, v4}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {v3, v4}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v2
 
@@ -7349,7 +7349,7 @@
     .line 988
     iget-object v3, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v3, v2}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v3, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     .line 989
     return-void
@@ -7369,7 +7369,7 @@
     .local v1, bundleSize:I
     iget-object v3, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v3, v4}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->removeMessages(I)V
+    invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 900
     new-instance v0, Landroid/os/Bundle;
@@ -7387,7 +7387,7 @@
     .line 902
     iget-object v3, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v3, v4}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {v3, v4}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v2
 
@@ -7398,7 +7398,7 @@
     .line 904
     iget-object v3, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v3, v2}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v3, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     .line 905
     return-void
@@ -7414,7 +7414,7 @@
     .line 1339
     iget-object v3, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v3, v4}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->removeMessages(I)V
+    invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 1340
     const/4 v1, 0x1
@@ -7436,7 +7436,7 @@
     .line 1343
     iget-object v3, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v3, v4}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {v3, v4}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v2
 
@@ -7447,7 +7447,7 @@
     .line 1345
     iget-object v3, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v3, v2}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v3, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     .line 1346
     return-void
@@ -7561,12 +7561,12 @@
     .line 1242
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v0, v1}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->removeMessages(I)V
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 1243
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v0, v1}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->sendEmptyMessage(I)Z
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     .line 1244
     return-void
@@ -7581,12 +7581,12 @@
     .line 1202
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v0, v1}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->removeMessages(I)V
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 1203
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v0, v1}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->sendEmptyMessage(I)Z
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     .line 1204
     return-void
@@ -7601,12 +7601,12 @@
     .line 796
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v0, v1}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->removeMessages(I)V
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 797
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v0, v1}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->sendEmptyMessage(I)Z
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     .line 798
     return-void
@@ -7621,12 +7621,12 @@
     .line 1272
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v0, v1}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->removeMessages(I)V
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 1273
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v0, v1}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->sendEmptyMessage(I)Z
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     .line 1274
     return-void
@@ -7641,12 +7641,12 @@
     .line 1222
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v0, v1}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->removeMessages(I)V
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 1223
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v0, v1}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->sendEmptyMessage(I)Z
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     .line 1224
     return-void
@@ -7692,14 +7692,14 @@
 
     const/16 v2, 0xd
 
-    invoke-virtual {v1, v2}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->removeMessages(I)V
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 869
     iget-object v1, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
     const/16 v2, 0x10
 
-    invoke-virtual {v1, v2}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->removeMessages(I)V
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 871
     iget-boolean v1, p0, Lcom/mediatek/FMRadio/FMRadioService;->mIsScanning:Z
@@ -7792,7 +7792,7 @@
     .local v1, bundleSize:I
     iget-object v3, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v3, v4}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->removeMessages(I)V
+    invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 1087
     new-instance v0, Landroid/os/Bundle;
@@ -7810,7 +7810,7 @@
     .line 1089
     iget-object v3, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v3, v4}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {v3, v4}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v2
 
@@ -7821,7 +7821,7 @@
     .line 1091
     iget-object v3, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v3, v2}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v3, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     .line 1092
     return-void
@@ -7837,7 +7837,7 @@
     .line 706
     iget-object v3, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v3, v4}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->removeMessages(I)V
+    invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 707
     const/4 v1, 0x1
@@ -7859,7 +7859,7 @@
     .line 710
     iget-object v3, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v3, v4}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {v3, v4}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v2
 
@@ -7870,7 +7870,7 @@
     .line 712
     iget-object v3, p0, Lcom/mediatek/FMRadio/FMRadioService;->mFmServiceHandler:Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;
 
-    invoke-virtual {v3, v2}, Lcom/mediatek/FMRadio/FMRadioService$FmRadioServiceHandler;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v3, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     .line 713
     return-void

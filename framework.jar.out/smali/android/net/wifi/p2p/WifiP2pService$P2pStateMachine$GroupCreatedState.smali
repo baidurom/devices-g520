@@ -43,7 +43,7 @@
     .line 2093
     iget-object v3, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$GroupCreatedState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
-    invoke-virtual {p0}, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$GroupCreatedState;->getName()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/internal/util/State;->getName()Ljava/lang/String;
 
     move-result-object v4
 
@@ -335,7 +335,7 @@
 
     invoke-direct/range {v24 .. v24}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual/range {p0 .. p0}, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$GroupCreatedState;->getName()Ljava/lang/String;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/internal/util/State;->getName()Ljava/lang/String;
 
     move-result-object v25
 
@@ -589,7 +589,7 @@
 
     invoke-direct/range {v24 .. v24}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual/range {p0 .. p0}, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$GroupCreatedState;->getName()Ljava/lang/String;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/internal/util/State;->getName()Ljava/lang/String;
 
     move-result-object v25
 
@@ -855,7 +855,7 @@
 
     invoke-direct/range {v24 .. v24}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual/range {p0 .. p0}, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$GroupCreatedState;->getName()Ljava/lang/String;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/internal/util/State;->getName()Ljava/lang/String;
 
     move-result-object v25
 
@@ -1232,7 +1232,7 @@
 
     invoke-direct/range {v24 .. v24}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual/range {p0 .. p0}, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$GroupCreatedState;->getName()Ljava/lang/String;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/internal/util/State;->getName()Ljava/lang/String;
 
     move-result-object v25
 
@@ -1343,7 +1343,7 @@
 
     invoke-direct/range {v24 .. v24}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual/range {p0 .. p0}, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$GroupCreatedState;->getName()Ljava/lang/String;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/internal/util/State;->getName()Ljava/lang/String;
 
     move-result-object v25
 
@@ -1775,7 +1775,7 @@
 
     const v24, 0x30002
 
-    invoke-virtual/range {v23 .. v24}, Landroid/net/DhcpStateMachine;->sendMessage(I)V
+    invoke-virtual/range {v23 .. v24}, Lcom/android/internal/util/StateMachine;->sendMessage(I)V
 
     .line 2244
     move-object/from16 v0, p0
@@ -1795,7 +1795,7 @@
 
     move-result-object v23
 
-    invoke-virtual/range {v23 .. v23}, Landroid/net/DhcpStateMachine;->quit()V
+    invoke-virtual/range {v23 .. v23}, Lcom/android/internal/util/StateMachine;->quit()V
 
     .line 2245
     move-object/from16 v0, p0
@@ -1909,7 +1909,7 @@
 
     invoke-direct/range {v24 .. v24}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual/range {p0 .. p0}, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$GroupCreatedState;->getName()Ljava/lang/String;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/internal/util/State;->getName()Ljava/lang/String;
 
     move-result-object v25
 
@@ -2063,7 +2063,7 @@
 
     const v24, 0x30002
 
-    invoke-virtual/range {v23 .. v24}, Landroid/net/DhcpStateMachine;->sendMessage(I)V
+    invoke-virtual/range {v23 .. v24}, Lcom/android/internal/util/StateMachine;->sendMessage(I)V
 
     .line 2289
     move-object/from16 v0, p0
@@ -2083,7 +2083,7 @@
 
     move-result-object v23
 
-    invoke-virtual/range {v23 .. v23}, Landroid/net/DhcpStateMachine;->quit()V
+    invoke-virtual/range {v23 .. v23}, Lcom/android/internal/util/StateMachine;->quit()V
 
     .line 2290
     move-object/from16 v0, p0
@@ -2260,7 +2260,7 @@
 
     const v24, 0x22010
 
-    invoke-virtual/range {v23 .. v24}, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;->sendMessage(I)V
+    invoke-virtual/range {v23 .. v24}, Lcom/android/internal/util/StateMachine;->sendMessage(I)V
 
     .line 2311
     move-object/from16 v0, p0
@@ -3128,7 +3128,7 @@
 
     const v24, 0x22010
 
-    invoke-virtual/range {v23 .. v24}, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;->sendMessage(I)V
+    invoke-virtual/range {v23 .. v24}, Lcom/android/internal/util/StateMachine;->sendMessage(I)V
 
     .line 2398
     move-object/from16 v0, p0
@@ -3192,7 +3192,7 @@
 
     const v24, 0x22010
 
-    invoke-virtual/range {v23 .. v24}, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;->sendMessage(I)V
+    invoke-virtual/range {v23 .. v24}, Lcom/android/internal/util/StateMachine;->sendMessage(I)V
 
     .line 2405
     move-object/from16 v0, p0
@@ -3378,7 +3378,7 @@
 
     const v24, 0x2401e
 
-    invoke-virtual/range {v23 .. v24}, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;->sendMessage(I)V
+    invoke-virtual/range {v23 .. v24}, Lcom/android/internal/util/StateMachine;->sendMessage(I)V
 
     .line 2421
     move-object/from16 v0, p0

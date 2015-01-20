@@ -70,7 +70,7 @@
 
     .prologue
     .line 129
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 97
     new-instance v0, Ljava/util/HashMap;
@@ -82,7 +82,7 @@
     .line 98
     new-instance v0, Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/content/AbstractThreadedSyncAdapter;->mSyncThreadLock:Ljava/lang/Object;
 
@@ -238,7 +238,7 @@
     .line 285
     iget-object v0, p0, Landroid/content/AbstractThreadedSyncAdapter;->mISyncAdapterImpl:Landroid/content/AbstractThreadedSyncAdapter$ISyncAdapterImpl;
 
-    invoke-virtual {v0}, Landroid/content/AbstractThreadedSyncAdapter$ISyncAdapterImpl;->asBinder()Landroid/os/IBinder;
+    invoke-virtual {v0}, Landroid/content/ISyncAdapter$Stub;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
@@ -279,7 +279,7 @@
     if-eqz v0, :cond_0
 
     .line 317
-    invoke-virtual {v0}, Landroid/content/AbstractThreadedSyncAdapter$SyncThread;->interrupt()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
 
     .line 319
     :cond_0

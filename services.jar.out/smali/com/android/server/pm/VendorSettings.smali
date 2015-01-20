@@ -61,7 +61,7 @@
     const/4 v2, -0x1
 
     .line 89
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 84
     new-instance v0, Ljava/util/HashMap;
@@ -445,7 +445,7 @@
     .local v4, e:Ljava/io/IOException;
     .restart local v12       #str:Ljava/io/FileInputStream;
     :goto_5
-    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+    invoke-virtual {v4}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_1
 
@@ -463,7 +463,7 @@
     .local v4, e:Ljavax/xml/parsers/ParserConfigurationException;
     .restart local v12       #str:Ljava/io/FileInputStream;
     :goto_6
-    invoke-virtual {v4}, Ljavax/xml/parsers/ParserConfigurationException;->printStackTrace()V
+    invoke-virtual {v4}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_1
 
@@ -481,7 +481,7 @@
     .local v4, e:Lorg/xml/sax/SAXException;
     .restart local v12       #str:Ljava/io/FileInputStream;
     :goto_7
-    invoke-virtual {v4}, Lorg/xml/sax/SAXException;->printStackTrace()V
+    invoke-virtual {v4}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_1
 
@@ -773,7 +773,7 @@
 
     .line 221
     .local v0, e:Ljava/lang/IllegalArgumentException;
-    invoke-virtual {v0}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 
@@ -847,7 +847,7 @@
 
     .line 223
     .local v0, e:Ljava/lang/IllegalStateException;
-    invoke-virtual {v0}, Ljava/lang/IllegalStateException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto/16 :goto_0
 
@@ -858,7 +858,7 @@
 
     .line 225
     .local v0, e:Ljava/io/IOException;
-    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto/16 :goto_0
 .end method

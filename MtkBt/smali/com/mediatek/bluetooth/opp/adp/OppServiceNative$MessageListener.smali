@@ -84,7 +84,7 @@
 
     .prologue
     .line 1006
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/adp/OppServiceNative$MessageListener;->start()V
+    invoke-virtual {p0}, Ljava/lang/Thread;->start()V
 
     .line 1007
     return-void

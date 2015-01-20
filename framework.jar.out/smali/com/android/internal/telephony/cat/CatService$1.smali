@@ -273,7 +273,7 @@
 
     const-wide/32 v5, 0xea60
 
-    invoke-virtual {v3, v4, v5, v6}, Lcom/android/internal/telephony/cat/CatService;->sendEmptyMessageDelayed(IJ)Z
+    invoke-virtual {v3, v4, v5, v6}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
     goto/16 :goto_0
 .end method

@@ -82,7 +82,7 @@
     .line 66
     const-string v0, "DEVPATH=/devices/virtual/switch/dock"
 
-    invoke-virtual {p0, v0}, Lcom/android/server/DockObserver;->startObserving(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Landroid/os/UEventObserver;->startObserving(Ljava/lang/String;)V
 
     .line 67
     return-void
@@ -155,13 +155,13 @@
 
     const/16 v5, 0x400
 
-    invoke-virtual {v2, v0, v4, v5}, Ljava/io/FileReader;->read([CII)I
+    invoke-virtual {v2, v0, v4, v5}, Ljava/io/InputStreamReader;->read([CII)I
 
     move-result v3
 
     .line 107
     .local v3, len:I
-    invoke-virtual {v2}, Ljava/io/FileReader;->close()V
+    invoke-virtual {v2}, Ljava/io/InputStreamReader;->close()V
 
     .line 108
     new-instance v4, Ljava/lang/String;

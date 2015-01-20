@@ -127,7 +127,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/camera/manager/ReviewManager;->isShowing()Z
+    invoke-virtual {v1}, Lcom/android/camera/manager/ViewManager;->isShowing()Z
 
     move-result v1
 

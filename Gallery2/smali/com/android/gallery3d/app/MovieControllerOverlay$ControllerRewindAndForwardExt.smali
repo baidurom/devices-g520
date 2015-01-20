@@ -49,7 +49,7 @@
     .line 888
     iput-object p1, p0, Lcom/android/gallery3d/app/MovieControllerOverlay$ControllerRewindAndForwardExt;->this$0:Lcom/android/gallery3d/app/MovieControllerOverlay;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 897
     const/4 v0, 0x0
@@ -87,7 +87,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/ImageView;->isEnabled()Z
+    invoke-virtual {v0}, Landroid/view/View;->isEnabled()Z
 
     move-result v0
 
@@ -204,7 +204,7 @@
     .line 910
     iget-object v4, p0, Lcom/android/gallery3d/app/MovieControllerOverlay$ControllerRewindAndForwardExt;->mContollerButtons:Landroid/widget/LinearLayout;
 
-    invoke-virtual {v4, v7}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    invoke-virtual {v4, v7}, Landroid/view/View;->setVisibility(I)V
 
     .line 911
     iget-object v4, p0, Lcom/android/gallery3d/app/MovieControllerOverlay$ControllerRewindAndForwardExt;->mContollerButtons:Landroid/widget/LinearLayout;
@@ -247,24 +247,24 @@
     .line 918
     iget-object v4, p0, Lcom/android/gallery3d/app/MovieControllerOverlay$ControllerRewindAndForwardExt;->mRewind:Landroid/widget/ImageView;
 
-    invoke-virtual {v4, v6}, Landroid/widget/ImageView;->setFocusable(Z)V
+    invoke-virtual {v4, v6}, Landroid/view/View;->setFocusable(Z)V
 
     .line 919
     iget-object v4, p0, Lcom/android/gallery3d/app/MovieControllerOverlay$ControllerRewindAndForwardExt;->mRewind:Landroid/widget/ImageView;
 
-    invoke-virtual {v4, v6}, Landroid/widget/ImageView;->setClickable(Z)V
+    invoke-virtual {v4, v6}, Landroid/view/View;->setClickable(Z)V
 
     .line 920
     iget-object v4, p0, Lcom/android/gallery3d/app/MovieControllerOverlay$ControllerRewindAndForwardExt;->mRewind:Landroid/widget/ImageView;
 
-    invoke-virtual {v4, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v4, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 921
     iget-object v4, p0, Lcom/android/gallery3d/app/MovieControllerOverlay$ControllerRewindAndForwardExt;->mContollerButtons:Landroid/widget/LinearLayout;
 
     iget-object v5, p0, Lcom/android/gallery3d/app/MovieControllerOverlay$ControllerRewindAndForwardExt;->mRewind:Landroid/widget/ImageView;
 
-    invoke-virtual {v4, v5, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v4, v5, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 923
     new-instance v4, Landroid/widget/ImageView;
@@ -290,17 +290,17 @@
     .line 926
     iget-object v4, p0, Lcom/android/gallery3d/app/MovieControllerOverlay$ControllerRewindAndForwardExt;->mStop:Landroid/widget/ImageView;
 
-    invoke-virtual {v4, v6}, Landroid/widget/ImageView;->setFocusable(Z)V
+    invoke-virtual {v4, v6}, Landroid/view/View;->setFocusable(Z)V
 
     .line 927
     iget-object v4, p0, Lcom/android/gallery3d/app/MovieControllerOverlay$ControllerRewindAndForwardExt;->mStop:Landroid/widget/ImageView;
 
-    invoke-virtual {v4, v6}, Landroid/widget/ImageView;->setClickable(Z)V
+    invoke-virtual {v4, v6}, Landroid/view/View;->setClickable(Z)V
 
     .line 928
     iget-object v4, p0, Lcom/android/gallery3d/app/MovieControllerOverlay$ControllerRewindAndForwardExt;->mStop:Landroid/widget/ImageView;
 
-    invoke-virtual {v4, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v4, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 929
     new-instance v2, Landroid/widget/LinearLayout$LayoutParams;
@@ -313,14 +313,14 @@
 
     .line 931
     .local v2, stopLayoutParam:Landroid/widget/LinearLayout$LayoutParams;
-    invoke-virtual {v2, v8, v7, v8, v7}, Landroid/widget/LinearLayout$LayoutParams;->setMargins(IIII)V
+    invoke-virtual {v2, v8, v7, v8, v7}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
 
     .line 932
     iget-object v4, p0, Lcom/android/gallery3d/app/MovieControllerOverlay$ControllerRewindAndForwardExt;->mContollerButtons:Landroid/widget/LinearLayout;
 
     iget-object v5, p0, Lcom/android/gallery3d/app/MovieControllerOverlay$ControllerRewindAndForwardExt;->mStop:Landroid/widget/ImageView;
 
-    invoke-virtual {v4, v5, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v4, v5, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 934
     new-instance v4, Landroid/widget/ImageView;
@@ -346,31 +346,31 @@
     .line 937
     iget-object v4, p0, Lcom/android/gallery3d/app/MovieControllerOverlay$ControllerRewindAndForwardExt;->mForward:Landroid/widget/ImageView;
 
-    invoke-virtual {v4, v6}, Landroid/widget/ImageView;->setFocusable(Z)V
+    invoke-virtual {v4, v6}, Landroid/view/View;->setFocusable(Z)V
 
     .line 938
     iget-object v4, p0, Lcom/android/gallery3d/app/MovieControllerOverlay$ControllerRewindAndForwardExt;->mForward:Landroid/widget/ImageView;
 
-    invoke-virtual {v4, v6}, Landroid/widget/ImageView;->setClickable(Z)V
+    invoke-virtual {v4, v6}, Landroid/view/View;->setClickable(Z)V
 
     .line 939
     iget-object v4, p0, Lcom/android/gallery3d/app/MovieControllerOverlay$ControllerRewindAndForwardExt;->mForward:Landroid/widget/ImageView;
 
-    invoke-virtual {v4, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v4, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 940
     iget-object v4, p0, Lcom/android/gallery3d/app/MovieControllerOverlay$ControllerRewindAndForwardExt;->mContollerButtons:Landroid/widget/LinearLayout;
 
     iget-object v5, p0, Lcom/android/gallery3d/app/MovieControllerOverlay$ControllerRewindAndForwardExt;->mForward:Landroid/widget/ImageView;
 
-    invoke-virtual {v4, v5, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v4, v5, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 942
     iget-object v4, p0, Lcom/android/gallery3d/app/MovieControllerOverlay$ControllerRewindAndForwardExt;->this$0:Lcom/android/gallery3d/app/MovieControllerOverlay;
 
     iget-object v5, p0, Lcom/android/gallery3d/app/MovieControllerOverlay$ControllerRewindAndForwardExt;->mContollerButtons:Landroid/widget/LinearLayout;
 
-    invoke-virtual {v4, v5, v3}, Lcom/android/gallery3d/app/MovieControllerOverlay;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v4, v5, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 943
     return-void
@@ -392,7 +392,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setAnimation(Landroid/view/animation/Animation;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setAnimation(Landroid/view/animation/Animation;)V
 
     .line 967
     return-void
@@ -482,7 +482,7 @@
 
     const/4 v1, 0x4
 
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     .line 972
     return-void
@@ -538,7 +538,7 @@
 
     sub-int v3, p3, v3
 
-    invoke-virtual {v2, v0, v3, v1, p3}, Landroid/widget/LinearLayout;->layout(IIII)V
+    invoke-virtual {v2, v0, v3, v1, p3}, Landroid/view/ViewGroup;->layout(IIII)V
 
     .line 984
     return-void
@@ -560,7 +560,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     .line 977
     return-void
@@ -700,12 +700,12 @@
     .line 1073
     iget-object v0, p0, Lcom/android/gallery3d/app/MovieControllerOverlay$ControllerRewindAndForwardExt;->mRewind:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setEnabled(Z)V
+    invoke-virtual {v0, p1}, Landroid/view/View;->setEnabled(Z)V
 
     .line 1074
     iget-object v0, p0, Lcom/android/gallery3d/app/MovieControllerOverlay$ControllerRewindAndForwardExt;->mForward:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setEnabled(Z)V
+    invoke-virtual {v0, p1}, Landroid/view/View;->setEnabled(Z)V
 
     .line 1075
     return-void
@@ -763,17 +763,17 @@
     .line 1000
     iget-object v0, p0, Lcom/android/gallery3d/app/MovieControllerOverlay$ControllerRewindAndForwardExt;->mStop:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setEnabled(Z)V
+    invoke-virtual {v0, p1}, Landroid/view/View;->setEnabled(Z)V
 
     .line 1001
     iget-object v0, p0, Lcom/android/gallery3d/app/MovieControllerOverlay$ControllerRewindAndForwardExt;->mRewind:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, p2}, Landroid/widget/ImageView;->setEnabled(Z)V
+    invoke-virtual {v0, p2}, Landroid/view/View;->setEnabled(Z)V
 
     .line 1002
     iget-object v0, p0, Lcom/android/gallery3d/app/MovieControllerOverlay$ControllerRewindAndForwardExt;->mForward:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, p3}, Landroid/widget/ImageView;->setEnabled(Z)V
+    invoke-virtual {v0, p3}, Landroid/view/View;->setEnabled(Z)V
 
     .line 1003
     return-void

@@ -30,7 +30,7 @@
     .line 884
     iput-object p1, p0, Landroid/view/LayoutInflater$BlinkLayout$1;->this$0:Landroid/view/LayoutInflater$BlinkLayout;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -91,7 +91,7 @@
     :cond_1
     iget-object v0, p0, Landroid/view/LayoutInflater$BlinkLayout$1;->this$0:Landroid/view/LayoutInflater$BlinkLayout;
 
-    invoke-virtual {v0}, Landroid/view/LayoutInflater$BlinkLayout;->invalidate()V
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
     .line 895
     :goto_0

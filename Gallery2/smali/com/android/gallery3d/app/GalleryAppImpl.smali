@@ -39,7 +39,7 @@
     .line 47
     new-instance v0, Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/gallery3d/app/GalleryAppImpl;->mLock:Ljava/lang/Object;
 
@@ -79,7 +79,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/android/gallery3d/app/GalleryAppImpl$2;-><init>(Lcom/android/gallery3d/app/GalleryAppImpl;Landroid/content/Intent;)V
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/app/GalleryAppImpl$2;->start()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     .line 173
     return-void
@@ -127,7 +127,7 @@
     .line 129
     iget-object v1, p0, Lcom/android/gallery3d/app/GalleryAppImpl;->mStorageReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v1, v0}, Lcom/android/gallery3d/app/GalleryAppImpl;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v1, v0}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 130
     const-string v1, "GalleryAppImpl"

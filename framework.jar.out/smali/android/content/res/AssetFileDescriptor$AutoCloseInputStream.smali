@@ -41,7 +41,7 @@
 
     move-result-wide v0
 
-    invoke-super {p0, v0, v1}, Landroid/os/ParcelFileDescriptor$AutoCloseInputStream;->skip(J)J
+    invoke-super {p0, v0, v1}, Ljava/io/FileInputStream;->skip(J)J
 
     .line 177
     invoke-virtual {p1}, Landroid/content/res/AssetFileDescriptor;->getLength()J
@@ -99,7 +99,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-super {p0}, Landroid/os/ParcelFileDescriptor$AutoCloseInputStream;->available()I
+    invoke-super {p0}, Ljava/io/FileInputStream;->available()I
 
     move-result v0
 
@@ -126,7 +126,7 @@
 
     .line 231
     :cond_0
-    invoke-super {p0, p1}, Landroid/os/ParcelFileDescriptor$AutoCloseInputStream;->mark(I)V
+    invoke-super {p0, p1}, Ljava/io/InputStream;->mark(I)V
 
     goto :goto_0
 .end method
@@ -152,7 +152,7 @@
     return v0
 
     :cond_0
-    invoke-super {p0}, Landroid/os/ParcelFileDescriptor$AutoCloseInputStream;->markSupported()Z
+    invoke-super {p0}, Ljava/io/InputStream;->markSupported()Z
 
     move-result v0
 
@@ -271,7 +271,7 @@
 
     .line 199
     :cond_2
-    invoke-super {p0, p1, p2, p3}, Landroid/os/ParcelFileDescriptor$AutoCloseInputStream;->read([BII)I
+    invoke-super {p0, p1, p2, p3}, Ljava/io/FileInputStream;->read([BII)I
 
     move-result v0
 
@@ -292,7 +292,7 @@
     .line 204
     .end local v0           #res:I
     :cond_3
-    invoke-super {p0, p1, p2, p3}, Landroid/os/ParcelFileDescriptor$AutoCloseInputStream;->read([BII)I
+    invoke-super {p0, p1, p2, p3}, Ljava/io/FileInputStream;->read([BII)I
 
     move-result v0
 
@@ -331,7 +331,7 @@
     .line 248
     :cond_0
     :try_start_1
-    invoke-super {p0}, Landroid/os/ParcelFileDescriptor$AutoCloseInputStream;->reset()V
+    invoke-super {p0}, Ljava/io/InputStream;->reset()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -391,7 +391,7 @@
 
     .line 217
     :cond_2
-    invoke-super {p0, p1, p2}, Landroid/os/ParcelFileDescriptor$AutoCloseInputStream;->skip(J)J
+    invoke-super {p0, p1, p2}, Ljava/io/FileInputStream;->skip(J)J
 
     move-result-wide v0
 
@@ -412,7 +412,7 @@
     .line 222
     .end local v0           #res:J
     :cond_3
-    invoke-super {p0, p1, p2}, Landroid/os/ParcelFileDescriptor$AutoCloseInputStream;->skip(J)J
+    invoke-super {p0, p1, p2}, Ljava/io/FileInputStream;->skip(J)J
 
     move-result-wide v0
 

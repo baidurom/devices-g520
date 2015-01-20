@@ -80,7 +80,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/camera/manager/ThumbnailManager$1;->this$0:Lcom/android/camera/manager/ThumbnailManager;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/ThumbnailManager;->isShowing()Z
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->isShowing()Z
 
     move-result v0
 

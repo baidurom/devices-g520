@@ -72,7 +72,7 @@
     if-gez v0, :cond_0
 
     .line 3633
-    invoke-virtual {p0, p1}, Lcom/android/server/PowerManagerService$LockList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 3635
     :cond_0
@@ -88,7 +88,7 @@
 
     .line 3661
     .local v2, result:I
-    invoke-virtual {p0}, Lcom/android/server/PowerManagerService$LockList;->size()I
+    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
@@ -101,7 +101,7 @@
     if-ge v1, v0, :cond_1
 
     .line 3663
-    invoke-virtual {p0, v1}, Lcom/android/server/PowerManagerService$LockList;->get(I)Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -148,7 +148,7 @@
 
     .prologue
     .line 3649
-    invoke-virtual {p0}, Lcom/android/server/PowerManagerService$LockList;->size()I
+    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
@@ -161,7 +161,7 @@
     if-ge v1, v0, :cond_1
 
     .line 3651
-    invoke-virtual {p0, v1}, Lcom/android/server/PowerManagerService$LockList;->get(I)Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -199,7 +199,7 @@
 
     .line 3676
     .local v2, result:I
-    invoke-virtual {p0}, Lcom/android/server/PowerManagerService$LockList;->size()I
+    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
@@ -212,7 +212,7 @@
     if-ge v1, v0, :cond_2
 
     .line 3678
-    invoke-virtual {p0, v1}, Lcom/android/server/PowerManagerService$LockList;->get(I)Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -319,7 +319,7 @@
     if-ltz v0, :cond_0
 
     .line 3641
-    invoke-virtual {p0, v0}, Lcom/android/server/PowerManagerService$LockList;->remove(I)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     move-result-object v1
 

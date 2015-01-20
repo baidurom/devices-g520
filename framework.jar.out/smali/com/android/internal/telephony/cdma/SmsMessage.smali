@@ -573,7 +573,7 @@
     invoke-virtual {v2, v5, v6, v7}, Ljava/io/DataOutputStream;->write([BII)V
 
     .line 987
-    invoke-virtual {v2}, Ljava/io/DataOutputStream;->close()V
+    invoke-virtual {v2}, Ljava/io/FilterOutputStream;->close()V
 
     .line 996
     invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
@@ -1330,7 +1330,7 @@
     invoke-virtual {v3, v7, v8, v2}, Ljava/io/DataInputStream;->read([BII)I
 
     .line 552
-    invoke-virtual {v3}, Ljava/io/DataInputStream;->close()V
+    invoke-virtual {v3}, Ljava/io/FilterInputStream;->close()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1436,7 +1436,7 @@
     .line 579
     :cond_0
     :goto_0
-    invoke-virtual {v8}, Ljava/io/DataInputStream;->available()I
+    invoke-virtual {v8}, Ljava/io/FilterInputStream;->available()I
 
     move-result v21
 
@@ -2231,7 +2231,7 @@
     invoke-virtual {v5}, Ljava/io/ByteArrayInputStream;->close()V
 
     .line 692
-    invoke-virtual {v8}, Ljava/io/DataInputStream;->close()V
+    invoke-virtual {v8}, Ljava/io/FilterInputStream;->close()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -2341,7 +2341,7 @@
 
     move-wide/from16 v0, p3
 
-    invoke-virtual {v11, v0, v1}, Lcom/android/internal/telephony/cdma/sms/BearerData$TimeStamp;->set(J)V
+    invoke-virtual {v11, v0, v1}, Landroid/text/format/Time;->set(J)V
 
     .line 902
     :cond_1
@@ -2550,7 +2550,7 @@
     invoke-virtual {v5, v6, v11, v12}, Ljava/io/DataOutputStream;->write([BII)V
 
     .line 945
-    invoke-virtual {v5}, Ljava/io/DataOutputStream;->close()V
+    invoke-virtual {v5}, Ljava/io/FilterOutputStream;->close()V
 
     .line 947
     new-instance v9, Lcom/android/internal/telephony/cdma/SmsMessage$SubmitPdu;
@@ -3332,7 +3332,7 @@
 
     iget-object v0, v0, Lcom/android/internal/telephony/cdma/sms/BearerData;->msgCenterTimeStamp:Lcom/android/internal/telephony/cdma/sms/BearerData$TimeStamp;
 
-    invoke-virtual {v0, v4}, Lcom/android/internal/telephony/cdma/sms/BearerData$TimeStamp;->toMillis(Z)J
+    invoke-virtual {v0, v4}, Landroid/text/format/Time;->toMillis(Z)J
 
     move-result-wide v0
 
@@ -3402,7 +3402,7 @@
     if-eqz v0, :cond_c
 
     .line 794
-    invoke-virtual {p0}, Lcom/android/internal/telephony/cdma/SmsMessage;->parseMessageBody()V
+    invoke-virtual {p0}, Lcom/android/internal/telephony/SmsMessageBase;->parseMessageBody()V
 
     goto/16 :goto_0
 

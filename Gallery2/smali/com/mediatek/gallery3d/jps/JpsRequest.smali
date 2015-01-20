@@ -16,7 +16,7 @@
 
     .prologue
     .line 30
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 31
     return-void
@@ -653,7 +653,7 @@
     .line 89
     .local v0, ex1:Ljava/io/FileNotFoundException;
     :try_start_1
-    invoke-virtual {v0}, Ljava/io/FileNotFoundException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -670,7 +670,7 @@
     .line 92
     .local v1, ex2:Ljava/io/IOException;
     :try_start_2
-    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
@@ -810,7 +810,7 @@
     .local v0, ex1:Ljava/io/FileNotFoundException;
     :goto_1
     :try_start_2
-    invoke-virtual {v0}, Ljava/io/FileNotFoundException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
@@ -828,7 +828,7 @@
     .local v1, ex2:Ljava/io/IOException;
     :goto_2
     :try_start_3
-    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 

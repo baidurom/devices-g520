@@ -45,7 +45,7 @@
 
     .prologue
     .line 63
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -1222,7 +1222,7 @@
 
     const/4 v4, 0x0
 
-    invoke-virtual {p0, v0, v2, v4}, Lcom/android/internal/telephony/gemini/GeminiPhone;->obtainMessage(III)Landroid/os/Message;
+    invoke-virtual {p0, v0, v2, v4}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object v0
 
@@ -1233,7 +1233,7 @@
 
     const/4 v5, 0x1
 
-    invoke-virtual {p0, v2, v4, v5}, Lcom/android/internal/telephony/gemini/GeminiPhone;->obtainMessage(III)Landroid/os/Message;
+    invoke-virtual {p0, v2, v4, v5}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object v2
 
@@ -1279,7 +1279,7 @@
 
     const/4 v10, 0x0
 
-    invoke-virtual {p0, v7, v9, v10}, Lcom/android/internal/telephony/gemini/GeminiPhone;->obtainMessage(III)Landroid/os/Message;
+    invoke-virtual {p0, v7, v9, v10}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object v7
 
@@ -1324,7 +1324,7 @@
 
     const/4 v9, 0x1
 
-    invoke-virtual {p0, v7, v8, v9}, Lcom/android/internal/telephony/gemini/GeminiPhone;->obtainMessage(III)Landroid/os/Message;
+    invoke-virtual {p0, v7, v8, v9}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object v7
 
@@ -1346,7 +1346,7 @@
 
     const/4 v2, 0x1
 
-    invoke-virtual {p0, v2}, Lcom/android/internal/telephony/gemini/GeminiPhone;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {p0, v2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v2
 
@@ -1362,7 +1362,7 @@
 
     const/4 v2, 0x1
 
-    invoke-virtual {p0, v2}, Lcom/android/internal/telephony/gemini/GeminiPhone;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {p0, v2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v2
 
@@ -1378,7 +1378,7 @@
 
     const/4 v4, 0x0
 
-    invoke-virtual {p0, v0, v2, v4}, Lcom/android/internal/telephony/gemini/GeminiPhone;->obtainMessage(III)Landroid/os/Message;
+    invoke-virtual {p0, v0, v2, v4}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object v0
 
@@ -1389,7 +1389,7 @@
 
     const/4 v5, 0x1
 
-    invoke-virtual {p0, v2, v4, v5}, Lcom/android/internal/telephony/gemini/GeminiPhone;->obtainMessage(III)Landroid/os/Message;
+    invoke-virtual {p0, v2, v4, v5}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object v2
 
@@ -1425,7 +1425,7 @@
 
     const/4 v4, 0x1
 
-    invoke-virtual {p0, v4}, Lcom/android/internal/telephony/gemini/GeminiPhone;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {p0, v4}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v4
 
@@ -1443,7 +1443,7 @@
 
     const/4 v4, 0x1
 
-    invoke-virtual {p0, v4}, Lcom/android/internal/telephony/gemini/GeminiPhone;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {p0, v4}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v4
 
@@ -1470,7 +1470,7 @@
 
     const/4 v2, 0x1
 
-    invoke-virtual {p0, v2}, Lcom/android/internal/telephony/gemini/GeminiPhone;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {p0, v2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v2
 
@@ -1486,7 +1486,7 @@
 
     const/4 v2, 0x1
 
-    invoke-virtual {p0, v2}, Lcom/android/internal/telephony/gemini/GeminiPhone;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {p0, v2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v2
 

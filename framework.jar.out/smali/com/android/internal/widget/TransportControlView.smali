@@ -450,8 +450,7 @@
     .line 309
     new-instance v4, Landroid/text/style/ForegroundColorSpan;
 
-    #CL-44636
-    const v5, 0xffffffff
+    const v5, 0x7fffffff
 
     invoke-direct {v4, v5}, Landroid/text/style/ForegroundColorSpan;-><init>(I)V
 
@@ -463,17 +462,16 @@
 
     .line 313
     :cond_6
-    #CL-44636
-    #iget-object v4, p0, Lcom/android/internal/widget/TransportControlView;->mAlbumArt:Landroid/widget/ImageView;
+    iget-object v4, p0, Lcom/android/internal/widget/TransportControlView;->mAlbumArt:Landroid/widget/ImageView;
 
-    #iget-object v5, p0, Lcom/android/internal/widget/TransportControlView;->mMetadata:Lcom/android/internal/widget/TransportControlView$Metadata;
+    iget-object v5, p0, Lcom/android/internal/widget/TransportControlView;->mMetadata:Lcom/android/internal/widget/TransportControlView$Metadata;
 
     #getter for: Lcom/android/internal/widget/TransportControlView$Metadata;->bitmap:Landroid/graphics/Bitmap;
-    #invoke-static {v5}, Lcom/android/internal/widget/TransportControlView$Metadata;->access$500(Lcom/android/internal/widget/TransportControlView$Metadata;)Landroid/graphics/Bitmap;
+    invoke-static {v5}, Lcom/android/internal/widget/TransportControlView$Metadata;->access$500(Lcom/android/internal/widget/TransportControlView$Metadata;)Landroid/graphics/Bitmap;
 
-    #move-result-object v5
+    move-result-object v5
 
-    #invoke-virtual {v4, v5}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+    invoke-virtual {v4, v5}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
     .line 314
     iget v0, p0, Lcom/android/internal/widget/TransportControlView;->mTransportControlFlags:I
@@ -787,11 +785,11 @@
     sparse-switch p1, :sswitch_data_0
 
     .line 365
-    const v1, #drawable@ic_media_play#t
+    const v1, 0x1080024
 
     .line 366
     .local v1, imageResId:I
-    const v0, #string@lockscreen_transport_play_description#t
+    const v0, 0x104030e
 
     .line 367
     .local v0, imageDescId:I
@@ -846,11 +844,11 @@
     .end local v0           #imageDescId:I
     .end local v1           #imageResId:I
     :sswitch_0
-    const v1, #drawable@stat_sys_warning#t
+    const v1, 0x108008a
 
     .line 348
     .restart local v1       #imageResId:I
-    const v0, #string@lockscreen_transport_play_description#t
+    const v0, 0x104030e
 
     .line 349
     .restart local v0       #imageDescId:I
@@ -860,11 +858,11 @@
     .end local v0           #imageDescId:I
     .end local v1           #imageResId:I
     :sswitch_1
-    const v1, #drawable@ic_media_pause#t
+    const v1, 0x1080023
 
     .line 353
     .restart local v1       #imageResId:I
-    const v0, #string@lockscreen_transport_pause_description#t
+    const v0, 0x104030d
 
     .line 354
     .restart local v0       #imageDescId:I
@@ -877,11 +875,11 @@
     .end local v0           #imageDescId:I
     .end local v1           #imageResId:I
     :sswitch_2
-    const v1, #drawable@ic_media_stop#t
+    const v1, 0x1080313
 
     .line 359
     .restart local v1       #imageResId:I
-    const v0, #string@lockscreen_transport_stop_description#t
+    const v0, 0x104030f
 
     .line 360
     .restart local v0       #imageDescId:I
@@ -1153,7 +1151,7 @@
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
     .line 209
-    const v5, #id@title#t
+    const v5, 0x1020016
 
     invoke-virtual {p0, v5}, Lcom/android/internal/widget/TransportControlView;->findViewById(I)Landroid/view/View;
 
@@ -1169,19 +1167,18 @@
     invoke-virtual {v5, v7}, Landroid/widget/TextView;->setSelected(Z)V
 
     .line 211
-    #CL-44636
-    #const v5, #id@albumart#t
+    const v5, 0x10202d1
 
-    #invoke-virtual {p0, v5}, Lcom/android/internal/widget/TransportControlView;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v5}, Lcom/android/internal/widget/TransportControlView;->findViewById(I)Landroid/view/View;
 
-    #move-result-object v5
+    move-result-object v5
 
-    #check-cast v5, Landroid/widget/ImageView;
+    check-cast v5, Landroid/widget/ImageView;
 
-    #iput-object v5, p0, Lcom/android/internal/widget/TransportControlView;->mAlbumArt:Landroid/widget/ImageView;
+    iput-object v5, p0, Lcom/android/internal/widget/TransportControlView;->mAlbumArt:Landroid/widget/ImageView;
 
     .line 212
-    const v5, #id@btn_prev#t
+    const v5, 0x10202d2
 
     invoke-virtual {p0, v5}, Lcom/android/internal/widget/TransportControlView;->findViewById(I)Landroid/view/View;
 
@@ -1192,7 +1189,7 @@
     iput-object v5, p0, Lcom/android/internal/widget/TransportControlView;->mBtnPrev:Landroid/widget/ImageView;
 
     .line 213
-    const v5, #id@btn_play#t
+    const v5, 0x10202d3
 
     invoke-virtual {p0, v5}, Lcom/android/internal/widget/TransportControlView;->findViewById(I)Landroid/view/View;
 
@@ -1203,7 +1200,7 @@
     iput-object v5, p0, Lcom/android/internal/widget/TransportControlView;->mBtnPlay:Landroid/widget/ImageView;
 
     .line 214
-    const v5, #id@btn_next#t
+    const v5, 0x10202d4
 
     invoke-virtual {p0, v5}, Lcom/android/internal/widget/TransportControlView;->findViewById(I)Landroid/view/View;
 

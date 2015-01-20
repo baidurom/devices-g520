@@ -129,7 +129,7 @@
 
     .prologue
     .line 84
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 58
     new-instance v1, Ljava/util/HashMap;
@@ -374,7 +374,7 @@
     .line 362
     .local v0, buf:[B
     :goto_1
-    invoke-virtual {v4, v0}, Ljava/io/FileInputStream;->read([B)I
+    invoke-virtual {v4, v0}, Ljava/io/InputStream;->read([B)I
 
     move-result v5
 
@@ -1072,7 +1072,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v2, v4}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
+    invoke-virtual {v2, v4}, Ljava/io/Writer;->write(Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_7

@@ -30,7 +30,7 @@
     .line 137
     iput-object p1, p0, Lcom/mediatek/FMRadio/FMRadioEMActivity$1;->this$0:Lcom/mediatek/FMRadio/FMRadioEMActivity;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -139,7 +139,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v3, v5}, Landroid/widget/Button;->setEnabled(Z)V
+    invoke-virtual {v3, v5}, Landroid/widget/TextView;->setEnabled(Z)V
 
     .line 175
     iget-object v3, p0, Lcom/mediatek/FMRadio/FMRadioEMActivity$1;->this$0:Lcom/mediatek/FMRadio/FMRadioEMActivity;
@@ -188,7 +188,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 

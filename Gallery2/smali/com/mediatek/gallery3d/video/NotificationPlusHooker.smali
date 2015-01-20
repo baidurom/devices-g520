@@ -81,7 +81,7 @@
 
     .line 39
     .local v0, extraEnable:Z
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/NotificationPlusHooker;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/mediatek/gallery3d/ext/ActivityHooker;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -106,7 +106,7 @@
     :cond_0
     if-nez v0, :cond_1
 
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/NotificationPlusHooker;->getContext()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/mediatek/gallery3d/ext/ActivityHooker;->getContext()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -114,7 +114,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/NotificationPlusHooker;->getMovieItem()Lcom/mediatek/gallery3d/ext/IMovieItem;
+    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/MovieHooker;->getMovieItem()Lcom/mediatek/gallery3d/ext/IMovieItem;
 
     move-result-object v3
 
@@ -128,19 +128,19 @@
     :cond_1
     new-instance v2, Landroid/app/NotificationManagerPlus$ManagerBuilder;
 
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/NotificationPlusHooker;->getContext()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/mediatek/gallery3d/ext/ActivityHooker;->getContext()Landroid/app/Activity;
 
     move-result-object v3
 
     invoke-direct {v2, v3}, Landroid/app/NotificationManagerPlus$ManagerBuilder;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/NotificationPlusHooker;->getContext()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/mediatek/gallery3d/ext/ActivityHooker;->getContext()Landroid/app/Activity;
 
     move-result-object v3
 
     const v4, 0x104000a
 
-    invoke-virtual {v3, v4}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+    invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -156,7 +156,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/NotificationPlusHooker;->getPlayer()Lcom/mediatek/gallery3d/ext/IMoviePlayer;
+    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/MovieHooker;->getPlayer()Lcom/mediatek/gallery3d/ext/IMoviePlayer;
 
     move-result-object v3
 
@@ -164,7 +164,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/NotificationPlusHooker;->getPlayer()Lcom/mediatek/gallery3d/ext/IMoviePlayer;
+    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/MovieHooker;->getPlayer()Lcom/mediatek/gallery3d/ext/IMoviePlayer;
 
     move-result-object v3
 
@@ -302,7 +302,7 @@
 
     .prologue
     .line 18
-    invoke-super {p0, p1}, Lcom/mediatek/gallery3d/video/MovieHooker;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/mediatek/gallery3d/ext/ActivityHooker;->onCreate(Landroid/os/Bundle;)V
 
     .line 19
     invoke-direct {p0}, Lcom/mediatek/gallery3d/video/NotificationPlusHooker;->enableNMP()V
@@ -316,7 +316,7 @@
 
     .prologue
     .line 33
-    invoke-super {p0}, Lcom/mediatek/gallery3d/video/MovieHooker;->onDestroy()V
+    invoke-super {p0}, Lcom/mediatek/gallery3d/ext/ActivityHooker;->onDestroy()V
 
     .line 34
     invoke-direct {p0}, Lcom/mediatek/gallery3d/video/NotificationPlusHooker;->clearNotifications()V
@@ -330,7 +330,7 @@
 
     .prologue
     .line 23
-    invoke-super {p0}, Lcom/mediatek/gallery3d/video/MovieHooker;->onStart()V
+    invoke-super {p0}, Lcom/mediatek/gallery3d/ext/ActivityHooker;->onStart()V
 
     .line 24
     invoke-direct {p0}, Lcom/mediatek/gallery3d/video/NotificationPlusHooker;->startListening()V
@@ -344,7 +344,7 @@
 
     .prologue
     .line 28
-    invoke-super {p0}, Lcom/mediatek/gallery3d/video/MovieHooker;->onStop()V
+    invoke-super {p0}, Lcom/mediatek/gallery3d/ext/ActivityHooker;->onStop()V
 
     .line 29
     invoke-direct {p0}, Lcom/mediatek/gallery3d/video/NotificationPlusHooker;->stopListening()V

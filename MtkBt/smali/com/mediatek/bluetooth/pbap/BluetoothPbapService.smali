@@ -260,7 +260,7 @@
     .line 268
     const-string v2, "android.permission.BLUETOOTH"
 
-    invoke-virtual {p0, v0, v2}, Lcom/mediatek/bluetooth/pbap/BluetoothPbapService;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
+    invoke-virtual {p0, v0, v2}, Landroid/content/ContextWrapper;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
     .line 269
     return-void
@@ -292,7 +292,7 @@
     .line 434
     iget-object v1, p0, Lcom/mediatek/bluetooth/pbap/BluetoothPbapService;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/bluetooth/pbap/BluetoothPbapService;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v1}, Landroid/content/ContextWrapper;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 436
     iget v1, p0, Lcom/mediatek/bluetooth/pbap/BluetoothPbapService;->mPid:I
@@ -319,7 +319,7 @@
 
     .line 440
     .local v0, intent:Landroid/content/Intent;
-    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/pbap/BluetoothPbapService;->sendBroadcast(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 449
     .end local v0           #intent:Landroid/content/Intent;
@@ -365,7 +365,7 @@
 
     .line 445
     .restart local v0       #intent:Landroid/content/Intent;
-    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/pbap/BluetoothPbapService;->sendBroadcast(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->sendBroadcast(Landroid/content/Intent;)V
 
     goto :goto_0
 
@@ -565,7 +565,7 @@
     invoke-direct {p0, v8}, Lcom/mediatek/bluetooth/pbap/BluetoothPbapService;->printLog(Ljava/lang/String;)V
 
     .line 368
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/pbap/BluetoothPbapService;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -589,7 +589,7 @@
 
     const v9, 0x7f050068
 
-    invoke-virtual {p0, v9}, Lcom/mediatek/bluetooth/pbap/BluetoothPbapService;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v9
 
@@ -601,7 +601,7 @@
 
     .line 374
     .restart local v3       #noti:Landroid/app/Notification;
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/pbap/BluetoothPbapService;->getPackageName()Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getPackageName()Ljava/lang/String;
 
     move-result-object v8
 
@@ -688,13 +688,13 @@
     .line 384
     const v8, 0x7f050070
 
-    invoke-virtual {p0, v8}, Lcom/mediatek/bluetooth/pbap/BluetoothPbapService;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
     const v9, 0x7f05006a
 
-    invoke-virtual {p0, v9}, Lcom/mediatek/bluetooth/pbap/BluetoothPbapService;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v9
 
@@ -766,7 +766,7 @@
     .line 421
     iget-object v8, p0, Lcom/mediatek/bluetooth/pbap/BluetoothPbapService;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v8, v5}, Lcom/mediatek/bluetooth/pbap/BluetoothPbapService;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v8, v5}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 422
     if-lez v6, :cond_0
@@ -807,7 +807,7 @@
 
     const v9, 0x7f050069
 
-    invoke-virtual {p0, v9}, Lcom/mediatek/bluetooth/pbap/BluetoothPbapService;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v9
 
@@ -819,7 +819,7 @@
 
     .line 390
     .restart local v3       #noti:Landroid/app/Notification;
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/pbap/BluetoothPbapService;->getPackageName()Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getPackageName()Ljava/lang/String;
 
     move-result-object v8
 
@@ -879,7 +879,7 @@
     .line 399
     const v8, 0x7f050072
 
-    invoke-virtual {p0, v8}, Lcom/mediatek/bluetooth/pbap/BluetoothPbapService;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
@@ -899,7 +899,7 @@
 
     aput-object v12, v10, v11
 
-    invoke-virtual {p0, v9, v10}, Lcom/mediatek/bluetooth/pbap/BluetoothPbapService;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v9, v10}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v9
 
@@ -995,7 +995,7 @@
 
     .line 282
     .local v1, ns:Ljava/lang/String;
-    invoke-virtual {p0, v1}, Lcom/mediatek/bluetooth/pbap/BluetoothPbapService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Landroid/content/ContextWrapper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -1016,7 +1016,7 @@
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 285
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/pbap/BluetoothPbapService;->stopSelf()V
+    invoke-virtual {p0}, Landroid/app/Service;->stopSelf()V
 
     .line 287
     invoke-direct {p0, v5}, Lcom/mediatek/bluetooth/pbap/BluetoothPbapService;->broadcastPbapState(I)V
@@ -1069,7 +1069,7 @@
 
     iget-object v3, p0, Lcom/mediatek/bluetooth/pbap/BluetoothPbapService;->mServiceHandler:Landroid/os/Handler;
 
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/pbap/BluetoothPbapService;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v4
 
@@ -1098,7 +1098,7 @@
     iput-object v6, p0, Lcom/mediatek/bluetooth/pbap/BluetoothPbapService;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     .line 298
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/pbap/BluetoothPbapService;->stopSelf()V
+    invoke-virtual {p0}, Landroid/app/Service;->stopSelf()V
 
     .line 299
     invoke-direct {p0, v5}, Lcom/mediatek/bluetooth/pbap/BluetoothPbapService;->broadcastPbapState(I)V
@@ -1126,7 +1126,7 @@
     invoke-direct {p0, v5}, Lcom/mediatek/bluetooth/pbap/BluetoothPbapService;->broadcastPbapState(I)V
 
     .line 307
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/pbap/BluetoothPbapService;->stopSelf()V
+    invoke-virtual {p0}, Landroid/app/Service;->stopSelf()V
 
     goto :goto_0
 

@@ -143,7 +143,7 @@
 
     .prologue
     .line 194
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 195
     iput-object p1, p0, Lcom/mediatek/audioprofile/AudioProfileManager;->mContext:Landroid/content/Context;
@@ -598,7 +598,7 @@
 
     sget-object v43, Lcom/mediatek/audioprofile/AudioProfileManager$Scenario;->GENERAL:Lcom/mediatek/audioprofile/AudioProfileManager$Scenario;
 
-    invoke-virtual/range {v43 .. v43}, Lcom/mediatek/audioprofile/AudioProfileManager$Scenario;->ordinal()I
+    invoke-virtual/range {v43 .. v43}, Ljava/lang/Enum;->ordinal()I
 
     move-result v43
 
@@ -685,7 +685,7 @@
 
     sget-object v43, Lcom/mediatek/audioprofile/AudioProfileManager$Scenario;->SILENT:Lcom/mediatek/audioprofile/AudioProfileManager$Scenario;
 
-    invoke-virtual/range {v43 .. v43}, Lcom/mediatek/audioprofile/AudioProfileManager$Scenario;->ordinal()I
+    invoke-virtual/range {v43 .. v43}, Ljava/lang/Enum;->ordinal()I
 
     move-result v43
 
@@ -772,7 +772,7 @@
 
     sget-object v43, Lcom/mediatek/audioprofile/AudioProfileManager$Scenario;->MEETING:Lcom/mediatek/audioprofile/AudioProfileManager$Scenario;
 
-    invoke-virtual/range {v43 .. v43}, Lcom/mediatek/audioprofile/AudioProfileManager$Scenario;->ordinal()I
+    invoke-virtual/range {v43 .. v43}, Ljava/lang/Enum;->ordinal()I
 
     move-result v43
 
@@ -859,7 +859,7 @@
 
     sget-object v43, Lcom/mediatek/audioprofile/AudioProfileManager$Scenario;->OUTDOOR:Lcom/mediatek/audioprofile/AudioProfileManager$Scenario;
 
-    invoke-virtual/range {v43 .. v43}, Lcom/mediatek/audioprofile/AudioProfileManager$Scenario;->ordinal()I
+    invoke-virtual/range {v43 .. v43}, Ljava/lang/Enum;->ordinal()I
 
     move-result v43
 
@@ -941,7 +941,7 @@
 
     .line 348
     :cond_2
-    invoke-virtual/range {v40 .. v40}, Lcom/mediatek/audioprofile/AudioProfileManager$Scenario;->ordinal()I
+    invoke-virtual/range {v40 .. v40}, Ljava/lang/Enum;->ordinal()I
 
     move-result v37
 
@@ -1198,7 +1198,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/mediatek/audioprofile/AudioProfileManager$Scenario;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Enum;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1662,7 +1662,7 @@
     .local v6, scenario:Lcom/mediatek/audioprofile/AudioProfileManager$Scenario;
     sget-object v7, Lcom/mediatek/audioprofile/AudioProfileManager$Scenario;->SILENT:Lcom/mediatek/audioprofile/AudioProfileManager$Scenario;
 
-    invoke-virtual {v7, v6}, Lcom/mediatek/audioprofile/AudioProfileManager$Scenario;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v7, v6}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
 
     move-result v7
 
@@ -1670,7 +1670,7 @@
 
     sget-object v7, Lcom/mediatek/audioprofile/AudioProfileManager$Scenario;->CUSTOM:Lcom/mediatek/audioprofile/AudioProfileManager$Scenario;
 
-    invoke-virtual {v7, v6}, Lcom/mediatek/audioprofile/AudioProfileManager$Scenario;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v7, v6}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
 
     move-result v7
 
@@ -1687,7 +1687,7 @@
 
     move-result-object v7
 
-    invoke-virtual {v6}, Lcom/mediatek/audioprofile/AudioProfileManager$Scenario;->toString()Ljava/lang/String;
+    invoke-virtual {v6}, Ljava/lang/Enum;->toString()Ljava/lang/String;
 
     move-result-object v8
 
@@ -2547,7 +2547,7 @@
     .local v14, state:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
     sget-object v19, Lcom/mediatek/audioprofile/AudioProfileManager$ProfileSettings;->ringer_stream:Lcom/mediatek/audioprofile/AudioProfileManager$ProfileSettings;
 
-    invoke-virtual/range {v19 .. v19}, Lcom/mediatek/audioprofile/AudioProfileManager$ProfileSettings;->ordinal()I
+    invoke-virtual/range {v19 .. v19}, Ljava/lang/Enum;->ordinal()I
 
     move-result v19
 
@@ -2570,7 +2570,7 @@
     :goto_1
     sget-object v19, Lcom/mediatek/audioprofile/AudioProfileManager$ProfileSettings;->notification_stream:Lcom/mediatek/audioprofile/AudioProfileManager$ProfileSettings;
 
-    invoke-virtual/range {v19 .. v19}, Lcom/mediatek/audioprofile/AudioProfileManager$ProfileSettings;->ordinal()I
+    invoke-virtual/range {v19 .. v19}, Ljava/lang/Enum;->ordinal()I
 
     move-result v19
 
@@ -2594,7 +2594,7 @@
     :goto_2
     sget-object v19, Lcom/mediatek/audioprofile/AudioProfileManager$ProfileSettings;->videocall_Stream:Lcom/mediatek/audioprofile/AudioProfileManager$ProfileSettings;
 
-    invoke-virtual/range {v19 .. v19}, Lcom/mediatek/audioprofile/AudioProfileManager$ProfileSettings;->ordinal()I
+    invoke-virtual/range {v19 .. v19}, Ljava/lang/Enum;->ordinal()I
 
     move-result v19
 
@@ -2618,7 +2618,7 @@
     :goto_3
     sget-object v19, Lcom/mediatek/audioprofile/AudioProfileManager$ProfileSettings;->ringer_volume:Lcom/mediatek/audioprofile/AudioProfileManager$ProfileSettings;
 
-    invoke-virtual/range {v19 .. v19}, Lcom/mediatek/audioprofile/AudioProfileManager$ProfileSettings;->ordinal()I
+    invoke-virtual/range {v19 .. v19}, Ljava/lang/Enum;->ordinal()I
 
     move-result v19
 
@@ -2642,7 +2642,7 @@
     :goto_4
     sget-object v19, Lcom/mediatek/audioprofile/AudioProfileManager$ProfileSettings;->notification_volume:Lcom/mediatek/audioprofile/AudioProfileManager$ProfileSettings;
 
-    invoke-virtual/range {v19 .. v19}, Lcom/mediatek/audioprofile/AudioProfileManager$ProfileSettings;->ordinal()I
+    invoke-virtual/range {v19 .. v19}, Ljava/lang/Enum;->ordinal()I
 
     move-result v19
 
@@ -2666,7 +2666,7 @@
     :goto_5
     sget-object v19, Lcom/mediatek/audioprofile/AudioProfileManager$ProfileSettings;->alarm_volume:Lcom/mediatek/audioprofile/AudioProfileManager$ProfileSettings;
 
-    invoke-virtual/range {v19 .. v19}, Lcom/mediatek/audioprofile/AudioProfileManager$ProfileSettings;->ordinal()I
+    invoke-virtual/range {v19 .. v19}, Ljava/lang/Enum;->ordinal()I
 
     move-result v19
 
@@ -2690,7 +2690,7 @@
     :goto_6
     sget-object v19, Lcom/mediatek/audioprofile/AudioProfileManager$ProfileSettings;->vibration_enabled:Lcom/mediatek/audioprofile/AudioProfileManager$ProfileSettings;
 
-    invoke-virtual/range {v19 .. v19}, Lcom/mediatek/audioprofile/AudioProfileManager$ProfileSettings;->ordinal()I
+    invoke-virtual/range {v19 .. v19}, Ljava/lang/Enum;->ordinal()I
 
     move-result v19
 
@@ -2717,7 +2717,7 @@
     .local v16, vibration:Z
     sget-object v19, Lcom/mediatek/audioprofile/AudioProfileManager$ProfileSettings;->dtmftone_enabled:Lcom/mediatek/audioprofile/AudioProfileManager$ProfileSettings;
 
-    invoke-virtual/range {v19 .. v19}, Lcom/mediatek/audioprofile/AudioProfileManager$ProfileSettings;->ordinal()I
+    invoke-virtual/range {v19 .. v19}, Ljava/lang/Enum;->ordinal()I
 
     move-result v19
 
@@ -2744,7 +2744,7 @@
     .local v4, dtmfTone:Z
     sget-object v19, Lcom/mediatek/audioprofile/AudioProfileManager$ProfileSettings;->soundeffect_enbled:Lcom/mediatek/audioprofile/AudioProfileManager$ProfileSettings;
 
-    invoke-virtual/range {v19 .. v19}, Lcom/mediatek/audioprofile/AudioProfileManager$ProfileSettings;->ordinal()I
+    invoke-virtual/range {v19 .. v19}, Ljava/lang/Enum;->ordinal()I
 
     move-result v19
 
@@ -2771,7 +2771,7 @@
     .local v13, soundEffect:Z
     sget-object v19, Lcom/mediatek/audioprofile/AudioProfileManager$ProfileSettings;->lockscreensound_enabled:Lcom/mediatek/audioprofile/AudioProfileManager$ProfileSettings;
 
-    invoke-virtual/range {v19 .. v19}, Lcom/mediatek/audioprofile/AudioProfileManager$ProfileSettings;->ordinal()I
+    invoke-virtual/range {v19 .. v19}, Ljava/lang/Enum;->ordinal()I
 
     move-result v19
 
@@ -2798,7 +2798,7 @@
     .local v7, lockScreensound:Z
     sget-object v19, Lcom/mediatek/audioprofile/AudioProfileManager$ProfileSettings;->hapticfeedback_enabled:Lcom/mediatek/audioprofile/AudioProfileManager$ProfileSettings;
 
-    invoke-virtual/range {v19 .. v19}, Lcom/mediatek/audioprofile/AudioProfileManager$ProfileSettings;->ordinal()I
+    invoke-virtual/range {v19 .. v19}, Ljava/lang/Enum;->ordinal()I
 
     move-result v19
 

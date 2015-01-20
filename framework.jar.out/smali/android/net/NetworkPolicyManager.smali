@@ -11,6 +11,7 @@
 .field public static final POLICY_NONE:I = 0x0
 
 .field public static final POLICY_REJECT_METERED:I = 0x2
+
 .field public static final POLICY_REJECT_METERED_BACKGROUND:I = 0x1
 
 .field public static final RULE_ALLOW_ALL:I = 0x0
@@ -29,7 +30,7 @@
 
     .prologue
     .line 63
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 64
     if-nez p1, :cond_0

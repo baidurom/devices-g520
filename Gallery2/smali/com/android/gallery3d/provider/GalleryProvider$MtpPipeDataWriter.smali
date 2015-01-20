@@ -43,7 +43,7 @@
     .line 232
     iput-object p1, p0, Lcom/android/gallery3d/provider/GalleryProvider$MtpPipeDataWriter;->this$0:Lcom/android/gallery3d/provider/GalleryProvider;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 233
     iput-object p2, p0, Lcom/android/gallery3d/provider/GalleryProvider$MtpPipeDataWriter;->mImage:Lcom/android/gallery3d/data/MtpImage;
@@ -99,7 +99,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Ljava/io/FileOutputStream;->write([B)V
+    invoke-virtual {v2, v3}, Ljava/io/OutputStream;->write([B)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1

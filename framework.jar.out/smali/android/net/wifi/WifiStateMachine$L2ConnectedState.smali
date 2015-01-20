@@ -45,7 +45,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Landroid/net/wifi/WifiStateMachine$L2ConnectedState;->getName()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/internal/util/State;->getName()Ljava/lang/String;
 
     move-result-object v2
 
@@ -69,7 +69,7 @@
     .line 3623
     const v0, 0xc365
 
-    invoke-virtual {p0}, Landroid/net/wifi/WifiStateMachine$L2ConnectedState;->getName()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/internal/util/State;->getName()Ljava/lang/String;
 
     move-result-object v1
 
@@ -106,11 +106,11 @@
 
     const/4 v4, 0x0
 
-    invoke-virtual {v1, v2, v3, v4}, Landroid/net/wifi/WifiStateMachine;->obtainMessage(III)Landroid/os/Message;
+    invoke-virtual {v1, v2, v3, v4}, Lcom/android/internal/util/StateMachine;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/net/wifi/WifiStateMachine;->sendMessage(Landroid/os/Message;)V
+    invoke-virtual {v0, v1}, Lcom/android/internal/util/StateMachine;->sendMessage(Landroid/os/Message;)V
 
     .line 3628
     :cond_0
@@ -170,7 +170,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Landroid/net/wifi/WifiStateMachine$L2ConnectedState;->getName()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/internal/util/State;->getName()Ljava/lang/String;
 
     move-result-object v7
 
@@ -225,7 +225,7 @@
 
     const v5, 0x30006
 
-    invoke-virtual {v3, v5}, Landroid/net/DhcpStateMachine;->sendMessage(I)V
+    invoke-virtual {v3, v5}, Lcom/android/internal/util/StateMachine;->sendMessage(I)V
 
     :cond_1
     :goto_1
@@ -387,7 +387,7 @@
 
     const v5, 0x2004a
 
-    invoke-virtual {v3, v5}, Landroid/net/wifi/WifiStateMachine;->sendMessage(I)V
+    invoke-virtual {v3, v5}, Lcom/android/internal/util/StateMachine;->sendMessage(I)V
 
     .line 3705
     iget-object v3, p0, Landroid/net/wifi/WifiStateMachine$L2ConnectedState;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -666,7 +666,7 @@
 
     const v5, 0x30003
 
-    invoke-virtual {v3, v5}, Landroid/net/DhcpStateMachine;->sendMessage(I)V
+    invoke-virtual {v3, v5}, Lcom/android/internal/util/StateMachine;->sendMessage(I)V
 
     goto/16 :goto_1
 
@@ -711,11 +711,11 @@
 
     move-result v7
 
-    invoke-virtual {v6, v9, v7, v5}, Landroid/net/wifi/WifiStateMachine;->obtainMessage(III)Landroid/os/Message;
+    invoke-virtual {v6, v9, v7, v5}, Lcom/android/internal/util/StateMachine;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object v5
 
-    invoke-virtual {v3, v5, v10, v11}, Landroid/net/wifi/WifiStateMachine;->sendMessageDelayed(Landroid/os/Message;J)V
+    invoke-virtual {v3, v5, v10, v11}, Lcom/android/internal/util/StateMachine;->sendMessageDelayed(Landroid/os/Message;J)V
 
     goto/16 :goto_1
 
@@ -766,11 +766,11 @@
 
     move-result v7
 
-    invoke-virtual {v6, v9, v7, v5}, Landroid/net/wifi/WifiStateMachine;->obtainMessage(III)Landroid/os/Message;
+    invoke-virtual {v6, v9, v7, v5}, Lcom/android/internal/util/StateMachine;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object v5
 
-    invoke-virtual {v3, v5, v10, v11}, Landroid/net/wifi/WifiStateMachine;->sendMessageDelayed(Landroid/os/Message;J)V
+    invoke-virtual {v3, v5, v10, v11}, Lcom/android/internal/util/StateMachine;->sendMessageDelayed(Landroid/os/Message;J)V
 
     goto/16 :goto_1
 

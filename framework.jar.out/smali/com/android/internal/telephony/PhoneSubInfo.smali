@@ -182,7 +182,7 @@
     .prologue
     .line 86
     :try_start_0
-    invoke-super {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;->finalize()V
+    invoke-super {p0}, Landroid/os/Binder;->finalize()V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -662,15 +662,4 @@
     const-string v0, "UNKNOWN"
 
     goto :goto_0
-.end method
-
-.method public getCardType()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    invoke-virtual {p0}, Lcom/android/internal/telephony/PhoneSubInfo;->getIccCardType()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

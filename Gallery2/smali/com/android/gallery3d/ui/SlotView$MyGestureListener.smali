@@ -32,7 +32,7 @@
     .line 625
     iput-object p1, p0, Lcom/android/gallery3d/ui/SlotView$MyGestureListener;->this$0:Lcom/android/gallery3d/ui/SlotView;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -170,7 +170,7 @@
     :cond_1
     iget-object v2, p0, Lcom/android/gallery3d/ui/SlotView$MyGestureListener;->this$0:Lcom/android/gallery3d/ui/SlotView;
 
-    invoke-virtual {v2}, Lcom/android/gallery3d/ui/SlotView;->invalidate()V
+    invoke-virtual {v2}, Lcom/android/gallery3d/ui/GLView;->invalidate()V
 
     .line 667
     const/4 v2, 0x1
@@ -206,7 +206,7 @@
     :cond_0
     iget-object v1, p0, Lcom/android/gallery3d/ui/SlotView$MyGestureListener;->this$0:Lcom/android/gallery3d/ui/SlotView;
 
-    invoke-virtual {v1}, Lcom/android/gallery3d/ui/SlotView;->lockRendering()V
+    invoke-virtual {v1}, Lcom/android/gallery3d/ui/GLView;->lockRendering()V
 
     .line 699
     :try_start_0
@@ -250,7 +250,7 @@
     :cond_1
     iget-object v1, p0, Lcom/android/gallery3d/ui/SlotView$MyGestureListener;->this$0:Lcom/android/gallery3d/ui/SlotView;
 
-    invoke-virtual {v1}, Lcom/android/gallery3d/ui/SlotView;->unlockRendering()V
+    invoke-virtual {v1}, Lcom/android/gallery3d/ui/GLView;->unlockRendering()V
 
     goto :goto_0
 
@@ -260,7 +260,7 @@
 
     iget-object v2, p0, Lcom/android/gallery3d/ui/SlotView$MyGestureListener;->this$0:Lcom/android/gallery3d/ui/SlotView;
 
-    invoke-virtual {v2}, Lcom/android/gallery3d/ui/SlotView;->unlockRendering()V
+    invoke-virtual {v2}, Lcom/android/gallery3d/ui/GLView;->unlockRendering()V
 
     throw v1
 .end method
@@ -338,7 +338,7 @@
     :cond_0
     iget-object v2, p0, Lcom/android/gallery3d/ui/SlotView$MyGestureListener;->this$0:Lcom/android/gallery3d/ui/SlotView;
 
-    invoke-virtual {v2}, Lcom/android/gallery3d/ui/SlotView;->invalidate()V
+    invoke-virtual {v2}, Lcom/android/gallery3d/ui/GLView;->invalidate()V
 
     .line 681
     const/4 v2, 0x1
@@ -354,7 +354,7 @@
     .line 632
     iget-object v2, p0, Lcom/android/gallery3d/ui/SlotView$MyGestureListener;->this$0:Lcom/android/gallery3d/ui/SlotView;
 
-    invoke-virtual {v2}, Lcom/android/gallery3d/ui/SlotView;->getGLRoot()Lcom/android/gallery3d/ui/GLRoot;
+    invoke-virtual {v2}, Lcom/android/gallery3d/ui/GLView;->getGLRoot()Lcom/android/gallery3d/ui/GLRoot;
 
     move-result-object v1
 

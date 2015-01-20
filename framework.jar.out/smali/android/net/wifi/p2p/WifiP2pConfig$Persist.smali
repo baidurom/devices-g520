@@ -134,7 +134,7 @@
     .line 59
     sget-object v0, Landroid/net/wifi/p2p/WifiP2pConfig$Persist;->$VALUES:[Landroid/net/wifi/p2p/WifiP2pConfig$Persist;
 
-    invoke-virtual {v0}, [Landroid/net/wifi/p2p/WifiP2pConfig$Persist;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

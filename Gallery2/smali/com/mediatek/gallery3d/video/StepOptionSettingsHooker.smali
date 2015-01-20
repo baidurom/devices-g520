@@ -37,7 +37,7 @@
     invoke-super {p0, p1}, Lcom/mediatek/gallery3d/ext/ActivityHooker;->onCreateOptionsMenu(Landroid/view/Menu;)Z
 
     .line 19
-    invoke-virtual {p0, v3}, Lcom/mediatek/gallery3d/video/StepOptionSettingsHooker;->getMenuActivityId(I)I
+    invoke-virtual {p0, v3}, Lcom/mediatek/gallery3d/ext/ActivityHooker;->getMenuActivityId(I)I
 
     move-result v0
 
@@ -66,7 +66,7 @@
 
     move-result v1
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/gallery3d/video/StepOptionSettingsHooker;->getMenuOriginalId(I)I
+    invoke-virtual {p0, v1}, Lcom/mediatek/gallery3d/ext/ActivityHooker;->getMenuOriginalId(I)I
 
     move-result v1
 
@@ -86,7 +86,7 @@
 
     .line 34
     .local v0, mIntent:Landroid/content/Intent;
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/StepOptionSettingsHooker;->getContext()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/mediatek/gallery3d/ext/ActivityHooker;->getContext()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -95,7 +95,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
     .line 35
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/StepOptionSettingsHooker;->getContext()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/mediatek/gallery3d/ext/ActivityHooker;->getContext()Landroid/app/Activity;
 
     move-result-object v1
 

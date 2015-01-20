@@ -46,7 +46,7 @@
 
     .prologue
     .line 59
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 60
     iput-object p1, p0, Lcom/android/gallery3d/photoeditor/BitmapUtils;->context:Landroid/content/Context;
@@ -80,7 +80,7 @@
 
     .line 72
     .local v0, e:Ljava/io/IOException;
-    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 .end method
@@ -699,7 +699,7 @@
     .line 90
     .local v1, e:Ljava/io/FileNotFoundException;
     :try_start_1
-    invoke-virtual {v1}, Ljava/io/FileNotFoundException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -844,7 +844,7 @@
     .line 113
     .local v8, e1:Ljava/io/FileNotFoundException;
     :try_start_3
-    invoke-virtual {v8}, Ljava/io/FileNotFoundException;->printStackTrace()V
+    invoke-virtual {v8}, Ljava/lang/Throwable;->printStackTrace()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
@@ -1162,7 +1162,7 @@
     .local v0, e:Ljava/io/FileNotFoundException;
     :goto_2
     :try_start_4
-    invoke-virtual {v0}, Ljava/io/FileNotFoundException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 

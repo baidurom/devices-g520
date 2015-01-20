@@ -21,7 +21,7 @@
 
     invoke-direct {v1, p0, p2}, Lcom/android/gallery3d/photoeditor/YesCancelDialogBuilder$2;-><init>(Lcom/android/gallery3d/photoeditor/YesCancelDialogBuilder;Ljava/lang/Runnable;)V
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/gallery3d/photoeditor/YesCancelDialogBuilder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {p0, v0, v1}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 

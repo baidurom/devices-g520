@@ -40,7 +40,7 @@
 
     iput-object p3, p0, Lcom/android/gallery3d/photoeditor/FilterStack$4;->val$callback:Lcom/android/gallery3d/photoeditor/OnDoneCallback;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

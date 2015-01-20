@@ -46,7 +46,7 @@
     .line 31
     .local p0, this:Lcom/android/gallery3d/photoeditor/filters/FilterCreator;,"Lcom/android/gallery3d/photoeditor/filters/FilterCreator<TT;>;"
     .local p1, filterClass:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 32
     iput-object p1, p0, Lcom/android/gallery3d/photoeditor/filters/FilterCreator;->filterClass:Ljava/lang/Class;

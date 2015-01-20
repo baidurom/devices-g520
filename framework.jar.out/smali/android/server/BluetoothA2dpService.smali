@@ -1576,13 +1576,13 @@
 
     const/4 v3, 0x0
 
-    invoke-virtual {v2, v3, p2, p3, p1}, Landroid/server/BluetoothA2dpService$IntentBroadcastHandler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
+    invoke-virtual {v2, v3, p2, p3, p1}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v2
 
     int-to-long v3, v0
 
-    invoke-virtual {v1, v2, v3, v4}, Landroid/server/BluetoothA2dpService$IntentBroadcastHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
+    invoke-virtual {v1, v2, v3, v4}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     .line 736
     .end local v0           #delay:I
@@ -3769,7 +3769,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 255
-    invoke-super {p0}, Landroid/bluetooth/IBluetoothA2dp$Stub;->finalize()V
+    invoke-super {p0}, Landroid/os/Binder;->finalize()V
 
     .line 257
     return-void
@@ -3778,7 +3778,7 @@
     :catchall_0
     move-exception v0
 
-    invoke-super {p0}, Landroid/bluetooth/IBluetoothA2dp$Stub;->finalize()V
+    invoke-super {p0}, Landroid/os/Binder;->finalize()V
 
     throw v0
 .end method

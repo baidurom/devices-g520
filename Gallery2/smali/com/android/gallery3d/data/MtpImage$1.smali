@@ -40,7 +40,7 @@
     .line 79
     iput-object p1, p0, Lcom/android/gallery3d/data/MtpImage$1;->this$0:Lcom/android/gallery3d/data/MtpImage;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

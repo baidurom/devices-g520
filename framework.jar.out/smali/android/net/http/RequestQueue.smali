@@ -68,7 +68,7 @@
 
     .prologue
     .line 212
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 61
     const/4 v0, 0x0
@@ -219,7 +219,7 @@
 
     .line 526
     .local v3, ret:Landroid/net/http/Request;
-    invoke-virtual {p1}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
+    invoke-virtual {p1}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object v4
 
@@ -261,7 +261,7 @@
 
     .line 531
     .restart local v3       #ret:Landroid/net/http/Request;
-    invoke-virtual {v2}, Ljava/util/LinkedList;->isEmpty()Z
+    invoke-virtual {v2}, Ljava/util/AbstractCollection;->isEmpty()Z
 
     move-result v4
 
@@ -272,7 +272,7 @@
 
     move-result-object v4
 
-    invoke-virtual {p1, v4}, Ljava/util/LinkedHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, v4}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 535
     .end local v0           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Lorg/apache/http/HttpHost;Ljava/util/LinkedList<Landroid/net/http/Request;>;>;"
@@ -449,7 +449,7 @@
     .local v0, count:I
     iget-object v10, p0, Landroid/net/http/RequestQueue;->mPending:Ljava/util/LinkedHashMap;
 
-    invoke-virtual {v10}, Ljava/util/LinkedHashMap;->isEmpty()Z
+    invoke-virtual {v10}, Ljava/util/HashMap;->isEmpty()Z
 
     move-result v10
 
@@ -458,7 +458,7 @@
     .line 428
     iget-object v10, p0, Landroid/net/http/RequestQueue;->mPending:Ljava/util/LinkedHashMap;
 
-    invoke-virtual {v10}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
+    invoke-virtual {v10}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object v10
 
@@ -745,7 +745,7 @@
     :try_start_0
     iget-object v1, p0, Landroid/net/http/RequestQueue;->mPending:Ljava/util/LinkedHashMap;
 
-    invoke-virtual {v1}, Ljava/util/LinkedHashMap;->isEmpty()Z
+    invoke-virtual {v1}, Ljava/util/HashMap;->isEmpty()Z
 
     move-result v1
 
@@ -790,7 +790,7 @@
     :try_start_0
     iget-object v3, p0, Landroid/net/http/RequestQueue;->mPending:Ljava/util/LinkedHashMap;
 
-    invoke-virtual {v3, p1}, Ljava/util/LinkedHashMap;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v3, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -818,7 +818,7 @@
     move-object v2, v0
 
     .line 469
-    invoke-virtual {v1}, Ljava/util/LinkedList;->isEmpty()Z
+    invoke-virtual {v1}, Ljava/util/AbstractCollection;->isEmpty()Z
 
     move-result v3
 
@@ -827,7 +827,7 @@
     .line 470
     iget-object v3, p0, Landroid/net/http/RequestQueue;->mPending:Ljava/util/LinkedHashMap;
 
-    invoke-virtual {v3, p1}, Ljava/util/LinkedHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -858,7 +858,7 @@
     :try_start_0
     iget-object v0, p0, Landroid/net/http/RequestQueue;->mPending:Ljava/util/LinkedHashMap;
 
-    invoke-virtual {v0, p1}, Ljava/util/LinkedHashMap;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1071,7 +1071,7 @@
     :goto_0
     iget-object v2, p0, Landroid/net/http/RequestQueue;->mPending:Ljava/util/LinkedHashMap;
 
-    invoke-virtual {v2, v0}, Ljava/util/LinkedHashMap;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -1122,7 +1122,7 @@
     .restart local v1       #reqList:Ljava/util/LinkedList;,"Ljava/util/LinkedList<Landroid/net/http/Request;>;"
     iget-object v2, p0, Landroid/net/http/RequestQueue;->mPending:Ljava/util/LinkedHashMap;
 
-    invoke-virtual {v2, v0, v1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -1272,7 +1272,7 @@
     :try_start_0
     iget-object v0, p0, Landroid/net/http/RequestQueue;->mPending:Ljava/util/LinkedHashMap;
 
-    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->isEmpty()Z
+    invoke-virtual {v0}, Ljava/util/HashMap;->isEmpty()Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

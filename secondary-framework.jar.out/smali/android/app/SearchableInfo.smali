@@ -142,7 +142,7 @@
     const/4 v5, 0x0
 
     .line 307
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 91
     const/4 v4, 0x0
@@ -382,7 +382,7 @@
     if-eqz v1, :cond_0
 
     .line 365
-    iget-object v3, v1, Landroid/content/pm/ProviderInfo;->packageName:Ljava/lang/String;
+    iget-object v3, v1, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
 
     .line 368
     .end local v1           #pi:Landroid/content/pm/ProviderInfo;
@@ -421,7 +421,7 @@
     const/4 v3, 0x0
 
     .line 795
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 91
     iput-object v4, p0, Landroid/app/SearchableInfo;->mActionKeys:Ljava/util/HashMap;
@@ -800,7 +800,7 @@
 
     const-string v4, "android.app.searchable"
 
-    invoke-virtual {p1, v3, v4}, Landroid/content/pm/ActivityInfo;->loadXmlMetaData(Landroid/content/pm/PackageManager;Ljava/lang/String;)Landroid/content/res/XmlResourceParser;
+    invoke-virtual {p1, v3, v4}, Landroid/content/pm/PackageItemInfo;->loadXmlMetaData(Landroid/content/pm/PackageManager;Ljava/lang/String;)Landroid/content/res/XmlResourceParser;
 
     move-result-object v2
 
@@ -819,9 +819,9 @@
     :cond_0
     new-instance v0, Landroid/content/ComponentName;
 
-    iget-object v3, p1, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
+    iget-object v3, p1, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
 
-    iget-object v4, p1, Landroid/content/pm/ComponentInfo;->name:Ljava/lang/String;
+    iget-object v4, p1, Landroid/content/pm/PackageItemInfo;->name:Ljava/lang/String;
 
     invoke-direct {v0, v3, v4}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -981,7 +981,7 @@
 
     move-result-object v9
 
-    invoke-virtual {v3}, Ljava/lang/IllegalArgumentException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v10
 
@@ -1103,7 +1103,7 @@
 
     move-result-object v9
 
-    invoke-virtual {v3}, Ljava/lang/IllegalArgumentException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v10
 

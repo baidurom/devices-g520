@@ -174,7 +174,7 @@
     const/16 v1, 0x28
 
     .line 372
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 368
     new-array v0, v1, [F

@@ -60,7 +60,7 @@
 
     const v2, 0x21002
 
-    invoke-virtual {v1, v2, p2}, Landroid/net/wifi/WifiWatchdogStateMachine;->sendMessage(ILjava/lang/Object;)V
+    invoke-virtual {v1, v2, p2}, Lcom/android/internal/util/StateMachine;->sendMessage(ILjava/lang/Object;)V
 
     .line 299
     :cond_0
@@ -92,7 +92,7 @@
 
     const/4 v4, 0x0
 
-    invoke-virtual {v1, v2, v3, v4}, Landroid/net/wifi/WifiWatchdogStateMachine;->obtainMessage(III)Landroid/os/Message;
+    invoke-virtual {v1, v2, v3, v4}, Lcom/android/internal/util/StateMachine;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object v1
 
@@ -127,7 +127,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v1, v2, v3}, Landroid/net/wifi/WifiWatchdogStateMachine;->sendMessage(ILjava/lang/Object;)V
+    invoke-virtual {v1, v2, v3}, Lcom/android/internal/util/StateMachine;->sendMessage(ILjava/lang/Object;)V
 
     goto :goto_0
 .end method

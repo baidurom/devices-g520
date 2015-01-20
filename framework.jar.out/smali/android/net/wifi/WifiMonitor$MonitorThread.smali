@@ -1162,7 +1162,7 @@
 
     .line 755
     .local v14, state:Landroid/net/wifi/SupplicantState;
-    invoke-virtual {v14}, Landroid/net/wifi/SupplicantState;->ordinal()I
+    invoke-virtual {v14}, Ljava/lang/Enum;->ordinal()I
 
     move-result v17
 
@@ -1543,7 +1543,7 @@
 
     .line 612
     .local v0, e:Ljava/lang/NumberFormatException;
-    invoke-virtual {v0}, Ljava/lang/NumberFormatException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_1
 .end method

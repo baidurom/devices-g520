@@ -78,7 +78,7 @@
     const/high16 v0, -0x4080
 
     .line 342
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 59
     iput v0, p0, Landroid/app/WallpaperManager;->mWallpaperXStep:F
@@ -450,12 +450,10 @@
     .end annotation
 
     .prologue
-    .line 774
-    const v0, 0x108021e
+    const v0, #android:drawable@default_wallpaper#t
 
     invoke-virtual {p0, v0}, Landroid/app/WallpaperManager;->setResource(I)V
 
-    .line 775
     return-void
 .end method
 
@@ -674,7 +672,7 @@
     .local v1, dr:Landroid/graphics/drawable/Drawable;
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v2}, Landroid/graphics/drawable/Drawable;->setDither(Z)V
+    invoke-virtual {v1, v2}, Landroid/graphics/drawable/BitmapDrawable;->setDither(Z)V
 
     .line 376
     .end local v1           #dr:Landroid/graphics/drawable/Drawable;
@@ -824,7 +822,7 @@
 
     .line 392
     .local v1, dr:Landroid/graphics/drawable/Drawable;
-    invoke-virtual {v1, v4}, Landroid/graphics/drawable/Drawable;->setDither(Z)V
+    invoke-virtual {v1, v4}, Landroid/graphics/drawable/BitmapDrawable;->setDither(Z)V
 
     .line 395
     .end local v1           #dr:Landroid/graphics/drawable/Drawable;
@@ -1007,7 +1005,7 @@
 
     .line 540
     :try_start_3
-    invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
+    invoke-virtual {v2}, Landroid/os/ParcelFileDescriptor$AutoCloseOutputStream;->close()V
 
     goto :goto_0
 
@@ -1029,7 +1027,7 @@
     if-eqz v1, :cond_2
 
     .line 540
-    invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
+    invoke-virtual {v1}, Landroid/os/ParcelFileDescriptor$AutoCloseOutputStream;->close()V
 
     .line 539
     :cond_2
@@ -1160,7 +1158,7 @@
 
     .line 502
     :try_start_3
-    invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
+    invoke-virtual {v2}, Landroid/os/ParcelFileDescriptor$AutoCloseOutputStream;->close()V
 
     goto :goto_0
 
@@ -1184,7 +1182,7 @@
     if-eqz v1, :cond_2
 
     .line 502
-    invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
+    invoke-virtual {v1}, Landroid/os/ParcelFileDescriptor$AutoCloseOutputStream;->close()V
 
     .line 501
     :cond_2
@@ -1283,7 +1281,7 @@
 
     .line 579
     :try_start_3
-    invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
+    invoke-virtual {v2}, Landroid/os/ParcelFileDescriptor$AutoCloseOutputStream;->close()V
 
     goto :goto_0
 
@@ -1305,7 +1303,7 @@
     if-eqz v1, :cond_2
 
     .line 579
-    invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
+    invoke-virtual {v1}, Landroid/os/ParcelFileDescriptor$AutoCloseOutputStream;->close()V
 
     .line 578
     :cond_2
@@ -1359,7 +1357,6 @@
 
     :cond_baidu_0
 
-    .line 697
     :try_start_0
     iget-object v0, p0, Landroid/app/WallpaperManager;->mContext:Landroid/content/Context;
 
@@ -1385,12 +1382,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 703
     :goto_0
     :goto_baidu_0
     return-void
 
-    .line 700
     :catch_0
     move-exception v0
 
@@ -1403,6 +1398,7 @@
     .parameter "minimumHeight"
 
     .prologue
+    .line 697
     .line 671
     :try_start_0
     sget-object v0, Landroid/app/WallpaperManager;->sGlobals:Landroid/app/WallpaperManager$Globals;

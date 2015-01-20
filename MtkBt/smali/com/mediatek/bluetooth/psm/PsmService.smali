@@ -3,8 +3,8 @@
 .source "PsmService.java"
 
 # interfaces
-.implements Lcom/mediatek/bluetooth/ilm/MessageListener;
 .implements Landroid/os/Handler$Callback;
+.implements Lcom/mediatek/bluetooth/ilm/MessageListener;
 
 
 # instance fields
@@ -204,7 +204,7 @@
 
     move-result-object v7
 
-    invoke-virtual {v4}, Lcom/mediatek/bluetooth/psm/PsmMessage;->toPrintString()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/mediatek/bluetooth/ilm/Message;->toPrintString()Ljava/lang/String;
 
     move-result-object v8
 
@@ -392,7 +392,7 @@
     .line 117
     iget-object v2, p0, Lcom/mediatek/bluetooth/psm/PsmService;->handlerThread:Landroid/os/HandlerThread;
 
-    invoke-virtual {v2}, Landroid/os/HandlerThread;->start()V
+    invoke-virtual {v2}, Ljava/lang/Thread;->start()V
 
     .line 118
     new-instance v2, Landroid/os/Handler;
@@ -406,7 +406,7 @@
     iput-object v2, p0, Lcom/mediatek/bluetooth/psm/PsmService;->handler:Landroid/os/Handler;
 
     .line 121
-    invoke-virtual {p0, p0}, Lcom/mediatek/bluetooth/psm/PsmService;->registerMessageListener(Lcom/mediatek/bluetooth/ilm/MessageListener;)V
+    invoke-virtual {p0, p0}, Lcom/mediatek/bluetooth/ilm/MessageService;->registerMessageListener(Lcom/mediatek/bluetooth/ilm/MessageListener;)V
 
     .line 124
     iget-object v2, p0, Lcom/mediatek/bluetooth/psm/PsmService;->psmList:Ljava/util/ArrayList;
@@ -482,7 +482,7 @@
     .line 140
     .end local v2           #psm:Lcom/mediatek/bluetooth/psm/Psm;
     :cond_0
-    invoke-virtual {p0, p0}, Lcom/mediatek/bluetooth/psm/PsmService;->unregisterMessageListener(Lcom/mediatek/bluetooth/ilm/MessageListener;)V
+    invoke-virtual {p0, p0}, Lcom/mediatek/bluetooth/ilm/MessageService;->unregisterMessageListener(Lcom/mediatek/bluetooth/ilm/MessageListener;)V
 
     .line 143
     iget-object v3, p0, Lcom/mediatek/bluetooth/psm/PsmService;->handlerThread:Landroid/os/HandlerThread;
@@ -495,7 +495,7 @@
 
     const-wide/16 v4, 0x3e8
 
-    invoke-virtual {v3, v4, v5}, Landroid/os/HandlerThread;->join(J)V
+    invoke-virtual {v3, v4, v5}, Ljava/lang/Thread;->join(J)V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -533,7 +533,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v0}, Ljava/lang/InterruptedException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v4
 

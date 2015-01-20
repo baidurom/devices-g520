@@ -68,7 +68,7 @@
 
     .prologue
     .line 73
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/TouchView;->isEnabled()Z
+    invoke-virtual {p0}, Landroid/view/View;->isEnabled()Z
 
     move-result v0
 

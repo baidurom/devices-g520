@@ -79,7 +79,7 @@
     .line 50
     const v0, 0x7f0b00b2
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/ui/PreviewFrameLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -112,11 +112,11 @@
 
     .line 91
     .local v1, previewHeight:I
-    invoke-virtual {p0}, Lcom/android/camera/ui/PreviewFrameLayout;->getPaddingLeft()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
 
     move-result v4
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/PreviewFrameLayout;->getPaddingRight()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
 
     move-result v5
 
@@ -124,11 +124,11 @@
 
     .line 92
     .local v0, hPadding:I
-    invoke-virtual {p0}, Lcom/android/camera/ui/PreviewFrameLayout;->getPaddingTop()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
 
     move-result v4
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/PreviewFrameLayout;->getPaddingBottom()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
 
     move-result v5
 
@@ -426,7 +426,7 @@
 
     .line 61
     :cond_1
-    invoke-virtual {p0}, Lcom/android/camera/ui/PreviewFrameLayout;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -461,7 +461,7 @@
 
     invoke-direct {v0, p0}, Lcom/android/camera/ui/PreviewFrameLayout$1;-><init>(Lcom/android/camera/ui/PreviewFrameLayout;)V
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/ui/PreviewFrameLayout;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {p0, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
     .line 75
     :cond_3

@@ -51,7 +51,7 @@
 
     .prologue
     .line 60
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 61
     new-instance v0, Ljava/lang/Thread;
@@ -639,7 +639,7 @@
     :cond_2
     :goto_1
     :try_start_1
-    invoke-virtual {v3, v0}, Ljava/io/FileInputStream;->read([B)I
+    invoke-virtual {v3, v0}, Ljava/io/InputStream;->read([B)I
 
     move-result v7
 
@@ -669,7 +669,7 @@
 
     .line 246
     :try_start_2
-    invoke-virtual {v2}, Ljava/io/IOException;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v9
 
@@ -729,7 +729,7 @@
     if-eqz v6, :cond_5
 
     .line 224
-    invoke-virtual {v4, v1}, Ljava/io/FileOutputStream;->write([B)V
+    invoke-virtual {v4, v1}, Ljava/io/OutputStream;->write([B)V
 
     .line 225
     const/4 v6, 0x0

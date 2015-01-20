@@ -119,7 +119,7 @@
 
     .prologue
     .line 186
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 63
     const/4 v0, 0x0
@@ -147,7 +147,7 @@
 
     .prologue
     .line 198
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 63
     const/4 v0, 0x0
@@ -1172,7 +1172,7 @@
 
     .line 599
     .local v7, ie:Landroid/view/InflateException;
-    invoke-virtual {v7, v6}, Landroid/view/InflateException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v7, v6}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     .line 600
     throw v7
@@ -1273,7 +1273,7 @@
 
     .line 607
     .restart local v7       #ie:Landroid/view/InflateException;
-    invoke-virtual {v7, v6}, Landroid/view/InflateException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v7, v6}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     .line 608
     throw v7
@@ -1333,7 +1333,7 @@
 
     .line 616
     .restart local v7       #ie:Landroid/view/InflateException;
-    invoke-virtual {v7, v6}, Landroid/view/InflateException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v7, v6}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     .line 617
     throw v7
@@ -1519,7 +1519,7 @@
 
     .line 700
     .local v1, ie:Landroid/view/InflateException;
-    invoke-virtual {v1, v0}, Landroid/view/InflateException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v1, v0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     .line 701
     throw v1
@@ -1564,7 +1564,7 @@
 
     .line 706
     .restart local v1       #ie:Landroid/view/InflateException;
-    invoke-virtual {v1, v0}, Landroid/view/InflateException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v1, v0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     .line 707
     throw v1
@@ -1819,7 +1819,7 @@
     :try_start_2
     new-instance v5, Landroid/view/InflateException;
 
-    invoke-virtual {v4}, Lorg/xmlpull/v1/XmlPullParserException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v12
 
@@ -1827,7 +1827,7 @@
 
     .line 509
     .local v5, ex:Landroid/view/InflateException;
-    invoke-virtual {v5, v4}, Landroid/view/InflateException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v5, v4}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     .line 510
     throw v5
@@ -1945,7 +1945,7 @@
 
     move-result-object v12
 
-    invoke-virtual {v4}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v14
 
@@ -1961,7 +1961,7 @@
 
     .line 515
     .restart local v5       #ex:Landroid/view/InflateException;
-    invoke-virtual {v5, v4}, Landroid/view/InflateException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v5, v4}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     .line 516
     throw v5

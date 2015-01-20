@@ -3,11 +3,11 @@
 .source "VideoActor.java"
 
 # interfaces
-.implements Lcom/android/camera/actor/EffectsRecorder$EffectsListener;
-.implements Lcom/android/camera/manager/LearningView$LearningListener;
 .implements Landroid/media/MediaRecorder$OnErrorListener;
 .implements Landroid/media/MediaRecorder$OnInfoListener;
 .implements Lcom/android/camera/FocusManager$Listener;
+.implements Lcom/android/camera/actor/EffectsRecorder$EffectsListener;
+.implements Lcom/android/camera/manager/LearningView$LearningListener;
 
 
 # annotations
@@ -394,7 +394,7 @@
     iput-object v0, p0, Lcom/android/camera/actor/VideoActor;->mCancelListener:Landroid/view/View$OnClickListener;
 
     .line 215
-    invoke-virtual {p0}, Lcom/android/camera/actor/VideoActor;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/actor/CameraActor;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v0
 
@@ -1150,7 +1150,7 @@
     .line 1927
     iget-object v0, p0, Lcom/android/camera/actor/VideoActor;->mRecordingView:Lcom/android/camera/manager/RecordingView;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/RecordingView;->hide()V
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->hide()V
 
     .line 1928
     iget-object v0, p0, Lcom/android/camera/actor/VideoActor;->mVideoContext:Lcom/android/camera/Camera;
@@ -1627,12 +1627,12 @@
     :goto_0
     iget-object v2, p0, Lcom/android/camera/actor/VideoActor;->mVideoContext:Lcom/android/camera/Camera;
 
-    invoke-virtual {v2, v0, v1}, Lcom/android/camera/Camera;->setResultEx(ILandroid/content/Intent;)V
+    invoke-virtual {v2, v0, v1}, Lcom/android/camera/ActivityBase;->setResultEx(ILandroid/content/Intent;)V
 
     .line 750
     iget-object v2, p0, Lcom/android/camera/actor/VideoActor;->mVideoContext:Lcom/android/camera/Camera;
 
-    invoke-virtual {v2}, Lcom/android/camera/Camera;->finish()V
+    invoke-virtual {v2}, Landroid/app/Activity;->finish()V
 
     .line 751
     return-void
@@ -1881,7 +1881,7 @@
     .line 366
     iget-object v1, p0, Lcom/android/camera/actor/VideoActor;->mVideoContext:Lcom/android/camera/Camera;
 
-    invoke-virtual {v1}, Lcom/android/camera/Camera;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v1}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -1955,7 +1955,7 @@
 
     invoke-direct {v2, p0}, Lcom/android/camera/actor/VideoActor$6;-><init>(Lcom/android/camera/actor/VideoActor;)V
 
-    invoke-virtual {v1, v2}, Lcom/android/camera/Camera;->runOnUiThread(Ljava/lang/Runnable;)V
+    invoke-virtual {v1, v2}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
     .line 381
     return-void
@@ -3281,7 +3281,7 @@
     .line 617
     iget-object v2, p0, Lcom/android/camera/actor/VideoActor;->mVideoContext:Lcom/android/camera/Camera;
 
-    invoke-virtual {v2, v0}, Lcom/android/camera/Camera;->sendBroadcast(Landroid/content/Intent;)V
+    invoke-virtual {v2, v0}, Landroid/content/ContextWrapper;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 621
     new-instance v1, Landroid/content/Intent;
@@ -3301,7 +3301,7 @@
     .line 623
     iget-object v2, p0, Lcom/android/camera/actor/VideoActor;->mVideoContext:Lcom/android/camera/Camera;
 
-    invoke-virtual {v2, v1}, Lcom/android/camera/Camera;->sendBroadcast(Landroid/content/Intent;)V
+    invoke-virtual {v2, v1}, Landroid/content/ContextWrapper;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 625
     return-void
@@ -4228,7 +4228,7 @@
     :try_start_0
     iget-object v2, p0, Lcom/android/camera/actor/VideoActor;->mVideoContext:Lcom/android/camera/Camera;
 
-    invoke-virtual {v2, v1}, Lcom/android/camera/Camera;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v2, v1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -4280,7 +4280,7 @@
 
     invoke-direct {v2, p0}, Lcom/android/camera/actor/VideoActor$5;-><init>(Lcom/android/camera/actor/VideoActor;)V
 
-    invoke-virtual {v1, v2}, Lcom/android/camera/Camera;->runOnUiThread(Ljava/lang/Runnable;)V
+    invoke-virtual {v1, v2}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
     .line 318
     invoke-virtual {p0}, Lcom/android/camera/actor/VideoActor;->stopPreview()V
@@ -4485,7 +4485,7 @@
 
     const v2, 0x7f0b00b6
 
-    invoke-virtual {v1, v2}, Lcom/android/camera/Camera;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v2}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -4561,7 +4561,7 @@
     .line 532
     iget-object v1, p0, Lcom/android/camera/actor/VideoActor;->mRecordingView:Lcom/android/camera/manager/RecordingView;
 
-    invoke-virtual {v1}, Lcom/android/camera/manager/RecordingView;->hide()V
+    invoke-virtual {v1}, Lcom/android/camera/manager/ViewManager;->hide()V
 
     .line 533
     iget-object v1, p0, Lcom/android/camera/actor/VideoActor;->mVideoContext:Lcom/android/camera/Camera;
@@ -4869,7 +4869,7 @@
     .line 986
     iget-object v0, p0, Lcom/android/camera/actor/VideoActor;->mRecordingView:Lcom/android/camera/manager/RecordingView;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/RecordingView;->hide()V
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->hide()V
 
     .line 987
     sget-boolean v0, Lcom/android/camera/actor/VideoActor;->LOG:Z
@@ -4917,7 +4917,7 @@
 
     iget-object v1, p0, Lcom/android/camera/actor/VideoActor;->mVideoContext:Lcom/android/camera/Camera;
 
-    invoke-virtual {v1}, Lcom/android/camera/Camera;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v1}, Landroid/content/ContextWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -5645,7 +5645,7 @@
 
     iget-object v3, p0, Lcom/android/camera/actor/VideoActor;->mVideoContext:Lcom/android/camera/Camera;
 
-    invoke-virtual {v3}, Lcom/android/camera/Camera;->isFinishing()Z
+    invoke-virtual {v3}, Landroid/app/Activity;->isFinishing()Z
 
     move-result v3
 
@@ -6003,7 +6003,7 @@
     .line 1787
     iget-object v0, p0, Lcom/android/camera/actor/VideoActor;->mLearningView:Lcom/android/camera/manager/LearningView;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/LearningView;->hide()V
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->hide()V
 
     .line 1789
     invoke-direct {p0}, Lcom/android/camera/actor/VideoActor;->trainingEffects()V
@@ -6159,7 +6159,7 @@
 
     const v2, 0x7f0c00cd
 
-    invoke-virtual {v1, v2}, Lcom/android/camera/Camera;->getString(I)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -6167,7 +6167,7 @@
 
     const v3, 0x7f0c0087
 
-    invoke-virtual {v2, v3}, Lcom/android/camera/Camera;->getString(I)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -6175,7 +6175,7 @@
 
     const v5, 0x7f0c011e
 
-    invoke-virtual {v3, v5}, Lcom/android/camera/Camera;->getString(I)Ljava/lang/String;
+    invoke-virtual {v3, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -6409,7 +6409,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/camera/manager/ReviewManager;->isShowing()Z
+    invoke-virtual {v1}, Lcom/android/camera/manager/ViewManager;->isShowing()Z
 
     move-result v1
 
@@ -6421,7 +6421,7 @@
 
     iget-object v1, p0, Lcom/android/camera/actor/VideoActor;->mLearningView:Lcom/android/camera/manager/LearningView;
 
-    invoke-virtual {v1}, Lcom/android/camera/manager/LearningView;->isShowing()Z
+    invoke-virtual {v1}, Lcom/android/camera/manager/ViewManager;->isShowing()Z
 
     move-result v1
 
@@ -6450,7 +6450,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/camera/manager/ReviewManager;->isShowing()Z
+    invoke-virtual {v1}, Lcom/android/camera/manager/ViewManager;->isShowing()Z
 
     move-result v1
 
@@ -6462,7 +6462,7 @@
 
     iget-object v1, p0, Lcom/android/camera/actor/VideoActor;->mLearningView:Lcom/android/camera/manager/LearningView;
 
-    invoke-virtual {v1}, Lcom/android/camera/manager/LearningView;->isShowing()Z
+    invoke-virtual {v1}, Lcom/android/camera/manager/ViewManager;->isShowing()Z
 
     move-result v1
 
@@ -6524,7 +6524,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/ui/ShutterButton;->setPressed(Z)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setPressed(Z)V
 
     .line 904
     const/4 v0, 0x1

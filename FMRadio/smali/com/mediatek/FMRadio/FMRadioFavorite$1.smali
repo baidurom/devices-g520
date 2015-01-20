@@ -30,7 +30,7 @@
     .line 185
     iput-object p1, p0, Lcom/mediatek/FMRadio/FMRadioFavorite$1;->this$0:Lcom/mediatek/FMRadio/FMRadioFavorite;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -106,12 +106,12 @@
 
     const/4 v5, -0x1
 
-    invoke-virtual {v4, v5, v2}, Lcom/mediatek/FMRadio/FMRadioFavorite;->setResult(ILandroid/content/Intent;)V
+    invoke-virtual {v4, v5, v2}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
 
     .line 205
     iget-object v4, p0, Lcom/mediatek/FMRadio/FMRadioFavorite$1;->this$0:Lcom/mediatek/FMRadio/FMRadioFavorite;
 
-    invoke-virtual {v4}, Lcom/mediatek/FMRadio/FMRadioFavorite;->finish()V
+    invoke-virtual {v4}, Landroid/app/Activity;->finish()V
 
     .line 206
     return-void
@@ -123,7 +123,7 @@
 
     .line 200
     .local v0, e:Ljava/lang/NumberFormatException;
-    invoke-virtual {v0}, Ljava/lang/NumberFormatException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 .end method

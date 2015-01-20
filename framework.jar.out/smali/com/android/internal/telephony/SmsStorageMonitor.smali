@@ -26,8 +26,6 @@
 
 .field mStorageAvailable:Z
 
-.field private mStorageNearlyFull:Z
-
 .field private mWakeLock:Landroid/os/PowerManager$WakeLock;
 
 
@@ -48,10 +46,6 @@
     iput-boolean v2, p0, Lcom/android/internal/telephony/SmsStorageMonitor;->mStorageAvailable:Z
 
     .line 152
-    const/4 v1, 0x0
-    
-    iput-boolean v1, p0, Lcom/android/internal/telephony/SmsStorageMonitor;->mStorageNearlyFull:Z
-    
     new-instance v1, Lcom/android/internal/telephony/SmsStorageMonitor$1;
 
     invoke-direct {v1, p0}, Lcom/android/internal/telephony/SmsStorageMonitor$1;-><init>(Lcom/android/internal/telephony/SmsStorageMonitor;)V
@@ -102,14 +96,6 @@
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 85
-    const-string v1, "android.intent.action.DEVICE_STORAGE_NEARLY_FULL"
-    
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-    
-    const-string v1, "android.intent.action.DEVICE_STORAGE_NOT_NEARLY_FULL"
-    
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-    
     iget-object v1, p0, Lcom/android/internal/telephony/SmsStorageMonitor;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/internal/telephony/SmsStorageMonitor;->mResultReceiver:Landroid/content/BroadcastReceiver;
@@ -118,30 +104,6 @@
 
     .line 86
     return-void
-.end method
-
-.method static synthetic access$002(Lcom/android/internal/telephony/SmsStorageMonitor;Z)Z
-    .locals 0
-    .parameter "x0"
-    .parameter "x1"
-
-    .prologue
-    .line 37
-    iput-boolean p1, p0, Lcom/android/internal/telephony/SmsStorageMonitor;->mStorageAvailable:Z
-
-    return p1
-.end method
-
-.method static synthetic access$102(Lcom/android/internal/telephony/SmsStorageMonitor;Z)Z
-    .locals 0
-    .parameter "x0"
-    .parameter "x1"
-
-    .prologue
-    .line 37
-    iput-boolean p1, p0, Lcom/android/internal/telephony/SmsStorageMonitor;->mStorageNearlyFull:Z
-
-    return p1
 .end method
 
 .method private createWakelock()V
@@ -210,64 +172,6 @@
     return-void
 .end method
 
-.method private handleIccFull(I)V
-    .locals 4
-    .parameter "subId"
-
-    .prologue
-    .line 145
-    new-instance v0, Landroid/content/Intent;
-
-    const-string v1, "android.provider.Telephony.SIM_FULL"
-
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    .line 146
-    .local v0, intent:Landroid/content/Intent;
-    const-string/jumbo v1, "subscription"
-
-    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 147
-    iget-object v1, p0, Lcom/android/internal/telephony/SmsStorageMonitor;->mWakeLock:Landroid/os/PowerManager$WakeLock;
-
-    const-wide/16 v2, 0x1388
-
-    invoke-virtual {v1, v2, v3}, Landroid/os/PowerManager$WakeLock;->acquire(J)V
-
-    .line 148
-    iget-object v1, p0, Lcom/android/internal/telephony/SmsStorageMonitor;->mContext:Landroid/content/Context;
-
-    const-string v2, "android.permission.RECEIVE_SMS"
-
-    invoke-virtual {v1, v0, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
-
-    .line 149
-    const-string v1, "SmsStorageMonitor"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "handleIccFull,send broadcast to app,subId:"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 150
-    return-void
-.end method
 
 # virtual methods
 .method public dispose()V
@@ -312,41 +216,18 @@
 
     .line 105
     :pswitch_0
-    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-    
-    check-cast v0, Landroid/os/AsyncResult;
-    
-    .local v0, ar:Landroid/os/AsyncResult;
-    iget-object v1, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
-    
-    check-cast v1, Ljava/lang/Integer;
-    
-    .local v1, subId:Ljava/lang/Integer;
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-    
-    move-result v2
-    
-    if-eqz v2, :cond_2
-    
-    invoke-direct {p0, v2}, Lcom/android/internal/telephony/SmsStorageMonitor;->handleIccFull(I)V
-    
-    goto :goto_0
-   
-    :cond_2
     invoke-direct {p0}, Lcom/android/internal/telephony/SmsStorageMonitor;->handleIccFull()V
 
     goto :goto_0
 
     .line 109
-    .end local v0           #ar:Landroid/os/AsyncResult;
-    .end local v1           #subId:Ljava/lang/Integer;
     :pswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
     .line 110
-    .restart local v0      #ar:Landroid/os/AsyncResult;
+    .local v0, ar:Landroid/os/AsyncResult;
     iget-object v1, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v1, :cond_1
@@ -430,7 +311,7 @@
 
     const/4 v3, 0x2
 
-    invoke-virtual {p0, v3}, Lcom/android/internal/telephony/SmsStorageMonitor;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {p0, v3}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v3
 
@@ -455,16 +336,6 @@
     .prologue
     .line 149
     iget-boolean v0, p0, Lcom/android/internal/telephony/SmsStorageMonitor;->mStorageAvailable:Z
-
-    return v0
-.end method
-
-.method public isStorageNearlyFull()Z
-    .locals 1
-
-    .prologue
-    .line 158
-    iget-boolean v0, p0, Lcom/android/internal/telephony/SmsStorageMonitor;->mStorageNearlyFull:Z
 
     return v0
 .end method

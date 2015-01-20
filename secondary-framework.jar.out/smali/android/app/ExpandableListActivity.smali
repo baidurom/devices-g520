@@ -50,7 +50,7 @@
     :cond_0
     const v0, 0x1090001
 
-    invoke-virtual {p0, v0}, Landroid/app/ExpandableListActivity;->setContentView(I)V
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->setContentView(I)V
 
     goto :goto_0
 .end method
@@ -133,7 +133,7 @@
     .line 219
     const v1, 0x1020004
 
-    invoke-virtual {p0, v1}, Landroid/app/ExpandableListActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -141,7 +141,7 @@
     .local v0, emptyView:Landroid/view/View;
     const v1, 0x102000a
 
-    invoke-virtual {p0, v1}, Landroid/app/ExpandableListActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -170,7 +170,7 @@
     .line 227
     iget-object v1, p0, Landroid/app/ExpandableListActivity;->mList:Landroid/widget/ExpandableListView;
 
-    invoke-virtual {v1, v0}, Landroid/widget/ExpandableListView;->setEmptyView(Landroid/view/View;)V
+    invoke-virtual {v1, v0}, Landroid/widget/AdapterView;->setEmptyView(Landroid/view/View;)V
 
     .line 229
     :cond_1

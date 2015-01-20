@@ -38,7 +38,7 @@
     .line 1361
     iput-object p1, p0, Lcom/android/server/WifiService$LockList;->this$0:Lcom/android/server/WifiService;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1362
     new-instance v0, Ljava/util/ArrayList;
@@ -419,7 +419,7 @@
 
     .line 1395
     .local v1, ret:Lcom/android/server/WifiService$WifiLock;
-    invoke-virtual {v1}, Lcom/android/server/WifiService$WifiLock;->unlinkDeathRecipient()V
+    invoke-virtual {v1}, Lcom/android/server/WifiService$DeathRecipient;->unlinkDeathRecipient()V
 
     .line 1398
     .end local v1           #ret:Lcom/android/server/WifiService$WifiLock;

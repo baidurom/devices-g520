@@ -3,8 +3,8 @@
 .source "Camera.java"
 
 # interfaces
-.implements Lcom/android/camera/ui/PreviewFrameLayout$OnSizeChangedListener;
 .implements Lcom/android/camera/CameraScreenNail$FrameListener;
+.implements Lcom/android/camera/ui/PreviewFrameLayout$OnSizeChangedListener;
 
 
 # annotations
@@ -2415,7 +2415,7 @@
     .local v0, start:J
     iget-object v4, p0, Lcom/android/camera/Camera;->mOrientationListener:Lcom/android/camera/Camera$MyOrientationEventListener;
 
-    invoke-virtual {v4}, Lcom/android/camera/Camera$MyOrientationEventListener;->enable()V
+    invoke-virtual {v4}, Landroid/view/OrientationEventListener;->enable()V
 
     .line 701
     invoke-direct {p0}, Lcom/android/camera/Camera;->installIntentFilter()V
@@ -2489,7 +2489,7 @@
 
     invoke-direct {v0, p0}, Lcom/android/camera/Camera$19;-><init>(Lcom/android/camera/Camera;)V
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/Camera;->runOnUiThread(Ljava/lang/Runnable;)V
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
     .line 2823
     return-void
@@ -2551,7 +2551,7 @@
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/camera/Camera$17;-><init>(Lcom/android/camera/Camera;Ljava/lang/String;I)V
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/Camera;->runOnUiThread(Ljava/lang/Runnable;)V
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
     .line 2748
     return-void
@@ -2602,7 +2602,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/android/camera/Camera$18;-><init>(Lcom/android/camera/Camera;Z)V
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/Camera;->runOnUiThread(Ljava/lang/Runnable;)V
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
     .line 2789
     return-void
@@ -2899,12 +2899,12 @@
     .line 568
     iget-object v4, p0, Lcom/android/camera/Camera;->mShutterManager:Lcom/android/camera/manager/ShutterManager;
 
-    invoke-virtual {v4}, Lcom/android/camera/manager/ShutterManager;->show()V
+    invoke-virtual {v4}, Lcom/android/camera/manager/ViewManager;->show()V
 
     .line 569
     iget-object v4, p0, Lcom/android/camera/Camera;->mSettingManager:Lcom/android/camera/manager/SettingManager;
 
-    invoke-virtual {v4}, Lcom/android/camera/manager/SettingManager;->show()V
+    invoke-virtual {v4}, Lcom/android/camera/manager/ViewManager;->show()V
 
     .line 570
     invoke-virtual {p0}, Lcom/android/camera/Camera;->isNonePickIntent()Z
@@ -2916,12 +2916,12 @@
     .line 571
     iget-object v4, p0, Lcom/android/camera/Camera;->mModePicker:Lcom/android/camera/manager/ModePicker;
 
-    invoke-virtual {v4}, Lcom/android/camera/manager/ModePicker;->show()V
+    invoke-virtual {v4}, Lcom/android/camera/manager/ViewManager;->show()V
 
     .line 572
     iget-object v4, p0, Lcom/android/camera/Camera;->mThumbnailManager:Lcom/android/camera/manager/ThumbnailManager;
 
-    invoke-virtual {v4}, Lcom/android/camera/manager/ThumbnailManager;->show()V
+    invoke-virtual {v4}, Lcom/android/camera/manager/ViewManager;->show()V
 
     .line 573
     invoke-static {p0}, Lcom/mediatek/camera/ext/ExtensionHelper;->showAppGuide(Landroid/app/Activity;)V
@@ -3226,7 +3226,7 @@
 
     invoke-direct {v0, p0}, Lcom/android/camera/Camera$7;-><init>(Lcom/android/camera/Camera;)V
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/Camera;->runOnUiThread(Ljava/lang/Runnable;)V
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
     .line 1641
     iget-object v0, p0, Lcom/android/camera/Camera;->mFocusManager:Lcom/android/camera/FocusManager;
@@ -3282,7 +3282,7 @@
 
     move-result-object v6
 
-    invoke-virtual {p0}, Lcom/android/camera/Camera;->getMainLooper()Landroid/os/Looper;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v8
 
@@ -3345,7 +3345,7 @@
     .line 614
     const v0, 0x7f0b00ed
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/Camera;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -3356,7 +3356,7 @@
     .line 615
     const v0, 0x7f0b00ee
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/Camera;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -3367,7 +3367,7 @@
     .line 617
     const v0, 0x7f0b00ef
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/Camera;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -3378,7 +3378,7 @@
     .line 618
     const v0, 0x7f0b00f0
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/Camera;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -3389,7 +3389,7 @@
     .line 620
     const v0, 0x7f0b00f1
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/Camera;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -3411,7 +3411,7 @@
     :cond_0
     const v0, 0x7f0b00b4
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/Camera;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -3422,7 +3422,7 @@
     .line 630
     const v0, 0x7f0b00b6
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/Camera;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -3433,7 +3433,7 @@
     .line 634
     const v0, 0x7f0b001f
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/Camera;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -3455,7 +3455,7 @@
     :cond_1
     const v0, 0x7f0b00b3
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/Camera;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -3466,7 +3466,7 @@
     .line 641
     const v0, 0x7f0b00b1
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/Camera;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -3477,12 +3477,12 @@
     .line 643
     iget-object v0, p0, Lcom/android/camera/Camera;->mPreviewFrameLayout:Lcom/android/camera/ui/PreviewFrameLayout;
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/Camera;->setSingleTapUpListener(Landroid/view/View;)V
+    invoke-virtual {p0, v0}, Lcom/android/camera/ActivityBase;->setSingleTapUpListener(Landroid/view/View;)V
 
     .line 644
     iget-object v0, p0, Lcom/android/camera/Camera;->mPreviewFrameLayout:Lcom/android/camera/ui/PreviewFrameLayout;
 
-    invoke-virtual {v0, p0}, Lcom/android/camera/ui/PreviewFrameLayout;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+    invoke-virtual {v0, p0}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
     .line 645
     iget-object v0, p0, Lcom/android/camera/Camera;->mPreviewFrameLayout:Lcom/android/camera/ui/PreviewFrameLayout;
@@ -3597,7 +3597,7 @@
     .line 2556
     iget-object v1, p0, Lcom/android/camera/Camera;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v1, v0}, Lcom/android/camera/Camera;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v1, v0}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 2557
     return-void
@@ -4319,7 +4319,7 @@
 
     .line 2411
     :cond_1
-    invoke-virtual {p0}, Lcom/android/camera/Camera;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
@@ -4605,7 +4605,7 @@
 
     iget-object v3, p0, Lcom/android/camera/Camera;->mPreferences:Lcom/android/camera/ComboPreferences;
 
-    invoke-virtual {p0}, Lcom/android/camera/Camera;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -4702,7 +4702,7 @@
     const/4 v5, 0x0
 
     .line 2278
-    invoke-virtual {p0}, Lcom/android/camera/Camera;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -4999,17 +4999,17 @@
     .line 2184
     iget-object v0, p0, Lcom/android/camera/Camera;->mModePicker:Lcom/android/camera/manager/ModePicker;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/ModePicker;->refresh()V
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->refresh()V
 
     .line 2185
     iget-object v0, p0, Lcom/android/camera/Camera;->mPickerManager:Lcom/android/camera/manager/PickerManager;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/PickerManager;->refresh()V
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->refresh()V
 
     .line 2186
     iget-object v0, p0, Lcom/android/camera/Camera;->mShutterManager:Lcom/android/camera/manager/ShutterManager;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/ShutterManager;->refresh()V
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->refresh()V
 
     .line 2187
     return-void
@@ -5025,7 +5025,7 @@
     if-eqz v0, :cond_0
 
     .line 953
-    invoke-virtual {p0}, Lcom/android/camera/Camera;->getGLRoot()Lcom/android/gallery3d/ui/GLRoot;
+    invoke-virtual {p0}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->getGLRoot()Lcom/android/gallery3d/ui/GLRoot;
 
     move-result-object v0
 
@@ -5388,7 +5388,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/camera/Camera;->mSettingManager:Lcom/android/camera/manager/SettingManager;
 
-    invoke-virtual {v0, p1}, Lcom/android/camera/manager/SettingManager;->setEnabled(Z)V
+    invoke-virtual {v0, p1}, Lcom/android/camera/manager/ViewManager;->setEnabled(Z)V
 
     .line 2689
     iget-object v0, p0, Lcom/android/camera/Camera;->mPickerManager:Lcom/android/camera/manager/PickerManager;
@@ -5398,7 +5398,7 @@
     .line 2690
     iget-object v0, p0, Lcom/android/camera/Camera;->mZoomManager:Lcom/android/camera/manager/ZoomManager;
 
-    invoke-virtual {v0, p1}, Lcom/android/camera/manager/ZoomManager;->setEnabled(Z)V
+    invoke-virtual {v0, p1}, Lcom/android/camera/manager/ViewManager;->setEnabled(Z)V
 
     .line 2691
     return-void
@@ -5422,23 +5422,23 @@
     .line 2670
     iget-object v0, p0, Lcom/android/camera/Camera;->mModePicker:Lcom/android/camera/manager/ModePicker;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/ModePicker;->show()V
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->show()V
 
     .line 2671
     iget-object v0, p0, Lcom/android/camera/Camera;->mThumbnailManager:Lcom/android/camera/manager/ThumbnailManager;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/ThumbnailManager;->show()V
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->show()V
 
     .line 2673
     :cond_0
     iget-object v0, p0, Lcom/android/camera/Camera;->mShutterManager:Lcom/android/camera/manager/ShutterManager;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/ShutterManager;->show()V
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->show()V
 
     .line 2674
     iget-object v0, p0, Lcom/android/camera/Camera;->mSettingManager:Lcom/android/camera/manager/SettingManager;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/SettingManager;->show()V
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->show()V
 
     .line 2681
     :goto_0
@@ -5448,12 +5448,12 @@
     :cond_1
     iget-object v0, p0, Lcom/android/camera/Camera;->mModePicker:Lcom/android/camera/manager/ModePicker;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/ModePicker;->hide()V
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->hide()V
 
     .line 2677
     iget-object v0, p0, Lcom/android/camera/Camera;->mPickerManager:Lcom/android/camera/manager/PickerManager;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/PickerManager;->hide()V
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->hide()V
 
     .line 2678
     iget-object v0, p0, Lcom/android/camera/Camera;->mSettingManager:Lcom/android/camera/manager/SettingManager;
@@ -5705,11 +5705,11 @@
 
     .line 2091
     .local v0, cameraOpenThread:Lcom/android/camera/Camera$CameraStartUpThread;
-    invoke-virtual {v0}, Lcom/android/camera/Camera$CameraStartUpThread;->start()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     .line 2094
     :try_start_0
-    invoke-virtual {v0}, Lcom/android/camera/Camera$CameraStartUpThread;->join()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->join()V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -5774,7 +5774,7 @@
 
     .line 2096
     .local v1, ex:Ljava/lang/InterruptedException;
-    invoke-virtual {v1}, Ljava/lang/InterruptedException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_1
 .end method
@@ -5786,7 +5786,7 @@
     .line 2560
     iget-object v0, p0, Lcom/android/camera/Camera;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/Camera;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 2561
     return-void
@@ -5861,10 +5861,10 @@
     :cond_1
     iget-object v3, p0, Lcom/android/camera/ActivityBase;->mCameraScreenNail:Lcom/android/camera/CameraScreenNail;
 
-    invoke-virtual {v3, v2, v0}, Lcom/android/camera/CameraScreenNail;->setSize(II)V
+    invoke-virtual {v3, v2, v0}, Lcom/android/gallery3d/ui/SurfaceTextureScreenNail;->setSize(II)V
 
     .line 989
-    invoke-virtual {p0}, Lcom/android/camera/Camera;->notifyScreenNailChanged()V
+    invoke-virtual {p0}, Lcom/android/camera/ActivityBase;->notifyScreenNailChanged()V
 
     .line 991
     :cond_2
@@ -5951,7 +5951,7 @@
     .line 664
     iget-object v3, p0, Lcom/android/camera/Camera;->mFaceView:Lcom/android/camera/ui/FaceView;
 
-    invoke-virtual {v3, v2}, Lcom/android/camera/ui/FaceView;->setVisibility(I)V
+    invoke-virtual {v3, v2}, Landroid/view/View;->setVisibility(I)V
 
     .line 665
     iget-object v3, p0, Lcom/android/camera/Camera;->mFaceView:Lcom/android/camera/ui/FaceView;
@@ -6055,7 +6055,7 @@
     invoke-direct {p0, v4, v4, v2}, Lcom/android/camera/Camera;->updateCameraScreenNailSize(IILandroid/hardware/Camera$Size;)V
 
     .line 965
-    invoke-virtual {p0}, Lcom/android/camera/Camera;->getGLRoot()Lcom/android/gallery3d/ui/GLRoot;
+    invoke-virtual {p0}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->getGLRoot()Lcom/android/gallery3d/ui/GLRoot;
 
     move-result-object v3
 
@@ -6071,7 +6071,7 @@
     .line 968
     iget-object v3, p0, Lcom/android/camera/ActivityBase;->mCameraScreenNail:Lcom/android/camera/CameraScreenNail;
 
-    invoke-virtual {v3}, Lcom/android/camera/CameraScreenNail;->getSurfaceTexture()Landroid/graphics/SurfaceTexture;
+    invoke-virtual {v3}, Lcom/android/gallery3d/ui/SurfaceTextureScreenNail;->getSurfaceTexture()Landroid/graphics/SurfaceTexture;
 
     move-result-object v3
 
@@ -6098,7 +6098,7 @@
     :cond_1
     iget-object v3, p0, Lcom/android/camera/ActivityBase;->mCameraScreenNail:Lcom/android/camera/CameraScreenNail;
 
-    invoke-virtual {v3}, Lcom/android/camera/CameraScreenNail;->getWidth()I
+    invoke-virtual {v3}, Lcom/android/gallery3d/ui/SurfaceTextureScreenNail;->getWidth()I
 
     move-result v1
 
@@ -6106,7 +6106,7 @@
     .local v1, oldWidth:I
     iget-object v3, p0, Lcom/android/camera/ActivityBase;->mCameraScreenNail:Lcom/android/camera/CameraScreenNail;
 
-    invoke-virtual {v3}, Lcom/android/camera/CameraScreenNail;->getHeight()I
+    invoke-virtual {v3}, Lcom/android/gallery3d/ui/SurfaceTextureScreenNail;->getHeight()I
 
     move-result v0
 
@@ -6166,7 +6166,7 @@
     .line 372
     iget-object v1, p0, Lcom/android/camera/Camera;->mCameraStartUpThread:Lcom/android/camera/Camera$CameraStartUpThread;
 
-    invoke-virtual {v1}, Lcom/android/camera/Camera$CameraStartUpThread;->join()V
+    invoke-virtual {v1}, Ljava/lang/Thread;->join()V
 
     .line 373
     const/4 v1, 0x0
@@ -6621,7 +6621,7 @@
     .local v6, runnable2:Ljava/lang/Runnable;
     iget-object v0, p0, Lcom/android/camera/Camera;->mPreferences:Lcom/android/camera/ComboPreferences;
 
-    invoke-virtual {p0}, Lcom/android/camera/Camera;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -6652,7 +6652,7 @@
     .line 1859
     const v0, 0x7f0c0153
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/Camera;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -6660,7 +6660,7 @@
     .local v2, status:Ljava/lang/String;
     const v0, 0x7f0c0154
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/Camera;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -6668,7 +6668,7 @@
     .local v3, clkYes:Ljava/lang/String;
     const v0, 0x7f0c0155
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/Camera;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
@@ -6849,7 +6849,7 @@
     .local v0, handle:Z
     iget-object v3, p0, Lcom/android/camera/Camera;->mRotateDialog:Lcom/android/camera/manager/RotateDialog;
 
-    invoke-virtual {v3}, Lcom/android/camera/manager/RotateDialog;->isShowing()Z
+    invoke-virtual {v3}, Lcom/android/camera/manager/ViewManager;->isShowing()Z
 
     move-result v3
 
@@ -6860,7 +6860,7 @@
     .line 1353
     iget-object v3, p0, Lcom/android/camera/Camera;->mRotateDialog:Lcom/android/camera/manager/RotateDialog;
 
-    invoke-virtual {v3}, Lcom/android/camera/manager/RotateDialog;->hide()V
+    invoke-virtual {v3}, Lcom/android/camera/manager/ViewManager;->hide()V
 
     .line 1354
     const/4 v0, 0x1
@@ -6966,7 +6966,7 @@
     .line 2831
     iget-object v0, p0, Lcom/android/camera/Camera;->mRotateDialog:Lcom/android/camera/manager/RotateDialog;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/RotateDialog;->hide()V
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->hide()V
 
     .line 2832
     return-void
@@ -7003,7 +7003,7 @@
     .line 2840
     iget-object v0, p0, Lcom/android/camera/Camera;->mRotateProgress:Lcom/android/camera/manager/RotateProgress;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/RotateProgress;->hide()V
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->hide()V
 
     .line 2841
     invoke-virtual {p0}, Lcom/android/camera/Camera;->restoreViewState()V
@@ -7375,7 +7375,7 @@
     .line 1174
     iget-object v0, p0, Lcom/android/camera/ActivityBase;->mCameraScreenNail:Lcom/android/camera/CameraScreenNail;
 
-    invoke-virtual {v0}, Lcom/android/camera/CameraScreenNail;->getHeight()I
+    invoke-virtual {v0}, Lcom/android/gallery3d/ui/SurfaceTextureScreenNail;->getHeight()I
 
     move-result v0
 
@@ -7389,7 +7389,7 @@
     .line 1170
     iget-object v0, p0, Lcom/android/camera/ActivityBase;->mCameraScreenNail:Lcom/android/camera/CameraScreenNail;
 
-    invoke-virtual {v0}, Lcom/android/camera/CameraScreenNail;->getWidth()I
+    invoke-virtual {v0}, Lcom/android/gallery3d/ui/SurfaceTextureScreenNail;->getWidth()I
 
     move-result v0
 
@@ -7657,7 +7657,7 @@
 
     iget-object v2, p0, Lcom/android/camera/Camera;->mPreviewFrameLayout:Lcom/android/camera/ui/PreviewFrameLayout;
 
-    invoke-virtual {v2}, Lcom/android/camera/ui/PreviewFrameLayout;->getHeight()I
+    invoke-virtual {v2}, Landroid/view/View;->getHeight()I
 
     move-result v2
 
@@ -7714,7 +7714,7 @@
 
     iget-object v2, p0, Lcom/android/camera/Camera;->mPreviewFrameLayout:Lcom/android/camera/ui/PreviewFrameLayout;
 
-    invoke-virtual {v2}, Lcom/android/camera/ui/PreviewFrameLayout;->getWidth()I
+    invoke-virtual {v2}, Landroid/view/View;->getWidth()I
 
     move-result v2
 
@@ -7919,7 +7919,7 @@
     .line 1148
     iget-object v0, p0, Lcom/android/camera/Camera;->mReviewManager:Lcom/android/camera/manager/ReviewManager;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/ReviewManager;->hide()V
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->hide()V
 
     .line 1149
     invoke-virtual {p0}, Lcom/android/camera/Camera;->restoreViewState()V
@@ -7935,7 +7935,7 @@
 
     .prologue
     .line 1218
-    invoke-virtual {p0}, Lcom/android/camera/Camera;->getLayoutInflater()Landroid/view/LayoutInflater;
+    invoke-virtual {p0}, Landroid/app/Activity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v0
 
@@ -8283,7 +8283,7 @@
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 2247
-    invoke-virtual {p0}, Lcom/android/camera/Camera;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
@@ -8320,7 +8320,7 @@
     invoke-virtual {v0, v3}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 2238
-    invoke-virtual {p0}, Lcom/android/camera/Camera;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
@@ -8412,7 +8412,7 @@
     .line 1913
     iget-object v0, p0, Lcom/android/camera/Camera;->mSettingManager:Lcom/android/camera/manager/SettingManager;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/SettingManager;->refresh()V
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->refresh()V
 
     .line 1914
     return-void
@@ -8426,7 +8426,7 @@
 
     .prologue
     .line 851
-    invoke-super {p0, p1, p2, p3}, Lcom/android/camera/ActivityBase;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->onActivityResult(IILandroid/content/Intent;)V
 
     .line 853
     packed-switch p1, :pswitch_data_0
@@ -8570,7 +8570,7 @@
 
     .line 790
     :cond_3
-    invoke-super {p0}, Lcom/android/camera/ActivityBase;->onBackPressed()V
+    invoke-super {p0}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->onBackPressed()V
 
     goto :goto_0
 
@@ -8608,7 +8608,7 @@
     .line 800
     iget-object v2, p0, Lcom/android/camera/Camera;->mSettingManager:Lcom/android/camera/manager/SettingManager;
 
-    invoke-virtual {v2}, Lcom/android/camera/manager/SettingManager;->refresh()V
+    invoke-virtual {v2}, Lcom/android/camera/manager/ViewManager;->refresh()V
 
     .line 804
     .end local v0           #bOpen:Z
@@ -8634,7 +8634,7 @@
     if-nez v2, :cond_6
 
     .line 806
-    invoke-super {p0}, Lcom/android/camera/ActivityBase;->onBackPressed()V
+    invoke-super {p0}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->onBackPressed()V
 
     .line 808
     :cond_6
@@ -8671,7 +8671,7 @@
     const/4 v4, 0x1
 
     .line 813
-    invoke-super {p0, p1}, Lcom/android/camera/ActivityBase;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 814
     sget-boolean v1, Lcom/android/camera/Camera;->LOG:Z
@@ -8714,7 +8714,7 @@
     .line 818
     const v1, 0x7f0b0010
 
-    invoke-virtual {p0, v1}, Lcom/android/camera/Camera;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -8725,7 +8725,7 @@
     invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
 
     .line 820
-    invoke-virtual {p0}, Lcom/android/camera/Camera;->getLayoutInflater()Landroid/view/LayoutInflater;
+    invoke-virtual {p0}, Landroid/app/Activity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v1
 
@@ -8734,7 +8734,7 @@
     invoke-virtual {v1, v2, v0, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 821
-    invoke-virtual {p0}, Lcom/android/camera/Camera;->getLayoutInflater()Landroid/view/LayoutInflater;
+    invoke-virtual {p0}, Landroid/app/Activity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v1
 
@@ -8923,7 +8923,7 @@
     .line 540
     iget-object v0, p0, Lcom/android/camera/Camera;->mCameraStartUpThread:Lcom/android/camera/Camera$CameraStartUpThread;
 
-    invoke-virtual {v0}, Lcom/android/camera/Camera$CameraStartUpThread;->start()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     .line 543
     invoke-static {p0}, Lcom/mediatek/camera/ext/ExtensionHelper;->ensureCameraExtension(Landroid/content/Context;)V
@@ -8936,14 +8936,14 @@
     .line 547
     const v0, 0x7f04000a
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/Camera;->setContentView(I)V
+    invoke-virtual {p0, v0}, Lcom/android/camera/ActivityBase;->setContentView(I)V
 
     .line 549
     invoke-virtual {p0}, Lcom/android/camera/Camera;->isNonePickIntent()Z
 
     move-result v0
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/Camera;->createCameraScreenNail(Z)V
+    invoke-virtual {p0, v0}, Lcom/android/camera/ActivityBase;->createCameraScreenNail(Z)V
 
     .line 550
     iget-object v0, p0, Lcom/android/camera/ActivityBase;->mCameraScreenNail:Lcom/android/camera/CameraScreenNail;
@@ -9007,7 +9007,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Lcom/android/camera/Camera;->isChangingConfigurations()Z
+    invoke-virtual {p0}, Landroid/app/Activity;->isChangingConfigurations()Z
 
     move-result v0
 
@@ -9044,7 +9044,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/camera/Camera;->isChangingConfigurations()Z
+    invoke-virtual {p0}, Landroid/app/Activity;->isChangingConfigurations()Z
 
     move-result v2
 
@@ -9158,7 +9158,7 @@
 
     .line 2204
     :cond_1
-    invoke-virtual {p0}, Lcom/android/camera/Camera;->isFullScreen()Z
+    invoke-virtual {p0}, Lcom/android/camera/ActivityBase;->isFullScreen()Z
 
     move-result v1
 
@@ -9229,7 +9229,7 @@
     if-nez v1, :cond_0
 
     .line 2220
-    invoke-super {p0, p1, p2}, Lcom/android/camera/ActivityBase;->onKeyUp(ILandroid/view/KeyEvent;)Z
+    invoke-super {p0, p1, p2}, Landroid/app/Activity;->onKeyUp(ILandroid/view/KeyEvent;)Z
 
     move-result v0
 
@@ -9348,7 +9348,7 @@
     .line 746
     iget-object v0, p0, Lcom/android/camera/Camera;->mOrientationListener:Lcom/android/camera/Camera$MyOrientationEventListener;
 
-    invoke-virtual {v0}, Lcom/android/camera/Camera$MyOrientationEventListener;->disable()V
+    invoke-virtual {v0}, Landroid/view/OrientationEventListener;->disable()V
 
     .line 747
     iget-object v0, p0, Lcom/android/camera/Camera;->mLocationManager:Lcom/android/camera/LocationManager;
@@ -9406,7 +9406,7 @@
 
     .prologue
     .line 2437
-    invoke-super {p0}, Lcom/android/camera/ActivityBase;->onRestart()V
+    invoke-super {p0}, Landroid/app/Activity;->onRestart()V
 
     .line 2438
     invoke-virtual {p0}, Lcom/android/camera/Camera;->isNonePickIntent()Z
@@ -9422,7 +9422,7 @@
     if-eqz v0, :cond_1
 
     .line 2439
-    invoke-virtual {p0}, Lcom/android/camera/Camera;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 2440
     const/4 v0, 0x1
@@ -9430,11 +9430,11 @@
     iput-boolean v0, p0, Lcom/android/camera/Camera;->mForceFinishing:Z
 
     .line 2441
-    invoke-virtual {p0}, Lcom/android/camera/Camera;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/Camera;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
     .line 2450
     :goto_0
@@ -9473,7 +9473,7 @@
 
     .line 2447
     :cond_1
-    invoke-virtual {p0}, Lcom/android/camera/Camera;->updateCameraAppViewIfNeed()V
+    invoke-virtual {p0}, Lcom/android/camera/ActivityBase;->updateCameraAppViewIfNeed()V
 
     goto :goto_0
 .end method
@@ -9607,7 +9607,7 @@
     .line 692
     iget-object v0, p0, Lcom/android/camera/Camera;->mCameraStartUpThread:Lcom/android/camera/Camera$CameraStartUpThread;
 
-    invoke-virtual {v0}, Lcom/android/camera/Camera$CameraStartUpThread;->start()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     .line 694
     :cond_3
@@ -9684,7 +9684,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/camera/Camera;->mRotateDialog:Lcom/android/camera/manager/RotateDialog;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/RotateDialog;->isShowing()Z
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->isShowing()Z
 
     move-result v0
 
@@ -9692,7 +9692,7 @@
 
     iget-object v0, p0, Lcom/android/camera/Camera;->mRotateProgress:Lcom/android/camera/manager/RotateProgress;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/RotateProgress;->isShowing()Z
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->isShowing()Z
 
     move-result v0
 
@@ -9742,7 +9742,7 @@
     .line 945
     iget-object v0, p0, Lcom/android/camera/Camera;->mRotateDialog:Lcom/android/camera/manager/RotateDialog;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/RotateDialog;->isShowing()Z
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->isShowing()Z
 
     move-result v0
 
@@ -9750,7 +9750,7 @@
 
     iget-object v0, p0, Lcom/android/camera/Camera;->mRotateProgress:Lcom/android/camera/manager/RotateProgress;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/RotateProgress;->isShowing()Z
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->isShowing()Z
 
     move-result v0
 
@@ -9800,7 +9800,7 @@
 
     .prologue
     .line 758
-    invoke-super {p0}, Lcom/android/camera/ActivityBase;->onStop()V
+    invoke-super {p0}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->onStop()V
 
     .line 759
     invoke-direct {p0}, Lcom/android/camera/Camera;->releaseSurface()V
@@ -9823,7 +9823,7 @@
     if-nez v0, :cond_0
 
     .line 2194
-    invoke-super {p0}, Lcom/android/camera/ActivityBase;->onUserInteraction()V
+    invoke-super {p0}, Landroid/app/Activity;->onUserInteraction()V
 
     .line 2196
     :cond_0
@@ -10018,7 +10018,7 @@
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 2230
-    invoke-virtual {p0}, Lcom/android/camera/Camera;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
@@ -10109,10 +10109,10 @@
 
     .prologue
     .line 2877
-    invoke-virtual {p0, p1}, Lcom/android/camera/Camera;->setResultEx(I)V
+    invoke-virtual {p0, p1}, Lcom/android/camera/ActivityBase;->setResultEx(I)V
 
     .line 2878
-    invoke-virtual {p0}, Lcom/android/camera/Camera;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 2879
     return-void
@@ -10125,10 +10125,10 @@
 
     .prologue
     .line 2882
-    invoke-virtual {p0, p1, p2}, Lcom/android/camera/Camera;->setResultEx(ILandroid/content/Intent;)V
+    invoke-virtual {p0, p1, p2}, Lcom/android/camera/ActivityBase;->setResultEx(ILandroid/content/Intent;)V
 
     .line 2883
-    invoke-virtual {p0}, Lcom/android/camera/Camera;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 2884
     return-void
@@ -10348,12 +10348,12 @@
     .line 2597
     iget-object v0, p0, Lcom/android/camera/Camera;->mSettingManager:Lcom/android/camera/manager/SettingManager;
 
-    invoke-virtual {v0, v4}, Lcom/android/camera/manager/SettingManager;->setFileter(Z)V
+    invoke-virtual {v0, v4}, Lcom/android/camera/manager/ViewManager;->setFileter(Z)V
 
     .line 2598
     iget-object v0, p0, Lcom/android/camera/Camera;->mSettingManager:Lcom/android/camera/manager/SettingManager;
 
-    invoke-virtual {v0, v4, v4}, Lcom/android/camera/manager/SettingManager;->setAnimationEnabled(ZZ)V
+    invoke-virtual {v0, v4, v4}, Lcom/android/camera/manager/ViewManager;->setAnimationEnabled(ZZ)V
 
     .line 2600
     iget-object v0, p0, Lcom/android/camera/Camera;->mMainHandler:Landroid/os/Handler;
@@ -10421,7 +10421,7 @@
     .line 2621
     iget-object v0, p0, Lcom/android/camera/Camera;->mZoomManager:Lcom/android/camera/manager/ZoomManager;
 
-    invoke-virtual {v0, v4}, Lcom/android/camera/manager/ZoomManager;->setEnabled(Z)V
+    invoke-virtual {v0, v4}, Lcom/android/camera/manager/ViewManager;->setEnabled(Z)V
 
     goto :goto_0
 
@@ -10429,17 +10429,17 @@
     :pswitch_4
     iget-object v0, p0, Lcom/android/camera/Camera;->mModePicker:Lcom/android/camera/manager/ModePicker;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/ModePicker;->hide()V
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->hide()V
 
     .line 2625
     iget-object v0, p0, Lcom/android/camera/Camera;->mThumbnailManager:Lcom/android/camera/manager/ThumbnailManager;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/ThumbnailManager;->hide()V
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->hide()V
 
     .line 2626
     iget-object v0, p0, Lcom/android/camera/Camera;->mPickerManager:Lcom/android/camera/manager/PickerManager;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/PickerManager;->hide()V
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->hide()V
 
     .line 2627
     invoke-direct {p0, v3}, Lcom/android/camera/Camera;->setViewManagerEnable(Z)V
@@ -10447,7 +10447,7 @@
     .line 2628
     iget-object v0, p0, Lcom/android/camera/Camera;->mSettingManager:Lcom/android/camera/manager/SettingManager;
 
-    invoke-virtual {v0, v4}, Lcom/android/camera/manager/SettingManager;->setEnabled(Z)V
+    invoke-virtual {v0, v4}, Lcom/android/camera/manager/ViewManager;->setEnabled(Z)V
 
     goto :goto_0
 
@@ -10492,7 +10492,7 @@
     .line 2646
     iget-object v0, p0, Lcom/android/camera/Camera;->mIndicatorManager:Lcom/android/camera/manager/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/IndicatorManager;->hide()V
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->hide()V
 
     goto/16 :goto_0
 
@@ -10530,7 +10530,7 @@
     .line 2659
     iget-object v0, p0, Lcom/android/camera/Camera;->mThumbnailManager:Lcom/android/camera/manager/ThumbnailManager;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/ThumbnailManager;->hide()V
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->hide()V
 
     goto/16 :goto_0
 
@@ -10762,7 +10762,7 @@
     .line 1145
     iget-object v0, p0, Lcom/android/camera/Camera;->mReviewManager:Lcom/android/camera/manager/ReviewManager;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/ReviewManager;->show()V
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->show()V
 
     .line 1146
     return-void
@@ -10882,7 +10882,7 @@
 
     .prologue
     .line 2845
-    invoke-virtual {p0, p1}, Lcom/android/camera/Camera;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 

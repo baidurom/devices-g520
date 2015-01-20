@@ -333,7 +333,7 @@
 
     iget-object v0, p0, Lcom/android/gallery3d/ui/SlotView;->mAnimation:Lcom/android/gallery3d/ui/SlotView$SlotAnimation;
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/ui/SlotView$SlotAnimation;->isActive()Z
+    invoke-virtual {v0}, Lcom/android/gallery3d/anim/Animation;->isActive()Z
 
     move-result v0
 
@@ -529,7 +529,7 @@
 
     .line 122
     .local v4, visibleBegin:I
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/SlotView;->getWidth()I
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->getWidth()I
 
     move-result v6
 
@@ -740,7 +740,7 @@
     invoke-virtual {v0}, Lcom/android/gallery3d/ui/Paper;->onRelease()V
 
     .line 213
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/SlotView;->invalidate()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->invalidate()V
 
     goto :goto_0
 
@@ -968,7 +968,7 @@
 
     move-object/from16 v0, v20
 
-    invoke-virtual {v0, v3, v4}, Lcom/android/gallery3d/ui/SlotView$SlotAnimation;->calculate(J)Z
+    invoke-virtual {v0, v3, v4}, Lcom/android/gallery3d/anim/Animation;->calculate(J)Z
 
     move-result v20
 
@@ -1250,7 +1250,7 @@
     .line 300
     if-eqz v8, :cond_d
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/gallery3d/ui/SlotView;->invalidate()V
+    invoke-virtual/range {p0 .. p0}, Lcom/android/gallery3d/ui/GLView;->invalidate()V
 
     .line 302
     :cond_d
@@ -1350,7 +1350,7 @@
 
     add-int/2addr v3, v4
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/SlotView;->getWidth()I
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->getWidth()I
 
     move-result v4
 
@@ -1575,7 +1575,7 @@
     .line 178
     iget-object v0, p0, Lcom/android/gallery3d/ui/SlotView;->mAnimation:Lcom/android/gallery3d/ui/SlotView$SlotAnimation;
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/ui/SlotView$SlotAnimation;->start()V
+    invoke-virtual {v0}, Lcom/android/gallery3d/anim/Animation;->start()V
 
     .line 179
     iget-object v0, p0, Lcom/android/gallery3d/ui/SlotView;->mLayout:Lcom/android/gallery3d/ui/SlotView$Layout;
@@ -1587,7 +1587,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/SlotView;->invalidate()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->invalidate()V
 
     .line 180
     :cond_0
@@ -1609,7 +1609,7 @@
     .line 172
     iget-object v0, p0, Lcom/android/gallery3d/ui/SlotView;->mAnimation:Lcom/android/gallery3d/ui/SlotView$SlotAnimation;
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/ui/SlotView$SlotAnimation;->start()V
+    invoke-virtual {v0}, Lcom/android/gallery3d/anim/Animation;->start()V
 
     .line 173
     iget-object v0, p0, Lcom/android/gallery3d/ui/SlotView;->mLayout:Lcom/android/gallery3d/ui/SlotView$Layout;
@@ -1621,7 +1621,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/SlotView;->invalidate()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->invalidate()V
 
     .line 174
     :cond_0

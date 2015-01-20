@@ -73,7 +73,7 @@
 
     .prologue
     .line 278
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 279
     iput-object p1, p0, Landroid/support/v4/app/ShareCompat$IntentBuilder;->mActivity:Landroid/app/Activity;
@@ -96,7 +96,7 @@
 
     const-string v1, "android.support.v4.app.EXTRA_CALLING_PACKAGE"
 
-    invoke-virtual {p1}, Landroid/app/Activity;->getPackageName()Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/content/ContextWrapper;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
@@ -707,7 +707,7 @@
     .line 407
     iget-object v0, p0, Landroid/support/v4/app/ShareCompat$IntentBuilder;->mActivity:Landroid/app/Activity;
 
-    invoke-virtual {v0, p1}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {v0, p1}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 

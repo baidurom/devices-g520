@@ -63,7 +63,7 @@
     if-eqz v0, :cond_0
 
     .line 100
-    invoke-virtual {p0}, Landroid/view/ContextThemeWrapper;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -196,7 +196,7 @@
     :cond_0
     iget v0, p0, Landroid/view/ContextThemeWrapper;->mThemeResource:I
 
-    invoke-virtual {p0}, Landroid/view/ContextThemeWrapper;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v1
 

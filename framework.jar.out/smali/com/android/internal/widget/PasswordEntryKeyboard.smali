@@ -374,7 +374,7 @@
 
     .line 144
     .local v1, i:I
-    invoke-virtual {p0}, Lcom/android/internal/widget/PasswordEntryKeyboard;->getShiftKeyIndices()[I
+    invoke-virtual {p0}, Landroid/inputmethodservice/Keyboard;->getShiftKeyIndices()[I
 
     move-result-object v0
 
@@ -403,7 +403,7 @@
     .line 146
     iget-object v6, p0, Lcom/android/internal/widget/PasswordEntryKeyboard;->mShiftKeys:[Landroid/inputmethodservice/Keyboard$Key;
 
-    invoke-virtual {p0}, Lcom/android/internal/widget/PasswordEntryKeyboard;->getKeys()Ljava/util/List;
+    invoke-virtual {p0}, Landroid/inputmethodservice/Keyboard;->getKeys()Ljava/util/List;
 
     move-result-object v5
 

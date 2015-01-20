@@ -42,7 +42,7 @@
     .line 731
     iput-object p1, p0, Lcom/android/internal/telephony/cat/BipManager$RecvDataRunnable;->this$0:Lcom/android/internal/telephony/cat/BipManager;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 732
     iput p2, p0, Lcom/android/internal/telephony/cat/BipManager$RecvDataRunnable;->requestDataSize:I
@@ -153,7 +153,7 @@
 
     iget-object v2, p0, Lcom/android/internal/telephony/cat/BipManager$RecvDataRunnable;->response:Landroid/os/Message;
 
-    invoke-virtual {v1, v2}, Lcom/android/internal/telephony/cat/CatService;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     .line 747
     const-string v1, "[BIP]"

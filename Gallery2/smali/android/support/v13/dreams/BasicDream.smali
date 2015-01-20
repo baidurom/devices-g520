@@ -122,7 +122,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 102
-    invoke-virtual {p0}, Landroid/support/v13/dreams/BasicDream;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 103
     return-void
@@ -143,7 +143,7 @@
     invoke-virtual {p0, v1}, Landroid/support/v13/dreams/BasicDream;->setContentView(Landroid/view/View;)V
 
     .line 88
-    invoke-virtual {p0}, Landroid/support/v13/dreams/BasicDream;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v1
 
@@ -165,7 +165,7 @@
     .line 94
     iget-object v1, p0, Landroid/support/v13/dreams/BasicDream;->mPowerIntentReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v1, v0}, Landroid/support/v13/dreams/BasicDream;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v1, v0}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 95
     return-void
@@ -181,7 +181,7 @@
     .line 108
     iget-object v0, p0, Landroid/support/v13/dreams/BasicDream;->mPowerIntentReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Landroid/support/v13/dreams/BasicDream;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 109
     return-void
@@ -199,7 +199,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 131
-    invoke-virtual {p0}, Landroid/support/v13/dreams/BasicDream;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 132
     return-void

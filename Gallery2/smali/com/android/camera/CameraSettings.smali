@@ -174,7 +174,7 @@
 
     .prologue
     .line 132
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 133
     iput-object p1, p0, Lcom/android/camera/CameraSettings;->mContext:Landroid/content/Context;
@@ -214,7 +214,7 @@
     if-ge v3, v7, :cond_0
 
     .line 430
-    invoke-virtual {p2}, Lcom/android/camera/IconListPreference;->getKey()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/android/camera/ListPreference;->getKey()Ljava/lang/String;
 
     move-result-object v4
 
@@ -292,7 +292,7 @@
     .line 447
     .end local v2           #index:I
     :cond_1
-    invoke-virtual {p2, v0}, Lcom/android/camera/IconListPreference;->setEntryValues([Ljava/lang/CharSequence;)V
+    invoke-virtual {p2, v0}, Lcom/android/camera/ListPreference;->setEntryValues([Ljava/lang/CharSequence;)V
 
     goto :goto_0
 

@@ -61,7 +61,7 @@
     .line 76
     if-eqz p1, :cond_1
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/FlipView;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v2
 
@@ -124,7 +124,7 @@
     .end local v0           #maxDistance:F
     .end local v1           #moveDistance:F
     :cond_1
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/FlipView;->getHeight()I
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result v2
 
@@ -195,10 +195,10 @@
     const/4 v4, 0x1
 
     .line 93
-    invoke-super {p0, p1}, Lcom/android/gallery3d/photoeditor/actions/FullscreenToolView;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    invoke-super {p0, p1}, Landroid/view/View;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     .line 95
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/FlipView;->isEnabled()Z
+    invoke-virtual {p0}, Landroid/view/View;->isEnabled()Z
 
     move-result v5
 

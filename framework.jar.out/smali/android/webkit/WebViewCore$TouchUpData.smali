@@ -36,7 +36,7 @@
 
     .prologue
     .line 900
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 907
     new-instance v0, Landroid/graphics/Rect;

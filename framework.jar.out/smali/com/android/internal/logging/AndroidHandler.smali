@@ -35,7 +35,7 @@
     .line 110
     sget-object v0, Lcom/android/internal/logging/AndroidHandler;->THE_FORMATTER:Ljava/util/logging/Formatter;
 
-    invoke-virtual {p0, v0}, Lcom/android/internal/logging/AndroidHandler;->setFormatter(Ljava/util/logging/Formatter;)V
+    invoke-virtual {p0, v0}, Ljava/util/logging/Handler;->setFormatter(Ljava/util/logging/Formatter;)V
 
     .line 111
     return-void
@@ -150,7 +150,7 @@
     .line 132
     :cond_0
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/internal/logging/AndroidHandler;->getFormatter()Ljava/util/logging/Formatter;
+    invoke-virtual {p0}, Ljava/util/logging/Handler;->getFormatter()Ljava/util/logging/Formatter;
 
     move-result-object v4
 

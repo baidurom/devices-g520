@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 87
+    .line 150
     iput-object p1, p0, Lcom/android/server/am/AppErrorDialog$1;->this$0:Lcom/android/server/am/AppErrorDialog;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,33 +39,7 @@
     .parameter "msg"
 
     .prologue
-    .line 90
-    const/4 v0, 0x1
-
-    iget v1, p1, Landroid/os/Message;->what:I
-
-    if-ne v0, v1, :cond_0
-
-    .line 91
-    iget-object v0, p0, Lcom/android/server/am/AppErrorDialog$1;->this$0:Lcom/android/server/am/AppErrorDialog;
-
-    const-string v1, "crash"
-
-    iget-object v2, p0, Lcom/android/server/am/AppErrorDialog$1;->this$0:Lcom/android/server/am/AppErrorDialog;
-
-    #getter for: Lcom/android/server/am/AppErrorDialog;->mProc:Lcom/android/server/am/ProcessRecord;
-    invoke-static {v2}, Lcom/android/server/am/AppErrorDialog;->access$000(Lcom/android/server/am/AppErrorDialog;)Lcom/android/server/am/ProcessRecord;
-
-    move-result-object v2
-
-    iget-object v2, v2, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
-
-    iget-object v2, v2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Lcom/android/server/am/AppErrorDialog;->startBaiduReport(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 94
-    :cond_0
+    .line 152
     iget-object v0, p0, Lcom/android/server/am/AppErrorDialog$1;->this$0:Lcom/android/server/am/AppErrorDialog;
 
     #getter for: Lcom/android/server/am/AppErrorDialog;->mProc:Lcom/android/server/am/ProcessRecord;
@@ -75,7 +49,7 @@
 
     monitor-enter v1
 
-    .line 95
+    .line 153
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/AppErrorDialog$1;->this$0:Lcom/android/server/am/AppErrorDialog;
 
@@ -84,7 +58,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     iget-object v0, p0, Lcom/android/server/am/AppErrorDialog$1;->this$0:Lcom/android/server/am/AppErrorDialog;
 
@@ -97,9 +71,9 @@
 
     iget-object v2, p0, Lcom/android/server/am/AppErrorDialog$1;->this$0:Lcom/android/server/am/AppErrorDialog;
 
-    if-ne v0, v2, :cond_1
+    if-ne v0, v2, :cond_0
 
-    .line 96
+    .line 154
     iget-object v0, p0, Lcom/android/server/am/AppErrorDialog$1;->this$0:Lcom/android/server/am/AppErrorDialog;
 
     #getter for: Lcom/android/server/am/AppErrorDialog;->mProc:Lcom/android/server/am/ProcessRecord;
@@ -111,13 +85,13 @@
 
     iput-object v2, v0, Lcom/android/server/am/ProcessRecord;->crashDialog:Landroid/app/Dialog;
 
-    .line 98
-    :cond_1
+    .line 156
+    :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 99
+    .line 157
     iget-object v0, p0, Lcom/android/server/am/AppErrorDialog$1;->this$0:Lcom/android/server/am/AppErrorDialog;
 
     #getter for: Lcom/android/server/am/AppErrorDialog;->mResult:Lcom/android/server/am/AppErrorResult;
@@ -129,15 +103,15 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/am/AppErrorResult;->set(I)V
 
-    .line 103
+    .line 161
     iget-object v0, p0, Lcom/android/server/am/AppErrorDialog$1;->this$0:Lcom/android/server/am/AppErrorDialog;
 
     invoke-virtual {v0}, Lcom/android/server/am/AppErrorDialog;->dismiss()V
 
-    .line 104
+    .line 162
     return-void
 
-    .line 98
+    .line 156
     :catchall_0
     move-exception v0
 

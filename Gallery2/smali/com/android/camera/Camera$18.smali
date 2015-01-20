@@ -35,7 +35,7 @@
 
     iput-boolean p2, p0, Lcom/android/camera/Camera$18;->val$showAways:Z
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -79,7 +79,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/camera/manager/IndicatorManager;->hide()V
+    invoke-virtual {v1}, Lcom/android/camera/manager/ViewManager;->hide()V
 
     .line 2781
     iget-object v1, p0, Lcom/android/camera/Camera$18;->this$0:Lcom/android/camera/Camera;
@@ -108,7 +108,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/camera/manager/PickerManager;->show()V
+    invoke-virtual {v1}, Lcom/android/camera/manager/ViewManager;->show()V
 
     .line 2785
     :cond_0

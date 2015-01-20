@@ -44,7 +44,7 @@
     .line 41
     new-instance v0, Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/database/CursorToBulkCursorAdaptor;->mLock:Ljava/lang/Object;
 
@@ -116,7 +116,7 @@
     .line 107
     iget-object v0, p0, Landroid/database/CursorToBulkCursorAdaptor;->mFilledWindow:Landroid/database/CursorWindow;
 
-    invoke-virtual {v0}, Landroid/database/CursorWindow;->close()V
+    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteClosable;->close()V
 
     .line 108
     const/4 v0, 0x0
@@ -422,7 +422,7 @@
     .line 148
     iget-object v1, v0, Landroid/database/BulkCursorDescriptor;->window:Landroid/database/CursorWindow;
 
-    invoke-virtual {v1}, Landroid/database/CursorWindow;->acquireReference()V
+    invoke-virtual {v1}, Landroid/database/sqlite/SQLiteClosable;->acquireReference()V
 
     .line 150
     :cond_0
@@ -532,7 +532,7 @@
     if-eqz v0, :cond_1
 
     .line 182
-    invoke-virtual {v0}, Landroid/database/CursorWindow;->acquireReference()V
+    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteClosable;->acquireReference()V
 
     .line 184
     :cond_1

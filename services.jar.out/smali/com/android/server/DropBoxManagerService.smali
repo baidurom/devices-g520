@@ -1969,7 +1969,7 @@
     if-eqz v19, :cond_0
 
     :try_start_2
-    invoke-virtual/range {v19 .. v19}, Ljava/io/OutputStream;->close()V
+    invoke-virtual/range {v19 .. v19}, Ljava/io/FilterOutputStream;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_3
 
@@ -2238,7 +2238,7 @@
 
     move/from16 v2, v21
 
-    invoke-virtual {v0, v3, v1, v2}, Ljava/io/OutputStream;->write([BII)V
+    invoke-virtual {v0, v3, v1, v2}, Ljava/io/FilterOutputStream;->write([BII)V
 
     .line 218
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -2276,7 +2276,7 @@
     invoke-static {v8}, Landroid/os/FileUtils;->sync(Ljava/io/FileOutputStream;)Z
 
     .line 227
-    invoke-virtual/range {v19 .. v19}, Ljava/io/OutputStream;->close()V
+    invoke-virtual/range {v19 .. v19}, Ljava/io/FilterOutputStream;->close()V
 
     .line 228
     const/16 v19, 0x0
@@ -2457,7 +2457,7 @@
     if-eqz v19, :cond_b
 
     :try_start_a
-    invoke-virtual/range {v19 .. v19}, Ljava/io/OutputStream;->close()V
+    invoke-virtual/range {v19 .. v19}, Ljava/io/FilterOutputStream;->close()V
     :try_end_a
     .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_5
 
@@ -2494,7 +2494,7 @@
     .restart local v24       #temp:Ljava/io/File;
     :cond_d
     :try_start_b
-    invoke-virtual/range {v19 .. v19}, Ljava/io/OutputStream;->flush()V
+    invoke-virtual/range {v19 .. v19}, Ljava/io/FilterOutputStream;->flush()V
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_1
     .catch Ljava/io/IOException; {:try_start_b .. :try_end_b} :catch_1
@@ -2548,7 +2548,7 @@
     if-eqz v19, :cond_f
 
     :try_start_c
-    invoke-virtual/range {v19 .. v19}, Ljava/io/OutputStream;->close()V
+    invoke-virtual/range {v19 .. v19}, Ljava/io/FilterOutputStream;->close()V
     :try_end_c
     .catch Ljava/io/IOException; {:try_start_c .. :try_end_c} :catch_2
 
@@ -3402,7 +3402,7 @@
     :goto_9
     move-object/from16 v0, v20
 
-    invoke-virtual {v0, v10}, Ljava/io/InputStreamReader;->read([C)I
+    invoke-virtual {v0, v10}, Ljava/io/Reader;->read([C)I
 
     move-result v22
 
@@ -3555,7 +3555,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v15}, Ljava/io/IOException;->toString()Ljava/lang/String;
+    invoke-virtual {v15}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v4
 

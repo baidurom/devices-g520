@@ -60,8 +60,6 @@
 
 .field static final TRANSACTION_setMaxBrightness:I = 0x13
 
-.field static final TRANSACTION_setButtonLight:I = 0x18
-
 .field static final TRANSACTION_setMaximumScreenOffTimeount:I = 0xc
 
 .field static final TRANSACTION_setPokeLock:I = 0x9
@@ -86,7 +84,7 @@
     .line 16
     const-string v0, "android.os.IPowerManager"
 
-    invoke-virtual {p0, p0, v0}, Landroid/os/IPowerManager$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
+    invoke-virtual {p0, p0, v0}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
     .line 17
     return-void
@@ -908,27 +906,6 @@
 
     goto/16 :goto_0
 
-    .line 253
-    .end local v0           #_arg0:F
-    :sswitch_18
-    const-string v8, "android.os.IPowerManager"
-
-    invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    .line 255
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    .line 256
-    .local v0, _arg0:I
-    invoke-virtual {p0, v0}, Landroid/os/IPowerManager$Stub;->setButtonLight(I)V
-
-    .line 257
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    goto/16 :goto_0
-
     .line 39
     :sswitch_data_0
     .sparse-switch
@@ -955,7 +932,6 @@
         0x15 -> :sswitch_15
         0x16 -> :sswitch_16
         0x17 -> :sswitch_17
-        0x18 -> :sswitch_18
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

@@ -197,12 +197,12 @@
     invoke-virtual {v3, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     .line 83
-    invoke-virtual {v3, v6, v6}, Landroid/view/ViewGroup;->scrollTo(II)V
+    invoke-virtual {v3, v6, v6}, Landroid/view/View;->scrollTo(II)V
 
     .line 84
     iget-object v4, p0, Lcom/android/gallery3d/photoeditor/EffectsBar;->effectsGallery:Landroid/view/View;
 
-    invoke-virtual {p0, v4, v6}, Lcom/android/gallery3d/photoeditor/EffectsBar;->addView(Landroid/view/View;I)V
+    invoke-virtual {p0, v4, v6}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
 
     .line 85
     return-void
@@ -219,7 +219,7 @@
     if-eqz v1, :cond_0
 
     .line 124
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/EffectsBar;->getRootView()Landroid/view/View;
+    invoke-virtual {p0}, Landroid/view/View;->getRootView()Landroid/view/View;
 
     move-result-object v1
 
@@ -275,7 +275,7 @@
     .line 113
     iget-object v0, p0, Lcom/android/gallery3d/photoeditor/EffectsBar;->activeEffect:Lcom/android/gallery3d/photoeditor/actions/EffectAction;
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/photoeditor/actions/EffectAction;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
@@ -289,7 +289,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/gallery3d/photoeditor/EffectsBar;->effectsGallery:Landroid/view/View;
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/photoeditor/EffectsBar;->removeView(Landroid/view/View;)V
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
     .line 116
     const/4 v0, 0x0
@@ -319,7 +319,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/android/gallery3d/photoeditor/EffectsBar$2;-><init>(Lcom/android/gallery3d/photoeditor/EffectsBar;Lcom/android/gallery3d/photoeditor/actions/EffectAction;)V
 
-    invoke-virtual {p1, v0}, Lcom/android/gallery3d/photoeditor/actions/EffectAction;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 107
     return-void
@@ -379,7 +379,7 @@
     .line 48
     const v0, 0x7f0b0088
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/photoeditor/EffectsBar;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 

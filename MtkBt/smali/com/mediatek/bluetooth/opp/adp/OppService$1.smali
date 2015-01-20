@@ -152,7 +152,7 @@
     .line 108
     iget-object v3, p0, Lcom/mediatek/bluetooth/opp/adp/OppService$1;->this$0:Lcom/mediatek/bluetooth/opp/adp/OppService;
 
-    invoke-virtual {v3}, Lcom/mediatek/bluetooth/opp/adp/OppService;->oppcDisconnectNative()Z
+    invoke-virtual {v3}, Lcom/mediatek/bluetooth/opp/adp/OppServiceNative;->oppcDisconnectNative()Z
 
     .line 110
     :cond_0
@@ -188,7 +188,7 @@
     .line 114
     iget-object v3, p0, Lcom/mediatek/bluetooth/opp/adp/OppService$1;->this$0:Lcom/mediatek/bluetooth/opp/adp/OppService;
 
-    invoke-virtual {v3}, Lcom/mediatek/bluetooth/opp/adp/OppService;->oppsDisconnectNative()Z
+    invoke-virtual {v3}, Lcom/mediatek/bluetooth/opp/adp/OppServiceNative;->oppsDisconnectNative()Z
 
     .line 117
     .end local v0           #oppcCurStorage:Ljava/io/File;

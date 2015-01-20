@@ -633,13 +633,13 @@
     .local v0, bb:Ljava/nio/ByteBuffer;
     const/16 v4, 0x1c
 
-    invoke-virtual {v0, v4}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {v0, v4}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
 
     .line 170
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
     .line 171
-    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
+    invoke-virtual {v1}, Ljava/nio/Buffer;->flip()Ljava/nio/Buffer;
 
     .line 174
     invoke-virtual {v2}, Lcom/mediatek/bluetooth/ilm/Message;->size()I

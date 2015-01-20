@@ -106,7 +106,7 @@
     .line 61
     iget-object v0, p0, Lcom/android/camera/ui/InLineSettingSwitch;->mSwitch:Landroid/widget/Switch;
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/InLineSettingSwitch;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -124,7 +124,7 @@
 
     iget-object v5, p0, Lcom/android/camera/ui/InLineSettingItem;->mPreference:Lcom/android/camera/ListPreference;
 
-    invoke-virtual {v5}, Lcom/android/camera/ListPreference;->getTitle()Ljava/lang/String;
+    invoke-virtual {v5}, Lcom/android/camera/CameraPreference;->getTitle()Ljava/lang/String;
 
     move-result-object v5
 
@@ -134,7 +134,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/widget/Switch;->setContentDescription(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
     .line 63
     return-void
@@ -150,7 +150,7 @@
     .line 52
     const v0, 0x7f0b0026
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/ui/InLineSettingSwitch;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -163,12 +163,12 @@
 
     iget-object v1, p0, Lcom/android/camera/ui/InLineSettingSwitch;->mCheckedChangeListener:Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
-    invoke-virtual {v0, v1}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
+    invoke-virtual {v0, v1}, Landroid/widget/CompoundButton;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
     .line 54
     iget-object v0, p0, Lcom/android/camera/ui/InLineSettingSwitch;->mOnClickListener:Landroid/view/View$OnClickListener;
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/ui/InLineSettingSwitch;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p0, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 55
     return-void
@@ -180,16 +180,16 @@
 
     .prologue
     .line 91
-    invoke-super {p0, p1}, Lcom/android/camera/ui/InLineSettingItem;->onPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
+    invoke-super {p0, p1}, Landroid/view/View;->onPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
     .line 92
-    invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityEvent;->getText()Ljava/util/List;
+    invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityRecord;->getText()Ljava/util/List;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/android/camera/ui/InLineSettingItem;->mPreference:Lcom/android/camera/ListPreference;
 
-    invoke-virtual {v1}, Lcom/android/camera/ListPreference;->getTitle()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/android/camera/CameraPreference;->getTitle()Ljava/lang/String;
 
     move-result-object v1
 
@@ -212,7 +212,7 @@
 
     const/4 v4, 0x0
 
-    invoke-virtual {v3, v4}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
+    invoke-virtual {v3, v4}, Landroid/widget/CompoundButton;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
     .line 68
     iget-object v3, p0, Lcom/android/camera/ui/InLineSettingItem;->mPreference:Lcom/android/camera/ListPreference;
@@ -243,7 +243,7 @@
     .line 71
     iget-object v1, p0, Lcom/android/camera/ui/InLineSettingSwitch;->mSwitch:Landroid/widget/Switch;
 
-    invoke-virtual {v1, v2}, Landroid/widget/Switch;->setEnabled(Z)V
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setEnabled(Z)V
 
     .line 78
     :goto_0
@@ -253,14 +253,14 @@
 
     move-result v1
 
-    invoke-virtual {p0, v1}, Lcom/android/camera/ui/InLineSettingSwitch;->setEnabled(Z)V
+    invoke-virtual {p0, v1}, Lcom/android/camera/ui/InLineSettingItem;->setEnabled(Z)V
 
     .line 80
     iget-object v1, p0, Lcom/android/camera/ui/InLineSettingSwitch;->mSwitch:Landroid/widget/Switch;
 
     iget-object v2, p0, Lcom/android/camera/ui/InLineSettingSwitch;->mCheckedChangeListener:Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
-    invoke-virtual {v1, v2}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
+    invoke-virtual {v1, v2}, Landroid/widget/CompoundButton;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
     .line 81
     return-void
@@ -287,7 +287,7 @@
     .line 75
     iget-object v2, p0, Lcom/android/camera/ui/InLineSettingSwitch;->mSwitch:Landroid/widget/Switch;
 
-    invoke-virtual {v2, v1}, Landroid/widget/Switch;->setEnabled(Z)V
+    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setEnabled(Z)V
 
     goto :goto_0
 

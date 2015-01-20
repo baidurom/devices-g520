@@ -110,7 +110,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/mmi/OppClientActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -143,7 +143,7 @@
 
     aput-object p3, v2, v3
 
-    invoke-virtual {p0, v1, v2}, Lcom/mediatek/bluetooth/opp/mmi/OppClientActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v1, v2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -201,7 +201,7 @@
     .line 80
     const/4 v11, 0x0
 
-    invoke-virtual {p0, v11}, Lcom/mediatek/bluetooth/opp/mmi/OppClientActivity;->setVisible(Z)V
+    invoke-virtual {p0, v11}, Landroid/app/Activity;->setVisible(Z)V
 
     .line 82
     invoke-static {p0}, Lcom/mediatek/bluetooth/opp/adp/OppManager;->getInstance(Landroid/content/Context;)Lcom/mediatek/bluetooth/opp/adp/OppManager;
@@ -211,7 +211,7 @@
     iput-object v11, p0, Lcom/mediatek/bluetooth/opp/mmi/OppClientActivity;->oppManager:Lcom/mediatek/bluetooth/opp/adp/OppManager;
 
     .line 85
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/mmi/OppClientActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -300,7 +300,7 @@
     iput-object v11, p0, Lcom/mediatek/bluetooth/opp/mmi/OppClientActivity;->mIntentType:Ljava/lang/String;
 
     .line 105
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/mmi/OppClientActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v11
 
@@ -348,7 +348,7 @@
     if-nez v3, :cond_5
 
     .line 115
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/mmi/OppClientActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 260
     .end local v3           #newTask:Lcom/mediatek/bluetooth/share/BluetoothShareTask;
@@ -408,7 +408,7 @@
     .end local v9           #type:Ljava/lang/String;
     .end local v10           #uri:Landroid/net/Uri;
     :goto_2
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/mmi/OppClientActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_1
 
@@ -442,7 +442,7 @@
 
     aput-object v5, v11, v12
 
-    invoke-virtual {p0, v8, v11}, Lcom/mediatek/bluetooth/opp/mmi/OppClientActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v8, v11}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v11
 
@@ -471,13 +471,13 @@
 
     const v13, 0x7f05003a
 
-    invoke-virtual {p0, v13}, Lcom/mediatek/bluetooth/opp/mmi/OppClientActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v13}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v13
 
     aput-object v13, v11, v12
 
-    invoke-virtual {p0, v8, v11}, Lcom/mediatek/bluetooth/opp/mmi/OppClientActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v8, v11}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v11
 

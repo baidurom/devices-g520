@@ -113,7 +113,7 @@
     invoke-virtual {v0, v2, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 83
-    invoke-virtual {v1, v0}, Lcom/mediatek/FMRadio/dialogs/EditFavoriteDialog;->setArguments(Landroid/os/Bundle;)V
+    invoke-virtual {v1, v0}, Landroid/app/Fragment;->setArguments(Landroid/os/Bundle;)V
 
     .line 84
     return-object v1
@@ -148,7 +148,7 @@
 
     .line 104
     .local v0, e:Ljava/lang/ClassCastException;
-    invoke-virtual {v0}, Ljava/lang/ClassCastException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 .end method
@@ -161,7 +161,7 @@
     const/4 v13, 0x0
 
     .line 110
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/dialogs/EditFavoriteDialog;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v8
 
@@ -173,7 +173,7 @@
 
     .line 111
     .local v5, stationName:Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/dialogs/EditFavoriteDialog;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v8
 
@@ -185,7 +185,7 @@
 
     .line 112
     .local v4, stationFreq:I
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/dialogs/EditFavoriteDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
@@ -252,7 +252,7 @@
 
     aput-object v11, v9, v10
 
-    invoke-virtual {v8, v9}, Landroid/widget/EditText;->setFilters([Landroid/text/InputFilter;)V
+    invoke-virtual {v8, v9}, Landroid/widget/TextView;->setFilters([Landroid/text/InputFilter;)V
 
     .line 127
     iget-object v8, p0, Lcom/mediatek/FMRadio/dialogs/EditFavoriteDialog;->mEditTextFrequency:Landroid/widget/EditText;
@@ -261,7 +261,7 @@
 
     move-result-object v9
 
-    invoke-virtual {v8, v9}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v8, v9}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 128
     if-eqz v5, :cond_0
@@ -278,17 +278,17 @@
     :cond_0
     const v8, 0x7f040017
 
-    invoke-virtual {v0, v8}, Landroid/widget/EditText;->setHint(I)V
+    invoke-virtual {v0, v8}, Landroid/widget/TextView;->setHint(I)V
 
     .line 133
     :goto_0
-    invoke-virtual {v0}, Landroid/widget/EditText;->requestFocus()Z
+    invoke-virtual {v0}, Landroid/view/View;->requestFocus()Z
 
     .line 134
-    invoke-virtual {v0}, Landroid/widget/EditText;->requestFocusFromTouch()Z
+    invoke-virtual {v0}, Landroid/view/View;->requestFocusFromTouch()Z
 
     .line 136
-    invoke-virtual {v0, v5}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 137
     invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
@@ -306,7 +306,7 @@
     .line 139
     new-instance v8, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/dialogs/EditFavoriteDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v9
 
@@ -314,7 +314,7 @@
 
     const v9, 0x7f040016
 
-    invoke-virtual {p0, v9}, Lcom/mediatek/FMRadio/dialogs/EditFavoriteDialog;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v9}, Landroid/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v9
 
@@ -351,7 +351,7 @@
     .line 131
     .end local v6           #text:Landroid/text/Editable;
     :cond_1
-    invoke-virtual {v0, v5}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v5}, Landroid/widget/TextView;->setHint(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 .end method

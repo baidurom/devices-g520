@@ -69,7 +69,7 @@
     invoke-virtual {v0, v2, p2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 38
-    invoke-virtual {v1, v0}, Lcom/mediatek/gallery3d/video/StepOptionDialogFragment;->setArguments(Landroid/os/Bundle;)V
+    invoke-virtual {v1, v0}, Landroid/app/Fragment;->setArguments(Landroid/os/Bundle;)V
 
     .line 39
     return-object v1
@@ -104,7 +104,7 @@
 
     .prologue
     .line 47
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/StepOptionDialogFragment;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -116,7 +116,7 @@
 
     move-result v8
 
-    invoke-virtual {p0, v8}, Lcom/mediatek/gallery3d/video/StepOptionDialogFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v8}, Landroid/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
@@ -147,7 +147,7 @@
     .line 53
     aget v8, v5, v3
 
-    invoke-virtual {p0, v8}, Lcom/mediatek/gallery3d/video/StepOptionDialogFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v8}, Landroid/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
@@ -175,7 +175,7 @@
     new-instance v2, Landroid/app/AlertDialog$Builder;
 
     .end local v2           #builder:Landroid/app/AlertDialog$Builder;
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/StepOptionDialogFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
@@ -193,7 +193,7 @@
 
     const/high16 v9, 0x104
 
-    invoke-virtual {p0, v9}, Lcom/mediatek/gallery3d/video/StepOptionDialogFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v9}, Landroid/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v9
 

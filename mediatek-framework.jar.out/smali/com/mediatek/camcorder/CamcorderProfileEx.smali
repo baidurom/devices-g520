@@ -57,7 +57,7 @@
 
     .prologue
     .line 51
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -199,7 +199,7 @@
     .local v1, f:Ljava/lang/reflect/Field;
     const/4 v3, 0x1
 
-    invoke-virtual {v1, v3}, Ljava/lang/reflect/Field;->setAccessible(Z)V
+    invoke-virtual {v1, v3}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
 
     .line 89
     const/4 v3, 0x0
@@ -316,7 +316,7 @@
     .local v1, m:Ljava/lang/reflect/Method;
     const/4 v2, 0x1
 
-    invoke-virtual {v1, v2}, Ljava/lang/reflect/Method;->setAccessible(Z)V
+    invoke-virtual {v1, v2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
 
     .line 144
     const/4 v2, 0x0

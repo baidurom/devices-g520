@@ -125,7 +125,7 @@
 
     .prologue
     .line 104
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 105
     iput-wide p1, p0, Landroid/net/NetworkStatsHistory;->bucketDuration:J
@@ -235,7 +235,7 @@
 
     .prologue
     .line 122
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 123
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
@@ -322,7 +322,7 @@
 
     .prologue
     .line 148
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 149
     invoke-virtual {p1}, Ljava/io/DataInputStream;->readInt()I
@@ -994,11 +994,11 @@
     .line 578
     const-string v2, "NetworkStatsHistory: bucketDuration="
 
-    invoke-virtual {p1, v2}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
+    invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-wide v2, p0, Landroid/net/NetworkStatsHistory;->bucketDuration:J
 
-    invoke-virtual {p1, v2, v3}, Lcom/android/internal/util/IndentingPrintWriter;->println(J)V
+    invoke-virtual {p1, v2, v3}, Ljava/io/PrintWriter;->println(J)V
 
     .line 579
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()V
@@ -1014,13 +1014,13 @@
     .line 583
     const-string v2, "(omitting "
 
-    invoke-virtual {p1, v2}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
+    invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    invoke-virtual {p1, v1}, Lcom/android/internal/util/IndentingPrintWriter;->print(I)V
+    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(I)V
 
     const-string v2, " buckets)"
 
-    invoke-virtual {p1, v2}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
+    invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     .line 586
     :cond_0
@@ -1035,13 +1035,13 @@
     .line 587
     const-string v2, "bucketStart="
 
-    invoke-virtual {p1, v2}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
+    invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object v2, p0, Landroid/net/NetworkStatsHistory;->bucketStart:[J
 
     aget-wide v2, v2, v0
 
-    invoke-virtual {p1, v2, v3}, Lcom/android/internal/util/IndentingPrintWriter;->print(J)V
+    invoke-virtual {p1, v2, v3}, Ljava/io/PrintWriter;->print(J)V
 
     .line 588
     iget-object v2, p0, Landroid/net/NetworkStatsHistory;->activeTime:[J
@@ -1050,13 +1050,13 @@
 
     const-string v2, " activeTime="
 
-    invoke-virtual {p1, v2}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
+    invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object v2, p0, Landroid/net/NetworkStatsHistory;->activeTime:[J
 
     aget-wide v2, v2, v0
 
-    invoke-virtual {p1, v2, v3}, Lcom/android/internal/util/IndentingPrintWriter;->print(J)V
+    invoke-virtual {p1, v2, v3}, Ljava/io/PrintWriter;->print(J)V
 
     .line 589
     :cond_1
@@ -1066,13 +1066,13 @@
 
     const-string v2, " rxBytes="
 
-    invoke-virtual {p1, v2}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
+    invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object v2, p0, Landroid/net/NetworkStatsHistory;->rxBytes:[J
 
     aget-wide v2, v2, v0
 
-    invoke-virtual {p1, v2, v3}, Lcom/android/internal/util/IndentingPrintWriter;->print(J)V
+    invoke-virtual {p1, v2, v3}, Ljava/io/PrintWriter;->print(J)V
 
     .line 590
     :cond_2
@@ -1082,13 +1082,13 @@
 
     const-string v2, " rxPackets="
 
-    invoke-virtual {p1, v2}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
+    invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object v2, p0, Landroid/net/NetworkStatsHistory;->rxPackets:[J
 
     aget-wide v2, v2, v0
 
-    invoke-virtual {p1, v2, v3}, Lcom/android/internal/util/IndentingPrintWriter;->print(J)V
+    invoke-virtual {p1, v2, v3}, Ljava/io/PrintWriter;->print(J)V
 
     .line 591
     :cond_3
@@ -1098,13 +1098,13 @@
 
     const-string v2, " txBytes="
 
-    invoke-virtual {p1, v2}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
+    invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object v2, p0, Landroid/net/NetworkStatsHistory;->txBytes:[J
 
     aget-wide v2, v2, v0
 
-    invoke-virtual {p1, v2, v3}, Lcom/android/internal/util/IndentingPrintWriter;->print(J)V
+    invoke-virtual {p1, v2, v3}, Ljava/io/PrintWriter;->print(J)V
 
     .line 592
     :cond_4
@@ -1114,13 +1114,13 @@
 
     const-string v2, " txPackets="
 
-    invoke-virtual {p1, v2}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
+    invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object v2, p0, Landroid/net/NetworkStatsHistory;->txPackets:[J
 
     aget-wide v2, v2, v0
 
-    invoke-virtual {p1, v2, v3}, Lcom/android/internal/util/IndentingPrintWriter;->print(J)V
+    invoke-virtual {p1, v2, v3}, Ljava/io/PrintWriter;->print(J)V
 
     .line 593
     :cond_5
@@ -1130,13 +1130,13 @@
 
     const-string v2, " operations="
 
-    invoke-virtual {p1, v2}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
+    invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object v2, p0, Landroid/net/NetworkStatsHistory;->operations:[J
 
     aget-wide v2, v2, v0
 
-    invoke-virtual {p1, v2, v3}, Lcom/android/internal/util/IndentingPrintWriter;->print(J)V
+    invoke-virtual {p1, v2, v3}, Ljava/io/PrintWriter;->print(J)V
 
     .line 594
     :cond_6

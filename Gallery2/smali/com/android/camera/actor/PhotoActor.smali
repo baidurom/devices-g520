@@ -3,9 +3,9 @@
 .source "PhotoActor.java"
 
 # interfaces
+.implements Landroid/hardware/Camera$ContinuousShotDone;
 .implements Lcom/android/camera/FocusManager$Listener;
 .implements Lcom/android/camera/ui/ShutterButton$OnShutterButtonListener;
-.implements Landroid/hardware/Camera$ContinuousShotDone;
 
 
 # annotations
@@ -388,7 +388,7 @@
     iput-object v0, p0, Lcom/android/camera/actor/PhotoActor;->mJpegPictureCallback:Landroid/hardware/Camera$PictureCallback;
 
     .line 152
-    invoke-virtual {p0}, Lcom/android/camera/actor/PhotoActor;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/actor/CameraActor;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v0
 
@@ -981,7 +981,7 @@
 
     iget-object v15, v0, Lcom/android/camera/actor/PhotoActor;->mCamera:Lcom/android/camera/Camera;
 
-    invoke-virtual {v15}, Lcom/android/camera/Camera;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v15}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v15
 
@@ -1057,7 +1057,7 @@
 
     iget-object v15, v0, Lcom/android/camera/actor/PhotoActor;->mCamera:Lcom/android/camera/Camera;
 
-    invoke-virtual {v15}, Lcom/android/camera/Camera;->getIntent()Landroid/content/Intent;
+    invoke-virtual {v15}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v7
 
@@ -1093,7 +1093,7 @@
 
     invoke-direct {v15, v0}, Lcom/android/camera/actor/PhotoActor$15;-><init>(Lcom/android/camera/actor/PhotoActor;)V
 
-    invoke-virtual {v15}, Lcom/android/camera/actor/PhotoActor$15;->start()V
+    invoke-virtual {v15}, Ljava/lang/Thread;->start()V
 
     .line 1205
     move-object/from16 v0, p0
@@ -1176,7 +1176,7 @@
 
     const-string v16, "crop-temp"
 
-    invoke-virtual/range {v15 .. v16}, Lcom/android/camera/Camera;->getFileStreamPath(Ljava/lang/String;)Ljava/io/File;
+    invoke-virtual/range {v15 .. v16}, Landroid/content/ContextWrapper;->getFileStreamPath(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v11
 
@@ -1193,12 +1193,12 @@
 
     const/16 v17, 0x0
 
-    invoke-virtual/range {v15 .. v17}, Lcom/android/camera/Camera;->openFileOutput(Ljava/lang/String;I)Ljava/io/FileOutputStream;
+    invoke-virtual/range {v15 .. v17}, Landroid/content/ContextWrapper;->openFileOutput(Ljava/lang/String;I)Ljava/io/FileOutputStream;
 
     move-result-object v13
 
     .line 1222
-    invoke-virtual {v13, v5}, Ljava/io/FileOutputStream;->write([B)V
+    invoke-virtual {v13, v5}, Ljava/io/OutputStream;->write([B)V
 
     .line 1223
     invoke-virtual {v13}, Ljava/io/FileOutputStream;->close()V
@@ -1272,7 +1272,7 @@
 
     move/from16 v0, v16
 
-    invoke-virtual {v15, v3, v0}, Lcom/android/camera/Camera;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {v15, v3, v0}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
 
     goto/16 :goto_0
 
@@ -1415,7 +1415,7 @@
 
     const v4, 0x7f0c00b8
 
-    invoke-virtual {v3, v4}, Lcom/android/camera/Camera;->getString(I)Ljava/lang/String;
+    invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1435,7 +1435,7 @@
 
     const v4, 0x7f0c00b5
 
-    invoke-virtual {v3, v4}, Lcom/android/camera/Camera;->getString(I)Ljava/lang/String;
+    invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1590,7 +1590,7 @@
     .line 849
     iget-object v1, p0, Lcom/android/camera/actor/CameraActor;->mContext:Lcom/android/camera/Camera;
 
-    invoke-virtual {v1}, Lcom/android/camera/Camera;->getIntent()Landroid/content/Intent;
+    invoke-virtual {v1}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -1804,7 +1804,7 @@
     .line 439
     iget-object v1, p0, Lcom/android/camera/actor/PhotoActor;->mCounterDownView:Lcom/android/camera/ui/RotateTextView;
 
-    invoke-virtual {v1, v4}, Lcom/android/camera/ui/RotateTextView;->setVisibility(I)V
+    invoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V
 
     .line 440
     iget-object v1, p0, Lcom/android/camera/actor/PhotoActor;->mCounterDownView:Lcom/android/camera/ui/RotateTextView;
@@ -1817,7 +1817,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/android/camera/ui/RotateTextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 441
     iget-object v1, p0, Lcom/android/camera/actor/PhotoActor;->mCamera:Lcom/android/camera/Camera;
@@ -1832,7 +1832,7 @@
     .local v0, selftTimer:Landroid/view/animation/Animation;
     iget-object v1, p0, Lcom/android/camera/actor/PhotoActor;->mCounterDownView:Lcom/android/camera/ui/RotateTextView;
 
-    invoke-virtual {v1, v0}, Lcom/android/camera/ui/RotateTextView;->startAnimation(Landroid/view/animation/Animation;)V
+    invoke-virtual {v1, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
     .line 443
     iget v1, p0, Lcom/android/camera/actor/PhotoActor;->mDelayTimeRemaining:I
@@ -1859,7 +1859,7 @@
 
     const/16 v2, 0x8
 
-    invoke-virtual {v1, v2}, Lcom/android/camera/ui/RotateTextView;->setVisibility(I)V
+    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
     .line 447
     iget-object v1, p0, Lcom/android/camera/actor/PhotoActor;->mHandler:Landroid/os/Handler;
@@ -2648,7 +2648,7 @@
 
     iget-object v4, p0, Lcom/android/camera/actor/PhotoActor;->mCamera:Lcom/android/camera/Camera;
 
-    invoke-virtual {v4}, Lcom/android/camera/Camera;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v4}, Landroid/content/ContextWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -2799,7 +2799,7 @@
 
     const v3, 0x7f0b00b6
 
-    invoke-virtual {v2, v3}, Lcom/android/camera/Camera;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v2, v3}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -2922,7 +2922,7 @@
     invoke-virtual {v0}, Lcom/android/camera/ui/FaceView;->clear()V
 
     .line 1414
-    invoke-virtual {v0, v3}, Lcom/android/camera/ui/FaceView;->setVisibility(I)V
+    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
 
     .line 1415
     iget-object v4, p0, Lcom/android/camera/actor/PhotoActor;->mCamera:Lcom/android/camera/Camera;
@@ -2992,7 +2992,7 @@
     .line 1365
     iget-object v0, p0, Lcom/android/camera/actor/PhotoActor;->mRenderThread:Lcom/android/camera/actor/PhotoActor$RenderInCapture;
 
-    invoke-virtual {v0}, Lcom/android/camera/actor/PhotoActor$RenderInCapture;->interrupt()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
 
     .line 1366
     const/4 v0, 0x0
@@ -3113,7 +3113,7 @@
     :cond_3
     iget-object v3, p0, Lcom/android/camera/actor/PhotoActor;->mCamera:Lcom/android/camera/Camera;
 
-    invoke-virtual {v3}, Lcom/android/camera/Camera;->getMainLooper()Landroid/os/Looper;
+    invoke-virtual {v3}, Landroid/content/ContextWrapper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v3
 
@@ -3177,7 +3177,7 @@
 
     const v4, 0x7f0c0086
 
-    invoke-virtual {v3, v4}, Lcom/android/camera/Camera;->getString(I)Ljava/lang/String;
+    invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -3225,7 +3225,7 @@
 
     iget-object v4, p0, Lcom/android/camera/actor/PhotoActor;->mCamera:Lcom/android/camera/Camera;
 
-    invoke-virtual {v4}, Lcom/android/camera/Camera;->isFinishing()Z
+    invoke-virtual {v4}, Landroid/app/Activity;->isFinishing()Z
 
     move-result v4
 
@@ -3278,7 +3278,7 @@
 
     const/16 v3, 0x8
 
-    invoke-virtual {v2, v3}, Lcom/android/camera/ui/RotateTextView;->setVisibility(I)V
+    invoke-virtual {v2, v3}, Landroid/view/View;->setVisibility(I)V
 
     .line 1076
     iput-boolean v1, p0, Lcom/android/camera/actor/PhotoActor;->mSelftimerCounting:Z
@@ -3606,7 +3606,7 @@
     .line 1488
     iget-object v1, p0, Lcom/android/camera/actor/PhotoActor;->mCamera:Lcom/android/camera/Camera;
 
-    invoke-virtual {v1}, Lcom/android/camera/Camera;->getIntent()Landroid/content/Intent;
+    invoke-virtual {v1}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
@@ -3692,7 +3692,7 @@
 
     iget-object v1, p0, Lcom/android/camera/actor/PhotoActor;->mCamera:Lcom/android/camera/Camera;
 
-    invoke-virtual {v1}, Lcom/android/camera/Camera;->isFullScreen()Z
+    invoke-virtual {v1}, Lcom/android/camera/ActivityBase;->isFullScreen()Z
 
     move-result v1
 
@@ -3722,7 +3722,7 @@
 
     iget-object v1, p0, Lcom/android/camera/actor/PhotoActor;->mCamera:Lcom/android/camera/Camera;
 
-    invoke-virtual {v1}, Lcom/android/camera/Camera;->getMainLooper()Landroid/os/Looper;
+    invoke-virtual {v1}, Landroid/content/ContextWrapper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v1
 
@@ -3765,7 +3765,7 @@
 
     iget-object v2, p0, Lcom/android/camera/actor/PhotoActor;->mCamera:Lcom/android/camera/Camera;
 
-    invoke-virtual {v2}, Lcom/android/camera/Camera;->isFullScreen()Z
+    invoke-virtual {v2}, Lcom/android/camera/ActivityBase;->isFullScreen()Z
 
     move-result v2
 
@@ -3837,7 +3837,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/camera/ui/ShutterButton;->isInTouchMode()Z
+    invoke-virtual {v1}, Landroid/view/View;->isInTouchMode()Z
 
     move-result v1
 
@@ -3854,7 +3854,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/camera/ui/ShutterButton;->requestFocusFromTouch()Z
+    invoke-virtual {v1}, Landroid/view/View;->requestFocusFromTouch()Z
 
     .line 1301
     :goto_1
@@ -3868,7 +3868,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/android/camera/ui/ShutterButton;->setPressed(Z)V
+    invoke-virtual {v1, v0}, Landroid/view/View;->setPressed(Z)V
 
     goto/16 :goto_0
 
@@ -3884,7 +3884,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/camera/ui/ShutterButton;->requestFocus()Z
+    invoke-virtual {v1}, Landroid/view/View;->requestFocus()Z
 
     goto :goto_1
 
@@ -3972,7 +3972,7 @@
 
     iget-object v2, p0, Lcom/android/camera/actor/PhotoActor;->mCamera:Lcom/android/camera/Camera;
 
-    invoke-virtual {v2}, Lcom/android/camera/Camera;->getMainLooper()Landroid/os/Looper;
+    invoke-virtual {v2}, Landroid/content/ContextWrapper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v2
 
@@ -4018,7 +4018,7 @@
 
     iget-object v2, p0, Lcom/android/camera/actor/PhotoActor;->mCamera:Lcom/android/camera/Camera;
 
-    invoke-virtual {v2}, Lcom/android/camera/Camera;->isFullScreen()Z
+    invoke-virtual {v2}, Lcom/android/camera/ActivityBase;->isFullScreen()Z
 
     move-result v2
 
@@ -4096,7 +4096,7 @@
 
     const/16 v2, 0x8
 
-    invoke-virtual {v1, v2}, Lcom/android/camera/ui/RotateTextView;->setVisibility(I)V
+    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
     .line 1048
     iget-object v1, p0, Lcom/android/camera/actor/PhotoActor;->mTimerPlayer:Lcom/android/camera/SoundPlayer;
@@ -4687,7 +4687,7 @@
     .line 1497
     iget-object v0, p0, Lcom/android/camera/actor/PhotoActor;->mCamera:Lcom/android/camera/Camera;
 
-    invoke-virtual {v0}, Lcom/android/camera/Camera;->getMainLooper()Landroid/os/Looper;
+    invoke-virtual {v0}, Landroid/content/ContextWrapper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
 
@@ -4897,7 +4897,7 @@
 
     invoke-direct {v1, p0}, Lcom/android/camera/actor/PhotoActor$14;-><init>(Lcom/android/camera/actor/PhotoActor;)V
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/Camera;->runOnUiThread(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
     .line 1014
     invoke-virtual {p0}, Lcom/android/camera/actor/PhotoActor;->stopPreview()V
@@ -5272,7 +5272,7 @@
 
     const v2, 0x7f0c00b7
 
-    invoke-virtual {v1, v2}, Lcom/android/camera/Camera;->getString(I)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -5292,7 +5292,7 @@
 
     const v3, 0x7f0c008d
 
-    invoke-virtual {v2, v3}, Lcom/android/camera/Camera;->getString(I)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 

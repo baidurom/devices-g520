@@ -59,10 +59,10 @@
     iput-object v0, p0, Landroid/graphics/drawable/StateListDrawable;->mStateListState:Landroid/graphics/drawable/StateListDrawable$StateListState;
 
     .line 316
-    invoke-virtual {p0, v0}, Landroid/graphics/drawable/StateListDrawable;->setConstantState(Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;)V
+    invoke-virtual {p0, v0}, Landroid/graphics/drawable/DrawableContainer;->setConstantState(Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;)V
 
     .line 317
-    invoke-virtual {p0}, Landroid/graphics/drawable/StateListDrawable;->getState()[I
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getState()[I
 
     move-result-object v1
 
@@ -102,7 +102,7 @@
     invoke-virtual {v0, p1, p2}, Landroid/graphics/drawable/StateListDrawable$StateListState;->addStateSet([ILandroid/graphics/drawable/Drawable;)I
 
     .line 89
-    invoke-virtual {p0}, Landroid/graphics/drawable/StateListDrawable;->getState()[I
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getState()[I
 
     move-result-object v0
 
@@ -120,7 +120,7 @@
     .line 205
     iget-object v0, p0, Landroid/graphics/drawable/StateListDrawable;->mStateListState:Landroid/graphics/drawable/StateListDrawable$StateListState;
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/StateListDrawable$StateListState;->getChildCount()I
+    invoke-virtual {v0}, Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;->getChildCount()I
 
     move-result v0
 
@@ -135,7 +135,7 @@
     .line 231
     iget-object v0, p0, Landroid/graphics/drawable/StateListDrawable;->mStateListState:Landroid/graphics/drawable/StateListDrawable$StateListState;
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/StateListDrawable$StateListState;->getChildren()[Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0}, Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;->getChildren()[Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -219,7 +219,7 @@
 
     move-object/from16 v2, p2
 
-    invoke-super {v0, v1, v2, v3, v15}, Landroid/graphics/drawable/DrawableContainer;->inflateWithAttributes(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/content/res/TypedArray;I)V
+    invoke-super {v0, v1, v2, v3, v15}, Landroid/graphics/drawable/Drawable;->inflateWithAttributes(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/content/res/TypedArray;I)V
 
     .line 123
     move-object/from16 v0, p0
@@ -238,7 +238,7 @@
 
     move-result v16
 
-    invoke-virtual/range {v15 .. v16}, Landroid/graphics/drawable/StateListDrawable$StateListState;->setVariablePadding(Z)V
+    invoke-virtual/range {v15 .. v16}, Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;->setVariablePadding(Z)V
 
     .line 125
     move-object/from16 v0, p0
@@ -257,7 +257,7 @@
 
     move-result v16
 
-    invoke-virtual/range {v15 .. v16}, Landroid/graphics/drawable/StateListDrawable$StateListState;->setConstantSize(Z)V
+    invoke-virtual/range {v15 .. v16}, Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;->setConstantSize(Z)V
 
     .line 127
     move-object/from16 v0, p0
@@ -276,7 +276,7 @@
 
     move-result v16
 
-    invoke-virtual/range {v15 .. v16}, Landroid/graphics/drawable/StateListDrawable$StateListState;->setEnterFadeDuration(I)V
+    invoke-virtual/range {v15 .. v16}, Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;->setEnterFadeDuration(I)V
 
     .line 129
     move-object/from16 v0, p0
@@ -295,7 +295,7 @@
 
     move-result v16
 
-    invoke-virtual/range {v15 .. v16}, Landroid/graphics/drawable/StateListDrawable$StateListState;->setExitFadeDuration(I)V
+    invoke-virtual/range {v15 .. v16}, Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;->setExitFadeDuration(I)V
 
     .line 132
     const/4 v15, 0x0
@@ -310,7 +310,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v15}, Landroid/graphics/drawable/StateListDrawable;->setDither(Z)V
+    invoke-virtual {v0, v15}, Landroid/graphics/drawable/DrawableContainer;->setDither(Z)V
 
     .line 135
     invoke-virtual {v3}, Landroid/content/res/TypedArray;->recycle()V
@@ -567,7 +567,7 @@
     .end local v11           #numAttrs:I
     .end local v13           #states:[I
     :cond_8
-    invoke-virtual/range {p0 .. p0}, Landroid/graphics/drawable/StateListDrawable;->getState()[I
+    invoke-virtual/range {p0 .. p0}, Landroid/graphics/drawable/Drawable;->getState()[I
 
     move-result-object v15
 
@@ -640,7 +640,7 @@
 
     iget-object v5, v4, Landroid/graphics/drawable/StateListDrawable$StateListState;->mStateSets:[[I
 
-    invoke-virtual {v2}, [I->clone()Ljava/lang/Object;
+    invoke-virtual {v2}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v4
 
@@ -698,7 +698,7 @@
 
     .line 106
     :cond_0
-    invoke-virtual {p0, v0}, Landroid/graphics/drawable/StateListDrawable;->selectDrawable(I)Z
+    invoke-virtual {p0, v0}, Landroid/graphics/drawable/DrawableContainer;->selectDrawable(I)Z
 
     move-result v1
 

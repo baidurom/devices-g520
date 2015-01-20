@@ -651,7 +651,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {p0, v0, p1, v1}, Lcom/android/internal/telephony/PhoneBase;->obtainMessage(III)Landroid/os/Message;
+    invoke-virtual {p0, v0, p1, v1}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object v0
 
@@ -659,7 +659,7 @@
 
     int-to-long v1, v1
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/android/internal/telephony/PhoneBase;->sendMessageDelayed(Landroid/os/Message;J)Z
+    invoke-virtual {p0, v0, v1, v2}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     .line 1168
     :goto_0
@@ -2746,7 +2746,7 @@
 
     const/4 v5, 0x0
 
-    invoke-virtual {p0, v3, v4, v5}, Lcom/android/internal/telephony/PhoneBase;->obtainMessage(III)Landroid/os/Message;
+    invoke-virtual {p0, v3, v4, v5}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object v3
 
@@ -2754,7 +2754,7 @@
 
     int-to-long v4, v4
 
-    invoke-virtual {p0, v3, v4, v5}, Lcom/android/internal/telephony/PhoneBase;->sendMessageDelayed(Landroid/os/Message;J)Z
+    invoke-virtual {p0, v3, v4, v5}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     goto :goto_0
 
@@ -3347,11 +3347,11 @@
 
     iget v1, p0, Lcom/android/internal/telephony/PhoneBase;->mSipCallRingContinueToken:I
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/android/internal/telephony/PhoneBase;->obtainMessage(III)Landroid/os/Message;
+    invoke-virtual {p0, v0, v1, v2}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/android/internal/telephony/PhoneBase;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {p0, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     .line 1335
     return-void

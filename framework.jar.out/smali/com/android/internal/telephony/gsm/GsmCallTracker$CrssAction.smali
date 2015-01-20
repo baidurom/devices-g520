@@ -168,7 +168,7 @@
     .line 93
     sget-object v0, Lcom/android/internal/telephony/gsm/GsmCallTracker$CrssAction;->$VALUES:[Lcom/android/internal/telephony/gsm/GsmCallTracker$CrssAction;
 
-    invoke-virtual {v0}, [Lcom/android/internal/telephony/gsm/GsmCallTracker$CrssAction;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

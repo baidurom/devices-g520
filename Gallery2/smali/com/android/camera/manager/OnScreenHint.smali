@@ -56,7 +56,7 @@
     const/4 v1, -0x1
 
     .line 68
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 56
     new-instance v0, Landroid/view/WindowManager$LayoutParams;

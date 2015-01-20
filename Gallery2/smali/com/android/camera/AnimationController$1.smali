@@ -32,7 +32,7 @@
     .line 17
     iput-object p1, p0, Lcom/android/camera/AnimationController$1;->this$0:Lcom/android/camera/AnimationController;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -93,12 +93,12 @@
     .local v0, alpha:Landroid/view/animation/AlphaAnimation;
     const-wide/16 v1, 0x5a0
 
-    invoke-virtual {v0, v1, v2}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
+    invoke-virtual {v0, v1, v2}, Landroid/view/animation/Animation;->setDuration(J)V
 
     .line 29
     const/4 v1, -0x1
 
-    invoke-virtual {v0, v1}, Landroid/view/animation/AlphaAnimation;->setRepeatCount(I)V
+    invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setRepeatCount(I)V
 
     .line 31
     const-string v1, "camera"
@@ -152,7 +152,7 @@
     invoke-virtual {v1, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
     .line 33
-    invoke-virtual {v0}, Landroid/view/animation/AlphaAnimation;->startNow()V
+    invoke-virtual {v0}, Landroid/view/animation/Animation;->startNow()V
 
     .line 34
     iget-object v1, p0, Lcom/android/camera/AnimationController$1;->this$0:Lcom/android/camera/AnimationController;

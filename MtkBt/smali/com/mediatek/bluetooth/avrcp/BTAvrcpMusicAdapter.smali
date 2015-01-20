@@ -314,7 +314,7 @@
     .line 173
     const-string v2, "BTAvrcpMusicAdapterThread "
 
-    invoke-virtual {p0, v2}, Lcom/mediatek/bluetooth/avrcp/BTAvrcpMusicAdapter;->setName(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
 
     .line 174
     iget-object v2, p0, Lcom/mediatek/bluetooth/avrcp/BTAvrcpMusicAdapter;->mAudioMgr:Landroid/media/AudioManager;
@@ -580,7 +580,7 @@
     if-eqz v2, :cond_1
 
     .line 247
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/avrcp/BTAvrcpMusicAdapter;->start()V
+    invoke-virtual {p0}, Ljava/lang/Thread;->start()V
 
     .line 251
     :goto_1
@@ -2019,7 +2019,7 @@
 
     move-result-object v6
 
-    invoke-virtual {v1}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v7
 
@@ -2171,7 +2171,7 @@
 
     iget-object v2, p0, Lcom/mediatek/bluetooth/avrcp/BTAvrcpMusicAdapter;->mPlayConnection:Landroid/content/ServiceConnection;
 
-    invoke-virtual {v1, v2}, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService;->unbindService(Landroid/content/ServiceConnection;)V
+    invoke-virtual {v1, v2}, Landroid/content/ContextWrapper;->unbindService(Landroid/content/ServiceConnection;)V
 
     .line 287
     iput-object v4, p0, Lcom/mediatek/bluetooth/avrcp/BTAvrcpMusicAdapter;->mPlayService:Lcom/android/music/IMediaPlaybackService;
@@ -2207,13 +2207,13 @@
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 297
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/avrcp/BTAvrcpMusicAdapter;->interrupt()V
+    invoke-virtual {p0}, Ljava/lang/Thread;->interrupt()V
 
     .line 300
     const-wide/16 v1, 0x64
 
     :try_start_1
-    invoke-virtual {p0, v1, v2}, Lcom/mediatek/bluetooth/avrcp/BTAvrcpMusicAdapter;->join(J)V
+    invoke-virtual {p0, v1, v2}, Ljava/lang/Thread;->join(J)V
     :try_end_1
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -2240,7 +2240,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v3
 
@@ -2384,7 +2384,7 @@
 
     aput-object v6, v5, v2
 
-    invoke-virtual {v0}, Landroid/os/RemoteException;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -2457,7 +2457,7 @@
 
     aput-object v6, v5, v2
 
-    invoke-virtual {v0}, Landroid/os/RemoteException;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -3525,7 +3525,7 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-virtual {v0}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v4
 
@@ -3856,7 +3856,7 @@
 
     move-result-object v6
 
-    invoke-virtual {v1}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v7
 
@@ -4479,7 +4479,7 @@
 
     aput-object v7, v6, v9
 
-    invoke-virtual {v0}, Landroid/os/RemoteException;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v7
 
@@ -4585,7 +4585,7 @@
 
     aput-object v7, v6, v9
 
-    invoke-virtual {v0}, Landroid/os/RemoteException;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v7
 
@@ -4612,7 +4612,7 @@
 
     new-array v6, v3, [Ljava/lang/Object;
 
-    invoke-virtual {v0}, Landroid/os/RemoteException;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v7
 
@@ -4725,7 +4725,7 @@
 
     aput-object v7, v6, v9
 
-    invoke-virtual {v0}, Landroid/os/RemoteException;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v7
 
@@ -4740,7 +4740,7 @@
     .line 474
     const-string v4, "MMI_AVRCP"
 
-    invoke-virtual {v0}, Landroid/os/RemoteException;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v5
 
@@ -4845,7 +4845,7 @@
 
     invoke-direct {v3, v0}, Landroid/content/IntentFilter;-><init>(Landroid/content/IntentFilter;)V
 
-    invoke-virtual {v1, v2, v3}, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {v1, v2, v3}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 1259
     const/4 v1, 0x1
@@ -4902,7 +4902,7 @@
 
     invoke-direct {v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v2, v3}, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+    invoke-virtual {v2, v3}, Landroid/content/ContextWrapper;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
     .line 1228
     iget-object v2, p0, Lcom/mediatek/bluetooth/avrcp/BTAvrcpMusicAdapter;->mAvrcpSrv:Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService;
@@ -4917,7 +4917,7 @@
 
     const/4 v5, 0x0
 
-    invoke-virtual {v2, v3, v4, v5}, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
+    invoke-virtual {v2, v3, v4, v5}, Landroid/content/ContextWrapper;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
     move-result v0
 
@@ -5041,7 +5041,7 @@
 
     iget-object v1, p0, Lcom/mediatek/bluetooth/avrcp/BTAvrcpMusicAdapter;->mStatusListener:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {v0, v1}, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {v0, v1}, Landroid/content/ContextWrapper;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 1270
     const/4 v0, 0x0
@@ -5069,7 +5069,7 @@
 
     iget-object v1, p0, Lcom/mediatek/bluetooth/avrcp/BTAvrcpMusicAdapter;->mConnection:Landroid/content/ServiceConnection;
 
-    invoke-virtual {v0, v1}, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService;->unbindService(Landroid/content/ServiceConnection;)V
+    invoke-virtual {v0, v1}, Landroid/content/ContextWrapper;->unbindService(Landroid/content/ServiceConnection;)V
 
     .line 1276
     iput-boolean v2, p0, Lcom/mediatek/bluetooth/avrcp/BTAvrcpMusicAdapter;->mStartBind:Z
@@ -5086,7 +5086,7 @@
 
     iget-object v1, p0, Lcom/mediatek/bluetooth/avrcp/BTAvrcpMusicAdapter;->mPlayConnection:Landroid/content/ServiceConnection;
 
-    invoke-virtual {v0, v1}, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService;->unbindService(Landroid/content/ServiceConnection;)V
+    invoke-virtual {v0, v1}, Landroid/content/ContextWrapper;->unbindService(Landroid/content/ServiceConnection;)V
 
     .line 1282
     iput-boolean v2, p0, Lcom/mediatek/bluetooth/avrcp/BTAvrcpMusicAdapter;->mPlayStartBind:Z

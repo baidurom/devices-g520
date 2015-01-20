@@ -271,7 +271,7 @@
     .line 279
     iget-object v2, p0, Lcom/android/camera/manager/PanoramaViewManager;->mNaviLine:Lcom/android/camera/ui/NaviLineImageView;
 
-    invoke-virtual {v2}, Lcom/android/camera/ui/NaviLineImageView;->getWidth()I
+    invoke-virtual {v2}, Landroid/view/View;->getWidth()I
 
     move-result v1
 
@@ -279,7 +279,7 @@
     .local v1, naviWidth:I
     iget-object v2, p0, Lcom/android/camera/manager/PanoramaViewManager;->mNaviLine:Lcom/android/camera/ui/NaviLineImageView;
 
-    invoke-virtual {v2}, Lcom/android/camera/ui/NaviLineImageView;->getHeight()I
+    invoke-virtual {v2}, Landroid/view/View;->getHeight()I
 
     move-result v0
 
@@ -482,7 +482,7 @@
     .line 120
     new-instance v0, Lcom/android/camera/ui/ProgressIndicator;
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/PanoramaViewManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v1
 
@@ -501,7 +501,7 @@
     .line 129
     :cond_0
     :goto_0
-    invoke-virtual {p0}, Lcom/android/camera/manager/PanoramaViewManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v0
 
@@ -512,7 +512,7 @@
     iput v0, p0, Lcom/android/camera/manager/PanoramaViewManager;->mDisplayOrientaion:I
 
     .line 130
-    invoke-virtual {p0}, Lcom/android/camera/manager/PanoramaViewManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v0
 
@@ -541,7 +541,7 @@
     .line 125
     new-instance v0, Lcom/android/camera/ui/ProgressIndicator;
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/PanoramaViewManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v1
 
@@ -883,7 +883,7 @@
 
     const/high16 v1, -0x3d4c
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/ui/NaviLineImageView;->setRotation(F)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setRotation(F)V
 
     .line 219
     :cond_0
@@ -913,7 +913,7 @@
 
     const/high16 v1, 0x42b4
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/ui/NaviLineImageView;->setRotation(F)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setRotation(F)V
 
     goto :goto_0
 
@@ -942,7 +942,7 @@
 
     const/high16 v1, 0x4334
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/ui/NaviLineImageView;->setRotation(F)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setRotation(F)V
 
     goto :goto_0
 
@@ -971,7 +971,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/ui/NaviLineImageView;->setRotation(F)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setRotation(F)V
 
     goto :goto_0
 .end method
@@ -1070,7 +1070,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->setVisibility(I)V
+    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
     .line 191
     iget-object v1, p0, Lcom/android/camera/manager/PanoramaViewManager;->mAnimation:Lcom/android/camera/AnimationController;
@@ -1089,7 +1089,7 @@
 
     aget-object v1, v1, v0
 
-    invoke-virtual {v1, v4}, Landroid/view/ViewGroup;->setVisibility(I)V
+    invoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V
 
     .line 192
     add-int/lit8 v0, v0, 0x1
@@ -1107,7 +1107,7 @@
     :cond_4
     iget-object v1, p0, Lcom/android/camera/manager/PanoramaViewManager;->mCenterIndicator:Landroid/view/ViewGroup;
 
-    invoke-virtual {v1, v4}, Landroid/view/ViewGroup;->setVisibility(I)V
+    invoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V
 
     .line 199
     :cond_5
@@ -1279,7 +1279,7 @@
     .line 311
     iget-object v3, p0, Lcom/android/camera/manager/PanoramaViewManager;->mNaviLine:Lcom/android/camera/ui/NaviLineImageView;
 
-    invoke-virtual {v3, v8}, Lcom/android/camera/ui/NaviLineImageView;->setVisibility(I)V
+    invoke-virtual {v3, v8}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 312
     return-void
@@ -1294,7 +1294,7 @@
     .line 100
     const v1, 0x7f040028
 
-    invoke-virtual {p0, v1}, Lcom/android/camera/manager/PanoramaViewManager;->inflate(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/camera/manager/ViewManager;->inflate(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1335,7 +1335,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/PanoramaViewManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v2
 
@@ -1365,7 +1365,7 @@
 
     .line 147
     :cond_0
-    invoke-virtual {p0}, Lcom/android/camera/manager/PanoramaViewManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v0
 
@@ -1473,7 +1473,7 @@
     .line 378
     iget-object v1, p0, Lcom/android/camera/manager/PanoramaViewManager;->mCenterIndicator:Landroid/view/ViewGroup;
 
-    invoke-virtual {v1, v4}, Landroid/view/ViewGroup;->setVisibility(I)V
+    invoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V
 
     .line 380
     iget v1, p0, Lcom/android/camera/manager/PanoramaViewManager;->mViewCategory:I
@@ -1486,12 +1486,12 @@
     .line 382
     iget-object v1, p0, Lcom/android/camera/manager/PanoramaViewManager;->mNaviLine:Lcom/android/camera/ui/NaviLineImageView;
 
-    invoke-virtual {v1, v4}, Lcom/android/camera/ui/NaviLineImageView;->setVisibility(I)V
+    invoke-virtual {v1, v4}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 383
     iget-object v1, p0, Lcom/android/camera/manager/PanoramaViewManager;->mCollimatedArrowsDrawable:Landroid/view/ViewGroup;
 
-    invoke-virtual {v1, v4}, Landroid/view/ViewGroup;->setVisibility(I)V
+    invoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V
 
     .line 384
     const/4 v0, 0x0
@@ -1505,14 +1505,14 @@
 
     aget-object v1, v1, v0
 
-    invoke-virtual {v1, v5}, Landroid/view/ViewGroup;->setSelected(Z)V
+    invoke-virtual {v1, v5}, Landroid/view/View;->setSelected(Z)V
 
     .line 386
     iget-object v1, p0, Lcom/android/camera/manager/PanoramaViewManager;->mDirectionSigns:[Landroid/view/ViewGroup;
 
     aget-object v1, v1, v0
 
-    invoke-virtual {v1, v5}, Landroid/view/ViewGroup;->setVisibility(I)V
+    invoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V
 
     .line 384
     add-int/lit8 v0, v0, 0x1
@@ -1611,7 +1611,7 @@
 
     const/4 v1, 0x4
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/ui/NaviLineImageView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 323
     iget-object v0, p0, Lcom/android/camera/manager/PanoramaViewManager;->mAnimation:Lcom/android/camera/AnimationController;
@@ -1623,12 +1623,12 @@
 
     const/16 v1, 0x8
 
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     .line 325
     iget-object v0, p0, Lcom/android/camera/manager/PanoramaViewManager;->mCollimatedArrowsDrawable:Landroid/view/ViewGroup;
 
-    invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_0
 .end method
@@ -1698,7 +1698,7 @@
 
     aget-object v1, v1, v0
 
-    invoke-virtual {v1, v4}, Landroid/view/ViewGroup;->setVisibility(I)V
+    invoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V
 
     .line 161
     add-int/lit8 v0, v0, 0x1
@@ -1709,7 +1709,7 @@
     :cond_1
     iget-object v1, p0, Lcom/android/camera/manager/PanoramaViewManager;->mCenterIndicator:Landroid/view/ViewGroup;
 
-    invoke-virtual {v1, v3}, Landroid/view/ViewGroup;->setVisibility(I)V
+    invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
 
     .line 165
     iget-object v1, p0, Lcom/android/camera/manager/PanoramaViewManager;->mAnimation:Lcom/android/camera/AnimationController;
@@ -1737,7 +1737,7 @@
 
     const/16 v2, 0x8
 
-    invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->setVisibility(I)V
+    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_1
 .end method
@@ -1751,7 +1751,7 @@
 
     const/16 v1, 0x8
 
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     .line 337
     iget-object v0, p0, Lcom/android/camera/manager/PanoramaViewManager;->mAnimation:Lcom/android/camera/AnimationController;
@@ -1763,7 +1763,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     .line 339
     return-void
@@ -1801,7 +1801,7 @@
     :cond_1
     iget-object v2, p0, Lcom/android/camera/manager/PanoramaViewManager;->mNaviLine:Lcom/android/camera/ui/NaviLineImageView;
 
-    invoke-virtual {v2, v3}, Lcom/android/camera/ui/NaviLineImageView;->setVisibility(I)V
+    invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
     goto :goto_0
 

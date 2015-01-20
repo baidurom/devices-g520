@@ -44,7 +44,7 @@
     .line 1676
     iput-object p1, p0, Lcom/mediatek/wfd/WfdService$GroupInfoObserver;->this$0:Lcom/mediatek/wfd/WfdService;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1681
     new-instance v0, Ljava/util/ArrayList;

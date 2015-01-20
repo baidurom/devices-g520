@@ -23,15 +23,15 @@
     :goto_0
     iget-object v0, p1, Landroid/net/wifi/p2p/WifiP2pDevice;->deviceAddress:Ljava/lang/String;
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/wfd/ExtP2pDevice;->setId(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/mediatek/common/externaldisplay/ExternalDevice;->setId(Ljava/lang/String;)V
 
     .line 27
     iget-object v0, p1, Landroid/net/wifi/p2p/WifiP2pDevice;->deviceName:Ljava/lang/String;
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/wfd/ExtP2pDevice;->setName(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/mediatek/common/externaldisplay/ExternalDevice;->setName(Ljava/lang/String;)V
 
     .line 28
-    invoke-virtual {p0, v1}, Lcom/mediatek/wfd/ExtP2pDevice;->setType(I)V
+    invoke-virtual {p0, v1}, Lcom/mediatek/common/externaldisplay/ExternalDevice;->setType(I)V
 
     .line 30
     iget-object v0, p1, Landroid/net/wifi/p2p/WifiP2pDevice;->wfd:Landroid/net/wifi/p2p/wfd/WfdInfo;
@@ -46,7 +46,7 @@
 
     .line 14
     :pswitch_0
-    invoke-virtual {p0, v1}, Lcom/mediatek/wfd/ExtP2pDevice;->setState(I)V
+    invoke-virtual {p0, v1}, Lcom/mediatek/common/externaldisplay/ExternalDevice;->setState(I)V
 
     goto :goto_0
 
@@ -54,7 +54,7 @@
     :pswitch_1
     const/4 v0, 0x3
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/wfd/ExtP2pDevice;->setState(I)V
+    invoke-virtual {p0, v0}, Lcom/mediatek/common/externaldisplay/ExternalDevice;->setState(I)V
 
     goto :goto_0
 
@@ -62,7 +62,7 @@
     :pswitch_2
     const/4 v0, 0x2
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/wfd/ExtP2pDevice;->setState(I)V
+    invoke-virtual {p0, v0}, Lcom/mediatek/common/externaldisplay/ExternalDevice;->setState(I)V
 
     goto :goto_0
 
@@ -70,13 +70,13 @@
     :pswitch_3
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/wfd/ExtP2pDevice;->setState(I)V
+    invoke-virtual {p0, v0}, Lcom/mediatek/common/externaldisplay/ExternalDevice;->setState(I)V
 
     goto :goto_0
 
     .line 32
     :pswitch_4
-    invoke-virtual {p0, v1}, Lcom/mediatek/wfd/ExtP2pDevice;->setSubType(I)V
+    invoke-virtual {p0, v1}, Lcom/mediatek/common/externaldisplay/ExternalDevice;->setSubType(I)V
 
     goto :goto_1
 
@@ -84,7 +84,7 @@
     :pswitch_5
     const/4 v0, 0x4
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/wfd/ExtP2pDevice;->setSubType(I)V
+    invoke-virtual {p0, v0}, Lcom/mediatek/common/externaldisplay/ExternalDevice;->setSubType(I)V
 
     goto :goto_1
 
@@ -92,7 +92,7 @@
     :pswitch_6
     const/4 v0, 0x5
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/wfd/ExtP2pDevice;->setSubType(I)V
+    invoke-virtual {p0, v0}, Lcom/mediatek/common/externaldisplay/ExternalDevice;->setSubType(I)V
 
     goto :goto_1
 
@@ -129,20 +129,20 @@
     invoke-direct {p0}, Lcom/mediatek/common/externaldisplay/ExternalDevice;-><init>()V
 
     .line 46
-    invoke-virtual {p0, p2}, Lcom/mediatek/wfd/ExtP2pDevice;->setState(I)V
+    invoke-virtual {p0, p2}, Lcom/mediatek/common/externaldisplay/ExternalDevice;->setState(I)V
 
     .line 47
     iget-object v0, p1, Landroid/net/wifi/p2p/WifiP2pDevice;->deviceAddress:Ljava/lang/String;
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/wfd/ExtP2pDevice;->setId(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/mediatek/common/externaldisplay/ExternalDevice;->setId(Ljava/lang/String;)V
 
     .line 48
     iget-object v0, p1, Landroid/net/wifi/p2p/WifiP2pDevice;->deviceName:Ljava/lang/String;
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/wfd/ExtP2pDevice;->setName(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/mediatek/common/externaldisplay/ExternalDevice;->setName(Ljava/lang/String;)V
 
     .line 49
-    invoke-virtual {p0, v1}, Lcom/mediatek/wfd/ExtP2pDevice;->setType(I)V
+    invoke-virtual {p0, v1}, Lcom/mediatek/common/externaldisplay/ExternalDevice;->setType(I)V
 
     .line 51
     iget-object v0, p1, Landroid/net/wifi/p2p/WifiP2pDevice;->wfd:Landroid/net/wifi/p2p/wfd/WfdInfo;
@@ -157,7 +157,7 @@
 
     .line 53
     :pswitch_0
-    invoke-virtual {p0, v1}, Lcom/mediatek/wfd/ExtP2pDevice;->setSubType(I)V
+    invoke-virtual {p0, v1}, Lcom/mediatek/common/externaldisplay/ExternalDevice;->setSubType(I)V
 
     goto :goto_0
 
@@ -165,7 +165,7 @@
     :pswitch_1
     const/4 v0, 0x4
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/wfd/ExtP2pDevice;->setSubType(I)V
+    invoke-virtual {p0, v0}, Lcom/mediatek/common/externaldisplay/ExternalDevice;->setSubType(I)V
 
     goto :goto_0
 
@@ -173,7 +173,7 @@
     :pswitch_2
     const/4 v0, 0x5
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/wfd/ExtP2pDevice;->setSubType(I)V
+    invoke-virtual {p0, v0}, Lcom/mediatek/common/externaldisplay/ExternalDevice;->setSubType(I)V
 
     goto :goto_0
 

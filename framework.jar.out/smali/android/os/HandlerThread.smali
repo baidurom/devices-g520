@@ -62,7 +62,7 @@
 
     .prologue
     .line 71
-    invoke-virtual {p0}, Landroid/os/HandlerThread;->isAlive()Z
+    invoke-virtual {p0}, Ljava/lang/Thread;->isAlive()Z
 
     move-result v0
 
@@ -82,7 +82,7 @@
     .line 77
     :goto_1
     :try_start_0
-    invoke-virtual {p0}, Landroid/os/HandlerThread;->isAlive()Z
+    invoke-virtual {p0}, Ljava/lang/Thread;->isAlive()Z
 
     move-result v0
 

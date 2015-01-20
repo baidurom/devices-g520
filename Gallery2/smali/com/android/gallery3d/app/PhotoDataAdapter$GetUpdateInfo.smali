@@ -40,7 +40,7 @@
     .line 1265
     iput-object p1, p0, Lcom/android/gallery3d/app/PhotoDataAdapter$GetUpdateInfo;->this$0:Lcom/android/gallery3d/app/PhotoDataAdapter;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -132,7 +132,7 @@
     .local v0, current:Lcom/android/gallery3d/data/MediaItem;
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/data/MediaItem;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {v0}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v4
 

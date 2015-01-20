@@ -99,7 +99,7 @@
     .line 98
     iget-object v1, p0, Lcom/mediatek/bluetooth/settings/BluetoothAdvancedSettingsActivity$1;->this$0:Lcom/mediatek/bluetooth/settings/BluetoothAdvancedSettingsActivity;
 
-    invoke-virtual {v1}, Lcom/mediatek/bluetooth/settings/BluetoothAdvancedSettingsActivity;->finish()V
+    invoke-virtual {v1}, Landroid/app/Activity;->finish()V
 
     .line 100
     :cond_0

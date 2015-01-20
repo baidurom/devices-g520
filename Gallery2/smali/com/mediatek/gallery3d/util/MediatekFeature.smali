@@ -148,7 +148,7 @@
 
     .prologue
     .line 66
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 311
     return-void
@@ -312,7 +312,7 @@
     .line 797
     const-string v5, "media-path"
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/PickerActivity;->getDataManager()Lcom/android/gallery3d/data/DataManager;
+    invoke-virtual {p0}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->getDataManager()Lcom/android/gallery3d/data/DataManager;
 
     move-result-object v6
 
@@ -360,7 +360,7 @@
     .line 800
     const-string v5, "media-path"
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/PickerActivity;->getDataManager()Lcom/android/gallery3d/data/DataManager;
+    invoke-virtual {p0}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->getDataManager()Lcom/android/gallery3d/data/DataManager;
 
     move-result-object v6
 
@@ -1856,7 +1856,7 @@
     if-eqz v0, :cond_0
 
     .line 885
-    invoke-virtual {p1}, Lcom/android/gallery3d/data/MediaItem;->getContentUri()Landroid/net/Uri;
+    invoke-virtual {p1}, Lcom/android/gallery3d/data/MediaObject;->getContentUri()Landroid/net/Uri;
 
     move-result-object v0
 
@@ -1929,7 +1929,7 @@
     if-eqz v1, :cond_0
 
     .line 811
-    invoke-virtual {p0}, Lcom/android/gallery3d/data/MediaSet;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {p0}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v1
 
@@ -2453,7 +2453,7 @@
 
     .line 764
     .local v0, e:Lcom/mediatek/pluginmanager/Plugin$ObjectCreationException;
-    invoke-virtual {v0}, Lcom/mediatek/pluginmanager/Plugin$ObjectCreationException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     .line 765
     const-string v1, "MediatekFeature"

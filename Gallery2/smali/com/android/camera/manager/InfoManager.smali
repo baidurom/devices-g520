@@ -50,7 +50,7 @@
     .line 23
     const v1, 0x7f040025
 
-    invoke-virtual {p0, v1}, Lcom/android/camera/manager/InfoManager;->inflate(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/camera/manager/ViewManager;->inflate(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -157,7 +157,7 @@
     :goto_0
     iget-object v1, p0, Lcom/android/camera/manager/InfoManager;->mInfoView:Landroid/widget/TextView;
 
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
 
     .line 46
     .end local v0           #visibility:I
@@ -215,7 +215,7 @@
     iput-object p1, p0, Lcom/android/camera/manager/InfoManager;->mInfoText:Ljava/lang/String;
 
     .line 33
-    invoke-virtual {p0}, Lcom/android/camera/manager/InfoManager;->show()V
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->show()V
 
     .line 34
     return-void

@@ -86,7 +86,7 @@
     .local v0, expected:Ljava/lang/SecurityException;
     const-string/jumbo v2, "security exception\'s error message."
 
-    invoke-virtual {v0}, Ljava/lang/SecurityException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v3
 
@@ -117,7 +117,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0}, Ljava/lang/SecurityException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v3
 
@@ -193,7 +193,7 @@
     .local v6, expected:Ljava/lang/SecurityException;
     const-string/jumbo v0, "security exception\'s error message."
 
-    invoke-virtual {v6}, Ljava/lang/SecurityException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v6}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v1
 
@@ -224,7 +224,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v6}, Ljava/lang/SecurityException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v6}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v1
 
@@ -294,7 +294,7 @@
     .local v0, expected:Ljava/lang/SecurityException;
     const-string/jumbo v1, "security exception\'s error message."
 
-    invoke-virtual {v0}, Ljava/lang/SecurityException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v2
 
@@ -325,7 +325,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0}, Ljava/lang/SecurityException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v2
 
@@ -430,7 +430,7 @@
     const/4 v7, 0x1
 
     :try_start_0
-    invoke-virtual {v2, v7}, Ljava/lang/reflect/Field;->setAccessible(Z)V
+    invoke-virtual {v2, v7}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
 
     .line 161
     const/4 v7, 0x0

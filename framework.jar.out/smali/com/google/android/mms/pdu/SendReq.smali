@@ -19,12 +19,12 @@
     const/16 v1, 0x80
 
     :try_start_0
-    invoke-virtual {p0, v1}, Lcom/google/android/mms/pdu/SendReq;->setMessageType(I)V
+    invoke-virtual {p0, v1}, Lcom/google/android/mms/pdu/GenericPdu;->setMessageType(I)V
 
     .line 32
     const/16 v1, 0x12
 
-    invoke-virtual {p0, v1}, Lcom/google/android/mms/pdu/SendReq;->setMmsVersion(I)V
+    invoke-virtual {p0, v1}, Lcom/google/android/mms/pdu/GenericPdu;->setMmsVersion(I)V
 
     .line 35
     const-string v1, "application/vnd.wap.multipart.related"
@@ -46,7 +46,7 @@
 
     invoke-direct {v1, v2}, Lcom/google/android/mms/pdu/EncodedStringValue;-><init>([B)V
 
-    invoke-virtual {p0, v1}, Lcom/google/android/mms/pdu/SendReq;->setFrom(Lcom/google/android/mms/pdu/EncodedStringValue;)V
+    invoke-virtual {p0, v1}, Lcom/google/android/mms/pdu/GenericPdu;->setFrom(Lcom/google/android/mms/pdu/EncodedStringValue;)V
 
     .line 37
     invoke-direct {p0}, Lcom/google/android/mms/pdu/SendReq;->generateTransactionId()[B
@@ -124,16 +124,16 @@
     .line 65
     const/16 v0, 0x80
 
-    invoke-virtual {p0, v0}, Lcom/google/android/mms/pdu/SendReq;->setMessageType(I)V
+    invoke-virtual {p0, v0}, Lcom/google/android/mms/pdu/GenericPdu;->setMessageType(I)V
 
     .line 66
     invoke-virtual {p0, p1}, Lcom/google/android/mms/pdu/SendReq;->setContentType([B)V
 
     .line 67
-    invoke-virtual {p0, p2}, Lcom/google/android/mms/pdu/SendReq;->setFrom(Lcom/google/android/mms/pdu/EncodedStringValue;)V
+    invoke-virtual {p0, p2}, Lcom/google/android/mms/pdu/GenericPdu;->setFrom(Lcom/google/android/mms/pdu/EncodedStringValue;)V
 
     .line 68
-    invoke-virtual {p0, p3}, Lcom/google/android/mms/pdu/SendReq;->setMmsVersion(I)V
+    invoke-virtual {p0, p3}, Lcom/google/android/mms/pdu/GenericPdu;->setMmsVersion(I)V
 
     .line 69
     invoke-virtual {p0, p4}, Lcom/google/android/mms/pdu/SendReq;->setTransactionId([B)V

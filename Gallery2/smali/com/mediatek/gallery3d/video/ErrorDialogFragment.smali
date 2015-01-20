@@ -45,7 +45,7 @@
     invoke-virtual {v0, v2, p0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 27
-    invoke-virtual {v1, v0}, Lcom/mediatek/gallery3d/video/ErrorDialogFragment;->setArguments(Landroid/os/Bundle;)V
+    invoke-virtual {v1, v0}, Landroid/app/Fragment;->setArguments(Landroid/os/Bundle;)V
 
     .line 28
     return-object v1
@@ -61,7 +61,7 @@
     const/4 v5, 0x0
 
     .line 36
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/ErrorDialogFragment;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -69,7 +69,7 @@
     .local v0, args:Landroid/os/Bundle;
     new-instance v1, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/ErrorDialogFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -105,7 +105,7 @@
 
     move-result v3
 
-    invoke-virtual {p0, v3}, Lcom/mediatek/gallery3d/video/ErrorDialogFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Landroid/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 

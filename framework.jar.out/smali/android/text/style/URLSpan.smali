@@ -175,11 +175,11 @@
     .line 78
     :cond_1
     :goto_0
-    #invoke-virtual {v8}, Landroid/widget/TextView;->isEnableShowUrlDialog()Z
+    invoke-virtual {v8}, Landroid/widget/TextView;->isEnableShowUrlDialog()Z
 
-    #move-result v10
+    move-result v10
 
-    #if-eqz v10, :cond_3
+    if-eqz v10, :cond_3
 
     if-eqz v6, :cond_3
 

@@ -32,7 +32,7 @@
     .line 262
     iput-object p1, p0, Landroid/os/storage/StorageManager$ListenerDelegate;->this$0:Landroid/os/storage/StorageManager;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 263
     iput-object p2, p0, Landroid/os/storage/StorageManager$ListenerDelegate;->mStorageEventListener:Landroid/os/storage/StorageEventListener;
@@ -78,7 +78,7 @@
     .local v0, e:Landroid/os/storage/StorageManager$UmsConnectionChangedStorageEvent;
     iget-object v1, p0, Landroid/os/storage/StorageManager$ListenerDelegate;->mHandler:Landroid/os/Handler;
 
-    invoke-virtual {v0}, Landroid/os/storage/StorageManager$UmsConnectionChangedStorageEvent;->getMessage()Landroid/os/Message;
+    invoke-virtual {v0}, Landroid/os/storage/StorageManager$StorageEvent;->getMessage()Landroid/os/Message;
 
     move-result-object v2
 
@@ -106,7 +106,7 @@
     .local v0, e:Landroid/os/storage/StorageManager$StorageStateChangedStorageEvent;
     iget-object v1, p0, Landroid/os/storage/StorageManager$ListenerDelegate;->mHandler:Landroid/os/Handler;
 
-    invoke-virtual {v0}, Landroid/os/storage/StorageManager$StorageStateChangedStorageEvent;->getMessage()Landroid/os/Message;
+    invoke-virtual {v0}, Landroid/os/storage/StorageManager$StorageEvent;->getMessage()Landroid/os/Message;
 
     move-result-object v2
 

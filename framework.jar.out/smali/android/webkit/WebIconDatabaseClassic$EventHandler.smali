@@ -461,11 +461,11 @@
 
     invoke-direct {v2, p0, p1, v0, p2}, Landroid/webkit/WebIconDatabaseClassic$EventHandler$IconResult;-><init>(Landroid/webkit/WebIconDatabaseClassic$EventHandler;Ljava/lang/String;Landroid/graphics/Bitmap;Landroid/webkit/WebIconDatabase$IconListener;)V
 
-    invoke-virtual {p0, v1, v2}, Landroid/webkit/WebIconDatabaseClassic$EventHandler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+    invoke-virtual {p0, v1, v2}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v1
 
-    invoke-virtual {p0, v1}, Landroid/webkit/WebIconDatabaseClassic$EventHandler;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {p0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     .line 172
     :cond_0

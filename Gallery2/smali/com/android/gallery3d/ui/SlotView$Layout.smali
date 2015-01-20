@@ -57,7 +57,7 @@
     .line 395
     iput-object p1, p0, Lcom/android/gallery3d/ui/SlotView$Layout;->this$0:Lcom/android/gallery3d/ui/SlotView;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 414
     new-instance v0, Lcom/android/gallery3d/ui/SlotView$IntegerAnimation;
@@ -546,13 +546,13 @@
     .line 621
     iget-object v0, p0, Lcom/android/gallery3d/ui/SlotView$Layout;->mVerticalPadding:Lcom/android/gallery3d/ui/SlotView$IntegerAnimation;
 
-    invoke-virtual {v0, p1, p2}, Lcom/android/gallery3d/ui/SlotView$IntegerAnimation;->calculate(J)Z
+    invoke-virtual {v0, p1, p2}, Lcom/android/gallery3d/anim/Animation;->calculate(J)Z
 
     move-result v0
 
     iget-object v1, p0, Lcom/android/gallery3d/ui/SlotView$Layout;->mHorizontalPadding:Lcom/android/gallery3d/ui/SlotView$IntegerAnimation;
 
-    invoke-virtual {v1, p1, p2}, Lcom/android/gallery3d/ui/SlotView$IntegerAnimation;->calculate(J)Z
+    invoke-virtual {v1, p1, p2}, Lcom/android/gallery3d/anim/Animation;->calculate(J)Z
 
     move-result v1
 

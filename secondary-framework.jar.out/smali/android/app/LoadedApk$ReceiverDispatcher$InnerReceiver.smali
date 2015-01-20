@@ -79,7 +79,7 @@
     .line 672
     iget-object v2, p0, Landroid/app/LoadedApk$ReceiverDispatcher$InnerReceiver;->mDispatcher:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v2}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -145,7 +145,7 @@
 
     move-result-object v3
 
-    invoke-virtual {p0}, Landroid/app/LoadedApk$ReceiverDispatcher$InnerReceiver;->asBinder()Landroid/os/IBinder;
+    invoke-virtual {p0}, Landroid/content/IIntentReceiver$Stub;->asBinder()Landroid/os/IBinder;
 
     move-result-object v4
 

@@ -124,7 +124,7 @@
 
     .prologue
     .line 100
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 101
     iput-object p1, p0, Lcom/google/android/util/AbstractMessageParser;->text:Ljava/lang/String;
@@ -1129,7 +1129,7 @@
 
     .line 506
     .local v5, key:Ljava/lang/Character;
-    invoke-virtual {v6, v5}, Ljava/util/LinkedHashMap;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v6, v5}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v10
 
@@ -1173,7 +1173,7 @@
     .line 516
     sget-object v10, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    invoke-virtual {v6, v5, v10}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v6, v5, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_3
 
@@ -1196,7 +1196,7 @@
     .line 522
     sget-object v10, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    invoke-virtual {v6, v5, v10}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v6, v5, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_3
 
@@ -1205,7 +1205,7 @@
     .end local v5           #key:Ljava/lang/Character;
     .end local v7           #start:Lcom/google/android/util/AbstractMessageParser$Format;
     :cond_5
-    invoke-virtual {v6}, Ljava/util/LinkedHashMap;->keySet()Ljava/util/Set;
+    invoke-virtual {v6}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
     move-result-object v10
 
@@ -2639,7 +2639,7 @@
 
     move-result-object v8
 
-    invoke-virtual {v8}, Lcom/google/android/util/AbstractMessageParser$Token$Type;->ordinal()I
+    invoke-virtual {v8}, Ljava/lang/Enum;->ordinal()I
 
     move-result v8
 

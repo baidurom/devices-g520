@@ -3,9 +3,9 @@
 .source "HTML5VideoFullScreen.java"
 
 # interfaces
-.implements Landroid/widget/MediaController$MediaPlayerControl;
 .implements Landroid/media/MediaPlayer$OnPreparedListener;
 .implements Landroid/view/View$OnTouchListener;
+.implements Landroid/widget/MediaController$MediaPlayerControl;
 
 
 # annotations

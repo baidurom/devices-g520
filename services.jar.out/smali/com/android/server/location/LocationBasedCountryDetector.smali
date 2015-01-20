@@ -89,7 +89,7 @@
     const/4 v0, 0x0
 
     :try_start_0
-    invoke-virtual {p0, v0}, Lcom/android/server/location/LocationBasedCountryDetector;->notifyListener(Landroid/location/Country;)V
+    invoke-virtual {p0, v0}, Lcom/android/server/location/CountryDetectorBase;->notifyListener(Landroid/location/Country;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

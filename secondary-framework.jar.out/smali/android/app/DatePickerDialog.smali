@@ -63,7 +63,7 @@
     iput-object v3, p0, Landroid/app/DatePickerDialog;->mCalendar:Ljava/util/Calendar;
 
     .line 121
-    invoke-virtual {p0}, Landroid/app/DatePickerDialog;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -77,12 +77,12 @@
 
     move-result-object v4
 
-    invoke-virtual {p0, v3, v4, p0}, Landroid/app/DatePickerDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {p0, v3, v4, p0}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     .line 123
     const/4 v3, 0x0
 
-    invoke-virtual {p0, v3}, Landroid/app/DatePickerDialog;->setIcon(I)V
+    invoke-virtual {p0, v3}, Landroid/app/AlertDialog;->setIcon(I)V
 
     .line 125
     const-string v3, "layout_inflater"
@@ -105,7 +105,7 @@
 
     .line 128
     .local v2, view:Landroid/view/View;
-    invoke-virtual {p0, v2}, Landroid/app/DatePickerDialog;->setView(Landroid/view/View;)V
+    invoke-virtual {p0, v2}, Landroid/app/AlertDialog;->setView(Landroid/view/View;)V
 
     .line 129
     const v3, 0x1020274
@@ -172,7 +172,7 @@
     .line 176
     iget-object v0, p0, Landroid/app/DatePickerDialog;->mDatePicker:Landroid/widget/DatePicker;
 
-    invoke-virtual {v0}, Landroid/widget/DatePicker;->clearFocus()V
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->clearFocus()V
 
     .line 177
     iget-object v0, p0, Landroid/app/DatePickerDialog;->mCallBack:Landroid/app/DatePickerDialog$OnDateSetListener;
@@ -258,7 +258,7 @@
 
     .line 215
     .local v0, title:Ljava/lang/String;
-    invoke-virtual {p0, v0}, Landroid/app/DatePickerDialog;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v0}, Landroid/app/AlertDialog;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 216
     iput-boolean v5, p0, Landroid/app/DatePickerDialog;->mTitleNeedsUpdate:Z
@@ -283,7 +283,7 @@
     .line 220
     const v1, 0x1040422
 
-    invoke-virtual {p0, v1}, Landroid/app/DatePickerDialog;->setTitle(I)V
+    invoke-virtual {p0, v1}, Landroid/app/Dialog;->setTitle(I)V
 
     goto :goto_0
 .end method
@@ -339,7 +339,7 @@
 
     .prologue
     .line 236
-    invoke-super {p0, p1}, Landroid/app/AlertDialog;->onRestoreInstanceState(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Landroid/app/Dialog;->onRestoreInstanceState(Landroid/os/Bundle;)V
 
     .line 237
     const-string v3, "year"
@@ -379,7 +379,7 @@
 
     .prologue
     .line 227
-    invoke-super {p0}, Landroid/app/AlertDialog;->onSaveInstanceState()Landroid/os/Bundle;
+    invoke-super {p0}, Landroid/app/Dialog;->onSaveInstanceState()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -429,7 +429,7 @@
     invoke-direct {p0}, Landroid/app/DatePickerDialog;->tryNotifyDateSet()V
 
     .line 199
-    invoke-super {p0}, Landroid/app/AlertDialog;->onStop()V
+    invoke-super {p0}, Landroid/app/Dialog;->onStop()V
 
     .line 200
     return-void

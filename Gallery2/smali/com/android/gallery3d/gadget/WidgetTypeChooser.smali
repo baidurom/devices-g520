@@ -38,17 +38,17 @@
     .line 45
     const v2, 0x7f0c0255
 
-    invoke-virtual {p0, v2}, Lcom/android/gallery3d/gadget/WidgetTypeChooser;->setTitle(I)V
+    invoke-virtual {p0, v2}, Landroid/app/Activity;->setTitle(I)V
 
     .line 46
     const v2, 0x7f040010
 
-    invoke-virtual {p0, v2}, Lcom/android/gallery3d/gadget/WidgetTypeChooser;->setContentView(I)V
+    invoke-virtual {p0, v2}, Landroid/app/Activity;->setContentView(I)V
 
     .line 47
     const v2, 0x7f0b0016
 
-    invoke-virtual {p0, v2}, Lcom/android/gallery3d/gadget/WidgetTypeChooser;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -63,7 +63,7 @@
     .line 50
     const v2, 0x7f0b001a
 
-    invoke-virtual {p0, v2}, Lcom/android/gallery3d/gadget/WidgetTypeChooser;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -75,7 +75,7 @@
 
     invoke-direct {v2, p0}, Lcom/android/gallery3d/gadget/WidgetTypeChooser$2;-><init>(Lcom/android/gallery3d/gadget/WidgetTypeChooser;)V
 
-    invoke-virtual {v0, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 58
     return-void

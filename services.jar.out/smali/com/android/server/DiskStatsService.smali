@@ -146,7 +146,7 @@
     invoke-virtual {p3, v8}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     .line 109
-    invoke-virtual {v4}, Ljava/lang/IllegalArgumentException;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v8
 
@@ -299,7 +299,7 @@
     .end local v7           #fos:Ljava/io/FileOutputStream;
     .local v8, fos:Ljava/io/FileOutputStream;
     :try_start_1
-    invoke-virtual {v8, v10}, Ljava/io/FileOutputStream;->write([B)V
+    invoke-virtual {v8, v10}, Ljava/io/OutputStream;->write([B)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
@@ -347,7 +347,7 @@
     invoke-virtual {v0, v12}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     .line 72
-    invoke-virtual {v6}, Ljava/io/IOException;->toString()Ljava/lang/String;
+    invoke-virtual {v6}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v12
 

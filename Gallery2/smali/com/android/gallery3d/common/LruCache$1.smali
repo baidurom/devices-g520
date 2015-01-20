@@ -65,7 +65,7 @@
     .line 41
     .local p0, this:Lcom/android/gallery3d/common/LruCache$1;,"Lcom/android/gallery3d/common/LruCache.1;"
     .local p1, eldest:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<TK;TV;>;"
-    invoke-virtual {p0}, Lcom/android/gallery3d/common/LruCache$1;->size()I
+    invoke-virtual {p0}, Ljava/util/HashMap;->size()I
 
     move-result v0
 

@@ -3,12 +3,12 @@
 .source "SpannableStringBuilder.java"
 
 # interfaces
-.implements Ljava/lang/CharSequence;
-.implements Landroid/text/GetChars;
-.implements Landroid/text/Spannable;
 .implements Landroid/text/Editable;
-.implements Ljava/lang/Appendable;
+.implements Landroid/text/GetChars;
 .implements Landroid/text/GraphicsOperations;
+.implements Landroid/text/Spannable;
+.implements Ljava/lang/Appendable;
+.implements Ljava/lang/CharSequence;
 
 
 # static fields
@@ -115,7 +115,7 @@
     const/4 v1, 0x0
 
     .line 51
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1321
     sget-object v0, Landroid/text/SpannableStringBuilder;->NO_FILTERS:[Landroid/text/InputFilter;
@@ -830,7 +830,7 @@
 
     invoke-direct {v4, v5}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v4}, Ljava/lang/Exception;->printStackTrace()V
+    invoke-virtual {v4}, Ljava/lang/Throwable;->printStackTrace()V
 
     .line 341
     :cond_12
@@ -1836,7 +1836,7 @@
 
     invoke-direct {v6, v7}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v6}, Ljava/lang/Exception;->printStackTrace()V
+    invoke-virtual {v6}, Ljava/lang/Throwable;->printStackTrace()V
 
     .line 146
     :cond_2

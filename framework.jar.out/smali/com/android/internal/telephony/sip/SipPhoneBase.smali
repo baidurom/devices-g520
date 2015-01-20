@@ -384,7 +384,7 @@
 
     .prologue
     .line 71
-    invoke-virtual {p0, p1}, Lcom/android/internal/telephony/sip/SipPhoneBase;->dial(Ljava/lang/String;)Lcom/android/internal/telephony/Connection;
+    invoke-virtual {p0, p1}, Lcom/android/internal/telephony/PhoneBase;->dial(Ljava/lang/String;)Lcom/android/internal/telephony/Connection;
 
     move-result-object v0
 

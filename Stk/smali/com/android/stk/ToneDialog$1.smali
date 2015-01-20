@@ -60,7 +60,7 @@
     .line 95
     iget-object v0, p0, Lcom/android/stk/ToneDialog$1;->this$0:Lcom/android/stk/ToneDialog;
 
-    invoke-virtual {v0}, Lcom/android/stk/ToneDialog;->finish()V
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 

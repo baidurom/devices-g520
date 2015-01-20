@@ -30,7 +30,7 @@
     .line 262
     iput-object p1, p0, Lcom/mediatek/FMRadio/FMRecordDialogFragment$2;->this$0:Lcom/mediatek/FMRadio/FMRecordDialogFragment;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -230,11 +230,11 @@
 
     iget-object v5, p0, Lcom/mediatek/FMRadio/FMRecordDialogFragment$2;->this$0:Lcom/mediatek/FMRadio/FMRecordDialogFragment;
 
-    invoke-virtual {v5}, Lcom/mediatek/FMRadio/FMRecordDialogFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v5}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v5}, Landroid/content/ContextWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -291,7 +291,7 @@
     .line 294
     iget-object v4, p0, Lcom/mediatek/FMRadio/FMRecordDialogFragment$2;->this$0:Lcom/mediatek/FMRadio/FMRecordDialogFragment;
 
-    invoke-virtual {v4}, Lcom/mediatek/FMRadio/FMRecordDialogFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v4}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -335,7 +335,7 @@
     :cond_3
     iget-object v4, p0, Lcom/mediatek/FMRadio/FMRecordDialogFragment$2;->this$0:Lcom/mediatek/FMRadio/FMRecordDialogFragment;
 
-    invoke-virtual {v4}, Lcom/mediatek/FMRadio/FMRecordDialogFragment;->dismissAllowingStateLoss()V
+    invoke-virtual {v4}, Landroid/app/DialogFragment;->dismissAllowingStateLoss()V
 
     goto/16 :goto_0
 
@@ -370,7 +370,7 @@
     :cond_4
     iget-object v4, p0, Lcom/mediatek/FMRadio/FMRecordDialogFragment$2;->this$0:Lcom/mediatek/FMRadio/FMRecordDialogFragment;
 
-    invoke-virtual {v4}, Lcom/mediatek/FMRadio/FMRecordDialogFragment;->dismissAllowingStateLoss()V
+    invoke-virtual {v4}, Landroid/app/DialogFragment;->dismissAllowingStateLoss()V
 
     .line 307
     const-string v4, "FmRx/RecordDlg"

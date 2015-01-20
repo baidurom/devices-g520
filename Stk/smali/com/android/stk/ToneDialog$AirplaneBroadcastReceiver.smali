@@ -70,7 +70,7 @@
     .line 231
     iget-object v1, p0, Lcom/android/stk/ToneDialog$AirplaneBroadcastReceiver;->this$0:Lcom/android/stk/ToneDialog;
 
-    invoke-virtual {v1}, Lcom/android/stk/ToneDialog;->finish()V
+    invoke-virtual {v1}, Landroid/app/Activity;->finish()V
 
     .line 233
     :cond_0

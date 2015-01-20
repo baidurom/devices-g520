@@ -105,7 +105,7 @@
     .line 206
     .local v2, uri:Landroid/net/Uri;
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/Gallery;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -140,7 +140,7 @@
 
     .prologue
     .line 99
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/Gallery;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -441,7 +441,7 @@
     .line 195
     const-string v2, "media-path"
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/Gallery;->getDataManager()Lcom/android/gallery3d/data/DataManager;
+    invoke-virtual {p0}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->getDataManager()Lcom/android/gallery3d/data/DataManager;
 
     move-result-object v3
 
@@ -452,7 +452,7 @@
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 197
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/Gallery;->getStateManager()Lcom/android/gallery3d/app/StateManager;
+    invoke-virtual {p0}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->getStateManager()Lcom/android/gallery3d/app/StateManager;
 
     move-result-object v2
 
@@ -505,7 +505,7 @@
     .local v1, typeBits:I
     const-string v2, "media-path"
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/Gallery;->getDataManager()Lcom/android/gallery3d/data/DataManager;
+    invoke-virtual {p0}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->getDataManager()Lcom/android/gallery3d/data/DataManager;
 
     move-result-object v3
 
@@ -516,7 +516,7 @@
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 184
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/Gallery;->getStateManager()Lcom/android/gallery3d/app/StateManager;
+    invoke-virtual {p0}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->getStateManager()Lcom/android/gallery3d/app/StateManager;
 
     move-result-object v2
 
@@ -571,14 +571,14 @@
     if-eqz v19, :cond_3
 
     .line 216
-    invoke-virtual/range {p0 .. p0}, Lcom/android/gallery3d/app/Gallery;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual/range {p0 .. p0}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v19
 
     invoke-virtual/range {v19 .. v19}, Landroid/app/ActionBar;->hide()V
 
     .line 217
-    invoke-virtual/range {p0 .. p0}, Lcom/android/gallery3d/app/Gallery;->getDataManager()Lcom/android/gallery3d/data/DataManager;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->getDataManager()Lcom/android/gallery3d/data/DataManager;
 
     move-result-object v9
 
@@ -702,7 +702,7 @@
 
     .line 231
     :cond_2
-    invoke-virtual/range {p0 .. p0}, Lcom/android/gallery3d/app/Gallery;->getStateManager()Lcom/android/gallery3d/app/StateManager;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->getStateManager()Lcom/android/gallery3d/app/StateManager;
 
     move-result-object v19
 
@@ -729,7 +729,7 @@
 
     .line 234
     .restart local v5       #data:Landroid/os/Bundle;
-    invoke-virtual/range {p0 .. p0}, Lcom/android/gallery3d/app/Gallery;->getDataManager()Lcom/android/gallery3d/data/DataManager;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->getDataManager()Lcom/android/gallery3d/data/DataManager;
 
     move-result-object v6
 
@@ -767,7 +767,7 @@
     invoke-virtual/range {v19 .. v19}, Landroid/widget/Toast;->show()V
 
     .line 240
-    invoke-virtual/range {p0 .. p0}, Lcom/android/gallery3d/app/Gallery;->finish()V
+    invoke-virtual/range {p0 .. p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 
@@ -793,7 +793,7 @@
     .line 246
     const-string v19, "media-path"
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/gallery3d/app/Gallery;->getDataManager()Lcom/android/gallery3d/data/DataManager;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->getDataManager()Lcom/android/gallery3d/data/DataManager;
 
     move-result-object v20
 
@@ -812,7 +812,7 @@
     invoke-virtual {v5, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 248
-    invoke-virtual/range {p0 .. p0}, Lcom/android/gallery3d/app/Gallery;->getStateManager()Lcom/android/gallery3d/app/StateManager;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->getStateManager()Lcom/android/gallery3d/app/StateManager;
 
     move-result-object v19
 
@@ -948,7 +948,7 @@
     invoke-virtual {v5, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 267
-    invoke-virtual/range {p0 .. p0}, Lcom/android/gallery3d/app/Gallery;->getStateManager()Lcom/android/gallery3d/app/StateManager;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->getStateManager()Lcom/android/gallery3d/app/StateManager;
 
     move-result-object v19
 
@@ -977,7 +977,7 @@
     invoke-virtual {v5, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 270
-    invoke-virtual/range {p0 .. p0}, Lcom/android/gallery3d/app/Gallery;->getStateManager()Lcom/android/gallery3d/app/StateManager;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->getStateManager()Lcom/android/gallery3d/app/StateManager;
 
     move-result-object v19
 
@@ -1151,7 +1151,7 @@
     invoke-virtual/range {v19 .. v19}, Landroid/widget/Toast;->show()V
 
     .line 314
-    invoke-virtual/range {p0 .. p0}, Lcom/android/gallery3d/app/Gallery;->finish()V
+    invoke-virtual/range {p0 .. p0}, Landroid/app/Activity;->finish()V
 
     goto/16 :goto_0
 
@@ -1246,7 +1246,7 @@
 
     .line 363
     :cond_11
-    invoke-virtual/range {p0 .. p0}, Lcom/android/gallery3d/app/Gallery;->getStateManager()Lcom/android/gallery3d/app/StateManager;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->getStateManager()Lcom/android/gallery3d/app/StateManager;
 
     move-result-object v19
 
@@ -1316,7 +1316,7 @@
     invoke-virtual/range {v19 .. v19}, Landroid/widget/Toast;->show()V
 
     .line 326
-    invoke-virtual/range {p0 .. p0}, Lcom/android/gallery3d/app/Gallery;->finish()V
+    invoke-virtual/range {p0 .. p0}, Landroid/app/Activity;->finish()V
 
     goto/16 :goto_0
 .end method
@@ -1404,7 +1404,7 @@
     .line 423
     .local v6, cursor:Landroid/database/Cursor;
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/Gallery;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -1627,23 +1627,23 @@
     .line 86
     const/16 v0, 0x8
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/app/Gallery;->requestWindowFeature(I)Z
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->requestWindowFeature(I)Z
 
     .line 87
     const/16 v0, 0x9
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/app/Gallery;->requestWindowFeature(I)Z
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->requestWindowFeature(I)Z
 
     .line 89
     const v0, 0x7f04001d
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/app/Gallery;->setContentView(I)V
+    invoke-virtual {p0, v0}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->setContentView(I)V
 
     .line 91
     if-eqz p1, :cond_0
 
     .line 92
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/Gallery;->getStateManager()Lcom/android/gallery3d/app/StateManager;
+    invoke-virtual {p0}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->getStateManager()Lcom/android/gallery3d/app/StateManager;
 
     move-result-object v0
 
@@ -1666,10 +1666,10 @@
 
     .prologue
     .line 370
-    invoke-super {p0, p1}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->onCreateOptionsMenu(Landroid/view/Menu;)Z
+    invoke-super {p0, p1}, Landroid/app/Activity;->onCreateOptionsMenu(Landroid/view/Menu;)Z
 
     .line 371
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/Gallery;->getStateManager()Lcom/android/gallery3d/app/StateManager;
+    invoke-virtual {p0}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->getStateManager()Lcom/android/gallery3d/app/StateManager;
 
     move-result-object v0
 
@@ -1707,7 +1707,7 @@
 
     .prologue
     .line 376
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/Gallery;->getStateManager()Lcom/android/gallery3d/app/StateManager;
+    invoke-virtual {p0}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->getStateManager()Lcom/android/gallery3d/app/StateManager;
 
     move-result-object v0
 
@@ -1762,7 +1762,7 @@
     .local v0, data:Landroid/os/Bundle;
     const-string v1, "media-path"
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/Gallery;->getDataManager()Lcom/android/gallery3d/data/DataManager;
+    invoke-virtual {p0}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->getDataManager()Lcom/android/gallery3d/data/DataManager;
 
     move-result-object v2
 
@@ -1804,7 +1804,7 @@
     if-eqz v1, :cond_1
 
     .line 158
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/Gallery;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -1817,7 +1817,7 @@
     .line 159
     const-string v1, "onlyStereoMedia"
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/Gallery;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -1837,7 +1837,7 @@
 
     .line 164
     :cond_1
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/Gallery;->getStateManager()Lcom/android/gallery3d/app/StateManager;
+    invoke-virtual {p0}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->getStateManager()Lcom/android/gallery3d/app/StateManager;
 
     move-result-object v1
 

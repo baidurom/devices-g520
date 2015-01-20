@@ -115,7 +115,7 @@
     .line 100
     const/4 v0, 0x4
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/ui/InLineSettingItem;->sendAccessibilityEvent(I)V
+    invoke-virtual {p0, v0}, Landroid/view/View;->sendAccessibilityEvent(I)V
 
     .line 101
     const/4 v0, 0x1
@@ -163,7 +163,7 @@
     if-nez v0, :cond_2
 
     .line 151
-    invoke-virtual {p0}, Lcom/android/camera/ui/InLineSettingItem;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -209,7 +209,7 @@
     if-nez v0, :cond_2
 
     .line 140
-    invoke-virtual {p0}, Lcom/android/camera/ui/InLineSettingItem;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -315,12 +315,12 @@
 
     .prologue
     .line 68
-    invoke-super {p0}, Landroid/widget/RelativeLayout;->onFinishInflate()V
+    invoke-super {p0}, Landroid/view/View;->onFinishInflate()V
 
     .line 69
     const v0, 0x7f0b000d
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/ui/InLineSettingItem;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -418,7 +418,7 @@
 
     .prologue
     .line 133
-    invoke-super {p0, p1}, Landroid/widget/RelativeLayout;->setEnabled(Z)V
+    invoke-super {p0, p1}, Landroid/view/View;->setEnabled(Z)V
 
     .line 134
     invoke-static {p0, p1}, Lcom/android/camera/SettingUtils;->setEnabledState(Landroid/view/View;Z)V
@@ -450,7 +450,7 @@
     .line 74
     iget-object v0, p0, Lcom/android/camera/ui/InLineSettingItem;->mTitle:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/android/camera/ListPreference;->getTitle()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/android/camera/CameraPreference;->getTitle()Ljava/lang/String;
 
     move-result-object v1
 

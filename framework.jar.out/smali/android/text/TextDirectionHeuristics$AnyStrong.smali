@@ -59,7 +59,7 @@
 
     .prologue
     .line 225
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 226
     iput-boolean p1, p0, Landroid/text/TextDirectionHeuristics$AnyStrong;->mLookForRtl:Z
@@ -105,7 +105,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v4}, Landroid/text/TextDirectionHeuristics$TriState;->ordinal()I
+    invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
 
     move-result v4
 

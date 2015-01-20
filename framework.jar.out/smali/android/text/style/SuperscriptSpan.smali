@@ -60,7 +60,7 @@
     .line 44
     iget v0, p1, Landroid/text/TextPaint;->baselineShift:I
 
-    invoke-virtual {p1}, Landroid/text/TextPaint;->ascent()F
+    invoke-virtual {p1}, Landroid/graphics/Paint;->ascent()F
 
     move-result v1
 
@@ -86,7 +86,7 @@
     .line 49
     iget v0, p1, Landroid/text/TextPaint;->baselineShift:I
 
-    invoke-virtual {p1}, Landroid/text/TextPaint;->ascent()F
+    invoke-virtual {p1}, Landroid/graphics/Paint;->ascent()F
 
     move-result v1
 

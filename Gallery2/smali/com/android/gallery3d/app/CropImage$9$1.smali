@@ -30,7 +30,7 @@
     .line 1796
     iput-object p1, p0, Lcom/android/gallery3d/app/CropImage$9$1;->this$1:Lcom/android/gallery3d/app/CropImage$9;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -61,14 +61,14 @@
 
     iget-object v0, v0, Lcom/android/gallery3d/app/CropImage$9;->this$0:Lcom/android/gallery3d/app/CropImage;
 
-    invoke-virtual {v0, v2}, Lcom/android/gallery3d/app/CropImage;->setResult(I)V
+    invoke-virtual {v0, v2}, Landroid/app/Activity;->setResult(I)V
 
     .line 1801
     iget-object v0, p0, Lcom/android/gallery3d/app/CropImage$9$1;->this$1:Lcom/android/gallery3d/app/CropImage$9;
 
     iget-object v0, v0, Lcom/android/gallery3d/app/CropImage$9;->this$0:Lcom/android/gallery3d/app/CropImage;
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/app/CropImage;->finish()V
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
     .line 1802
     return-void

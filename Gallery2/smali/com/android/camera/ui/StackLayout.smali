@@ -48,7 +48,7 @@
     if-ge v2, v1, :cond_1
 
     .line 54
-    invoke-virtual {p0, v2}, Lcom/android/camera/ui/StackLayout;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -88,7 +88,7 @@
 
     .prologue
     .line 35
-    invoke-virtual {p0}, Lcom/android/camera/ui/StackLayout;->getChildCount()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v1
 
@@ -96,13 +96,13 @@
     .local v1, count:I
     const/4 v4, 0x0
 
-    invoke-virtual {p0, v4}, Lcom/android/camera/ui/StackLayout;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v4}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
     .line 39
     .local v0, child:Landroid/view/View;
-    invoke-virtual {p0, v0, p1, p2}, Lcom/android/camera/ui/StackLayout;->measureChild(Landroid/view/View;II)V
+    invoke-virtual {p0, v0, p1, p2}, Landroid/view/ViewGroup;->measureChild(Landroid/view/View;II)V
 
     .line 42
     invoke-virtual {v0}, Landroid/view/View;->getMeasuredWidth()I
@@ -125,7 +125,7 @@
 
     move-result v5
 
-    invoke-virtual {p0, v4, v5}, Lcom/android/camera/ui/StackLayout;->setMeasuredDimension(II)V
+    invoke-virtual {p0, v4, v5}, Landroid/view/View;->setMeasuredDimension(II)V
 
     .line 47
     return-void

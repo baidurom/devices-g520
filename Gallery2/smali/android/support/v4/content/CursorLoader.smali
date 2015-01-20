@@ -107,7 +107,7 @@
 
     .prologue
     .line 70
-    invoke-virtual {p0}, Landroid/support/v4/content/CursorLoader;->isReset()Z
+    invoke-virtual {p0}, Landroid/support/v4/content/Loader;->isReset()Z
 
     move-result v1
 
@@ -133,14 +133,14 @@
     iput-object p1, p0, Landroid/support/v4/content/CursorLoader;->mCursor:Landroid/database/Cursor;
 
     .line 80
-    invoke-virtual {p0}, Landroid/support/v4/content/CursorLoader;->isStarted()Z
+    invoke-virtual {p0}, Landroid/support/v4/content/Loader;->isStarted()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
     .line 81
-    invoke-super {p0, p1}, Landroid/support/v4/content/AsyncTaskLoader;->deliverResult(Ljava/lang/Object;)V
+    invoke-super {p0, p1}, Landroid/support/v4/content/Loader;->deliverResult(Ljava/lang/Object;)V
 
     .line 84
     :cond_2
@@ -331,7 +331,7 @@
 
     .prologue
     .line 49
-    invoke-virtual {p0}, Landroid/support/v4/content/CursorLoader;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/support/v4/content/Loader;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -423,7 +423,7 @@
 
     .prologue
     .line 151
-    invoke-super {p0}, Landroid/support/v4/content/AsyncTaskLoader;->onReset()V
+    invoke-super {p0}, Landroid/support/v4/content/Loader;->onReset()V
 
     .line 154
     invoke-virtual {p0}, Landroid/support/v4/content/CursorLoader;->onStopLoading()V
@@ -472,7 +472,7 @@
 
     .line 128
     :cond_0
-    invoke-virtual {p0}, Landroid/support/v4/content/CursorLoader;->takeContentChanged()Z
+    invoke-virtual {p0}, Landroid/support/v4/content/Loader;->takeContentChanged()Z
 
     move-result v0
 
@@ -484,7 +484,7 @@
 
     .line 129
     :cond_1
-    invoke-virtual {p0}, Landroid/support/v4/content/CursorLoader;->forceLoad()V
+    invoke-virtual {p0}, Landroid/support/v4/content/Loader;->forceLoad()V
 
     .line 131
     :cond_2
@@ -496,7 +496,7 @@
 
     .prologue
     .line 139
-    invoke-virtual {p0}, Landroid/support/v4/content/CursorLoader;->cancelLoad()Z
+    invoke-virtual {p0}, Landroid/support/v4/content/AsyncTaskLoader;->cancelLoad()Z
 
     .line 140
     return-void

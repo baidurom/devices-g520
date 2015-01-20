@@ -86,7 +86,7 @@
 
     .prologue
     .line 137
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 138
     iput-object p1, p0, Landroid/webkit/PluginManager;->mContext:Landroid/content/Context;
@@ -1178,7 +1178,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Landroid/webkit/JWebCoreJavaBridge;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+    invoke-virtual {v0, v1, v2}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v0
 

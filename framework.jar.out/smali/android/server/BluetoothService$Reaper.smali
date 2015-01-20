@@ -38,7 +38,7 @@
     .line 1799
     iput-object p1, p0, Landroid/server/BluetoothService$Reaper;->this$0:Landroid/server/BluetoothService;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1800
     iput p2, p0, Landroid/server/BluetoothService$Reaper;->mPid:I
@@ -61,7 +61,7 @@
     .line 1793
     iput-object p1, p0, Landroid/server/BluetoothService$Reaper;->this$0:Landroid/server/BluetoothService;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1794
     iput p3, p0, Landroid/server/BluetoothService$Reaper;->mPid:I

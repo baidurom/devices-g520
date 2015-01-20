@@ -38,7 +38,7 @@
 
     .line 41
     .local v0, filter:Lcom/android/gallery3d/photoeditor/filters/FlipFilter;
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/FlipAction;->disableFilterOutput()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/EffectAction;->disableFilterOutput()V
 
     .line 43
     iget-object v2, p0, Lcom/android/gallery3d/photoeditor/actions/EffectAction;->toolKit:Lcom/android/gallery3d/photoeditor/actions/EffectToolKit;

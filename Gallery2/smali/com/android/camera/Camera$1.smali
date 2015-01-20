@@ -170,7 +170,7 @@
     :pswitch_7
     iget-object v0, p0, Lcom/android/camera/Camera$1;->this$0:Lcom/android/camera/Camera;
 
-    invoke-virtual {v0}, Lcom/android/camera/Camera;->getWindow()Landroid/view/Window;
+    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 

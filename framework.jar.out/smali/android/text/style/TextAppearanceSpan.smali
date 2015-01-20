@@ -398,7 +398,7 @@
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setColor(I)V
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 212
     :cond_0
@@ -438,7 +438,7 @@
 
     .line 220
     :cond_0
-    invoke-virtual {p1}, Landroid/text/TextPaint;->getTypeface()Landroid/graphics/Typeface;
+    invoke-virtual {p1}, Landroid/graphics/Paint;->getTypeface()Landroid/graphics/Typeface;
 
     move-result-object v2
 
@@ -492,7 +492,7 @@
     .line 240
     const/4 v3, 0x1
 
-    invoke-virtual {p1, v3}, Landroid/text/TextPaint;->setFakeBoldText(Z)V
+    invoke-virtual {p1, v3}, Landroid/graphics/Paint;->setFakeBoldText(Z)V
 
     .line 243
     :cond_2
@@ -503,11 +503,11 @@
     .line 244
     const/high16 v3, -0x4180
 
-    invoke-virtual {p1, v3}, Landroid/text/TextPaint;->setTextSkewX(F)V
+    invoke-virtual {p1, v3}, Landroid/graphics/Paint;->setTextSkewX(F)V
 
     .line 247
     :cond_3
-    invoke-virtual {p1, v2}, Landroid/text/TextPaint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
+    invoke-virtual {p1, v2}, Landroid/graphics/Paint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
     .line 250
     .end local v0           #fake:I
@@ -523,7 +523,7 @@
 
     int-to-float v3, v3
 
-    invoke-virtual {p1, v3}, Landroid/text/TextPaint;->setTextSize(F)V
+    invoke-virtual {p1, v3}, Landroid/graphics/Paint;->setTextSize(F)V
 
     .line 253
     :cond_5

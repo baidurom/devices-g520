@@ -9728,7 +9728,7 @@
 
     move-result-object v25
 
-    const v26, 0x1040109
+    const v26, #android:string@roamingTextSearching#t
 
     invoke-virtual/range {v25 .. v26}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -10631,12 +10631,10 @@
     .locals 1
 
     .prologue
-    .line 682
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;->updateSpnDisplay(Z)V
 
-    .line 683
     return-void
 .end method
 
@@ -10847,6 +10845,10 @@
     .line 753
     const-string/jumbo v6, "plmn"
 
+    invoke-virtual {p0, v1}, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;->updatePlmnOrSpnDisplay(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
     invoke-virtual {v0, v6, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 754
@@ -10919,3 +10921,12 @@
     .line 763
     return-void
 .end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$invoke-revertToNitzTime-a4609a(Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;)V
+#    .locals 0
+#    .parameter "x0"
+#    .prologue
+#    invoke-direct {p0}, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;->revertToNitzTime()V
+#    return-void
+#.end method

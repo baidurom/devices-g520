@@ -182,7 +182,7 @@
     .line 369
     iget-object v0, p0, Lcom/mediatek/bluetooth/share/BluetoothShareTabActivity$BtShareClearHistoryThread;->this$0:Lcom/mediatek/bluetooth/share/BluetoothShareTabActivity;
 
-    invoke-virtual {v0}, Lcom/mediatek/bluetooth/share/BluetoothShareTabActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -227,7 +227,7 @@
     :try_start_3
     iget-object v0, p0, Lcom/mediatek/bluetooth/share/BluetoothShareTabActivity$BtShareClearHistoryThread;->this$0:Lcom/mediatek/bluetooth/share/BluetoothShareTabActivity;
 
-    invoke-virtual {v0}, Lcom/mediatek/bluetooth/share/BluetoothShareTabActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -262,7 +262,7 @@
 
     const-string v1, "notification"
 
-    invoke-virtual {v0, v1}, Lcom/mediatek/bluetooth/share/BluetoothShareTabActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 

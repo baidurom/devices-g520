@@ -30,7 +30,7 @@
     .line 151
     iput-object p1, p0, Landroid/app/ListFragment$1;->this$0:Landroid/app/ListFragment;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -50,7 +50,7 @@
 
     iget-object v1, v1, Landroid/app/ListFragment;->mList:Landroid/widget/ListView;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ListView;->focusableViewAvailable(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->focusableViewAvailable(Landroid/view/View;)V
 
     .line 154
     return-void

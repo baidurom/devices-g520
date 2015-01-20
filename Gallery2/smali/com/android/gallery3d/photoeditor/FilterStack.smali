@@ -81,7 +81,7 @@
     const/4 v1, 0x1
 
     .line 56
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 43
     new-instance v0, Ljava/util/Stack;
@@ -122,7 +122,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v0, v3}, Ljava/util/Stack;->addAll(Ljava/util/Collection;)Z
+    invoke-virtual {v0, v3}, Ljava/util/Vector;->addAll(Ljava/util/Collection;)Z
 
     .line 61
     iget-object v0, p0, Lcom/android/gallery3d/photoeditor/FilterStack;->redoStack:Ljava/util/Stack;
@@ -133,7 +133,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v0, v3}, Ljava/util/Stack;->addAll(Ljava/util/Collection;)Z
+    invoke-virtual {v0, v3}, Ljava/util/Vector;->addAll(Ljava/util/Collection;)Z
 
     .line 62
     iput-boolean v1, p0, Lcom/android/gallery3d/photoeditor/FilterStack;->outputTopFilter:Z
@@ -349,7 +349,7 @@
 
     invoke-direct {v1, p0, p1}, Lcom/android/gallery3d/photoeditor/FilterStack$1;-><init>(Lcom/android/gallery3d/photoeditor/FilterStack;Lcom/android/gallery3d/photoeditor/OnDoneCallback;)V
 
-    invoke-virtual {v0, v1}, Lcom/android/gallery3d/photoeditor/PhotoView;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
     .line 144
     return-void
@@ -481,7 +481,7 @@
 
     iget-object v3, p0, Lcom/android/gallery3d/photoeditor/FilterStack;->appliedStack:Ljava/util/Stack;
 
-    invoke-virtual {v3}, Ljava/util/Stack;->size()I
+    invoke-virtual {v3}, Ljava/util/Vector;->size()I
 
     move-result v2
 
@@ -512,7 +512,7 @@
     :cond_2
     iget-object v3, p0, Lcom/android/gallery3d/photoeditor/FilterStack;->appliedStack:Ljava/util/Stack;
 
-    invoke-virtual {v3}, Ljava/util/Stack;->size()I
+    invoke-virtual {v3}, Ljava/util/Vector;->size()I
 
     move-result v3
 
@@ -559,7 +559,7 @@
 
     iget-object v1, p0, Lcom/android/gallery3d/photoeditor/FilterStack;->appliedStack:Ljava/util/Stack;
 
-    invoke-virtual {v1}, Ljava/util/Stack;->size()I
+    invoke-virtual {v1}, Ljava/util/Vector;->size()I
 
     move-result v1
 
@@ -695,7 +695,7 @@
     :cond_0
     iget-object v2, p0, Lcom/android/gallery3d/photoeditor/FilterStack;->appliedStack:Ljava/util/Stack;
 
-    invoke-virtual {v2, p1}, Ljava/util/Stack;->get(I)Ljava/lang/Object;
+    invoke-virtual {v2, p1}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -775,7 +775,7 @@
 
     invoke-direct {v3, p0, v1, v0}, Lcom/android/gallery3d/photoeditor/FilterStack$2;-><init>(Lcom/android/gallery3d/photoeditor/FilterStack;ZZ)V
 
-    invoke-virtual {v2, v3}, Lcom/android/gallery3d/photoeditor/PhotoView;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v2, v3}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
     .line 157
     return-void
@@ -837,12 +837,12 @@
 
     invoke-direct {v1, p0}, Lcom/android/gallery3d/photoeditor/FilterStack$9;-><init>(Lcom/android/gallery3d/photoeditor/FilterStack;)V
 
-    invoke-virtual {v0, v1}, Lcom/android/gallery3d/photoeditor/PhotoView;->queueEvent(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Landroid/opengl/GLSurfaceView;->queueEvent(Ljava/lang/Runnable;)V
 
     .line 272
     iget-object v0, p0, Lcom/android/gallery3d/photoeditor/FilterStack;->photoView:Lcom/android/gallery3d/photoeditor/PhotoView;
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/photoeditor/PhotoView;->onPause()V
+    invoke-virtual {v0}, Landroid/opengl/GLSurfaceView;->onPause()V
 
     .line 273
     return-void
@@ -855,7 +855,7 @@
     .line 276
     iget-object v0, p0, Lcom/android/gallery3d/photoeditor/FilterStack;->photoView:Lcom/android/gallery3d/photoeditor/PhotoView;
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/photoeditor/PhotoView;->onResume()V
+    invoke-virtual {v0}, Landroid/opengl/GLSurfaceView;->onResume()V
 
     .line 277
     const/4 v0, 0x0

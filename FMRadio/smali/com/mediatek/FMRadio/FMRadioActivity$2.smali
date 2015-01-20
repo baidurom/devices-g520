@@ -115,7 +115,7 @@
     .local v1, df:Lcom/mediatek/FMRadio/FMRecordDialogFragment;
     if-eqz v1, :cond_3
 
-    invoke-virtual {v1}, Lcom/mediatek/FMRadio/FMRecordDialogFragment;->getShowsDialog()Z
+    invoke-virtual {v1}, Landroid/app/DialogFragment;->getShowsDialog()Z
 
     move-result v2
 
@@ -134,7 +134,7 @@
 
     const v4, 0x7f040038
 
-    invoke-virtual {v3, v4}, Lcom/mediatek/FMRadio/FMRadioActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 

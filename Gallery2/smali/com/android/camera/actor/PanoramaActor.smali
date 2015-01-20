@@ -98,7 +98,7 @@
 
     iget-object v1, p0, Lcom/android/camera/actor/PhotoActor;->mCamera:Lcom/android/camera/Camera;
 
-    invoke-virtual {v1}, Lcom/android/camera/Camera;->getMainLooper()Landroid/os/Looper;
+    invoke-virtual {v1}, Landroid/content/ContextWrapper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v1
 
@@ -126,7 +126,7 @@
     .line 41
     new-instance v0, Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/actor/PanoramaActor;->mLock:Ljava/lang/Object;
 
@@ -822,14 +822,14 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/android/camera/actor/PanoramaActor;->getAutoFocusMoveCallback()Landroid/hardware/Camera$AutoFocusMoveCallback;
+    invoke-virtual {p0}, Lcom/android/camera/actor/PhotoActor;->getAutoFocusMoveCallback()Landroid/hardware/Camera$AutoFocusMoveCallback;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/android/camera/CameraManager$CameraProxy;->setAutoFocusMoveCallback(Landroid/hardware/Camera$AutoFocusMoveCallback;)V
 
     .line 473
-    invoke-virtual {p0}, Lcom/android/camera/actor/PanoramaActor;->startFaceDetection()V
+    invoke-virtual {p0}, Lcom/android/camera/actor/PhotoActor;->startFaceDetection()V
 
     .line 475
     :cond_1
@@ -861,7 +861,7 @@
 
     .line 333
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/camera/actor/PanoramaActor;->stopPreview()V
+    invoke-virtual {p0}, Lcom/android/camera/actor/PhotoActor;->stopPreview()V
 
     .line 334
     monitor-exit v0
@@ -909,7 +909,7 @@
 
     const v5, 0x7f0c012d
 
-    invoke-virtual {v0, v5}, Lcom/android/camera/Camera;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -919,7 +919,7 @@
 
     const v5, 0x7f0c011e
 
-    invoke-virtual {v0, v5}, Lcom/android/camera/Camera;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -929,7 +929,7 @@
 
     const v5, 0x7f0c012c
 
-    invoke-virtual {v0, v5}, Lcom/android/camera/Camera;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1186,7 +1186,7 @@
     invoke-virtual {v0}, Lcom/android/camera/manager/PanoramaViewManager;->resetController()V
 
     .line 449
-    invoke-virtual {p0, v3, v3}, Lcom/android/camera/actor/PanoramaActor;->updateSavingHint(ZZ)V
+    invoke-virtual {p0, v3, v3}, Lcom/android/camera/actor/PhotoActor;->updateSavingHint(ZZ)V
 
     .line 450
     iget-object v0, p0, Lcom/android/camera/actor/PhotoActor;->mCamera:Lcom/android/camera/Camera;
@@ -1237,7 +1237,7 @@
     invoke-virtual {v0, v1}, Lcom/android/camera/FocusManager;->setAwbLock(Z)V
 
     .line 481
-    invoke-virtual {p0}, Lcom/android/camera/actor/PanoramaActor;->setFocusParameters()V
+    invoke-virtual {p0}, Lcom/android/camera/actor/PhotoActor;->setFocusParameters()V
 
     .line 483
     :cond_0
@@ -1360,7 +1360,7 @@
     invoke-virtual {v2, v1}, Lcom/android/camera/FocusManager;->setAwbLock(Z)V
 
     .line 516
-    invoke-virtual {p0}, Lcom/android/camera/actor/PanoramaActor;->setFocusParameters()V
+    invoke-virtual {p0}, Lcom/android/camera/actor/PhotoActor;->setFocusParameters()V
 
     .line 518
     iget-object v2, p0, Lcom/android/camera/actor/PhotoActor;->mCamera:Lcom/android/camera/Camera;
@@ -1392,7 +1392,7 @@
     invoke-virtual {v0, v2}, Lcom/android/camera/Camera;->setViewState(I)V
 
     .line 526
-    invoke-virtual {p0}, Lcom/android/camera/actor/PanoramaActor;->stopFaceDetection()V
+    invoke-virtual {p0}, Lcom/android/camera/actor/PhotoActor;->stopFaceDetection()V
 
     .line 527
     iget-object v0, p0, Lcom/android/camera/actor/PhotoActor;->mCamera:Lcom/android/camera/Camera;
@@ -1754,7 +1754,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/camera/actor/PanoramaActor;->updateSavingHint(ZZ)V
+    invoke-virtual {p0, v0, v1}, Lcom/android/camera/actor/PhotoActor;->updateSavingHint(ZZ)V
 
     .line 422
     iget-object v0, p0, Lcom/android/camera/actor/PhotoActor;->mCamera:Lcom/android/camera/Camera;
@@ -1857,7 +1857,7 @@
 
     const v3, 0x7f0c012d
 
-    invoke-virtual {v2, v3}, Lcom/android/camera/Camera;->getString(I)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1869,7 +1869,7 @@
 
     const v3, 0x7f0c00b5
 
-    invoke-virtual {v2, v3}, Lcom/android/camera/Camera;->getString(I)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1897,7 +1897,7 @@
     .line 575
     iget-object v0, p0, Lcom/android/camera/actor/PanoramaActor;->mPanoramaView:Lcom/android/camera/manager/PanoramaViewManager;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/PanoramaViewManager;->release()V
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->release()V
 
     .line 576
     return-void
@@ -1924,7 +1924,7 @@
 
     iget-object v2, p0, Lcom/android/camera/actor/PhotoActor;->mCamera:Lcom/android/camera/Camera;
 
-    invoke-virtual {v2, v0}, Lcom/android/camera/Camera;->getString(I)Ljava/lang/String;
+    invoke-virtual {v2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 

@@ -30,7 +30,7 @@
     .line 91
     iput-object p1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView$1;->this$0:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -123,7 +123,7 @@
 
     iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView$1;->this$0:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    #getter for: Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    #getter for: Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
     invoke-static {v2}, Lcom/mediatek/gallery3d/video/MTKVideoView;->access$200(Lcom/mediatek/gallery3d/video/MTKVideoView;)Landroid/media/MediaPlayer;
 
     move-result-object v2

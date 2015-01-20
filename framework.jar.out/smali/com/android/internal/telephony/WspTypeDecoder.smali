@@ -4535,7 +4535,7 @@
 
     .prologue
     .line 327
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 328
     iput-object p1, p0, Lcom/android/internal/telephony/WspTypeDecoder;->wspData:[B

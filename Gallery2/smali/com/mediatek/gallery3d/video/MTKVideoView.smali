@@ -177,7 +177,7 @@
 
     .prologue
     .line 78
-    iget-boolean v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mCanPause:Z
+    iget-boolean v0, p0, Landroid/widget/VideoView;->mCanPause:Z
 
     return v0
 .end method
@@ -212,7 +212,7 @@
 
     .prologue
     .line 78
-    iget-object v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     return-object v0
 .end method
@@ -223,7 +223,7 @@
 
     .prologue
     .line 78
-    iget v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mCurrentState:I
+    iget v0, p0, Landroid/widget/VideoView;->mCurrentState:I
 
     return v0
 .end method
@@ -235,7 +235,7 @@
 
     .prologue
     .line 78
-    iput p1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mSeekWhenPrepared:I
+    iput p1, p0, Landroid/widget/VideoView;->mSeekWhenPrepared:I
 
     return p1
 .end method
@@ -246,7 +246,7 @@
 
     .prologue
     .line 78
-    iget v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mSeekWhenPrepared:I
+    iget v0, p0, Landroid/widget/VideoView;->mSeekWhenPrepared:I
 
     return v0
 .end method
@@ -257,7 +257,7 @@
 
     .prologue
     .line 78
-    iget v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mDuration:I
+    iget v0, p0, Landroid/widget/VideoView;->mDuration:I
 
     return v0
 .end method
@@ -269,7 +269,7 @@
 
     .prologue
     .line 78
-    iput p1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mDuration:I
+    iput p1, p0, Landroid/widget/VideoView;->mDuration:I
 
     return p1
 .end method
@@ -280,7 +280,7 @@
 
     .prologue
     .line 78
-    iget v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mDuration:I
+    iget v0, p0, Landroid/widget/VideoView;->mDuration:I
 
     return v0
 .end method
@@ -292,7 +292,7 @@
 
     .prologue
     .line 78
-    iput p1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mCurrentState:I
+    iput p1, p0, Landroid/widget/VideoView;->mCurrentState:I
 
     return p1
 .end method
@@ -303,7 +303,7 @@
 
     .prologue
     .line 78
-    iget-object v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     return-object v0
 .end method
@@ -315,7 +315,7 @@
 
     .prologue
     .line 78
-    iput p1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mTargetState:I
+    iput p1, p0, Landroid/widget/VideoView;->mTargetState:I
 
     return p1
 .end method
@@ -326,7 +326,7 @@
 
     .prologue
     .line 78
-    iget-object v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaController:Landroid/widget/MediaController;
+    iget-object v0, p0, Landroid/widget/VideoView;->mMediaController:Landroid/widget/MediaController;
 
     return-object v0
 .end method
@@ -337,7 +337,7 @@
 
     .prologue
     .line 78
-    iget-object v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaController:Landroid/widget/MediaController;
+    iget-object v0, p0, Landroid/widget/VideoView;->mMediaController:Landroid/widget/MediaController;
 
     return-object v0
 .end method
@@ -348,7 +348,7 @@
 
     .prologue
     .line 78
-    iget-object v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mOnErrorListener:Landroid/media/MediaPlayer$OnErrorListener;
+    iget-object v0, p0, Landroid/widget/VideoView;->mOnErrorListener:Landroid/media/MediaPlayer$OnErrorListener;
 
     return-object v0
 .end method
@@ -359,7 +359,7 @@
 
     .prologue
     .line 78
-    iget-object v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     return-object v0
 .end method
@@ -370,7 +370,7 @@
 
     .prologue
     .line 78
-    iget-object v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mOnErrorListener:Landroid/media/MediaPlayer$OnErrorListener;
+    iget-object v0, p0, Landroid/widget/VideoView;->mOnErrorListener:Landroid/media/MediaPlayer$OnErrorListener;
 
     return-object v0
 .end method
@@ -381,7 +381,7 @@
 
     .prologue
     .line 78
-    iget-object v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Landroid/view/View;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
@@ -392,7 +392,7 @@
 
     .prologue
     .line 78
-    iget-object v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Landroid/view/View;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
@@ -404,7 +404,7 @@
 
     .prologue
     .line 78
-    iput p1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mCurrentBufferPercentage:I
+    iput p1, p0, Landroid/widget/VideoView;->mCurrentBufferPercentage:I
 
     return p1
 .end method
@@ -438,7 +438,7 @@
 
     .prologue
     .line 78
-    iget v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mTargetState:I
+    iget v0, p0, Landroid/widget/VideoView;->mTargetState:I
 
     return v0
 .end method
@@ -449,7 +449,7 @@
 
     .prologue
     .line 78
-    iget v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mCurrentState:I
+    iget v0, p0, Landroid/widget/VideoView;->mCurrentState:I
 
     return v0
 .end method
@@ -461,7 +461,7 @@
 
     .prologue
     .line 78
-    iput p1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoWidth:I
+    iput p1, p0, Landroid/widget/VideoView;->mVideoWidth:I
 
     return p1
 .end method
@@ -473,7 +473,7 @@
 
     .prologue
     .line 78
-    iput p1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoHeight:I
+    iput p1, p0, Landroid/widget/VideoView;->mVideoHeight:I
 
     return p1
 .end method
@@ -484,7 +484,7 @@
 
     .prologue
     .line 78
-    iget v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoWidth:I
+    iget v0, p0, Landroid/widget/VideoView;->mVideoWidth:I
 
     return v0
 .end method
@@ -495,7 +495,7 @@
 
     .prologue
     .line 78
-    iget v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoHeight:I
+    iget v0, p0, Landroid/widget/VideoView;->mVideoHeight:I
 
     return v0
 .end method
@@ -506,7 +506,7 @@
 
     .prologue
     .line 78
-    iget v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mCurrentState:I
+    iget v0, p0, Landroid/widget/VideoView;->mCurrentState:I
 
     return v0
 .end method
@@ -517,7 +517,7 @@
 
     .prologue
     .line 78
-    iget v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoWidth:I
+    iget v0, p0, Landroid/widget/VideoView;->mVideoWidth:I
 
     return v0
 .end method
@@ -528,7 +528,7 @@
 
     .prologue
     .line 78
-    iget v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoHeight:I
+    iget v0, p0, Landroid/widget/VideoView;->mVideoHeight:I
 
     return v0
 .end method
@@ -539,7 +539,7 @@
 
     .prologue
     .line 78
-    iget v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoWidth:I
+    iget v0, p0, Landroid/widget/VideoView;->mVideoWidth:I
 
     return v0
 .end method
@@ -550,7 +550,7 @@
 
     .prologue
     .line 78
-    iget v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoHeight:I
+    iget v0, p0, Landroid/widget/VideoView;->mVideoHeight:I
 
     return v0
 .end method
@@ -562,7 +562,7 @@
 
     .prologue
     .line 78
-    iput-boolean p1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mCanPause:Z
+    iput-boolean p1, p0, Landroid/widget/VideoView;->mCanPause:Z
 
     return p1
 .end method
@@ -573,7 +573,7 @@
 
     .prologue
     .line 78
-    iget v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mCurrentState:I
+    iget v0, p0, Landroid/widget/VideoView;->mCurrentState:I
 
     return v0
 .end method
@@ -607,7 +607,7 @@
 
     .prologue
     .line 78
-    iget-object v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     return-object v0
 .end method
@@ -618,7 +618,7 @@
 
     .prologue
     .line 78
-    iget v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mTargetState:I
+    iget v0, p0, Landroid/widget/VideoView;->mTargetState:I
 
     return v0
 .end method
@@ -629,7 +629,7 @@
 
     .prologue
     .line 78
-    iget v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoWidth:I
+    iget v0, p0, Landroid/widget/VideoView;->mVideoWidth:I
 
     return v0
 .end method
@@ -640,7 +640,7 @@
 
     .prologue
     .line 78
-    iget v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoHeight:I
+    iget v0, p0, Landroid/widget/VideoView;->mVideoHeight:I
 
     return v0
 .end method
@@ -652,7 +652,7 @@
 
     .prologue
     .line 78
-    iput p1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mSurfaceWidth:I
+    iput p1, p0, Landroid/widget/VideoView;->mSurfaceWidth:I
 
     return p1
 .end method
@@ -664,7 +664,7 @@
 
     .prologue
     .line 78
-    iput p1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mSurfaceHeight:I
+    iput p1, p0, Landroid/widget/VideoView;->mSurfaceHeight:I
 
     return p1
 .end method
@@ -675,7 +675,7 @@
 
     .prologue
     .line 78
-    iget v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mTargetState:I
+    iget v0, p0, Landroid/widget/VideoView;->mTargetState:I
 
     return v0
 .end method
@@ -687,7 +687,7 @@
 
     .prologue
     .line 78
-    iput-boolean p1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mCanSeekBack:Z
+    iput-boolean p1, p0, Landroid/widget/VideoView;->mCanSeekBack:Z
 
     return p1
 .end method
@@ -698,7 +698,7 @@
 
     .prologue
     .line 78
-    iget v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoWidth:I
+    iget v0, p0, Landroid/widget/VideoView;->mVideoWidth:I
 
     return v0
 .end method
@@ -709,7 +709,7 @@
 
     .prologue
     .line 78
-    iget v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoHeight:I
+    iget v0, p0, Landroid/widget/VideoView;->mVideoHeight:I
 
     return v0
 .end method
@@ -720,7 +720,7 @@
 
     .prologue
     .line 78
-    iget-object v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     return-object v0
 .end method
@@ -731,7 +731,7 @@
 
     .prologue
     .line 78
-    iget v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mSeekWhenPrepared:I
+    iget v0, p0, Landroid/widget/VideoView;->mSeekWhenPrepared:I
 
     return v0
 .end method
@@ -742,7 +742,7 @@
 
     .prologue
     .line 78
-    iget v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mSeekWhenPrepared:I
+    iget v0, p0, Landroid/widget/VideoView;->mSeekWhenPrepared:I
 
     return v0
 .end method
@@ -754,7 +754,7 @@
 
     .prologue
     .line 78
-    iput-object p1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mSurfaceHolder:Landroid/view/SurfaceHolder;
+    iput-object p1, p0, Landroid/widget/VideoView;->mSurfaceHolder:Landroid/view/SurfaceHolder;
 
     return-object p1
 .end method
@@ -766,7 +766,7 @@
 
     .prologue
     .line 78
-    iput-object p1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mSurfaceHolder:Landroid/view/SurfaceHolder;
+    iput-object p1, p0, Landroid/widget/VideoView;->mSurfaceHolder:Landroid/view/SurfaceHolder;
 
     return-object p1
 .end method
@@ -777,7 +777,7 @@
 
     .prologue
     .line 78
-    iget-object v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaController:Landroid/widget/MediaController;
+    iget-object v0, p0, Landroid/widget/VideoView;->mMediaController:Landroid/widget/MediaController;
 
     return-object v0
 .end method
@@ -788,7 +788,7 @@
 
     .prologue
     .line 78
-    iget-object v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaController:Landroid/widget/MediaController;
+    iget-object v0, p0, Landroid/widget/VideoView;->mMediaController:Landroid/widget/MediaController;
 
     return-object v0
 .end method
@@ -799,7 +799,7 @@
 
     .prologue
     .line 78
-    iget-object v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     return-object v0
 .end method
@@ -811,7 +811,7 @@
 
     .prologue
     .line 78
-    iput-boolean p1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mCanSeekForward:Z
+    iput-boolean p1, p0, Landroid/widget/VideoView;->mCanSeekForward:Z
 
     return p1
 .end method
@@ -822,7 +822,7 @@
 
     .prologue
     .line 78
-    iget-object v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mUri:Landroid/net/Uri;
+    iget-object v0, p0, Landroid/widget/VideoView;->mUri:Landroid/net/Uri;
 
     return-object v0
 .end method
@@ -833,7 +833,7 @@
 
     .prologue
     .line 78
-    iget-object v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     return-object v0
 .end method
@@ -844,7 +844,7 @@
 
     .prologue
     .line 78
-    iget-object v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mUri:Landroid/net/Uri;
+    iget-object v0, p0, Landroid/widget/VideoView;->mUri:Landroid/net/Uri;
 
     return-object v0
 .end method
@@ -855,7 +855,7 @@
 
     .prologue
     .line 78
-    iget-object v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     return-object v0
 .end method
@@ -867,7 +867,7 @@
 
     .prologue
     .line 78
-    iput-boolean p1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mCanPause:Z
+    iput-boolean p1, p0, Landroid/widget/VideoView;->mCanPause:Z
 
     return p1
 .end method
@@ -879,7 +879,7 @@
 
     .prologue
     .line 78
-    iput-boolean p1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mCanSeekBack:Z
+    iput-boolean p1, p0, Landroid/widget/VideoView;->mCanSeekBack:Z
 
     return p1
 .end method
@@ -891,7 +891,7 @@
 
     .prologue
     .line 78
-    iput-boolean p1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mCanSeekForward:Z
+    iput-boolean p1, p0, Landroid/widget/VideoView;->mCanSeekForward:Z
 
     return p1
 .end method
@@ -956,17 +956,17 @@
     .line 540
     const/4 v1, 0x2
 
-    iput v1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mCurrentState:I
+    iput v1, p0, Landroid/widget/VideoView;->mCurrentState:I
 
     .line 541
-    iget-object v1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mOnPreparedListener:Landroid/media/MediaPlayer$OnPreparedListener;
+    iget-object v1, p0, Landroid/widget/VideoView;->mOnPreparedListener:Landroid/media/MediaPlayer$OnPreparedListener;
 
     if-eqz v1, :cond_0
 
     .line 542
-    iget-object v1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mOnPreparedListener:Landroid/media/MediaPlayer$OnPreparedListener;
+    iget-object v1, p0, Landroid/widget/VideoView;->mOnPreparedListener:Landroid/media/MediaPlayer$OnPreparedListener;
 
-    iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iget-object v2, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-interface {v1, v2}, Landroid/media/MediaPlayer$OnPreparedListener;->onPrepared(Landroid/media/MediaPlayer;)V
 
@@ -976,17 +976,17 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoWidth:I
+    iput v1, p0, Landroid/widget/VideoView;->mVideoWidth:I
 
     .line 545
     invoke-virtual {p1}, Landroid/media/MediaPlayer;->getVideoHeight()I
 
     move-result v1
 
-    iput v1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoHeight:I
+    iput v1, p0, Landroid/widget/VideoView;->mVideoHeight:I
 
     .line 547
-    iget v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mSeekWhenPrepared:I
+    iget v0, p0, Landroid/widget/VideoView;->mSeekWhenPrepared:I
 
     .line 548
     .local v0, seekToPosition:I
@@ -997,35 +997,35 @@
 
     .line 551
     :cond_1
-    iget v1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoWidth:I
+    iget v1, p0, Landroid/widget/VideoView;->mVideoWidth:I
 
     if-eqz v1, :cond_2
 
-    iget v1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoHeight:I
+    iget v1, p0, Landroid/widget/VideoView;->mVideoHeight:I
 
     if-eqz v1, :cond_2
 
     .line 552
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/MTKVideoView;->getHolder()Landroid/view/SurfaceHolder;
+    invoke-virtual {p0}, Landroid/view/SurfaceView;->getHolder()Landroid/view/SurfaceHolder;
 
     move-result-object v1
 
-    iget v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoWidth:I
+    iget v2, p0, Landroid/widget/VideoView;->mVideoWidth:I
 
-    iget v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoHeight:I
+    iget v3, p0, Landroid/widget/VideoView;->mVideoHeight:I
 
     invoke-interface {v1, v2, v3}, Landroid/view/SurfaceHolder;->setFixedSize(II)V
 
     .line 555
     :cond_2
-    iget v1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mTargetState:I
+    iget v1, p0, Landroid/widget/VideoView;->mTargetState:I
 
     const/4 v2, 0x3
 
     if-ne v1, v2, :cond_3
 
     .line 556
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/MTKVideoView;->start()V
+    invoke-virtual {p0}, Landroid/widget/VideoView;->start()V
 
     .line 559
     :cond_3
@@ -1041,7 +1041,7 @@
 
     move-result-object v2
 
-    iget v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoWidth:I
+    iget v3, p0, Landroid/widget/VideoView;->mVideoWidth:I
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1053,7 +1053,7 @@
 
     move-result-object v2
 
-    iget v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoHeight:I
+    iget v3, p0, Landroid/widget/VideoView;->mVideoHeight:I
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1065,7 +1065,7 @@
 
     move-result-object v2
 
-    iget v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mTargetState:I
+    iget v3, p0, Landroid/widget/VideoView;->mTargetState:I
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1077,7 +1077,7 @@
 
     move-result-object v2
 
-    iget v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mCurrentState:I
+    iget v3, p0, Landroid/widget/VideoView;->mCurrentState:I
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1147,7 +1147,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mCurrentState:I
+    iget v2, p0, Landroid/widget/VideoView;->mCurrentState:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1189,35 +1189,35 @@
 
     invoke-direct {v0, p0}, Lcom/mediatek/gallery3d/video/MTKVideoView$2;-><init>(Lcom/mediatek/gallery3d/video/MTKVideoView;)V
 
-    iput-object v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mPreparedListener:Landroid/media/MediaPlayer$OnPreparedListener;
+    iput-object v0, p0, Landroid/widget/VideoView;->mPreparedListener:Landroid/media/MediaPlayer$OnPreparedListener;
 
     .line 168
     new-instance v0, Lcom/mediatek/gallery3d/video/MTKVideoView$3;
 
     invoke-direct {v0, p0}, Lcom/mediatek/gallery3d/video/MTKVideoView$3;-><init>(Lcom/mediatek/gallery3d/video/MTKVideoView;)V
 
-    iput-object v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mErrorListener:Landroid/media/MediaPlayer$OnErrorListener;
+    iput-object v0, p0, Landroid/widget/VideoView;->mErrorListener:Landroid/media/MediaPlayer$OnErrorListener;
 
     .line 237
     new-instance v0, Lcom/mediatek/gallery3d/video/MTKVideoView$4;
 
     invoke-direct {v0, p0}, Lcom/mediatek/gallery3d/video/MTKVideoView$4;-><init>(Lcom/mediatek/gallery3d/video/MTKVideoView;)V
 
-    iput-object v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mBufferingUpdateListener:Landroid/media/MediaPlayer$OnBufferingUpdateListener;
+    iput-object v0, p0, Landroid/widget/VideoView;->mBufferingUpdateListener:Landroid/media/MediaPlayer$OnBufferingUpdateListener;
 
     .line 255
     new-instance v0, Lcom/mediatek/gallery3d/video/MTKVideoView$5;
 
     invoke-direct {v0, p0}, Lcom/mediatek/gallery3d/video/MTKVideoView$5;-><init>(Lcom/mediatek/gallery3d/video/MTKVideoView;)V
 
-    iput-object v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mSizeChangedListener:Landroid/media/MediaPlayer$OnVideoSizeChangedListener;
+    iput-object v0, p0, Landroid/widget/VideoView;->mSizeChangedListener:Landroid/media/MediaPlayer$OnVideoSizeChangedListener;
 
     .line 281
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/MTKVideoView;->getHolder()Landroid/view/SurfaceHolder;
+    invoke-virtual {p0}, Landroid/view/SurfaceView;->getHolder()Landroid/view/SurfaceHolder;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mSHCallback:Landroid/view/SurfaceHolder$Callback;
+    iget-object v1, p0, Landroid/widget/VideoView;->mSHCallback:Landroid/view/SurfaceHolder$Callback;
 
     invoke-interface {v0, v1}, Landroid/view/SurfaceHolder;->removeCallback(Landroid/view/SurfaceHolder$Callback;)V
 
@@ -1226,14 +1226,14 @@
 
     invoke-direct {v0, p0}, Lcom/mediatek/gallery3d/video/MTKVideoView$6;-><init>(Lcom/mediatek/gallery3d/video/MTKVideoView;)V
 
-    iput-object v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mSHCallback:Landroid/view/SurfaceHolder$Callback;
+    iput-object v0, p0, Landroid/widget/VideoView;->mSHCallback:Landroid/view/SurfaceHolder$Callback;
 
     .line 323
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/MTKVideoView;->getHolder()Landroid/view/SurfaceHolder;
+    invoke-virtual {p0}, Landroid/view/SurfaceView;->getHolder()Landroid/view/SurfaceHolder;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mSHCallback:Landroid/view/SurfaceHolder$Callback;
+    iget-object v1, p0, Landroid/widget/VideoView;->mSHCallback:Landroid/view/SurfaceHolder$Callback;
 
     invoke-interface {v0, v1}, Landroid/view/SurfaceHolder;->addCallback(Landroid/view/SurfaceHolder$Callback;)V
 
@@ -1260,7 +1260,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mDuration:I
+    iget v2, p0, Landroid/widget/VideoView;->mDuration:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1275,7 +1275,7 @@
     .line 704
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mDuration:I
+    iput v0, p0, Landroid/widget/VideoView;->mDuration:I
 
     .line 705
     return-void
@@ -1298,7 +1298,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mSeekWhenPrepared:I
+    iget v2, p0, Landroid/widget/VideoView;->mSeekWhenPrepared:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1313,7 +1313,7 @@
     .line 639
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mSeekWhenPrepared:I
+    iput v0, p0, Landroid/widget/VideoView;->mSeekWhenPrepared:I
 
     .line 640
     return-void
@@ -1336,7 +1336,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mUri:Landroid/net/Uri;
+    iget-object v2, p0, Landroid/widget/VideoView;->mUri:Landroid/net/Uri;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1348,7 +1348,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mTargetState:I
+    iget v2, p0, Landroid/widget/VideoView;->mTargetState:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1360,7 +1360,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mCurrentState:I
+    iget v2, p0, Landroid/widget/VideoView;->mCurrentState:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1372,7 +1372,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mSeekWhenPrepared:I
+    iget v2, p0, Landroid/widget/VideoView;->mSeekWhenPrepared:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1384,7 +1384,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoWidth:I
+    iget v2, p0, Landroid/widget/VideoView;->mVideoWidth:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1396,7 +1396,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoHeight:I
+    iget v2, p0, Landroid/widget/VideoView;->mVideoHeight:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1408,7 +1408,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iget-object v2, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1420,7 +1420,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mSurfaceHolder:Landroid/view/SurfaceHolder;
+    iget-object v2, p0, Landroid/widget/VideoView;->mSurfaceHolder:Landroid/view/SurfaceHolder;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1445,12 +1445,12 @@
 
     .line 618
     .local v0, position:I
-    iget v1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mSeekWhenPrepared:I
+    iget v1, p0, Landroid/widget/VideoView;->mSeekWhenPrepared:I
 
     if-lez v1, :cond_1
 
     .line 621
-    iget v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mSeekWhenPrepared:I
+    iget v0, p0, Landroid/widget/VideoView;->mSeekWhenPrepared:I
 
     .line 627
     :cond_0
@@ -1477,7 +1477,7 @@
 
     move-result-object v2
 
-    iget v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mSeekWhenPrepared:I
+    iget v3, p0, Landroid/widget/VideoView;->mSeekWhenPrepared:I
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1494,20 +1494,20 @@
 
     .line 623
     :cond_1
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/MTKVideoView;->isInPlaybackState()Z
+    invoke-virtual {p0}, Landroid/widget/VideoView;->isInPlaybackState()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    iget v1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mCurrentState:I
+    iget v1, p0, Landroid/widget/VideoView;->mCurrentState:I
 
     const/4 v2, 0x2
 
     if-eq v1, v2, :cond_0
 
     .line 624
-    iget-object v1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iget-object v1, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v1}, Landroid/media/MediaPlayer;->getCurrentPosition()I
 
@@ -1521,7 +1521,7 @@
 
     .prologue
     .line 685
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/MTKVideoView;->isInPlaybackState()Z
+    invoke-virtual {p0}, Landroid/widget/VideoView;->isInPlaybackState()Z
 
     move-result v0
 
@@ -1539,7 +1539,7 @@
 
     move-result-object v2
 
-    iget v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mDuration:I
+    iget v3, p0, Landroid/widget/VideoView;->mDuration:I
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1565,12 +1565,12 @@
     if-eqz v0, :cond_1
 
     .line 690
-    iget v1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mDuration:I
+    iget v1, p0, Landroid/widget/VideoView;->mDuration:I
 
     if-lez v1, :cond_0
 
     .line 691
-    iget v1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mDuration:I
+    iget v1, p0, Landroid/widget/VideoView;->mDuration:I
 
     .line 697
     :goto_0
@@ -1578,22 +1578,22 @@
 
     .line 693
     :cond_0
-    iget-object v1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iget-object v1, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v1}, Landroid/media/MediaPlayer;->getDuration()I
 
     move-result v1
 
-    iput v1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mDuration:I
+    iput v1, p0, Landroid/widget/VideoView;->mDuration:I
 
     .line 694
-    iget v1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mDuration:I
+    iget v1, p0, Landroid/widget/VideoView;->mDuration:I
 
     goto :goto_0
 
     .line 697
     :cond_1
-    iget v1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mDuration:I
+    iget v1, p0, Landroid/widget/VideoView;->mDuration:I
 
     goto :goto_0
 .end method
@@ -1615,7 +1615,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mTargetState:I
+    iget v2, p0, Landroid/widget/VideoView;->mTargetState:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1628,7 +1628,7 @@
     invoke-static {v0, v1}, Lcom/android/gallery3d/ui/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 646
-    iget v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mTargetState:I
+    iget v0, p0, Landroid/widget/VideoView;->mTargetState:I
 
     const/4 v1, 0x3
 
@@ -1695,7 +1695,7 @@
     .line 405
     .local v0, isKeyCodeSupported:Z
     :goto_0
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/MTKVideoView;->isInPlaybackState()Z
+    invoke-virtual {p0}, Landroid/widget/VideoView;->isInPlaybackState()Z
 
     move-result v2
 
@@ -1703,7 +1703,7 @@
 
     if-eqz v0, :cond_8
 
-    iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaController:Landroid/widget/MediaController;
+    iget-object v2, p0, Landroid/widget/VideoView;->mMediaController:Landroid/widget/MediaController;
 
     if-eqz v2, :cond_8
 
@@ -1720,7 +1720,7 @@
 
     .line 408
     :cond_0
-    iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iget-object v2, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v2}, Landroid/media/MediaPlayer;->isPlaying()Z
 
@@ -1729,10 +1729,10 @@
     if-eqz v2, :cond_3
 
     .line 409
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/MTKVideoView;->pause()V
+    invoke-virtual {p0}, Landroid/widget/VideoView;->pause()V
 
     .line 410
-    iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaController:Landroid/widget/MediaController;
+    iget-object v2, p0, Landroid/widget/VideoView;->mMediaController:Landroid/widget/MediaController;
 
     invoke-virtual {v2}, Landroid/widget/MediaController;->show()V
 
@@ -1751,10 +1751,10 @@
     .line 412
     .restart local v0       #isKeyCodeSupported:Z
     :cond_3
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/MTKVideoView;->start()V
+    invoke-virtual {p0}, Landroid/widget/VideoView;->start()V
 
     .line 413
-    iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaController:Landroid/widget/MediaController;
+    iget-object v2, p0, Landroid/widget/VideoView;->mMediaController:Landroid/widget/MediaController;
 
     invoke-virtual {v2}, Landroid/widget/MediaController;->hide()V
 
@@ -1767,7 +1767,7 @@
     if-ne p1, v2, :cond_5
 
     .line 417
-    iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iget-object v2, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v2}, Landroid/media/MediaPlayer;->isPlaying()Z
 
@@ -1776,10 +1776,10 @@
     if-nez v2, :cond_1
 
     .line 418
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/MTKVideoView;->start()V
+    invoke-virtual {p0}, Landroid/widget/VideoView;->start()V
 
     .line 419
-    iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaController:Landroid/widget/MediaController;
+    iget-object v2, p0, Landroid/widget/VideoView;->mMediaController:Landroid/widget/MediaController;
 
     invoke-virtual {v2}, Landroid/widget/MediaController;->hide()V
 
@@ -1797,7 +1797,7 @@
 
     .line 424
     :cond_6
-    iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iget-object v2, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v2}, Landroid/media/MediaPlayer;->isPlaying()Z
 
@@ -1806,10 +1806,10 @@
     if-eqz v2, :cond_1
 
     .line 425
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/MTKVideoView;->pause()V
+    invoke-virtual {p0}, Landroid/widget/VideoView;->pause()V
 
     .line 426
-    iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaController:Landroid/widget/MediaController;
+    iget-object v2, p0, Landroid/widget/VideoView;->mMediaController:Landroid/widget/MediaController;
 
     invoke-virtual {v2}, Landroid/widget/MediaController;->show()V
 
@@ -1838,7 +1838,7 @@
     if-eq p1, v3, :cond_1
 
     .line 439
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/MTKVideoView;->toggleMediaControlsVisiblity()V
+    invoke-virtual {p0}, Landroid/widget/VideoView;->toggleMediaControlsVisiblity()V
 
     .line 443
     :cond_8
@@ -1955,7 +1955,7 @@
 
     move-result-object v4
 
-    iget v5, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoWidth:I
+    iget v5, p0, Landroid/widget/VideoView;->mVideoWidth:I
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1965,7 +1965,7 @@
 
     move-result-object v4
 
-    iget v5, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoHeight:I
+    iget v5, p0, Landroid/widget/VideoView;->mVideoHeight:I
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2003,7 +2003,7 @@
     invoke-static {v3, v4}, Lcom/mediatek/gallery3d/ext/MtkLog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 379
-    invoke-virtual {p0, v2, v0}, Lcom/mediatek/gallery3d/video/MTKVideoView;->setMeasuredDimension(II)V
+    invoke-virtual {p0, v2, v0}, Landroid/view/View;->setMeasuredDimension(II)V
 
     .line 380
     iget-boolean v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mNeedWaitLayout:Z
@@ -2028,45 +2028,45 @@
 
     .line 337
     :pswitch_1
-    iget v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoWidth:I
+    iget v3, p0, Landroid/widget/VideoView;->mVideoWidth:I
 
     invoke-static {v3, p1}, Lcom/mediatek/gallery3d/video/MTKVideoView;->getDefaultSize(II)I
 
     move-result v2
 
     .line 338
-    iget v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoHeight:I
+    iget v3, p0, Landroid/widget/VideoView;->mVideoHeight:I
 
     invoke-static {v3, p2}, Lcom/mediatek/gallery3d/video/MTKVideoView;->getDefaultSize(II)I
 
     move-result v0
 
     .line 339
-    iget v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoWidth:I
+    iget v3, p0, Landroid/widget/VideoView;->mVideoWidth:I
 
     if-lez v3, :cond_1
 
-    iget v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoHeight:I
+    iget v3, p0, Landroid/widget/VideoView;->mVideoHeight:I
 
     if-lez v3, :cond_1
 
     .line 340
-    iget v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoWidth:I
+    iget v3, p0, Landroid/widget/VideoView;->mVideoWidth:I
 
     mul-int/2addr v3, v0
 
-    iget v4, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoHeight:I
+    iget v4, p0, Landroid/widget/VideoView;->mVideoHeight:I
 
     mul-int/2addr v4, v2
 
     if-le v3, v4, :cond_3
 
     .line 342
-    iget v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoHeight:I
+    iget v3, p0, Landroid/widget/VideoView;->mVideoHeight:I
 
     mul-int/2addr v3, v2
 
-    iget v4, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoWidth:I
+    iget v4, p0, Landroid/widget/VideoView;->mVideoWidth:I
 
     div-int v0, v3, v4
 
@@ -2074,22 +2074,22 @@
 
     .line 343
     :cond_3
-    iget v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoWidth:I
+    iget v3, p0, Landroid/widget/VideoView;->mVideoWidth:I
 
     mul-int/2addr v3, v0
 
-    iget v4, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoHeight:I
+    iget v4, p0, Landroid/widget/VideoView;->mVideoHeight:I
 
     mul-int/2addr v4, v2
 
     if-ge v3, v4, :cond_1
 
     .line 345
-    iget v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoWidth:I
+    iget v3, p0, Landroid/widget/VideoView;->mVideoWidth:I
 
     mul-int/2addr v3, v0
 
-    iget v4, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoHeight:I
+    iget v4, p0, Landroid/widget/VideoView;->mVideoHeight:I
 
     div-int v2, v3, v4
 
@@ -2097,14 +2097,14 @@
 
     .line 354
     :pswitch_2
-    iget v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoWidth:I
+    iget v3, p0, Landroid/widget/VideoView;->mVideoWidth:I
 
     invoke-static {v3, p1}, Lcom/mediatek/gallery3d/video/MTKVideoView;->getDefaultSize(II)I
 
     move-result v2
 
     .line 355
-    iget v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoHeight:I
+    iget v3, p0, Landroid/widget/VideoView;->mVideoHeight:I
 
     invoke-static {v3, p2}, Lcom/mediatek/gallery3d/video/MTKVideoView;->getDefaultSize(II)I
 
@@ -2115,45 +2115,45 @@
 
     .line 358
     :pswitch_3
-    iget v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoWidth:I
+    iget v3, p0, Landroid/widget/VideoView;->mVideoWidth:I
 
     invoke-static {v3, p1}, Lcom/mediatek/gallery3d/video/MTKVideoView;->getDefaultSize(II)I
 
     move-result v2
 
     .line 359
-    iget v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoHeight:I
+    iget v3, p0, Landroid/widget/VideoView;->mVideoHeight:I
 
     invoke-static {v3, p2}, Lcom/mediatek/gallery3d/video/MTKVideoView;->getDefaultSize(II)I
 
     move-result v0
 
     .line 360
-    iget v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoWidth:I
+    iget v3, p0, Landroid/widget/VideoView;->mVideoWidth:I
 
     if-lez v3, :cond_1
 
-    iget v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoHeight:I
+    iget v3, p0, Landroid/widget/VideoView;->mVideoHeight:I
 
     if-lez v3, :cond_1
 
     .line 361
-    iget v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoWidth:I
+    iget v3, p0, Landroid/widget/VideoView;->mVideoWidth:I
 
     mul-int/2addr v3, v0
 
-    iget v4, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoHeight:I
+    iget v4, p0, Landroid/widget/VideoView;->mVideoHeight:I
 
     mul-int/2addr v4, v2
 
     if-le v3, v4, :cond_4
 
     .line 363
-    iget v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoWidth:I
+    iget v3, p0, Landroid/widget/VideoView;->mVideoWidth:I
 
     mul-int/2addr v3, v0
 
-    iget v4, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoHeight:I
+    iget v4, p0, Landroid/widget/VideoView;->mVideoHeight:I
 
     div-int v2, v3, v4
 
@@ -2161,22 +2161,22 @@
 
     .line 364
     :cond_4
-    iget v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoWidth:I
+    iget v3, p0, Landroid/widget/VideoView;->mVideoWidth:I
 
     mul-int/2addr v3, v0
 
-    iget v4, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoHeight:I
+    iget v4, p0, Landroid/widget/VideoView;->mVideoHeight:I
 
     mul-int/2addr v4, v2
 
     if-ge v3, v4, :cond_1
 
     .line 366
-    iget v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoHeight:I
+    iget v3, p0, Landroid/widget/VideoView;->mVideoHeight:I
 
     mul-int/2addr v3, v2
 
-    iget v4, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mVideoWidth:I
+    iget v4, p0, Landroid/widget/VideoView;->mVideoWidth:I
 
     div-int v0, v3, v4
 
@@ -2200,7 +2200,7 @@
 
     .prologue
     .line 743
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/MTKVideoView;->requestLayout()V
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 
     .line 744
     return-void
@@ -2227,7 +2227,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mUri:Landroid/net/Uri;
+    iget-object v4, p0, Landroid/widget/VideoView;->mUri:Landroid/net/Uri;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -2239,7 +2239,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mSurfaceHolder:Landroid/view/SurfaceHolder;
+    iget-object v4, p0, Landroid/widget/VideoView;->mSurfaceHolder:Landroid/view/SurfaceHolder;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -2251,7 +2251,7 @@
 
     move-result-object v3
 
-    iget v4, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mSeekWhenPrepared:I
+    iget v4, p0, Landroid/widget/VideoView;->mSeekWhenPrepared:I
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2263,7 +2263,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iget-object v4, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -2295,11 +2295,11 @@
 
     if-eqz v2, :cond_0
 
-    iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mUri:Landroid/net/Uri;
+    iget-object v2, p0, Landroid/widget/VideoView;->mUri:Landroid/net/Uri;
 
     if-eqz v2, :cond_0
 
-    iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mSurfaceHolder:Landroid/view/SurfaceHolder;
+    iget-object v2, p0, Landroid/widget/VideoView;->mSurfaceHolder:Landroid/view/SurfaceHolder;
 
     if-nez v2, :cond_1
 
@@ -2325,7 +2325,7 @@
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 487
-    iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Landroid/view/View;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
@@ -2335,7 +2335,7 @@
     .line 492
     const-string v2, ""
 
-    iget-object v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mUri:Landroid/net/Uri;
+    iget-object v3, p0, Landroid/widget/VideoView;->mUri:Landroid/net/Uri;
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -2360,7 +2360,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mUri:Landroid/net/Uri;
+    iget-object v4, p0, Landroid/widget/VideoView;->mUri:Landroid/net/Uri;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -2373,9 +2373,9 @@
     invoke-static {v2, v3}, Lcom/android/gallery3d/ui/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 494
-    iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mErrorListener:Landroid/media/MediaPlayer$OnErrorListener;
+    iget-object v2, p0, Landroid/widget/VideoView;->mErrorListener:Landroid/media/MediaPlayer$OnErrorListener;
 
-    iget-object v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iget-object v3, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-interface {v2, v3, v7, v6}, Landroid/media/MediaPlayer$OnErrorListener;->onError(Landroid/media/MediaPlayer;II)Z
 
@@ -2388,45 +2388,45 @@
 
     invoke-direct {v2}, Landroid/media/MediaPlayer;-><init>()V
 
-    iput-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iput-object v2, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     .line 500
-    iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iget-object v2, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
-    iget-object v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mPreparedListener:Landroid/media/MediaPlayer$OnPreparedListener;
+    iget-object v3, p0, Landroid/widget/VideoView;->mPreparedListener:Landroid/media/MediaPlayer$OnPreparedListener;
 
     invoke-virtual {v2, v3}, Landroid/media/MediaPlayer;->setOnPreparedListener(Landroid/media/MediaPlayer$OnPreparedListener;)V
 
     .line 501
-    iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iget-object v2, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
-    iget-object v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mSizeChangedListener:Landroid/media/MediaPlayer$OnVideoSizeChangedListener;
+    iget-object v3, p0, Landroid/widget/VideoView;->mSizeChangedListener:Landroid/media/MediaPlayer$OnVideoSizeChangedListener;
 
     invoke-virtual {v2, v3}, Landroid/media/MediaPlayer;->setOnVideoSizeChangedListener(Landroid/media/MediaPlayer$OnVideoSizeChangedListener;)V
 
     .line 503
-    iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iget-object v2, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
-    iget-object v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mCompletionListener:Landroid/media/MediaPlayer$OnCompletionListener;
+    iget-object v3, p0, Landroid/widget/VideoView;->mCompletionListener:Landroid/media/MediaPlayer$OnCompletionListener;
 
     invoke-virtual {v2, v3}, Landroid/media/MediaPlayer;->setOnCompletionListener(Landroid/media/MediaPlayer$OnCompletionListener;)V
 
     .line 504
-    iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iget-object v2, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
-    iget-object v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mErrorListener:Landroid/media/MediaPlayer$OnErrorListener;
+    iget-object v3, p0, Landroid/widget/VideoView;->mErrorListener:Landroid/media/MediaPlayer$OnErrorListener;
 
     invoke-virtual {v2, v3}, Landroid/media/MediaPlayer;->setOnErrorListener(Landroid/media/MediaPlayer$OnErrorListener;)V
 
     .line 505
-    iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iget-object v2, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
-    iget-object v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mBufferingUpdateListener:Landroid/media/MediaPlayer$OnBufferingUpdateListener;
+    iget-object v3, p0, Landroid/widget/VideoView;->mBufferingUpdateListener:Landroid/media/MediaPlayer$OnBufferingUpdateListener;
 
     invoke-virtual {v2, v3}, Landroid/media/MediaPlayer;->setOnBufferingUpdateListener(Landroid/media/MediaPlayer$OnBufferingUpdateListener;)V
 
     .line 506
-    iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iget-object v2, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     iget-object v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mInfoListener:Landroid/media/MediaPlayer$OnInfoListener;
 
@@ -2435,49 +2435,49 @@
     .line 507
     const/4 v2, 0x0
 
-    iput v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mCurrentBufferPercentage:I
+    iput v2, p0, Landroid/widget/VideoView;->mCurrentBufferPercentage:I
 
     .line 508
-    iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iget-object v2, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
-    iget-object v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Landroid/view/View;->mContext:Landroid/content/Context;
 
-    iget-object v4, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mUri:Landroid/net/Uri;
+    iget-object v4, p0, Landroid/widget/VideoView;->mUri:Landroid/net/Uri;
 
-    iget-object v5, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mHeaders:Ljava/util/Map;
+    iget-object v5, p0, Landroid/widget/VideoView;->mHeaders:Ljava/util/Map;
 
     invoke-virtual {v2, v3, v4, v5}, Landroid/media/MediaPlayer;->setDataSource(Landroid/content/Context;Landroid/net/Uri;Ljava/util/Map;)V
 
     .line 509
-    iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iget-object v2, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
-    iget-object v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mSurfaceHolder:Landroid/view/SurfaceHolder;
+    iget-object v3, p0, Landroid/widget/VideoView;->mSurfaceHolder:Landroid/view/SurfaceHolder;
 
     invoke-virtual {v2, v3}, Landroid/media/MediaPlayer;->setDisplay(Landroid/view/SurfaceHolder;)V
 
     .line 510
-    iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iget-object v2, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     const/4 v3, 0x3
 
     invoke-virtual {v2, v3}, Landroid/media/MediaPlayer;->setAudioStreamType(I)V
 
     .line 511
-    iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iget-object v2, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3}, Landroid/media/MediaPlayer;->setScreenOnWhilePlaying(Z)V
 
     .line 512
-    iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iget-object v2, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v2}, Landroid/media/MediaPlayer;->prepareAsync()V
 
     .line 515
     const/4 v2, 0x1
 
-    iput v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mCurrentState:I
+    iput v2, p0, Landroid/widget/VideoView;->mCurrentState:I
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
@@ -2496,7 +2496,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mUri:Landroid/net/Uri;
+    iget-object v4, p0, Landroid/widget/VideoView;->mUri:Landroid/net/Uri;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -2508,7 +2508,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mSurfaceHolder:Landroid/view/SurfaceHolder;
+    iget-object v4, p0, Landroid/widget/VideoView;->mSurfaceHolder:Landroid/view/SurfaceHolder;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -2520,7 +2520,7 @@
 
     move-result-object v3
 
-    iget v4, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mSeekWhenPrepared:I
+    iget v4, p0, Landroid/widget/VideoView;->mSeekWhenPrepared:I
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2532,7 +2532,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iget-object v4, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -2564,7 +2564,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mUri:Landroid/net/Uri;
+    iget-object v4, p0, Landroid/widget/VideoView;->mUri:Landroid/net/Uri;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -2577,9 +2577,9 @@
     invoke-static {v2, v3, v0}, Lcom/android/gallery3d/ui/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 519
-    iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mErrorListener:Landroid/media/MediaPlayer$OnErrorListener;
+    iget-object v2, p0, Landroid/widget/VideoView;->mErrorListener:Landroid/media/MediaPlayer$OnErrorListener;
 
-    iget-object v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iget-object v3, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-interface {v2, v3, v7, v6}, Landroid/media/MediaPlayer$OnErrorListener;->onError(Landroid/media/MediaPlayer;II)Z
 
@@ -2604,7 +2604,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mUri:Landroid/net/Uri;
+    iget-object v4, p0, Landroid/widget/VideoView;->mUri:Landroid/net/Uri;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -2617,9 +2617,9 @@
     invoke-static {v2, v3, v0}, Lcom/android/gallery3d/ui/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 523
-    iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mErrorListener:Landroid/media/MediaPlayer$OnErrorListener;
+    iget-object v2, p0, Landroid/widget/VideoView;->mErrorListener:Landroid/media/MediaPlayer$OnErrorListener;
 
-    iget-object v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iget-object v3, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-interface {v2, v3, v7, v6}, Landroid/media/MediaPlayer$OnErrorListener;->onError(Landroid/media/MediaPlayer;II)Z
 
@@ -2644,7 +2644,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mUri:Landroid/net/Uri;
+    iget-object v4, p0, Landroid/widget/VideoView;->mUri:Landroid/net/Uri;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -2657,9 +2657,9 @@
     invoke-static {v2, v3, v0}, Lcom/android/gallery3d/ui/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 527
-    iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mErrorListener:Landroid/media/MediaPlayer$OnErrorListener;
+    iget-object v2, p0, Landroid/widget/VideoView;->mErrorListener:Landroid/media/MediaPlayer$OnErrorListener;
 
-    iget-object v3, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iget-object v3, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-interface {v2, v3, v7, v6}, Landroid/media/MediaPlayer$OnErrorListener;->onError(Landroid/media/MediaPlayer;II)Z
 
@@ -2694,7 +2694,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    iget-object v2, p0, Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -2730,7 +2730,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mTargetState:I
+    iget v2, p0, Landroid/widget/VideoView;->mTargetState:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2742,7 +2742,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mCurrentState:I
+    iget v2, p0, Landroid/widget/VideoView;->mCurrentState:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2794,7 +2794,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/MTKVideoView;->isInPlaybackState()Z
+    invoke-virtual {p0}, Landroid/widget/VideoView;->isInPlaybackState()Z
 
     move-result v2
 
@@ -2856,7 +2856,7 @@
 
     .end local p1
     :cond_0
-    iput p1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mDuration:I
+    iput p1, p0, Landroid/widget/VideoView;->mDuration:I
 
     .line 681
     return-void
@@ -3013,7 +3013,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mUri:Landroid/net/Uri;
+    iget-object v2, p0, Landroid/widget/VideoView;->mUri:Landroid/net/Uri;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -3117,7 +3117,7 @@
     .local p2, headers:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mDuration:I
+    iput v0, p0, Landroid/widget/VideoView;->mDuration:I
 
     .line 449
     const/4 v0, 0x1
@@ -3216,7 +3216,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mTargetState:I
+    iget v2, p0, Landroid/widget/VideoView;->mTargetState:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -3228,7 +3228,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView;->mCurrentState:I
+    iget v2, p0, Landroid/widget/VideoView;->mCurrentState:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

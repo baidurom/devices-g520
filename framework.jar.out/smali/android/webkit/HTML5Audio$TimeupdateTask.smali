@@ -55,7 +55,7 @@
 
     const/16 v1, 0x64
 
-    invoke-virtual {v0, v1}, Landroid/webkit/HTML5Audio;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v0
 

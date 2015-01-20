@@ -104,7 +104,7 @@
 
     .line 123
     .local v3, xoffset:I
-    invoke-virtual {p0}, Lcom/android/camera/ui/ProgressBarDrawable;->getLevel()I
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getLevel()I
 
     move-result v2
 
@@ -471,7 +471,7 @@
 
     .line 91
     :cond_0
-    invoke-virtual {p0}, Lcom/android/camera/ui/ProgressBarDrawable;->invalidateSelf()V
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     .line 92
     const/4 v0, 0x1

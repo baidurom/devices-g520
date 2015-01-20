@@ -30,7 +30,7 @@
     .line 1540
     iput-object p1, p0, Landroid/app/ActivityThread$Idler;->this$0:Landroid/app/ActivityThread;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -151,7 +151,7 @@
 
     const-wide/16 v6, 0x7d0
 
-    invoke-virtual {v4, v5, v6, v7}, Landroid/app/ActivityThread$H;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v4, v5, v6, v7}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     .line 1572
     :cond_2

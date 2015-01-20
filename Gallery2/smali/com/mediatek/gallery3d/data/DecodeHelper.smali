@@ -19,7 +19,7 @@
 
     .prologue
     .line 28
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -594,7 +594,7 @@
 
     .line 196
     .local v1, ex1:Ljava/lang/IllegalArgumentException;
-    invoke-virtual {v1}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_1
 
@@ -605,7 +605,7 @@
 
     .line 198
     .local v2, ex2:Ljava/lang/NullPointerException;
-    invoke-virtual {v2}, Ljava/lang/NullPointerException;->printStackTrace()V
+    invoke-virtual {v2}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_1
 .end method
@@ -697,7 +697,7 @@
     .local v1, e:Ljava/io/IOException;
     :goto_2
     :try_start_2
-    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
@@ -840,7 +840,7 @@
 
     .line 254
     .local v1, ex1:Ljava/lang/ArrayIndexOutOfBoundsException;
-    invoke-virtual {v1}, Ljava/lang/ArrayIndexOutOfBoundsException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_1
 
@@ -851,7 +851,7 @@
 
     .line 256
     .local v2, ex2:Ljava/lang/IllegalArgumentException;
-    invoke-virtual {v2}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
+    invoke-virtual {v2}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_1
 .end method
@@ -1172,7 +1172,7 @@
 
     .line 448
     .local v0, ex:Ljava/io/IOException;
-    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 
@@ -1188,7 +1188,7 @@
     .restart local v0       #ex:Ljava/io/IOException;
     :goto_1
     :try_start_3
-    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
@@ -1208,7 +1208,7 @@
     move-exception v0
 
     .line 448
-    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 
@@ -1237,7 +1237,7 @@
 
     .line 448
     .restart local v0       #ex:Ljava/io/IOException;
-    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_3
 

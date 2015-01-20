@@ -201,7 +201,7 @@
     .line 55
     sget-object v0, Lcom/android/internal/telephony/DataCallState$SetupResult;->$VALUES:[Lcom/android/internal/telephony/DataCallState$SetupResult;
 
-    invoke-virtual {v0}, [Lcom/android/internal/telephony/DataCallState$SetupResult;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -221,7 +221,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Lcom/android/internal/telephony/DataCallState$SetupResult;->name()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v1
 

@@ -3,8 +3,8 @@
 .source "ForegroundColorSpan.java"
 
 # interfaces
-.implements Landroid/text/style/UpdateAppearance;
 .implements Landroid/text/ParcelableSpan;
+.implements Landroid/text/style/UpdateAppearance;
 
 
 # instance fields
@@ -86,7 +86,7 @@
     .line 55
     iget v0, p0, Landroid/text/style/ForegroundColorSpan;->mColor:I
 
-    invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setColor(I)V
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 56
     return-void

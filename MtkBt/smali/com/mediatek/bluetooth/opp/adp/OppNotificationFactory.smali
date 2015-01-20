@@ -29,7 +29,7 @@
 
     .prologue
     .line 57
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -407,7 +407,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v14}, Lcom/mediatek/bluetooth/share/BluetoothShareTask$Direction;->toString()Ljava/lang/String;
+    invoke-virtual {v14}, Ljava/lang/Enum;->toString()Ljava/lang/String;
 
     move-result-object v5
 
@@ -434,7 +434,7 @@
 
     move-result-object v5
 
-    invoke-virtual {v14}, Lcom/mediatek/bluetooth/share/BluetoothShareTask$Direction;->toString()Ljava/lang/String;
+    invoke-virtual {v14}, Ljava/lang/Enum;->toString()Ljava/lang/String;
 
     move-result-object v6
 

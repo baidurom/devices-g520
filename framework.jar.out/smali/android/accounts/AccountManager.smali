@@ -108,7 +108,7 @@
 
     .prologue
     .line 242
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1884
     invoke-static {}, Lcom/google/android/collect/Maps;->newHashMap()Ljava/util/HashMap;
@@ -155,7 +155,7 @@
 
     .prologue
     .line 251
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1884
     invoke-static {}, Lcom/google/android/collect/Maps;->newHashMap()Ljava/util/HashMap;
@@ -737,7 +737,7 @@
 
     invoke-direct/range {v0 .. v9}, Landroid/accounts/AccountManager$7;-><init>(Landroid/accounts/AccountManager;Landroid/app/Activity;Landroid/os/Handler;Landroid/accounts/AccountManagerCallback;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Landroid/app/Activity;Landroid/os/Bundle;)V
 
-    invoke-virtual {v0}, Landroid/accounts/AccountManager$7;->start()Landroid/accounts/AccountManagerFuture;
+    invoke-virtual {v0}, Landroid/accounts/AccountManager$AmsTask;->start()Landroid/accounts/AccountManagerFuture;
 
     move-result-object v0
 
@@ -1117,7 +1117,7 @@
 
     invoke-direct/range {v0 .. v7}, Landroid/accounts/AccountManager$8;-><init>(Landroid/accounts/AccountManager;Landroid/app/Activity;Landroid/os/Handler;Landroid/accounts/AccountManagerCallback;Landroid/accounts/Account;Landroid/os/Bundle;Landroid/app/Activity;)V
 
-    invoke-virtual {v0}, Landroid/accounts/AccountManager$8;->start()Landroid/accounts/AccountManagerFuture;
+    invoke-virtual {v0}, Landroid/accounts/AccountManager$AmsTask;->start()Landroid/accounts/AccountManagerFuture;
 
     move-result-object v0
 
@@ -1179,7 +1179,7 @@
 
     invoke-direct/range {v0 .. v6}, Landroid/accounts/AccountManager$10;-><init>(Landroid/accounts/AccountManager;Landroid/app/Activity;Landroid/os/Handler;Landroid/accounts/AccountManagerCallback;Ljava/lang/String;Landroid/app/Activity;)V
 
-    invoke-virtual {v0}, Landroid/accounts/AccountManager$10;->start()Landroid/accounts/AccountManagerFuture;
+    invoke-virtual {v0}, Landroid/accounts/AccountManager$AmsTask;->start()Landroid/accounts/AccountManagerFuture;
 
     move-result-object v0
 
@@ -1301,7 +1301,7 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/accounts/AccountManager$3;-><init>(Landroid/accounts/AccountManager;Landroid/os/Handler;Landroid/accounts/AccountManagerCallback;Ljava/lang/String;[Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Landroid/accounts/AccountManager$3;->start()Landroid/accounts/AccountManager$Future2Task;
+    invoke-virtual {v0}, Landroid/accounts/AccountManager$Future2Task;->start()Landroid/accounts/AccountManager$Future2Task;
 
     move-result-object v0
 
@@ -1403,7 +1403,7 @@
 
     invoke-direct/range {v0 .. v7}, Landroid/accounts/AccountManager$5;-><init>(Landroid/accounts/AccountManager;Landroid/app/Activity;Landroid/os/Handler;Landroid/accounts/AccountManagerCallback;Landroid/accounts/Account;Ljava/lang/String;Landroid/os/Bundle;)V
 
-    invoke-virtual {v0}, Landroid/accounts/AccountManager$5;->start()Landroid/accounts/AccountManagerFuture;
+    invoke-virtual {v0}, Landroid/accounts/AccountManager$AmsTask;->start()Landroid/accounts/AccountManagerFuture;
 
     move-result-object v0
 
@@ -1507,7 +1507,7 @@
 
     invoke-direct/range {v0 .. v8}, Landroid/accounts/AccountManager$6;-><init>(Landroid/accounts/AccountManager;Landroid/app/Activity;Landroid/os/Handler;Landroid/accounts/AccountManagerCallback;Landroid/accounts/Account;Ljava/lang/String;ZLandroid/os/Bundle;)V
 
-    invoke-virtual {v0}, Landroid/accounts/AccountManager$6;->start()Landroid/accounts/AccountManagerFuture;
+    invoke-virtual {v0}, Landroid/accounts/AccountManager$AmsTask;->start()Landroid/accounts/AccountManagerFuture;
 
     move-result-object v0
 
@@ -1651,7 +1651,7 @@
 
     .line 1819
     .local v0, task:Landroid/accounts/AccountManager$GetAuthTokenByTypeAndFeaturesTask;
-    invoke-virtual {v0}, Landroid/accounts/AccountManager$GetAuthTokenByTypeAndFeaturesTask;->start()Landroid/accounts/AccountManagerFuture;
+    invoke-virtual {v0}, Landroid/accounts/AccountManager$AmsTask;->start()Landroid/accounts/AccountManagerFuture;
 
     .line 1820
     return-object v0
@@ -1722,7 +1722,7 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/accounts/AccountManager$1;-><init>(Landroid/accounts/AccountManager;Landroid/os/Handler;Landroid/accounts/AccountManagerCallback;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Landroid/accounts/AccountManager$1;->start()Landroid/accounts/AccountManager$Future2Task;
+    invoke-virtual {v0}, Landroid/accounts/AccountManager$Future2Task;->start()Landroid/accounts/AccountManager$Future2Task;
 
     move-result-object v0
 
@@ -1921,7 +1921,7 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/accounts/AccountManager$2;-><init>(Landroid/accounts/AccountManager;Landroid/os/Handler;Landroid/accounts/AccountManagerCallback;Landroid/accounts/Account;[Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Landroid/accounts/AccountManager$2;->start()Landroid/accounts/AccountManager$Future2Task;
+    invoke-virtual {v0}, Landroid/accounts/AccountManager$Future2Task;->start()Landroid/accounts/AccountManager$Future2Task;
 
     move-result-object v0
 
@@ -2070,7 +2070,7 @@
 
     invoke-direct {v0, p0, p3, p2, p1}, Landroid/accounts/AccountManager$4;-><init>(Landroid/accounts/AccountManager;Landroid/os/Handler;Landroid/accounts/AccountManagerCallback;Landroid/accounts/Account;)V
 
-    invoke-virtual {v0}, Landroid/accounts/AccountManager$4;->start()Landroid/accounts/AccountManager$Future2Task;
+    invoke-virtual {v0}, Landroid/accounts/AccountManager$Future2Task;->start()Landroid/accounts/AccountManager$Future2Task;
 
     move-result-object v0
 
@@ -2408,7 +2408,7 @@
 
     invoke-direct/range {v0 .. v8}, Landroid/accounts/AccountManager$9;-><init>(Landroid/accounts/AccountManager;Landroid/app/Activity;Landroid/os/Handler;Landroid/accounts/AccountManagerCallback;Landroid/accounts/Account;Ljava/lang/String;Landroid/app/Activity;Landroid/os/Bundle;)V
 
-    invoke-virtual {v0}, Landroid/accounts/AccountManager$9;->start()Landroid/accounts/AccountManagerFuture;
+    invoke-virtual {v0}, Landroid/accounts/AccountManager$AmsTask;->start()Landroid/accounts/AccountManagerFuture;
 
     move-result-object v0
 

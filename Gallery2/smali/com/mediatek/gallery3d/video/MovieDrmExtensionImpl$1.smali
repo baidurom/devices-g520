@@ -45,7 +45,7 @@
 
     iput-object p4, p0, Lcom/mediatek/gallery3d/video/MovieDrmExtensionImpl$1;->val$callback:Lcom/mediatek/gallery3d/ext/IMovieDrmExtension$IMovieDrmCallback;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

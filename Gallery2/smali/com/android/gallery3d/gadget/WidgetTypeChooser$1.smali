@@ -30,7 +30,7 @@
     .line 32
     iput-object p1, p0, Lcom/android/gallery3d/gadget/WidgetTypeChooser$1;->this$0:Lcom/android/gallery3d/gadget/WidgetTypeChooser;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -60,12 +60,12 @@
 
     const/4 v2, -0x1
 
-    invoke-virtual {v1, v2, v0}, Lcom/android/gallery3d/gadget/WidgetTypeChooser;->setResult(ILandroid/content/Intent;)V
+    invoke-virtual {v1, v2, v0}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
 
     .line 38
     iget-object v1, p0, Lcom/android/gallery3d/gadget/WidgetTypeChooser$1;->this$0:Lcom/android/gallery3d/gadget/WidgetTypeChooser;
 
-    invoke-virtual {v1}, Lcom/android/gallery3d/gadget/WidgetTypeChooser;->finish()V
+    invoke-virtual {v1}, Landroid/app/Activity;->finish()V
 
     .line 39
     return-void

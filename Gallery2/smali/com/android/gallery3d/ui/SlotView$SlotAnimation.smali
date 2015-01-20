@@ -38,12 +38,12 @@
 
     invoke-direct {v0, v1}, Landroid/view/animation/DecelerateInterpolator;-><init>(F)V
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/ui/SlotView$SlotAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
+    invoke-virtual {p0, v0}, Lcom/android/gallery3d/anim/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
     .line 337
     const/16 v0, 0x5dc
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/ui/SlotView$SlotAnimation;->setDuration(I)V
+    invoke-virtual {p0, v0}, Lcom/android/gallery3d/anim/Animation;->setDuration(I)V
 
     .line 338
     return-void

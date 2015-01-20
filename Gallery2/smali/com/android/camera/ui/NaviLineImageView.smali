@@ -140,7 +140,7 @@
 
     .line 55
     :cond_1
-    invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/ImageView;->layout(IIII)V
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/view/View;->layout(IIII)V
 
     .line 56
     const/4 v0, 0x1
@@ -231,7 +231,7 @@
 
     .line 47
     :cond_0
-    invoke-super/range {p0 .. p5}, Landroid/widget/ImageView;->onLayout(ZIIII)V
+    invoke-super/range {p0 .. p5}, Landroid/view/View;->onLayout(ZIIII)V
 
     .line 48
     return-void

@@ -42,7 +42,7 @@
 
     .prologue
     .line 724
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -156,7 +156,7 @@
 
     iget-object v15, v0, Landroid/net/wifi/WifiConfiguration;->ipAssignment:Landroid/net/wifi/WifiConfiguration$IpAssignment;
 
-    invoke-virtual {v15}, Landroid/net/wifi/WifiConfiguration$IpAssignment;->ordinal()I
+    invoke-virtual {v15}, Ljava/lang/Enum;->ordinal()I
 
     move-result v15
 
@@ -176,7 +176,7 @@
 
     iget-object v15, v0, Landroid/net/wifi/WifiConfiguration;->proxySettings:Landroid/net/wifi/WifiConfiguration$ProxySettings;
 
-    invoke-virtual {v15}, Landroid/net/wifi/WifiConfiguration$ProxySettings;->ordinal()I
+    invoke-virtual {v15}, Ljava/lang/Enum;->ordinal()I
 
     move-result v15
 
@@ -250,7 +250,7 @@
 
     .line 851
     :try_start_5
-    invoke-virtual {v9}, Ljava/io/DataOutputStream;->close()V
+    invoke-virtual {v9}, Ljava/io/FilterOutputStream;->close()V
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_3
 
@@ -316,7 +316,7 @@
     .line 768
     iget-object v14, v0, Landroid/net/wifi/WifiConfiguration;->ipAssignment:Landroid/net/wifi/WifiConfiguration$IpAssignment;
 
-    invoke-virtual {v14}, Landroid/net/wifi/WifiConfiguration$IpAssignment;->toString()Ljava/lang/String;
+    invoke-virtual {v14}, Ljava/lang/Enum;->toString()Ljava/lang/String;
 
     move-result-object v14
 
@@ -432,7 +432,7 @@
 
     .line 851
     :try_start_9
-    invoke-virtual {v9}, Ljava/io/DataOutputStream;->close()V
+    invoke-virtual {v9}, Ljava/io/FilterOutputStream;->close()V
     :try_end_9
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_2
 
@@ -649,7 +649,7 @@
     .line 799
     iget-object v14, v0, Landroid/net/wifi/WifiConfiguration;->ipAssignment:Landroid/net/wifi/WifiConfiguration$IpAssignment;
 
-    invoke-virtual {v14}, Landroid/net/wifi/WifiConfiguration$IpAssignment;->toString()Ljava/lang/String;
+    invoke-virtual {v14}, Ljava/lang/Enum;->toString()Ljava/lang/String;
 
     move-result-object v14
 
@@ -682,7 +682,7 @@
     .line 815
     iget-object v14, v0, Landroid/net/wifi/WifiConfiguration;->proxySettings:Landroid/net/wifi/WifiConfiguration$ProxySettings;
 
-    invoke-virtual {v14}, Landroid/net/wifi/WifiConfiguration$ProxySettings;->toString()Ljava/lang/String;
+    invoke-virtual {v14}, Ljava/lang/Enum;->toString()Ljava/lang/String;
 
     move-result-object v14
 
@@ -737,7 +737,7 @@
     .line 826
     iget-object v14, v0, Landroid/net/wifi/WifiConfiguration;->proxySettings:Landroid/net/wifi/WifiConfiguration$ProxySettings;
 
-    invoke-virtual {v14}, Landroid/net/wifi/WifiConfiguration$ProxySettings;->toString()Ljava/lang/String;
+    invoke-virtual {v14}, Ljava/lang/Enum;->toString()Ljava/lang/String;
 
     move-result-object v14
 
@@ -762,7 +762,7 @@
 
     .line 851
     :try_start_c
-    invoke-virtual {v10}, Ljava/io/DataOutputStream;->close()V
+    invoke-virtual {v10}, Ljava/io/FilterOutputStream;->close()V
     :try_end_c
     .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_4
 
@@ -945,7 +945,7 @@
     .line 738
     sget-object v0, Landroid/net/wifi/WifiConfigStore$DelayedDiskWrite;->sDiskWriteHandlerThread:Landroid/os/HandlerThread;
 
-    invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     .line 739
     new-instance v0, Landroid/os/Handler;

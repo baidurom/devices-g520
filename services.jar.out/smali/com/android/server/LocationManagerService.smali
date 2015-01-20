@@ -3660,31 +3660,19 @@
     .locals 5
 
     .prologue
-    .line 564  
-    iget-object v0, p0, Lcom/android/server/LocationManagerService;->mContext:Landroid/content/Context;
+    .line 564
+    iget-object v0, p0, Lcom/android/server/LocationManagerService;->mLocationServiceSelection:Lcom/android/server/location/LocationBindServiceSelection;
 
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, #string@config_networkLocationProviderPackageName#t
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/android/server/location/LocationBindServiceSelection;->getNWLocationPackageName()Ljava/lang/String;
 
     move-result-object v0
-    
+
     iput-object v0, p0, Lcom/android/server/LocationManagerService;->mNetworkLocationProviderPackageName:Ljava/lang/String;
 
     .line 565
-    iget-object v0, p0, Lcom/android/server/LocationManagerService;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/server/LocationManagerService;->mLocationServiceSelection:Lcom/android/server/location/LocationBindServiceSelection;
 
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, #string@config_geocodeProviderPackageName#t
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/android/server/location/LocationBindServiceSelection;->getGeocodePackageName()Ljava/lang/String;
 
     move-result-object v0
 

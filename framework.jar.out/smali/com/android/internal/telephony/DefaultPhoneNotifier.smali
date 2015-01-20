@@ -48,7 +48,7 @@
 
     .prologue
     .line 91
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 88
     sget-object v0, Lcom/android/internal/telephony/Phone$DataState;->DISCONNECTED:Lcom/android/internal/telephony/Phone$DataState;
@@ -85,7 +85,7 @@
 
     .prologue
     .line 356
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 88
     sget-object v0, Lcom/android/internal/telephony/Phone$DataState;->DISCONNECTED:Lcom/android/internal/telephony/Phone$DataState;
@@ -147,7 +147,7 @@
     .line 258
     sget-object v0, Lcom/android/internal/telephony/DefaultPhoneNotifier$1;->$SwitchMap$com$android$internal$telephony$Phone$State:[I
 
-    invoke-virtual {p0}, Lcom/android/internal/telephony/Phone$State;->ordinal()I
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -225,7 +225,7 @@
     .line 322
     sget-object v0, Lcom/android/internal/telephony/DefaultPhoneNotifier$1;->$SwitchMap$com$android$internal$telephony$Phone$DataActivityState:[I
 
-    invoke-virtual {p0}, Lcom/android/internal/telephony/Phone$DataActivityState;->ordinal()I
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -331,7 +331,7 @@
     .line 288
     sget-object v0, Lcom/android/internal/telephony/DefaultPhoneNotifier$1;->$SwitchMap$com$android$internal$telephony$Phone$DataState:[I
 
-    invoke-virtual {p0}, Lcom/android/internal/telephony/Phone$DataState;->ordinal()I
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -537,7 +537,7 @@
     invoke-direct {p0, v1}, Lcom/android/internal/telephony/DefaultPhoneNotifier;->log(Ljava/lang/String;)V
 
     .line 186
-    invoke-virtual/range {p4 .. p4}, Lcom/android/internal/telephony/Phone$DataState;->toString()Ljava/lang/String;
+    invoke-virtual/range {p4 .. p4}, Ljava/lang/Enum;->toString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1293,7 +1293,7 @@
 
     .line 413
     .local v10, ex:Landroid/os/RemoteException;
-    invoke-virtual {v10}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v10}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_3
 

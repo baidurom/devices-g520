@@ -94,7 +94,7 @@
     .prologue
     .line 92
     .local p2, observer:Landroid/net/NetworkStats$NonMonotonicObserver;,"Landroid/net/NetworkStats$NonMonotonicObserver<Ljava/lang/String;>;"
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 81
     const-wide/32 v0, 0x200000
@@ -124,7 +124,15 @@
     iput-object v0, p0, Lcom/android/server/net/NetworkStatsRecorder;->mObserver:Landroid/net/NetworkStats$NonMonotonicObserver;
 
     .line 95
-    iput-object p3, p0, Lcom/android/server/net/NetworkStatsRecorder;->mDropBox:Landroid/os/DropBoxManager;
+    const-string v0, "missing DropBoxManager"
+
+    invoke-static {p3, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/os/DropBoxManager;
+
+    iput-object v0, p0, Lcom/android/server/net/NetworkStatsRecorder;->mDropBox:Landroid/os/DropBoxManager;
 
     .line 96
     iput-object p4, p0, Lcom/android/server/net/NetworkStatsRecorder;->mCookie:Ljava/lang/String;
@@ -166,12 +174,12 @@
     .locals 6
 
     .prologue
-    .line 382
+    .line 400
     new-instance v1, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v1}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 384
+    .line 402
     .local v1, os:Ljava/io/ByteArrayOutputStream;
     :try_start_0
     iget-object v2, p0, Lcom/android/server/net/NetworkStatsRecorder;->mRotator:Lcom/android/internal/util/FileRotator;
@@ -181,43 +189,11 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 389
+    .line 407
     :goto_0
     invoke-static {v1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 392
-    iget-object v2, p0, Lcom/android/server/net/NetworkStatsRecorder;->mDropBox:Landroid/os/DropBoxManager;
-
-    if-nez v2, :cond_0
-
-    .line 400
-    :goto_1
-    return-void
-
-    .line 385
-    :catch_0
-    move-exception v0
-
-    .line 387
-    .local v0, e:Ljava/io/IOException;
-    :try_start_1
-    invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->reset()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_0
-
-    .line 389
-    .end local v0           #e:Ljava/io/IOException;
-    :catchall_0
-    move-exception v2
-
-    invoke-static {v1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
-
-    throw v2
-
-    .line 396
-    :cond_0
+    .line 409
     iget-object v2, p0, Lcom/android/server/net/NetworkStatsRecorder;->mDropBox:Landroid/os/DropBoxManager;
 
     const-string v3, "netstats_dump"
@@ -230,12 +206,35 @@
 
     invoke-virtual {v2, v3, v4, v5}, Landroid/os/DropBoxManager;->addData(Ljava/lang/String;[BI)V
 
-    .line 399
+    .line 412
     iget-object v2, p0, Lcom/android/server/net/NetworkStatsRecorder;->mRotator:Lcom/android/internal/util/FileRotator;
 
     invoke-virtual {v2}, Lcom/android/internal/util/FileRotator;->deleteAll()V
 
-    goto :goto_1
+    .line 413
+    return-void
+
+    .line 403
+    :catch_0
+    move-exception v0
+
+    .line 405
+    .local v0, e:Ljava/io/IOException;
+    :try_start_1
+    invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->reset()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_0
+
+    .line 407
+    .end local v0           #e:Ljava/io/IOException;
+    :catchall_0
+    move-exception v2
+
+    invoke-static {v1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
+
+    throw v2
 .end method
 
 
@@ -249,7 +248,7 @@
     .line 384
     const-string v0, "Pending bytes: "
 
-    invoke-virtual {p1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/android/server/net/NetworkStatsRecorder;->mPending:Lcom/android/server/net/NetworkStatsCollection;
 
@@ -257,7 +256,7 @@
 
     move-result-wide v0
 
-    invoke-virtual {p1, v0, v1}, Lcom/android/internal/util/IndentingPrintWriter;->println(J)V
+    invoke-virtual {p1, v0, v1}, Ljava/io/PrintWriter;->println(J)V
 
     .line 385
     if-eqz p2, :cond_0
@@ -265,7 +264,7 @@
     .line 386
     const-string v0, "Complete history:"
 
-    invoke-virtual {p1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     .line 387
     invoke-virtual {p0}, Lcom/android/server/net/NetworkStatsRecorder;->getOrLoadCompleteLocked()Lcom/android/server/net/NetworkStatsCollection;
@@ -282,7 +281,7 @@
     :cond_0
     const-string v0, "History since boot:"
 
-    invoke-virtual {p1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     .line 390
     iget-object v0, p0, Lcom/android/server/net/NetworkStatsRecorder;->mSinceBoot:Lcom/android/server/net/NetworkStatsCollection;
@@ -385,7 +384,7 @@
 
     iget-object v0, p0, Lcom/android/server/net/NetworkStatsRecorder;->mComplete:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -788,7 +787,7 @@
 
     iget-object v2, v0, Lcom/android/server/net/NetworkStatsRecorder;->mComplete:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v2}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v2
 
@@ -1101,7 +1100,7 @@
 
     iget-object v2, p0, Lcom/android/server/net/NetworkStatsRecorder;->mComplete:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v2}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v2
 
@@ -1185,7 +1184,7 @@
     .line 117
     iget-object v0, p0, Lcom/android/server/net/NetworkStatsRecorder;->mComplete:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->clear()V
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->clear()V
 
     .line 118
     return-void

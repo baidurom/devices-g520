@@ -582,7 +582,7 @@
 
     .prologue
     .line 46
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -2633,7 +2633,7 @@
     .end local v3           #i:I
     .restart local v4       #i:I
     :cond_8
-    invoke-virtual {v7}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
+    invoke-virtual {v7}, Ljava/nio/Buffer;->clear()Ljava/nio/Buffer;
 
     .line 576
     add-int/lit8 v3, v4, 0x1
@@ -2645,7 +2645,7 @@
     invoke-virtual {v7, p0, v4, v12}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
 
     .line 577
-    invoke-virtual {v7}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
+    invoke-virtual {v7}, Ljava/nio/Buffer;->flip()Ljava/nio/Buffer;
 
     .line 578
     invoke-virtual {v2, v7}, Ljava/nio/charset/Charset;->decode(Ljava/nio/ByteBuffer;)Ljava/nio/CharBuffer;

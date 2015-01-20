@@ -43,12 +43,12 @@
 
     .prologue
     .line 21
-    invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
+    invoke-super {p0}, Landroid/view/View;->onFinishInflate()V
 
     .line 22
     const v2, 0x7f0b0035
 
-    invoke-virtual {p0, v2}, Lcom/android/camera/ui/ModePickerFrameLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -56,7 +56,7 @@
     .local v0, background:Landroid/view/View;
     const v2, 0x7f0b0036
 
-    invoke-virtual {p0, v2}, Lcom/android/camera/ui/ModePickerFrameLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 

@@ -65,13 +65,13 @@
 
     .prologue
     .line 95
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 97
     iput p1, p0, Lcom/mediatek/bluetooth/ilm/Message;->id:I
 
     .line 98
-    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->capacity()I
+    invoke-virtual {p2}, Ljava/nio/Buffer;->capacity()I
 
     move-result v0
 
@@ -100,7 +100,7 @@
     const/4 v1, 0x1
 
     .line 81
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 83
     const/4 v0, 0x0
@@ -156,14 +156,14 @@
     .line 125
     iget-object v1, p0, Lcom/mediatek/bluetooth/ilm/Message;->buffer:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {v1, p1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {v1, p1}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
 
     .line 126
     iget-object v1, p0, Lcom/mediatek/bluetooth/ilm/Message;->buffer:Ljava/nio/ByteBuffer;
 
     add-int v2, p1, p2
 
-    invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
+    invoke-virtual {v1, v2}, Ljava/nio/Buffer;->limit(I)Ljava/nio/Buffer;
 
     .line 127
     iget-object v1, p0, Lcom/mediatek/bluetooth/ilm/Message;->buffer:Ljava/nio/ByteBuffer;
@@ -185,18 +185,18 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {v1, v2}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
 
     .line 130
     iget-object v1, p0, Lcom/mediatek/bluetooth/ilm/Message;->buffer:Ljava/nio/ByteBuffer;
 
     iget-object v2, p0, Lcom/mediatek/bluetooth/ilm/Message;->buffer:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->capacity()I
+    invoke-virtual {v2}, Ljava/nio/Buffer;->capacity()I
 
     move-result v2
 
-    invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
+    invoke-virtual {v1, v2}, Ljava/nio/Buffer;->limit(I)Ljava/nio/Buffer;
 
     .line 131
     return-object v0
@@ -230,14 +230,14 @@
     .local v1, result:[B
     iget-object v2, p0, Lcom/mediatek/bluetooth/ilm/Message;->buffer:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {v2, p1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {v2, p1}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
 
     .line 166
     iget-object v2, p0, Lcom/mediatek/bluetooth/ilm/Message;->buffer:Ljava/nio/ByteBuffer;
 
     add-int v3, p1, p2
 
-    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
+    invoke-virtual {v2, v3}, Ljava/nio/Buffer;->limit(I)Ljava/nio/Buffer;
 
     .line 168
     iget-object v2, p0, Lcom/mediatek/bluetooth/ilm/Message;->buffer:Ljava/nio/ByteBuffer;
@@ -263,18 +263,18 @@
 
     const/4 v3, 0x0
 
-    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {v2, v3}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
 
     .line 173
     iget-object v2, p0, Lcom/mediatek/bluetooth/ilm/Message;->buffer:Ljava/nio/ByteBuffer;
 
     iget-object v3, p0, Lcom/mediatek/bluetooth/ilm/Message;->buffer:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->capacity()I
+    invoke-virtual {v3}, Ljava/nio/Buffer;->capacity()I
 
     move-result v3
 
-    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
+    invoke-virtual {v2, v3}, Ljava/nio/Buffer;->limit(I)Ljava/nio/Buffer;
 
     .line 174
     return-object v1
@@ -422,7 +422,7 @@
     :cond_1
     iget-object v0, p0, Lcom/mediatek/bluetooth/ilm/Message;->buffer:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {v0, p1}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
 
     .line 183
     iget-object v0, p0, Lcom/mediatek/bluetooth/ilm/Message;->buffer:Ljava/nio/ByteBuffer;
@@ -432,7 +432,7 @@
     .line 184
     iget-object v0, p0, Lcom/mediatek/bluetooth/ilm/Message;->buffer:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
+    invoke-virtual {v0}, Ljava/nio/Buffer;->rewind()Ljava/nio/Buffer;
 
     .line 188
     return-void

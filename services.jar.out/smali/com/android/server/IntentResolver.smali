@@ -136,7 +136,7 @@
     .prologue
     .line 44
     .local p0, this:Lcom/android/server/IntentResolver;,"Lcom/android/server/IntentResolver<TF;TR;>;"
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 591
     new-instance v0, Ljava/util/HashSet;
@@ -2700,6 +2700,10 @@
     .end local v40           #slashpos:I
     .restart local v4       #categories:Landroid/util/FastImmutableArraySet;,"Landroid/util/FastImmutableArraySet<Ljava/lang/String;>;"
     :cond_f
+    move-object/from16 v0, p1
+
+    invoke-static {v0, v10}, Lcom/android/server/BaiduIntentResolverInjector;->filterResult(Landroid/content/Intent;Ljava/util/ArrayList;)V
+
     return-object v10
 .end method
 
@@ -2817,6 +2821,8 @@
     .restart local v12       #i:I
     :cond_1
     invoke-virtual {p0, v9}, Lcom/android/server/IntentResolver;->sortResults(Ljava/util/List;)V
+
+    invoke-static {p1, v9}, Lcom/android/server/BaiduIntentResolverInjector;->filterResult(Landroid/content/Intent;Ljava/util/ArrayList;)V
 
     .line 218
     return-object v9

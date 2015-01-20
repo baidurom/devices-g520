@@ -30,7 +30,7 @@
     .line 673
     iput-object p1, p0, Lcom/android/camera/actor/EffectsRecorder$3;->this$0:Lcom/android/camera/actor/EffectsRecorder;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

@@ -465,7 +465,7 @@
     :try_start_2
     iget-object v7, p0, Lcom/android/server/am/BatteryStatsService;->mStats:Lcom/android/internal/os/BatteryStatsImpl;
 
-    invoke-virtual {v7, p2, p3, v0}, Lcom/android/internal/os/BatteryStatsImpl;->dumpCheckinLocked(Ljava/io/PrintWriter;[Ljava/lang/String;Ljava/util/List;)V
+    invoke-virtual {v7, p2, p3, v0}, Landroid/os/BatteryStats;->dumpCheckinLocked(Ljava/io/PrintWriter;[Ljava/lang/String;Ljava/util/List;)V
 
     .line 512
     monitor-exit v8
@@ -2226,7 +2226,7 @@
     .line 61
     const-string v0, "batteryinfo"
 
-    invoke-virtual {p0}, Lcom/android/server/am/BatteryStatsService;->asBinder()Landroid/os/IBinder;
+    invoke-virtual {p0}, Lcom/android/internal/app/IBatteryStats$Stub;->asBinder()Landroid/os/IBinder;
 
     move-result-object v1
 
@@ -2256,7 +2256,7 @@
 
     move-result-object v1
 
-    const v2, 0x10e0008
+    const v2, #android:integer@config_radioScanningTimeout#t
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 

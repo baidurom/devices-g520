@@ -16,7 +16,7 @@
 
     .prologue
     .line 23
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -497,7 +497,7 @@
     .line 183
     .local v10, fe:Ljava/io/FileNotFoundException;
     :try_start_1
-    invoke-virtual {v10}, Ljava/io/FileNotFoundException;->printStackTrace()V
+    invoke-virtual {v10}, Ljava/lang/Throwable;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -519,7 +519,7 @@
     .line 186
     .local v11, oe:Ljava/lang/OutOfMemoryError;
     :try_start_2
-    invoke-virtual {v11}, Ljava/lang/OutOfMemoryError;->printStackTrace()V
+    invoke-virtual {v11}, Ljava/lang/Throwable;->printStackTrace()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 

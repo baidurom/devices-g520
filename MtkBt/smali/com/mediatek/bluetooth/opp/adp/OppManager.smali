@@ -92,7 +92,7 @@
     const/4 v0, 0x0
 
     .line 138
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 106
     iput-object v0, p0, Lcom/mediatek/bluetooth/opp/adp/OppManager;->mOppcTaskCache:Ljava/util/ArrayList;
@@ -501,7 +501,7 @@
     .line 160
     iget-object v0, p0, Lcom/mediatek/bluetooth/opp/adp/OppManager;->mBgRunner:Lcom/mediatek/bluetooth/opp/adp/OppManager$LooperThread;
 
-    invoke-virtual {v0}, Lcom/mediatek/bluetooth/opp/adp/OppManager$LooperThread;->start()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     goto :goto_0
 .end method
@@ -819,7 +819,7 @@
     .line 953
     iget-object v2, p0, Lcom/mediatek/bluetooth/opp/adp/OppManager;->mOppcTaskTransfer:Lcom/mediatek/bluetooth/opp/adp/OppManager$OppcTaskTransferThread;
 
-    invoke-virtual {v2}, Lcom/mediatek/bluetooth/opp/adp/OppManager$OppcTaskTransferThread;->start()V
+    invoke-virtual {v2}, Ljava/lang/Thread;->start()V
 
     goto :goto_0
 
@@ -1839,7 +1839,7 @@
     .line 686
     iget-object v4, p0, Lcom/mediatek/bluetooth/opp/adp/OppManager;->mOppService:Lcom/mediatek/bluetooth/opp/adp/OppService;
 
-    invoke-virtual {v4, p1}, Lcom/mediatek/bluetooth/opp/adp/OppService;->oppcAbort(Landroid/net/Uri;)Z
+    invoke-virtual {v4, p1}, Lcom/mediatek/bluetooth/opp/adp/OppServiceNative;->oppcAbort(Landroid/net/Uri;)Z
 
     move-result v1
 
@@ -1902,7 +1902,7 @@
     .line 689
     iget-object v4, p0, Lcom/mediatek/bluetooth/opp/adp/OppManager;->mOppService:Lcom/mediatek/bluetooth/opp/adp/OppService;
 
-    invoke-virtual {v4, p1}, Lcom/mediatek/bluetooth/opp/adp/OppService;->oppsAbort(Landroid/net/Uri;)Z
+    invoke-virtual {v4, p1}, Lcom/mediatek/bluetooth/opp/adp/OppServiceNative;->oppsAbort(Landroid/net/Uri;)Z
 
     move-result v1
 
@@ -2291,7 +2291,7 @@
     .line 322
     iget-object v0, p0, Lcom/mediatek/bluetooth/opp/adp/OppManager;->mOppService:Lcom/mediatek/bluetooth/opp/adp/OppService;
 
-    invoke-virtual {v0}, Lcom/mediatek/bluetooth/opp/adp/OppService;->oppcGetCurrentTask()Landroid/net/Uri;
+    invoke-virtual {v0}, Lcom/mediatek/bluetooth/opp/adp/OppServiceNative;->oppcGetCurrentTask()Landroid/net/Uri;
 
     move-result-object v0
 
@@ -2979,7 +2979,7 @@
     .line 583
     iget-object v0, p0, Lcom/mediatek/bluetooth/opp/adp/OppManager;->mOppService:Lcom/mediatek/bluetooth/opp/adp/OppService;
 
-    invoke-virtual {v0}, Lcom/mediatek/bluetooth/opp/adp/OppService;->oppsGetCurrentTask()Landroid/net/Uri;
+    invoke-virtual {v0}, Lcom/mediatek/bluetooth/opp/adp/OppServiceNative;->oppsGetCurrentTask()Landroid/net/Uri;
 
     move-result-object v0
 

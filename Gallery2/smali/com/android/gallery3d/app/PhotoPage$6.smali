@@ -40,7 +40,7 @@
 
     iput-object p3, p0, Lcom/android/gallery3d/app/PhotoPage$6;->val$imageItem:Lcom/android/gallery3d/data/LocalImage;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

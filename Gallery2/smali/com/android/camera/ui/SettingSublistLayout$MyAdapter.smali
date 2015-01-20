@@ -225,7 +225,7 @@
     const/4 v2, 0x1
 
     :goto_2
-    invoke-virtual {v4, v2}, Landroid/widget/RadioButton;->setChecked(Z)V
+    invoke-virtual {v4, v2}, Landroid/widget/CompoundButton;->setChecked(Z)V
 
     .line 109
     iget-object v2, p0, Lcom/android/camera/ui/SettingSublistLayout$MyAdapter;->this$0:Lcom/android/camera/ui/SettingSublistLayout;

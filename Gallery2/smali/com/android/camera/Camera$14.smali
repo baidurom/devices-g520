@@ -30,7 +30,7 @@
     .line 1870
     iput-object p1, p0, Lcom/android/camera/Camera$14;->this$0:Lcom/android/camera/Camera;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -51,7 +51,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/SettingManager;->isEnabled()Z
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->isEnabled()Z
 
     move-result v0
 
@@ -75,7 +75,7 @@
 
     const v3, 0x7f0c00d9
 
-    invoke-virtual {v2, v3}, Lcom/android/camera/Camera;->getString(I)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -83,7 +83,7 @@
 
     const v5, 0x104000a
 
-    invoke-virtual {v3, v5}, Lcom/android/camera/Camera;->getString(I)Ljava/lang/String;
+    invoke-virtual {v3, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -91,7 +91,7 @@
 
     const/high16 v6, 0x104
 
-    invoke-virtual {v5, v6}, Lcom/android/camera/Camera;->getString(I)Ljava/lang/String;
+    invoke-virtual {v5, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 

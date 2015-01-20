@@ -246,7 +246,7 @@
 
     .line 1696
     .local v3, e:Ljava/lang/InterruptedException;
-    invoke-virtual {v3}, Ljava/lang/InterruptedException;->printStackTrace()V
+    invoke-virtual {v3}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto/16 :goto_0
 

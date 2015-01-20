@@ -40,7 +40,6 @@
 
 .field public static final ALWAYS_FINISH_ACTIVITIES:Ljava/lang/String; = "always_finish_activities"
 
-.field public static final ANC:Ljava/lang/String; = "anc"
 .field public static final ANDROID_ID:Ljava/lang/String; = "android_id"
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
@@ -51,8 +50,6 @@
 .field public static final APPEND_FOR_LAST_AUDIBLE:Ljava/lang/String; = "_last_audible"
 
 .field public static final AUTO_SCREEN_BRIGHTNESS:Ljava/lang/String; = "auto_screen_brightness"
-
-.field public static final AUTO_BRIGHTNESS_COE:Ljava/lang/String; = "auto_brightness_coe"
 
 .field public static final AUTO_TIME:Ljava/lang/String; = "auto_time"
 
@@ -118,7 +115,6 @@
 
 .field public static final DEFAULT_ALARM_ALERT_URI:Landroid/net/Uri; = null
 
-.field public static final DEFAULT_FILE_MANAGER:Ljava/lang/String; = "default_file_manager"
 .field public static final DEFAULT_NOTIFICATION_URI:Landroid/net/Uri; = null
 
 .field public static final DEFAULT_RINGTONE_URI:Landroid/net/Uri; = null
@@ -163,8 +159,6 @@
 .field public static final EMERGENCY_TONE:Ljava/lang/String; = "emergency_tone"
 
 .field public static final ENABLE_INTERNET_CALL:Ljava/lang/String; = "enable_internet_call_value"
-
-.field public static final ENABLE_MWI_NOTIFICATION:Ljava/lang/String; = "enable_mwi_notification"
 
 .field public static final END_BUTTON_BEHAVIOR:Ljava/lang/String; = "end_button_behavior"
 
@@ -357,14 +351,6 @@
 
 .field public static final POWER_SOUNDS_ENABLED:Ljava/lang/String; = "power_sounds_enabled"
 
-.field public static final PREVENT_WAKEUP:Ljava/lang/String; = "prevent_wakeup"
-
-.field public static final PRE_SET_ALARM_ALERT:Ljava/lang/String; = "pre_set_alarm_alert"
-
-.field public static final PRE_SET_NOTIFICATION_SOUND:Ljava/lang/String; = "pre_set_notification_sound"
-
-.field public static final PRE_SET_RINGTONE:Ljava/lang/String; = "pre_set_ringtone"
-
 .field public static final RADIO_BLUETOOTH:Ljava/lang/String; = "bluetooth"
 
 .field public static final RADIO_CELL:Ljava/lang/String; = "cell"
@@ -516,6 +502,7 @@
 .field public static final VOLUME_NOTIFICATION:Ljava/lang/String; = "volume_notification"
 
 .field public static final VOLUME_REVOKE:Ljava/lang/String; = "volume_revoke"
+
 .field public static final VOLUME_RING:Ljava/lang/String; = "volume_ring"
 
 .field public static final VOLUME_SETTINGS:[Ljava/lang/String; = null
@@ -1127,7 +1114,7 @@
     sput-object v0, Landroid/provider/Settings$System;->DEFAULT_ALARM_ALERT_URI:Landroid/net/Uri;
 
     .line 2687
-    const/16 v0, 0x3d
+    const/16 v0, 0x3a
 
     new-array v0, v0, [Ljava/lang/String;
 
@@ -1465,24 +1452,6 @@
 
     const/16 v1, 0x39
 
-    const-string/jumbo v2, "volume_revoke"
-    
-    aput-object v2, v0, v1
-    
-    const/16 v1, 0x3a
-    
-    const-string/jumbo v2, "prevent_wakeup"
-    
-    aput-object v2, v0, v1
-    
-    const/16 v1, 0x3b
-    
-    const-string v2, "auto_brightness_coe"
-    
-    aput-object v2, v0, v1
-    
-    const/16 v1, 0x3c
-    
     const-string/jumbo v2, "vibrate_when_ringing"
 
     aput-object v2, v0, v1

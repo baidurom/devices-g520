@@ -168,7 +168,7 @@
     .line 112
     sget-object v0, Lcom/android/internal/telephony/DataConnectionTracker$Activity;->$VALUES:[Lcom/android/internal/telephony/DataConnectionTracker$Activity;
 
-    invoke-virtual {v0}, [Lcom/android/internal/telephony/DataConnectionTracker$Activity;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

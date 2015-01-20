@@ -113,7 +113,7 @@
 
     .prologue
     .line 50
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 51
     iput-object p1, p0, Lcom/mediatek/gallery3d/video/BookmarkEnhance;->mContext:Landroid/content/Context;

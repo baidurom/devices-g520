@@ -6298,6 +6298,8 @@
 
     move-result v4
 
+    const/4 v4, 0x1
+
     if-nez v4, :cond_0
 
     if-eqz p1, :cond_0

@@ -2661,7 +2661,7 @@
     .line 590
     const-string v13, "com.android.settings"
 
-    const-string v14, "com.android.settings.wifi.hotspot.TetherWifiSettings"
+    const-string v14, "com.android.settings.TetherSettings"
 
     invoke-virtual {v6, v13, v14}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 

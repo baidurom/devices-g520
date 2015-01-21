@@ -3036,15 +3036,17 @@
 
     move-object/from16 v0, p1
 
-    invoke-interface {v0, v4}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+    #invoke-interface {v0, v4}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
-    move-result v4
+    #move-result v4
 
-    move-object/from16 v0, p1
+    #move-object/from16 v0, p1
 
-    invoke-interface {v0, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    #invoke-interface {v0, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
-    move-result-object v30
+    #move-result-object v30
+
+    const/16 v30, 0x0
 
     .line 1210
     .local v30, strSPN:Ljava/lang/String;
@@ -3108,15 +3110,17 @@
 
     move-object/from16 v0, p1
 
-    invoke-interface {v0, v4}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+    #invoke-interface {v0, v4}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
-    move-result v4
+    #move-result v4
 
-    move-object/from16 v0, p1
+    #move-object/from16 v0, p1
 
-    invoke-interface {v0, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    #invoke-interface {v0, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
-    move-result-object v28
+    #move-result-object v28
+
+    const/16 v28, 0x0
 
     .line 1214
     .local v28, strIMSI:Ljava/lang/String;
@@ -3138,15 +3142,17 @@
 
     move-object/from16 v0, p1
 
-    invoke-interface {v0, v4}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+    #invoke-interface {v0, v4}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
-    move-result v4
+    #move-result v4
 
-    move-object/from16 v0, p1
+    #move-object/from16 v0, p1
 
-    invoke-interface {v0, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    #invoke-interface {v0, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
-    move-result-object v29
+    #move-result-object v29
+
+    const/16 v29, 0x0
 
     .line 1218
     .local v29, strPNN:Ljava/lang/String;
@@ -4304,6 +4310,8 @@
 
     .line 1261
     :cond_0
+    const/16 p2, 0x0
+
     if-eqz p2, :cond_2
 
     const-string/jumbo v3, "spn"

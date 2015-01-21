@@ -537,7 +537,7 @@
 
     iput-boolean v5, v2, Lcom/android/internal/telephony/CallerInfo;->contactExists:Z
 
-    invoke-static {v1, p2}, Lcom/android/internal/telephony/CallerInfo$BaiduInjector;->initCallerInfoExt(Lcom/android/internal/telephony/CallerInfo;Landroid/database/Cursor;)V
+    invoke-static {v2, p2}, Lcom/android/internal/telephony/CallerInfo$BaiduInjector;->initCallerInfoExt(Lcom/android/internal/telephony/CallerInfo;Landroid/database/Cursor;)V
 
     .end local v0           #columnIndex:I
     :cond_6

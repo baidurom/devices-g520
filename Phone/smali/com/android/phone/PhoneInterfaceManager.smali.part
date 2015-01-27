@@ -530,10 +530,19 @@
 .end method
 
 .method public disableLocationUpdatesGemini(I)V
-    .locals 1
+    .locals 3
     .parameter "simId"
 
     .prologue
+    .line 3187
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mApp:Lcom/android/phone/PhoneApp;
+
+    const-string v1, "android.permission.CONTROL_LOCATION_UPDATES"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContextWrapper;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
+
     .line 3189
     iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
 
@@ -551,6 +560,9 @@
     .parameter "simId"
 
     .prologue
+    .line 3529
+    invoke-direct {p0}, Lcom/android/phone/PhoneInterfaceManager;->enforceModifyPermission()V
+
     .line 3530
     iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
 
@@ -568,6 +580,9 @@
     .parameter "simId"
 
     .prologue
+    .line 3524
+    invoke-direct {p0}, Lcom/android/phone/PhoneInterfaceManager;->enforceModifyPermission()V
+
     .line 3525
     iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
 
@@ -581,11 +596,20 @@
 .end method
 
 .method public enableLocationUpdatesGemini(I)V
-    .locals 1
+    .locals 3
     .parameter "simId"
 
     .prologue
     .line 3181
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mApp:Lcom/android/phone/PhoneApp;
+
+    const-string v1, "android.permission.CONTROL_LOCATION_UPDATES"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContextWrapper;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 3183
     iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
 
     check-cast v0, Lcom/android/internal/telephony/gemini/GeminiPhone;
@@ -607,47 +631,60 @@
     return-object v0
 .end method
 
-.method public getAllCellInfo()Ljava/util/List;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Landroid/telephony/CellInfo;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
 .method public getCellLocationGemini(I)Landroid/os/Bundle;
-    .locals 2
+    .locals 6
     .parameter "simId"
 
     .prologue
+    const/4 v5, 0x0
+
+    .line 3194
+    :try_start_0
+    iget-object v2, p0, Lcom/android/phone/PhoneInterfaceManager;->mApp:Lcom/android/phone/PhoneApp;
+
+    const-string v3, "android.permission.ACCESS_FINE_LOCATION"
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v2, v3, v4}, Landroid/content/ContextWrapper;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 3203
+    :goto_0
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     .line 3204
     .local v0, data:Landroid/os/Bundle;
-    iget-object v1, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
+    iget-object v2, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
 
-    check-cast v1, Lcom/android/internal/telephony/gemini/GeminiPhone;
+    check-cast v2, Lcom/android/internal/telephony/gemini/GeminiPhone;
 
-    invoke-virtual {v1, p1}, Lcom/android/internal/telephony/gemini/GeminiPhone;->getCellLocationGemini(I)Landroid/telephony/CellLocation;
+    invoke-virtual {v2, p1}, Lcom/android/internal/telephony/gemini/GeminiPhone;->getCellLocationGemini(I)Landroid/telephony/CellLocation;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1, v0}, Landroid/telephony/CellLocation;->fillInNotifierBundle(Landroid/os/Bundle;)V
+    invoke-virtual {v2, v0}, Landroid/telephony/CellLocation;->fillInNotifierBundle(Landroid/os/Bundle;)V
 
     .line 3205
     return-object v0
+
+    .line 3196
+    .end local v0           #data:Landroid/os/Bundle;
+    :catch_0
+    move-exception v1
+
+    .line 3200
+    .local v1, e:Ljava/lang/SecurityException;
+    iget-object v2, p0, Lcom/android/phone/PhoneInterfaceManager;->mApp:Lcom/android/phone/PhoneApp;
+
+    const-string v3, "android.permission.ACCESS_COARSE_LOCATION"
+
+    invoke-virtual {v2, v3, v5}, Landroid/content/ContextWrapper;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
 .end method
 
 .method public getDataActivityGemini(I)I
@@ -1135,7 +1172,9 @@
     .parameter "simId"
 
     .prologue
-    const/4 v0, 0x0
+    invoke-virtual {p0}, Lcom/android/phone/PhoneInterfaceManager;->getScAddress()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method
@@ -2192,6 +2231,7 @@
 
     .prologue
     .line 3632
+    invoke-virtual {p0, p1}, Lcom/android/phone/PhoneInterfaceManager;->setScAddress(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -2592,157 +2632,38 @@
 .end method
 
 .method public getScAddress()Ljava/lang/String;
-    .locals 9
+    .locals 2
 
     .prologue
-    const/4 v8, 0x0
+    invoke-static {}, Landroid/telephony/BaiduTelephonyManager;->getDefault()Landroid/telephony/BaiduTelephonyManager;
 
-    .line 882
-    const-string v4, "PhoneInterfaceManager"
+    move-result-object v0
 
-    const-string v5, "getScAddress: enter"
+    const/4 v1, 0x0
 
-    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v0, v1}, Landroid/telephony/BaiduTelephonyManager;->getScAddress(I)Ljava/lang/String;
 
-    .line 884
-    new-instance v0, Lcom/android/phone/PhoneInterfaceManager$ScAddr;
+    move-result-object v0
 
-    const/4 v4, 0x0
-
-    invoke-direct {v0, p0, v4}, Lcom/android/phone/PhoneInterfaceManager$ScAddr;-><init>(Lcom/android/phone/PhoneInterfaceManager;Ljava/lang/String;)V
-
-    .line 886
-    .local v0, addr:Lcom/android/phone/PhoneInterfaceManager$ScAddr;
-    new-instance v3, Lcom/android/phone/PhoneInterfaceManager$1;
-
-    invoke-direct {v3, p0, v0}, Lcom/android/phone/PhoneInterfaceManager$1;-><init>(Lcom/android/phone/PhoneInterfaceManager;Lcom/android/phone/PhoneInterfaceManager$ScAddr;)V
-
-    .line 895
-    .local v3, sender:Ljava/lang/Thread;
-    invoke-virtual {v3}, Ljava/lang/Thread;->start()V
-
-    .line 897
-    :try_start_0
-    const-string v4, "PhoneInterfaceManager"
-
-    const-string v5, "[sca thread join"
-
-    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 898
-    invoke-virtual {v3}, Ljava/lang/Thread;->join()V
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 903
-    :goto_0
-    const-string v4, "PhoneInterfaceManager"
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v6, "getScAddress: exit with "
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    iget-object v6, v0, Lcom/android/phone/PhoneInterfaceManager$ScAddr;->scAddr:Ljava/lang/String;
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 905
-    iget-object v4, v0, Lcom/android/phone/PhoneInterfaceManager$ScAddr;->scAddr:Ljava/lang/String;
-
-    return-object v4
-
-    :catch_0
-    move-exception v1
-
-    .line 900
-    .local v1, e:Ljava/lang/InterruptedException;
-    const-string v4, "PhoneInterfaceManager"
-
-    const-string v5, "[sca throw interrupted exception"
-
-    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
+    return-object v0
 .end method
 
 .method public setScAddress(Ljava/lang/String;)V
-    .locals 7
+    .locals 2
     .parameter "address"
 
     .prologue
-    .line 914
-    const-string v4, "PhoneInterfaceManager"
+    invoke-static {}, Landroid/telephony/BaiduTelephonyManager;->getDefault()Landroid/telephony/BaiduTelephonyManager;
 
-    const-string v5, "setScAddress: enter"
+    move-result-object v0
 
-    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    const/4 v1, 0x0
 
-    .line 915
-    new-instance v0, Lcom/android/phone/PhoneInterfaceManager$ScAddr;
+    invoke-virtual {v0, p1, v1}, Landroid/telephony/BaiduTelephonyManager;->setScAddress(Ljava/lang/String;I)Z
 
-    invoke-direct {v0, p0, p1}, Lcom/android/phone/PhoneInterfaceManager$ScAddr;-><init>(Lcom/android/phone/PhoneInterfaceManager;Ljava/lang/String;)V
+    move-result v0
 
-    .line 921
-    .local v0, addr:Lcom/android/phone/PhoneInterfaceManager$ScAddr;
-    new-instance v2, Lcom/android/phone/PhoneInterfaceManager$2;
-
-    invoke-direct {v2, p0, v0}, Lcom/android/phone/PhoneInterfaceManager$2;-><init>(Lcom/android/phone/PhoneInterfaceManager;Lcom/android/phone/PhoneInterfaceManager$ScAddr;)V
-
-    .line 930
-    .local v2, sender:Ljava/lang/Thread;
-    invoke-virtual {v2}, Ljava/lang/Thread;->start()V
-
-    .line 932
-    :try_start_0
-    const-string v4, "PhoneInterfaceManager"
-
-    const-string v5, "[sca thread join"
-
-    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 933
-    invoke-virtual {v2}, Ljava/lang/Thread;->join()V
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 938
-    :goto_0
-    const-string v4, "PhoneInterfaceManager"
-
-    const-string v5, "setScAddress: exit"
-
-    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 939
     return-void
-
-    .line 934
-    :catch_0
-    move-exception v1
-
-    .line 935
-    .local v1, e:Ljava/lang/InterruptedException;
-    const-string v4, "PhoneInterfaceManager"
-
-    const-string v5, "[sca throw interrupted exception"
-
-    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
 .end method
 
 .method public silenceRingerGemini(I)V

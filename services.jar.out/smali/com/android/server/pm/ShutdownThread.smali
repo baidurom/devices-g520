@@ -439,12 +439,15 @@
 
     iput-object v5, v4, Lcom/android/server/pm/ShutdownThread;->mHandler:Landroid/os/Handler;
 
+    .line 339
     sput-boolean v9, Lcom/android/server/pm/ShutdownThread;->bPlayaudio:Z
 
+    .line 340
     sget-boolean v4, Lcom/android/server/pm/ShutdownThread;->bConfirmForAnimation:Z
 
     if-nez v4, :cond_1
 
+    .line 341
     sget-object v4, Lcom/android/server/pm/ShutdownThread;->sInstance:Lcom/android/server/pm/ShutdownThread;
 
     iget-object v4, v4, Lcom/android/server/pm/ShutdownThread;->mPowerManager:Landroid/os/PowerManager;
@@ -823,7 +826,7 @@
     .line 381
     sget-object v4, Lcom/android/server/pm/ShutdownThread;->pd:Landroid/app/ProgressDialog;
 
-    const v6, #android:string@power_off#t
+    const v6, 0x104012a
 
     invoke-virtual {p0, v6}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -834,15 +837,13 @@
     .line 382
     sget-object v4, Lcom/android/server/pm/ShutdownThread;->pd:Landroid/app/ProgressDialog;
 
-    const v6, #android:string@shutdown_progress#t
+    const v6, 0x104012e
 
     invoke-virtual {p0, v6}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v6
 
     invoke-virtual {v4, v6}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
-
-    invoke-static {p0, v4}, Lcom/android/server/pm/ShutdownThread$BaiduInjector;->rebootProgressDialogBaidu(Landroid/content/Context;Landroid/app/ProgressDialog;)V
 
     .line 383
     sget-object v4, Lcom/android/server/pm/ShutdownThread;->pd:Landroid/app/ProgressDialog;
@@ -883,7 +884,7 @@
     .line 388
     sget-object v4, Lcom/android/server/pm/ShutdownThread;->pd:Landroid/app/ProgressDialog;
 
-    invoke-virtual {v4}, Landroid/app/ProgressDialog;->show()V
+    invoke-static/range {p0 .. p0}, Lcom/android/server/pm/ShutdownThread$BaiduInjector;->showBaiduShutdownOrRebootProgressDialog(Landroid/content/Context;)V
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_2
 
@@ -1906,7 +1907,7 @@
 
     move-result-object v3
 
-    const v4, #android:integer@config_longPressOnPowerBehavior#t
+    const v4, 0x10e0016
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1918,7 +1919,7 @@
 
     if-eqz v3, :cond_3
 
-    const v2, #android:string@reboot_safemode_confirm#t
+    const v2, 0x1040132
 
     .line 209
     .local v2, resourceId:I
@@ -1975,7 +1976,7 @@
 
     if-eqz v3, :cond_5
 
-    const v3, #android:string@reboot_safemode_title#t
+    const v3, 0x1040131
 
     :goto_2
     invoke-virtual {v4, v3}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
@@ -1986,7 +1987,7 @@
 
     move-result-object v3
 
-    const v4, #android:string@yes#t
+    const v4, 0x1040013
 
     new-instance v5, Lcom/android/server/pm/ShutdownThread$2;
 
@@ -1996,7 +1997,7 @@
 
     move-result-object v3
 
-    const v4, #android:string@no#t
+    const v4, 0x1040009
 
     new-instance v5, Lcom/android/server/pm/ShutdownThread$1;
 
@@ -2007,10 +2008,6 @@
     move-result-object v3
 
     invoke-virtual {v3}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
-
-    move-result-object v3
-
-    invoke-static {p0, v3}, Lcom/android/server/pm/ShutdownThread$BaiduInjector;->createRebootDialogBaidu(Landroid/content/Context;Landroid/app/AlertDialog;)Landroid/app/AlertDialog;
 
     move-result-object v3
 
@@ -2043,15 +2040,18 @@
 
     invoke-virtual {v3, v6}, Landroid/view/Window;->addFlags(I)V
 
+    .line 249
     :cond_2
     sget-object v3, Lcom/android/server/pm/ShutdownThread;->mDialog:Landroid/app/AlertDialog;
 
     iput-object v3, v0, Lcom/android/server/pm/ShutdownThread$CloseDialogReceiver;->dialog:Landroid/app/Dialog;
 
+    .line 250
     sget-object v3, Lcom/android/server/pm/ShutdownThread;->mDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v3, v0}, Landroid/app/AlertDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
+    .line 252
     sget-object v3, Lcom/android/server/pm/ShutdownThread;->mDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v3}, Landroid/app/AlertDialog;->isShowing()Z
@@ -2063,7 +2063,7 @@
     .line 253
     sget-object v3, Lcom/android/server/pm/ShutdownThread;->mDialog:Landroid/app/AlertDialog;
 
-    invoke-virtual {v3}, Landroid/app/AlertDialog;->show()V
+    invoke-static/range {p0 .. p0}, Lcom/android/server/pm/ShutdownThread$BaiduInjector;->showBaiduShutdownOrRebootDialog(Landroid/content/Context;)V
 
     goto/16 :goto_0
 
@@ -2086,12 +2086,12 @@
     :cond_3
     if-ne v1, v6, :cond_4
 
-    const v2, #android:string@shutdown_confirm_question#t
+    const v2, 0x1040130
 
     goto/16 :goto_1
 
     :cond_4
-    const v2, #android:string@shutdown_confirm#t
+    const v2, 0x104012f
 
     goto/16 :goto_1
 
@@ -2099,7 +2099,7 @@
     .restart local v0       #closer:Lcom/android/server/pm/ShutdownThread$CloseDialogReceiver;
     .restart local v2       #resourceId:I
     :cond_5
-    const v3, #android:string@power_off#t
+    const v3, 0x104012a
 
     goto :goto_2
 
@@ -3519,4 +3519,13 @@
     sput-boolean p0, Lcom/android/server/pm/ShutdownThread;->mReboot:Z
 
     return p0
+.end method
+
+.method static synthetic access$sget-mRebootSafeMode-259b09()Z
+    .locals 1
+
+    .prologue
+    sget-boolean v0, Lcom/android/server/pm/ShutdownThread;->mRebootSafeMode:Z
+
+    return v0
 .end method

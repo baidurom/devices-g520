@@ -777,6 +777,8 @@
     .restart local v0       #cust:Ljava/lang/String;
     .restart local v3       #screenTurnOffTime:I
     :cond_6
+    const/4 v2, 0x0
+
     if-eqz v2, :cond_7
 
     .line 377

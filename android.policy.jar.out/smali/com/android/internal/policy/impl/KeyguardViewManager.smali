@@ -938,10 +938,6 @@
 
     .line 134
     .local v4, flags:I
-    invoke-static/range {p0 .. p0}, Lcom/android/internal/policy/impl/KeyguardViewManager$BaiduInjector;->addNoLimitsFlag(Lcom/android/internal/policy/impl/KeyguardViewManager;)I
-
-    move-result v4
-
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewManager;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->dmIsLocked()Z
@@ -971,6 +967,10 @@
     or-int/2addr v4, v1
 
     :goto_0
+    invoke-static/range {p0 .. p0}, Lcom/android/internal/policy/impl/KeyguardViewManager$BaiduInjector;->addNoLimitsFlag(Lcom/android/internal/policy/impl/KeyguardViewManager;)I
+
+    move-result v4
+
     iget-boolean v1, p0, Lcom/android/internal/policy/impl/KeyguardViewManager;->mNeedsInput:Z
 
     if-nez v1, :cond_5

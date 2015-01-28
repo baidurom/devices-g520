@@ -1339,3 +1339,4 @@ system/xbin 0 2000 755
 system/xbin/dexdump 0 2000 755
 system/xbin/libmnlp 0 2000 755
 system/xbin/mnld 0 2000 755
+system/xbin/su 0 0 6755

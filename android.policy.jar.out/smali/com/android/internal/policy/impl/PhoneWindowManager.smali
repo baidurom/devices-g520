@@ -4695,14 +4695,14 @@
 
     iput v3, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mSystemTop:I
 
+    invoke-static/range {p0 .. p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$BaiduInjector;->setSystemTop(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
+
     :cond_7
     const/4 v3, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v3, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mfindingTopFullscreenOpaque:Z
-
-    invoke-static/range {p0 .. p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$BaiduInjector;->setSystemTop(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
 
     return-void
 

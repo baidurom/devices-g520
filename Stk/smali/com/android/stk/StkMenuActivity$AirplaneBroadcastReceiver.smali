@@ -70,7 +70,7 @@
     .line 525
     iget-object v1, p0, Lcom/android/stk/StkMenuActivity$AirplaneBroadcastReceiver;->this$0:Lcom/android/stk/StkMenuActivity;
 
-    invoke-virtual {v1}, Lcom/android/stk/StkMenuActivity;->finish()V
+    invoke-virtual {v1}, Landroid/app/Activity;->finish()V
 
     .line 527
     :cond_0

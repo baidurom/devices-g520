@@ -73,7 +73,7 @@
     .line 67
     new-instance v0, Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Landroid/app/SharedPreferencesImpl;->mContent:Ljava/lang/Object;
 
@@ -89,7 +89,7 @@
     const/4 v1, 0x0
 
     .line 71
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 61
     iput v1, p0, Landroid/app/SharedPreferencesImpl;->mDiskWritesInFlight:I
@@ -100,7 +100,7 @@
     .line 66
     new-instance v0, Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/app/SharedPreferencesImpl;->mWritingToDiskLock:Ljava/lang/Object;
 
@@ -932,7 +932,7 @@
 
     invoke-direct {v0, p0, v1}, Landroid/app/SharedPreferencesImpl$1;-><init>(Landroid/app/SharedPreferencesImpl;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Landroid/app/SharedPreferencesImpl$1;->start()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     .line 91
     return-void

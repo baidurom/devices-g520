@@ -37,7 +37,7 @@
 
     invoke-direct {v0, p0, p2, p1, p3}, Lcom/android/gallery3d/photoeditor/EffectsMenu$1;-><init>(Lcom/android/gallery3d/photoeditor/EffectsMenu;ILcom/android/gallery3d/photoeditor/EffectsMenu$OnToggleListener;I)V
 
-    invoke-virtual {p0, p2, v0}, Lcom/android/gallery3d/photoeditor/EffectsMenu;->setClickRunnable(ILjava/lang/Runnable;)V
+    invoke-virtual {p0, p2, v0}, Lcom/android/gallery3d/photoeditor/RestorableView;->setClickRunnable(ILjava/lang/Runnable;)V
 
     .line 70
     return-void
@@ -62,7 +62,7 @@
     .line 73
     const v3, 0x7f0b0080
 
-    invoke-virtual {p0, v3}, Lcom/android/gallery3d/photoeditor/EffectsMenu;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -100,7 +100,7 @@
 
     const/4 v4, 0x0
 
-    invoke-virtual {p0, v3, v4}, Lcom/android/gallery3d/photoeditor/EffectsMenu;->setViewSelected(IZ)V
+    invoke-virtual {p0, v3, v4}, Lcom/android/gallery3d/photoeditor/RestorableView;->setViewSelected(IZ)V
 
     .line 74
     :cond_0

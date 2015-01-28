@@ -3,8 +3,8 @@
 .source "SipService.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
 .implements Lcom/android/server/sip/SipSessionGroup$KeepAliveProcessCallback;
+.implements Ljava/lang/Runnable;
 
 
 # annotations

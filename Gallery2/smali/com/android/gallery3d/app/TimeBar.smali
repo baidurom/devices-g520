@@ -218,7 +218,7 @@
     iput-object v2, p0, Lcom/android/gallery3d/app/TimeBar;->timeBounds:Landroid/graphics/Rect;
 
     .line 105
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/TimeBar;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -660,7 +660,7 @@
     invoke-interface {v0, p0, v1, v2}, Lcom/android/gallery3d/app/ITimeBarInfoExt;->updateVisibleText(Landroid/view/View;Landroid/graphics/Rect;Landroid/graphics/Rect;)V
 
     .line 138
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/TimeBar;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     .line 139
     return-void
@@ -849,7 +849,7 @@
 
     div-int/lit8 v1, v1, 0x2
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/TimeBar;->getPaddingLeft()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
 
     move-result v2
 
@@ -898,11 +898,11 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/TimeBar;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v1
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/TimeBar;->getPaddingRight()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
 
     move-result v2
 
@@ -1174,13 +1174,13 @@
     .line 226
     iget-object v4, p0, Lcom/android/gallery3d/app/TimeBar;->progressBar:Landroid/graphics/Rect;
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/TimeBar;->getPaddingLeft()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
 
     move-result v5
 
     add-int/2addr v5, v1
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/TimeBar;->getPaddingRight()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
 
     move-result v6
 
@@ -1381,7 +1381,7 @@
     invoke-direct {p0}, Lcom/android/gallery3d/app/TimeBar;->update()V
 
     .line 287
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/TimeBar;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     goto :goto_0
 
@@ -1482,7 +1482,7 @@
     invoke-interface {v0, p0, v1, v2}, Lcom/android/gallery3d/app/ITimeBarInfoExt;->updateVisibleText(Landroid/view/View;Landroid/graphics/Rect;Landroid/graphics/Rect;)V
 
     .line 370
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/TimeBar;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     .line 371
     return-void
@@ -1597,7 +1597,7 @@
     invoke-interface {v0, v1, p1}, Lcom/android/gallery3d/app/ITimeBarSecondaryProgressExt;->setSecondaryProgress(Landroid/graphics/Rect;I)V
 
     .line 380
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/TimeBar;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     .line 381
     return-void
@@ -1667,7 +1667,7 @@
 
     .line 190
     :cond_0
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/TimeBar;->requestLayout()V
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 
     .line 191
     return-void
@@ -1682,7 +1682,7 @@
     iput-boolean p1, p0, Lcom/android/gallery3d/app/TimeBar;->showTimes:Z
 
     .line 174
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/TimeBar;->requestLayout()V
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 
     .line 175
     return-void

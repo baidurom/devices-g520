@@ -32,7 +32,7 @@
     .line 661
     iput-object p1, p0, Lcom/mediatek/gallery3d/pq/PictureQualityTool$DecodeImage;->this$0:Lcom/mediatek/gallery3d/pq/PictureQualityTool;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -217,7 +217,7 @@
     :try_start_0
     iget-object v0, p0, Lcom/mediatek/gallery3d/pq/PictureQualityTool$DecodeImage;->this$0:Lcom/mediatek/gallery3d/pq/PictureQualityTool;
 
-    invoke-virtual {v0}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -371,7 +371,7 @@
 
     iget-object v4, p0, Lcom/mediatek/gallery3d/pq/PictureQualityTool$DecodeImage;->this$0:Lcom/mediatek/gallery3d/pq/PictureQualityTool;
 
-    invoke-virtual {v4}, Lcom/mediatek/gallery3d/pq/PictureQualityTool;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v4}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 

@@ -36,23 +36,23 @@
     .parameter "annotation"
 
     .prologue
-    .line 16732
+    .line 16741
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$KeyAnrRecord;->this$0:Lcom/android/server/am/ActivityManagerService;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 16733
+    .line 16742
     iput-object p2, p0, Lcom/android/server/am/ActivityManagerService$KeyAnrRecord;->mApp:Lcom/android/server/am/ProcessRecord;
 
-    .line 16734
+    .line 16743
     iput-object p3, p0, Lcom/android/server/am/ActivityManagerService$KeyAnrRecord;->mActivity:Lcom/android/server/am/ActivityRecord;
 
-    .line 16735
+    .line 16744
     iput-object p4, p0, Lcom/android/server/am/ActivityManagerService$KeyAnrRecord;->mParent:Lcom/android/server/am/ActivityRecord;
 
-    .line 16736
+    .line 16745
     iput-object p5, p0, Lcom/android/server/am/ActivityManagerService$KeyAnrRecord;->mAnnotation:Ljava/lang/String;
 
-    .line 16737
+    .line 16746
     return-void
 .end method

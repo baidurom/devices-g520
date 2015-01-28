@@ -217,7 +217,7 @@
 
     sget-object v13, Lcom/android/internal/telephony/gsm/FDModeType;->INFO_MD_SCREEN_STATUS:Lcom/android/internal/telephony/gsm/FDModeType;
 
-    invoke-virtual {v13}, Lcom/android/internal/telephony/gsm/FDModeType;->ordinal()I
+    invoke-virtual {v13}, Ljava/lang/Enum;->ordinal()I
 
     move-result v13
 
@@ -233,7 +233,7 @@
 
     const v17, 0x42027
 
-    invoke-virtual/range {v16 .. v17}, Lcom/android/internal/telephony/DataConnectionTracker;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual/range {v16 .. v17}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v16
 
@@ -420,7 +420,7 @@
 
     sget-object v13, Lcom/android/internal/telephony/gsm/FDModeType;->INFO_MD_SCREEN_STATUS:Lcom/android/internal/telephony/gsm/FDModeType;
 
-    invoke-virtual {v13}, Lcom/android/internal/telephony/gsm/FDModeType;->ordinal()I
+    invoke-virtual {v13}, Ljava/lang/Enum;->ordinal()I
 
     move-result v13
 
@@ -436,7 +436,7 @@
 
     const v17, 0x42027
 
-    invoke-virtual/range {v16 .. v17}, Lcom/android/internal/telephony/DataConnectionTracker;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual/range {v16 .. v17}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v16
 
@@ -1221,7 +1221,7 @@
 
     sget-object v13, Lcom/android/internal/telephony/gsm/FDModeType;->DISABLE_MD_FD:Lcom/android/internal/telephony/gsm/FDModeType;
 
-    invoke-virtual {v13}, Lcom/android/internal/telephony/gsm/FDModeType;->ordinal()I
+    invoke-virtual {v13}, Ljava/lang/Enum;->ordinal()I
 
     move-result v13
 
@@ -1237,7 +1237,7 @@
 
     const v17, 0x42027
 
-    invoke-virtual/range {v16 .. v17}, Lcom/android/internal/telephony/DataConnectionTracker;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual/range {v16 .. v17}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v16
 
@@ -1295,7 +1295,7 @@
 
     sget-object v13, Lcom/android/internal/telephony/gsm/FDModeType;->ENABLE_MD_FD:Lcom/android/internal/telephony/gsm/FDModeType;
 
-    invoke-virtual {v13}, Lcom/android/internal/telephony/gsm/FDModeType;->ordinal()I
+    invoke-virtual {v13}, Ljava/lang/Enum;->ordinal()I
 
     move-result v13
 
@@ -1311,7 +1311,7 @@
 
     const v17, 0x42027
 
-    invoke-virtual/range {v16 .. v17}, Lcom/android/internal/telephony/DataConnectionTracker;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual/range {v16 .. v17}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v16
 

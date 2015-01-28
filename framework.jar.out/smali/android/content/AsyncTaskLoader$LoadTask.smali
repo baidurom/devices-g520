@@ -112,7 +112,7 @@
 
     .line 72
     .local v1, ex:Landroid/os/OperationCanceledException;
-    invoke-virtual {p0}, Landroid/content/AsyncTaskLoader$LoadTask;->isCancelled()Z
+    invoke-virtual {p0}, Landroid/os/AsyncTask;->isCancelled()Z
 
     move-result v2
 

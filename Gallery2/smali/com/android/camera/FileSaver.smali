@@ -117,14 +117,14 @@
     .line 50
     iget-object v0, p0, Lcom/android/camera/FileSaver;->mContext:Lcom/android/camera/Camera;
 
-    invoke-virtual {v0}, Lcom/android/camera/Camera;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/FileSaver;->mResolver:Landroid/content/ContentResolver;
 
     .line 51
-    invoke-virtual {p0}, Lcom/android/camera/FileSaver;->start()V
+    invoke-virtual {p0}, Ljava/lang/Thread;->start()V
 
     .line 52
     return-void
@@ -387,7 +387,7 @@
 
     const v4, 0x7f0c0120
 
-    invoke-virtual {v3, v4}, Lcom/android/camera/Camera;->getString(I)Ljava/lang/String;
+    invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -431,7 +431,7 @@
 
     const v7, 0x7f0c0121
 
-    invoke-virtual {v6, v7}, Lcom/android/camera/Camera;->getString(I)Ljava/lang/String;
+    invoke-virtual {v6, v7}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
@@ -600,7 +600,7 @@
 
     .line 114
     :try_start_1
-    invoke-virtual {p0}, Lcom/android/camera/FileSaver;->join()V
+    invoke-virtual {p0}, Ljava/lang/Thread;->join()V
     :try_end_1
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
 

@@ -32,7 +32,7 @@
 
     .prologue
     .line 65
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 66
     iput-object p1, p0, Landroid/speech/tts/TtsEngines;->mContext:Landroid/content/Context;
@@ -193,7 +193,7 @@
     iput-object v3, v0, Landroid/speech/tts/TextToSpeech$EngineInfo;->name:Ljava/lang/String;
 
     .line 245
-    invoke-virtual {v2, p2}, Landroid/content/pm/ServiceInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
+    invoke-virtual {v2, p2}, Landroid/content/pm/ComponentInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -211,7 +211,7 @@
     iput-object v3, v0, Landroid/speech/tts/TextToSpeech$EngineInfo;->label:Ljava/lang/String;
 
     .line 247
-    invoke-virtual {v2}, Landroid/content/pm/ServiceInfo;->getIconResource()I
+    invoke-virtual {v2}, Landroid/content/pm/ComponentInfo;->getIconResource()I
 
     move-result v3
 
@@ -560,7 +560,7 @@
     :try_start_0
     const-string v8, "android.speech.tts"
 
-    invoke-virtual {p1, p2, v8}, Landroid/content/pm/ServiceInfo;->loadXmlMetaData(Landroid/content/pm/PackageManager;Ljava/lang/String;)Landroid/content/res/XmlResourceParser;
+    invoke-virtual {p1, p2, v8}, Landroid/content/pm/PackageItemInfo;->loadXmlMetaData(Landroid/content/pm/PackageManager;Ljava/lang/String;)Landroid/content/res/XmlResourceParser;
 
     move-result-object v3
 

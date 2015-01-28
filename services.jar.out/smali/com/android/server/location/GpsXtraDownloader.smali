@@ -25,7 +25,7 @@
 
     .prologue
     .line 53
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 54
     iput-object p1, p0, Lcom/android/server/location/GpsXtraDownloader;->mContext:Landroid/content/Context;
@@ -338,7 +338,7 @@
 
     .line 148
     :try_start_4
-    invoke-virtual {v4}, Ljava/io/DataInputStream;->close()V
+    invoke-virtual {v4}, Ljava/io/FilterInputStream;->close()V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
@@ -369,7 +369,7 @@
 
     .line 148
     :try_start_6
-    invoke-virtual {v4}, Ljava/io/DataInputStream;->close()V
+    invoke-virtual {v4}, Ljava/io/FilterInputStream;->close()V
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_1

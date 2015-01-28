@@ -40,7 +40,7 @@
 
     iput-object p3, p0, Lcom/android/gallery3d/data/TagClustering$1;->val$map:Ljava/util/TreeMap;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -54,7 +54,7 @@
 
     .prologue
     .line 47
-    invoke-virtual {p2}, Lcom/android/gallery3d/data/MediaItem;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {p2}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v3
 

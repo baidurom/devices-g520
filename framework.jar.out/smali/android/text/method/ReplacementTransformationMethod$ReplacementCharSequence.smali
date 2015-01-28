@@ -3,8 +3,8 @@
 .source "ReplacementTransformationMethod.java"
 
 # interfaces
-.implements Ljava/lang/CharSequence;
 .implements Landroid/text/GetChars;
+.implements Ljava/lang/CharSequence;
 
 
 # annotations
@@ -35,7 +35,7 @@
 
     .prologue
     .line 113
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 114
     iput-object p1, p0, Landroid/text/method/ReplacementTransformationMethod$ReplacementCharSequence;->mSource:Ljava/lang/CharSequence;

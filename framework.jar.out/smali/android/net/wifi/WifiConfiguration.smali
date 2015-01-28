@@ -206,7 +206,7 @@
     const/4 v8, 0x0
 
     .line 472
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 108
     new-instance v5, Landroid/net/wifi/WifiConfiguration$EnterpriseField;
@@ -528,7 +528,7 @@
     const/4 v3, 0x0
 
     .line 648
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 108
     new-instance v1, Landroid/net/wifi/WifiConfiguration$EnterpriseField;
@@ -1627,7 +1627,7 @@
 
     iget-object v12, p0, Landroid/net/wifi/WifiConfiguration;->ipAssignment:Landroid/net/wifi/WifiConfiguration$IpAssignment;
 
-    invoke-virtual {v12}, Landroid/net/wifi/WifiConfiguration$IpAssignment;->toString()Ljava/lang/String;
+    invoke-virtual {v12}, Ljava/lang/Enum;->toString()Ljava/lang/String;
 
     move-result-object v12
 
@@ -1659,7 +1659,7 @@
 
     iget-object v12, p0, Landroid/net/wifi/WifiConfiguration;->proxySettings:Landroid/net/wifi/WifiConfiguration$ProxySettings;
 
-    invoke-virtual {v12}, Landroid/net/wifi/WifiConfiguration$ProxySettings;->toString()Ljava/lang/String;
+    invoke-virtual {v12}, Ljava/lang/Enum;->toString()Ljava/lang/String;
 
     move-result-object v12
 
@@ -1910,7 +1910,7 @@
     :cond_2
     iget-object v5, p0, Landroid/net/wifi/WifiConfiguration;->ipAssignment:Landroid/net/wifi/WifiConfiguration$IpAssignment;
 
-    invoke-virtual {v5}, Landroid/net/wifi/WifiConfiguration$IpAssignment;->name()Ljava/lang/String;
+    invoke-virtual {v5}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v5
 
@@ -1919,7 +1919,7 @@
     .line 711
     iget-object v5, p0, Landroid/net/wifi/WifiConfiguration;->proxySettings:Landroid/net/wifi/WifiConfiguration$ProxySettings;
 
-    invoke-virtual {v5}, Landroid/net/wifi/WifiConfiguration$ProxySettings;->name()Ljava/lang/String;
+    invoke-virtual {v5}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v5
 

@@ -184,7 +184,7 @@
 
     .line 305
     .local v0, e:Ljava/lang/IllegalArgumentException;
-    invoke-virtual {v0}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     move-object v1, v2
 
@@ -285,7 +285,7 @@
 
     .line 192
     .local v1, e:Ljava/io/IOException;
-    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
 
     move v3, v4
 
@@ -489,7 +489,7 @@
 
     .line 252
     .local v1, e:Ljava/io/IOException;
-    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_1
 .end method
@@ -506,7 +506,7 @@
     .line 265
     :goto_0
     :try_start_0
-    invoke-virtual {p1}, Ljava/io/DataInputStream;->available()I
+    invoke-virtual {p1}, Ljava/io/FilterInputStream;->available()I
 
     move-result v6
 
@@ -584,7 +584,7 @@
 
     .line 280
     .local v1, e:Ljava/io/IOException;
-    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_1
 .end method

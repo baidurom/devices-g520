@@ -29,7 +29,7 @@
 
     .prologue
     .line 113
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 314
     new-instance v0, Landroid/accounts/AbstractAccountAuthenticator$Transport;
@@ -211,7 +211,7 @@
     :cond_0
     const/4 v0, 0x3
 
-    invoke-virtual {p4}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+    invoke-virtual {p4}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v1
 
@@ -496,7 +496,7 @@
     .line 320
     iget-object v0, p0, Landroid/accounts/AbstractAccountAuthenticator;->mTransport:Landroid/accounts/AbstractAccountAuthenticator$Transport;
 
-    invoke-virtual {v0}, Landroid/accounts/AbstractAccountAuthenticator$Transport;->asBinder()Landroid/os/IBinder;
+    invoke-virtual {v0}, Landroid/accounts/IAccountAuthenticator$Stub;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
 

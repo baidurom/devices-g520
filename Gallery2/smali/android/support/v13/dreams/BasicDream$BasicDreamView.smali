@@ -61,7 +61,7 @@
     .line 53
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Landroid/support/v13/dreams/BasicDream$BasicDreamView;->setSystemUiVisibility(I)V
+    invoke-virtual {p0, v0}, Landroid/view/View;->setSystemUiVisibility(I)V
 
     .line 54
     return-void

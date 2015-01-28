@@ -30,7 +30,7 @@
     .line 163
     iput-object p1, p0, Lcom/android/camera/manager/ZoomManager$MyListener;->this$0:Lcom/android/camera/manager/ZoomManager;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -133,7 +133,7 @@
 
     iget-object v5, p0, Lcom/android/camera/manager/ZoomManager$MyListener;->this$0:Lcom/android/camera/manager/ZoomManager;
 
-    invoke-virtual {v5}, Lcom/android/camera/manager/ZoomManager;->isEnabled()Z
+    invoke-virtual {v5}, Lcom/android/camera/manager/ViewManager;->isEnabled()Z
 
     move-result v5
 
@@ -160,7 +160,7 @@
 
     iget-object v3, p0, Lcom/android/camera/manager/ZoomManager$MyListener;->this$0:Lcom/android/camera/manager/ZoomManager;
 
-    invoke-virtual {v3}, Lcom/android/camera/manager/ZoomManager;->isEnabled()Z
+    invoke-virtual {v3}, Lcom/android/camera/manager/ViewManager;->isEnabled()Z
 
     move-result v3
 
@@ -474,7 +474,7 @@
 
     iget-object v5, p0, Lcom/android/camera/manager/ZoomManager$MyListener;->this$0:Lcom/android/camera/manager/ZoomManager;
 
-    invoke-virtual {v5}, Lcom/android/camera/manager/ZoomManager;->isEnabled()Z
+    invoke-virtual {v5}, Lcom/android/camera/manager/ViewManager;->isEnabled()Z
 
     move-result v5
 
@@ -501,7 +501,7 @@
 
     iget-object v3, p0, Lcom/android/camera/manager/ZoomManager$MyListener;->this$0:Lcom/android/camera/manager/ZoomManager;
 
-    invoke-virtual {v3}, Lcom/android/camera/manager/ZoomManager;->isEnabled()Z
+    invoke-virtual {v3}, Lcom/android/camera/manager/ViewManager;->isEnabled()Z
 
     move-result v3
 

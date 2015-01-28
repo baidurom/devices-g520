@@ -82,7 +82,7 @@
 
     .prologue
     .line 31
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 33
     return-void
@@ -485,7 +485,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v2}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {v1, v2}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
 
     .line 347
     return-object v0

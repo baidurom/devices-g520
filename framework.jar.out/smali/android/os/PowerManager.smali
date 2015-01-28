@@ -68,7 +68,7 @@
 
     .prologue
     .line 593
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 594
     return-void
@@ -81,7 +81,7 @@
 
     .prologue
     .line 600
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 601
     iput-object p1, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
@@ -270,30 +270,6 @@
     return-void
 
     .line 526
-    :catch_0
-    move-exception v0
-
-    goto :goto_0
-.end method
-
-.method public setButtonLight(I)V
-    .locals 1
-    .parameter "brightness"
-
-    .prologue
-    .line 510
-    :try_start_0
-    iget-object v0, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
-
-    invoke-interface {v0, p1}, Landroid/os/IPowerManager;->setButtonLight(I)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 513
-    :goto_0
-    return-void
-
-    .line 511
     :catch_0
     move-exception v0
 

@@ -30,7 +30,7 @@
     .line 180
     iput-object p1, p0, Lcom/android/gallery3d/photoeditor/PhotoEditor$5$1;->this$1:Lcom/android/gallery3d/photoeditor/PhotoEditor$5;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -117,7 +117,7 @@
 
     iget-object v1, v1, Lcom/android/gallery3d/photoeditor/PhotoEditor$5;->this$0:Lcom/android/gallery3d/photoeditor/PhotoEditor;
 
-    invoke-virtual {v1, v0}, Lcom/android/gallery3d/photoeditor/PhotoEditor;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v1, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
     .line 193
     .end local v0           #intent:Landroid/content/Intent;

@@ -48,7 +48,7 @@
     const/4 v4, 0x6
 
     .line 52
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 40
     new-array v1, v4, [B
@@ -204,7 +204,7 @@
 
     .line 83
     .local v12, timeout:J
-    invoke-virtual {v6}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
+    invoke-virtual {v6}, Ljava/nio/Buffer;->clear()Ljava/nio/Buffer;
 
     .line 84
     sget-object v0, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
@@ -261,7 +261,7 @@
     invoke-virtual {v6, v7}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
     .line 95
-    invoke-virtual {v6}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
+    invoke-virtual {v6}, Ljava/nio/Buffer;->flip()Ljava/nio/Buffer;
 
     .line 96
     iget-object v0, p0, Landroid/net/arp/ArpPeer;->mSocket:Llibcore/net/RawSocket;
@@ -274,7 +274,7 @@
 
     const/4 v4, 0x0
 
-    invoke-virtual {v6}, Ljava/nio/ByteBuffer;->limit()I
+    invoke-virtual {v6}, Ljava/nio/Buffer;->limit()I
 
     move-result v5
 

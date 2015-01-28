@@ -162,7 +162,7 @@
 
     .prologue
     .line 127
-    invoke-virtual {p0}, Landroid/nfc/tech/NfcF;->getMaxTransceiveLengthInternal()I
+    invoke-virtual {p0}, Landroid/nfc/tech/BasicTagTechnology;->getMaxTransceiveLengthInternal()I
 
     move-result v0
 
@@ -326,7 +326,7 @@
     .line 119
     const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, v0}, Landroid/nfc/tech/NfcF;->transceive([BZ)[B
+    invoke-virtual {p0, p1, v0}, Landroid/nfc/tech/BasicTagTechnology;->transceive([BZ)[B
 
     move-result-object v0
 

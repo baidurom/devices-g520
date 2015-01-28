@@ -298,7 +298,7 @@
 
     move-result v5
 
-    invoke-virtual {p0, v3, v5}, Lcom/android/gallery3d/ui/TileImageView$Tile;->setSize(II)V
+    invoke-virtual {p0, v3, v5}, Lcom/android/gallery3d/ui/BasicTexture;->setSize(II)V
 
     .line 728
     iget-object v0, p0, Lcom/android/gallery3d/ui/TileImageView$Tile;->mDecodedTile:Landroid/graphics/Bitmap;
@@ -411,7 +411,7 @@
     iput p3, p0, Lcom/android/gallery3d/ui/TileImageView$Tile;->mTileLevel:I
 
     .line 752
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/TileImageView$Tile;->invalidateContent()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/UploadedTexture;->invalidateContent()V
 
     .line 753
     return-void

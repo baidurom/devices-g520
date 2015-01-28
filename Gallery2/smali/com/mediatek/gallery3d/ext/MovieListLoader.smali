@@ -30,7 +30,7 @@
 
     .prologue
     .line 18
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 62
     return-void
@@ -52,7 +52,7 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/mediatek/gallery3d/ext/MovieListLoader$MovieListFetcherTask;->cancel(Z)Z
+    invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->cancel(Z)Z
 
     .line 60
     :cond_0
@@ -136,7 +136,7 @@
 
     aput-object p4, v1, v6
 
-    invoke-virtual {v0, v1}, Lcom/mediatek/gallery3d/ext/MovieListLoader$MovieListFetcherTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     .line 39
     const-string v0, "MovieListLoader"

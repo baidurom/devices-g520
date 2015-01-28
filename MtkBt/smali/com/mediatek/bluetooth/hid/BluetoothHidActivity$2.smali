@@ -161,7 +161,7 @@
     .line 764
     iget-object v6, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity$2;->this$0:Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;
 
-    invoke-virtual {v6}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->finish()V
+    invoke-virtual {v6}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 
@@ -180,7 +180,7 @@
     .line 761
     iget-object v6, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity$2;->this$0:Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;
 
-    invoke-virtual {v6}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->finish()V
+    invoke-virtual {v6}, Landroid/app/Activity;->finish()V
 
     goto :goto_1
 
@@ -245,7 +245,7 @@
 
     iget-object v8, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity$2;->this$0:Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;
 
-    invoke-virtual {v8, v5}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {v8, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
@@ -278,7 +278,7 @@
     .line 779
     sget-object v6, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->sDeviceList:Landroid/preference/PreferenceCategory;
 
-    invoke-virtual {v6, v0}, Landroid/preference/PreferenceCategory;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v6, v0}, Landroid/preference/PreferenceGroup;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 

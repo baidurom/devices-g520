@@ -208,7 +208,7 @@
 
     if-eqz v9, :cond_2
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/GradientDrawable;->getLevel()I
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getLevel()I
 
     move-result v9
 
@@ -442,7 +442,7 @@
     iput-boolean v2, v0, Landroid/graphics/drawable/GradientDrawable;->mRectIsDirty:Z
 
     .line 682
-    invoke-virtual/range {p0 .. p0}, Landroid/graphics/drawable/GradientDrawable;->getBounds()Landroid/graphics/Rect;
+    invoke-virtual/range {p0 .. p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v15
 
@@ -543,7 +543,7 @@
 
     if-eqz v2, :cond_2
 
-    invoke-virtual/range {p0 .. p0}, Landroid/graphics/drawable/GradientDrawable;->getLevel()I
+    invoke-virtual/range {p0 .. p0}, Landroid/graphics/drawable/Drawable;->getLevel()I
 
     move-result v2
 
@@ -562,7 +562,7 @@
 
     iget-object v8, v0, Landroid/graphics/drawable/GradientDrawable$GradientState;->mOrientation:Landroid/graphics/drawable/GradientDrawable$Orientation;
 
-    invoke-virtual {v8}, Landroid/graphics/drawable/GradientDrawable$Orientation;->ordinal()I
+    invoke-virtual {v8}, Ljava/lang/Enum;->ordinal()I
 
     move-result v8
 
@@ -945,7 +945,7 @@
 
     if-eqz v2, :cond_4
 
-    invoke-virtual/range {p0 .. p0}, Landroid/graphics/drawable/GradientDrawable;->getLevel()I
+    invoke-virtual/range {p0 .. p0}, Landroid/graphics/drawable/Drawable;->getLevel()I
 
     move-result v2
 
@@ -1177,7 +1177,7 @@
     .line 769
     .restart local v24       #tempPositions:[F
     :cond_9
-    invoke-virtual/range {p0 .. p0}, Landroid/graphics/drawable/GradientDrawable;->getLevel()I
+    invoke-virtual/range {p0 .. p0}, Landroid/graphics/drawable/Drawable;->getLevel()I
 
     move-result v2
 
@@ -3932,7 +3932,7 @@
     iput-boolean v0, p0, Landroid/graphics/drawable/GradientDrawable;->mPathIsDirty:Z
 
     .line 668
-    invoke-virtual {p0}, Landroid/graphics/drawable/GradientDrawable;->invalidateSelf()V
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     .line 669
     return v0
@@ -3952,7 +3952,7 @@
     iput p1, p0, Landroid/graphics/drawable/GradientDrawable;->mAlpha:I
 
     .line 630
-    invoke-virtual {p0}, Landroid/graphics/drawable/GradientDrawable;->invalidateSelf()V
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     .line 632
     :cond_0
@@ -3975,7 +3975,7 @@
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 618
-    invoke-virtual {p0}, Landroid/graphics/drawable/GradientDrawable;->invalidateSelf()V
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     .line 619
     return-void
@@ -3995,7 +3995,7 @@
     iput-object p1, p0, Landroid/graphics/drawable/GradientDrawable;->mColorFilter:Landroid/graphics/ColorFilter;
 
     .line 646
-    invoke-virtual {p0}, Landroid/graphics/drawable/GradientDrawable;->invalidateSelf()V
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     .line 648
     :cond_0
@@ -4018,7 +4018,7 @@
     iput-boolean v0, p0, Landroid/graphics/drawable/GradientDrawable;->mRectIsDirty:Z
 
     .line 420
-    invoke-virtual {p0}, Landroid/graphics/drawable/GradientDrawable;->invalidateSelf()V
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     .line 421
     return-void
@@ -4040,7 +4040,7 @@
     iput-boolean v0, p0, Landroid/graphics/drawable/GradientDrawable;->mPathIsDirty:Z
 
     .line 194
-    invoke-virtual {p0}, Landroid/graphics/drawable/GradientDrawable;->invalidateSelf()V
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     .line 195
     return-void
@@ -4062,7 +4062,7 @@
     iput-boolean v0, p0, Landroid/graphics/drawable/GradientDrawable;->mPathIsDirty:Z
 
     .line 214
-    invoke-virtual {p0}, Landroid/graphics/drawable/GradientDrawable;->invalidateSelf()V
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     .line 215
     return-void
@@ -4082,7 +4082,7 @@
     iput-boolean p1, p0, Landroid/graphics/drawable/GradientDrawable;->mDither:Z
 
     .line 638
-    invoke-virtual {p0}, Landroid/graphics/drawable/GradientDrawable;->invalidateSelf()V
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     .line 640
     :cond_0
@@ -4106,7 +4106,7 @@
     iput-boolean v0, p0, Landroid/graphics/drawable/GradientDrawable;->mRectIsDirty:Z
 
     .line 337
-    invoke-virtual {p0}, Landroid/graphics/drawable/GradientDrawable;->invalidateSelf()V
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     .line 338
     return-void
@@ -4128,7 +4128,7 @@
     iput-boolean v0, p0, Landroid/graphics/drawable/GradientDrawable;->mRectIsDirty:Z
 
     .line 355
-    invoke-virtual {p0}, Landroid/graphics/drawable/GradientDrawable;->invalidateSelf()V
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     .line 356
     return-void
@@ -4150,7 +4150,7 @@
     iput-boolean v0, p0, Landroid/graphics/drawable/GradientDrawable;->mRectIsDirty:Z
 
     .line 318
-    invoke-virtual {p0}, Landroid/graphics/drawable/GradientDrawable;->invalidateSelf()V
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     .line 319
     return-void
@@ -4172,7 +4172,7 @@
     iput-boolean v0, p0, Landroid/graphics/drawable/GradientDrawable;->mRectIsDirty:Z
 
     .line 402
-    invoke-virtual {p0}, Landroid/graphics/drawable/GradientDrawable;->invalidateSelf()V
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     .line 403
     return-void
@@ -4199,7 +4199,7 @@
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/GradientDrawable$GradientState;->setShape(I)V
 
     .line 301
-    invoke-virtual {p0}, Landroid/graphics/drawable/GradientDrawable;->invalidateSelf()V
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     .line 302
     return-void
@@ -4222,7 +4222,7 @@
     iput-boolean v0, p0, Landroid/graphics/drawable/GradientDrawable;->mPathIsDirty:Z
 
     .line 283
-    invoke-virtual {p0}, Landroid/graphics/drawable/GradientDrawable;->invalidateSelf()V
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     .line 284
     return-void
@@ -4325,7 +4325,7 @@
     invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setPathEffect(Landroid/graphics/PathEffect;)Landroid/graphics/PathEffect;
 
     .line 264
-    invoke-virtual {p0}, Landroid/graphics/drawable/GradientDrawable;->invalidateSelf()V
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     .line 265
     return-void
@@ -4348,7 +4348,7 @@
     iput-boolean v0, p0, Landroid/graphics/drawable/GradientDrawable;->mRectIsDirty:Z
 
     .line 374
-    invoke-virtual {p0}, Landroid/graphics/drawable/GradientDrawable;->invalidateSelf()V
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     .line 375
     return-void

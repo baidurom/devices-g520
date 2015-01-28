@@ -3,8 +3,8 @@
 .source "PhotoDataAdapter.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
 .implements Lcom/android/gallery3d/util/FutureListener;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -56,10 +56,10 @@
     .line 1163
     iput-object p1, p0, Lcom/android/gallery3d/app/PhotoDataAdapter$FullImageListener;->this$0:Lcom/android/gallery3d/app/PhotoDataAdapter;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1164
-    invoke-virtual {p2}, Lcom/android/gallery3d/data/MediaItem;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {p2}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v0
 

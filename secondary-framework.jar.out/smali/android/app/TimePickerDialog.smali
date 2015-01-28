@@ -64,15 +64,15 @@
     .line 110
     const/4 v3, 0x0
 
-    invoke-virtual {p0, v3}, Landroid/app/TimePickerDialog;->setIcon(I)V
+    invoke-virtual {p0, v3}, Landroid/app/AlertDialog;->setIcon(I)V
 
     .line 111
     const v3, 0x1040421
 
-    invoke-virtual {p0, v3}, Landroid/app/TimePickerDialog;->setTitle(I)V
+    invoke-virtual {p0, v3}, Landroid/app/Dialog;->setTitle(I)V
 
     .line 113
-    invoke-virtual {p0}, Landroid/app/TimePickerDialog;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -86,7 +86,7 @@
 
     move-result-object v4
 
-    invoke-virtual {p0, v3, v4, p0}, Landroid/app/TimePickerDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {p0, v3, v4, p0}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     .line 116
     const-string v3, "layout_inflater"
@@ -109,7 +109,7 @@
 
     .line 119
     .local v2, view:Landroid/view/View;
-    invoke-virtual {p0, v2}, Landroid/app/TimePickerDialog;->setView(Landroid/view/View;)V
+    invoke-virtual {p0, v2}, Landroid/app/AlertDialog;->setView(Landroid/view/View;)V
 
     .line 120
     const v3, 0x102035a
@@ -206,7 +206,7 @@
     .line 144
     iget-object v0, p0, Landroid/app/TimePickerDialog;->mTimePicker:Landroid/widget/TimePicker;
 
-    invoke-virtual {v0}, Landroid/widget/TimePicker;->clearFocus()V
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->clearFocus()V
 
     .line 145
     iget-object v0, p0, Landroid/app/TimePickerDialog;->mCallback:Landroid/app/TimePickerDialog$OnTimeSetListener;
@@ -261,7 +261,7 @@
 
     .prologue
     .line 182
-    invoke-super {p0, p1}, Landroid/app/AlertDialog;->onRestoreInstanceState(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Landroid/app/Dialog;->onRestoreInstanceState(Landroid/os/Bundle;)V
 
     .line 183
     const-string v2, "hour"
@@ -321,7 +321,7 @@
 
     .prologue
     .line 173
-    invoke-super {p0}, Landroid/app/AlertDialog;->onSaveInstanceState()Landroid/os/Bundle;
+    invoke-super {p0}, Landroid/app/Dialog;->onSaveInstanceState()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -379,7 +379,7 @@
     invoke-direct {p0}, Landroid/app/TimePickerDialog;->tryNotifyTimeSet()V
 
     .line 167
-    invoke-super {p0}, Landroid/app/AlertDialog;->onStop()V
+    invoke-super {p0}, Landroid/app/Dialog;->onStop()V
 
     .line 168
     return-void

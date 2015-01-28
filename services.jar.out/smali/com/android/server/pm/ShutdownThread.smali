@@ -842,6 +842,8 @@
 
     invoke-virtual {v4, v6}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
+    invoke-static {p0, v4}, Lcom/android/server/pm/ShutdownThread$BaiduInjector;->rebootProgressDialogBaidu(Landroid/content/Context;Landroid/app/ProgressDialog;)V
+
     .line 383
     sget-object v4, Lcom/android/server/pm/ShutdownThread;->pd:Landroid/app/ProgressDialog;
 
@@ -1115,7 +1117,7 @@
     .prologue
     const/4 v3, 0x0
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
     .line 523
     const-string v4, "ShutdownThread"

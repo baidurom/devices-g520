@@ -8607,36 +8607,128 @@
 .end method
 
 .method public getMasterSyncAutomatically(I)Z
-    .locals 3
+    .locals 6
     .parameter "userId"
 
     .prologue
-    .line 782
+    const/4 v1, 0x1
+
+    .line 790
     iget-object v2, p0, Landroid/content/SyncStorageEngine;->mAuthorities:Landroid/util/SparseArray;
 
     monitor-enter v2
 
-    .line 783
+    .line 791
     :try_start_0
-    iget-object v1, p0, Landroid/content/SyncStorageEngine;->mMasterSyncAutomatically:Landroid/util/SparseArray;
+    iget-object v3, p0, Landroid/content/SyncStorageEngine;->mMasterSyncAutomatically:Landroid/util/SparseArray;
 
-    invoke-virtual {v1, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+    invoke-virtual {v3, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/Boolean;
 
-    .line 784
+    .line 792
     .local v0, auto:Ljava/lang/Boolean;
+    const-string v3, "SyncManager"
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v5, "userId="
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, " auto="
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, " mExt="
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    iget-object v5, p0, Landroid/content/SyncStorageEngine;->mExt:Lcom/mediatek/common/IFwkExt;
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 793
+    iget-object v3, p0, Landroid/content/SyncStorageEngine;->mExt:Lcom/mediatek/common/IFwkExt;
+
+    if-eqz v3, :cond_1
+
+    iget-object v3, p0, Landroid/content/SyncStorageEngine;->mExt:Lcom/mediatek/common/IFwkExt;
+
+    invoke-interface {v3}, Lcom/mediatek/common/IFwkExt;->getCurrentOPIndex()I
+
+    move-result v3
+
+    if-ne v3, v1, :cond_1
+
+    .line 795
+    const-string v1, "SyncManager"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v4, "mExt.getCurrentOPIndex()="
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    iget-object v4, p0, Landroid/content/SyncStorageEngine;->mExt:Lcom/mediatek/common/IFwkExt;
+
+    invoke-interface {v4}, Lcom/mediatek/common/IFwkExt;->getCurrentOPIndex()I
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 796
     if-nez v0, :cond_0
 
-    const/4 v1, 0x1
+    const/4 v1, 0x0
 
     :goto_0
     monitor-exit v2
 
+    .line 798
+    :goto_1
     return v1
 
+    .line 796
     :cond_0
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -8644,7 +8736,16 @@
 
     goto :goto_0
 
-    .line 785
+    .line 798
+    :cond_1
+    if-nez v0, :cond_2
+
+    :goto_2
+    monitor-exit v2
+
+    goto :goto_1
+
+    .line 800
     .end local v0           #auto:Ljava/lang/Boolean;
     :catchall_0
     move-exception v1
@@ -8654,6 +8755,18 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v1
+
+    .line 798
+    .restart local v0       #auto:Ljava/lang/Boolean;
+    :cond_2
+    :try_start_1
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    move-result v1
+
+    goto :goto_2
 .end method
 
 .method public getOrCreateAuthority(Landroid/accounts/Account;ILjava/lang/String;)Landroid/content/SyncStorageEngine$AuthorityInfo;

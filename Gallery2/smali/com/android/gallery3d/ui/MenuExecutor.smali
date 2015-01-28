@@ -85,7 +85,7 @@
 
     .prologue
     .line 106
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 107
     invoke-static {p1}, Lcom/android/gallery3d/common/Utils;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -402,7 +402,7 @@
 
     .line 654
     .local v2, dialog:Landroid/app/AlertDialog;
-    invoke-virtual {v2}, Landroid/app/AlertDialog;->show()V
+    invoke-virtual {v2}, Landroid/app/Dialog;->show()V
 
     .line 655
     return-void
@@ -431,14 +431,14 @@
     if-eq v1, p1, :cond_0
 
     .line 87
-    invoke-virtual {v0, p1}, Landroid/app/ProgressDialog;->setTitle(I)V
+    invoke-virtual {v0, p1}, Landroid/app/Dialog;->setTitle(I)V
 
     .line 89
     :cond_0
     invoke-virtual {v0, p2}, Landroid/app/ProgressDialog;->setMax(I)V
 
     .line 90
-    invoke-virtual {v0, v2}, Landroid/app/ProgressDialog;->setCancelable(Z)V
+    invoke-virtual {v0, v2}, Landroid/app/Dialog;->setCancelable(Z)V
 
     .line 91
     invoke-virtual {v0, v2}, Landroid/app/ProgressDialog;->setIndeterminate(Z)V
@@ -826,7 +826,7 @@
 
     move/from16 v0, v27
 
-    invoke-virtual {v4, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+    invoke-virtual {v4, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v27
 
@@ -866,7 +866,7 @@
 
     move/from16 v0, v27
 
-    invoke-virtual {v4, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+    invoke-virtual {v4, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v27
 
@@ -1030,7 +1030,7 @@
 
     move/from16 v0, v27
 
-    invoke-virtual {v4, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+    invoke-virtual {v4, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v27
 
@@ -1219,7 +1219,7 @@
     :try_start_2
     move/from16 v0, v27
 
-    invoke-virtual {v4, v0}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {v4, v0}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v27
 
@@ -1606,7 +1606,7 @@
     .line 144
     iget-object v0, p0, Lcom/android/gallery3d/ui/MenuExecutor;->mDialog:Landroid/app/ProgressDialog;
 
-    invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
+    invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
 
     .line 145
     iput-object v1, p0, Lcom/android/gallery3d/ui/MenuExecutor;->mDialog:Landroid/app/ProgressDialog;
@@ -2479,7 +2479,7 @@
 
     const v4, 0x7f0c0211
 
-    invoke-virtual {v3, v4}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+    invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v13
 
@@ -2501,7 +2501,7 @@
 
     aput-object v13, v6, v7
 
-    invoke-virtual {v3, v4, v6}, Landroid/app/Activity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v3, v4, v6}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v10
 
@@ -2642,7 +2642,7 @@
 
     const v4, 0x7f0c020e
 
-    invoke-virtual {v3, v4}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+    invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v14
 
@@ -2664,7 +2664,7 @@
 
     aput-object v14, v6, v7
 
-    invoke-virtual {v3, v4, v6}, Landroid/app/Activity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v3, v4, v6}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v11
 
@@ -2761,7 +2761,7 @@
     .local v9, activity:Landroid/app/Activity;
     const v3, 0x7f0c0212
 
-    invoke-virtual {v9, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+    invoke-virtual {v9, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -2933,7 +2933,7 @@
 
     const v4, 0x7f0c015b
 
-    invoke-virtual {v3, v4}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+    invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v21
 
@@ -2955,7 +2955,7 @@
 
     aput-object v21, v6, v7
 
-    invoke-virtual {v3, v4, v6}, Landroid/app/Activity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v3, v4, v6}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v12
 
@@ -3074,7 +3074,7 @@
     const v3, 0x7f0c015d
 
     :try_start_0
-    invoke-virtual {v9, v3}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {v9, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v3
 
@@ -3196,7 +3196,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/app/AlertDialog;->show()V
+    invoke-virtual {v2}, Landroid/app/Dialog;->show()V
 
     .line 404
     .end local v1           #cdl:Lcom/android/gallery3d/ui/MenuExecutor$ConfirmDialogListener;
@@ -3301,7 +3301,7 @@
     .line 427
     iget-object v4, p0, Lcom/android/gallery3d/ui/MenuExecutor;->mDialog:Landroid/app/ProgressDialog;
 
-    invoke-virtual {v4}, Landroid/app/ProgressDialog;->show()V
+    invoke-virtual {v4}, Landroid/app/Dialog;->show()V
 
     .line 429
     :cond_0

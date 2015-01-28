@@ -3,8 +3,8 @@
 .source "MediaSetSource.java"
 
 # interfaces
-.implements Lcom/android/gallery3d/gadget/WidgetSource;
 .implements Lcom/android/gallery3d/data/ContentListener;
+.implements Lcom/android/gallery3d/gadget/WidgetSource;
 
 
 # static fields
@@ -34,7 +34,7 @@
 
     .prologue
     .line 47
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 40
     const/16 v0, 0x20
@@ -249,7 +249,7 @@
 
     aget-object v0, v0, v1
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/data/MediaItem;->getContentUri()Landroid/net/Uri;
+    invoke-virtual {v0}, Lcom/android/gallery3d/data/MediaObject;->getContentUri()Landroid/net/Uri;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 

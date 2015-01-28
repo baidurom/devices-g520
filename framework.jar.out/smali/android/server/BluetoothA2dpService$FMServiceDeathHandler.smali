@@ -33,7 +33,7 @@
     .line 901
     iput-object p1, p0, Landroid/server/BluetoothA2dpService$FMServiceDeathHandler;->this$0:Landroid/server/BluetoothA2dpService;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 902
     iput-object p2, p0, Landroid/server/BluetoothA2dpService$FMServiceDeathHandler;->mCb:Landroid/os/IBinder;

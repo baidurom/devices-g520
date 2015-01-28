@@ -86,7 +86,7 @@
     const/4 v1, -0x1
 
     .line 91
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 53
     iput v1, p0, Landroid/net/wifi/p2p/WifiP2pConfig;->groupOwnerIntent:I
@@ -131,7 +131,7 @@
     const/4 v1, -0x1
 
     .line 165
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 53
     iput v1, p0, Landroid/net/wifi/p2p/WifiP2pConfig;->groupOwnerIntent:I
@@ -220,7 +220,7 @@
     const/4 v7, 0x2
 
     .line 102
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 53
     iput v6, p0, Landroid/net/wifi/p2p/WifiP2pConfig;->groupOwnerIntent:I
@@ -605,7 +605,7 @@
 
     iget-object v2, p0, Landroid/net/wifi/p2p/WifiP2pConfig;->persist:Landroid/net/wifi/p2p/WifiP2pConfig$Persist;
 
-    invoke-virtual {v2}, Landroid/net/wifi/p2p/WifiP2pConfig$Persist;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/Enum;->toString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -676,7 +676,7 @@
     .line 182
     iget-object v0, p0, Landroid/net/wifi/p2p/WifiP2pConfig;->persist:Landroid/net/wifi/p2p/WifiP2pConfig$Persist;
 
-    invoke-virtual {v0}, Landroid/net/wifi/p2p/WifiP2pConfig$Persist;->name()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v0
 

@@ -30,7 +30,7 @@
     .line 477
     iput-object p1, p0, Lcom/mediatek/FMRadio/FMRadioFavorite$5;->this$0:Lcom/mediatek/FMRadio/FMRadioFavorite;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -54,12 +54,12 @@
     .local v0, intent:Landroid/content/Intent;
     iget-object v1, p0, Lcom/mediatek/FMRadio/FMRadioFavorite$5;->this$0:Lcom/mediatek/FMRadio/FMRadioFavorite;
 
-    invoke-virtual {v1, v0}, Lcom/mediatek/FMRadio/FMRadioFavorite;->sendBroadcast(Landroid/content/Intent;)V
+    invoke-virtual {v1, v0}, Landroid/content/ContextWrapper;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 481
     iget-object v1, p0, Lcom/mediatek/FMRadio/FMRadioFavorite$5;->this$0:Lcom/mediatek/FMRadio/FMRadioFavorite;
 
-    invoke-virtual {v1}, Lcom/mediatek/FMRadio/FMRadioFavorite;->finish()V
+    invoke-virtual {v1}, Landroid/app/Activity;->finish()V
 
     .line 482
     return-void

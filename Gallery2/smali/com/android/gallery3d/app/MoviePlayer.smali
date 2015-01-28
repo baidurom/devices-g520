@@ -3,14 +3,14 @@
 .source "MoviePlayer.java"
 
 # interfaces
-.implements Landroid/media/MediaPlayer$OnErrorListener;
-.implements Landroid/media/MediaPlayer$OnCompletionListener;
-.implements Lcom/android/gallery3d/app/ControllerOverlay$Listener;
 .implements Landroid/media/MediaPlayer$OnBufferingUpdateListener;
-.implements Landroid/media/MediaPlayer$OnPreparedListener;
+.implements Landroid/media/MediaPlayer$OnCompletionListener;
+.implements Landroid/media/MediaPlayer$OnErrorListener;
 .implements Landroid/media/MediaPlayer$OnInfoListener;
-.implements Landroid/media/MediaPlayer$OnVideoSizeChangedListener;
+.implements Landroid/media/MediaPlayer$OnPreparedListener;
 .implements Landroid/media/MediaPlayer$OnSeekCompleteListener;
+.implements Landroid/media/MediaPlayer$OnVideoSizeChangedListener;
+.implements Lcom/android/gallery3d/app/ControllerOverlay$Listener;
 
 
 # annotations
@@ -172,7 +172,7 @@
     const/4 v5, 0x0
 
     .line 151
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 102
     new-instance v1, Landroid/os/Handler;
@@ -289,7 +289,7 @@
     iput-object v1, p0, Lcom/android/gallery3d/app/MoviePlayer;->mDelayVideoRunnable:Ljava/lang/Runnable;
 
     .line 152
-    invoke-virtual {p2}, Lcom/android/gallery3d/app/MovieActivity;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p2}, Landroid/content/ContextWrapper;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -351,12 +351,12 @@
     .line 165
     iget-object v1, p0, Lcom/android/gallery3d/app/MoviePlayer;->mVideoView:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    invoke-virtual {v1, p0}, Lcom/mediatek/gallery3d/video/MTKVideoView;->setOnErrorListener(Landroid/media/MediaPlayer$OnErrorListener;)V
+    invoke-virtual {v1, p0}, Landroid/widget/VideoView;->setOnErrorListener(Landroid/media/MediaPlayer$OnErrorListener;)V
 
     .line 166
     iget-object v1, p0, Lcom/android/gallery3d/app/MoviePlayer;->mVideoView:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    invoke-virtual {v1, p0}, Lcom/mediatek/gallery3d/video/MTKVideoView;->setOnCompletionListener(Landroid/media/MediaPlayer$OnCompletionListener;)V
+    invoke-virtual {v1, p0}, Landroid/widget/VideoView;->setOnCompletionListener(Landroid/media/MediaPlayer$OnCompletionListener;)V
 
     .line 169
     iget-object v1, p0, Lcom/android/gallery3d/app/MoviePlayer;->mVideoView:Lcom/mediatek/gallery3d/video/MTKVideoView;
@@ -365,7 +365,7 @@
 
     invoke-direct {v2, p0}, Lcom/android/gallery3d/app/MoviePlayer$4;-><init>(Lcom/android/gallery3d/app/MoviePlayer;)V
 
-    invoke-virtual {v1, v2}, Lcom/mediatek/gallery3d/video/MTKVideoView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+    invoke-virtual {v1, v2}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     .line 182
     iget-object v1, p0, Lcom/android/gallery3d/app/MoviePlayer;->mVideoView:Lcom/mediatek/gallery3d/video/MTKVideoView;
@@ -376,7 +376,7 @@
 
     const-wide/16 v3, 0x1f4
 
-    invoke-virtual {v1, v2, v3, v4}, Lcom/mediatek/gallery3d/video/MTKVideoView;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v1, v2, v3, v4}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
 
     .line 192
     iget-object v1, p0, Lcom/android/gallery3d/app/MoviePlayer;->mVideoView:Lcom/mediatek/gallery3d/video/MTKVideoView;
@@ -385,7 +385,7 @@
 
     invoke-direct {v2, p0}, Lcom/android/gallery3d/app/MoviePlayer$6;-><init>(Lcom/android/gallery3d/app/MoviePlayer;)V
 
-    invoke-virtual {v1, v2}, Lcom/mediatek/gallery3d/video/MTKVideoView;->setOnSystemUiVisibilityChangeListener(Landroid/view/View$OnSystemUiVisibilityChangeListener;)V
+    invoke-virtual {v1, v2}, Landroid/view/View;->setOnSystemUiVisibilityChangeListener(Landroid/view/View$OnSystemUiVisibilityChangeListener;)V
 
     .line 226
     invoke-direct {p0, v5}, Lcom/android/gallery3d/app/MoviePlayer;->showSystemUi(Z)V
@@ -1010,7 +1010,7 @@
     .local v1, end1:J
     iget-object v8, p0, Lcom/android/gallery3d/app/MoviePlayer;->mVideoView:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    invoke-virtual {v8}, Lcom/mediatek/gallery3d/video/MTKVideoView;->stopPlayback()V
+    invoke-virtual {v8}, Landroid/widget/VideoView;->stopPlayback()V
 
     .line 351
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -1035,7 +1035,7 @@
 
     const/4 v9, 0x4
 
-    invoke-virtual {v8, v9}, Lcom/mediatek/gallery3d/video/MTKVideoView;->setVisibility(I)V
+    invoke-virtual {v8, v9}, Landroid/view/SurfaceView;->setVisibility(I)V
 
     .line 355
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -1405,7 +1405,7 @@
     .line 480
     iget-object v4, p0, Lcom/android/gallery3d/app/MoviePlayer;->mVideoView:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    invoke-virtual {v4}, Lcom/mediatek/gallery3d/video/MTKVideoView;->start()V
+    invoke-virtual {v4}, Landroid/widget/VideoView;->start()V
 
     .line 485
     :cond_1
@@ -1437,7 +1437,7 @@
 
     iget-object v4, p0, Lcom/android/gallery3d/app/MoviePlayer;->mVideoView:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    invoke-virtual {v4}, Lcom/mediatek/gallery3d/video/MTKVideoView;->canSeekForward()Z
+    invoke-virtual {v4}, Landroid/widget/VideoView;->canSeekForward()Z
 
     move-result v4
 
@@ -1913,7 +1913,7 @@
     .line 758
     iget-object v0, p0, Lcom/android/gallery3d/app/MoviePlayer;->mVideoView:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    invoke-virtual {v0, p0}, Lcom/mediatek/gallery3d/video/MTKVideoView;->setOnPreparedListener(Landroid/media/MediaPlayer$OnPreparedListener;)V
+    invoke-virtual {v0, p0}, Landroid/widget/VideoView;->setOnPreparedListener(Landroid/media/MediaPlayer$OnPreparedListener;)V
 
     .line 759
     iget-object v0, p0, Lcom/android/gallery3d/app/MoviePlayer;->mVideoView:Lcom/mediatek/gallery3d/video/MTKVideoView;
@@ -2298,7 +2298,7 @@
 
     iget-object v1, p0, Lcom/android/gallery3d/app/MoviePlayer;->mVideoView:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    invoke-virtual {v1}, Lcom/mediatek/gallery3d/video/MTKVideoView;->canPause()Z
+    invoke-virtual {v1}, Landroid/widget/VideoView;->canPause()Z
 
     move-result v1
 
@@ -2309,7 +2309,7 @@
 
     iget-object v1, p0, Lcom/android/gallery3d/app/MoviePlayer;->mVideoView:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    invoke-virtual {v1}, Lcom/mediatek/gallery3d/video/MTKVideoView;->canSeekForward()Z
+    invoke-virtual {v1}, Landroid/widget/VideoView;->canSeekForward()Z
 
     move-result v1
 
@@ -2407,7 +2407,7 @@
     .line 519
     iget-object v0, p0, Lcom/android/gallery3d/app/MoviePlayer;->mVideoView:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    invoke-virtual {v0}, Lcom/mediatek/gallery3d/video/MTKVideoView;->pause()V
+    invoke-virtual {v0}, Landroid/widget/VideoView;->pause()V
 
     .line 520
     iget-object v0, p0, Lcom/android/gallery3d/app/MoviePlayer;->mController:Lcom/android/gallery3d/app/MovieControllerOverlay;
@@ -2463,7 +2463,7 @@
 
     iget-object v2, p0, Lcom/android/gallery3d/app/MoviePlayer;->mVideoView:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    invoke-virtual {v2}, Lcom/mediatek/gallery3d/video/MTKVideoView;->canPause()Z
+    invoke-virtual {v2}, Landroid/widget/VideoView;->canPause()Z
 
     move-result v2
 
@@ -2520,7 +2520,7 @@
     .line 509
     iget-object v0, p0, Lcom/android/gallery3d/app/MoviePlayer;->mVideoView:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    invoke-virtual {v0}, Lcom/mediatek/gallery3d/video/MTKVideoView;->start()V
+    invoke-virtual {v0}, Landroid/widget/VideoView;->start()V
 
     .line 510
     iget-object v0, p0, Lcom/android/gallery3d/app/MoviePlayer;->mController:Lcom/android/gallery3d/app/MovieControllerOverlay;
@@ -2763,17 +2763,17 @@
 
     invoke-direct {v2, p0}, Lcom/android/gallery3d/app/MoviePlayer$10;-><init>(Lcom/android/gallery3d/app/MoviePlayer;)V
 
-    invoke-virtual {v1, v2}, Landroid/app/AlertDialog;->setOnShowListener(Landroid/content/DialogInterface$OnShowListener;)V
+    invoke-virtual {v1, v2}, Landroid/app/Dialog;->setOnShowListener(Landroid/content/DialogInterface$OnShowListener;)V
 
     .line 302
     new-instance v2, Lcom/android/gallery3d/app/MoviePlayer$11;
 
     invoke-direct {v2, p0}, Lcom/android/gallery3d/app/MoviePlayer$11;-><init>(Lcom/android/gallery3d/app/MoviePlayer;)V
 
-    invoke-virtual {v1, v2}, Landroid/app/AlertDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+    invoke-virtual {v1, v2}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
     .line 308
-    invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
+    invoke-virtual {v1}, Landroid/app/Dialog;->show()V
 
     .line 309
     return-void
@@ -2798,7 +2798,7 @@
     :cond_0
     iget-object v1, p0, Lcom/android/gallery3d/app/MoviePlayer;->mVideoView:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    invoke-virtual {v1, v0}, Lcom/mediatek/gallery3d/video/MTKVideoView;->setSystemUiVisibility(I)V
+    invoke-virtual {v1, v0}, Landroid/view/View;->setSystemUiVisibility(I)V
 
     .line 258
     return-void
@@ -3112,7 +3112,7 @@
     .line 554
     iget-object v0, p0, Lcom/android/gallery3d/app/MoviePlayer;->mActivityContext:Lcom/android/gallery3d/app/MovieActivity;
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/app/MovieActivity;->finish()V
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
     .line 566
     :goto_0
@@ -3163,7 +3163,7 @@
     .line 429
     iget-object v0, p0, Lcom/android/gallery3d/app/MoviePlayer;->mVideoView:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    invoke-virtual {v0}, Lcom/mediatek/gallery3d/video/MTKVideoView;->stopPlayback()V
+    invoke-virtual {v0}, Landroid/widget/VideoView;->stopPlayback()V
 
     .line 430
     iget-object v0, p0, Lcom/android/gallery3d/app/MoviePlayer;->mAudioBecomingNoisyReceiver:Lcom/android/gallery3d/app/MoviePlayer$AudioBecomingNoisyReceiver;
@@ -3505,7 +3505,7 @@
     :sswitch_1
     iget-object v1, p0, Lcom/android/gallery3d/app/MoviePlayer;->mVideoView:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    invoke-virtual {v1}, Lcom/mediatek/gallery3d/video/MTKVideoView;->isPlaying()Z
+    invoke-virtual {v1}, Landroid/widget/VideoView;->isPlaying()Z
 
     move-result v1
 
@@ -3513,7 +3513,7 @@
 
     iget-object v1, p0, Lcom/android/gallery3d/app/MoviePlayer;->mVideoView:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    invoke-virtual {v1}, Lcom/mediatek/gallery3d/video/MTKVideoView;->canPause()Z
+    invoke-virtual {v1}, Landroid/widget/VideoView;->canPause()Z
 
     move-result v1
 
@@ -3534,7 +3534,7 @@
     :sswitch_2
     iget-object v1, p0, Lcom/android/gallery3d/app/MoviePlayer;->mVideoView:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    invoke-virtual {v1}, Lcom/mediatek/gallery3d/video/MTKVideoView;->isPlaying()Z
+    invoke-virtual {v1}, Landroid/widget/VideoView;->isPlaying()Z
 
     move-result v1
 
@@ -3542,7 +3542,7 @@
 
     iget-object v1, p0, Lcom/android/gallery3d/app/MoviePlayer;->mVideoView:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    invoke-virtual {v1}, Lcom/mediatek/gallery3d/video/MTKVideoView;->canPause()Z
+    invoke-virtual {v1}, Landroid/widget/VideoView;->canPause()Z
 
     move-result v1
 
@@ -3557,7 +3557,7 @@
     :sswitch_3
     iget-object v1, p0, Lcom/android/gallery3d/app/MoviePlayer;->mVideoView:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    invoke-virtual {v1}, Lcom/mediatek/gallery3d/video/MTKVideoView;->isPlaying()Z
+    invoke-virtual {v1}, Landroid/widget/VideoView;->isPlaying()Z
 
     move-result v1
 
@@ -3687,7 +3687,7 @@
     .line 574
     iget-object v0, p0, Lcom/android/gallery3d/app/MoviePlayer;->mVideoView:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    invoke-virtual {v0}, Lcom/mediatek/gallery3d/video/MTKVideoView;->isPlaying()Z
+    invoke-virtual {v0}, Landroid/widget/VideoView;->isPlaying()Z
 
     move-result v0
 
@@ -3696,7 +3696,7 @@
     .line 575
     iget-object v0, p0, Lcom/android/gallery3d/app/MoviePlayer;->mVideoView:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    invoke-virtual {v0}, Lcom/mediatek/gallery3d/video/MTKVideoView;->canPause()Z
+    invoke-virtual {v0}, Landroid/widget/VideoView;->canPause()Z
 
     move-result v0
 
@@ -3816,7 +3816,7 @@
     :cond_0
     iget-object v2, p0, Lcom/android/gallery3d/app/MoviePlayer;->mVideoView:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    invoke-virtual {v2}, Lcom/mediatek/gallery3d/video/MTKVideoView;->canPause()Z
+    invoke-virtual {v2}, Landroid/widget/VideoView;->canPause()Z
 
     move-result v0
 
@@ -3824,7 +3824,7 @@
     .local v0, canPause:Z
     iget-object v2, p0, Lcom/android/gallery3d/app/MoviePlayer;->mVideoView:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    invoke-virtual {v2}, Lcom/mediatek/gallery3d/video/MTKVideoView;->canSeekBackward()Z
+    invoke-virtual {v2}, Landroid/widget/VideoView;->canSeekBackward()Z
 
     move-result v2
 
@@ -3832,7 +3832,7 @@
 
     iget-object v2, p0, Lcom/android/gallery3d/app/MoviePlayer;->mVideoView:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    invoke-virtual {v2}, Lcom/mediatek/gallery3d/video/MTKVideoView;->canSeekForward()Z
+    invoke-virtual {v2}, Landroid/widget/VideoView;->canSeekForward()Z
 
     move-result v2
 
@@ -3871,7 +3871,7 @@
     .line 883
     iget-object v2, p0, Lcom/android/gallery3d/app/MoviePlayer;->mVideoView:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    invoke-virtual {v2}, Lcom/mediatek/gallery3d/video/MTKVideoView;->start()V
+    invoke-virtual {v2}, Landroid/widget/VideoView;->start()V
 
     .line 885
     :cond_1
@@ -3981,7 +3981,7 @@
 
     iget-object v1, p0, Lcom/android/gallery3d/app/MoviePlayer;->mDelayVideoRunnable:Ljava/lang/Runnable;
 
-    invoke-virtual {v0, v1}, Lcom/mediatek/gallery3d/video/MTKVideoView;->removeCallbacks(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     .line 373
     iget-object v0, p0, Lcom/android/gallery3d/app/MoviePlayer;->mVideoView:Lcom/mediatek/gallery3d/video/MTKVideoView;
@@ -3990,7 +3990,7 @@
 
     const-wide/16 v2, 0x1f4
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/mediatek/gallery3d/video/MTKVideoView;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v0, v1, v2, v3}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
 
     .line 375
     iget-object v0, p0, Lcom/android/gallery3d/app/MoviePlayer;->mServerTimeoutExt:Lcom/android/gallery3d/app/MoviePlayer$ServerTimeoutExtension;
@@ -4019,7 +4019,7 @@
 
     iget-object v1, p0, Lcom/android/gallery3d/app/MoviePlayer;->mTState:Lcom/android/gallery3d/app/MoviePlayer$TState;
 
-    invoke-virtual {v1}, Lcom/android/gallery3d/app/MoviePlayer$TState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -4091,7 +4091,7 @@
 
     iget-object v0, p0, Lcom/android/gallery3d/app/MoviePlayer;->mVideoView:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    invoke-virtual {v0}, Lcom/mediatek/gallery3d/video/MTKVideoView;->canSeekForward()Z
+    invoke-virtual {v0}, Landroid/widget/VideoView;->canSeekForward()Z
 
     move-result v0
 
@@ -4512,7 +4512,7 @@
 
     iget-object v0, p0, Lcom/android/gallery3d/app/MoviePlayer;->mVideoView:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    invoke-virtual {v0}, Lcom/mediatek/gallery3d/video/MTKVideoView;->canSeekBackward()Z
+    invoke-virtual {v0}, Landroid/widget/VideoView;->canSeekBackward()Z
 
     move-result v0
 
@@ -4539,7 +4539,7 @@
     :goto_0
     iget-object v5, p0, Lcom/android/gallery3d/app/MoviePlayer;->mVideoView:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    invoke-virtual {v5}, Lcom/mediatek/gallery3d/video/MTKVideoView;->canSeekForward()Z
+    invoke-virtual {v5}, Landroid/widget/VideoView;->canSeekForward()Z
 
     move-result v5
 

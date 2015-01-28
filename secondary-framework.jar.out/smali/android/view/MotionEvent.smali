@@ -801,14 +801,14 @@
     .line 1289
     new-instance v1, Ljava/lang/Object;
 
-    invoke-direct/range {v1 .. v1}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
     sput-object v1, Landroid/view/MotionEvent;->gRecyclerLock:Ljava/lang/Object;
 
     .line 1295
     new-instance v1, Ljava/lang/Object;
 
-    invoke-direct/range {v1 .. v1}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
     sput-object v1, Landroid/view/MotionEvent;->gSharedTempLock:Ljava/lang/Object;
 
@@ -1510,7 +1510,7 @@
     iput-object v1, v0, Landroid/view/MotionEvent;->mNext:Landroid/view/MotionEvent;
 
     .line 1398
-    invoke-virtual {v0}, Landroid/view/MotionEvent;->prepareForReuse()V
+    invoke-virtual {v0}, Landroid/view/InputEvent;->prepareForReuse()V
 
     goto :goto_0
 

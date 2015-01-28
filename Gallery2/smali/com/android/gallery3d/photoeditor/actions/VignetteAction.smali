@@ -56,10 +56,10 @@
     invoke-virtual {v1, v4}, Lcom/android/gallery3d/photoeditor/actions/ScaleSeekBar;->setProgress(F)V
 
     .line 52
-    invoke-virtual {v0, v4}, Lcom/android/gallery3d/photoeditor/filters/VignetteFilter;->setScale(F)V
+    invoke-virtual {v0, v4}, Lcom/android/gallery3d/photoeditor/filters/AbstractScaleFilter;->setScale(F)V
 
     .line 53
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/photoeditor/actions/VignetteAction;->notifyChanged(Lcom/android/gallery3d/photoeditor/filters/Filter;)V
+    invoke-virtual {p0, v0}, Lcom/android/gallery3d/photoeditor/actions/EffectAction;->notifyChanged(Lcom/android/gallery3d/photoeditor/filters/Filter;)V
 
     .line 54
     return-void

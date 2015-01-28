@@ -36,13 +36,13 @@
     .local v0, filter:Lcom/android/gallery3d/photoeditor/filters/AutoFixFilter;
     const/high16 v1, 0x3f00
 
-    invoke-virtual {v0, v1}, Lcom/android/gallery3d/photoeditor/filters/AutoFixFilter;->setScale(F)V
+    invoke-virtual {v0, v1}, Lcom/android/gallery3d/photoeditor/filters/AbstractScaleFilter;->setScale(F)V
 
     .line 39
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/photoeditor/actions/AutoFixAction;->notifyChanged(Lcom/android/gallery3d/photoeditor/filters/Filter;)V
+    invoke-virtual {p0, v0}, Lcom/android/gallery3d/photoeditor/actions/EffectAction;->notifyChanged(Lcom/android/gallery3d/photoeditor/filters/Filter;)V
 
     .line 40
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/AutoFixAction;->notifyOk()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/EffectAction;->notifyOk()V
 
     .line 41
     return-void

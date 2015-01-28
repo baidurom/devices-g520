@@ -148,7 +148,7 @@
     .line 106
     iget-object v1, p0, Lcom/android/gallery3d/ui/ManageCacheDrawer;->mCachingText:Lcom/android/gallery3d/ui/StringTexture;
 
-    invoke-virtual {v1}, Lcom/android/gallery3d/ui/StringTexture;->getWidth()I
+    invoke-virtual {v1}, Lcom/android/gallery3d/ui/UploadedTexture;->getWidth()I
 
     move-result v8
 
@@ -156,7 +156,7 @@
     .local v8, w:I
     iget-object v1, p0, Lcom/android/gallery3d/ui/ManageCacheDrawer;->mCachingText:Lcom/android/gallery3d/ui/StringTexture;
 
-    invoke-virtual {v1}, Lcom/android/gallery3d/ui/StringTexture;->getHeight()I
+    invoke-virtual {v1}, Lcom/android/gallery3d/ui/UploadedTexture;->getHeight()I
 
     move-result v6
 
@@ -170,7 +170,7 @@
 
     sub-int v3, p7, v6
 
-    invoke-virtual {v1, p1, v2, v3}, Lcom/android/gallery3d/ui/StringTexture;->draw(Lcom/android/gallery3d/ui/GLCanvas;II)V
+    invoke-virtual {v1, p1, v2, v3}, Lcom/android/gallery3d/ui/BasicTexture;->draw(Lcom/android/gallery3d/ui/GLCanvas;II)V
 
     .line 111
     .end local v6           #h:I
@@ -331,7 +331,7 @@
 
     move/from16 v3, p5
 
-    invoke-virtual {v0, v1, v13, v2, v3}, Lcom/android/gallery3d/ui/ManageCacheDrawer;->renderContent(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/gallery3d/ui/AlbumSetSlidingWindow$AlbumSetEntry;II)I
+    invoke-virtual {v0, v1, v13, v2, v3}, Lcom/android/gallery3d/ui/AlbumSetSlotRenderer;->renderContent(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/gallery3d/ui/AlbumSetSlidingWindow$AlbumSetEntry;II)I
 
     move-result v4
 
@@ -352,7 +352,7 @@
 
     move/from16 v3, p5
 
-    invoke-virtual {v0, v1, v13, v2, v3}, Lcom/android/gallery3d/ui/ManageCacheDrawer;->renderLabel(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/gallery3d/ui/AlbumSetSlidingWindow$AlbumSetEntry;II)I
+    invoke-virtual {v0, v1, v13, v2, v3}, Lcom/android/gallery3d/ui/AlbumSetSlotRenderer;->renderLabel(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/gallery3d/ui/AlbumSetSlidingWindow$AlbumSetEntry;II)I
 
     move-result v4
 
@@ -384,7 +384,7 @@
     move/from16 v15, p5
 
     .line 85
-    invoke-virtual/range {v10 .. v15}, Lcom/android/gallery3d/ui/ManageCacheDrawer;->renderOverlay(Lcom/android/gallery3d/ui/GLCanvas;ILcom/android/gallery3d/ui/AlbumSetSlidingWindow$AlbumSetEntry;II)I
+    invoke-virtual/range {v10 .. v15}, Lcom/android/gallery3d/ui/AlbumSetSlotRenderer;->renderOverlay(Lcom/android/gallery3d/ui/GLCanvas;ILcom/android/gallery3d/ui/AlbumSetSlidingWindow$AlbumSetEntry;II)I
 
     move-result v4
 

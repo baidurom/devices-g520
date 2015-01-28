@@ -28,7 +28,7 @@
 
     .prologue
     .line 1180
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1181
     iput-object p1, p0, Lcom/android/vcard/VCardEntry$WebsiteData;->mWebsite:Ljava/lang/String;

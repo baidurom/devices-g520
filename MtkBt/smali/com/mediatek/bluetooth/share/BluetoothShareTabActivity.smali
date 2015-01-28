@@ -3,8 +3,8 @@
 .source "BluetoothShareTabActivity.java"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
 .implements Landroid/os/Handler$Callback;
+.implements Landroid/widget/AdapterView$OnItemClickListener;
 
 
 # annotations
@@ -282,7 +282,7 @@
     invoke-virtual {v8, v0, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
     .line 277
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/share/BluetoothShareTabActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -318,7 +318,7 @@
     .line 288
     .local v6, c:Landroid/database/Cursor;
     :try_start_0
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/share/BluetoothShareTabActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -351,7 +351,7 @@
     .line 294
     const-string v0, "notification"
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/share/BluetoothShareTabActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -432,7 +432,7 @@
     .line 319
     iget-object v0, p0, Lcom/mediatek/bluetooth/share/BluetoothShareTabActivity;->mClearWorkThread:Lcom/mediatek/bluetooth/share/BluetoothShareTabActivity$BtShareClearHistoryThread;
 
-    invoke-virtual {v0}, Lcom/mediatek/bluetooth/share/BluetoothShareTabActivity$BtShareClearHistoryThread;->start()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     goto/16 :goto_0
 
@@ -458,7 +458,7 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 105
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/share/BluetoothShareTabActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
@@ -476,12 +476,12 @@
     .local v1, isOutgoing:Z
     const v4, 0x7f030005
 
-    invoke-virtual {p0, v4}, Lcom/mediatek/bluetooth/share/BluetoothShareTabActivity;->setContentView(I)V
+    invoke-virtual {p0, v4}, Landroid/app/Activity;->setContentView(I)V
 
     .line 110
     const v4, 0x7f08000c
 
-    invoke-virtual {p0, v4}, Lcom/mediatek/bluetooth/share/BluetoothShareTabActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v4}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
@@ -500,7 +500,7 @@
     :goto_0
     const-string v7, "_id DESC"
 
-    invoke-virtual {p0, v5, v6, v4, v7}, Lcom/mediatek/bluetooth/share/BluetoothShareTabActivity;->managedQuery(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {p0, v5, v6, v4, v7}, Landroid/app/Activity;->managedQuery(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v4
 
@@ -527,13 +527,13 @@
     .line 122
     const/high16 v4, 0x100
 
-    invoke-virtual {v3, v4}, Landroid/widget/ListView;->setScrollBarStyle(I)V
+    invoke-virtual {v3, v4}, Landroid/view/View;->setScrollBarStyle(I)V
 
     .line 123
-    invoke-virtual {v3, p0}, Landroid/widget/ListView;->setOnCreateContextMenuListener(Landroid/view/View$OnCreateContextMenuListener;)V
+    invoke-virtual {v3, p0}, Landroid/view/View;->setOnCreateContextMenuListener(Landroid/view/View$OnCreateContextMenuListener;)V
 
     .line 124
-    invoke-virtual {v3, p0}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
+    invoke-virtual {v3, p0}, Landroid/widget/AdapterView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 128
     .end local v2           #listAdapter:Lcom/mediatek/bluetooth/share/BluetoothShareTabAdapter;
@@ -571,7 +571,7 @@
     if-eqz v0, :cond_0
 
     .line 142
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/share/BluetoothShareTabActivity;->getMenuInflater()Landroid/view/MenuInflater;
+    invoke-virtual {p0}, Landroid/app/Activity;->getMenuInflater()Landroid/view/MenuInflater;
 
     move-result-object v0
 
@@ -650,7 +650,7 @@
 
     .line 213
     .local v7, openFileIntent:Landroid/content/Intent;
-    invoke-virtual {p0, v7}, Lcom/mediatek/bluetooth/share/BluetoothShareTabActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v7}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
     .line 257
     .end local v7           #openFileIntent:Landroid/content/Intent;
@@ -678,7 +678,7 @@
     .line 216
     const v0, 0x7f05007e
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/share/BluetoothShareTabActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -704,13 +704,13 @@
 
     aput-object v5, v2, v3
 
-    invoke-virtual {p0, v1, v2}, Lcom/mediatek/bluetooth/share/BluetoothShareTabActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v1, v2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     const v2, 0x7f050080
 
-    invoke-virtual {p0, v2}, Lcom/mediatek/bluetooth/share/BluetoothShareTabActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -720,7 +720,7 @@
 
     .line 221
     .local v6, intent:Landroid/content/Intent;
-    invoke-virtual {p0, v6}, Lcom/mediatek/bluetooth/share/BluetoothShareTabActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v6}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_0
 
@@ -797,7 +797,7 @@
     .line 235
     const v0, 0x7f05007e
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/share/BluetoothShareTabActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -823,19 +823,19 @@
 
     aput-object v5, v2, v3
 
-    invoke-virtual {p0, v0, v2}, Lcom/mediatek/bluetooth/share/BluetoothShareTabActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v0, v2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
     const v0, 0x7f05007f
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/share/BluetoothShareTabActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
     const v0, 0x7f050080
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/share/BluetoothShareTabActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
@@ -847,7 +847,7 @@
 
     .line 244
     .restart local v6       #intent:Landroid/content/Intent;
-    invoke-virtual {p0, v6}, Lcom/mediatek/bluetooth/share/BluetoothShareTabActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v6}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
     goto/16 :goto_0
 
@@ -866,7 +866,7 @@
     .line 247
     const v0, 0x7f05007e
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/share/BluetoothShareTabActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -892,13 +892,13 @@
 
     aput-object v5, v2, v3
 
-    invoke-virtual {p0, v1, v2}, Lcom/mediatek/bluetooth/share/BluetoothShareTabActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v1, v2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     const v2, 0x7f050080
 
-    invoke-virtual {p0, v2}, Lcom/mediatek/bluetooth/share/BluetoothShareTabActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -908,7 +908,7 @@
 
     .line 252
     .restart local v6       #intent:Landroid/content/Intent;
-    invoke-virtual {p0, v6}, Lcom/mediatek/bluetooth/share/BluetoothShareTabActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v6}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
     goto/16 :goto_0
 .end method

@@ -27,7 +27,7 @@
 
     .prologue
     .line 33
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 34
     new-instance v0, Lcom/android/gallery3d/ui/ResourceTexture;
@@ -252,7 +252,7 @@
 
     iget-object v1, p0, Lcom/android/gallery3d/ui/AbstractSlotRenderer;->mPanoramaBorder:Lcom/android/gallery3d/ui/NinePatchTexture;
 
-    invoke-virtual {v1}, Lcom/android/gallery3d/ui/NinePatchTexture;->getWidth()I
+    invoke-virtual {v1}, Lcom/android/gallery3d/ui/ResourceTexture;->getWidth()I
 
     move-result v1
 
@@ -264,7 +264,7 @@
     .local v6, scale:F
     iget-object v0, p0, Lcom/android/gallery3d/ui/AbstractSlotRenderer;->mPanoramaBorder:Lcom/android/gallery3d/ui/NinePatchTexture;
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/ui/NinePatchTexture;->getWidth()I
+    invoke-virtual {v0}, Lcom/android/gallery3d/ui/ResourceTexture;->getWidth()I
 
     move-result v0
 
@@ -280,7 +280,7 @@
     .local v4, w:I
     iget-object v0, p0, Lcom/android/gallery3d/ui/AbstractSlotRenderer;->mPanoramaBorder:Lcom/android/gallery3d/ui/NinePatchTexture;
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/ui/NinePatchTexture;->getHeight()I
+    invoke-virtual {v0}, Lcom/android/gallery3d/ui/ResourceTexture;->getHeight()I
 
     move-result v0
 
@@ -529,7 +529,7 @@
     .line 91
     iget-object v0, p0, Lcom/android/gallery3d/ui/AbstractSlotRenderer;->mFramePressedUp:Lcom/android/gallery3d/ui/FadeOutTexture;
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/ui/FadeOutTexture;->isAnimating()Z
+    invoke-virtual {v0}, Lcom/android/gallery3d/ui/FadeTexture;->isAnimating()Z
 
     move-result v0
 

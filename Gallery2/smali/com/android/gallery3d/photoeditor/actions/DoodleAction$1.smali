@@ -35,7 +35,7 @@
 
     iput-object p2, p0, Lcom/android/gallery3d/photoeditor/actions/DoodleAction$1;->val$filter:Lcom/android/gallery3d/photoeditor/filters/DoodleFilter;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -59,7 +59,7 @@
 
     iget-object v1, p0, Lcom/android/gallery3d/photoeditor/actions/DoodleAction$1;->val$filter:Lcom/android/gallery3d/photoeditor/filters/DoodleFilter;
 
-    invoke-virtual {v0, v1}, Lcom/android/gallery3d/photoeditor/actions/DoodleAction;->notifyChanged(Lcom/android/gallery3d/photoeditor/filters/Filter;)V
+    invoke-virtual {v0, v1}, Lcom/android/gallery3d/photoeditor/actions/EffectAction;->notifyChanged(Lcom/android/gallery3d/photoeditor/filters/Filter;)V
 
     .line 50
     :cond_0
@@ -88,7 +88,7 @@
 
     iget-object v1, p0, Lcom/android/gallery3d/photoeditor/actions/DoodleAction$1;->val$filter:Lcom/android/gallery3d/photoeditor/filters/DoodleFilter;
 
-    invoke-virtual {v0, v1}, Lcom/android/gallery3d/photoeditor/actions/DoodleAction;->notifyChanged(Lcom/android/gallery3d/photoeditor/filters/Filter;)V
+    invoke-virtual {v0, v1}, Lcom/android/gallery3d/photoeditor/actions/EffectAction;->notifyChanged(Lcom/android/gallery3d/photoeditor/filters/Filter;)V
 
     .line 58
     :cond_0

@@ -4,8 +4,8 @@
 
 # interfaces
 .implements Landroid/provider/BaseColumns;
-.implements Landroid/provider/CalendarContract$SyncColumns;
 .implements Landroid/provider/CalendarContract$CalendarColumns;
+.implements Landroid/provider/CalendarContract$SyncColumns;
 
 
 # annotations
@@ -204,7 +204,7 @@
 
     .prologue
     .line 672
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

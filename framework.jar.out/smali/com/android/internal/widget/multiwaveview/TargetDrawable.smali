@@ -111,7 +111,7 @@
     const/4 v0, 0x0
 
     .line 79
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 38
     iput v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mTranslationX:F
@@ -159,7 +159,7 @@
     const/4 v0, 0x0
 
     .line 94
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 38
     iput v0, p0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->mTranslationX:F
@@ -294,7 +294,7 @@
     .line 163
     .end local v0           #childDrawable:Landroid/graphics/drawable/Drawable;
     :cond_0
-    invoke-virtual {v1, v8, v8, v4, v3}, Landroid/graphics/drawable/StateListDrawable;->setBounds(IIII)V
+    invoke-virtual {v1, v8, v8, v4, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
     .line 164
     const/4 v2, 0x0
@@ -636,7 +636,7 @@
 
     .line 126
     .local v0, d:Landroid/graphics/drawable/StateListDrawable;
-    invoke-virtual {v0}, Landroid/graphics/drawable/StateListDrawable;->getState()[I
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getState()[I
 
     move-result-object v2
 
@@ -847,7 +847,7 @@
 
     .line 105
     .local v0, d:Landroid/graphics/drawable/StateListDrawable;
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/StateListDrawable;->setState([I)Z
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
     .line 107
     .end local v0           #d:Landroid/graphics/drawable/StateListDrawable;

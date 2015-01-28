@@ -150,7 +150,7 @@
     .line 86
     iget-object v0, p0, Lcom/android/camera/actor/FaceBeautyActor$FaceBeautyCameraCategory;->this$0:Lcom/android/camera/actor/FaceBeautyActor;
 
-    invoke-virtual {v0}, Lcom/android/camera/actor/FaceBeautyActor;->startFaceDetection()V
+    invoke-virtual {v0}, Lcom/android/camera/actor/PhotoActor;->startFaceDetection()V
 
     .line 88
     :cond_0
@@ -177,7 +177,7 @@
     .line 126
     iget-object v0, p0, Lcom/android/camera/actor/FaceBeautyActor$FaceBeautyCameraCategory;->this$0:Lcom/android/camera/actor/FaceBeautyActor;
 
-    invoke-virtual {v0, v1, v1}, Lcom/android/camera/actor/FaceBeautyActor;->updateSavingHint(ZZ)V
+    invoke-virtual {v0, v1, v1}, Lcom/android/camera/actor/PhotoActor;->updateSavingHint(ZZ)V
 
     .line 127
     return-void

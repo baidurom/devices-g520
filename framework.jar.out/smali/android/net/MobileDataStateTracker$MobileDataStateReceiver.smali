@@ -479,7 +479,7 @@
     .line 269
     sget-object v13, Landroid/net/MobileDataStateTracker$1;->$SwitchMap$com$android$internal$telephony$Phone$DataState:[I
 
-    invoke-virtual {v11}, Lcom/android/internal/telephony/Phone$DataState;->ordinal()I
+    invoke-virtual {v11}, Ljava/lang/Enum;->ordinal()I
 
     move-result v14
 

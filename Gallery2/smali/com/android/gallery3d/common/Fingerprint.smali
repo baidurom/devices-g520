@@ -84,7 +84,7 @@
 
     .prologue
     .line 71
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 72
     if-eqz p1, :cond_0
@@ -262,7 +262,7 @@
     .line 94
     .local v0, bytes:[B
     :goto_0
-    invoke-virtual {v4, v0}, Ljava/security/DigestInputStream;->read([B)I
+    invoke-virtual {v4, v0}, Ljava/io/InputStream;->read([B)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
@@ -275,7 +275,7 @@
     .line 99
     if-eqz v4, :cond_0
 
-    invoke-virtual {v4}, Ljava/security/DigestInputStream;->close()V
+    invoke-virtual {v4}, Ljava/io/FilterInputStream;->close()V
 
     .line 101
     :cond_0
@@ -325,7 +325,7 @@
     :goto_1
     if-eqz v3, :cond_3
 
-    invoke-virtual {v3}, Ljava/security/DigestInputStream;->close()V
+    invoke-virtual {v3}, Ljava/io/FilterInputStream;->close()V
 
     :cond_3
     throw v6

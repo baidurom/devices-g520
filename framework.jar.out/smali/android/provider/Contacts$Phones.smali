@@ -4,8 +4,8 @@
 
 # interfaces
 .implements Landroid/provider/BaseColumns;
-.implements Landroid/provider/Contacts$PhonesColumns;
 .implements Landroid/provider/Contacts$PeopleColumns;
+.implements Landroid/provider/Contacts$PhonesColumns;
 
 
 # annotations
@@ -85,7 +85,7 @@
 
     .prologue
     .line 954
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

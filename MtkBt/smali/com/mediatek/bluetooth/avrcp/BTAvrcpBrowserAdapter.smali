@@ -211,7 +211,7 @@
     .line 164
     const-string v0, "BTAvrcpBrowserAdapterThread"
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/avrcp/BTAvrcpBrowserAdapter;->setName(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
 
     .line 166
     new-instance v0, Lcom/mediatek/bluetooth/avrcp/BTAvrcpBrowseAlbum;
@@ -319,7 +319,7 @@
     if-eqz v0, :cond_1
 
     .line 184
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/avrcp/BTAvrcpBrowserAdapter;->start()V
+    invoke-virtual {p0}, Ljava/lang/Thread;->start()V
 
     .line 185
     const-string v0, "BWS_AVRCP"
@@ -2829,13 +2829,13 @@
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 199
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/avrcp/BTAvrcpBrowserAdapter;->interrupt()V
+    invoke-virtual {p0}, Ljava/lang/Thread;->interrupt()V
 
     .line 202
     const-wide/16 v1, 0x64
 
     :try_start_0
-    invoke-virtual {p0, v1, v2}, Lcom/mediatek/bluetooth/avrcp/BTAvrcpBrowserAdapter;->join(J)V
+    invoke-virtual {p0, v1, v2}, Ljava/lang/Thread;->join(J)V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -3868,7 +3868,7 @@
     if-eqz v3, :cond_5
 
     .line 344
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/avrcp/BTAvrcpBrowserAdapter;->isAlive()Z
+    invoke-virtual {p0}, Ljava/lang/Thread;->isAlive()Z
 
     move-result v3
 
@@ -3883,7 +3883,7 @@
 
     .line 358
     :goto_1
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/avrcp/BTAvrcpBrowserAdapter;->isAlive()Z
+    invoke-virtual {p0}, Ljava/lang/Thread;->isAlive()Z
 
     move-result v3
 

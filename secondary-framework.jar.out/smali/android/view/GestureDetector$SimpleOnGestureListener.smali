@@ -3,8 +3,8 @@
 .source "GestureDetector.java"
 
 # interfaces
-.implements Landroid/view/GestureDetector$OnGestureListener;
 .implements Landroid/view/GestureDetector$OnDoubleTapListener;
+.implements Landroid/view/GestureDetector$OnGestureListener;
 
 
 # annotations
@@ -24,7 +24,7 @@
 
     .prologue
     .line 158
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

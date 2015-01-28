@@ -89,7 +89,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v0}, Ljava/lang/ClassCastException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v4
 

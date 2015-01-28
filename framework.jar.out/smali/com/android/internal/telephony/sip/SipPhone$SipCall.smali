@@ -670,7 +670,7 @@
 
     move-result-object v6
 
-    invoke-virtual {p0}, Lcom/android/internal/telephony/sip/SipPhone$SipCall;->getState()Lcom/android/internal/telephony/Call$State;
+    invoke-virtual {p0}, Lcom/android/internal/telephony/Call;->getState()Lcom/android/internal/telephony/Call$State;
 
     move-result-object v7
 
@@ -796,7 +796,7 @@
 
     move-result-object v6
 
-    invoke-virtual {p0}, Lcom/android/internal/telephony/sip/SipPhone$SipCall;->getState()Lcom/android/internal/telephony/Call$State;
+    invoke-virtual {p0}, Lcom/android/internal/telephony/Call;->getState()Lcom/android/internal/telephony/Call$State;
 
     move-result-object v7
 
@@ -936,7 +936,7 @@
     .line 492
     iget-object v3, p0, Lcom/android/internal/telephony/sip/SipPhone$SipCall;->this$0:Lcom/android/internal/telephony/sip/SipPhone;
 
-    #calls: Lcom/android/internal/telephony/sip/SipPhone;->notifyNewRingingConnectionP(Lcom/android/internal/telephony/Connection;)V
+    #calls: Lcom/android/internal/telephony/PhoneBase;->notifyNewRingingConnectionP(Lcom/android/internal/telephony/Connection;)V
     invoke-static {v3, v0}, Lcom/android/internal/telephony/sip/SipPhone;->access$200(Lcom/android/internal/telephony/sip/SipPhone;Lcom/android/internal/telephony/Connection;)V
 
     .line 493
@@ -1170,7 +1170,7 @@
     :cond_2
     iget-object v3, p0, Lcom/android/internal/telephony/sip/SipPhone$SipCall;->this$0:Lcom/android/internal/telephony/sip/SipPhone;
 
-    #calls: Lcom/android/internal/telephony/sip/SipPhone;->notifyDisconnectP(Lcom/android/internal/telephony/Connection;)V
+    #calls: Lcom/android/internal/telephony/PhoneBase;->notifyDisconnectP(Lcom/android/internal/telephony/Connection;)V
     invoke-static {v3, p1}, Lcom/android/internal/telephony/sip/SipPhone;->access$700(Lcom/android/internal/telephony/sip/SipPhone;Lcom/android/internal/telephony/Connection;)V
 
     .line 665
@@ -1507,7 +1507,7 @@
     .line 618
     iget-object v0, p0, Lcom/android/internal/telephony/sip/SipPhone$SipCall;->this$0:Lcom/android/internal/telephony/sip/SipPhone;
 
-    invoke-virtual {v0}, Lcom/android/internal/telephony/sip/SipPhone;->startRingbackTone()V
+    invoke-virtual {v0}, Lcom/android/internal/telephony/sip/SipPhoneBase;->startRingbackTone()V
 
     .line 624
     :cond_0
@@ -1526,7 +1526,7 @@
     .line 626
     iget-object v0, p0, Lcom/android/internal/telephony/sip/SipPhone$SipCall;->this$0:Lcom/android/internal/telephony/sip/SipPhone;
 
-    #calls: Lcom/android/internal/telephony/sip/SipPhone;->notifySipCallRing()V
+    #calls: Lcom/android/internal/telephony/PhoneBase;->notifySipCallRing()V
     invoke-static {v0}, Lcom/android/internal/telephony/sip/SipPhone;->access$500(Lcom/android/internal/telephony/sip/SipPhone;)V
 
     .line 635
@@ -1537,12 +1537,12 @@
     .line 636
     iget-object v0, p0, Lcom/android/internal/telephony/sip/SipPhone$SipCall;->this$0:Lcom/android/internal/telephony/sip/SipPhone;
 
-    invoke-virtual {v0}, Lcom/android/internal/telephony/sip/SipPhone;->updatePhoneState()V
+    invoke-virtual {v0}, Lcom/android/internal/telephony/sip/SipPhoneBase;->updatePhoneState()V
 
     .line 637
     iget-object v0, p0, Lcom/android/internal/telephony/sip/SipPhone$SipCall;->this$0:Lcom/android/internal/telephony/sip/SipPhone;
 
-    invoke-virtual {v0}, Lcom/android/internal/telephony/sip/SipPhone;->notifyPreciseCallStateChanged()V
+    invoke-virtual {v0}, Lcom/android/internal/telephony/sip/SipPhoneBase;->notifyPreciseCallStateChanged()V
 
     .line 639
     :cond_2
@@ -1559,7 +1559,7 @@
     .line 620
     iget-object v0, p0, Lcom/android/internal/telephony/sip/SipPhone$SipCall;->this$0:Lcom/android/internal/telephony/sip/SipPhone;
 
-    invoke-virtual {v0}, Lcom/android/internal/telephony/sip/SipPhone;->stopRingbackTone()V
+    invoke-virtual {v0}, Lcom/android/internal/telephony/sip/SipPhoneBase;->stopRingbackTone()V
 
     goto :goto_0
 
@@ -1602,7 +1602,7 @@
     .line 630
     iget-object v0, p0, Lcom/android/internal/telephony/sip/SipPhone$SipCall;->this$0:Lcom/android/internal/telephony/sip/SipPhone;
 
-    #calls: Lcom/android/internal/telephony/sip/SipPhone;->notifySipCallRing()V
+    #calls: Lcom/android/internal/telephony/PhoneBase;->notifySipCallRing()V
     invoke-static {v0}, Lcom/android/internal/telephony/sip/SipPhone;->access$600(Lcom/android/internal/telephony/sip/SipPhone;)V
 
     goto :goto_1

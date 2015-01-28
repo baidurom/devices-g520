@@ -77,7 +77,7 @@
     .line 353
     new-instance v0, Landroid/animation/Keyframe$FloatKeyframe;
 
-    invoke-virtual {p0}, Landroid/animation/Keyframe$FloatKeyframe;->getFraction()F
+    invoke-virtual {p0}, Landroid/animation/Keyframe;->getFraction()F
 
     move-result v1
 
@@ -87,11 +87,11 @@
 
     .line 354
     .local v0, kfClone:Landroid/animation/Keyframe$FloatKeyframe;
-    invoke-virtual {p0}, Landroid/animation/Keyframe$FloatKeyframe;->getInterpolator()Landroid/animation/TimeInterpolator;
+    invoke-virtual {p0}, Landroid/animation/Keyframe;->getInterpolator()Landroid/animation/TimeInterpolator;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/animation/Keyframe$FloatKeyframe;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+    invoke-virtual {v0, v1}, Landroid/animation/Keyframe;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
     .line 355
     return-object v0

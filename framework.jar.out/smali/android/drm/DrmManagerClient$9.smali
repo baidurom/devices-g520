@@ -30,7 +30,7 @@
     .line 2074
     iput-object p1, p0, Landroid/drm/DrmManagerClient$9;->val$listener:Landroid/drm/DrmManagerClient$DrmOperationListener;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

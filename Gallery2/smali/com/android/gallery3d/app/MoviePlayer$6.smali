@@ -30,7 +30,7 @@
     .line 193
     iput-object p1, p0, Lcom/android/gallery3d/app/MoviePlayer$6;->this$0:Lcom/android/gallery3d/app/MoviePlayer;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -140,7 +140,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/android/gallery3d/app/MovieActivity;->isFinishing()Z
+    invoke-virtual {v2}, Landroid/app/Activity;->isFinishing()Z
 
     move-result v1
 

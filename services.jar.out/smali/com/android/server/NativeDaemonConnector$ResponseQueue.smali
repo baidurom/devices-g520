@@ -42,7 +42,7 @@
 
     .prologue
     .line 499
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 500
     new-instance v0, Ljava/util/LinkedList;
@@ -79,7 +79,7 @@
     :try_start_0
     iget-object v4, p0, Lcom/android/server/NativeDaemonConnector$ResponseQueue;->mResponses:Ljava/util/LinkedList;
 
-    invoke-virtual {v4}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v4}, Ljava/util/AbstractSequentialList;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
@@ -348,7 +348,7 @@
     :try_start_0
     iget-object v2, p0, Lcom/android/server/NativeDaemonConnector$ResponseQueue;->mResponses:Ljava/util/LinkedList;
 
-    invoke-virtual {v2}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v2}, Ljava/util/AbstractSequentialList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
@@ -458,7 +458,7 @@
     :try_start_0
     iget-object v8, p0, Lcom/android/server/NativeDaemonConnector$ResponseQueue;->mResponses:Ljava/util/LinkedList;
 
-    invoke-virtual {v8}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v8}, Ljava/util/AbstractSequentialList;->iterator()Ljava/util/Iterator;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

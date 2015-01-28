@@ -30,7 +30,7 @@
     .line 293
     iput-object p1, p0, Lcom/android/gallery3d/ui/PhotoView$2;->this$0:Lcom/android/gallery3d/ui/PhotoView;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -44,7 +44,7 @@
     .line 295
     iget-object v0, p0, Lcom/android/gallery3d/ui/PhotoView$2;->this$0:Lcom/android/gallery3d/ui/PhotoView;
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/ui/PhotoView;->invalidate()V
+    invoke-virtual {v0}, Lcom/android/gallery3d/ui/GLView;->invalidate()V
 
     .line 296
     return-void

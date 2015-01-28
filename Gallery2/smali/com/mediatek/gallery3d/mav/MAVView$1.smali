@@ -128,7 +128,7 @@
 
     invoke-direct {v4, p0, v2}, Lcom/mediatek/gallery3d/mav/MAVView$1$1;-><init>(Lcom/mediatek/gallery3d/mav/MAVView$1;I)V
 
-    invoke-virtual {v3, v4}, Lcom/mediatek/gallery3d/mav/MAVView;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v3, v4}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
     .line 472
     iget-object v3, p0, Lcom/mediatek/gallery3d/mav/MAVView$1;->this$0:Lcom/mediatek/gallery3d/mav/MAVView;
@@ -224,7 +224,7 @@
     .line 482
     iget-object v3, p0, Lcom/mediatek/gallery3d/mav/MAVView$1;->this$0:Lcom/mediatek/gallery3d/mav/MAVView;
 
-    invoke-virtual {v3}, Lcom/mediatek/gallery3d/mav/MAVView;->postInvalidate()V
+    invoke-virtual {v3}, Landroid/view/View;->postInvalidate()V
 
     .line 487
     .end local v0           #curVelocity:I

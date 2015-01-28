@@ -92,7 +92,7 @@
 
     move-result v2
 
-    invoke-virtual {p0, v2}, Lcom/mediatek/activity/AssembledPreferenceActivity;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v2}, Landroid/preference/PreferenceActivity;->addPreferencesFromResource(I)V
 
     .line 92
     invoke-interface {v0, p0}, Lcom/mediatek/activity/AssembledPreferenceActivity$AssemblyPreference;->onCreate(Landroid/preference/PreferenceActivity;)V
@@ -206,7 +206,7 @@
     invoke-static {v2}, Lcom/mediatek/bluetooth/util/BtLog;->d(Ljava/lang/String;)V
 
     .line 101
-    invoke-super {p0}, Landroid/preference/PreferenceActivity;->onResume()V
+    invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
     .line 103
     iget-object v2, p0, Lcom/mediatek/activity/AssembledPreferenceActivity;->registeredPreference:Ljava/util/List;

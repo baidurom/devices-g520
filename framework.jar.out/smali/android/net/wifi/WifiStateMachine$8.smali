@@ -35,7 +35,7 @@
 
     iput-object p2, p0, Landroid/net/wifi/WifiStateMachine$8;->val$config:Landroid/net/wifi/WifiConfiguration;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -109,7 +109,7 @@
 
     const v3, 0x20016
 
-    invoke-virtual {v2, v3}, Landroid/net/wifi/WifiStateMachine;->sendMessage(I)V
+    invoke-virtual {v2, v3}, Lcom/android/internal/util/StateMachine;->sendMessage(I)V
 
     .line 2151
     :goto_1
@@ -221,7 +221,7 @@
 
     const v3, 0x20017
 
-    invoke-virtual {v2, v3}, Landroid/net/wifi/WifiStateMachine;->sendMessage(I)V
+    invoke-virtual {v2, v3}, Lcom/android/internal/util/StateMachine;->sendMessage(I)V
 
     goto :goto_1
 .end method

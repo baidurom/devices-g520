@@ -134,7 +134,7 @@
 
     check-cast v3, Lcom/android/gallery3d/data/MediaItem;
 
-    invoke-virtual {v3}, Lcom/android/gallery3d/data/MediaItem;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {v3}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v3
 
@@ -641,7 +641,7 @@
     .local v2, item:Lcom/android/gallery3d/data/MediaItem;
     if-eqz v2, :cond_8
 
-    invoke-virtual {v2}, Lcom/android/gallery3d/data/MediaItem;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {v2}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v6
 

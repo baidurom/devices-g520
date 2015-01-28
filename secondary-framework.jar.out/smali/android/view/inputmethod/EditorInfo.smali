@@ -3,8 +3,8 @@
 .source "EditorInfo.java"
 
 # interfaces
-.implements Landroid/text/InputType;
 .implements Landroid/os/Parcelable;
+.implements Landroid/text/InputType;
 
 
 # static fields
@@ -110,7 +110,7 @@
     const/4 v0, 0x0
 
     .line 31
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 41
     iput v0, p0, Landroid/view/inputmethod/EditorInfo;->inputType:I

@@ -33,7 +33,7 @@
     const/4 v0, 0x0
 
     .line 216
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 217
     iput-object v0, p0, Landroid/content/ClipData$Item;->mText:Ljava/lang/CharSequence;
@@ -59,7 +59,7 @@
     const/4 v0, 0x0
 
     .line 226
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 227
     iput-object v0, p0, Landroid/content/ClipData$Item;->mText:Ljava/lang/CharSequence;
@@ -85,7 +85,7 @@
     const/4 v0, 0x0
 
     .line 193
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 194
     iput-object p1, p0, Landroid/content/ClipData$Item;->mText:Ljava/lang/CharSequence;
@@ -111,7 +111,7 @@
 
     .prologue
     .line 237
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 238
     iput-object p1, p0, Landroid/content/ClipData$Item;->mText:Ljava/lang/CharSequence;
@@ -140,7 +140,7 @@
     const/4 v0, 0x0
 
     .line 206
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 207
     iput-object p1, p0, Landroid/content/ClipData$Item;->mText:Ljava/lang/CharSequence;
@@ -167,7 +167,7 @@
 
     .prologue
     .line 250
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 251
     if-eqz p2, :cond_0
@@ -386,7 +386,7 @@
     .line 490
     .local v5, buffer:[C
     :goto_3
-    invoke-virtual {v15, v5}, Ljava/io/InputStreamReader;->read([C)I
+    invoke-virtual {v15, v5}, Ljava/io/Reader;->read([C)I
 
     move-result v12
 
@@ -657,7 +657,7 @@
     invoke-static {v0, v1, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 527
-    invoke-virtual {v8}, Ljava/io/IOException;->toString()Ljava/lang/String;
+    invoke-virtual {v8}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v20
 
@@ -1136,7 +1136,7 @@
     .line 337
     .local v0, buffer:[C
     :goto_1
-    invoke-virtual {v6, v0}, Ljava/io/InputStreamReader;->read([C)I
+    invoke-virtual {v6, v0}, Ljava/io/Reader;->read([C)I
 
     move-result v5
 
@@ -1235,7 +1235,7 @@
     invoke-static {v10, v11, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 349
-    invoke-virtual {v3}, Ljava/io/IOException;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 

@@ -70,7 +70,7 @@
     const/high16 v6, 0x3f00
 
     .line 39
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 24
     new-array v3, v7, [I
@@ -126,7 +126,7 @@
     iput-object v3, p0, Lcom/android/camera/ui/ProgressIndicator;->mProgressBars:Landroid/widget/ImageView;
 
     .line 44
-    invoke-virtual {p1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p1}, Landroid/content/ContextWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -444,7 +444,7 @@
     .local v0, progressViewLayout:Landroid/widget/LinearLayout;
     new-instance v1, Landroid/widget/RelativeLayout$LayoutParams;
 
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v2
 
@@ -462,10 +462,10 @@
     invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
     .line 102
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 103
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->requestLayout()V
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
 
     .line 104
     return-void

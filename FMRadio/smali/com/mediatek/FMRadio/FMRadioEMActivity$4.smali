@@ -289,7 +289,7 @@
 
     move-result-object v5
 
-    invoke-virtual {v5}, Landroid/widget/RadioButton;->isChecked()Z
+    invoke-virtual {v5}, Landroid/widget/CompoundButton;->isChecked()Z
 
     move-result v5
 
@@ -319,7 +319,7 @@
 
     const-wide/16 v6, 0x12c
 
-    invoke-virtual {p0, v5, v6, v7}, Lcom/mediatek/FMRadio/FMRadioEMActivity$4;->sendEmptyMessageDelayed(IJ)Z
+    invoke-virtual {p0, v5, v6, v7}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
     goto/16 :goto_1
 

@@ -43,13 +43,13 @@
 
     .line 41
     :try_start_0
-    invoke-virtual {p0, v1}, Lcom/android/gallery3d/app/UsbDeviceActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 45
     :goto_0
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/UsbDeviceActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 46
     return-void

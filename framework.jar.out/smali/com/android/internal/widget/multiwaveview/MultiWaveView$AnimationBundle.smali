@@ -66,7 +66,7 @@
 
     .prologue
     .line 140
-    invoke-virtual {p0}, Lcom/android/internal/widget/multiwaveview/MultiWaveView$AnimationBundle;->size()I
+    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
@@ -79,7 +79,7 @@
     if-ge v2, v1, :cond_0
 
     .line 142
-    invoke-virtual {p0, v2}, Lcom/android/internal/widget/multiwaveview/MultiWaveView$AnimationBundle;->get(I)Ljava/lang/Object;
+    invoke-virtual {p0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -89,7 +89,7 @@
     .local v0, anim:Lcom/android/internal/widget/multiwaveview/Tweener;
     iget-object v3, v0, Lcom/android/internal/widget/multiwaveview/Tweener;->animator:Landroid/animation/ObjectAnimator;
 
-    invoke-virtual {v3}, Landroid/animation/ObjectAnimator;->cancel()V
+    invoke-virtual {v3}, Landroid/animation/ValueAnimator;->cancel()V
 
     .line 141
     add-int/lit8 v2, v2, 0x1
@@ -99,7 +99,7 @@
     .line 145
     .end local v0           #anim:Lcom/android/internal/widget/multiwaveview/Tweener;
     :cond_0
-    invoke-virtual {p0}, Lcom/android/internal/widget/multiwaveview/MultiWaveView$AnimationBundle;->clear()V
+    invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
 
     .line 146
     return-void
@@ -132,7 +132,7 @@
 
     .line 132
     :cond_1
-    invoke-virtual {p0}, Lcom/android/internal/widget/multiwaveview/MultiWaveView$AnimationBundle;->size()I
+    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
@@ -145,7 +145,7 @@
     if-ge v2, v1, :cond_0
 
     .line 134
-    invoke-virtual {p0, v2}, Lcom/android/internal/widget/multiwaveview/MultiWaveView$AnimationBundle;->get(I)Ljava/lang/Object;
+    invoke-virtual {p0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -168,7 +168,7 @@
 
     .prologue
     .line 149
-    invoke-virtual {p0}, Lcom/android/internal/widget/multiwaveview/MultiWaveView$AnimationBundle;->size()I
+    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
@@ -181,7 +181,7 @@
     if-ge v2, v1, :cond_0
 
     .line 151
-    invoke-virtual {p0, v2}, Lcom/android/internal/widget/multiwaveview/MultiWaveView$AnimationBundle;->get(I)Ljava/lang/Object;
+    invoke-virtual {p0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -191,7 +191,7 @@
     .local v0, anim:Lcom/android/internal/widget/multiwaveview/Tweener;
     iget-object v3, v0, Lcom/android/internal/widget/multiwaveview/Tweener;->animator:Landroid/animation/ObjectAnimator;
 
-    invoke-virtual {v3}, Landroid/animation/ObjectAnimator;->end()V
+    invoke-virtual {v3}, Landroid/animation/ValueAnimator;->end()V
 
     .line 150
     add-int/lit8 v2, v2, 0x1
@@ -201,7 +201,7 @@
     .line 154
     .end local v0           #anim:Lcom/android/internal/widget/multiwaveview/Tweener;
     :cond_0
-    invoke-virtual {p0}, Lcom/android/internal/widget/multiwaveview/MultiWaveView$AnimationBundle;->clear()V
+    invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
 
     .line 155
     return-void

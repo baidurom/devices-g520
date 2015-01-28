@@ -41,7 +41,7 @@
 
     iput-object p2, p0, Lcom/android/gallery3d/photoeditor/actions/RedEyeAction$1;->val$filter:Lcom/android/gallery3d/photoeditor/filters/RedEyeFilter;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 42
     new-instance v0, Landroid/graphics/RectF;
@@ -83,7 +83,7 @@
 
     iget-object v1, p0, Lcom/android/gallery3d/photoeditor/actions/RedEyeAction$1;->val$filter:Lcom/android/gallery3d/photoeditor/filters/RedEyeFilter;
 
-    invoke-virtual {v0, v1}, Lcom/android/gallery3d/photoeditor/actions/RedEyeAction;->notifyChanged(Lcom/android/gallery3d/photoeditor/filters/Filter;)V
+    invoke-virtual {v0, v1}, Lcom/android/gallery3d/photoeditor/actions/EffectAction;->notifyChanged(Lcom/android/gallery3d/photoeditor/filters/Filter;)V
 
     .line 51
     :cond_0

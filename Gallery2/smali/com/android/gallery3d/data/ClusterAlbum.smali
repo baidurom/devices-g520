@@ -129,7 +129,7 @@
     .local v2, end:I
     new-instance v5, Ljava/util/ArrayList;
 
-    invoke-virtual {p0, p1, v2}, Ljava/util/ArrayList;->subList(II)Ljava/util/List;
+    invoke-virtual {p0, p1, v2}, Ljava/util/AbstractList;->subList(II)Ljava/util/List;
 
     move-result-object v6
 
@@ -405,7 +405,7 @@
 
     .prologue
     .line 141
-    invoke-virtual {p0}, Lcom/android/gallery3d/data/ClusterAlbum;->notifyContentChanged()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/data/MediaSet;->notifyContentChanged()V
 
     .line 142
     return-void

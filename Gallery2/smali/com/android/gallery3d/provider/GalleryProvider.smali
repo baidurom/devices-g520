@@ -263,7 +263,7 @@
     if-eqz v5, :cond_0
 
     .line 145
-    invoke-virtual {p1}, Lcom/android/gallery3d/data/MtpImage;->getName()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/android/gallery3d/data/MediaItem;->getName()Ljava/lang/String;
 
     move-result-object v5
 
@@ -444,7 +444,7 @@
     if-eqz v10, :cond_1
 
     .line 172
-    invoke-virtual {p0}, Lcom/android/gallery3d/provider/GalleryProvider;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object v10
 
@@ -785,7 +785,7 @@
 
     .prologue
     .line 108
-    invoke-virtual {p0}, Lcom/android/gallery3d/provider/GalleryProvider;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -898,7 +898,7 @@
     if-eqz v0, :cond_2
 
     .line 212
-    invoke-virtual {p0}, Lcom/android/gallery3d/provider/GalleryProvider;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -943,7 +943,7 @@
 
     move-object v1, p1
 
-    invoke-virtual/range {v0 .. v5}, Lcom/android/gallery3d/provider/GalleryProvider;->openPipeHelper(Landroid/net/Uri;Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/Object;Landroid/content/ContentProvider$PipeDataWriter;)Landroid/os/ParcelFileDescriptor;
+    invoke-virtual/range {v0 .. v5}, Landroid/content/ContentProvider;->openPipeHelper(Landroid/net/Uri;Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/Object;Landroid/content/ContentProvider$PipeDataWriter;)Landroid/os/ParcelFileDescriptor;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 

@@ -41,7 +41,7 @@
     .line 1051
     iget-object v0, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$P2pEnablingState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
-    invoke-virtual {p0}, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$P2pEnablingState;->getName()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/internal/util/State;->getName()Ljava/lang/String;
 
     move-result-object v1
 
@@ -64,7 +64,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$P2pEnablingState;->getName()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/internal/util/State;->getName()Ljava/lang/String;
 
     move-result-object v2
 

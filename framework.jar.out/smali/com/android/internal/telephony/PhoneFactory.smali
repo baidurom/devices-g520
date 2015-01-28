@@ -4,8 +4,6 @@
 
 
 # static fields
-.field public static final CALLS_ON_IMS_ENABLED_PROPERTY:Ljava/lang/String; = "persist.radio.calls.on.ims"
-
 .field static final LOG_TAG:Ljava/lang/String; = "PHONE"
 
 .field public static final MODE_0_NONE:I = 0x0
@@ -83,7 +81,7 @@
 
     .prologue
     .line 77
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -177,22 +175,6 @@
         :pswitch_1
         :pswitch_1
     .end packed-switch
-.end method
-
-.method public static isCallOnImsEnabled()Z
-    .locals 2
-
-    .prologue
-    .line 247
-    const-string/jumbo v0, "persist.radio.calls.on.ims"
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    return v0
 .end method
 
 .method public static getGsmPhone()Lcom/android/internal/telephony/Phone;

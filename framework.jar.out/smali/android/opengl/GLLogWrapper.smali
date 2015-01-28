@@ -3381,7 +3381,7 @@
 
     .line 935
     .local v2, input2:Ljava/nio/ByteBuffer;
-    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->position()I
+    invoke-virtual {v2}, Ljava/nio/Buffer;->position()I
 
     move-result v3
 
@@ -3390,7 +3390,7 @@
     if-eqz v0, :cond_0
 
     .line 937
-    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->limit()I
+    invoke-virtual {v2}, Ljava/nio/Buffer;->limit()I
 
     move-result v6
 
@@ -3445,12 +3445,12 @@
     .restart local v2       #input2:Ljava/nio/ByteBuffer;
     .restart local v3       #position:I
     :cond_2
-    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {v2, v3}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
 
     .line 1019
     .end local v2           #input2:Ljava/nio/ByteBuffer;
     :goto_2
-    invoke-virtual {v4}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
+    invoke-virtual {v4}, Ljava/nio/Buffer;->rewind()Ljava/nio/Buffer;
 
     .line 1022
     invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
@@ -3477,7 +3477,7 @@
 
     .line 946
     .local v2, input2:Ljava/nio/CharBuffer;
-    invoke-virtual {v2}, Ljava/nio/CharBuffer;->position()I
+    invoke-virtual {v2}, Ljava/nio/Buffer;->position()I
 
     move-result v3
 
@@ -3486,7 +3486,7 @@
     if-eqz v0, :cond_4
 
     .line 948
-    invoke-virtual {v2}, Ljava/nio/CharBuffer;->limit()I
+    invoke-virtual {v2}, Ljava/nio/Buffer;->limit()I
 
     move-result v6
 
@@ -3537,7 +3537,7 @@
 
     .line 955
     :cond_5
-    invoke-virtual {v2, v3}, Ljava/nio/CharBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {v2, v3}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
 
     goto :goto_2
 
@@ -3558,7 +3558,7 @@
 
     .line 958
     .local v2, input2:Ljava/nio/ShortBuffer;
-    invoke-virtual {v2}, Ljava/nio/ShortBuffer;->position()I
+    invoke-virtual {v2}, Ljava/nio/Buffer;->position()I
 
     move-result v3
 
@@ -3567,7 +3567,7 @@
     if-eqz v0, :cond_7
 
     .line 960
-    invoke-virtual {v2}, Ljava/nio/ShortBuffer;->limit()I
+    invoke-virtual {v2}, Ljava/nio/Buffer;->limit()I
 
     move-result v6
 
@@ -3618,7 +3618,7 @@
 
     .line 967
     :cond_8
-    invoke-virtual {v2, v3}, Ljava/nio/ShortBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {v2, v3}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
 
     goto :goto_2
 
@@ -3639,7 +3639,7 @@
 
     .line 970
     .local v2, input2:Ljava/nio/IntBuffer;
-    invoke-virtual {v2}, Ljava/nio/IntBuffer;->position()I
+    invoke-virtual {v2}, Ljava/nio/Buffer;->position()I
 
     move-result v3
 
@@ -3648,7 +3648,7 @@
     if-eqz v0, :cond_a
 
     .line 972
-    invoke-virtual {v2}, Ljava/nio/IntBuffer;->limit()I
+    invoke-virtual {v2}, Ljava/nio/Buffer;->limit()I
 
     move-result v6
 
@@ -3699,7 +3699,7 @@
 
     .line 979
     :cond_b
-    invoke-virtual {v2, v3}, Ljava/nio/IntBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {v2, v3}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
 
     goto/16 :goto_2
 
@@ -3720,7 +3720,7 @@
 
     .line 982
     .local v2, input2:Ljava/nio/FloatBuffer;
-    invoke-virtual {v2}, Ljava/nio/FloatBuffer;->position()I
+    invoke-virtual {v2}, Ljava/nio/Buffer;->position()I
 
     move-result v3
 
@@ -3729,7 +3729,7 @@
     if-eqz v0, :cond_d
 
     .line 984
-    invoke-virtual {v2}, Ljava/nio/FloatBuffer;->limit()I
+    invoke-virtual {v2}, Ljava/nio/Buffer;->limit()I
 
     move-result v6
 
@@ -3780,7 +3780,7 @@
 
     .line 991
     :cond_e
-    invoke-virtual {v2, v3}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {v2, v3}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
 
     goto/16 :goto_2
 
@@ -3801,7 +3801,7 @@
 
     .line 994
     .local v2, input2:Ljava/nio/DoubleBuffer;
-    invoke-virtual {v2}, Ljava/nio/DoubleBuffer;->position()I
+    invoke-virtual {v2}, Ljava/nio/Buffer;->position()I
 
     move-result v3
 
@@ -3810,7 +3810,7 @@
     if-eqz v0, :cond_10
 
     .line 996
-    invoke-virtual {v2}, Ljava/nio/DoubleBuffer;->limit()I
+    invoke-virtual {v2}, Ljava/nio/Buffer;->limit()I
 
     move-result v6
 
@@ -3861,7 +3861,7 @@
 
     .line 1003
     :cond_11
-    invoke-virtual {v2, v3}, Ljava/nio/DoubleBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {v2, v3}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
 
     goto/16 :goto_2
 
@@ -3882,7 +3882,7 @@
 
     .line 1006
     .local v2, input2:Ljava/nio/LongBuffer;
-    invoke-virtual {v2}, Ljava/nio/LongBuffer;->position()I
+    invoke-virtual {v2}, Ljava/nio/Buffer;->position()I
 
     move-result v3
 
@@ -3891,7 +3891,7 @@
     if-eqz v0, :cond_13
 
     .line 1008
-    invoke-virtual {v2}, Ljava/nio/LongBuffer;->limit()I
+    invoke-virtual {v2}, Ljava/nio/Buffer;->limit()I
 
     move-result v6
 
@@ -3942,7 +3942,7 @@
 
     .line 1015
     :cond_14
-    invoke-virtual {v2, v3}, Ljava/nio/LongBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {v2, v3}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
 
     goto/16 :goto_2
 
@@ -4041,7 +4041,7 @@
     .line 1046
     .local v2, charBuffer:Ljava/nio/CharBuffer;
     :goto_2
-    invoke-virtual {v2}, Ljava/nio/CharBuffer;->position()I
+    invoke-virtual {v2}, Ljava/nio/Buffer;->position()I
 
     move-result v5
 
@@ -4049,13 +4049,13 @@
     .local v5, oldPosition:I
     const/4 v7, 0x0
 
-    invoke-virtual {v2, v7}, Ljava/nio/CharBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {v2, v7}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
 
     .line 1048
     invoke-virtual {v2, v6}, Ljava/nio/CharBuffer;->get([C)Ljava/nio/CharBuffer;
 
     .line 1049
-    invoke-virtual {v2, v5}, Ljava/nio/CharBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {v2, v5}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
 
     goto :goto_0
 
@@ -6442,7 +6442,7 @@
     .line 2825
     const-string v0, "buffers"
 
-    invoke-virtual {p2}, Ljava/nio/IntBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -6528,7 +6528,7 @@
     .line 3527
     const-string v0, "framebuffers"
 
-    invoke-virtual {p2}, Ljava/nio/IntBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -6614,7 +6614,7 @@
     .line 3548
     const-string/jumbo v0, "renderbuffers"
 
-    invoke-virtual {p2}, Ljava/nio/IntBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -8465,7 +8465,7 @@
     .line 2844
     const-string v0, "buffers"
 
-    invoke-virtual {p2}, Ljava/nio/IntBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -8551,7 +8551,7 @@
     .line 3605
     const-string v0, "framebuffers"
 
-    invoke-virtual {p2}, Ljava/nio/IntBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -8637,7 +8637,7 @@
     .line 3626
     const-string/jumbo v0, "renderbuffers"
 
-    invoke-virtual {p2}, Ljava/nio/IntBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -8723,7 +8723,7 @@
     .line 1712
     const-string/jumbo v0, "textures"
 
-    invoke-virtual {p2}, Ljava/nio/IntBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -8851,7 +8851,7 @@
     .line 2863
     const-string/jumbo v0, "params"
 
-    invoke-virtual {p2}, Ljava/nio/IntBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -8943,7 +8943,7 @@
     .line 2885
     const-string/jumbo v0, "params"
 
-    invoke-virtual {p3}, Ljava/nio/IntBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p3}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -9035,7 +9035,7 @@
     .line 2904
     const-string v0, "eqn"
 
-    invoke-virtual {p2}, Ljava/nio/FloatBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -9121,7 +9121,7 @@
     .line 2922
     const-string v0, "eqn"
 
-    invoke-virtual {p2}, Ljava/nio/IntBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -9228,7 +9228,7 @@
     .line 2940
     const-string/jumbo v0, "params"
 
-    invoke-virtual {p2}, Ljava/nio/IntBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -9311,7 +9311,7 @@
     .line 2958
     const-string/jumbo v0, "params"
 
-    invoke-virtual {p2}, Ljava/nio/FloatBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -9406,7 +9406,7 @@
     .line 3653
     const-string/jumbo v0, "params"
 
-    invoke-virtual {p4}, Ljava/nio/IntBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p4}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -9518,7 +9518,7 @@
     .line 1748
     const-string/jumbo v0, "params"
 
-    invoke-virtual {p2}, Ljava/nio/IntBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -9638,7 +9638,7 @@
     .line 2979
     const-string/jumbo v0, "params"
 
-    invoke-virtual {p3}, Ljava/nio/FloatBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p3}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -9736,7 +9736,7 @@
     .line 3000
     const-string/jumbo v0, "params"
 
-    invoke-virtual {p3}, Ljava/nio/IntBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p3}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -9834,7 +9834,7 @@
     .line 3022
     const-string/jumbo v0, "params"
 
-    invoke-virtual {p3}, Ljava/nio/FloatBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p3}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -9932,7 +9932,7 @@
     .line 3043
     const-string/jumbo v0, "params"
 
-    invoke-virtual {p3}, Ljava/nio/IntBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p3}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -10070,7 +10070,7 @@
     .line 3678
     const-string/jumbo v0, "params"
 
-    invoke-virtual {p3}, Ljava/nio/IntBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p3}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -10201,7 +10201,7 @@
     .line 3064
     const-string/jumbo v0, "params"
 
-    invoke-virtual {p3}, Ljava/nio/IntBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p3}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -10299,7 +10299,7 @@
     .line 3085
     const-string/jumbo v0, "params"
 
-    invoke-virtual {p3}, Ljava/nio/IntBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p3}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -10397,7 +10397,7 @@
     .line 3701
     const-string/jumbo v0, "params"
 
-    invoke-virtual {p3}, Ljava/nio/FloatBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p3}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -10495,7 +10495,7 @@
     .line 3724
     const-string/jumbo v0, "params"
 
-    invoke-virtual {p3}, Ljava/nio/IntBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p3}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -10593,7 +10593,7 @@
     .line 3747
     const-string/jumbo v0, "params"
 
-    invoke-virtual {p3}, Ljava/nio/IntBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p3}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -10691,7 +10691,7 @@
     .line 3106
     const-string/jumbo v0, "params"
 
-    invoke-virtual {p3}, Ljava/nio/FloatBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p3}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -10789,7 +10789,7 @@
     .line 3127
     const-string/jumbo v0, "params"
 
-    invoke-virtual {p3}, Ljava/nio/IntBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p3}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -10887,7 +10887,7 @@
     .line 3149
     const-string/jumbo v0, "params"
 
-    invoke-virtual {p3}, Ljava/nio/IntBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p3}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -13172,7 +13172,7 @@
     .line 3204
     const-string/jumbo v0, "params"
 
-    invoke-virtual {p2}, Ljava/nio/FloatBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -13294,7 +13294,7 @@
     .line 3232
     const-string/jumbo v0, "params"
 
-    invoke-virtual {p2}, Ljava/nio/IntBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -13603,7 +13603,7 @@
     .line 2760
     const-string/jumbo v1, "mantissa"
 
-    invoke-virtual {p1}, Ljava/nio/IntBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -13612,7 +13612,7 @@
     .line 2761
     const-string v1, "exponent"
 
-    invoke-virtual {p2}, Ljava/nio/IntBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -14631,7 +14631,7 @@
     .line 3273
     const-string/jumbo v0, "params"
 
-    invoke-virtual {p3}, Ljava/nio/IntBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p3}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -14935,7 +14935,7 @@
     .line 3814
     const-string/jumbo v0, "params"
 
-    invoke-virtual {p3}, Ljava/nio/FloatBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p3}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -15075,7 +15075,7 @@
     .line 3848
     const-string/jumbo v0, "params"
 
-    invoke-virtual {p3}, Ljava/nio/IntBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p3}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -15215,7 +15215,7 @@
     .line 3882
     const-string/jumbo v0, "params"
 
-    invoke-virtual {p3}, Ljava/nio/IntBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p3}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -15484,7 +15484,7 @@
     .line 3295
     const-string/jumbo v0, "params"
 
-    invoke-virtual {p3}, Ljava/nio/FloatBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p3}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -15779,7 +15779,7 @@
     .line 3327
     const-string/jumbo v0, "params"
 
-    invoke-virtual {p3}, Ljava/nio/IntBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p3}, Ljava/nio/Buffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 

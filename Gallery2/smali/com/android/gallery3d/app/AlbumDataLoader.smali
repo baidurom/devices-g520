@@ -78,7 +78,7 @@
     const/4 v0, 0x0
 
     .line 77
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 59
     iput v0, p0, Lcom/android/gallery3d/app/AlbumDataLoader;->mActiveStart:I
@@ -778,7 +778,7 @@
     .line 107
     iget-object v0, p0, Lcom/android/gallery3d/app/AlbumDataLoader;->mReloadTask:Lcom/android/gallery3d/app/AlbumDataLoader$ReloadTask;
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/app/AlbumDataLoader$ReloadTask;->start()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     .line 108
     return-void

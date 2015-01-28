@@ -27,7 +27,7 @@
 
     .prologue
     .line 191
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 193
     return-void
@@ -272,7 +272,7 @@
     iput v0, v12, Lcom/android/internal/telephony/cdma/sms/SmsEnvelope;->serviceCategory:I
 
     .line 87
-    invoke-virtual {v10}, Ljava/io/DataInputStream;->read()I
+    invoke-virtual {v10}, Ljava/io/FilterInputStream;->read()I
 
     move-result v4
 
@@ -293,7 +293,7 @@
     iput v0, v3, Lcom/android/internal/telephony/cdma/sms/CdmaSmsAddress;->digitMode:I
 
     .line 89
-    invoke-virtual {v10}, Ljava/io/DataInputStream;->read()I
+    invoke-virtual {v10}, Ljava/io/FilterInputStream;->read()I
 
     move-result v19
 
@@ -302,7 +302,7 @@
     iput v0, v3, Lcom/android/internal/telephony/cdma/sms/CdmaSmsAddress;->numberMode:I
 
     .line 90
-    invoke-virtual {v10}, Ljava/io/DataInputStream;->read()I
+    invoke-virtual {v10}, Ljava/io/FilterInputStream;->read()I
 
     move-result v19
 
@@ -311,7 +311,7 @@
     iput v0, v3, Lcom/android/internal/telephony/SmsAddress;->ton:I
 
     .line 91
-    invoke-virtual {v10}, Ljava/io/DataInputStream;->read()I
+    invoke-virtual {v10}, Ljava/io/FilterInputStream;->read()I
 
     move-result v19
 
@@ -320,7 +320,7 @@
     iput v0, v3, Lcom/android/internal/telephony/cdma/sms/CdmaSmsAddress;->numberPlan:I
 
     .line 92
-    invoke-virtual {v10}, Ljava/io/DataInputStream;->read()I
+    invoke-virtual {v10}, Ljava/io/FilterInputStream;->read()I
 
     move-result v19
 
@@ -632,7 +632,7 @@
     invoke-virtual {v11, v0, v1, v2}, Ljava/io/DataOutputStream;->write([BII)V
 
     .line 157
-    invoke-virtual {v11}, Ljava/io/DataOutputStream;->close()V
+    invoke-virtual {v11}, Ljava/io/FilterOutputStream;->close()V
 
     .line 158
     invoke-virtual {v6}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
@@ -676,13 +676,13 @@
     iput-object v9, v3, Lcom/android/internal/telephony/SmsAddress;->origBytes:[B
 
     .line 107
-    invoke-virtual {v10}, Ljava/io/DataInputStream;->read()I
+    invoke-virtual {v10}, Ljava/io/FilterInputStream;->read()I
 
     .line 108
-    invoke-virtual {v10}, Ljava/io/DataInputStream;->read()I
+    invoke-virtual {v10}, Ljava/io/FilterInputStream;->read()I
 
     .line 109
-    invoke-virtual {v10}, Ljava/io/DataInputStream;->read()I
+    invoke-virtual {v10}, Ljava/io/FilterInputStream;->read()I
 
     move-result v19
 
@@ -712,7 +712,7 @@
 
     .line 121
     :cond_5
-    invoke-virtual {v10}, Ljava/io/DataInputStream;->read()I
+    invoke-virtual {v10}, Ljava/io/FilterInputStream;->read()I
 
     move-result v8
 

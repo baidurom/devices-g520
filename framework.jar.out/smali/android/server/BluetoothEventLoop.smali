@@ -93,7 +93,7 @@
 
     .prologue
     .line 108
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 73
     new-instance v1, Landroid/server/BluetoothEventLoop$1;
@@ -4259,7 +4259,7 @@
 
     const/16 v11, 0x35
 
-    invoke-virtual {v10, v11}, Landroid/server/BluetoothAdapterStateMachine;->sendMessage(I)V
+    invoke-virtual {v10, v11}, Lcom/android/internal/util/StateMachine;->sendMessage(I)V
 
     .line 346
     :cond_4
@@ -4566,7 +4566,7 @@
     invoke-direct {v10, v13}, Ljava/lang/Boolean;-><init>(Z)V
 
     :goto_5
-    invoke-virtual {v11, v12, v10}, Landroid/server/BluetoothAdapterStateMachine;->sendMessage(ILjava/lang/Object;)V
+    invoke-virtual {v11, v12, v10}, Lcom/android/internal/util/StateMachine;->sendMessage(ILjava/lang/Object;)V
 
     goto/16 :goto_0
 

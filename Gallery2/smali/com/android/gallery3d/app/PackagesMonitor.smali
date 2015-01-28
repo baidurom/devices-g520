@@ -182,7 +182,7 @@
 
     .prologue
     .line 37
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/PackagesMonitor;->goAsync()Landroid/content/BroadcastReceiver$PendingResult;
+    invoke-virtual {p0}, Landroid/content/BroadcastReceiver;->goAsync()Landroid/content/BroadcastReceiver$PendingResult;
 
     move-result-object v5
 
@@ -200,7 +200,7 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/gallery3d/app/PackagesMonitor$1;-><init>(Lcom/android/gallery3d/app/PackagesMonitor;Ljava/lang/String;Landroid/content/Context;Landroid/content/Intent;Landroid/content/BroadcastReceiver$PendingResult;)V
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/app/PackagesMonitor$1;->start()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     .line 50
     return-void

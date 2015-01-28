@@ -134,7 +134,7 @@
     .line 252
     sget-object v0, Landroid/os/AsyncTask$Status;->$VALUES:[Landroid/os/AsyncTask$Status;
 
-    invoke-virtual {v0}, [Landroid/os/AsyncTask$Status;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

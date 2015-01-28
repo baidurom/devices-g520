@@ -3,18 +3,17 @@
 .source "Activity.java"
 
 # interfaces
-.implements Landroid/view/LayoutInflater$Factory2;
-.implements Landroid/view/Window$Callback;
-.implements Landroid/view/KeyEvent$Callback;
-.implements Landroid/view/View$OnCreateContextMenuListener;
 .implements Landroid/content/ComponentCallbacks2;
+.implements Landroid/view/KeyEvent$Callback;
+.implements Landroid/view/LayoutInflater$Factory2;
+.implements Landroid/view/View$OnCreateContextMenuListener;
+.implements Landroid/view/Window$Callback;
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroid/app/Activity$1;,
-        Landroid/app/Activity$TouchPadListener;,
         Landroid/app/Activity$ManagedCursor;,
         Landroid/app/Activity$NonConfigurationInstances;,
         Landroid/app/Activity$ManagedDialog;
@@ -167,8 +166,6 @@
 .field private mTitleReady:Z
 
 .field private mToken:Landroid/os/IBinder;
-
-.field private mTouchPadListener:Landroid/app/Activity$TouchPadListener;
 
 .field private mUiThread:Ljava/lang/Thread;
 
@@ -795,7 +792,7 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAllowFds(Z)V
 
     .line 3465
-    invoke-virtual {p0}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -925,7 +922,7 @@
 
     .prologue
     .line 4977
-    invoke-virtual {p0, p1}, Landroid/app/Activity;->attachBaseContext(Landroid/content/Context;)V
+    invoke-virtual {p0, p1}, Landroid/view/ContextThemeWrapper;->attachBaseContext(Landroid/content/Context;)V
 
     .line 4979
     iget-object v1, p0, Landroid/app/Activity;->mFragments:Landroid/app/FragmentManagerImpl;
@@ -1188,7 +1185,7 @@
     const/4 v11, 0x0
 
     .line 4255
-    invoke-virtual {p0}, Landroid/app/Activity;->getPackageName()Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1403,66 +1400,48 @@
 .end method
 
 .method public dispatchKeyEvent(Landroid/view/KeyEvent;)Z
-    .locals 4
+    .locals 3
     .parameter "event"
 
     .prologue
-    const/4 v2, 0x1
-
-    .line 2387
+    .line 2366
     invoke-virtual {p0}, Landroid/app/Activity;->onUserInteraction()V
 
-    .line 2388
+    .line 2367
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v1
 
-    .line 2389
+    .line 2368
     .local v1, win:Landroid/view/Window;
     invoke-virtual {v1, p1}, Landroid/view/Window;->superDispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
-    move-result v3
+    move-result v2
 
-    if-eqz v3, :cond_0
+    if-eqz v2, :cond_0
 
-    .line 2411
+    .line 2369
+    const/4 v2, 0x1
+
+    .line 2373
     :goto_0
     return v2
 
-    .line 2394
+    .line 2371
     :cond_0
-    iget-object v3, p0, Landroid/app/Activity;->mTouchPadListener:Landroid/app/Activity$TouchPadListener;
-
-    if-eqz v3, :cond_1
-
-    invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
-
-    move-result v3
-
-    if-ne v3, v2, :cond_1
-
-    .line 2395
-    invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
-
-    move-result v3
-
-    packed-switch v3, :pswitch_data_0
-
-    .line 2409
-    :cond_1
     iget-object v0, p0, Landroid/app/Activity;->mDecor:Landroid/view/View;
 
-    .line 2410
+    .line 2372
     .local v0, decor:Landroid/view/View;
-    if-nez v0, :cond_2
+    if-nez v0, :cond_1
 
     invoke-virtual {v1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
     move-result-object v0
 
-    .line 2411
-    :cond_2
-    if-eqz v0, :cond_3
+    .line 2373
+    :cond_1
+    if-eqz v0, :cond_2
 
     invoke-virtual {v0}, Landroid/view/View;->getKeyDispatcherState()Landroid/view/KeyEvent$DispatcherState;
 
@@ -1475,47 +1454,10 @@
 
     goto :goto_0
 
-    .line 2397
-    .end local v0           #decor:Landroid/view/View;
-    :pswitch_0
-    iget-object v3, p0, Landroid/app/Activity;->mTouchPadListener:Landroid/app/Activity$TouchPadListener;
-
-    invoke-interface {v3}, Landroid/app/Activity$TouchPadListener;->onLongPress()V
-
-    goto :goto_0
-
-    .line 2400
-    :pswitch_1
-    iget-object v3, p0, Landroid/app/Activity;->mTouchPadListener:Landroid/app/Activity$TouchPadListener;
-
-    invoke-interface {v3}, Landroid/app/Activity$TouchPadListener;->onClick()V
-
-    goto :goto_0
-
-    .line 2403
-    :pswitch_2
-    iget-object v3, p0, Landroid/app/Activity;->mTouchPadListener:Landroid/app/Activity$TouchPadListener;
-
-    invoke-interface {v3}, Landroid/app/Activity$TouchPadListener;->onDoubleClick()V
-
-    goto :goto_0
-
-    .line 2411
-    .restart local v0       #decor:Landroid/view/View;
-    :cond_3
+    :cond_2
     const/4 v2, 0x0
 
     goto :goto_1
-
-    .line 2395
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x83
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-    .end packed-switch
 .end method
 
 .method public dispatchKeyShortcutEvent(Landroid/view/KeyEvent;)Z
@@ -1574,10 +1516,10 @@
 
     move-result-object v4
 
-    invoke-virtual {p1, v4}, Landroid/view/accessibility/AccessibilityEvent;->setClassName(Ljava/lang/CharSequence;)V
+    invoke-virtual {p1, v4}, Landroid/view/accessibility/AccessibilityRecord;->setClassName(Ljava/lang/CharSequence;)V
 
     .line 2452
-    invoke-virtual {p0}, Landroid/app/Activity;->getPackageName()Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
 
@@ -1607,7 +1549,7 @@
     .line 2457
     .local v0, isFullScreen:Z
     :goto_0
-    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityEvent;->setFullScreen(Z)V
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityRecord;->setFullScreen(Z)V
 
     .line 2459
     invoke-virtual {p0}, Landroid/app/Activity;->getTitle()Ljava/lang/CharSequence;
@@ -1623,7 +1565,7 @@
     if-nez v4, :cond_0
 
     .line 2461
-    invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityEvent;->getText()Ljava/util/List;
+    invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityRecord;->getText()Ljava/util/List;
 
     move-result-object v4
 
@@ -2517,7 +2459,7 @@
 
     .prologue
     .line 4374
-    invoke-virtual {p0}, Landroid/app/Activity;->getPackageName()Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
@@ -2678,7 +2620,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0, p1}, Landroid/app/Activity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-virtual {p0, v0, p1}, Landroid/content/ContextWrapper;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -2738,7 +2680,7 @@
 
     .prologue
     .line 4421
-    invoke-virtual {p0}, Landroid/app/Activity;->getBaseContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -3169,7 +3111,7 @@
 
     .prologue
     .line 1697
-    invoke-virtual {p0}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -3211,7 +3153,7 @@
 
     .prologue
     .line 1737
-    invoke-virtual {p0}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -3296,7 +3238,7 @@
     if-nez v0, :cond_1
 
     .line 4895
-    invoke-virtual {p0}, Landroid/app/Activity;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v6
 
@@ -3474,7 +3416,7 @@
     :try_start_0
     iget-object v0, p0, Landroid/app/Activity;->mParent:Landroid/app/Activity;
 
-    invoke-virtual {v0}, Landroid/app/Activity;->getTheme()Landroid/content/res/Resources$Theme;
+    invoke-virtual {v0}, Landroid/view/ContextThemeWrapper;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object v0
 
@@ -4336,11 +4278,9 @@
 .end method
 
 .method protected onDestroy()V
-    .locals 8
+    .locals 7
 
     .prologue
-    const/4 v7, 0x0
-
     .line 1393
     const/4 v5, 0x1
 
@@ -4399,7 +4339,9 @@
     .line 1404
     .end local v2           #md:Landroid/app/Activity$ManagedDialog;
     :cond_1
-    iput-object v7, p0, Landroid/app/Activity;->mManagedDialogs:Landroid/util/SparseArray;
+    const/4 v5, 0x0
+
+    iput-object v5, p0, Landroid/app/Activity;->mManagedDialogs:Landroid/util/SparseArray;
 
     .line 1408
     .end local v1           #i:I
@@ -4474,18 +4416,15 @@
 
     invoke-virtual {v5}, Landroid/app/SearchManager;->stopSearch()V
 
-    .line 1425
+    .line 1424
     :cond_5
-    iput-object v7, p0, Landroid/app/Activity;->mTouchPadListener:Landroid/app/Activity$TouchPadListener;
-
-    .line 1427
     invoke-virtual {p0}, Landroid/app/Activity;->getApplication()Landroid/app/Application;
 
     move-result-object v5
 
     invoke-virtual {v5, p0}, Landroid/app/Application;->dispatchActivityDestroyed(Landroid/app/Activity;)V
 
-    .line 1428
+    .line 1425
     return-void
 
     .line 1417
@@ -4541,7 +4480,7 @@
     if-ne p1, v6, :cond_3
 
     .line 2045
-    invoke-virtual {p0}, Landroid/app/Activity;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v5
 
@@ -4846,7 +4785,7 @@
 
     .prologue
     .line 2133
-    invoke-virtual {p0}, Landroid/app/Activity;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v0
 
@@ -6027,7 +5966,7 @@
 
     iget-object v1, p0, Landroid/app/Activity;->mToken:Landroid/os/IBinder;
 
-    invoke-virtual {p0}, Landroid/app/Activity;->getPackageName()Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
@@ -6142,7 +6081,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Landroid/app/Activity;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v0
 
@@ -6295,7 +6234,7 @@
     if-nez v3, :cond_2
 
     .line 5061
-    invoke-virtual {p0}, Landroid/app/Activity;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v3
 
@@ -7747,7 +7686,7 @@
 
     .prologue
     .line 4457
-    invoke-virtual {p0, p1}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -7798,19 +7737,7 @@
 
     invoke-virtual {p0, v0, p1}, Landroid/app/Activity;->onTitleChanged(Ljava/lang/CharSequence;I)V
 
-    .line 4501
-    return-void
-.end method
-
-.method public setTouchPadListener(Landroid/app/Activity$TouchPadListener;)V
-    .locals 0
-    .parameter "l"
-
-    .prologue
-    .line 2366
-    iput-object p1, p0, Landroid/app/Activity;->mTouchPadListener:Landroid/app/Activity$TouchPadListener;
-
-    .line 2367
+    .line 4463
     return-void
 .end method
 
@@ -7878,7 +7805,7 @@
 
     .line 4851
     :try_start_0
-    invoke-virtual {p0}, Landroid/app/Activity;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v3
 
@@ -8490,7 +8417,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -9142,19 +9069,6 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setOnCreateContextMenuListener(Landroid/view/View$OnCreateContextMenuListener;)V
 
-    .line 2900
-    return-void
-.end method
-
-.method public unsetTouchPadListener()V
-    .locals 1
-
-    .prologue
-    .line 2373
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Landroid/app/Activity;->mTouchPadListener:Landroid/app/Activity$TouchPadListener;
-
-    .line 2374
+    .line 2862
     return-void
 .end method

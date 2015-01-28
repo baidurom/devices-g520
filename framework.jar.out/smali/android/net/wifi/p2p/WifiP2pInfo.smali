@@ -49,7 +49,7 @@
 
     .prologue
     .line 47
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 48
     return-void
@@ -61,7 +61,7 @@
 
     .prologue
     .line 65
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 66
     if-eqz p1, :cond_0

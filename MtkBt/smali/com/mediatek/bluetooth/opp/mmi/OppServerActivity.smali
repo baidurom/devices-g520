@@ -90,7 +90,7 @@
     invoke-virtual {v1, v0}, Lcom/mediatek/bluetooth/opp/adp/OppManager;->oppsSubmitTask(I)V
 
     .line 231
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/mmi/OppServerActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -139,7 +139,7 @@
     iput-boolean v1, p0, Lcom/mediatek/bluetooth/opp/mmi/OppServerActivity;->mIsActive:Z
 
     .line 89
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/mmi/OppServerActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 90
     :goto_0
@@ -147,7 +147,7 @@
 
     .line 79
     :cond_1
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/mmi/OppServerActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -184,7 +184,7 @@
     invoke-super {p0, p1}, Lcom/mediatek/activity/CancelableActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 100
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/mmi/OppServerActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -224,7 +224,7 @@
     if-nez v3, :cond_2
 
     .line 112
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/mmi/OppServerActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 141
     :cond_1
@@ -286,7 +286,7 @@
     if-eqz v3, :cond_4
 
     .line 134
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/mmi/OppServerActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 
@@ -313,7 +313,7 @@
     invoke-static {v3}, Lcom/mediatek/bluetooth/opp/mmi/OppLog;->w(Ljava/lang/String;)V
 
     .line 139
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/mmi/OppServerActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 .end method
@@ -334,7 +334,7 @@
 
     .line 183
     :pswitch_0
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/mmi/OppServerActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
@@ -398,7 +398,7 @@
 
     aput-object v2, v7, v8
 
-    invoke-virtual {p0, v6, v7}, Lcom/mediatek/bluetooth/opp/mmi/OppServerActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v6, v7}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -454,13 +454,13 @@
     const/4 v0, 0x0
 
     .line 146
-    invoke-super {p0}, Lcom/mediatek/activity/CancelableActivity;->onResume()V
+    invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
     .line 147
-    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/opp/mmi/OppServerActivity;->setVisible(Z)V
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->setVisible(Z)V
 
     .line 148
-    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/opp/mmi/OppServerActivity;->showDialog(I)V
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->showDialog(I)V
 
     .line 149
     return-void
@@ -472,7 +472,7 @@
 
     .prologue
     .line 170
-    invoke-super {p0, p1}, Lcom/mediatek/activity/CancelableActivity;->onSaveInstanceState(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Landroid/app/Activity;->onSaveInstanceState(Landroid/os/Bundle;)V
 
     .line 171
     iget-boolean v0, p0, Lcom/mediatek/bluetooth/opp/mmi/OppServerActivity;->mIsActive:Z
@@ -496,7 +496,7 @@
 
     .prologue
     .line 154
-    invoke-super {p0}, Lcom/mediatek/activity/CancelableActivity;->onStop()V
+    invoke-super {p0}, Landroid/app/Activity;->onStop()V
 
     .line 158
     iget-boolean v0, p0, Lcom/mediatek/bluetooth/opp/mmi/OppServerActivity;->mIsActive:Z

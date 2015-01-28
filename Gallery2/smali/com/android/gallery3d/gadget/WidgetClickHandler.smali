@@ -249,7 +249,7 @@
     .line 43
     :cond_0
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/gallery3d/gadget/WidgetClickHandler;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -313,7 +313,7 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 56
-    invoke-virtual {p0}, Lcom/android/gallery3d/gadget/WidgetClickHandler;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -355,7 +355,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/gadget/WidgetClickHandler;->getBaseContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -382,10 +382,10 @@
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
     .line 75
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/gadget/WidgetClickHandler;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
     .line 76
-    invoke-virtual {p0}, Lcom/android/gallery3d/gadget/WidgetClickHandler;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 77
     return-void

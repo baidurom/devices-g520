@@ -120,7 +120,7 @@
     const/4 v1, 0x0
 
     .line 101
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 90
     iput-object v1, p0, Lcom/android/bluetooth/pbap/BluetoothPbapSimAdn;->mVCardPath:Ljava/lang/String;
@@ -855,7 +855,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0}, Landroid/os/RemoteException;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v2
 

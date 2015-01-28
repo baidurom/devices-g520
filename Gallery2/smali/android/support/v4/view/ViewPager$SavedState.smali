@@ -170,7 +170,7 @@
 
     .prologue
     .line 1048
-    invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-super {p0, p1, p2}, Landroid/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
     .line 1049
     iget v0, p0, Landroid/support/v4/view/ViewPager$SavedState;->position:I

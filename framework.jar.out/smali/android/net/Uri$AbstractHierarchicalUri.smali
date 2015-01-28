@@ -91,7 +91,7 @@
 
     .prologue
     .line 1075
-    invoke-virtual {p0}, Landroid/net/Uri$AbstractHierarchicalUri;->getEncodedAuthority()Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/net/Uri;->getEncodedAuthority()Ljava/lang/String;
 
     move-result-object v0
 
@@ -162,7 +162,7 @@
     const/4 v5, -0x1
 
     .line 1100
-    invoke-virtual {p0}, Landroid/net/Uri$AbstractHierarchicalUri;->getEncodedAuthority()Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/net/Uri;->getEncodedAuthority()Ljava/lang/String;
 
     move-result-object v0
 
@@ -241,7 +241,7 @@
     const/4 v2, 0x0
 
     .line 1052
-    invoke-virtual {p0}, Landroid/net/Uri$AbstractHierarchicalUri;->getEncodedAuthority()Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/net/Uri;->getEncodedAuthority()Ljava/lang/String;
 
     move-result-object v0
 
@@ -360,7 +360,7 @@
 
     .prologue
     .line 1032
-    invoke-virtual {p0}, Landroid/net/Uri$AbstractHierarchicalUri;->getPathSegments()Ljava/util/List;
+    invoke-virtual {p0}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
     move-result-object v0
 
@@ -428,7 +428,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/net/Uri$Part;->getDecoded()Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/net/Uri$AbstractPart;->getDecoded()Ljava/lang/String;
 
     move-result-object v0
 

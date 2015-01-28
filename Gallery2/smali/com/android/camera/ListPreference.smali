@@ -681,7 +681,7 @@
 
     .line 108
     .local v0, defaultValue:Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/camera/ListPreference;->getSharedPreferences()Landroid/content/SharedPreferences;
+    invoke-virtual {p0}, Lcom/android/camera/CameraPreference;->getSharedPreferences()Landroid/content/SharedPreferences;
 
     move-result-object v1
 
@@ -806,7 +806,7 @@
 
     .prologue
     .line 179
-    invoke-virtual {p0}, Lcom/android/camera/ListPreference;->getSharedPreferences()Landroid/content/SharedPreferences;
+    invoke-virtual {p0}, Lcom/android/camera/CameraPreference;->getSharedPreferences()Landroid/content/SharedPreferences;
 
     move-result-object v1
 
@@ -1454,7 +1454,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/android/camera/ListPreference;->getTitle()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/camera/CameraPreference;->getTitle()Ljava/lang/String;
 
     move-result-object v1
 

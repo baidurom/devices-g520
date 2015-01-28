@@ -281,7 +281,7 @@
     const/4 v1, 0x0
 
     .line 253
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 64
     new-array v0, v2, [J
@@ -1863,7 +1863,7 @@
     :try_start_1
     iget-object v5, p0, Lcom/android/internal/os/ProcessStats;->mBuffer:[B
 
-    invoke-virtual {v2, v5}, Ljava/io/FileInputStream;->read([B)I
+    invoke-virtual {v2, v5}, Ljava/io/InputStream;->read([B)I
 
     move-result v3
 

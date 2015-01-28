@@ -95,7 +95,7 @@
 
     .prologue
     .line 48
-    invoke-virtual {p0}, Lcom/android/camera/RecordLocationPreference;->getSharedPreferences()Landroid/content/SharedPreferences;
+    invoke-virtual {p0}, Lcom/android/camera/CameraPreference;->getSharedPreferences()Landroid/content/SharedPreferences;
 
     move-result-object v0
 

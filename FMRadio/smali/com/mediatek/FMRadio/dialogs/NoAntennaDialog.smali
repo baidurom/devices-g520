@@ -84,7 +84,7 @@
 
     .line 86
     .local v0, e:Ljava/lang/ClassCastException;
-    invoke-virtual {v0}, Ljava/lang/ClassCastException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 .end method
@@ -97,7 +97,7 @@
     .line 92
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/dialogs/NoAntennaDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 

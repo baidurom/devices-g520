@@ -143,7 +143,7 @@
     const/16 v1, 0x8
 
     .line 250
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 251
     iput v0, p0, Landroid/view/ViewConfiguration;->mEdgeSlop:I
@@ -221,7 +221,7 @@
     const/high16 v12, 0x3f00
 
     .line 278
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 279
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;

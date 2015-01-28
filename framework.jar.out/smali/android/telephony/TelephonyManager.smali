@@ -148,8 +148,6 @@
 
 .field private static final mtkGeminiSupport:Z
 
-.field protected static multiSimConfig:Ljava/lang/String;
-
 .field private static sContext:Landroid/content/Context;
 
 .field private static sInstance:Landroid/telephony/TelephonyManager;
@@ -166,14 +164,6 @@
     const/4 v0, 0x0
 
     sput v0, Landroid/telephony/TelephonyManager;->defaultSimId:I
-    
-    const-string/jumbo v0, "persist.multisim.config"
-
-    invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Landroid/telephony/TelephonyManager;->multiSimConfig:Ljava/lang/String;
 
     .line 167
     new-instance v0, Landroid/telephony/TelephonyManager;
@@ -185,7 +175,7 @@
     .line 276
     sget-object v0, Lcom/android/internal/telephony/Phone$State;->IDLE:Lcom/android/internal/telephony/Phone$State;
 
-    invoke-virtual {v0}, Lcom/android/internal/telephony/Phone$State;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Enum;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -194,7 +184,7 @@
     .line 282
     sget-object v0, Lcom/android/internal/telephony/Phone$State;->RINGING:Lcom/android/internal/telephony/Phone$State;
 
-    invoke-virtual {v0}, Lcom/android/internal/telephony/Phone$State;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Enum;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -203,7 +193,7 @@
     .line 288
     sget-object v0, Lcom/android/internal/telephony/Phone$State;->OFFHOOK:Lcom/android/internal/telephony/Phone$State;
 
-    invoke-virtual {v0}, Lcom/android/internal/telephony/Phone$State;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Enum;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -212,12 +202,12 @@
     return-void
 .end method
 
-.method protected constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
     .prologue
     .line 163
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 164
     return-void
@@ -229,7 +219,7 @@
 
     .prologue
     .line 140
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 142
     sget-object v1, Landroid/telephony/TelephonyManager;->sContext:Landroid/content/Context;
@@ -1002,7 +992,7 @@
 
     .line 2319
     .local v0, ex:Landroid/os/RemoteException;
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     .line 2323
     .end local v0           #ex:Landroid/os/RemoteException;
@@ -1018,7 +1008,7 @@
 
     .line 2321
     .local v0, ex:Ljava/lang/NullPointerException;
-    invoke-virtual {v0}, Ljava/lang/NullPointerException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_1
 .end method
@@ -1060,7 +1050,7 @@
 
     .line 2273
     .local v0, ex:Landroid/os/RemoteException;
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     .line 2277
     .end local v0           #ex:Landroid/os/RemoteException;
@@ -1076,7 +1066,7 @@
 
     .line 2275
     .local v0, ex:Ljava/lang/NullPointerException;
-    invoke-virtual {v0}, Ljava/lang/NullPointerException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_1
 .end method
@@ -1116,7 +1106,7 @@
 
     .line 2295
     .local v0, ex:Landroid/os/RemoteException;
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     .line 2299
     .end local v0           #ex:Landroid/os/RemoteException;
@@ -1132,7 +1122,7 @@
 
     .line 2297
     .local v0, ex:Ljava/lang/NullPointerException;
-    invoke-virtual {v0}, Ljava/lang/NullPointerException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_1
 .end method
@@ -1172,7 +1162,7 @@
 
     .line 2386
     .local v0, ex:Landroid/os/RemoteException;
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     .line 2390
     .end local v0           #ex:Landroid/os/RemoteException;
@@ -1188,7 +1178,7 @@
 
     .line 2388
     .local v0, ex:Ljava/lang/NullPointerException;
-    invoke-virtual {v0}, Ljava/lang/NullPointerException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_1
 .end method
@@ -1230,7 +1220,7 @@
 
     .line 2365
     .local v0, ex:Landroid/os/RemoteException;
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     .line 2369
     .end local v0           #ex:Landroid/os/RemoteException;
@@ -1246,7 +1236,7 @@
 
     .line 2367
     .local v0, ex:Ljava/lang/NullPointerException;
-    invoke-virtual {v0}, Ljava/lang/NullPointerException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_1
 .end method
@@ -1288,7 +1278,7 @@
 
     .line 2342
     .local v0, ex:Landroid/os/RemoteException;
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     .line 2346
     .end local v0           #ex:Landroid/os/RemoteException;
@@ -1304,7 +1294,7 @@
 
     .line 2344
     .local v0, ex:Ljava/lang/NullPointerException;
-    invoke-virtual {v0}, Ljava/lang/NullPointerException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_1
 .end method
@@ -3247,73 +3237,6 @@
         :pswitch_c
         :pswitch_e
     .end packed-switch
-.end method
-
-.method public getPhoneCount()I
-    .locals 2
-
-    .prologue
-    .line 114
-    const/4 v0, 0x1
-
-    .line 115
-    .local v0, phoneCount:I
-    invoke-static {}, Landroid/telephony/TelephonyManager;->isMultiSimEnabled()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 116
-    const/4 v0, 0x2
-
-    .line 118
-    :cond_0
-    return v0
-.end method
-
-.method public static isMultiSimEnabled()Z
-    .locals 4
-
-    .prologue
-    const/4 v1, 0x0
-
-    .line 102
-    const-string/jumbo v2, "ro.telephony.coolpad_single"
-
-    invoke-static {v2, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    .line 104
-    .local v0, is_coolpad5890_spec:Z
-    sget-object v2, Landroid/telephony/TelephonyManager;->multiSimConfig:Ljava/lang/String;
-
-    const-string v3, "dsds"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    sget-object v2, Landroid/telephony/TelephonyManager;->multiSimConfig:Ljava/lang/String;
-
-    const-string v3, "dsda"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    :cond_0
-    if-nez v0, :cond_1
-
-    const/4 v1, 0x1
-
-    :cond_1
-    return v1
 .end method
 
 .method public getPhoneType()I

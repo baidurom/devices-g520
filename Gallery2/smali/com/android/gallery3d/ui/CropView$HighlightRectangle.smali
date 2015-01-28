@@ -259,13 +259,13 @@
 
     const/4 v8, 0x0
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/CropView$HighlightRectangle;->getWidth()I
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->getWidth()I
 
     move-result v1
 
     int-to-float v9, v1
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/CropView$HighlightRectangle;->getHeight()I
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->getHeight()I
 
     move-result v1
 
@@ -647,7 +647,7 @@
     invoke-direct {p0, v6}, Lcom/android/gallery3d/ui/CropView$HighlightRectangle;->validateRect(Landroid/graphics/RectF;)V
 
     .line 538
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/CropView$HighlightRectangle;->invalidate()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->invalidate()V
 
     .line 539
     return-void
@@ -1701,7 +1701,7 @@
     invoke-direct {p0, p1}, Lcom/android/gallery3d/ui/CropView$HighlightRectangle;->setMovingEdges(Landroid/view/MotionEvent;)V
 
     .line 614
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/CropView$HighlightRectangle;->invalidate()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->invalidate()V
 
     goto :goto_0
 
@@ -1730,7 +1730,7 @@
     invoke-virtual {v0, v1}, Lcom/android/gallery3d/ui/CropView$AnimationController;->startParkingAnimation(Landroid/graphics/RectF;)V
 
     .line 624
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/CropView$HighlightRectangle;->invalidate()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->invalidate()V
 
     goto :goto_0
 
@@ -2153,7 +2153,7 @@
     invoke-virtual {v0, p1}, Lcom/android/gallery3d/ui/CropView$AnimationController;->startParkingAnimation(Landroid/graphics/RectF;)V
 
     .line 464
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/CropView$HighlightRectangle;->invalidate()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->invalidate()V
 
     .line 465
     return-void

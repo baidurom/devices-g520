@@ -57,7 +57,7 @@
 
     invoke-direct {v0, p0}, Landroid/server/search/SearchEngineManagerService$BootCompletedReceiver$1;-><init>(Landroid/server/search/SearchEngineManagerService$BootCompletedReceiver;)V
 
-    invoke-virtual {v0}, Landroid/server/search/SearchEngineManagerService$BootCompletedReceiver$1;->start()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     .line 121
     return-void

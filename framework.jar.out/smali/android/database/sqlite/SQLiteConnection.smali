@@ -117,7 +117,7 @@
 
     .prologue
     .line 162
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 96
     invoke-static {}, Ldalvik/system/CloseGuard;->get()Ldalvik/system/CloseGuard;
@@ -236,7 +236,7 @@
     .line 870
     iget-object v0, p0, Landroid/database/sqlite/SQLiteConnection;->mPreparedStatementCache:Landroid/database/sqlite/SQLiteConnection$PreparedStatementCache;
 
-    invoke-virtual {v0, p1}, Landroid/database/sqlite/SQLiteConnection$PreparedStatementCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroid/util/LruCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v8
 
@@ -322,7 +322,7 @@
     .line 889
     iget-object v0, p0, Landroid/database/sqlite/SQLiteConnection;->mPreparedStatementCache:Landroid/database/sqlite/SQLiteConnection$PreparedStatementCache;
 
-    invoke-virtual {v0, p1, v8}, Landroid/database/sqlite/SQLiteConnection$PreparedStatementCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, v8}, Landroid/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 890
     const/4 v0, 0x1
@@ -833,7 +833,7 @@
     :try_start_0
     iget-object v1, p0, Landroid/database/sqlite/SQLiteConnection;->mPreparedStatementCache:Landroid/database/sqlite/SQLiteConnection$PreparedStatementCache;
 
-    invoke-virtual {v1}, Landroid/database/sqlite/SQLiteConnection$PreparedStatementCache;->evictAll()V
+    invoke-virtual {v1}, Landroid/util/LruCache;->evictAll()V
 
     .line 233
     iget v1, p0, Landroid/database/sqlite/SQLiteConnection;->mConnectionPtr:I
@@ -943,19 +943,19 @@
 
     iget-object v2, p0, Landroid/database/sqlite/SQLiteConnection;->mPreparedStatementCache:Landroid/database/sqlite/SQLiteConnection$PreparedStatementCache;
 
-    invoke-virtual {v2}, Landroid/database/sqlite/SQLiteConnection$PreparedStatementCache;->hitCount()I
+    invoke-virtual {v2}, Landroid/util/LruCache;->hitCount()I
 
     move-result v7
 
     iget-object v2, p0, Landroid/database/sqlite/SQLiteConnection;->mPreparedStatementCache:Landroid/database/sqlite/SQLiteConnection$PreparedStatementCache;
 
-    invoke-virtual {v2}, Landroid/database/sqlite/SQLiteConnection$PreparedStatementCache;->missCount()I
+    invoke-virtual {v2}, Landroid/util/LruCache;->missCount()I
 
     move-result v8
 
     iget-object v2, p0, Landroid/database/sqlite/SQLiteConnection;->mPreparedStatementCache:Landroid/database/sqlite/SQLiteConnection$PreparedStatementCache;
 
-    invoke-virtual {v2}, Landroid/database/sqlite/SQLiteConnection$PreparedStatementCache;->size()I
+    invoke-virtual {v2}, Landroid/util/LruCache;->size()I
 
     move-result v9
 
@@ -1281,7 +1281,7 @@
 
     iget-object v2, p1, Landroid/database/sqlite/SQLiteConnection$PreparedStatement;->mSql:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Landroid/database/sqlite/SQLiteConnection$PreparedStatementCache;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Landroid/util/LruCache;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
@@ -2436,7 +2436,7 @@
     :catchall_0
     move-exception v1
 
-    invoke-virtual {v10}, Landroid/database/CursorWindow;->close()V
+    invoke-virtual {v10}, Landroid/database/sqlite/SQLiteClosable;->close()V
 
     throw v1
 
@@ -2446,7 +2446,7 @@
 
     .line 1142
     :cond_1
-    invoke-virtual {v10}, Landroid/database/CursorWindow;->close()V
+    invoke-virtual {v10}, Landroid/database/sqlite/SQLiteClosable;->close()V
 
     .line 1144
     return-void
@@ -3194,7 +3194,7 @@
 
     .line 823
     :cond_1
-    invoke-virtual/range {p3 .. p3}, Landroid/database/CursorWindow;->acquireReference()V
+    invoke-virtual/range {p3 .. p3}, Landroid/database/sqlite/SQLiteClosable;->acquireReference()V
 
     .line 825
     const/4 v8, -0x1
@@ -3413,7 +3413,7 @@
 
     .line 865
     :cond_2
-    invoke-virtual/range {p3 .. p3}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual/range {p3 .. p3}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     .line 845
     return v10
@@ -3563,7 +3563,7 @@
     :catchall_3
     move-exception v2
 
-    invoke-virtual/range {p3 .. p3}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual/range {p3 .. p3}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     throw v2
 .end method
@@ -4053,7 +4053,7 @@
     .line 443
     iget-object v0, p0, Landroid/database/sqlite/SQLiteConnection;->mPreparedStatementCache:Landroid/database/sqlite/SQLiteConnection$PreparedStatementCache;
 
-    invoke-virtual {v0, p1}, Landroid/database/sqlite/SQLiteConnection$PreparedStatementCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroid/util/LruCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -4383,7 +4383,7 @@
 
     iget v7, p1, Landroid/database/sqlite/SQLiteDatabaseConfiguration;->maxSqlCacheSize:I
 
-    invoke-virtual {v6, v7}, Landroid/database/sqlite/SQLiteConnection$PreparedStatementCache;->resize(I)V
+    invoke-virtual {v6, v7}, Landroid/util/LruCache;->resize(I)V
 
     .line 418
     if-eqz v0, :cond_2

@@ -160,7 +160,7 @@
 
     sub-int v6, p4, p2
 
-    invoke-virtual {v5, v7, v4, v6, v3}, Lcom/android/gallery3d/ui/SlotView;->layout(IIII)V
+    invoke-virtual {v5, v7, v4, v6, v3}, Lcom/android/gallery3d/ui/GLView;->layout(IIII)V
 
     goto :goto_0
 
@@ -185,7 +185,7 @@
     .line 126
     iget-object v0, p0, Lcom/android/gallery3d/app/ManageCachePage$1;->mMatrix:[F
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/ManageCachePage$1;->getWidth()I
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->getWidth()I
 
     move-result v1
 
@@ -202,7 +202,7 @@
 
     add-float/2addr v1, v2
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/ManageCachePage$1;->getHeight()I
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->getHeight()I
 
     move-result v2
 

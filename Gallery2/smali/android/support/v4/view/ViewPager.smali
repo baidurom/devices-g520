@@ -423,7 +423,7 @@
 
     .line 947
     .local v1, N:I
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v11
 
@@ -1020,13 +1020,13 @@
     invoke-virtual {v8}, Landroid/widget/Scroller;->abortAnimation()V
 
     .line 1543
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getScrollX()I
+    invoke-virtual {p0}, Landroid/view/View;->getScrollX()I
 
     move-result v3
 
     .line 1544
     .local v3, oldX:I
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getScrollY()I
+    invoke-virtual {p0}, Landroid/view/View;->getScrollY()I
 
     move-result v4
 
@@ -1054,7 +1054,7 @@
 
     .line 1548
     :cond_0
-    invoke-virtual {p0, v5, v6}, Landroid/support/v4/view/ViewPager;->scrollTo(II)V
+    invoke-virtual {p0, v5, v6}, Landroid/view/View;->scrollTo(II)V
 
     .line 1552
     :cond_1
@@ -1420,7 +1420,7 @@
     .local v0, group:Landroid/view/ViewGroup;
     iget v2, p1, Landroid/graphics/Rect;->left:I
 
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->getLeft()I
+    invoke-virtual {v0}, Landroid/view/View;->getLeft()I
 
     move-result v3
 
@@ -1431,7 +1431,7 @@
     .line 2341
     iget v2, p1, Landroid/graphics/Rect;->right:I
 
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->getRight()I
+    invoke-virtual {v0}, Landroid/view/View;->getRight()I
 
     move-result v3
 
@@ -1442,7 +1442,7 @@
     .line 2342
     iget v2, p1, Landroid/graphics/Rect;->top:I
 
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->getTop()I
+    invoke-virtual {v0}, Landroid/view/View;->getTop()I
 
     move-result v3
 
@@ -1453,7 +1453,7 @@
     .line 2343
     iget v2, p1, Landroid/graphics/Rect;->bottom:I
 
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->getBottom()I
+    invoke-virtual {v0}, Landroid/view/View;->getBottom()I
 
     move-result v3
 
@@ -1462,7 +1462,7 @@
     iput v2, p1, Landroid/graphics/Rect;->bottom:I
 
     .line 2345
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
 
@@ -1477,7 +1477,7 @@
     const/4 v8, 0x0
 
     .line 1893
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v12
 
@@ -1485,7 +1485,7 @@
     .local v12, width:I
     if-lez v12, :cond_5
 
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getScrollX()I
+    invoke-virtual {p0}, Landroid/view/View;->getScrollX()I
 
     move-result v13
 
@@ -1712,7 +1712,7 @@
     if-gtz v0, :cond_1
 
     :cond_0
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v0
 
@@ -1853,7 +1853,7 @@
 
     .line 1453
     .local v1, ii:Landroid/support/v4/view/ViewPager$ItemInfo;
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v5
 
@@ -1964,7 +1964,7 @@
     iput v0, v1, Landroid/support/v4/view/ViewPager;->mLastMotionX:F
 
     .line 1847
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->getScrollX()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getScrollX()I
 
     move-result v14
 
@@ -1976,7 +1976,7 @@
 
     .line 1849
     .local v12, scrollX:F
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->getWidth()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getWidth()I
 
     move-result v13
 
@@ -2145,13 +2145,13 @@
     .line 1882
     float-to-int v14, v12
 
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->getScrollY()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getScrollY()I
 
     move-result v15
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v14, v15}, Landroid/support/v4/view/ViewPager;->scrollTo(II)V
+    invoke-virtual {v0, v14, v15}, Landroid/view/View;->scrollTo(II)V
 
     .line 1883
     float-to-int v14, v12
@@ -2343,7 +2343,7 @@
 
     .line 1286
     .local v7, oldWidthWithMargin:I
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getScrollX()I
+    invoke-virtual {p0}, Landroid/view/View;->getScrollX()I
 
     move-result v13
 
@@ -2365,11 +2365,11 @@
 
     .line 1290
     .local v1, newOffsetPixels:I
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getScrollY()I
+    invoke-virtual {p0}, Landroid/view/View;->getScrollY()I
 
     move-result v0
 
-    invoke-virtual {p0, v1, v0}, Landroid/support/v4/view/ViewPager;->scrollTo(II)V
+    invoke-virtual {p0, v1, v0}, Landroid/view/View;->scrollTo(II)V
 
     .line 1291
     iget-object v0, p0, Landroid/support/v4/view/ViewPager;->mScroller:Landroid/widget/Scroller;
@@ -2464,7 +2464,7 @@
 
     .line 1302
     .local v10, scrollPos:I
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getScrollX()I
+    invoke-virtual {p0}, Landroid/view/View;->getScrollX()I
 
     move-result v0
 
@@ -2474,11 +2474,11 @@
     invoke-direct {p0}, Landroid/support/v4/view/ViewPager;->completeScroll()V
 
     .line 1304
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getScrollY()I
+    invoke-virtual {p0}, Landroid/view/View;->getScrollY()I
 
     move-result v0
 
-    invoke-virtual {p0, v10, v0}, Landroid/support/v4/view/ViewPager;->scrollTo(II)V
+    invoke-virtual {p0, v10, v0}, Landroid/view/View;->scrollTo(II)V
 
     goto :goto_0
 
@@ -2500,14 +2500,14 @@
 
     .local v1, i:I
     :goto_0
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getChildCount()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v3
 
     if-ge v1, v3, :cond_1
 
     .line 406
-    invoke-virtual {p0, v1}, Landroid/support/v4/view/ViewPager;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -2526,7 +2526,7 @@
     if-nez v3, :cond_0
 
     .line 409
-    invoke-virtual {p0, v1}, Landroid/support/v4/view/ViewPager;->removeViewAt(I)V
+    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->removeViewAt(I)V
 
     .line 410
     add-int/lit8 v1, v1, -0x1
@@ -2681,7 +2681,7 @@
 
     .line 2373
     .local v2, focusableCount:I
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getDescendantFocusability()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getDescendantFocusability()I
 
     move-result v1
 
@@ -2696,14 +2696,14 @@
 
     .local v3, i:I
     :goto_0
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getChildCount()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v5
 
     if-ge v3, v5, :cond_1
 
     .line 2377
-    invoke-virtual {p0, v3}, Landroid/support/v4/view/ViewPager;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -2756,7 +2756,7 @@
 
     .line 2397
     :cond_2
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->isFocusable()Z
+    invoke-virtual {p0}, Landroid/view/View;->isFocusable()Z
 
     move-result v5
 
@@ -2775,13 +2775,13 @@
 
     if-ne v5, v6, :cond_5
 
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->isInTouchMode()Z
+    invoke-virtual {p0}, Landroid/view/View;->isInTouchMode()Z
 
     move-result v5
 
     if-eqz v5, :cond_5
 
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->isFocusableInTouchMode()Z
+    invoke-virtual {p0}, Landroid/view/View;->isFocusableInTouchMode()Z
 
     move-result v5
 
@@ -2880,14 +2880,14 @@
 
     .local v1, i:I
     :goto_0
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getChildCount()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v3
 
     if-ge v1, v3, :cond_1
 
     .line 2419
-    invoke-virtual {p0, v1}, Landroid/support/v4/view/ViewPager;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -2993,7 +2993,7 @@
     iput-boolean v1, v0, Landroid/support/v4/view/ViewPager$LayoutParams;->needsMeasure:Z
 
     .line 1126
-    invoke-virtual {p0, p1, p2, p3}, Landroid/support/v4/view/ViewPager;->addViewInLayout(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)Z
+    invoke-virtual {p0, p1, p2, p3}, Landroid/view/ViewGroup;->addViewInLayout(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)Z
 
     .line 1138
     :goto_0
@@ -3016,7 +3016,7 @@
     const/16 v6, 0x11
 
     .line 2282
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->findFocus()Landroid/view/View;
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->findFocus()Landroid/view/View;
 
     move-result-object v1
 
@@ -3091,7 +3091,7 @@
 
     move-result v5
 
-    invoke-virtual {p0, v5}, Landroid/support/v4/view/ViewPager;->playSoundEffect(I)V
+    invoke-virtual {p0, v5}, Landroid/view/View;->playSoundEffect(I)V
 
     .line 2321
     :cond_2
@@ -3491,13 +3491,13 @@
     if-eqz v4, :cond_2
 
     .line 1420
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getScrollX()I
+    invoke-virtual {p0}, Landroid/view/View;->getScrollX()I
 
     move-result v0
 
     .line 1421
     .local v0, oldX:I
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getScrollY()I
+    invoke-virtual {p0}, Landroid/view/View;->getScrollY()I
 
     move-result v1
 
@@ -3525,7 +3525,7 @@
 
     .line 1426
     :cond_0
-    invoke-virtual {p0, v2, v3}, Landroid/support/v4/view/ViewPager;->scrollTo(II)V
+    invoke-virtual {p0, v2, v3}, Landroid/view/View;->scrollTo(II)V
 
     .line 1427
     invoke-direct {p0, v2}, Landroid/support/v4/view/ViewPager;->pageScrolled(I)Z
@@ -3542,7 +3542,7 @@
     .line 1429
     const/4 v4, 0x0
 
-    invoke-virtual {p0, v4, v3}, Landroid/support/v4/view/ViewPager;->scrollTo(II)V
+    invoke-virtual {p0, v4, v3}, Landroid/view/View;->scrollTo(II)V
 
     .line 1434
     :cond_1
@@ -3792,7 +3792,7 @@
     if-eqz v6, :cond_a
 
     .line 774
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getChildCount()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v1
 
@@ -3804,7 +3804,7 @@
     if-ge v2, v1, :cond_9
 
     .line 776
-    invoke-virtual {p0, v2}, Landroid/support/v4/view/ViewPager;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -3840,7 +3840,7 @@
     invoke-virtual {p0, v7, v10, v9}, Landroid/support/v4/view/ViewPager;->setCurrentItemInternal(IZZ)V
 
     .line 784
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->requestLayout()V
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 
     .line 786
     .end local v1           #childCount:I
@@ -3884,7 +3884,7 @@
 
     .prologue
     .line 2469
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getChildCount()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v1
 
@@ -3897,7 +3897,7 @@
     if-ge v2, v1, :cond_1
 
     .line 2471
-    invoke-virtual {p0, v2}, Landroid/support/v4/view/ViewPager;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -3993,7 +3993,7 @@
     const/4 v6, 0x1
 
     .line 1955
-    invoke-super {p0, p1}, Landroid/view/ViewGroup;->draw(Landroid/graphics/Canvas;)V
+    invoke-super {p0, p1}, Landroid/view/View;->draw(Landroid/graphics/Canvas;)V
 
     .line 1956
     const/4 v1, 0x0
@@ -4039,17 +4039,17 @@
 
     .line 1964
     .local v3, restoreCount:I
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getHeight()I
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result v5
 
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getPaddingTop()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
 
     move-result v6
 
     sub-int/2addr v5, v6
 
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getPaddingBottom()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
 
     move-result v6
 
@@ -4057,7 +4057,7 @@
 
     .line 1965
     .local v0, height:I
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v4
 
@@ -4070,7 +4070,7 @@
     .line 1968
     neg-int v5, v0
 
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getPaddingTop()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
 
     move-result v6
 
@@ -4123,23 +4123,23 @@
 
     .line 1975
     .restart local v3       #restoreCount:I
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v4
 
     .line 1976
     .restart local v4       #width:I
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getHeight()I
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result v5
 
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getPaddingTop()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
 
     move-result v6
 
     sub-int/2addr v5, v6
 
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getPaddingBottom()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
 
     move-result v6
 
@@ -4152,7 +4152,7 @@
     invoke-virtual {p1, v5}, Landroid/graphics/Canvas;->rotate(F)V
 
     .line 1979
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getPaddingTop()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
 
     move-result v5
 
@@ -4241,7 +4241,7 @@
     if-eqz v1, :cond_0
 
     .line 634
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getDrawableState()[I
+    invoke-virtual {p0}, Landroid/view/View;->getDrawableState()[I
 
     move-result-object v1
 
@@ -4300,13 +4300,13 @@
     iput-boolean v11, p0, Landroid/support/v4/view/ViewPager;->mPopulatePending:Z
 
     .line 2092
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v8
 
     .line 2093
     .local v8, width:I
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getScrollX()I
+    invoke-virtual {p0}, Landroid/view/View;->getScrollX()I
 
     move-result v5
 
@@ -4504,7 +4504,7 @@
     iput v1, v0, Landroid/support/v4/view/ViewPager;->mLastMotionX:F
 
     .line 2120
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->getScrollX()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getScrollX()I
 
     move-result v1
 
@@ -4516,7 +4516,7 @@
 
     .line 2122
     .local v15, scrollX:F
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->getWidth()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getWidth()I
 
     move-result v16
 
@@ -4651,13 +4651,13 @@
     .line 2143
     float-to-int v1, v15
 
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->getScrollY()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getScrollY()I
 
     move-result v2
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v1, v2}, Landroid/support/v4/view/ViewPager;->scrollTo(II)V
+    invoke-virtual {v0, v1, v2}, Landroid/view/View;->scrollTo(II)V
 
     .line 2144
     float-to-int v1, v15
@@ -4739,7 +4739,7 @@
     .line 2501
     new-instance v0, Landroid/support/v4/view/ViewPager$LayoutParams;
 
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -4968,18 +4968,18 @@
     .line 314
     const/4 v3, 0x0
 
-    invoke-virtual {p0, v3}, Landroid/support/v4/view/ViewPager;->setWillNotDraw(Z)V
+    invoke-virtual {p0, v3}, Landroid/view/View;->setWillNotDraw(Z)V
 
     .line 315
     const/high16 v3, 0x4
 
-    invoke-virtual {p0, v3}, Landroid/support/v4/view/ViewPager;->setDescendantFocusability(I)V
+    invoke-virtual {p0, v3}, Landroid/view/ViewGroup;->setDescendantFocusability(I)V
 
     .line 316
-    invoke-virtual {p0, v5}, Landroid/support/v4/view/ViewPager;->setFocusable(Z)V
+    invoke-virtual {p0, v5}, Landroid/view/View;->setFocusable(Z)V
 
     .line 317
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -5110,7 +5110,7 @@
 
     .prologue
     .line 1173
-    invoke-super {p0}, Landroid/view/ViewGroup;->onAttachedToWindow()V
+    invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
 
     .line 1174
     const/4 v0, 0x1
@@ -5127,7 +5127,7 @@
 
     .prologue
     .line 1997
-    invoke-super/range {p0 .. p1}, Landroid/view/ViewGroup;->onDraw(Landroid/graphics/Canvas;)V
+    invoke-super/range {p0 .. p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
     .line 2000
     move-object/from16 v0, p0
@@ -5159,13 +5159,13 @@
     if-eqz v13, :cond_2
 
     .line 2001
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->getScrollX()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getScrollX()I
 
     move-result v10
 
     .line 2002
     .local v10, scrollX:I
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->getWidth()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getWidth()I
 
     move-result v11
 
@@ -5971,7 +5971,7 @@
     iput-boolean v0, v1, Landroid/support/v4/view/ViewPager;->mInLayout:Z
 
     .line 1315
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->getChildCount()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v5
 
@@ -5985,31 +5985,31 @@
 
     .line 1318
     .local v7, height:I
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->getPaddingLeft()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getPaddingLeft()I
 
     move-result v15
 
     .line 1319
     .local v15, paddingLeft:I
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->getPaddingTop()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getPaddingTop()I
 
     move-result v17
 
     .line 1320
     .local v17, paddingTop:I
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->getPaddingRight()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getPaddingRight()I
 
     move-result v16
 
     .line 1321
     .local v16, paddingRight:I
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->getPaddingBottom()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getPaddingBottom()I
 
     move-result v14
 
     .line 1322
     .local v14, paddingBottom:I
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->getScrollX()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getScrollX()I
 
     move-result v18
 
@@ -6028,7 +6028,7 @@
     .line 1329
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v10}, Landroid/support/v4/view/ViewPager;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v0, v10}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -6263,7 +6263,7 @@
     .line 1382
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v10}, Landroid/support/v4/view/ViewPager;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v0, v10}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -6514,10 +6514,10 @@
 
     move/from16 v2, v22
 
-    invoke-virtual {v0, v1, v2}, Landroid/support/v4/view/ViewPager;->setMeasuredDimension(II)V
+    invoke-virtual {v0, v1, v2}, Landroid/view/View;->setMeasuredDimension(II)V
 
     .line 1187
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->getMeasuredWidth()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v15
 
@@ -6546,13 +6546,13 @@
     iput v0, v1, Landroid/support/v4/view/ViewPager;->mGutterSize:I
 
     .line 1192
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->getPaddingLeft()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getPaddingLeft()I
 
     move-result v21
 
     sub-int v21, v15, v21
 
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->getPaddingRight()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getPaddingRight()I
 
     move-result v22
 
@@ -6560,17 +6560,17 @@
 
     .line 1193
     .local v5, childWidthSize:I
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->getMeasuredHeight()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v21
 
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->getPaddingTop()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getPaddingTop()I
 
     move-result v22
 
     sub-int v21, v21, v22
 
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->getPaddingBottom()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getPaddingBottom()I
 
     move-result v22
 
@@ -6578,7 +6578,7 @@
 
     .line 1200
     .local v4, childHeightSize:I
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->getChildCount()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v16
 
@@ -6595,7 +6595,7 @@
     .line 1202
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v12}, Landroid/support/v4/view/ViewPager;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v0, v12}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
@@ -6937,7 +6937,7 @@
     iput-boolean v0, v1, Landroid/support/v4/view/ViewPager;->mInLayout:Z
 
     .line 1255
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->getChildCount()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v16
 
@@ -6952,7 +6952,7 @@
     .line 1257
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v12}, Landroid/support/v4/view/ViewPager;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v0, v12}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
@@ -7054,31 +7054,31 @@
     if-lez v14, :cond_2
 
     .line 1485
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->getScrollX()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getScrollX()I
 
     move-result v12
 
     .line 1486
     .local v12, scrollX:I
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->getPaddingLeft()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getPaddingLeft()I
 
     move-result v10
 
     .line 1487
     .local v10, paddingLeft:I
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->getPaddingRight()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getPaddingRight()I
 
     move-result v11
 
     .line 1488
     .local v11, paddingRight:I
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->getWidth()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getWidth()I
 
     move-result v13
 
     .line 1489
     .local v13, width:I
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->getChildCount()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v4
 
@@ -7093,7 +7093,7 @@
     .line 1491
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v8}, Landroid/support/v4/view/ViewPager;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v0, v8}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
@@ -7288,7 +7288,7 @@
 
     .prologue
     .line 2438
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getChildCount()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v1
 
@@ -7319,7 +7319,7 @@
     if-eq v3, v2, :cond_2
 
     .line 2449
-    invoke-virtual {p0, v3}, Landroid/support/v4/view/ViewPager;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -7408,7 +7408,7 @@
     if-nez v1, :cond_0
 
     .line 1097
-    invoke-super {p0, p1}, Landroid/view/ViewGroup;->onRestoreInstanceState(Landroid/os/Parcelable;)V
+    invoke-super {p0, p1}, Landroid/view/View;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
     .line 1112
     :goto_0
@@ -7422,11 +7422,11 @@
 
     .line 1102
     .local v0, ss:Landroid/support/v4/view/ViewPager$SavedState;
-    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager$SavedState;->getSuperState()Landroid/os/Parcelable;
+    invoke-virtual {v0}, Landroid/view/AbsSavedState;->getSuperState()Landroid/os/Parcelable;
 
     move-result-object v1
 
-    invoke-super {p0, v1}, Landroid/view/ViewGroup;->onRestoreInstanceState(Landroid/os/Parcelable;)V
+    invoke-super {p0, v1}, Landroid/view/View;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
     .line 1104
     iget-object v1, p0, Landroid/support/v4/view/ViewPager;->mAdapter:Landroid/support/v4/view/PagerAdapter;
@@ -7477,7 +7477,7 @@
 
     .prologue
     .line 1085
-    invoke-super {p0}, Landroid/view/ViewGroup;->onSaveInstanceState()Landroid/os/Parcelable;
+    invoke-super {p0}, Landroid/view/View;->onSaveInstanceState()Landroid/os/Parcelable;
 
     move-result-object v1
 
@@ -7521,7 +7521,7 @@
 
     .prologue
     .line 1274
-    invoke-super {p0, p1, p2, p3, p4}, Landroid/view/ViewGroup;->onSizeChanged(IIII)V
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/view/View;->onSizeChanged(IIII)V
 
     .line 1277
     if-eq p1, p3, :cond_0
@@ -8067,13 +8067,13 @@
     iput-boolean v0, v1, Landroid/support/v4/view/ViewPager;->mPopulatePending:Z
 
     .line 1796
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->getWidth()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getWidth()I
 
     move-result v17
 
     .line 1797
     .local v17, width:I
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->getScrollX()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getScrollX()I
 
     move-result v14
 
@@ -8529,7 +8529,7 @@
     if-nez v22, :cond_1
 
     .line 815
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->getWindowToken()Landroid/os/IBinder;
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
 
     move-result-object v22
 
@@ -8904,7 +8904,7 @@
     invoke-virtual {v0, v1}, Landroid/support/v4/view/PagerAdapter;->finishUpdate(Landroid/view/ViewGroup;)V
 
     .line 915
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->getChildCount()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v6
 
@@ -8919,7 +8919,7 @@
     .line 917
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v13}, Landroid/support/v4/view/ViewPager;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v0, v13}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v5
 
@@ -9434,14 +9434,14 @@
     .restart local v6       #childCount:I
     .restart local v13       #i:I
     :cond_1b
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->hasFocus()Z
+    invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->hasFocus()Z
 
     move-result v22
 
     if-eqz v22, :cond_1
 
     .line 929
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->findFocus()Landroid/view/View;
+    invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->findFocus()Landroid/view/View;
 
     move-result-object v9
 
@@ -9481,7 +9481,7 @@
     const/4 v13, 0x0
 
     :goto_e
-    invoke-virtual/range {p0 .. p0}, Landroid/support/v4/view/ViewPager;->getChildCount()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v22
 
@@ -9492,7 +9492,7 @@
     .line 933
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v13}, Landroid/support/v4/view/ViewPager;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v0, v13}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v5
 
@@ -9633,7 +9633,7 @@
     iput v6, p0, Landroid/support/v4/view/ViewPager;->mCurItem:I
 
     .line 375
-    invoke-virtual {p0, v6, v6}, Landroid/support/v4/view/ViewPager;->scrollTo(II)V
+    invoke-virtual {p0, v6, v6}, Landroid/view/View;->scrollTo(II)V
 
     .line 378
     .end local v0           #i:I
@@ -9953,7 +9953,7 @@
     if-eqz v0, :cond_7
 
     .line 488
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v5
 
@@ -10058,7 +10058,7 @@
     invoke-direct {p0}, Landroid/support/v4/view/ViewPager;->completeScroll()V
 
     .line 510
-    invoke-virtual {p0, v1, v7}, Landroid/support/v4/view/ViewPager;->scrollTo(II)V
+    invoke-virtual {p0, v1, v7}, Landroid/view/View;->scrollTo(II)V
 
     goto/16 :goto_0
 .end method
@@ -10179,7 +10179,7 @@
     iput p1, p0, Landroid/support/v4/view/ViewPager;->mPageMargin:I
 
     .line 588
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v1
 
@@ -10188,7 +10188,7 @@
     invoke-direct {p0, v1, v1, p1, v0}, Landroid/support/v4/view/ViewPager;->recomputeScrollPosition(IIII)V
 
     .line 591
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->requestLayout()V
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 
     .line 592
     return-void
@@ -10200,7 +10200,7 @@
 
     .prologue
     .line 621
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -10229,7 +10229,7 @@
     .line 610
     if-eqz p1, :cond_0
 
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->refreshDrawableState()V
+    invoke-virtual {p0}, Landroid/view/View;->refreshDrawableState()V
 
     .line 611
     :cond_0
@@ -10238,10 +10238,10 @@
     const/4 v0, 0x1
 
     :goto_0
-    invoke-virtual {p0, v0}, Landroid/support/v4/view/ViewPager;->setWillNotDraw(Z)V
+    invoke-virtual {p0, v0}, Landroid/view/View;->setWillNotDraw(Z)V
 
     .line 612
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     .line 613
     return-void
@@ -10378,7 +10378,7 @@
 
     .prologue
     .line 666
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getChildCount()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v1
 
@@ -10395,13 +10395,13 @@
 
     .line 671
     :cond_0
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getScrollX()I
+    invoke-virtual {p0}, Landroid/view/View;->getScrollX()I
 
     move-result v2
 
     .line 672
     .local v2, sx:I
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getScrollY()I
+    invoke-virtual {p0}, Landroid/view/View;->getScrollY()I
 
     move-result v3
 
@@ -10444,7 +10444,7 @@
     invoke-direct {p0, v1}, Landroid/support/v4/view/ViewPager;->setScrollState(I)V
 
     .line 685
-    invoke-virtual {p0}, Landroid/support/v4/view/ViewPager;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v12
 
@@ -10591,7 +10591,7 @@
 
     .prologue
     .line 626
-    invoke-super {p0, p1}, Landroid/view/ViewGroup;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+    invoke-super {p0, p1}, Landroid/view/View;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
 
     move-result v0
 

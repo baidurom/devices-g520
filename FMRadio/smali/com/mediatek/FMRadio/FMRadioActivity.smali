@@ -3,11 +3,11 @@
 .source "FMRadioActivity.java"
 
 # interfaces
-.implements Landroid/widget/PopupMenu$OnMenuItemClickListener;
 .implements Landroid/widget/PopupMenu$OnDismissListener;
+.implements Landroid/widget/PopupMenu$OnMenuItemClickListener;
+.implements Lcom/mediatek/FMRadio/FMRecordDialogFragment$OnRecordingDialogClickListener;
 .implements Lcom/mediatek/FMRadio/dialogs/NoAntennaDialog$NoAntennaListener;
 .implements Lcom/mediatek/FMRadio/dialogs/SearchChannelsDialog$CancelSearchListener;
-.implements Lcom/mediatek/FMRadio/FMRecordDialogFragment$OnRecordingDialogClickListener;
 
 
 # annotations
@@ -1213,7 +1213,7 @@
     .line 1715
     iget-object v1, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mSDListener:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v1, v0}, Lcom/mediatek/FMRadio/FMRadioActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v1, v0}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 1716
     const/4 v1, 0x1
@@ -1285,7 +1285,7 @@
     if-eqz v0, :cond_0
 
     .line 2074
-    invoke-virtual {v0}, Lcom/mediatek/FMRadio/dialogs/SearchChannelsDialog;->dismissAllowingStateLoss()V
+    invoke-virtual {v0}, Landroid/app/DialogFragment;->dismissAllowingStateLoss()V
 
     .line 2076
     :cond_0
@@ -1303,7 +1303,7 @@
 
     const/4 v3, 0x0
 
-    invoke-virtual {p0, v2, v3}, Lcom/mediatek/FMRadio/FMRadioActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-virtual {p0, v2, v3}, Landroid/content/ContextWrapper;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
@@ -1342,7 +1342,7 @@
     .line 1051
     const/4 v1, 0x1
 
-    invoke-virtual {p0, v0, v1}, Lcom/mediatek/FMRadio/FMRadioActivity;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v0, v1}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
 
     .line 1052
     return-void
@@ -1389,7 +1389,7 @@
     .line 516
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mSDListener:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/FMRadio/FMRadioActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 517
     iput-boolean v1, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mIsSDListenerRegistered:Z
@@ -1424,7 +1424,7 @@
     .line 2021
     iget-object v1, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mServiceConnection:Landroid/content/ServiceConnection;
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/FMRadio/FMRadioActivity;->unbindService(Landroid/content/ServiceConnection;)V
+    invoke-virtual {p0, v1}, Landroid/content/ContextWrapper;->unbindService(Landroid/content/ServiceConnection;)V
 
     .line 2022
     iput-boolean v3, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mIsServiceBinded:Z
@@ -1442,7 +1442,7 @@
 
     invoke-direct {v1, p0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/FMRadio/FMRadioActivity;->stopService(Landroid/content/Intent;)Z
+    invoke-virtual {p0, v1}, Landroid/content/ContextWrapper;->stopService(Landroid/content/Intent;)Z
 
     move-result v0
 
@@ -1579,7 +1579,7 @@
 
     .prologue
     .line 2182
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRadioActivity;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -1602,7 +1602,7 @@
     .line 2187
     const v1, 0x7f060034
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/FMRadio/FMRadioActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -1620,7 +1620,7 @@
     .line 2190
     const v1, 0x7f060032
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/FMRadio/FMRadioActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -1638,7 +1638,7 @@
     .line 2193
     const v1, 0x7f060033
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/FMRadio/FMRadioActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -1656,7 +1656,7 @@
     .line 2195
     const v1, 0x7f060031
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/FMRadio/FMRadioActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -1667,7 +1667,7 @@
     .line 2196
     const v1, 0x7f060040
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/FMRadio/FMRadioActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -1678,7 +1678,7 @@
     .line 2197
     const v1, 0x7f060041
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/FMRadio/FMRadioActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -1689,7 +1689,7 @@
     .line 2198
     const v1, 0x7f06003f
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/FMRadio/FMRadioActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -1700,7 +1700,7 @@
     .line 2199
     const v1, 0x7f06003c
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/FMRadio/FMRadioActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -1711,7 +1711,7 @@
     .line 2200
     const v1, 0x7f06003d
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/FMRadio/FMRadioActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -1722,7 +1722,7 @@
     .line 2201
     const v1, 0x7f06003e
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/FMRadio/FMRadioActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -1733,7 +1733,7 @@
     .line 2202
     const v1, 0x7f060035
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/FMRadio/FMRadioActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -1744,7 +1744,7 @@
     .line 2203
     const v1, 0x7f060030
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/FMRadio/FMRadioActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -1755,7 +1755,7 @@
     .line 2204
     const v1, 0x7f060038
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/FMRadio/FMRadioActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -1766,7 +1766,7 @@
     .line 2205
     const v1, 0x7f060039
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/FMRadio/FMRadioActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -1777,7 +1777,7 @@
     .line 2206
     const v1, 0x7f060037
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/FMRadio/FMRadioActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -1788,7 +1788,7 @@
     .line 2207
     const v1, 0x7f06003a
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/FMRadio/FMRadioActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -1803,7 +1803,7 @@
 
     const v3, 0x7f060049
 
-    invoke-virtual {p0, v3}, Lcom/mediatek/FMRadio/FMRadioActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
@@ -2141,22 +2141,22 @@
     .line 1567
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonDecrease:Landroid/widget/ImageButton;
 
-    invoke-virtual {v0, p1}, Landroid/widget/ImageButton;->setEnabled(Z)V
+    invoke-virtual {v0, p1}, Landroid/view/View;->setEnabled(Z)V
 
     .line 1568
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonPrevStation:Landroid/widget/ImageButton;
 
-    invoke-virtual {v0, p1}, Landroid/widget/ImageButton;->setEnabled(Z)V
+    invoke-virtual {v0, p1}, Landroid/view/View;->setEnabled(Z)V
 
     .line 1569
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonNextStation:Landroid/widget/ImageButton;
 
-    invoke-virtual {v0, p1}, Landroid/widget/ImageButton;->setEnabled(Z)V
+    invoke-virtual {v0, p1}, Landroid/view/View;->setEnabled(Z)V
 
     .line 1570
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonIncrease:Landroid/widget/ImageButton;
 
-    invoke-virtual {v0, p1}, Landroid/widget/ImageButton;->setEnabled(Z)V
+    invoke-virtual {v0, p1}, Landroid/view/View;->setEnabled(Z)V
 
     .line 1571
     return-void
@@ -2172,19 +2172,19 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setEnabled(Z)V
 
     .line 1626
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonPlayback:Landroid/widget/ImageButton;
 
-    invoke-virtual {v0, p1}, Landroid/widget/ImageButton;->setEnabled(Z)V
+    invoke-virtual {v0, p1}, Landroid/view/View;->setEnabled(Z)V
 
     .line 1627
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonStop:Landroid/widget/ImageButton;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setEnabled(Z)V
 
     .line 1628
     return-void
@@ -2199,19 +2199,19 @@
     .line 1637
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonRecord:Landroid/widget/ImageButton;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setEnabled(Z)V
 
     .line 1638
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonPlayback:Landroid/widget/ImageButton;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setEnabled(Z)V
 
     .line 1639
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonStop:Landroid/widget/ImageButton;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setEnabled(Z)V
 
     .line 1640
     return-void
@@ -2319,17 +2319,17 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setEnabled(Z)V
 
     .line 1620
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonPlayback:Landroid/widget/ImageButton;
 
-    invoke-virtual {v0, v2}, Landroid/widget/ImageButton;->setEnabled(Z)V
+    invoke-virtual {v0, v2}, Landroid/view/View;->setEnabled(Z)V
 
     .line 1621
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonStop:Landroid/widget/ImageButton;
 
-    invoke-virtual {v0, v2}, Landroid/widget/ImageButton;->setEnabled(Z)V
+    invoke-virtual {v0, v2}, Landroid/view/View;->setEnabled(Z)V
 
     .line 1622
     return-void
@@ -2344,17 +2344,17 @@
     .line 1613
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonRecord:Landroid/widget/ImageButton;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setEnabled(Z)V
 
     .line 1614
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonPlayback:Landroid/widget/ImageButton;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setEnabled(Z)V
 
     .line 1615
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonStop:Landroid/widget/ImageButton;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setEnabled(Z)V
 
     .line 1616
     return-void
@@ -2369,19 +2369,19 @@
     .line 1631
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonRecord:Landroid/widget/ImageButton;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setEnabled(Z)V
 
     .line 1632
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonPlayback:Landroid/widget/ImageButton;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setEnabled(Z)V
 
     .line 1633
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonStop:Landroid/widget/ImageButton;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setEnabled(Z)V
 
     .line 1634
     return-void
@@ -2512,7 +2512,7 @@
     .line 1764
     iget-object v6, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonPlayback:Landroid/widget/ImageButton;
 
-    invoke-virtual {v6, v4}, Landroid/widget/ImageButton;->setEnabled(Z)V
+    invoke-virtual {v6, v4}, Landroid/view/View;->setEnabled(Z)V
 
     .line 1767
     :cond_1
@@ -2580,7 +2580,7 @@
     .line 1781
     iget-object v4, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mRLRecordInfo:Landroid/widget/RelativeLayout;
 
-    invoke-virtual {v4, v9}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+    invoke-virtual {v4, v9}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_1
 
@@ -2594,7 +2594,7 @@
     :cond_4
     iget-object v6, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonPlayback:Landroid/widget/ImageButton;
 
-    invoke-virtual {v6, v5}, Landroid/widget/ImageButton;->setEnabled(Z)V
+    invoke-virtual {v6, v5}, Landroid/view/View;->setEnabled(Z)V
 
     goto :goto_2
 
@@ -2631,7 +2631,7 @@
     .line 1789
     iget-object v4, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mRLRecordInfo:Landroid/widget/RelativeLayout;
 
-    invoke-virtual {v4, v5}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+    invoke-virtual {v4, v5}, Landroid/view/View;->setVisibility(I)V
 
     goto/16 :goto_1
 
@@ -2674,7 +2674,7 @@
     .line 1801
     iget-object v4, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mRLRecordInfo:Landroid/widget/RelativeLayout;
 
-    invoke-virtual {v4, v5}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+    invoke-virtual {v4, v5}, Landroid/view/View;->setVisibility(I)V
 
     goto/16 :goto_1
 
@@ -2686,7 +2686,7 @@
     .line 1806
     iget-object v4, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mRLRecordInfo:Landroid/widget/RelativeLayout;
 
-    invoke-virtual {v4, v9}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+    invoke-virtual {v4, v9}, Landroid/view/View;->setVisibility(I)V
 
     goto/16 :goto_1
 
@@ -2733,7 +2733,7 @@
 
     const v1, 0x7f020009
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setImageResource(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 1068
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mTextStationName:Landroid/widget/TextView;
@@ -2758,7 +2758,7 @@
 
     const v1, 0x7f020007
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setImageResource(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 1073
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mTextStationName:Landroid/widget/TextView;
@@ -3024,56 +3024,56 @@
 
     iget-object v1, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonClickListener:Landroid/view/View$OnClickListener;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 2221
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonStop:Landroid/widget/ImageButton;
 
     iget-object v1, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonClickListener:Landroid/view/View$OnClickListener;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 2222
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonPlayback:Landroid/widget/ImageButton;
 
     iget-object v1, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonClickListener:Landroid/view/View$OnClickListener;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 2223
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonAddToFavorite:Landroid/widget/ImageButton;
 
     iget-object v1, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonClickListener:Landroid/view/View$OnClickListener;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 2224
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonDecrease:Landroid/widget/ImageButton;
 
     iget-object v1, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonClickListener:Landroid/view/View$OnClickListener;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 2225
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonIncrease:Landroid/widget/ImageButton;
 
     iget-object v1, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonClickListener:Landroid/view/View$OnClickListener;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 2226
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonPrevStation:Landroid/widget/ImageButton;
 
     iget-object v1, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonClickListener:Landroid/view/View$OnClickListener;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 2227
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonNextStation:Landroid/widget/ImageButton;
 
     iget-object v1, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonClickListener:Landroid/view/View$OnClickListener;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 2228
     return-void
@@ -3084,7 +3084,7 @@
 
     .prologue
     .line 1079
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRadioActivity;->getLastNonConfigurationInstance()Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/app/Activity;->getLastNonConfigurationInstance()Ljava/lang/Object;
 
     move-result-object v2
 
@@ -3098,7 +3098,7 @@
     invoke-static {v2, v3}, Lcom/mediatek/FMRadio/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1082
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRadioActivity;->getLastNonConfigurationInstance()Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/app/Activity;->getLastNonConfigurationInstance()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -3526,7 +3526,7 @@
 
     iget-object v1, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mAnimation:Landroid/view/animation/Animation;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setAnimation(Landroid/view/animation/Animation;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setAnimation(Landroid/view/animation/Animation;)V
 
     .line 1476
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mAnimImage:Landroid/widget/ImageView;
@@ -3562,7 +3562,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setAnimation(Landroid/view/animation/Animation;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setAnimation(Landroid/view/animation/Animation;)V
 
     .line 1486
     return-void
@@ -3578,13 +3578,13 @@
     const/4 v5, 0x0
 
     .line 1728
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRadioActivity;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
     .line 1729
     .local v0, actionBar:Landroid/app/ActionBar;
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRadioActivity;->invalidateOptionsMenu()V
+    invoke-virtual {p0}, Landroid/app/Activity;->invalidateOptionsMenu()V
 
     .line 1732
     invoke-virtual {v0, p1}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
@@ -3603,7 +3603,7 @@
     .line 1737
     const v3, 0x7f06003b
 
-    invoke-virtual {p0, v3}, Lcom/mediatek/FMRadio/FMRadioActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -3613,7 +3613,7 @@
     .local v2, recBar:Landroid/widget/LinearLayout;
     const v3, 0x7f060036
 
-    invoke-virtual {p0, v3}, Lcom/mediatek/FMRadio/FMRadioActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -3626,7 +3626,7 @@
     move v3, v4
 
     :goto_1
-    invoke-virtual {v1, v3}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
 
     .line 1741
     if-eqz p1, :cond_2
@@ -3634,7 +3634,7 @@
     move v3, v5
 
     :goto_2
-    invoke-virtual {v2, v3}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    invoke-virtual {v2, v3}, Landroid/view/View;->setVisibility(I)V
 
     .line 1742
     iget-object v3, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonAddToFavorite:Landroid/widget/ImageButton;
@@ -3642,7 +3642,7 @@
     if-eqz p1, :cond_3
 
     :goto_3
-    invoke-virtual {v3, v4}, Landroid/widget/ImageButton;->setVisibility(I)V
+    invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 1744
     return-void
@@ -3813,7 +3813,7 @@
 
     const v3, 0x7f020007
 
-    invoke-virtual {v2, v3}, Landroid/widget/ImageButton;->setImageResource(I)V
+    invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 565
     iget-object v2, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mTextStationName:Landroid/widget/TextView;
@@ -3905,7 +3905,7 @@
 
     const v3, 0x7f020009
 
-    invoke-virtual {v2, v3}, Landroid/widget/ImageButton;->setImageResource(I)V
+    invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 591
     iget-object v2, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mTextStationName:Landroid/widget/TextView;
@@ -4036,7 +4036,7 @@
     :pswitch_1
     const v1, 0x7f04003a
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/FMRadio/FMRadioActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -4047,7 +4047,7 @@
     :pswitch_2
     const v1, 0x7f04003b
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/FMRadio/FMRadioActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -4058,7 +4058,7 @@
     :pswitch_3
     const v1, 0x7f04003c
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/FMRadio/FMRadioActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -4069,7 +4069,7 @@
     :pswitch_4
     const v1, 0x7f04003d
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/FMRadio/FMRadioActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -4116,7 +4116,7 @@
     :pswitch_0
     const v0, 0x7f040039
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/FMRadio/FMRadioActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -4438,7 +4438,7 @@
 
     const v2, 0x7f020009
 
-    invoke-virtual {v1, v2}, Landroid/widget/ImageButton;->setImageResource(I)V
+    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 1457
     iget-object v1, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mTextStationName:Landroid/widget/TextView;
@@ -4493,7 +4493,7 @@
 
     const v2, 0x7f020007
 
-    invoke-virtual {v1, v2}, Landroid/widget/ImageButton;->setImageResource(I)V
+    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 1463
     iget-object v1, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mTextStationName:Landroid/widget/TextView;
@@ -4633,7 +4633,7 @@
     invoke-static {v2, v3}, Lcom/mediatek/FMRadio/LogUtils;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 989
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRadioActivity;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v2
 
@@ -4642,12 +4642,12 @@
     .line 991
     const/16 v2, 0xa
 
-    invoke-virtual {p0, v2}, Lcom/mediatek/FMRadio/FMRadioActivity;->setVolumeControlStream(I)V
+    invoke-virtual {p0, v2}, Landroid/app/Activity;->setVolumeControlStream(I)V
 
     .line 992
     const v2, 0x7f030006
 
-    invoke-virtual {p0, v2}, Lcom/mediatek/FMRadio/FMRadioActivity;->setContentView(I)V
+    invoke-virtual {p0, v2}, Landroid/app/Activity;->setContentView(I)V
 
     .line 994
     new-instance v0, Landroid/content/IntentFilter;
@@ -4699,7 +4699,7 @@
     .line 1008
     iget-object v2, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mBroadcastReceiver:Lcom/mediatek/FMRadio/FMRadioActivity$FMBroadcastReceiver;
 
-    invoke-virtual {p0, v2, v0}, Lcom/mediatek/FMRadio/FMRadioActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v2, v0}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 1012
     invoke-direct {p0}, Lcom/mediatek/FMRadio/FMRadioActivity;->initUIComponent()V
@@ -4734,7 +4734,7 @@
 
     const v3, 0x7f020009
 
-    invoke-virtual {v2, v3}, Landroid/widget/ImageButton;->setImageResource(I)V
+    invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 1026
     iget-object v2, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mTextStationName:Landroid/widget/TextView;
@@ -4775,7 +4775,7 @@
     .line 1036
     const v2, 0x7f060043
 
-    invoke-virtual {p0, v2}, Lcom/mediatek/FMRadio/FMRadioActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -4793,7 +4793,7 @@
     .line 1039
     const-string v2, "audio"
 
-    invoke-virtual {p0, v2}, Lcom/mediatek/FMRadio/FMRadioActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v2}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -4817,7 +4817,7 @@
 
     const v3, 0x7f020007
 
-    invoke-virtual {v2, v3}, Landroid/widget/ImageButton;->setImageResource(I)V
+    invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
     goto :goto_0
 .end method
@@ -4835,7 +4835,7 @@
     invoke-static {v1, v2}, Lcom/mediatek/FMRadio/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1273
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRadioActivity;->getMenuInflater()Landroid/view/MenuInflater;
+    invoke-virtual {p0}, Landroid/app/Activity;->getMenuInflater()Landroid/view/MenuInflater;
 
     move-result-object v0
 
@@ -4906,7 +4906,7 @@
     .line 1235
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mSDListener:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/FMRadio/FMRadioActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 1236
     const/4 v0, 0x0
@@ -4968,7 +4968,7 @@
     .line 1258
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mBroadcastReceiver:Lcom/mediatek/FMRadio/FMRadioActivity$FMBroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/FMRadio/FMRadioActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 1259
     iput-object v2, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mBroadcastReceiver:Lcom/mediatek/FMRadio/FMRadioActivity$FMBroadcastReceiver;
@@ -5007,7 +5007,7 @@
     invoke-static {v0, v1}, Lcom/mediatek/FMRadio/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 2012
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRadioActivity;->invalidateOptionsMenu()V
+    invoke-virtual {p0}, Landroid/app/Activity;->invalidateOptionsMenu()V
 
     .line 2013
     return-void
@@ -5146,7 +5146,7 @@
 
     aput-object v8, v7, v5
 
-    invoke-virtual {v0, v7}, Landroid/widget/EditText;->setFilters([Landroid/text/InputFilter;)V
+    invoke-virtual {v0, v7}, Landroid/widget/TextView;->setFilters([Landroid/text/InputFilter;)V
 
     .line 1896
     new-array v5, v5, [Landroid/text/InputFilter;
@@ -5159,7 +5159,7 @@
 
     aput-object v7, v5, v6
 
-    invoke-virtual {v1, v5}, Landroid/widget/EditText;->setFilters([Landroid/text/InputFilter;)V
+    invoke-virtual {v1, v5}, Landroid/widget/TextView;->setFilters([Landroid/text/InputFilter;)V
 
     .line 1899
     new-instance v5, Landroid/app/AlertDialog$Builder;
@@ -5205,7 +5205,7 @@
     .line 1947
     iget-object v5, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mDialogInput:Landroid/app/AlertDialog;
 
-    invoke-virtual {v5}, Landroid/app/AlertDialog;->show()V
+    invoke-virtual {v5}, Landroid/app/Dialog;->show()V
 
     goto/16 :goto_0
 
@@ -5436,7 +5436,7 @@
 
     const v5, 0x7f060049
 
-    invoke-virtual {p0, v5}, Lcom/mediatek/FMRadio/FMRadioActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v5}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v5
 
@@ -6100,13 +6100,13 @@
     .line 1192
     iget-object v5, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mButtonPlayback:Landroid/widget/ImageButton;
 
-    invoke-virtual {v5, v6}, Landroid/widget/ImageButton;->setEnabled(Z)V
+    invoke-virtual {v5, v6}, Landroid/view/View;->setEnabled(Z)V
 
     .line 1195
     :cond_9
     const-string v5, "audio"
 
-    invoke-virtual {p0, v5}, Lcom/mediatek/FMRadio/FMRadioActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v5}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v5
 
@@ -6268,7 +6268,7 @@
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/FMRadio/FMRadioActivity;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
     move-result-object v0
 
@@ -6298,7 +6298,7 @@
 
     iget-object v1, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mServiceConnection:Landroid/content/ServiceConnection;
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/mediatek/FMRadio/FMRadioActivity;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
+    invoke-virtual {p0, v0, v1, v2}, Landroid/content/ContextWrapper;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
     move-result v0
 
@@ -6317,7 +6317,7 @@
     invoke-static {v0, v1}, Lcom/mediatek/FMRadio/LogUtils;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1126
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRadioActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 
@@ -6354,7 +6354,7 @@
     .line 1221
     iget-object v0, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mServiceConnection:Landroid/content/ServiceConnection;
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/FMRadio/FMRadioActivity;->unbindService(Landroid/content/ServiceConnection;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->unbindService(Landroid/content/ServiceConnection;)V
 
     .line 1222
     const/4 v0, 0x0
@@ -6391,7 +6391,7 @@
 
     const-string v2, "NoAntenna"
 
-    invoke-virtual {v0, v1, v2}, Lcom/mediatek/FMRadio/dialogs/NoAntennaDialog;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Landroid/app/DialogFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
     .line 2041
     iget-object v1, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mFragmentManager:Landroid/app/FragmentManager;
@@ -6418,7 +6418,7 @@
 
     const-string v2, "SaveRecording"
 
-    invoke-virtual {v0, v1, v2}, Lcom/mediatek/FMRadio/FMRecordDialogFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Landroid/app/DialogFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
     .line 2055
     iget-object v1, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mFragmentManager:Landroid/app/FragmentManager;
@@ -6444,7 +6444,7 @@
 
     const-string v2, "Search"
 
-    invoke-virtual {v0, v1, v2}, Lcom/mediatek/FMRadio/dialogs/SearchChannelsDialog;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Landroid/app/DialogFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
     .line 2064
     iget-object v1, p0, Lcom/mediatek/FMRadio/FMRadioActivity;->mFragmentManager:Landroid/app/FragmentManager;

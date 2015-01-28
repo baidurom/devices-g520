@@ -116,7 +116,7 @@
     .line 296
     sget-object v0, Lcom/mediatek/bluetooth/share/BluetoothShareTask$Direction;->$VALUES:[Lcom/mediatek/bluetooth/share/BluetoothShareTask$Direction;
 
-    invoke-virtual {v0}, [Lcom/mediatek/bluetooth/share/BluetoothShareTask$Direction;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

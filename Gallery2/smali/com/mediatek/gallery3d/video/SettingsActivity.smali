@@ -415,7 +415,7 @@
     .line 350
     .local v7, e:Landroid/database/sqlite/SQLiteException;
     :try_start_1
-    invoke-virtual {v7}, Landroid/database/sqlite/SQLiteException;->printStackTrace()V
+    invoke-virtual {v7}, Ljava/lang/Throwable;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -751,7 +751,7 @@
     .line 376
     .local v7, e:Landroid/database/sqlite/SQLiteException;
     :try_start_1
-    invoke-virtual {v7}, Landroid/database/sqlite/SQLiteException;->printStackTrace()V
+    invoke-virtual {v7}, Ljava/lang/Throwable;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -841,7 +841,7 @@
 
     const v1, 0x7f0c016c
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/gallery3d/video/SettingsActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -903,7 +903,7 @@
 
     aput-object v5, v3, v4
 
-    invoke-virtual {p0, v2, v3}, Lcom/mediatek/gallery3d/video/SettingsActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v2, v3}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -969,7 +969,7 @@
 
     aput-object v5, v3, v4
 
-    invoke-virtual {p0, v2, v3}, Lcom/mediatek/gallery3d/video/SettingsActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v2, v3}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1089,7 +1089,7 @@
     :goto_1
     iget-object v3, p0, Lcom/mediatek/gallery3d/video/SettingsActivity;->mHttpProxyEnabler:Landroid/preference/CheckBoxPreference;
 
-    invoke-virtual {v3, v0}, Landroid/preference/CheckBoxPreference;->setChecked(Z)V
+    invoke-virtual {v3, v0}, Landroid/preference/TwoStatePreference;->setChecked(Z)V
 
     .line 176
     const-string v3, "SettingsActivity"
@@ -1247,7 +1247,7 @@
     :goto_1
     iget-object v3, p0, Lcom/mediatek/gallery3d/video/SettingsActivity;->mRtspProxyEnabler:Landroid/preference/CheckBoxPreference;
 
-    invoke-virtual {v3, v0}, Landroid/preference/CheckBoxPreference;->setChecked(Z)V
+    invoke-virtual {v3, v0}, Landroid/preference/TwoStatePreference;->setChecked(Z)V
 
     .line 161
     const-string v3, "SettingsActivity"
@@ -1618,7 +1618,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 245
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/video/SettingsActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
     .line 249
     .end local v0           #intent:Landroid/content/Intent;
@@ -1644,7 +1644,7 @@
 
     .line 456
     .local v0, limitDialog:Lcom/mediatek/gallery3d/video/LimitDialog;
-    invoke-virtual {v0}, Lcom/mediatek/gallery3d/video/LimitDialog;->getWindow()Landroid/view/Window;
+    invoke-virtual {v0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object v1
 
@@ -1657,10 +1657,10 @@
 
     invoke-direct {v1, p0, p1}, Lcom/mediatek/gallery3d/video/SettingsActivity$4;-><init>(Lcom/mediatek/gallery3d/video/SettingsActivity;I)V
 
-    invoke-virtual {v0, v1}, Lcom/mediatek/gallery3d/video/LimitDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+    invoke-virtual {v0, v1}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
     .line 468
-    invoke-virtual {v0}, Lcom/mediatek/gallery3d/video/LimitDialog;->show()V
+    invoke-virtual {v0}, Landroid/app/Dialog;->show()V
 
     .line 469
     return-void
@@ -1705,7 +1705,7 @@
     .line 253
     iget-object v0, p0, Lcom/mediatek/gallery3d/video/SettingsActivity;->mProxyDialog:Lcom/mediatek/gallery3d/video/ProxyDialog;
 
-    invoke-virtual {v0}, Lcom/mediatek/gallery3d/video/ProxyDialog;->dismiss()V
+    invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
 
     .line 255
     :cond_0
@@ -1718,7 +1718,7 @@
     .line 256
     iget-object v0, p0, Lcom/mediatek/gallery3d/video/SettingsActivity;->mProxyDialog:Lcom/mediatek/gallery3d/video/ProxyDialog;
 
-    invoke-virtual {v0}, Lcom/mediatek/gallery3d/video/ProxyDialog;->getWindow()Landroid/view/Window;
+    invoke-virtual {v0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
@@ -1733,12 +1733,12 @@
 
     invoke-direct {v1, p0}, Lcom/mediatek/gallery3d/video/SettingsActivity$2;-><init>(Lcom/mediatek/gallery3d/video/SettingsActivity;)V
 
-    invoke-virtual {v0, v1}, Lcom/mediatek/gallery3d/video/ProxyDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+    invoke-virtual {v0, v1}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
     .line 268
     iget-object v0, p0, Lcom/mediatek/gallery3d/video/SettingsActivity;->mProxyDialog:Lcom/mediatek/gallery3d/video/ProxyDialog;
 
-    invoke-virtual {v0}, Lcom/mediatek/gallery3d/video/ProxyDialog;->show()V
+    invoke-virtual {v0}, Landroid/app/Dialog;->show()V
 
     .line 269
     return-void
@@ -1756,7 +1756,7 @@
     .line 225
     iget-object v0, p0, Lcom/mediatek/gallery3d/video/SettingsActivity;->mUdpDialog:Landroid/app/AlertDialog;
 
-    invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
+    invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
 
     .line 227
     :cond_0
@@ -1769,7 +1769,7 @@
     .line 228
     iget-object v0, p0, Lcom/mediatek/gallery3d/video/SettingsActivity;->mUdpDialog:Landroid/app/AlertDialog;
 
-    invoke-virtual {v0}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
+    invoke-virtual {v0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
@@ -1784,12 +1784,12 @@
 
     invoke-direct {v1, p0}, Lcom/mediatek/gallery3d/video/SettingsActivity$1;-><init>(Lcom/mediatek/gallery3d/video/SettingsActivity;)V
 
-    invoke-virtual {v0, v1}, Landroid/app/AlertDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+    invoke-virtual {v0, v1}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
     .line 236
     iget-object v0, p0, Lcom/mediatek/gallery3d/video/SettingsActivity;->mUdpDialog:Landroid/app/AlertDialog;
 
-    invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
+    invoke-virtual {v0}, Landroid/app/Dialog;->show()V
 
     .line 237
     return-void
@@ -1813,7 +1813,7 @@
     invoke-static {v1, v2}, Lcom/mediatek/gallery3d/util/MtkLog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 95
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/SettingsActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -1830,13 +1830,13 @@
     if-eqz v0, :cond_0
 
     .line 97
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/SettingsActivity;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v1
 
     new-instance v2, Landroid/graphics/drawable/BitmapDrawable;
 
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/SettingsActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -1848,12 +1848,12 @@
     :cond_0
     const v1, 0x7f060002
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/gallery3d/video/SettingsActivity;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v1}, Landroid/preference/PreferenceActivity;->addPreferencesFromResource(I)V
 
     .line 101
     const-string v1, "apn_settings"
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/gallery3d/video/SettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Landroid/preference/PreferenceActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -1862,7 +1862,7 @@
     .line 102
     const-string v1, "enable_rtsp_proxy"
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/gallery3d/video/SettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Landroid/preference/PreferenceActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -1873,7 +1873,7 @@
     .line 103
     const-string v1, "rtsp_proxy_settings"
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/gallery3d/video/SettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Landroid/preference/PreferenceActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -1882,7 +1882,7 @@
     .line 104
     const-string v1, "enable_http_proxy"
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/gallery3d/video/SettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Landroid/preference/PreferenceActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -1893,7 +1893,7 @@
     .line 105
     const-string v1, "http_proxy_settings"
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/gallery3d/video/SettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Landroid/preference/PreferenceActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -1902,7 +1902,7 @@
     .line 106
     const-string v1, "udp_port_settings"
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/gallery3d/video/SettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Landroid/preference/PreferenceActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -1911,7 +1911,7 @@
     .line 107
     const-string v1, "http_buffer_size"
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/gallery3d/video/SettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Landroid/preference/PreferenceActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -1920,7 +1920,7 @@
     .line 108
     const-string v1, "rtsp_buffer_size"
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/gallery3d/video/SettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Landroid/preference/PreferenceActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -1929,7 +1929,7 @@
     .line 110
     const-string v1, "connectivity"
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/gallery3d/video/SettingsActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -1938,7 +1938,7 @@
     iput-object v1, p0, Lcom/mediatek/gallery3d/video/SettingsActivity;->mCM:Landroid/net/ConnectivityManager;
 
     .line 111
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/SettingsActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -1983,12 +1983,12 @@
 
     .prologue
     .line 134
-    invoke-super {p0}, Landroid/preference/PreferenceActivity;->onPause()V
+    invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
     .line 135
     iget-object v0, p0, Lcom/mediatek/gallery3d/video/SettingsActivity;->mMobileStateReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/video/SettingsActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 136
     return-void
@@ -2090,7 +2090,7 @@
     .line 208
     iget-object v3, p0, Lcom/mediatek/gallery3d/video/SettingsActivity;->mRtspProxyEnabler:Landroid/preference/CheckBoxPreference;
 
-    invoke-virtual {v3}, Landroid/preference/CheckBoxPreference;->isChecked()Z
+    invoke-virtual {v3}, Landroid/preference/TwoStatePreference;->isChecked()Z
 
     move-result v0
 
@@ -2122,7 +2122,7 @@
     .line 212
     iget-object v3, p0, Lcom/mediatek/gallery3d/video/SettingsActivity;->mHttpProxyEnabler:Landroid/preference/CheckBoxPreference;
 
-    invoke-virtual {v3}, Landroid/preference/CheckBoxPreference;->isChecked()Z
+    invoke-virtual {v3}, Landroid/preference/TwoStatePreference;->isChecked()Z
 
     move-result v0
 
@@ -2173,7 +2173,7 @@
 
     .prologue
     .line 122
-    invoke-super {p0}, Landroid/preference/PreferenceActivity;->onResume()V
+    invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
     .line 123
     invoke-direct {p0}, Lcom/mediatek/gallery3d/video/SettingsActivity;->refreshApn()V
@@ -2198,7 +2198,7 @@
 
     iget-object v1, p0, Lcom/mediatek/gallery3d/video/SettingsActivity;->mMobileStateFilter:Landroid/content/IntentFilter;
 
-    invoke-virtual {p0, v0, v1}, Lcom/mediatek/gallery3d/video/SettingsActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v0, v1}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 130
     return-void

@@ -43,7 +43,7 @@
 
     .prologue
     .line 53
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 51
     const/4 v0, 0x4
@@ -308,7 +308,7 @@
 
     iget-object v1, p0, Lcom/android/gallery3d/util/ProfileData;->mScratch:[B
 
-    invoke-virtual {v0, v1}, Ljava/io/DataOutputStream;->write([B)V
+    invoke-virtual {v0, v1}, Ljava/io/OutputStream;->write([B)V
 
     .line 166
     return-void

@@ -41,7 +41,7 @@
     .line 1906
     iget-object v0, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$GroupNegotiationState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
-    invoke-virtual {p0}, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$GroupNegotiationState;->getName()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/internal/util/State;->getName()Ljava/lang/String;
 
     move-result-object v1
 
@@ -66,7 +66,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$GroupNegotiationState;->getName()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/internal/util/State;->getName()Ljava/lang/String;
 
     move-result-object v10
 
@@ -109,7 +109,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$GroupNegotiationState;->getName()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/internal/util/State;->getName()Ljava/lang/String;
 
     move-result-object v9
 
@@ -155,7 +155,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$GroupNegotiationState;->getName()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/internal/util/State;->getName()Ljava/lang/String;
 
     move-result-object v10
 
@@ -441,7 +441,7 @@
 
     const v9, 0x30001
 
-    invoke-virtual {v7, v9}, Landroid/net/DhcpStateMachine;->sendMessage(I)V
+    invoke-virtual {v7, v9}, Lcom/android/internal/util/StateMachine;->sendMessage(I)V
 
     .line 1947
     iget-object v7, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$GroupNegotiationState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
@@ -615,7 +615,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$GroupNegotiationState;->getName()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/internal/util/State;->getName()Ljava/lang/String;
 
     move-result-object v9
 

@@ -76,12 +76,12 @@
     const/4 v1, -0x1
 
     .line 188
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 67
     new-instance v0, Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/database/AbstractCursor;->mSelfObserverLock:Ljava/lang/Object;
 
@@ -178,7 +178,7 @@
     .line 151
     iget-object v0, p0, Landroid/database/AbstractCursor;->mContentObservable:Landroid/database/ContentObservable;
 
-    invoke-virtual {v0}, Landroid/database/ContentObservable;->unregisterAll()V
+    invoke-virtual {v0}, Landroid/database/Observable;->unregisterAll()V
 
     .line 152
     invoke-virtual {p0}, Landroid/database/AbstractCursor;->onDeactivateOrClose()V
@@ -1061,7 +1061,7 @@
     .line 338
     iget-object v0, p0, Landroid/database/AbstractCursor;->mDataSetObservable:Landroid/database/DataSetObservable;
 
-    invoke-virtual {v0, p1}, Landroid/database/DataSetObservable;->registerObserver(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Landroid/database/Observable;->registerObserver(Ljava/lang/Object;)V
 
     .line 339
     return-void
@@ -1217,7 +1217,7 @@
     .line 333
     iget-object v0, p0, Landroid/database/AbstractCursor;->mContentObservable:Landroid/database/ContentObservable;
 
-    invoke-virtual {v0, p1}, Landroid/database/ContentObservable;->unregisterObserver(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Landroid/database/Observable;->unregisterObserver(Ljava/lang/Object;)V
 
     .line 335
     :cond_0
@@ -1232,7 +1232,7 @@
     .line 342
     iget-object v0, p0, Landroid/database/AbstractCursor;->mDataSetObservable:Landroid/database/DataSetObservable;
 
-    invoke-virtual {v0, p1}, Landroid/database/DataSetObservable;->unregisterObserver(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Landroid/database/Observable;->unregisterObserver(Ljava/lang/Object;)V
 
     .line 343
     return-void

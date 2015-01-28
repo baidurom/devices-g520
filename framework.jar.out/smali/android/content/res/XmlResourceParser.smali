@@ -3,8 +3,8 @@
 .source "XmlResourceParser.java"
 
 # interfaces
-.implements Lorg/xmlpull/v1/XmlPullParser;
 .implements Landroid/util/AttributeSet;
+.implements Lorg/xmlpull/v1/XmlPullParser;
 
 
 # virtual methods

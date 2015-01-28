@@ -305,7 +305,7 @@
 
     const/16 v9, 0x9
 
-    invoke-virtual {v8, v9}, Lcom/android/internal/telephony/SMSDispatcher;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {v8, v9}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v6
 
@@ -324,7 +324,7 @@
     .line 143
     .local v2, e:Ljava/lang/ClassCastException;
     :try_start_4
-    invoke-virtual {v2}, Ljava/lang/ClassCastException;->printStackTrace()V
+    invoke-virtual {v2}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_2
 
@@ -346,7 +346,7 @@
     .line 145
     .local v3, ex:Ljava/lang/Exception;
     :try_start_5
-    invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
+    invoke-virtual {v3}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_2
 
@@ -426,7 +426,7 @@
 
     check-cast v8, Ljava/util/ArrayList;
 
-    #calls: Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->buildValidRawData(Ljava/util/ArrayList;)Ljava/util/ArrayList;
+    #calls: Lcom/android/internal/telephony/IccSmsInterfaceManager;->buildValidRawData(Ljava/util/ArrayList;)Ljava/util/ArrayList;
     invoke-static {v11, v8}, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->access$700(Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
     move-result-object v8
@@ -827,7 +827,7 @@
     .line 230
     .restart local v2       #e:Ljava/lang/ClassCastException;
     :try_start_e
-    invoke-virtual {v2}, Ljava/lang/ClassCastException;->printStackTrace()V
+    invoke-virtual {v2}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_6
 
@@ -838,7 +838,7 @@
 
     .line 232
     .restart local v3       #ex:Ljava/lang/Exception;
-    invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
+    invoke-virtual {v3}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_6
 
@@ -966,7 +966,7 @@
     invoke-virtual {v8, v10}, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->log(Ljava/lang/String;)V
 
     .line 250
-    invoke-virtual {v2}, Ljava/lang/ClassCastException;->printStackTrace()V
+    invoke-virtual {v2}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_7
 
@@ -984,7 +984,7 @@
     invoke-virtual {v8, v10}, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->log(Ljava/lang/String;)V
 
     .line 253
-    invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
+    invoke-virtual {v3}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_7
 
@@ -1211,7 +1211,7 @@
     invoke-virtual {v8, v10}, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->log(Ljava/lang/String;)V
 
     .line 291
-    invoke-virtual {v2}, Ljava/lang/ClassCastException;->printStackTrace()V
+    invoke-virtual {v2}, Ljava/lang/Throwable;->printStackTrace()V
 
     .line 292
     iget-object v8, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;

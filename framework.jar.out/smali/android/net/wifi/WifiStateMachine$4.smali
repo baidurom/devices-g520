@@ -57,11 +57,11 @@
 
     const v3, 0x20012
 
-    invoke-virtual {v2, v3, v0, v4}, Landroid/net/wifi/WifiStateMachine;->obtainMessage(III)Landroid/os/Message;
+    invoke-virtual {v2, v3, v0, v4}, Lcom/android/internal/util/StateMachine;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Landroid/net/wifi/WifiStateMachine;->sendMessage(Landroid/os/Message;)V
+    invoke-virtual {v1, v2}, Lcom/android/internal/util/StateMachine;->sendMessage(Landroid/os/Message;)V
 
     .line 763
     return-void

@@ -47,7 +47,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Landroid/net/wifi/WifiStateMachine$ObtainingIpState;->getName()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/internal/util/State;->getName()Ljava/lang/String;
 
     move-result-object v9
 
@@ -71,7 +71,7 @@
     .line 3816
     const v7, 0xc365
 
-    invoke-virtual {p0}, Landroid/net/wifi/WifiStateMachine$ObtainingIpState;->getName()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/internal/util/State;->getName()Ljava/lang/String;
 
     move-result-object v8
 
@@ -184,7 +184,7 @@
 
     const v8, 0x30001
 
-    invoke-virtual {v7, v8}, Landroid/net/DhcpStateMachine;->sendMessage(I)V
+    invoke-virtual {v7, v8}, Lcom/android/internal/util/StateMachine;->sendMessage(I)V
 
     .line 3882
     :goto_0
@@ -211,7 +211,7 @@
 
     const v8, 0x30002
 
-    invoke-virtual {v7, v8}, Landroid/net/DhcpStateMachine;->sendMessage(I)V
+    invoke-virtual {v7, v8}, Lcom/android/internal/util/StateMachine;->sendMessage(I)V
 
     .line 3846
     iget-object v7, p0, Landroid/net/wifi/WifiStateMachine$ObtainingIpState;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -221,7 +221,7 @@
 
     move-result-object v7
 
-    invoke-virtual {v7}, Landroid/net/DhcpStateMachine;->quit()V
+    invoke-virtual {v7}, Lcom/android/internal/util/StateMachine;->quit()V
 
     .line 3847
     iget-object v7, p0, Landroid/net/wifi/WifiStateMachine$ObtainingIpState;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -368,7 +368,7 @@
     .line 3876
     iget-object v7, p0, Landroid/net/wifi/WifiStateMachine$ObtainingIpState;->this$0:Landroid/net/wifi/WifiStateMachine;
 
-    invoke-virtual {v7, v10}, Landroid/net/wifi/WifiStateMachine;->sendMessage(I)V
+    invoke-virtual {v7, v10}, Lcom/android/internal/util/StateMachine;->sendMessage(I)V
 
     goto/16 :goto_0
 
@@ -389,7 +389,7 @@
 
     const v8, 0x2000f
 
-    invoke-virtual {v7, v8, v0}, Landroid/net/wifi/WifiStateMachine;->sendMessage(ILjava/lang/Object;)V
+    invoke-virtual {v7, v8, v0}, Lcom/android/internal/util/StateMachine;->sendMessage(ILjava/lang/Object;)V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_1
@@ -429,7 +429,7 @@
     .line 3879
     iget-object v7, p0, Landroid/net/wifi/WifiStateMachine$ObtainingIpState;->this$0:Landroid/net/wifi/WifiStateMachine;
 
-    invoke-virtual {v7, v10}, Landroid/net/wifi/WifiStateMachine;->sendMessage(I)V
+    invoke-virtual {v7, v10}, Lcom/android/internal/util/StateMachine;->sendMessage(I)V
 
     goto/16 :goto_0
 .end method
@@ -446,7 +446,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Landroid/net/wifi/WifiStateMachine$ObtainingIpState;->getName()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/internal/util/State;->getName()Ljava/lang/String;
 
     move-result-object v2
 

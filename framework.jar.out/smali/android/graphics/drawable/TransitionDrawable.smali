@@ -370,7 +370,7 @@
     if-nez v4, :cond_3
 
     .line 221
-    invoke-virtual {p0}, Landroid/graphics/drawable/TransitionDrawable;->invalidateSelf()V
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     goto :goto_1
 
@@ -407,7 +407,7 @@
     iput v0, p0, Landroid/graphics/drawable/TransitionDrawable;->mTransitionState:I
 
     .line 125
-    invoke-virtual {p0}, Landroid/graphics/drawable/TransitionDrawable;->invalidateSelf()V
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     .line 126
     return-void
@@ -470,7 +470,7 @@
     iput v3, p0, Landroid/graphics/drawable/TransitionDrawable;->mTransitionState:I
 
     .line 153
-    invoke-virtual {p0}, Landroid/graphics/drawable/TransitionDrawable;->invalidateSelf()V
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     .line 163
     :goto_1
@@ -603,7 +603,7 @@
     iput v1, p0, Landroid/graphics/drawable/TransitionDrawable;->mTransitionState:I
 
     .line 116
-    invoke-virtual {p0}, Landroid/graphics/drawable/TransitionDrawable;->invalidateSelf()V
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     .line 117
     return-void

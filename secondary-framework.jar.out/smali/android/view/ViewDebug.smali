@@ -315,7 +315,7 @@
 
     .prologue
     .line 56
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 634
     return-void
@@ -556,7 +556,7 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 692
-    invoke-virtual {p1}, Ljava/io/DataOutputStream;->close()V
+    invoke-virtual {p1}, Ljava/io/FilterOutputStream;->close()V
 
     .line 694
     return-void
@@ -566,7 +566,7 @@
     :catchall_0
     move-exception v1
 
-    invoke-virtual {p1}, Ljava/io/DataOutputStream;->close()V
+    invoke-virtual {p1}, Ljava/io/FilterOutputStream;->close()V
 
     throw v1
 
@@ -1254,7 +1254,7 @@
     .line 1270
     const/4 v7, 0x1
 
-    invoke-virtual {v1, v7}, Ljava/lang/reflect/Field;->setAccessible(Z)V
+    invoke-virtual {v1, v7}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
 
     .line 1271
     invoke-virtual {v4, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -1400,7 +1400,7 @@
     .line 1301
     const/4 v7, 0x1
 
-    invoke-virtual {v4, v7}, Ljava/lang/reflect/Method;->setAccessible(Z)V
+    invoke-virtual {v4, v7}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
 
     .line 1302
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -1743,7 +1743,7 @@
 
     .line 809
     .local v2, group:Landroid/view/ViewGroup;
-    invoke-virtual {v2}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v6
 
@@ -1756,7 +1756,7 @@
     :cond_0
     const-string v6, "DONE."
 
-    invoke-virtual {v4, v6}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
+    invoke-virtual {v4, v6}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
     .line 812
     invoke-virtual {v4}, Ljava/io/BufferedWriter;->newLine()V
@@ -2078,7 +2078,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p2, v2}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
+    invoke-virtual {p2, v2}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
     .line 872
     const/16 v2, 0x40
@@ -2094,7 +2094,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p2, v2}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
+    invoke-virtual {p2, v2}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
     .line 874
     const/16 v2, 0x20
@@ -4010,7 +4010,7 @@
     .line 919
     const/4 v7, 0x1
 
-    invoke-virtual {v1, v7}, Ljava/lang/reflect/Field;->setAccessible(Z)V
+    invoke-virtual {v1, v7}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
 
     .line 920
     invoke-virtual {v4, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -4223,7 +4223,7 @@
     .line 967
     const/4 v7, 0x1
 
-    invoke-virtual {v4, v7}, Ljava/lang/reflect/Method;->setAccessible(Z)V
+    invoke-virtual {v4, v7}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
 
     .line 968
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -4688,7 +4688,7 @@
     :goto_0
     const-string v4, "DONE."
 
-    invoke-virtual {v2, v4}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
+    invoke-virtual {v2, v4}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
     .line 528
     invoke-virtual {v2}, Ljava/io/BufferedWriter;->newLine()V
@@ -4719,7 +4719,7 @@
     :try_start_2
     const-string v4, "-1 -1 -1"
 
-    invoke-virtual {v2, v4}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
+    invoke-virtual {v2, v4}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
     .line 525
     invoke-virtual {v2}, Ljava/io/BufferedWriter;->newLine()V
@@ -4897,7 +4897,7 @@
 
     move-result-object v9
 
-    invoke-virtual {p1, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
+    invoke-virtual {p1, v9}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
     .line 620
     invoke-virtual {p1, v10}, Ljava/io/BufferedWriter;->write(I)V
@@ -4907,7 +4907,7 @@
 
     move-result-object v9
 
-    invoke-virtual {p1, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
+    invoke-virtual {p1, v9}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
     .line 622
     invoke-virtual {p1, v10}, Ljava/io/BufferedWriter;->write(I)V
@@ -4917,7 +4917,7 @@
 
     move-result-object v9
 
-    invoke-virtual {p1, v9}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
+    invoke-virtual {p1, v9}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
     .line 624
     invoke-virtual {p1}, Ljava/io/BufferedWriter;->newLine()V
@@ -5320,18 +5320,18 @@
 
     .prologue
     .line 1148
-    invoke-virtual {p0, p1}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
     .line 1149
-    invoke-virtual {p0, p2}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
+    invoke-virtual {p0, p2}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
     .line 1150
-    invoke-virtual {p0, p3}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
+    invoke-virtual {p0, p3}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
     .line 1151
     const-string v0, "="
 
-    invoke-virtual {p0, v0}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
     .line 1152
     invoke-static {p0, p4}, Landroid/view/ViewDebug;->writeValue(Ljava/io/BufferedWriter;Ljava/lang/Object;)V
@@ -5382,15 +5382,15 @@
 
     move-result-object v1
 
-    invoke-virtual {p0, v1}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
     .line 1245
     const-string v1, ","
 
-    invoke-virtual {p0, v1}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
     .line 1246
-    invoke-virtual {p0, v0}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
     .line 1250
     .end local v0           #output:Ljava/lang/String;
@@ -5401,7 +5401,7 @@
     :cond_0
     const-string v1, "4,null"
 
-    invoke-virtual {p0, v1}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
     goto :goto_0
 .end method

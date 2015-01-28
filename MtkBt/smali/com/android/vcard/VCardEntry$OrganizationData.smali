@@ -43,7 +43,7 @@
 
     .prologue
     .line 746
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 747
     iput p5, p0, Lcom/android/vcard/VCardEntry$OrganizationData;->mType:I

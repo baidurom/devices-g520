@@ -71,7 +71,7 @@
 
     .prologue
     .line 55
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 46
     const/4 v0, 0x1
@@ -207,7 +207,7 @@
 
     .line 175
     .local v5, item:Lcom/android/gallery3d/data/MediaItem;
-    invoke-virtual {v5}, Lcom/android/gallery3d/data/MediaItem;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {v5}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v9
 
@@ -423,7 +423,7 @@
 
     .line 192
     :cond_1
-    invoke-virtual {v8}, Lcom/android/gallery3d/data/MediaSet;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {v8}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v3
 
@@ -560,7 +560,7 @@
 
     .line 218
     .local v5, item:Lcom/android/gallery3d/data/MediaItem;
-    invoke-virtual {v5}, Lcom/android/gallery3d/data/MediaItem;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {v5}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v3
 
@@ -872,7 +872,7 @@
     if-eqz v7, :cond_2
 
     .line 268
-    invoke-virtual {v7}, Lcom/android/gallery3d/data/MediaSet;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {v7}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v3
 
@@ -952,7 +952,7 @@
 
     .line 278
     .local v4, item:Lcom/android/gallery3d/data/MediaItem;
-    invoke-virtual {v4}, Lcom/android/gallery3d/data/MediaItem;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {v4}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v3
 

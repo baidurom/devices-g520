@@ -19,7 +19,7 @@
 
     .prologue
     .line 23
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 24
     const/16 v0, 0x400
@@ -256,7 +256,7 @@
     .local v3, is:Ljava/io/FileInputStream;
     iget-object v6, p0, Lcom/android/internal/util/MemInfoReader;->mBuffer:[B
 
-    invoke-virtual {v3, v6}, Ljava/io/FileInputStream;->read([B)I
+    invoke-virtual {v3, v6}, Ljava/io/InputStream;->read([B)I
 
     move-result v4
 

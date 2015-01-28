@@ -66,7 +66,7 @@
     .prologue
     .line 222
     .local p0, this:Lcom/mediatek/pluginmanager/PluginManager;,"Lcom/mediatek/pluginmanager/PluginManager<TT;>;"
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 223
     if-nez p1, :cond_0
@@ -1006,7 +1006,7 @@
     const/high16 v6, -0x4080
 
     .line 308
-    iget-object v4, p1, Landroid/content/pm/ServiceInfo;->metaData:Landroid/os/Bundle;
+    iget-object v4, p1, Landroid/content/pm/PackageItemInfo;->metaData:Landroid/os/Bundle;
 
     if-nez v4, :cond_1
 
@@ -1019,7 +1019,7 @@
 
     .line 312
     :cond_1
-    iget-object v4, p1, Landroid/content/pm/ServiceInfo;->metaData:Landroid/os/Bundle;
+    iget-object v4, p1, Landroid/content/pm/PackageItemInfo;->metaData:Landroid/os/Bundle;
 
     const-string v5, "version"
 
@@ -1032,7 +1032,7 @@
     if-nez v2, :cond_0
 
     .line 319
-    iget-object v4, p1, Landroid/content/pm/ServiceInfo;->metaData:Landroid/os/Bundle;
+    iget-object v4, p1, Landroid/content/pm/PackageItemInfo;->metaData:Landroid/os/Bundle;
 
     const-string v5, "version"
 
@@ -1055,7 +1055,7 @@
 
     .line 326
     :cond_2
-    iget-object v4, p1, Landroid/content/pm/ServiceInfo;->metaData:Landroid/os/Bundle;
+    iget-object v4, p1, Landroid/content/pm/PackageItemInfo;->metaData:Landroid/os/Bundle;
 
     const-string v5, "version"
 
@@ -1268,7 +1268,7 @@
     :try_start_0
     iget-object v9, p0, Lcom/mediatek/pluginmanager/PluginManager;->mPkgMgr:Landroid/content/pm/PackageManager;
 
-    iget-object v10, v8, Landroid/content/pm/ServiceInfo;->packageName:Ljava/lang/String;
+    iget-object v10, v8, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
 
     const/16 v11, 0x1040
 
@@ -1295,7 +1295,7 @@
 
     move-result-object v10
 
-    iget-object v11, v8, Landroid/content/pm/ServiceInfo;->packageName:Ljava/lang/String;
+    iget-object v11, v8, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1334,7 +1334,7 @@
 
     move-result-object v10
 
-    iget-object v11, v8, Landroid/content/pm/ServiceInfo;->packageName:Ljava/lang/String;
+    iget-object v11, v8, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1371,7 +1371,7 @@
 
     move-result-object v10
 
-    iget-object v11, v8, Landroid/content/pm/ServiceInfo;->packageName:Ljava/lang/String;
+    iget-object v11, v8, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1461,7 +1461,7 @@
 
     move-result-object v10
 
-    invoke-virtual {v2}, Lcom/mediatek/pluginmanager/Plugin$PluginCreationException;->getCause()Ljava/lang/Throwable;
+    invoke-virtual {v2}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
     move-result-object v11
 

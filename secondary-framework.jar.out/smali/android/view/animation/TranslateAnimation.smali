@@ -392,7 +392,7 @@
 
     iget v1, p0, Landroid/view/animation/TranslateAnimation;->mFromXValue:F
 
-    invoke-virtual {p0, v0, v1, p1, p3}, Landroid/view/animation/TranslateAnimation;->resolveSize(IFII)F
+    invoke-virtual {p0, v0, v1, p1, p3}, Landroid/view/animation/Animation;->resolveSize(IFII)F
 
     move-result v0
 
@@ -403,7 +403,7 @@
 
     iget v1, p0, Landroid/view/animation/TranslateAnimation;->mToXValue:F
 
-    invoke-virtual {p0, v0, v1, p1, p3}, Landroid/view/animation/TranslateAnimation;->resolveSize(IFII)F
+    invoke-virtual {p0, v0, v1, p1, p3}, Landroid/view/animation/Animation;->resolveSize(IFII)F
 
     move-result v0
 
@@ -414,7 +414,7 @@
 
     iget v1, p0, Landroid/view/animation/TranslateAnimation;->mFromYValue:F
 
-    invoke-virtual {p0, v0, v1, p2, p4}, Landroid/view/animation/TranslateAnimation;->resolveSize(IFII)F
+    invoke-virtual {p0, v0, v1, p2, p4}, Landroid/view/animation/Animation;->resolveSize(IFII)F
 
     move-result v0
 
@@ -425,7 +425,7 @@
 
     iget v1, p0, Landroid/view/animation/TranslateAnimation;->mToYValue:F
 
-    invoke-virtual {p0, v0, v1, p2, p4}, Landroid/view/animation/TranslateAnimation;->resolveSize(IFII)F
+    invoke-virtual {p0, v0, v1, p2, p4}, Landroid/view/animation/Animation;->resolveSize(IFII)F
 
     move-result v0
 

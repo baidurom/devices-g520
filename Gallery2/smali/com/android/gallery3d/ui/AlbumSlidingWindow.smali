@@ -67,7 +67,7 @@
     const/4 v0, 0x0
 
     .line 82
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 70
     iput v0, p0, Lcom/android/gallery3d/ui/AlbumSlidingWindow;->mContentStart:I
@@ -494,7 +494,7 @@
     :cond_0
     iget-object v2, v0, Lcom/android/gallery3d/ui/AlbumSlidingWindow$AlbumEntry;->item:Lcom/android/gallery3d/data/MediaItem;
 
-    invoke-virtual {v2}, Lcom/android/gallery3d/data/MediaItem;->getMediaType()I
+    invoke-virtual {v2}, Lcom/android/gallery3d/data/MediaObject;->getMediaType()I
 
     move-result v2
 
@@ -502,7 +502,7 @@
 
     .line 257
     :cond_1
-    invoke-virtual {v1}, Lcom/android/gallery3d/data/MediaItem;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {v1}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v2
 

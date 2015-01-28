@@ -192,7 +192,7 @@
     iput-object v0, p0, Lcom/android/gallery3d/app/SinglePhotoDataAdapter;->mItem:Lcom/android/gallery3d/data/MediaItem;
 
     .line 105
-    invoke-virtual {p3}, Lcom/android/gallery3d/data/MediaItem;->getSupportedOperations()I
+    invoke-virtual {p3}, Lcom/android/gallery3d/data/MediaObject;->getSupportedOperations()I
 
     move-result v0
 
@@ -210,7 +210,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p3}, Lcom/android/gallery3d/data/MediaItem;->getSupportedOperations()I
+    invoke-virtual {p3}, Lcom/android/gallery3d/data/MediaObject;->getSupportedOperations()I
 
     move-result v0
 
@@ -229,7 +229,7 @@
 
     iget-object v0, p0, Lcom/android/gallery3d/app/SinglePhotoDataAdapter;->mItem:Lcom/android/gallery3d/data/MediaItem;
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/data/MediaItem;->getSupportedOperations()I
+    invoke-virtual {v0}, Lcom/android/gallery3d/data/MediaObject;->getSupportedOperations()I
 
     move-result v0
 
@@ -529,7 +529,7 @@
     .line 222
     iget-object v4, p1, Lcom/android/gallery3d/app/SinglePhotoDataAdapter$ImageBundle;->decoder:Landroid/graphics/BitmapRegionDecoder;
 
-    invoke-virtual {p0, v4, v2, v1, v0}, Lcom/android/gallery3d/app/SinglePhotoDataAdapter;->setRegionDecoder(Landroid/graphics/BitmapRegionDecoder;Lcom/android/gallery3d/ui/ScreenNail;II)V
+    invoke-virtual {p0, v4, v2, v1, v0}, Lcom/android/gallery3d/ui/TileImageViewAdapter;->setRegionDecoder(Landroid/graphics/BitmapRegionDecoder;Lcom/android/gallery3d/ui/ScreenNail;II)V
 
     .line 227
     :goto_0
@@ -555,7 +555,7 @@
 
     iget-object v5, p1, Lcom/android/gallery3d/app/SinglePhotoDataAdapter$ImageBundle;->backupImage:Landroid/graphics/Bitmap;
 
-    invoke-virtual {p0, v4, v5, v1, v0}, Lcom/android/gallery3d/app/SinglePhotoDataAdapter;->setRegionDecoder(Landroid/graphics/BitmapRegionDecoder;Landroid/graphics/Bitmap;II)V
+    invoke-virtual {p0, v4, v5, v1, v0}, Lcom/android/gallery3d/ui/TileImageViewAdapter;->setRegionDecoder(Landroid/graphics/BitmapRegionDecoder;Landroid/graphics/Bitmap;II)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -693,12 +693,12 @@
 
     iget-object v1, v1, Lcom/mediatek/gallery3d/util/MediatekFeature$DataBundle;->firstFrame:Landroid/graphics/Bitmap;
 
-    invoke-virtual {p0, v2, v1}, Lcom/android/gallery3d/app/SinglePhotoDataAdapter;->setStereoScreenNail(ILandroid/graphics/Bitmap;)V
+    invoke-virtual {p0, v2, v1}, Lcom/android/gallery3d/ui/TileImageViewAdapter;->setStereoScreenNail(ILandroid/graphics/Bitmap;)V
 
     .line 302
     const/4 v1, 0x2
 
-    invoke-virtual {p0, v1, v0}, Lcom/android/gallery3d/app/SinglePhotoDataAdapter;->setStereoScreenNail(ILandroid/graphics/Bitmap;)V
+    invoke-virtual {p0, v1, v0}, Lcom/android/gallery3d/ui/TileImageViewAdapter;->setStereoScreenNail(ILandroid/graphics/Bitmap;)V
 
     .line 304
     iget-object v1, p0, Lcom/android/gallery3d/app/SinglePhotoDataAdapter;->mPhotoView:Lcom/android/gallery3d/ui/PhotoView;
@@ -853,7 +853,7 @@
 
     .line 255
     :goto_1
-    invoke-virtual {p0, v3, v6, v1}, Lcom/android/gallery3d/app/SinglePhotoDataAdapter;->setScreenNail(Lcom/android/gallery3d/ui/ScreenNail;II)V
+    invoke-virtual {p0, v3, v6, v1}, Lcom/android/gallery3d/ui/TileImageViewAdapter;->setScreenNail(Lcom/android/gallery3d/ui/ScreenNail;II)V
 
     .line 260
     .end local v1           #height:I
@@ -977,7 +977,7 @@
 
     move-result v8
 
-    invoke-virtual {p0, v0, v7, v8}, Lcom/android/gallery3d/app/SinglePhotoDataAdapter;->setScreenNail(Landroid/graphics/Bitmap;II)V
+    invoke-virtual {p0, v0, v7, v8}, Lcom/android/gallery3d/ui/TileImageViewAdapter;->setScreenNail(Landroid/graphics/Bitmap;II)V
 
     goto :goto_2
 
@@ -1070,7 +1070,7 @@
     .local v0, stereoMode:Z
     const/4 v1, 0x2
 
-    invoke-virtual {p0, v1}, Lcom/android/gallery3d/app/SinglePhotoDataAdapter;->getStereoScreenNail(I)Lcom/android/gallery3d/ui/ScreenNail;
+    invoke-virtual {p0, v1}, Lcom/android/gallery3d/ui/TileImageViewAdapter;->getStereoScreenNail(I)Lcom/android/gallery3d/ui/ScreenNail;
 
     move-result-object v1
 
@@ -1085,7 +1085,7 @@
 
     iget-object v1, p0, Lcom/android/gallery3d/app/SinglePhotoDataAdapter;->mItem:Lcom/android/gallery3d/data/MediaItem;
 
-    invoke-virtual {v1}, Lcom/android/gallery3d/data/MediaItem;->getSupportedOperations()I
+    invoke-virtual {v1}, Lcom/android/gallery3d/data/MediaObject;->getSupportedOperations()I
 
     move-result v1
 
@@ -1295,7 +1295,7 @@
 
     move-result v2
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/android/gallery3d/app/SinglePhotoDataAdapter;->setScreenNail(Lcom/android/gallery3d/ui/ScreenNail;II)V
+    invoke-virtual {p0, v0, v1, v2}, Lcom/android/gallery3d/ui/TileImageViewAdapter;->setScreenNail(Lcom/android/gallery3d/ui/ScreenNail;II)V
 
     .line 600
     :goto_1
@@ -1317,7 +1317,7 @@
 
     move-result v2
 
-    invoke-virtual {p0, p1, v1, v2}, Lcom/android/gallery3d/app/SinglePhotoDataAdapter;->setScreenNail(Landroid/graphics/Bitmap;II)V
+    invoke-virtual {p0, p1, v1, v2}, Lcom/android/gallery3d/ui/TileImageViewAdapter;->setScreenNail(Landroid/graphics/Bitmap;II)V
 
     goto :goto_1
 .end method
@@ -1456,7 +1456,7 @@
     .line 418
     if-nez p1, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/SinglePhotoDataAdapter;->getScreenNail()Lcom/android/gallery3d/ui/ScreenNail;
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/TileImageViewAdapter;->getScreenNail()Lcom/android/gallery3d/ui/ScreenNail;
 
     move-result-object v0
 
@@ -1565,7 +1565,7 @@
     .line 438
     iget-object v0, p0, Lcom/android/gallery3d/app/SinglePhotoDataAdapter;->mItem:Lcom/android/gallery3d/data/MediaItem;
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/data/MediaItem;->getMediaType()I
+    invoke-virtual {v0}, Lcom/android/gallery3d/data/MediaObject;->getMediaType()I
 
     move-result v0
 

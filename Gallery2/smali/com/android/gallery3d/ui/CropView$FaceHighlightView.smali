@@ -283,7 +283,7 @@
     iput p1, p0, Lcom/android/gallery3d/ui/CropView$FaceHighlightView;->mPressedFaceIndex:I
 
     .line 260
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/CropView$FaceHighlightView;->invalidate()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->invalidate()V
 
     goto :goto_0
 .end method
@@ -301,7 +301,7 @@
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 216
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/CropView$FaceHighlightView;->invalidate()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->invalidate()V
 
     .line 217
     return-void
@@ -389,10 +389,10 @@
 
     const/4 v4, 0x0
 
-    invoke-virtual {v3, v4}, Lcom/android/gallery3d/ui/CropView$HighlightRectangle;->setVisibility(I)V
+    invoke-virtual {v3, v4}, Lcom/android/gallery3d/ui/GLView;->setVisibility(I)V
 
     .line 289
-    invoke-virtual {p0, v5}, Lcom/android/gallery3d/ui/CropView$FaceHighlightView;->setVisibility(I)V
+    invoke-virtual {p0, v5}, Lcom/android/gallery3d/ui/GLView;->setVisibility(I)V
 
     goto :goto_0
 
@@ -494,13 +494,13 @@
     invoke-interface {v7, v0, v3, v3}, Ljavax/microedition/khronos/opengles/GL11;->glStencilFunc(III)V
 
     .line 252
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/CropView$FaceHighlightView;->getWidth()I
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->getWidth()I
 
     move-result v0
 
     int-to-float v3, v0
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/CropView$FaceHighlightView;->getHeight()I
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->getHeight()I
 
     move-result v0
 

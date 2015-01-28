@@ -27,15 +27,15 @@
     invoke-static {v2}, Lcom/mediatek/bluetooth/util/BtLog;->d(Ljava/lang/String;)V
 
     .line 61
-    invoke-super {p0, p1}, Landroid/app/TabActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Landroid/app/ActivityGroup;->onCreate(Landroid/os/Bundle;)V
 
     .line 64
     const v2, 0x7f030003
 
-    invoke-virtual {p0, v2}, Lcom/mediatek/bluetooth/share/BluetoothShareMgmtActivity;->setContentView(I)V
+    invoke-virtual {p0, v2}, Landroid/app/Activity;->setContentView(I)V
 
     .line 65
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/share/BluetoothShareMgmtActivity;->getTabHost()Landroid/widget/TabHost;
+    invoke-virtual {p0}, Landroid/app/TabActivity;->getTabHost()Landroid/widget/TabHost;
 
     move-result-object v1
 
@@ -49,11 +49,11 @@
 
     const v3, 0x7f05007b
 
-    invoke-virtual {p0, v3}, Lcom/mediatek/bluetooth/share/BluetoothShareMgmtActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/share/BluetoothShareMgmtActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -90,11 +90,11 @@
 
     const v3, 0x7f05007c
 
-    invoke-virtual {p0, v3}, Lcom/mediatek/bluetooth/share/BluetoothShareMgmtActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/share/BluetoothShareMgmtActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 

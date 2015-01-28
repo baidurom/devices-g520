@@ -33,7 +33,7 @@
     .parameter "context"
 
     .prologue
-    .line 30
+    .line 31
     invoke-direct {p0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
     .line 20
@@ -46,23 +46,24 @@
 
     iput v1, p0, Lcom/android/internal/widget/PopupLayout;->mArrowUp:I
 
-    .line 25
+    .line 22
     const/4 v1, 0x1
-    
+
     iput-boolean v1, p0, Lcom/android/internal/widget/PopupLayout;->mShowArrow:Z
-    
+
+    .line 26
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/widget/PopupLayout;->mRect:Landroid/graphics/Rect;
 
-    .line 32
+    .line 33
     invoke-virtual {p0}, Lcom/android/internal/widget/PopupLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 33
+    .line 34
     .local v0, resources:Landroid/content/res/Resources;
     iget v1, p0, Lcom/android/internal/widget/PopupLayout;->mArrowDown:I
 
@@ -72,7 +73,7 @@
 
     iput-object v1, p0, Lcom/android/internal/widget/PopupLayout;->mDrawableDown:Landroid/graphics/drawable/Drawable;
 
-    .line 34
+    .line 35
     iget v1, p0, Lcom/android/internal/widget/PopupLayout;->mArrowUp:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -81,7 +82,7 @@
 
     iput-object v1, p0, Lcom/android/internal/widget/PopupLayout;->mDrawableUp:Landroid/graphics/drawable/Drawable;
 
-    .line 35
+    .line 36
     return-void
 .end method
 
@@ -91,7 +92,7 @@
     .parameter "attrs"
 
     .prologue
-    .line 38
+    .line 39
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 20
@@ -104,23 +105,24 @@
 
     iput v1, p0, Lcom/android/internal/widget/PopupLayout;->mArrowUp:I
 
-    .line 25
+    .line 22
     const/4 v1, 0x1
-    
+
     iput-boolean v1, p0, Lcom/android/internal/widget/PopupLayout;->mShowArrow:Z
-    
+
+    .line 26
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/widget/PopupLayout;->mRect:Landroid/graphics/Rect;
 
-    .line 40
+    .line 41
     invoke-virtual {p0}, Lcom/android/internal/widget/PopupLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 41
+    .line 42
     .local v0, resources:Landroid/content/res/Resources;
     iget v1, p0, Lcom/android/internal/widget/PopupLayout;->mArrowDown:I
 
@@ -130,7 +132,7 @@
 
     iput-object v1, p0, Lcom/android/internal/widget/PopupLayout;->mDrawableDown:Landroid/graphics/drawable/Drawable;
 
-    .line 42
+    .line 43
     iget v1, p0, Lcom/android/internal/widget/PopupLayout;->mArrowUp:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -139,7 +141,7 @@
 
     iput-object v1, p0, Lcom/android/internal/widget/PopupLayout;->mDrawableUp:Landroid/graphics/drawable/Drawable;
 
-    .line 43
+    .line 44
     return-void
 .end method
 
@@ -149,7 +151,7 @@
     .locals 1
 
     .prologue
-    .line 68
+    .line 79
     iget-object v0, p0, Lcom/android/internal/widget/PopupLayout;->mDrawableDown:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
@@ -166,42 +168,44 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 73
+    .line 84
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 75
+    .line 86
     iget-boolean v7, p0, Lcom/android/internal/widget/PopupLayout;->mShowArrow:Z
-    
+
     if-nez v7, :cond_0
-    
+
+    .line 110
     :goto_0
     return-void
-    
+
+    .line 90
     :cond_0
     iget-object v2, p0, Lcom/android/internal/widget/PopupLayout;->mDrawableDown:Landroid/graphics/drawable/Drawable;
 
-    .line 76
+    .line 91
     .local v2, drawable:Landroid/graphics/drawable/Drawable;
     iget v7, p0, Lcom/android/internal/widget/PopupLayout;->mY:I
 
     if-nez v7, :cond_1
 
-    .line 77
+    .line 92
     iget-object v2, p0, Lcom/android/internal/widget/PopupLayout;->mDrawableUp:Landroid/graphics/drawable/Drawable;
 
-    .line 80
+    .line 95
     :cond_1
     invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v4
 
-    .line 81
+    .line 96
     .local v4, width:I
     invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v3
 
-    .line 83
+    .line 98
     .local v3, height:I
     invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getOpacity()I
 
@@ -218,27 +222,27 @@
 
     move-result-object v0
 
-    .line 86
+    .line 101
     .local v0, bitmap:Landroid/graphics/Bitmap;
     new-instance v1, Landroid/graphics/Canvas;
 
     invoke-direct {v1, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 87
+    .line 102
     .local v1, c:Landroid/graphics/Canvas;
     invoke-virtual {v2, v6, v6, v4, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 88
+    .line 103
     invoke-virtual {v2, v1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 90
+    .line 105
     iget v7, p0, Lcom/android/internal/widget/PopupLayout;->mX:I
 
     div-int/lit8 v8, v4, 0x2
 
     sub-int v5, v7, v8
 
-    .line 91
+    .line 106
     .local v5, x:I
     iget v7, p0, Lcom/android/internal/widget/PopupLayout;->mY:I
 
@@ -250,7 +254,7 @@
 
     add-int/lit8 v6, v7, -0x1
 
-    .line 93
+    .line 108
     .local v6, y:I
     :cond_2
     int-to-float v7, v5
@@ -263,7 +267,7 @@
 
     goto :goto_0
 
-    .line 83
+    .line 98
     .end local v0           #bitmap:Landroid/graphics/Bitmap;
     .end local v1           #c:Landroid/graphics/Canvas;
     .end local v5           #x:I
@@ -277,17 +281,21 @@
 .method public setShowArrow(Z)V
     .locals 1
     .parameter "show"
-    
+
     .prologue
+    .line 50
     iget-boolean v0, p0, Lcom/android/internal/widget/PopupLayout;->mShowArrow:Z
-    
+
     if-eq v0, p1, :cond_0
-    
+
+    .line 51
     invoke-virtual {p0}, Lcom/android/internal/widget/PopupLayout;->invalidate()V
-    
+
+    .line 53
     :cond_0
     iput-boolean p1, p0, Lcom/android/internal/widget/PopupLayout;->mShowArrow:Z
-    
+
+    .line 54
     return-void
 .end method
 
@@ -297,41 +305,41 @@
     .parameter "y"
 
     .prologue
-    .line 49
+    .line 60
     const/4 v0, 0x0
 
-    .line 50
+    .line 61
     .local v0, reDraw:Z
     iget v1, p0, Lcom/android/internal/widget/PopupLayout;->mX:I
 
     if-eq v1, p1, :cond_0
 
-    .line 51
+    .line 62
     iput p1, p0, Lcom/android/internal/widget/PopupLayout;->mX:I
 
-    .line 52
+    .line 63
     const/4 v0, 0x1
 
-    .line 54
+    .line 65
     :cond_0
     iget v1, p0, Lcom/android/internal/widget/PopupLayout;->mY:I
 
     if-eq v1, p2, :cond_1
 
-    .line 55
+    .line 66
     iput p2, p0, Lcom/android/internal/widget/PopupLayout;->mY:I
 
-    .line 56
+    .line 67
     const/4 v0, 0x1
 
-    .line 59
+    .line 70
     :cond_1
     if-eqz v0, :cond_2
 
-    .line 60
+    .line 71
     invoke-virtual {p0}, Lcom/android/internal/widget/PopupLayout;->invalidate()V
 
-    .line 62
+    .line 73
     :cond_2
     return-void
 .end method

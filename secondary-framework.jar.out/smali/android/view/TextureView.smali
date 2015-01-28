@@ -269,11 +269,11 @@
     .line 430
     iget-object v0, p0, Landroid/view/TextureView;->mLayer:Landroid/view/HardwareLayer;
 
-    invoke-virtual {p0}, Landroid/view/TextureView;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v1
 
-    invoke-virtual {p0}, Landroid/view/TextureView;->getHeight()I
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result v2
 
@@ -439,7 +439,7 @@
     iput-boolean v0, p0, Landroid/view/TextureView;->mUpdateLayer:Z
 
     .line 414
-    invoke-virtual {p0}, Landroid/view/TextureView;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     .line 415
     return-void
@@ -466,12 +466,12 @@
     invoke-direct {p0}, Landroid/view/TextureView;->destroySurface()V
 
     .line 330
-    invoke-virtual {p0}, Landroid/view/TextureView;->invalidateParentCaches()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidateParentCaches()V
 
     .line 331
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Landroid/view/TextureView;->invalidate(Z)V
+    invoke-virtual {p0, v0}, Landroid/view/View;->invalidate(Z)V
 
     .line 332
     return-void
@@ -573,11 +573,11 @@
 
     .prologue
     .line 509
-    invoke-virtual {p0}, Landroid/view/TextureView;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v0
 
-    invoke-virtual {p0}, Landroid/view/TextureView;->getHeight()I
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result v1
 
@@ -779,11 +779,11 @@
     :cond_2
     iget-object v0, p0, Landroid/view/TextureView;->mSurface:Landroid/graphics/SurfaceTexture;
 
-    invoke-virtual {p0}, Landroid/view/TextureView;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v1
 
-    invoke-virtual {p0}, Landroid/view/TextureView;->getHeight()I
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result v2
 
@@ -822,11 +822,11 @@
 
     iget-object v1, p0, Landroid/view/TextureView;->mSurface:Landroid/graphics/SurfaceTexture;
 
-    invoke-virtual {p0}, Landroid/view/TextureView;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v2
 
-    invoke-virtual {p0}, Landroid/view/TextureView;->getHeight()I
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result v3
 
@@ -876,11 +876,11 @@
     .line 386
     iget-object v0, p0, Landroid/view/TextureView;->mSurface:Landroid/graphics/SurfaceTexture;
 
-    invoke-virtual {p0}, Landroid/view/TextureView;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v1
 
-    invoke-virtual {p0}, Landroid/view/TextureView;->getHeight()I
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result v2
 
@@ -1103,7 +1103,7 @@
     invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
 
     .line 201
-    invoke-virtual {p0}, Landroid/view/TextureView;->isHardwareAccelerated()Z
+    invoke-virtual {p0}, Landroid/view/View;->isHardwareAccelerated()Z
 
     move-result v0
 
@@ -1217,11 +1217,11 @@
     .line 311
     iget-object v0, p0, Landroid/view/TextureView;->mSurface:Landroid/graphics/SurfaceTexture;
 
-    invoke-virtual {p0}, Landroid/view/TextureView;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v1
 
-    invoke-virtual {p0}, Landroid/view/TextureView;->getHeight()I
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result v2
 
@@ -1237,11 +1237,11 @@
 
     iget-object v1, p0, Landroid/view/TextureView;->mSurface:Landroid/graphics/SurfaceTexture;
 
-    invoke-virtual {p0}, Landroid/view/TextureView;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v2
 
-    invoke-virtual {p0}, Landroid/view/TextureView;->getHeight()I
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result v3
 
@@ -1310,7 +1310,7 @@
     iput-object p2, p0, Landroid/view/View;->mLayerPaint:Landroid/graphics/Paint;
 
     .line 261
-    invoke-virtual {p0}, Landroid/view/TextureView;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     .line 263
     :cond_0
@@ -1381,7 +1381,7 @@
     iput-boolean v0, p0, Landroid/view/TextureView;->mUpdateSurface:Z
 
     .line 714
-    invoke-virtual {p0}, Landroid/view/TextureView;->invalidateParentIfNeeded()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidateParentIfNeeded()V
 
     .line 715
     return-void
@@ -1415,7 +1415,7 @@
     iput-boolean v0, p0, Landroid/view/TextureView;->mMatrixChanged:Z
 
     .line 457
-    invoke-virtual {p0}, Landroid/view/TextureView;->invalidateParentIfNeeded()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidateParentIfNeeded()V
 
     .line 458
     return-void

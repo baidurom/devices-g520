@@ -1231,7 +1231,7 @@
     invoke-direct/range {p0 .. p0}, Landroid/graphics/drawable/LayerDrawable;->ensurePadding()V
 
     .line 172
-    invoke-virtual/range {p0 .. p0}, Landroid/graphics/drawable/LayerDrawable;->getState()[I
+    invoke-virtual/range {p0 .. p0}, Landroid/graphics/drawable/Drawable;->getState()[I
 
     move-result-object v2
 
@@ -1249,7 +1249,7 @@
 
     .prologue
     .line 318
-    invoke-virtual {p0}, Landroid/graphics/drawable/LayerDrawable;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
 
     move-result-object v0
 
@@ -1557,7 +1557,7 @@
     if-eqz v4, :cond_3
 
     .line 481
-    invoke-virtual {p0}, Landroid/graphics/drawable/LayerDrawable;->getBounds()Landroid/graphics/Rect;
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v6
 
@@ -1639,7 +1639,7 @@
     if-eqz v4, :cond_3
 
     .line 460
-    invoke-virtual {p0}, Landroid/graphics/drawable/LayerDrawable;->getBounds()Landroid/graphics/Rect;
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v6
 
@@ -1658,7 +1658,7 @@
 
     .prologue
     .line 325
-    invoke-virtual {p0}, Landroid/graphics/drawable/LayerDrawable;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
 
     move-result-object v0
 
@@ -2013,7 +2013,7 @@
 
     .prologue
     .line 332
-    invoke-virtual {p0}, Landroid/graphics/drawable/LayerDrawable;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
 
     move-result-object v0
 

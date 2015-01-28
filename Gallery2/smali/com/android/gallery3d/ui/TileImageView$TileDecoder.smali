@@ -42,7 +42,7 @@
     .line 791
     iput-object p1, p0, Lcom/android/gallery3d/ui/TileImageView$TileDecoder;->this$0:Lcom/android/gallery3d/ui/TileImageView;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 793
     new-instance v0, Lcom/android/gallery3d/ui/TileImageView$TileDecoder$1;

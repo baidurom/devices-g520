@@ -164,7 +164,7 @@
     .line 181
     sget-object v0, Lcom/mediatek/audioprofile/AudioProfileManager$Scenario;->$VALUES:[Lcom/mediatek/audioprofile/AudioProfileManager$Scenario;
 
-    invoke-virtual {v0}, [Lcom/mediatek/audioprofile/AudioProfileManager$Scenario;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

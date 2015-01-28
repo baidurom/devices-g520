@@ -3,9 +3,9 @@
 .source "MoviePlayer.java"
 
 # interfaces
-.implements Lcom/android/gallery3d/app/MoviePlayer$Restorable;
 .implements Landroid/media/MediaPlayer$OnErrorListener;
 .implements Landroid/media/MediaPlayer$OnInfoListener;
+.implements Lcom/android/gallery3d/app/MoviePlayer$Restorable;
 
 
 # annotations
@@ -42,7 +42,7 @@
     .line 1063
     iput-object p1, p0, Lcom/android/gallery3d/app/MoviePlayer$RetryExtension;->this$0:Lcom/android/gallery3d/app/MoviePlayer;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -617,7 +617,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/mediatek/gallery3d/video/MTKVideoView;->canSeekForward()Z
+    invoke-virtual {v0}, Landroid/widget/VideoView;->canSeekForward()Z
 
     move-result v0
 

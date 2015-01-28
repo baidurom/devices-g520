@@ -242,7 +242,7 @@
 
     iget-object v1, p0, Lcom/android/gallery3d/ui/UndoBarView;->mUndoText:Lcom/android/gallery3d/ui/StringTexture;
 
-    invoke-virtual {v1}, Lcom/android/gallery3d/ui/StringTexture;->getWidth()I
+    invoke-virtual {v1}, Lcom/android/gallery3d/ui/UploadedTexture;->getWidth()I
 
     move-result v1
 
@@ -358,7 +358,7 @@
 
     .line 203
     :cond_1
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/UndoBarView;->invalidate()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->invalidate()V
 
     goto :goto_0
 
@@ -407,13 +407,13 @@
 
     .line 150
     .local v3, y:F
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/UndoBarView;->getWidth()I
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->getWidth()I
 
     move-result v1
 
     .line 151
     .local v1, w:I
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/UndoBarView;->getHeight()I
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->getHeight()I
 
     move-result v0
 
@@ -527,7 +527,7 @@
     invoke-super {p0, v1}, Lcom/android/gallery3d/ui/GLView;->setVisibility(I)V
 
     .line 186
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/UndoBarView;->invalidate()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->invalidate()V
 
     goto :goto_0
 .end method
@@ -543,7 +543,7 @@
 
     iget v1, p0, Lcom/android/gallery3d/ui/UndoBarView;->mBarHeight:I
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/gallery3d/ui/UndoBarView;->setMeasuredSize(II)V
+    invoke-virtual {p0, v0, v1}, Lcom/android/gallery3d/ui/GLView;->setMeasuredSize(II)V
 
     .line 88
     return-void
@@ -647,13 +647,13 @@
     invoke-interface {p1, v0}, Lcom/android/gallery3d/ui/GLCanvas;->multiplyAlpha(F)V
 
     .line 98
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/UndoBarView;->getWidth()I
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->getWidth()I
 
     move-result v11
 
     .line 99
     .local v11, w:I
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/UndoBarView;->getHeight()I
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->getHeight()I
 
     move-result v10
 
@@ -688,7 +688,7 @@
 
     iget-object v1, p0, Lcom/android/gallery3d/ui/UndoBarView;->mUndoText:Lcom/android/gallery3d/ui/StringTexture;
 
-    invoke-virtual {v1}, Lcom/android/gallery3d/ui/StringTexture;->getWidth()I
+    invoke-virtual {v1}, Lcom/android/gallery3d/ui/UploadedTexture;->getWidth()I
 
     move-result v1
 
@@ -701,7 +701,7 @@
 
     iget-object v1, p0, Lcom/android/gallery3d/ui/UndoBarView;->mUndoText:Lcom/android/gallery3d/ui/StringTexture;
 
-    invoke-virtual {v1}, Lcom/android/gallery3d/ui/StringTexture;->getHeight()I
+    invoke-virtual {v1}, Lcom/android/gallery3d/ui/UploadedTexture;->getHeight()I
 
     move-result v1
 
@@ -713,7 +713,7 @@
     .local v3, y:I
     iget-object v0, p0, Lcom/android/gallery3d/ui/UndoBarView;->mUndoText:Lcom/android/gallery3d/ui/StringTexture;
 
-    invoke-virtual {v0, p1, v2, v3}, Lcom/android/gallery3d/ui/StringTexture;->draw(Lcom/android/gallery3d/ui/GLCanvas;II)V
+    invoke-virtual {v0, p1, v2, v3}, Lcom/android/gallery3d/ui/BasicTexture;->draw(Lcom/android/gallery3d/ui/GLCanvas;II)V
 
     .line 109
     iget v0, p0, Lcom/android/gallery3d/ui/UndoBarView;->mIconMargin:I
@@ -795,7 +795,7 @@
 
     iget-object v1, p0, Lcom/android/gallery3d/ui/UndoBarView;->mDeletedText:Lcom/android/gallery3d/ui/StringTexture;
 
-    invoke-virtual {v1}, Lcom/android/gallery3d/ui/StringTexture;->getHeight()I
+    invoke-virtual {v1}, Lcom/android/gallery3d/ui/UploadedTexture;->getHeight()I
 
     move-result v1
 
@@ -806,7 +806,7 @@
     .line 120
     iget-object v0, p0, Lcom/android/gallery3d/ui/UndoBarView;->mDeletedText:Lcom/android/gallery3d/ui/StringTexture;
 
-    invoke-virtual {v0, p1, v2, v3}, Lcom/android/gallery3d/ui/StringTexture;->draw(Lcom/android/gallery3d/ui/GLCanvas;II)V
+    invoke-virtual {v0, p1, v2, v3}, Lcom/android/gallery3d/ui/BasicTexture;->draw(Lcom/android/gallery3d/ui/GLCanvas;II)V
 
     .line 122
     invoke-interface {p1}, Lcom/android/gallery3d/ui/GLCanvas;->restore()V
@@ -848,7 +848,7 @@
     invoke-super {p0, p1}, Lcom/android/gallery3d/ui/GLView;->setVisibility(I)V
 
     .line 173
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/UndoBarView;->invalidate()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->invalidate()V
 
     .line 174
     return-void

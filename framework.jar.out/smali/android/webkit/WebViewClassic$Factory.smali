@@ -3,8 +3,8 @@
 .source "WebViewClassic.java"
 
 # interfaces
-.implements Landroid/webkit/WebViewFactoryProvider;
 .implements Landroid/webkit/WebViewFactoryProvider$Statics;
+.implements Landroid/webkit/WebViewFactoryProvider;
 
 
 # annotations
@@ -24,7 +24,7 @@
 
     .prologue
     .line 1338
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

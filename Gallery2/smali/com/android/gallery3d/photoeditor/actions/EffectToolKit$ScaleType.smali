@@ -148,7 +148,7 @@
     .line 37
     sget-object v0, Lcom/android/gallery3d/photoeditor/actions/EffectToolKit$ScaleType;->$VALUES:[Lcom/android/gallery3d/photoeditor/actions/EffectToolKit$ScaleType;
 
-    invoke-virtual {v0}, [Lcom/android/gallery3d/photoeditor/actions/EffectToolKit$ScaleType;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

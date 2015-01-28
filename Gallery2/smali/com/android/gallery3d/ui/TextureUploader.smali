@@ -49,7 +49,7 @@
     const/16 v1, 0x40
 
     .line 34
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 27
     new-instance v0, Ljava/util/ArrayDeque;
@@ -196,7 +196,7 @@
     .line 87
     if-eqz p4, :cond_3
 
-    invoke-virtual {v0, p1, v2, v2}, Lcom/android/gallery3d/ui/UploadedTexture;->draw(Lcom/android/gallery3d/ui/GLCanvas;II)V
+    invoke-virtual {v0, p1, v2, v2}, Lcom/android/gallery3d/ui/BasicTexture;->draw(Lcom/android/gallery3d/ui/GLCanvas;II)V
 
     .line 88
     :cond_3

@@ -37,7 +37,7 @@
 
     .prologue
     .line 38
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -125,7 +125,7 @@
 
     .line 79
     .local v0, e:Ljava/lang/OutOfMemoryError;
-    invoke-virtual {v0}, Ljava/lang/OutOfMemoryError;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     move-object v1, v2
 
@@ -208,7 +208,7 @@
 
     .line 64
     .local v0, e:Ljava/lang/OutOfMemoryError;
-    invoke-virtual {v0}, Ljava/lang/OutOfMemoryError;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     move-object v1, v2
 

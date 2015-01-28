@@ -129,7 +129,7 @@
     const/4 v3, 0x0
 
     .line 115
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 86
     new-instance v1, Landroid/view/CompatibilityInfoHolder;
@@ -176,7 +176,7 @@
     iput-object p2, p0, Landroid/app/LoadedApk;->mApplicationInfo:Landroid/content/pm/ApplicationInfo;
 
     .line 118
-    iget-object v1, p2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+    iget-object v1, p2, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
 
     iput-object v1, p0, Landroid/app/LoadedApk;->mPackageName:Ljava/lang/String;
 
@@ -357,7 +357,7 @@
     const/4 v1, 0x0
 
     .line 154
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 86
     new-instance v0, Landroid/view/CompatibilityInfoHolder;
@@ -410,7 +410,7 @@
     .line 157
     iget-object v0, p0, Landroid/app/LoadedApk;->mApplicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    iput-object p2, v0, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+    iput-object p2, v0, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
 
     .line 158
     iput-object p2, p0, Landroid/app/LoadedApk;->mPackageName:Ljava/lang/String;
@@ -928,7 +928,7 @@
 
     .line 631
     .local v0, ex:Ljava/lang/RuntimeException;
-    invoke-virtual {v0}, Ljava/lang/RuntimeException;->fillInStackTrace()Ljava/lang/Throwable;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->fillInStackTrace()Ljava/lang/Throwable;
 
     .line 632
     invoke-virtual {v3, v0}, Landroid/app/LoadedApk$ReceiverDispatcher;->setUnregisterLocation(Ljava/lang/RuntimeException;)V
@@ -1206,7 +1206,7 @@
 
     .line 925
     .local v0, ex:Ljava/lang/RuntimeException;
-    invoke-virtual {v0}, Ljava/lang/RuntimeException;->fillInStackTrace()Ljava/lang/Throwable;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->fillInStackTrace()Ljava/lang/Throwable;
 
     .line 926
     invoke-virtual {v3, v0}, Landroid/app/LoadedApk$ServiceDispatcher;->setUnbindLocation(Ljava/lang/RuntimeException;)V
@@ -2286,7 +2286,7 @@
 
     move-result-object v6
 
-    invoke-virtual {v4}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v7
 
@@ -2342,7 +2342,7 @@
 
     move-result-object v6
 
-    invoke-virtual {v4}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v7
 
@@ -2476,16 +2476,16 @@
 
     move-result-object v8
 
-    invoke-virtual {v8}, Landroid/app/IntentReceiverLeaked;->getStackTrace()[Ljava/lang/StackTraceElement;
+    invoke-virtual {v8}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
 
     move-result-object v8
 
-    invoke-virtual {v2, v8}, Landroid/app/IntentReceiverLeaked;->setStackTrace([Ljava/lang/StackTraceElement;)V
+    invoke-virtual {v2, v8}, Ljava/lang/Throwable;->setStackTrace([Ljava/lang/StackTraceElement;)V
 
     .line 539
     const-string v8, "ActivityThread"
 
-    invoke-virtual {v2}, Landroid/app/IntentReceiverLeaked;->getMessage()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v9
 
@@ -2621,16 +2621,16 @@
 
     move-result-object v8
 
-    invoke-virtual {v8}, Landroid/app/ServiceConnectionLeaked;->getStackTrace()[Ljava/lang/StackTraceElement;
+    invoke-virtual {v8}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
 
     move-result-object v8
 
-    invoke-virtual {v2, v8}, Landroid/app/ServiceConnectionLeaked;->setStackTrace([Ljava/lang/StackTraceElement;)V
+    invoke-virtual {v2, v8}, Ljava/lang/Throwable;->setStackTrace([Ljava/lang/StackTraceElement;)V
 
     .line 563
     const-string v8, "ActivityThread"
 
-    invoke-virtual {v2}, Landroid/app/ServiceConnectionLeaked;->getMessage()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v9
 

@@ -119,7 +119,7 @@
 
     move-result-object v7
 
-    invoke-virtual {p0}, Lcom/mediatek/activity/MessageActivity;->getTaskId()I
+    invoke-virtual {p0}, Landroid/app/Activity;->getTaskId()I
 
     move-result v8
 
@@ -134,7 +134,7 @@
     invoke-static {v7}, Lcom/mediatek/bluetooth/util/BtLog;->d(Ljava/lang/String;)V
 
     .line 82
-    invoke-virtual {p0}, Lcom/mediatek/activity/MessageActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -241,10 +241,10 @@
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
     .line 73
-    invoke-virtual {p0, v0}, Lcom/mediatek/activity/MessageActivity;->setVisible(Z)V
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->setVisible(Z)V
 
     .line 74
-    invoke-virtual {p0, v0}, Lcom/mediatek/activity/MessageActivity;->showDialog(I)V
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->showDialog(I)V
 
     .line 75
     return-void

@@ -412,7 +412,7 @@
 
     .line 524
     .local v5, e:Landroid/os/RemoteException;
-    invoke-virtual {v5}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v5}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto/16 :goto_0
 
@@ -423,7 +423,7 @@
 
     .line 516
     .restart local v5       #e:Landroid/os/RemoteException;
-    invoke-virtual {v5}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v5}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_5
 
@@ -523,7 +523,7 @@
 
     .line 533
     .restart local v5       #e:Landroid/os/RemoteException;
-    invoke-virtual {v5}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v5}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_6
 
@@ -587,7 +587,7 @@
 
     .line 544
     .restart local v5       #e:Landroid/os/RemoteException;
-    invoke-virtual {v5}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v5}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto/16 :goto_0
 
@@ -750,7 +750,7 @@
 
     .line 560
     .restart local v5       #e:Landroid/os/RemoteException;
-    invoke-virtual {v5}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v5}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_a
 

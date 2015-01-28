@@ -107,7 +107,7 @@
     if-eqz v3, :cond_0
 
     .line 115
-    invoke-virtual {v3}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v3}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v4
 

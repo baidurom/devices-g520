@@ -30,7 +30,7 @@
     .line 200
     iput-object p1, p0, Lcom/android/gallery3d/photoeditor/PhotoEditor$6;->this$0:Lcom/android/gallery3d/photoeditor/PhotoEditor;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -84,7 +84,7 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/gallery3d/photoeditor/YesCancelDialogBuilder;-><init>(Landroid/content/Context;Ljava/lang/Runnable;I)V
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/photoeditor/YesCancelDialogBuilder;->show()Landroid/app/AlertDialog;
+    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
 
     .line 221
     :cond_0
@@ -112,12 +112,12 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/gallery3d/photoeditor/PhotoEditor;->setResult(ILandroid/content/Intent;)V
+    invoke-virtual {v0, v1, v2}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
 
     .line 218
     iget-object v0, p0, Lcom/android/gallery3d/photoeditor/PhotoEditor$6;->this$0:Lcom/android/gallery3d/photoeditor/PhotoEditor;
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/photoeditor/PhotoEditor;->finish()V
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 .end method

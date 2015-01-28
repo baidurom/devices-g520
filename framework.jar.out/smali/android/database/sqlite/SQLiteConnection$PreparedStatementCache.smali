@@ -58,7 +58,7 @@
     invoke-interface {p1, v6}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
     .line 1259
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteConnection$PreparedStatementCache;->snapshot()Ljava/util/Map;
+    invoke-virtual {p0}, Landroid/util/LruCache;->snapshot()Ljava/util/Map;
 
     move-result-object v0
 

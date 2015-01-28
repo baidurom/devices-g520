@@ -97,7 +97,7 @@
     const/4 v2, 0x0
 
     .line 109
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 79
     iput-object v2, p0, Lcom/android/internal/telephony/cat/BipManager;->mHandler:Lcom/android/internal/telephony/cat/CatService;
@@ -1279,7 +1279,7 @@
     .line 341
     iget-object v0, p0, Lcom/android/internal/telephony/cat/BipManager;->mHandler:Lcom/android/internal/telephony/cat/CatService;
 
-    invoke-virtual {v0, p2}, Lcom/android/internal/telephony/cat/CatService;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v0, p2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     .line 342
     const-string v0, "[BIP]"
@@ -1433,7 +1433,7 @@
     .line 440
     iget-object v1, p0, Lcom/android/internal/telephony/cat/BipManager;->mHandler:Lcom/android/internal/telephony/cat/CatService;
 
-    invoke-virtual {v1, p2}, Lcom/android/internal/telephony/cat/CatService;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v1, p2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     .line 441
     return-void
@@ -2043,7 +2043,7 @@
     .line 289
     iget-object v4, p0, Lcom/android/internal/telephony/cat/BipManager;->mHandler:Lcom/android/internal/telephony/cat/CatService;
 
-    invoke-virtual {v4, p2}, Lcom/android/internal/telephony/cat/CatService;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v4, p2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     .line 307
     :goto_8
@@ -2155,7 +2155,7 @@
 
     const/16 v5, 0x23
 
-    invoke-virtual {v4, v5}, Lcom/android/internal/telephony/cat/CatService;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {v4, v5}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v3
 
@@ -2168,7 +2168,7 @@
 
     const-wide/16 v5, 0x7530
 
-    invoke-virtual {v4, v3, v5, v6}, Lcom/android/internal/telephony/cat/CatService;->sendMessageDelayed(Landroid/os/Message;J)Z
+    invoke-virtual {v4, v3, v5, v6}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     goto :goto_8
 
@@ -2201,7 +2201,7 @@
     .line 305
     iget-object v4, p0, Lcom/android/internal/telephony/cat/BipManager;->mHandler:Lcom/android/internal/telephony/cat/CatService;
 
-    invoke-virtual {v4, p2}, Lcom/android/internal/telephony/cat/CatService;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v4, p2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     goto :goto_8
 .end method
@@ -2319,7 +2319,7 @@
     .line 374
     iget-object v0, p0, Lcom/android/internal/telephony/cat/BipManager;->mHandler:Lcom/android/internal/telephony/cat/CatService;
 
-    invoke-virtual {v0, p2}, Lcom/android/internal/telephony/cat/CatService;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v0, p2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     goto :goto_0
 .end method

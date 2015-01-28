@@ -3,8 +3,8 @@
 .source "LimitDialog.java"
 
 # interfaces
-.implements Landroid/text/TextWatcher;
 .implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/text/TextWatcher;
 
 
 # static fields
@@ -244,7 +244,7 @@
 
     .line 206
     .local v0, e:Landroid/database/sqlite/SQLiteException;
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 .end method
@@ -297,7 +297,7 @@
     .line 190
     :cond_1
     :goto_0
-    invoke-virtual {p0, v5}, Lcom/mediatek/gallery3d/video/LimitDialog;->getButton(I)Landroid/widget/Button;
+    invoke-virtual {p0, v5}, Landroid/app/AlertDialog;->getButton(I)Landroid/widget/Button;
 
     move-result-object v3
 
@@ -307,13 +307,13 @@
     if-eqz v2, :cond_5
 
     .line 192
-    invoke-virtual {p0, v5}, Lcom/mediatek/gallery3d/video/LimitDialog;->getButton(I)Landroid/widget/Button;
+    invoke-virtual {p0, v5}, Landroid/app/AlertDialog;->getButton(I)Landroid/widget/Button;
 
     move-result-object v3
 
     const/4 v4, 0x1
 
-    invoke-virtual {v3, v4}, Landroid/widget/Button;->setEnabled(Z)V
+    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setEnabled(Z)V
 
     .line 197
     :cond_2
@@ -358,7 +358,7 @@
     .local v1, ex:Ljava/lang/NumberFormatException;
     const-string v3, "LimitDialog"
 
-    invoke-virtual {v1}, Ljava/lang/NumberFormatException;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v4
 
@@ -372,13 +372,13 @@
     .line 194
     .end local v1           #ex:Ljava/lang/NumberFormatException;
     :cond_5
-    invoke-virtual {p0, v5}, Lcom/mediatek/gallery3d/video/LimitDialog;->getButton(I)Landroid/widget/Button;
+    invoke-virtual {p0, v5}, Landroid/app/AlertDialog;->getButton(I)Landroid/widget/Button;
 
     move-result-object v3
 
     const/4 v4, 0x0
 
-    invoke-virtual {v3, v4}, Landroid/widget/Button;->setEnabled(Z)V
+    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setEnabled(Z)V
 
     goto :goto_1
 .end method
@@ -445,11 +445,11 @@
     .line 135
     const v0, 0x7f0c0183
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/video/LimitDialog;->setTitle(I)V
+    invoke-virtual {p0, v0}, Landroid/app/Dialog;->setTitle(I)V
 
     .line 139
     :goto_0
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/LimitDialog;->getLayoutInflater()Landroid/view/LayoutInflater;
+    invoke-virtual {p0}, Landroid/app/Dialog;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v0
 
@@ -471,11 +471,11 @@
     .line 141
     iget-object v0, p0, Lcom/mediatek/gallery3d/video/LimitDialog;->mView:Landroid/view/View;
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/video/LimitDialog;->setView(Landroid/view/View;)V
+    invoke-virtual {p0, v0}, Landroid/app/AlertDialog;->setView(Landroid/view/View;)V
 
     .line 143
     :cond_0
-    invoke-virtual {p0, v6}, Lcom/mediatek/gallery3d/video/LimitDialog;->setInverseBackgroundForced(Z)V
+    invoke-virtual {p0, v6}, Landroid/app/AlertDialog;->setInverseBackgroundForced(Z)V
 
     .line 144
     iget-object v0, p0, Lcom/mediatek/gallery3d/video/LimitDialog;->mView:Landroid/view/View;
@@ -517,12 +517,12 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 148
     iget-object v0, p0, Lcom/mediatek/gallery3d/video/LimitDialog;->mBufferField:Landroid/widget/EditText;
 
-    invoke-virtual {v0, p0}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
+    invoke-virtual {v0, p0}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     .line 150
     :cond_1
@@ -569,7 +569,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0, v0, v1, p0}, Lcom/mediatek/gallery3d/video/LimitDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {p0, v0, v1, p0}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     .line 152
     const/4 v0, -0x2
@@ -582,7 +582,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0, v0, v1, p0}, Lcom/mediatek/gallery3d/video/LimitDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {p0, v0, v1, p0}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     .line 153
     invoke-super {p0, p1}, Landroid/app/AlertDialog;->onCreate(Landroid/os/Bundle;)V
@@ -597,7 +597,7 @@
     :cond_2
     const v0, 0x7f0c0186
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/video/LimitDialog;->setTitle(I)V
+    invoke-virtual {p0, v0}, Landroid/app/Dialog;->setTitle(I)V
 
     goto/16 :goto_0
 .end method

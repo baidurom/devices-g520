@@ -30,7 +30,7 @@
     .line 346
     iput-object p1, p0, Lcom/android/gallery3d/ui/GLRootView$1;->this$0:Lcom/android/gallery3d/ui/GLRootView;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -44,7 +44,7 @@
     .line 348
     iget-object v2, p0, Lcom/android/gallery3d/ui/GLRootView$1;->this$0:Lcom/android/gallery3d/ui/GLRootView;
 
-    invoke-virtual {v2}, Lcom/android/gallery3d/ui/GLRootView;->getRootView()Landroid/view/View;
+    invoke-virtual {v2}, Landroid/view/View;->getRootView()Landroid/view/View;
 
     move-result-object v1
 

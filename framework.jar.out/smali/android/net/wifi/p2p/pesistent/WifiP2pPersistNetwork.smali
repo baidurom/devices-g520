@@ -100,7 +100,7 @@
     const/4 v1, -0x1
 
     .line 82
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 41
     iput v1, p0, Landroid/net/wifi/p2p/pesistent/WifiP2pPersistNetwork;->networkId:I
@@ -150,7 +150,7 @@
     const/4 v3, -0x1
 
     .line 152
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 41
     iput v3, p0, Landroid/net/wifi/p2p/pesistent/WifiP2pPersistNetwork;->networkId:I
@@ -279,7 +279,7 @@
     const/4 v5, -0x1
 
     .line 95
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 41
     iput v5, p0, Landroid/net/wifi/p2p/pesistent/WifiP2pPersistNetwork;->networkId:I

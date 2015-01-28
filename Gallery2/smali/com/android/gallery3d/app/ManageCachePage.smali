@@ -3,10 +3,10 @@
 .source "ManageCachePage.java"
 
 # interfaces
-.implements Lcom/android/gallery3d/ui/SelectionManager$SelectionListener;
-.implements Lcom/android/gallery3d/ui/MenuExecutor$ProgressListener;
-.implements Lcom/android/gallery3d/app/EyePosition$EyePositionListener;
 .implements Landroid/view/View$OnClickListener;
+.implements Lcom/android/gallery3d/app/EyePosition$EyePositionListener;
+.implements Lcom/android/gallery3d/ui/MenuExecutor$ProgressListener;
+.implements Lcom/android/gallery3d/ui/SelectionManager$SelectionListener;
 
 
 # static fields
@@ -315,7 +315,7 @@
 
     iget-object v2, p0, Lcom/android/gallery3d/app/ManageCachePage;->mAlbumSetDataAdapter:Lcom/android/gallery3d/app/AlbumSetDataLoader;
 
-    invoke-virtual {v1, v2}, Lcom/android/gallery3d/ui/ManageCacheDrawer;->setModel(Lcom/android/gallery3d/app/AlbumSetDataLoader;)V
+    invoke-virtual {v1, v2}, Lcom/android/gallery3d/ui/AlbumSetSlotRenderer;->setModel(Lcom/android/gallery3d/app/AlbumSetDataLoader;)V
 
     .line 277
     return-void
@@ -466,7 +466,7 @@
     .line 145
     iget-object v0, p0, Lcom/android/gallery3d/app/ManageCachePage;->mSelectionDrawer:Lcom/android/gallery3d/ui/ManageCacheDrawer;
 
-    invoke-virtual {v0, p1}, Lcom/android/gallery3d/ui/ManageCacheDrawer;->setPressedIndex(I)V
+    invoke-virtual {v0, p1}, Lcom/android/gallery3d/ui/AlbumSetSlotRenderer;->setPressedIndex(I)V
 
     .line 146
     return-void
@@ -481,7 +481,7 @@
 
     const/4 v1, -0x1
 
-    invoke-virtual {v0, v1}, Lcom/android/gallery3d/ui/ManageCacheDrawer;->setPressedIndex(I)V
+    invoke-virtual {v0, v1}, Lcom/android/gallery3d/ui/AlbumSetSlotRenderer;->setPressedIndex(I)V
 
     .line 150
     return-void
@@ -602,7 +602,7 @@
 
     aput-object v16, v14, v15
 
-    invoke-virtual {v1, v13, v14}, Landroid/app/Activity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v1, v13, v14}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -653,7 +653,7 @@
 
     aput-object v16, v14, v15
 
-    invoke-virtual {v1, v13, v14}, Landroid/app/Activity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v1, v13, v14}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -680,7 +680,7 @@
 
     .line 344
     .local v0, activity:Landroid/app/Activity;
-    invoke-virtual {v0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0}, Landroid/content/ContextWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -717,7 +717,7 @@
 
     .line 353
     .local v0, activity:Landroid/app/Activity;
-    invoke-virtual {v0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0}, Landroid/content/ContextWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -792,7 +792,7 @@
     if-nez v3, :cond_1
 
     .line 328
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/ManageCachePage;->onBackPressed()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/app/ActivityState;->onBackPressed()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -865,19 +865,19 @@
 
     .line 217
     .local v0, layout:Landroid/widget/FrameLayout;
-    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getVisibility()I
+    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
 
     move-result v1
 
     if-nez v1, :cond_0
 
     .line 218
-    invoke-virtual {v0}, Landroid/widget/FrameLayout;->removeAllViews()V
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
 
     .line 219
     iget-object v1, p0, Lcom/android/gallery3d/app/ManageCachePage;->mFooterContent:Landroid/view/View;
 
-    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     .line 221
     :cond_0
@@ -1002,7 +1002,7 @@
     .line 227
     iget-object v1, p0, Lcom/android/gallery3d/app/ManageCachePage;->mSelectionDrawer:Lcom/android/gallery3d/ui/ManageCacheDrawer;
 
-    invoke-virtual {v1}, Lcom/android/gallery3d/ui/ManageCacheDrawer;->pause()V
+    invoke-virtual {v1}, Lcom/android/gallery3d/ui/AlbumSetSlotRenderer;->pause()V
 
     .line 228
     iget-object v1, p0, Lcom/android/gallery3d/app/ManageCachePage;->mEyePosition:Lcom/android/gallery3d/app/EyePosition;
@@ -1047,12 +1047,12 @@
 
     .line 237
     .local v0, layout:Landroid/widget/FrameLayout;
-    invoke-virtual {v0}, Landroid/widget/FrameLayout;->removeAllViews()V
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
 
     .line 238
     const/4 v1, 0x4
 
-    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     .line 239
     return-void
@@ -1064,7 +1064,7 @@
 
     .prologue
     .line 387
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/ManageCachePage;->onBackPressed()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/app/ActivityState;->onBackPressed()V
 
     .line 388
     return-void
@@ -1089,7 +1089,7 @@
     .line 255
     iget-object v1, p0, Lcom/android/gallery3d/app/ManageCachePage;->mRootPane:Lcom/android/gallery3d/ui/GLView;
 
-    invoke-virtual {p0, v1}, Lcom/android/gallery3d/app/ManageCachePage;->setContentPane(Lcom/android/gallery3d/ui/GLView;)V
+    invoke-virtual {p0, v1}, Lcom/android/gallery3d/app/ActivityState;->setContentPane(Lcom/android/gallery3d/ui/GLView;)V
 
     .line 256
     iget-object v1, p0, Lcom/android/gallery3d/app/ManageCachePage;->mAlbumSetDataAdapter:Lcom/android/gallery3d/app/AlbumSetDataLoader;
@@ -1099,7 +1099,7 @@
     .line 257
     iget-object v1, p0, Lcom/android/gallery3d/app/ManageCachePage;->mSelectionDrawer:Lcom/android/gallery3d/ui/ManageCacheDrawer;
 
-    invoke-virtual {v1}, Lcom/android/gallery3d/ui/ManageCacheDrawer;->resume()V
+    invoke-virtual {v1}, Lcom/android/gallery3d/ui/AlbumSetSlotRenderer;->resume()V
 
     .line 258
     iget-object v1, p0, Lcom/android/gallery3d/app/ManageCachePage;->mEyePosition:Lcom/android/gallery3d/app/EyePosition;
@@ -1138,12 +1138,12 @@
     .local v0, layout:Landroid/widget/FrameLayout;
     iget-object v1, p0, Lcom/android/gallery3d/app/ManageCachePage;->mFooterContent:Landroid/view/View;
 
-    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     .line 262
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     .line 263
     return-void
@@ -1190,7 +1190,7 @@
 
     .line 158
     :cond_0
-    invoke-virtual {v5}, Lcom/android/gallery3d/data/MediaSet;->getSupportedOperations()I
+    invoke-virtual {v5}, Lcom/android/gallery3d/data/MediaObject;->getSupportedOperations()I
 
     move-result v6
 
@@ -1205,13 +1205,13 @@
 
     .line 164
     :cond_1
-    invoke-virtual {v5}, Lcom/android/gallery3d/data/MediaSet;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {v5}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v2
 
     .line 165
     .local v2, path:Lcom/android/gallery3d/data/Path;
-    invoke-virtual {v5}, Lcom/android/gallery3d/data/MediaSet;->getCacheFlag()I
+    invoke-virtual {v5}, Lcom/android/gallery3d/data/MediaObject;->getCacheFlag()I
 
     move-result v6
 
@@ -1247,7 +1247,7 @@
     .line 179
     :cond_2
     :goto_2
-    invoke-virtual {v5}, Lcom/android/gallery3d/data/MediaSet;->getCacheSize()J
+    invoke-virtual {v5}, Lcom/android/gallery3d/data/MediaObject;->getCacheSize()J
 
     move-result-wide v3
 
@@ -1276,7 +1276,7 @@
     .line 185
     iget-object v6, p0, Lcom/android/gallery3d/app/ManageCachePage;->mSlotView:Lcom/android/gallery3d/ui/SlotView;
 
-    invoke-virtual {v6}, Lcom/android/gallery3d/ui/SlotView;->invalidate()V
+    invoke-virtual {v6}, Lcom/android/gallery3d/ui/GLView;->invalidate()V
 
     goto :goto_0
 

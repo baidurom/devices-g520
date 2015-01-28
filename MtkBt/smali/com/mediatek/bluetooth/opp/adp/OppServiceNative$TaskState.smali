@@ -148,7 +148,7 @@
     .line 1017
     sget-object v0, Lcom/mediatek/bluetooth/opp/adp/OppServiceNative$TaskState;->$VALUES:[Lcom/mediatek/bluetooth/opp/adp/OppServiceNative$TaskState;
 
-    invoke-virtual {v0}, [Lcom/mediatek/bluetooth/opp/adp/OppServiceNative$TaskState;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

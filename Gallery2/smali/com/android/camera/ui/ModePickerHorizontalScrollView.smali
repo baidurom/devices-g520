@@ -82,7 +82,7 @@
 
     .prologue
     .line 55
-    invoke-virtual {p0}, Lcom/android/camera/ui/ModePickerHorizontalScrollView;->isEnabled()Z
+    invoke-virtual {p0}, Landroid/view/View;->isEnabled()Z
 
     move-result v0
 
@@ -100,14 +100,14 @@
     .line 57
     iget-object v0, p0, Lcom/android/camera/ui/ModePickerHorizontalScrollView;->mHideRunnable:Ljava/lang/Runnable;
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/ui/ModePickerHorizontalScrollView;->removeCallbacks(Ljava/lang/Runnable;)Z
+    invoke-virtual {p0, v0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     .line 58
     iget-object v0, p0, Lcom/android/camera/ui/ModePickerHorizontalScrollView;->mHideRunnable:Ljava/lang/Runnable;
 
     const-wide/16 v1, 0xbb8
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/android/camera/ui/ModePickerHorizontalScrollView;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {p0, v0, v1, v2}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
 
     .line 60
     :cond_0
@@ -181,7 +181,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/ModePickerHorizontalScrollView;->getMeasuredWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v0
 
@@ -190,7 +190,7 @@
     .line 87
     const/16 v0, 0x42
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/ui/ModePickerHorizontalScrollView;->pageScroll(I)Z
+    invoke-virtual {p0, v0}, Landroid/widget/HorizontalScrollView;->pageScroll(I)Z
 
     .line 88
     const/4 v0, 0x1
@@ -306,7 +306,7 @@
 
     .prologue
     .line 64
-    invoke-super {p0, p1}, Landroid/widget/HorizontalScrollView;->setEnabled(Z)V
+    invoke-super {p0, p1}, Landroid/view/View;->setEnabled(Z)V
 
     .line 65
     if-nez p1, :cond_0

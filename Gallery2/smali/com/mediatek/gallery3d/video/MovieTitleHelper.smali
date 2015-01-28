@@ -15,7 +15,7 @@
 
     .prologue
     .line 14
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -134,7 +134,7 @@
     .line 87
     .local v7, ex:Landroid/database/sqlite/SQLiteException;
     :try_start_1
-    invoke-virtual {v7}, Landroid/database/sqlite/SQLiteException;->printStackTrace()V
+    invoke-virtual {v7}, Ljava/lang/Throwable;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -263,7 +263,7 @@
     .line 56
     .local v7, ex:Landroid/database/sqlite/SQLiteException;
     :try_start_1
-    invoke-virtual {v7}, Landroid/database/sqlite/SQLiteException;->printStackTrace()V
+    invoke-virtual {v7}, Ljava/lang/Throwable;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -493,7 +493,7 @@
     .line 34
     .local v8, ex:Landroid/database/sqlite/SQLiteException;
     :try_start_2
-    invoke-virtual {v8}, Landroid/database/sqlite/SQLiteException;->printStackTrace()V
+    invoke-virtual {v8}, Ljava/lang/Throwable;->printStackTrace()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 

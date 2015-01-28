@@ -361,7 +361,7 @@
     .local v0, e:Ljava/lang/reflect/InvocationTargetException;
     const-string v1, "PropertyValuesHolder"
 
-    invoke-virtual {v0}, Ljava/lang/reflect/InvocationTargetException;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -378,7 +378,7 @@
     .local v0, e:Ljava/lang/IllegalAccessException;
     const-string v1, "PropertyValuesHolder"
 
-    invoke-virtual {v0}, Ljava/lang/IllegalAccessException;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v2
 

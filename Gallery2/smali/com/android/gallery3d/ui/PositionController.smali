@@ -314,7 +314,7 @@
     const/4 v2, -0x3
 
     .line 217
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 90
     iput-boolean v5, p0, Lcom/android/gallery3d/ui/PositionController;->mExtraScalingRange:Z
@@ -3069,7 +3069,7 @@
     :try_start_0
     iget-object v3, p0, Lcom/android/gallery3d/ui/PositionController;->mPlatform:Lcom/android/gallery3d/ui/PositionController$Platform;
 
-    invoke-virtual {v3}, Lcom/android/gallery3d/ui/PositionController$Platform;->advanceAnimation()Z
+    invoke-virtual {v3}, Lcom/android/gallery3d/ui/PositionController$Animatable;->advanceAnimation()Z
 
     move-result v3
 
@@ -3091,7 +3091,7 @@
 
     check-cast v3, Lcom/android/gallery3d/ui/PositionController$Box;
 
-    invoke-virtual {v3}, Lcom/android/gallery3d/ui/PositionController$Box;->advanceAnimation()Z
+    invoke-virtual {v3}, Lcom/android/gallery3d/ui/PositionController$Animatable;->advanceAnimation()Z
 
     move-result v3
 
@@ -3118,7 +3118,7 @@
 
     check-cast v3, Lcom/android/gallery3d/ui/PositionController$Gap;
 
-    invoke-virtual {v3}, Lcom/android/gallery3d/ui/PositionController$Gap;->advanceAnimation()Z
+    invoke-virtual {v3}, Lcom/android/gallery3d/ui/PositionController$Animatable;->advanceAnimation()Z
 
     move-result v3
 
@@ -3133,7 +3133,7 @@
     :cond_1
     iget-object v3, p0, Lcom/android/gallery3d/ui/PositionController;->mFilmRatio:Lcom/android/gallery3d/ui/PositionController$FilmRatio;
 
-    invoke-virtual {v3}, Lcom/android/gallery3d/ui/PositionController$FilmRatio;->advanceAnimation()Z
+    invoke-virtual {v3}, Lcom/android/gallery3d/ui/PositionController$Animatable;->advanceAnimation()Z
 
     move-result v3
 

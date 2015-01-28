@@ -3,8 +3,8 @@
 .source "SurfaceTextureScreenNail.java"
 
 # interfaces
-.implements Lcom/android/gallery3d/ui/ScreenNail;
 .implements Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;
+.implements Lcom/android/gallery3d/ui/ScreenNail;
 
 
 # static fields
@@ -80,7 +80,7 @@
     const/4 v2, 0x0
 
     .line 46
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 33
     const/16 v0, 0x10
@@ -238,12 +238,12 @@
 
     iget v2, p0, Lcom/android/gallery3d/ui/SurfaceTextureScreenNail;->mHeight:I
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/gallery3d/ui/ExtTexture;->setSize(II)V
+    invoke-virtual {v0, v1, v2}, Lcom/android/gallery3d/ui/BasicTexture;->setSize(II)V
 
     .line 58
     sget-object v0, Lcom/android/gallery3d/ui/SurfaceTextureScreenNail;->sFrameListener:Landroid/os/HandlerThread;
 
-    invoke-virtual {v0}, Landroid/os/HandlerThread;->isAlive()Z
+    invoke-virtual {v0}, Ljava/lang/Thread;->isAlive()Z
 
     move-result v0
 
@@ -252,7 +252,7 @@
     .line 59
     sget-object v0, Lcom/android/gallery3d/ui/SurfaceTextureScreenNail;->sFrameListener:Landroid/os/HandlerThread;
 
-    invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     .line 62
     :cond_0

@@ -30,7 +30,7 @@
     .line 147
     iput-object p1, p0, Lcom/android/gallery3d/data/MtpDeviceSet$1;->this$0:Lcom/android/gallery3d/data/MtpDeviceSet;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -44,7 +44,7 @@
     .line 150
     iget-object v0, p0, Lcom/android/gallery3d/data/MtpDeviceSet$1;->this$0:Lcom/android/gallery3d/data/MtpDeviceSet;
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/data/MtpDeviceSet;->notifyContentChanged()V
+    invoke-virtual {v0}, Lcom/android/gallery3d/data/MediaSet;->notifyContentChanged()V
 
     .line 151
     return-void

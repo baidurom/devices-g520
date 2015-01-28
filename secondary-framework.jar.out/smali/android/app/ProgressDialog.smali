@@ -298,7 +298,7 @@
 
     .line 111
     .local v0, dialog:Landroid/app/ProgressDialog;
-    invoke-virtual {v0, p1}, Landroid/app/ProgressDialog;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, p1}, Landroid/app/AlertDialog;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 112
     invoke-virtual {v0, p2}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
@@ -307,13 +307,13 @@
     invoke-virtual {v0, p3}, Landroid/app/ProgressDialog;->setIndeterminate(Z)V
 
     .line 114
-    invoke-virtual {v0, p4}, Landroid/app/ProgressDialog;->setCancelable(Z)V
+    invoke-virtual {v0, p4}, Landroid/app/Dialog;->setCancelable(Z)V
 
     .line 115
-    invoke-virtual {v0, p5}, Landroid/app/ProgressDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
+    invoke-virtual {v0, p5}, Landroid/app/Dialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
     .line 116
-    invoke-virtual {v0}, Landroid/app/ProgressDialog;->show()V
+    invoke-virtual {v0}, Landroid/app/Dialog;->show()V
 
     .line 117
     return-object v0
@@ -582,7 +582,7 @@
     iput-object v3, p0, Landroid/app/ProgressDialog;->mProgressPercent:Landroid/widget/TextView;
 
     .line 162
-    invoke-virtual {p0, v2}, Landroid/app/ProgressDialog;->setView(Landroid/view/View;)V
+    invoke-virtual {p0, v2}, Landroid/app/AlertDialog;->setView(Landroid/view/View;)V
 
     .line 171
     :goto_0
@@ -727,7 +727,7 @@
     iput-object v3, p0, Landroid/app/ProgressDialog;->mMessageView:Landroid/widget/TextView;
 
     .line 169
-    invoke-virtual {p0, v2}, Landroid/app/ProgressDialog;->setView(Landroid/view/View;)V
+    invoke-virtual {p0, v2}, Landroid/app/AlertDialog;->setView(Landroid/view/View;)V
 
     goto :goto_0
 .end method
@@ -737,7 +737,7 @@
 
     .prologue
     .line 203
-    invoke-super {p0}, Landroid/app/AlertDialog;->onStart()V
+    invoke-super {p0}, Landroid/app/Dialog;->onStart()V
 
     .line 204
     const/4 v0, 0x1
@@ -753,7 +753,7 @@
 
     .prologue
     .line 209
-    invoke-super {p0}, Landroid/app/AlertDialog;->onStop()V
+    invoke-super {p0}, Landroid/app/Dialog;->onStop()V
 
     .line 210
     const/4 v0, 0x0

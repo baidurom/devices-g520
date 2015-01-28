@@ -35,7 +35,7 @@
 
     iput-object p2, p0, Lcom/mediatek/activity/MessageActivity$3;->val$positiveIntent:Landroid/content/Intent;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -53,12 +53,12 @@
 
     iget-object v1, p0, Lcom/mediatek/activity/MessageActivity$3;->val$positiveIntent:Landroid/content/Intent;
 
-    invoke-virtual {v0, v1}, Lcom/mediatek/activity/MessageActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v0, v1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
     .line 118
     iget-object v0, p0, Lcom/mediatek/activity/MessageActivity$3;->this$0:Lcom/mediatek/activity/MessageActivity;
 
-    invoke-virtual {v0}, Lcom/mediatek/activity/MessageActivity;->finish()V
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
     .line 119
     return-void

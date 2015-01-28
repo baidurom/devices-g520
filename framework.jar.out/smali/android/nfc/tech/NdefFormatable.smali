@@ -134,7 +134,7 @@
 
     .prologue
     .line 122
-    invoke-virtual {p0}, Landroid/nfc/tech/NdefFormatable;->checkConnected()V
+    invoke-virtual {p0}, Landroid/nfc/tech/BasicTagTechnology;->checkConnected()V
 
     .line 125
     :try_start_0

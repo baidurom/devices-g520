@@ -117,7 +117,7 @@
     const/4 v1, 0x1
 
     .line 233
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 216
     iput v1, p0, Landroid/net/nsd/NsdManager;->mListenerKey:I
@@ -139,7 +139,7 @@
     .line 219
     new-instance v0, Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/net/nsd/NsdManager;->mMapLock:Ljava/lang/Object;
 
@@ -428,7 +428,7 @@
 
     .line 432
     .local v2, t:Landroid/os/HandlerThread;
-    invoke-virtual {v2}, Landroid/os/HandlerThread;->start()V
+    invoke-virtual {v2}, Ljava/lang/Thread;->start()V
 
     .line 433
     new-instance v3, Landroid/net/nsd/NsdManager$ServiceHandler;

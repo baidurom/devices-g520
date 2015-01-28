@@ -3,8 +3,8 @@
 .source "ProxyDialog.java"
 
 # interfaces
-.implements Landroid/text/TextWatcher;
 .implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/text/TextWatcher;
 
 
 # static fields
@@ -334,7 +334,7 @@
 
     .line 289
     .local v0, e:Landroid/database/sqlite/SQLiteException;
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 .end method
@@ -367,18 +367,18 @@
 
     .line 274
     :goto_0
-    invoke-virtual {p0, v3}, Lcom/mediatek/gallery3d/video/ProxyDialog;->getButton(I)Landroid/widget/Button;
+    invoke-virtual {p0, v3}, Landroid/app/AlertDialog;->getButton(I)Landroid/widget/Button;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
     .line 275
-    invoke-virtual {p0, v3}, Lcom/mediatek/gallery3d/video/ProxyDialog;->getButton(I)Landroid/widget/Button;
+    invoke-virtual {p0, v3}, Landroid/app/AlertDialog;->getButton(I)Landroid/widget/Button;
 
     move-result-object v1
 
-    invoke-virtual {v1, v4}, Landroid/widget/Button;->setEnabled(Z)V
+    invoke-virtual {v1, v4}, Landroid/widget/TextView;->setEnabled(Z)V
 
     .line 278
     :cond_0
@@ -390,7 +390,7 @@
 
     aget-object v2, v0, v4
 
-    invoke-virtual {v1, v2}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setHint(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
@@ -402,7 +402,7 @@
 
     aget-object v2, v0, v2
 
-    invoke-virtual {v1, v2}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setHint(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
@@ -497,14 +497,14 @@
 
     const-string v4, ""
 
-    invoke-virtual {v3, v4}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
+    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setHint(Ljava/lang/CharSequence;)V
 
     .line 213
     iget-object v3, p0, Lcom/mediatek/gallery3d/video/ProxyDialog;->mPortField:Landroid/widget/EditText;
 
     const-string v4, ""
 
-    invoke-virtual {v3, v4}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
+    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setHint(Ljava/lang/CharSequence;)V
 
     .line 214
     iget-object v3, p0, Lcom/mediatek/gallery3d/video/ProxyDialog;->mHostErrMsg:Landroid/widget/TextView;
@@ -617,7 +617,7 @@
     .end local v2           #port:I
     :cond_3
     :goto_0
-    invoke-virtual {p0, v5}, Lcom/mediatek/gallery3d/video/ProxyDialog;->getButton(I)Landroid/widget/Button;
+    invoke-virtual {p0, v5}, Landroid/app/AlertDialog;->getButton(I)Landroid/widget/Button;
 
     move-result-object v3
 
@@ -627,11 +627,11 @@
     if-eqz v1, :cond_5
 
     .line 242
-    invoke-virtual {p0, v5}, Lcom/mediatek/gallery3d/video/ProxyDialog;->getButton(I)Landroid/widget/Button;
+    invoke-virtual {p0, v5}, Landroid/app/AlertDialog;->getButton(I)Landroid/widget/Button;
 
     move-result-object v3
 
-    invoke-virtual {v3, v7}, Landroid/widget/Button;->setEnabled(Z)V
+    invoke-virtual {v3, v7}, Landroid/widget/TextView;->setEnabled(Z)V
 
     .line 249
     :cond_4
@@ -646,7 +646,7 @@
     .local v0, ex:Ljava/lang/NumberFormatException;
     const-string v3, "Gallery3D/ProxyDialog"
 
-    invoke-virtual {v0}, Ljava/lang/NumberFormatException;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v4
 
@@ -663,11 +663,11 @@
     .line 244
     .end local v0           #ex:Ljava/lang/NumberFormatException;
     :cond_5
-    invoke-virtual {p0, v5}, Lcom/mediatek/gallery3d/video/ProxyDialog;->getButton(I)Landroid/widget/Button;
+    invoke-virtual {p0, v5}, Landroid/app/AlertDialog;->getButton(I)Landroid/widget/Button;
 
     move-result-object v3
 
-    invoke-virtual {v3, v6}, Landroid/widget/Button;->setEnabled(Z)V
+    invoke-virtual {v3, v6}, Landroid/widget/TextView;->setEnabled(Z)V
 
     goto :goto_1
 .end method
@@ -744,11 +744,11 @@
     .line 132
     const v2, 0x7f0c0164
 
-    invoke-virtual {p0, v2}, Lcom/mediatek/gallery3d/video/ProxyDialog;->setTitle(I)V
+    invoke-virtual {p0, v2}, Landroid/app/Dialog;->setTitle(I)V
 
     .line 136
     :goto_0
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/ProxyDialog;->getLayoutInflater()Landroid/view/LayoutInflater;
+    invoke-virtual {p0}, Landroid/app/Dialog;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v2
 
@@ -770,7 +770,7 @@
     .line 138
     iget-object v2, p0, Lcom/mediatek/gallery3d/video/ProxyDialog;->mView:Landroid/view/View;
 
-    invoke-virtual {p0, v2}, Lcom/mediatek/gallery3d/video/ProxyDialog;->setView(Landroid/view/View;)V
+    invoke-virtual {p0, v2}, Landroid/app/AlertDialog;->setView(Landroid/view/View;)V
 
     .line 142
     :cond_0
@@ -829,12 +829,12 @@
     iget-object v2, p0, Lcom/mediatek/gallery3d/video/ProxyDialog;->mHost:Ljava/lang/String;
 
     :goto_1
-    invoke-virtual {v3, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 148
     iget-object v2, p0, Lcom/mediatek/gallery3d/video/ProxyDialog;->mHostField:Landroid/widget/EditText;
 
-    invoke-virtual {v2, p0}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
+    invoke-virtual {v2, p0}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     .line 150
     iget-object v2, p0, Lcom/mediatek/gallery3d/video/ProxyDialog;->mCr:Landroid/content/ContentResolver;
@@ -865,12 +865,12 @@
     iget-object v2, p0, Lcom/mediatek/gallery3d/video/ProxyDialog;->mPort:Ljava/lang/String;
 
     :goto_3
-    invoke-virtual {v3, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 162
     iget-object v2, p0, Lcom/mediatek/gallery3d/video/ProxyDialog;->mPortField:Landroid/widget/EditText;
 
-    invoke-virtual {v2, p0}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
+    invoke-virtual {v2, p0}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     .line 165
     .end local v1           #port:I
@@ -935,7 +935,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p0, v5, v2, p0}, Lcom/mediatek/gallery3d/video/ProxyDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {p0, v5, v2, p0}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     .line 176
     const/4 v2, -0x2
@@ -948,7 +948,7 @@
 
     move-result-object v3
 
-    invoke-virtual {p0, v2, v3, p0}, Lcom/mediatek/gallery3d/video/ProxyDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {p0, v2, v3, p0}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     .line 178
     invoke-super {p0, p1}, Landroid/app/AlertDialog;->onCreate(Landroid/os/Bundle;)V
@@ -963,7 +963,7 @@
     :cond_4
     const v2, 0x7f0c0168
 
-    invoke-virtual {p0, v2}, Lcom/mediatek/gallery3d/video/ProxyDialog;->setTitle(I)V
+    invoke-virtual {p0, v2}, Landroid/app/Dialog;->setTitle(I)V
 
     goto/16 :goto_0
 
@@ -995,7 +995,7 @@
     .local v0, ex:Ljava/lang/NumberFormatException;
     const-string v2, "Gallery3D/ProxyDialog"
 
-    invoke-virtual {v0}, Ljava/lang/NumberFormatException;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v3
 

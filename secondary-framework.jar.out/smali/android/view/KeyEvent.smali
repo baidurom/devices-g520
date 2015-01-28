@@ -832,7 +832,7 @@
     .line 1264
     new-instance v0, Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Landroid/view/KeyEvent;->gRecyclerLock:Ljava/lang/Object;
 
@@ -2325,7 +2325,7 @@
     iput-object v1, v0, Landroid/view/KeyEvent;->mNext:Landroid/view/KeyEvent;
 
     .line 1579
-    invoke-virtual {v0}, Landroid/view/KeyEvent;->prepareForReuse()V
+    invoke-virtual {v0}, Landroid/view/InputEvent;->prepareForReuse()V
 
     goto :goto_0
 

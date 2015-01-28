@@ -170,7 +170,7 @@
 
     .line 1495
     .local v1, e:Landroid/os/RemoteException;
-    invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_1
 
@@ -794,7 +794,7 @@
 
     move-result-object v5
 
-    invoke-virtual {v5, v9}, Lcom/mediatek/wfd/WfdService$MyHandler;->hasMessages(I)Z
+    invoke-virtual {v5, v9}, Landroid/os/Handler;->hasMessages(I)Z
 
     move-result v5
 
@@ -808,7 +808,7 @@
 
     move-result-object v5
 
-    invoke-virtual {v5, v9}, Lcom/mediatek/wfd/WfdService$MyHandler;->removeMessages(I)V
+    invoke-virtual {v5, v9}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 1600
     :cond_d
@@ -828,7 +828,7 @@
 
     int-to-long v6, v6
 
-    invoke-virtual {v5, v9, v6, v7}, Lcom/mediatek/wfd/WfdService$MyHandler;->sendEmptyMessageDelayed(IJ)Z
+    invoke-virtual {v5, v9, v6, v7}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
     goto/16 :goto_0
 
@@ -917,7 +917,7 @@
 
     .line 1611
     .restart local v1       #e:Landroid/os/RemoteException;
-    invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto/16 :goto_0
 

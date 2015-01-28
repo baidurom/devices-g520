@@ -75,7 +75,7 @@
     .line 43
     new-instance v0, Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lcom/android/internal/telephony/gsm/SpnOverride;->sInstSync:Ljava/lang/Object;
 
@@ -87,7 +87,7 @@
 
     .prologue
     .line 84
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 85
     new-instance v0, Ljava/util/HashMap;
@@ -469,7 +469,7 @@
     if-nez v7, :cond_0
 
     .line 314
-    invoke-virtual {v6}, Ljava/io/FileReader;->close()V
+    invoke-virtual {v6}, Ljava/io/InputStreamReader;->close()V
     :try_end_1
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
@@ -729,7 +729,7 @@
     if-nez v7, :cond_0
 
     .line 185
-    invoke-virtual {v6}, Ljava/io/FileReader;->close()V
+    invoke-virtual {v6}, Ljava/io/InputStreamReader;->close()V
     :try_end_1
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
@@ -989,7 +989,7 @@
     if-nez v0, :cond_0
 
     .line 235
-    invoke-virtual {v11}, Ljava/io/FileReader;->close()V
+    invoke-virtual {v11}, Ljava/io/InputStreamReader;->close()V
     :try_end_1
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2

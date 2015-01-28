@@ -24,7 +24,7 @@
     .line 39
     const/16 v0, 0x64
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/photoeditor/actions/ScaleSeekBar;->setMax(I)V
+    invoke-virtual {p0, v0}, Landroid/widget/AbsSeekBar;->setMax(I)V
 
     .line 40
     return-void
@@ -43,7 +43,7 @@
     const/4 v0, 0x0
 
     :goto_0
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/photoeditor/actions/ScaleSeekBar;->setOnSeekBarChangeListener(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V
+    invoke-virtual {p0, v0}, Landroid/widget/SeekBar;->setOnSeekBarChangeListener(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V
 
     .line 58
     return-void
@@ -63,7 +63,7 @@
 
     .prologue
     .line 61
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/ScaleSeekBar;->getMax()I
+    invoke-virtual {p0}, Landroid/widget/ProgressBar;->getMax()I
 
     move-result v0
 
@@ -73,7 +73,7 @@
 
     float-to-int v0, v0
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/photoeditor/actions/ScaleSeekBar;->setProgress(I)V
+    invoke-virtual {p0, v0}, Landroid/widget/ProgressBar;->setProgress(I)V
 
     .line 62
     return-void

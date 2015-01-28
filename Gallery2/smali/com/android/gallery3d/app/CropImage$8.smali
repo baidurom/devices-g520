@@ -130,7 +130,7 @@
     .line 1630
     iget-object v7, p0, Lcom/android/gallery3d/app/CropImage$8;->this$0:Lcom/android/gallery3d/app/CropImage;
 
-    invoke-virtual {v7}, Lcom/android/gallery3d/app/CropImage;->getIntent()Landroid/content/Intent;
+    invoke-virtual {v7}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v7
 
@@ -266,12 +266,12 @@
     .line 1651
     iget-object v7, p0, Lcom/android/gallery3d/app/CropImage$8;->this$0:Lcom/android/gallery3d/app/CropImage;
 
-    invoke-virtual {v7, v6}, Lcom/android/gallery3d/app/CropImage;->setResult(I)V
+    invoke-virtual {v7, v6}, Landroid/app/Activity;->setResult(I)V
 
     .line 1652
     iget-object v6, p0, Lcom/android/gallery3d/app/CropImage$8;->this$0:Lcom/android/gallery3d/app/CropImage;
 
-    invoke-virtual {v6}, Lcom/android/gallery3d/app/CropImage;->finish()V
+    invoke-virtual {v6}, Landroid/app/Activity;->finish()V
 
     goto/16 :goto_1
 .end method

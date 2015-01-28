@@ -23,7 +23,7 @@
     const/4 v0, 0x0
 
     .line 55
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 56
     iput-object v0, p0, Lcom/android/bluetooth/pbap/BluetoothPbapWriter;->mResultPath:Ljava/lang/String;
@@ -184,7 +184,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Ljava/io/FileOutputStream;->write([B)V
+    invoke-virtual {v2, v3}, Ljava/io/OutputStream;->write([B)V
 
     .line 98
     const/4 v1, 0x1

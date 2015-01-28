@@ -122,7 +122,7 @@
 
     .prologue
     .line 131
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 132
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -386,7 +386,7 @@
 
     invoke-direct {v0, p0, v1, p1, p2}, Landroid/provider/SearchRecentSuggestions$1;-><init>(Landroid/provider/SearchRecentSuggestions;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Landroid/provider/SearchRecentSuggestions$1;->start()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     goto :goto_0
 .end method

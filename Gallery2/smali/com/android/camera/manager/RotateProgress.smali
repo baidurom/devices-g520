@@ -52,13 +52,13 @@
 
     .prologue
     .line 45
-    invoke-virtual {p0}, Lcom/android/camera/manager/RotateProgress;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v1
 
     const v2, 0x7f040049
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/RotateProgress;->getViewLayer()I
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getViewLayer()I
 
     move-result v3
 
@@ -109,7 +109,7 @@
     .line 62
     iget-object v0, p0, Lcom/android/camera/manager/RotateProgress;->mRotateDialogText:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
     .line 63
     iget-object v0, p0, Lcom/android/camera/manager/RotateProgress;->mRotateDialogSpinner:Landroid/widget/ProgressBar;
@@ -160,7 +160,7 @@
     iput-object p1, p0, Lcom/android/camera/manager/RotateProgress;->mMessage:Ljava/lang/String;
 
     .line 71
-    invoke-virtual {p0}, Lcom/android/camera/manager/RotateProgress;->show()V
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->show()V
 
     .line 72
     sget-boolean v0, Lcom/android/camera/manager/RotateProgress;->LOG:Z

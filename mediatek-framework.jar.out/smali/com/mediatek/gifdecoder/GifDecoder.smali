@@ -23,7 +23,7 @@
 
     .prologue
     .line 98
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 99
     const-string v0, "GifDecoder"
@@ -78,7 +78,7 @@
 
     .prologue
     .line 118
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 119
     const-string v0, "GifDecoder"
@@ -135,7 +135,7 @@
 
     .prologue
     .line 105
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 106
     if-nez p1, :cond_0

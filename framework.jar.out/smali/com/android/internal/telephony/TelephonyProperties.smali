@@ -101,5 +101,3 @@
 .field public static final PROPERTY_TEST_CSIM:Ljava/lang/String; = "persist.radio.test-csim"
 
 .field public static final PROPERTY_WAKE_LOCK_TIMEOUT:Ljava/lang/String; = "ro.ril.wake_lock_timeout"
-
-.field public static final SMS_SYNCHRONOUS_SENDING:Ljava/lang/String; = "persist.radio.sms_sync_sending"

@@ -52,7 +52,7 @@
     if-nez v1, :cond_1
 
     .line 45
-    invoke-virtual {p0}, Lcom/android/server/RecognitionManagerService$MyPackageMonitor;->anyPackagesAppearing()Z
+    invoke-virtual {p0}, Lcom/android/internal/content/PackageMonitor;->anyPackagesAppearing()Z
 
     move-result v2
 
@@ -84,7 +84,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/android/server/RecognitionManagerService$MyPackageMonitor;->isPackageDisappearing(Ljava/lang/String;)I
+    invoke-virtual {p0, v2}, Lcom/android/internal/content/PackageMonitor;->isPackageDisappearing(Ljava/lang/String;)I
 
     move-result v0
 
@@ -118,7 +118,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/android/server/RecognitionManagerService$MyPackageMonitor;->isPackageModified(Ljava/lang/String;)Z
+    invoke-virtual {p0, v2}, Lcom/android/internal/content/PackageMonitor;->isPackageModified(Ljava/lang/String;)Z
 
     move-result v2
 

@@ -2800,7 +2800,7 @@
 
     .line 1036
     .local v3, is:Ljava/io/FileInputStream;
-    invoke-virtual {v3, v0}, Ljava/io/FileInputStream;->read([B)I
+    invoke-virtual {v3, v0}, Ljava/io/InputStream;->read([B)I
 
     move-result v4
 
@@ -4161,7 +4161,7 @@
 
     move-object/from16 v1, p1
 
-    invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$SamplingCounter;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
+    invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$Counter;->readSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
     .line 5201
     :cond_1b
@@ -5204,10 +5204,10 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Ljava/io/FileOutputStream;->write([B)V
+    invoke-virtual {v2, v3}, Ljava/io/OutputStream;->write([B)V
 
     .line 4881
-    invoke-virtual {v2}, Ljava/io/FileOutputStream;->flush()V
+    invoke-virtual {v2}, Ljava/io/OutputStream;->flush()V
 
     .line 4882
     invoke-static {v2}, Landroid/os/FileUtils;->sync(Ljava/io/FileOutputStream;)Z
@@ -5855,7 +5855,7 @@
     .line 4798
     move/from16 v0, p1
 
-    invoke-virtual {v8, v0}, Lcom/android/internal/os/BatteryStatsImpl$SamplingCounter;->getCountLocked(I)I
+    invoke-virtual {v8, v0}, Lcom/android/internal/os/BatteryStatsImpl$Counter;->getCountLocked(I)I
 
     move-result v21
 
@@ -6902,7 +6902,7 @@
     .line 2328
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mBluetoothOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->getTotalTimeLocked(JI)J
+    invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/os/BatteryStatsImpl$Timer;->getTotalTimeLocked(JI)J
 
     move-result-wide v0
 
@@ -7262,7 +7262,7 @@
     .line 2324
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mGlobalWifiRunningTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->getTotalTimeLocked(JI)J
+    invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/os/BatteryStatsImpl$Timer;->getTotalTimeLocked(JI)J
 
     move-result-wide v0
 
@@ -7825,7 +7825,7 @@
 
     aget-object v0, v0, p1
 
-    invoke-virtual {v0, p2}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->getCountLocked(I)I
+    invoke-virtual {v0, p2}, Lcom/android/internal/os/BatteryStatsImpl$Timer;->getCountLocked(I)I
 
     move-result v0
 
@@ -7844,7 +7844,7 @@
 
     aget-object v0, v0, p1
 
-    invoke-virtual {v0, p2, p3, p4}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->getTotalTimeLocked(JI)J
+    invoke-virtual {v0, p2, p3, p4}, Lcom/android/internal/os/BatteryStatsImpl$Timer;->getTotalTimeLocked(JI)J
 
     move-result-wide v0
 
@@ -7860,7 +7860,7 @@
     .line 2290
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->getTotalTimeLocked(JI)J
+    invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/os/BatteryStatsImpl$Timer;->getTotalTimeLocked(JI)J
 
     move-result-wide v0
 
@@ -7876,7 +7876,7 @@
     .line 2301
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mPhoneSignalScanningTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->getTotalTimeLocked(JI)J
+    invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/os/BatteryStatsImpl$Timer;->getTotalTimeLocked(JI)J
 
     move-result-wide v0
 
@@ -7894,7 +7894,7 @@
 
     aget-object v0, v0, p1
 
-    invoke-virtual {v0, p2}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->getCountLocked(I)I
+    invoke-virtual {v0, p2}, Lcom/android/internal/os/BatteryStatsImpl$Timer;->getCountLocked(I)I
 
     move-result v0
 
@@ -7913,7 +7913,7 @@
 
     aget-object v0, v0, p1
 
-    invoke-virtual {v0, p2, p3, p4}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->getTotalTimeLocked(JI)J
+    invoke-virtual {v0, p2, p3, p4}, Lcom/android/internal/os/BatteryStatsImpl$Timer;->getTotalTimeLocked(JI)J
 
     move-result-wide v0
 
@@ -8121,7 +8121,7 @@
 
     aget-object v0, v0, p1
 
-    invoke-virtual {v0, p2, p3, p4}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->getTotalTimeLocked(JI)J
+    invoke-virtual {v0, p2, p3, p4}, Lcom/android/internal/os/BatteryStatsImpl$Timer;->getTotalTimeLocked(JI)J
 
     move-result-wide v0
 
@@ -8137,7 +8137,7 @@
     .line 2276
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->getTotalTimeLocked(JI)J
+    invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/os/BatteryStatsImpl$Timer;->getTotalTimeLocked(JI)J
 
     move-result-wide v0
 
@@ -8296,7 +8296,7 @@
     .line 2320
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl;->mWifiOnTimer:Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->getTotalTimeLocked(JI)J
+    invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/os/BatteryStatsImpl$Timer;->getTotalTimeLocked(JI)J
 
     move-result-wide v0
 
@@ -9737,7 +9737,7 @@
     .line 1507
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHandler:Lcom/android/internal/os/BatteryStatsImpl$MyHandler;
 
-    invoke-virtual {v1, v4}, Lcom/android/internal/os/BatteryStatsImpl$MyHandler;->hasMessages(I)Z
+    invoke-virtual {v1, v4}, Landroid/os/Handler;->hasMessages(I)Z
 
     move-result v1
 
@@ -9746,7 +9746,7 @@
     .line 1508
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHandler:Lcom/android/internal/os/BatteryStatsImpl$MyHandler;
 
-    invoke-virtual {v1, v4}, Lcom/android/internal/os/BatteryStatsImpl$MyHandler;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {v1, v4}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v0
 
@@ -9756,7 +9756,7 @@
 
     const-wide/16 v2, 0x1388
 
-    invoke-virtual {v1, v0, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl$MyHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
+    invoke-virtual {v1, v0, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     .line 1511
     .end local v0           #m:Landroid/os/Message;
@@ -9955,7 +9955,7 @@
     .line 1526
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHandler:Lcom/android/internal/os/BatteryStatsImpl$MyHandler;
 
-    invoke-virtual {v1, v4}, Lcom/android/internal/os/BatteryStatsImpl$MyHandler;->hasMessages(I)Z
+    invoke-virtual {v1, v4}, Landroid/os/Handler;->hasMessages(I)Z
 
     move-result v1
 
@@ -9964,7 +9964,7 @@
     .line 1527
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHandler:Lcom/android/internal/os/BatteryStatsImpl$MyHandler;
 
-    invoke-virtual {v1, v4}, Lcom/android/internal/os/BatteryStatsImpl$MyHandler;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {v1, v4}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v0
 
@@ -9974,7 +9974,7 @@
 
     const-wide/16 v2, 0x1388
 
-    invoke-virtual {v1, v0, v2, v3}, Lcom/android/internal/os/BatteryStatsImpl$MyHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
+    invoke-virtual {v1, v0, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     .line 1530
     .end local v0           #m:Landroid/os/Message;
@@ -12584,7 +12584,7 @@
 
     const/4 v9, 0x2
 
-    invoke-virtual {v8, v9}, Lcom/android/internal/os/BatteryStatsImpl$MyHandler;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {v8, v9}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v1
 
@@ -12600,7 +12600,7 @@
     .line 4305
     iget-object v8, p0, Lcom/android/internal/os/BatteryStatsImpl;->mHandler:Lcom/android/internal/os/BatteryStatsImpl$MyHandler;
 
-    invoke-virtual {v8, v1}, Lcom/android/internal/os/BatteryStatsImpl$MyHandler;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v8, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     .line 4306
     iput-boolean p1, p0, Lcom/android/internal/os/BatteryStatsImpl;->mOnBatteryInternal:Z
@@ -12940,7 +12940,7 @@
 
     const/4 v6, 0x1
 
-    invoke-virtual {v5, v6}, Lcom/android/internal/os/BatteryStatsImpl$MyHandler;->removeMessages(I)V
+    invoke-virtual {v5, v6}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 1551
     iget-boolean v5, p0, Lcom/android/internal/os/BatteryStatsImpl;->mScreenOn:Z
@@ -13799,7 +13799,7 @@
 
     move-object/from16 v1, p1
 
-    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
+    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$Timer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
     .line 5272
     const/16 v22, 0x0
@@ -13827,7 +13827,7 @@
 
     move-object/from16 v1, p1
 
-    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
+    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$Timer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
     .line 5272
     add-int/lit8 v22, v22, 0x1
@@ -13859,7 +13859,7 @@
 
     move-object/from16 v1, p1
 
-    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
+    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$Timer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
     .line 5277
     const/16 v22, 0x0
@@ -13886,7 +13886,7 @@
 
     move-object/from16 v1, p1
 
-    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
+    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$Timer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
     .line 5277
     add-int/lit8 v22, v22, 0x1
@@ -13905,7 +13905,7 @@
 
     move-object/from16 v1, p1
 
-    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
+    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$Timer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
     .line 5281
     const/16 v22, 0x0
@@ -13932,7 +13932,7 @@
 
     move-object/from16 v1, p1
 
-    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
+    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$Timer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
     .line 5281
     add-int/lit8 v22, v22, 0x1
@@ -13951,7 +13951,7 @@
 
     move-object/from16 v1, p1
 
-    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
+    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$Timer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
     .line 5285
     move-object/from16 v0, p0
@@ -13964,7 +13964,7 @@
 
     move-object/from16 v1, p1
 
-    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
+    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$Timer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
     .line 5286
     move-object/from16 v0, p0
@@ -13977,7 +13977,7 @@
 
     move-object/from16 v1, p1
 
-    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
+    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$Timer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
     .line 5288
     move-object/from16 v0, p0
@@ -14193,7 +14193,7 @@
 
     move-object/from16 v1, p1
 
-    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
+    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$Timer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
     .line 5313
     :goto_5
@@ -14225,7 +14225,7 @@
 
     move-object/from16 v1, p1
 
-    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
+    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$Timer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
     .line 5319
     :goto_6
@@ -14257,7 +14257,7 @@
 
     move-object/from16 v1, p1
 
-    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
+    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$Timer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
     .line 5325
     :goto_7
@@ -14289,7 +14289,7 @@
 
     move-object/from16 v1, p1
 
-    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
+    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$Timer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
     .line 5331
     :goto_8
@@ -14321,7 +14321,7 @@
 
     move-object/from16 v1, p1
 
-    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
+    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$Timer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
     .line 5337
     :goto_9
@@ -14353,7 +14353,7 @@
 
     move-object/from16 v1, p1
 
-    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
+    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$Timer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
     .line 5344
     :goto_a
@@ -14477,7 +14477,7 @@
 
     move-object/from16 v1, p1
 
-    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
+    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$Timer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
     .line 5366
     :goto_c
@@ -14509,7 +14509,7 @@
 
     move-object/from16 v1, p1
 
-    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
+    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$Timer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
     .line 5372
     :goto_d
@@ -14541,7 +14541,7 @@
 
     move-object/from16 v1, p1
 
-    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
+    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$Timer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
     goto :goto_b
 
@@ -14811,7 +14811,7 @@
 
     move-object/from16 v1, p1
 
-    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$StopwatchTimer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
+    invoke-virtual {v0, v1, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$Timer;->writeSummaryFromParcelLocked(Landroid/os/Parcel;J)V
 
     goto :goto_f
 
@@ -14999,7 +14999,7 @@
 
     move-object/from16 v1, p1
 
-    invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$SamplingCounter;->writeSummaryFromParcelLocked(Landroid/os/Parcel;)V
+    invoke-virtual {v0, v1}, Lcom/android/internal/os/BatteryStatsImpl$Counter;->writeSummaryFromParcelLocked(Landroid/os/Parcel;)V
 
     .line 5409
     :goto_12

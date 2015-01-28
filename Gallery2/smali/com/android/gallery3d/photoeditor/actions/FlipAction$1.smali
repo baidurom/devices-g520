@@ -48,7 +48,7 @@
 
     iput-object p3, p0, Lcom/android/gallery3d/photoeditor/actions/FlipAction$1;->val$flipView:Lcom/android/gallery3d/photoeditor/actions/FlipView;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 49
     iget-object v0, p0, Lcom/android/gallery3d/photoeditor/actions/FlipAction$1;->this$0:Lcom/android/gallery3d/photoeditor/actions/FlipAction;
@@ -159,7 +159,7 @@
 
     iget-object v1, p0, Lcom/android/gallery3d/photoeditor/actions/FlipAction$1;->val$filter:Lcom/android/gallery3d/photoeditor/filters/FlipFilter;
 
-    invoke-virtual {v0, v1}, Lcom/android/gallery3d/photoeditor/actions/FlipAction;->notifyChanged(Lcom/android/gallery3d/photoeditor/filters/Filter;)V
+    invoke-virtual {v0, v1}, Lcom/android/gallery3d/photoeditor/actions/EffectAction;->notifyChanged(Lcom/android/gallery3d/photoeditor/filters/Filter;)V
 
     .line 60
     :cond_0
@@ -250,7 +250,7 @@
 
     iget-object v1, p0, Lcom/android/gallery3d/photoeditor/actions/FlipAction$1;->val$filter:Lcom/android/gallery3d/photoeditor/filters/FlipFilter;
 
-    invoke-virtual {v0, v1}, Lcom/android/gallery3d/photoeditor/actions/FlipAction;->notifyChanged(Lcom/android/gallery3d/photoeditor/filters/Filter;)V
+    invoke-virtual {v0, v1}, Lcom/android/gallery3d/photoeditor/actions/EffectAction;->notifyChanged(Lcom/android/gallery3d/photoeditor/filters/Filter;)V
 
     .line 79
     return-void

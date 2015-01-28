@@ -83,7 +83,7 @@
 
     .prologue
     .line 102
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 103
     return-void
@@ -528,7 +528,7 @@
 
     .line 163
     .local v1, dateFormat:Ljava/text/SimpleDateFormat;
-    invoke-virtual {v1, v0}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -800,7 +800,7 @@
 
     .line 771
     .local v0, animation:Landroid/view/animation/Animation;
-    invoke-virtual {v0, p3, p4}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
+    invoke-virtual {v0, p3, p4}, Landroid/view/animation/Animation;->setDuration(J)V
 
     .line 772
     invoke-virtual {p0, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
@@ -878,7 +878,7 @@
     .local v0, animation:Landroid/view/animation/Animation;
     const-wide/16 v1, 0x190
 
-    invoke-virtual {v0, v1, v2}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
+    invoke-virtual {v0, v1, v2}, Landroid/view/animation/Animation;->setDuration(J)V
 
     .line 790
     invoke-virtual {p0, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
@@ -2429,7 +2429,7 @@
 
     .line 421
     .local v4, ie:Ljava/lang/InterruptedException;
-    invoke-virtual {v4}, Ljava/lang/InterruptedException;->printStackTrace()V
+    invoke-virtual {v4}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_2
 
@@ -3113,7 +3113,7 @@
 
     .line 290
     .local v8, ex:Ljava/lang/OutOfMemoryError;
-    invoke-virtual {v8}, Ljava/lang/OutOfMemoryError;->printStackTrace()V
+    invoke-virtual {v8}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_1
 .end method

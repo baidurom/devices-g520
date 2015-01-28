@@ -28,10 +28,10 @@
 
     invoke-direct {v0}, Lcom/android/gallery3d/photoeditor/filters/LomoishFilter;-><init>()V
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/photoeditor/actions/LomoishAction;->notifyChanged(Lcom/android/gallery3d/photoeditor/filters/Filter;)V
+    invoke-virtual {p0, v0}, Lcom/android/gallery3d/photoeditor/actions/EffectAction;->notifyChanged(Lcom/android/gallery3d/photoeditor/filters/Filter;)V
 
     .line 36
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/LomoishAction;->notifyOk()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/EffectAction;->notifyOk()V
 
     .line 37
     return-void

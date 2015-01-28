@@ -80,7 +80,7 @@
 
     const v1, 0x30003
 
-    invoke-virtual {v0, v1}, Landroid/net/DhcpStateMachine;->sendMessage(I)V
+    invoke-virtual {v0, v1}, Lcom/android/internal/util/StateMachine;->sendMessage(I)V
 
     .line 145
     return-void

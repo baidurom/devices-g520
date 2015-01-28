@@ -85,7 +85,7 @@
     const/4 v1, 0x0
 
     .line 81
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 83
     new-instance v0, Ljava/util/ArrayList;
@@ -142,7 +142,7 @@
     const/4 v5, 0x1
 
     .line 100
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 101
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -447,7 +447,7 @@
     .line 146
     iget-object v2, p0, Lcom/android/internal/telephony/cat/Menu;->presentationType:Lcom/android/internal/telephony/cat/PresentationType;
 
-    invoke-virtual {v2}, Lcom/android/internal/telephony/cat/PresentationType;->ordinal()I
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
 
     move-result v2
 

@@ -35,7 +35,7 @@
 
     iput-object p2, p0, Lcom/android/server/input/InputManagerService$4;->val$list:Ljava/util/ArrayList;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

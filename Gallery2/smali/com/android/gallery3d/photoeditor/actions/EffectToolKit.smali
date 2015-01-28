@@ -32,7 +32,7 @@
     const/4 v4, 0x0
 
     .line 46
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 47
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -77,7 +77,7 @@
 
     const v3, 0x7f0b007e
 
-    invoke-virtual {v2, v3}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -104,7 +104,7 @@
     .line 60
     iget-object v2, p0, Lcom/android/gallery3d/photoeditor/actions/EffectToolKit;->photoView:Lcom/android/gallery3d/photoeditor/PhotoView;
 
-    invoke-virtual {v2}, Lcom/android/gallery3d/photoeditor/PhotoView;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {v2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
 
@@ -206,7 +206,7 @@
 
     const v4, 0x7f0b007e
 
-    invoke-virtual {v3, v4}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
@@ -229,7 +229,7 @@
     .line 115
     sget-object v0, Lcom/android/gallery3d/photoeditor/actions/EffectToolKit$2;->$SwitchMap$com$android$gallery3d$photoeditor$actions$EffectToolKit$ScaleType:[I
 
-    invoke-virtual {p2}, Lcom/android/gallery3d/photoeditor/actions/EffectToolKit$ScaleType;->ordinal()I
+    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -388,7 +388,7 @@
     .local v0, scalePicker:Lcom/android/gallery3d/photoeditor/actions/ScaleSeekBar;
     iget-object v1, p0, Lcom/android/gallery3d/photoeditor/actions/EffectToolKit;->toolPanel:Landroid/view/ViewGroup;
 
-    invoke-virtual {v1}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -396,7 +396,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/android/gallery3d/photoeditor/actions/ScaleSeekBar;->setProgressDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setProgressDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 133
     return-object v0
@@ -466,12 +466,12 @@
     .local v9, listener:Landroid/view/View$OnTouchListener;
     iget-object v2, p0, Lcom/android/gallery3d/photoeditor/actions/EffectToolKit;->toolFullscreen:Landroid/view/ViewGroup;
 
-    invoke-virtual {v2, v9}, Landroid/view/ViewGroup;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+    invoke-virtual {v2, v9}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     .line 88
     iget-object v2, p0, Lcom/android/gallery3d/photoeditor/actions/EffectToolKit;->toolPanel:Landroid/view/ViewGroup;
 
-    invoke-virtual {v2, v9}, Landroid/view/ViewGroup;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+    invoke-virtual {v2, v9}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     .line 89
     return-void
@@ -484,7 +484,7 @@
     .line 95
     iget-object v0, p0, Lcom/android/gallery3d/photoeditor/actions/EffectToolKit;->toolFullscreen:Landroid/view/ViewGroup;
 
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
@@ -497,7 +497,7 @@
     .line 96
     iget-object v0, p0, Lcom/android/gallery3d/photoeditor/actions/EffectToolKit;->toolPanel:Landroid/view/ViewGroup;
 
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 

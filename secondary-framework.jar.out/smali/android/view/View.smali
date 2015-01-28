@@ -3,8 +3,8 @@
 .source "View.java"
 
 # interfaces
-.implements Landroid/graphics/drawable/Drawable$Callback;
 .implements Landroid/graphics/drawable/Drawable$Callback2;
+.implements Landroid/graphics/drawable/Drawable$Callback;
 .implements Landroid/view/KeyEvent$Callback;
 .implements Landroid/view/accessibility/AccessibilityEventSource;
 
@@ -1764,7 +1764,7 @@
     const/4 v0, -0x1
 
     .line 3705
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1575
     iput-object v1, p0, Landroid/view/View;->mCurrentAnimation:Landroid/view/animation/Animation;
@@ -1864,7 +1864,7 @@
     const/4 v2, -0x1
 
     .line 3233
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1575
     iput-object v1, p0, Landroid/view/View;->mCurrentAnimation:Landroid/view/animation/Animation;
@@ -4047,11 +4047,11 @@
 
     sub-int/2addr v4, v5
 
-    invoke-virtual/range {p1 .. p1}, Landroid/view/ViewGroup;->getWidth()I
+    invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getWidth()I
 
     move-result v5
 
-    invoke-virtual/range {p1 .. p1}, Landroid/view/ViewGroup;->getHeight()I
+    invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getHeight()I
 
     move-result v6
 
@@ -4231,7 +4231,7 @@
 
     move-object/from16 v0, p1
 
-    invoke-virtual {v0, v3, v4, v5, v6}, Landroid/view/ViewGroup;->invalidate(IIII)V
+    invoke-virtual {v0, v3, v4, v5, v6}, Landroid/view/View;->invalidate(IIII)V
 
     goto :goto_1
 
@@ -4338,7 +4338,7 @@
 
     move-object/from16 v0, p1
 
-    invoke-virtual {v0, v12, v14, v3, v4}, Landroid/view/ViewGroup;->invalidate(IIII)V
+    invoke-virtual {v0, v12, v14, v3, v4}, Landroid/view/View;->invalidate(IIII)V
 
     goto :goto_1
 .end method
@@ -4594,7 +4594,7 @@
     .line 12458
     .local v9, height:I
     :try_start_0
-    invoke-virtual {v0, v13, v9}, Landroid/view/HardwareCanvas;->setViewport(II)V
+    invoke-virtual {v0, v13, v9}, Landroid/graphics/Canvas;->setViewport(II)V
 
     .line 12460
     const/4 v1, 0x0
@@ -4736,7 +4736,7 @@
 
     const/16 v6, 0x14
 
-    invoke-virtual/range {v0 .. v6}, Landroid/view/HardwareCanvas;->saveLayer(FFFFLandroid/graphics/Paint;I)I
+    invoke-virtual/range {v0 .. v6}, Landroid/graphics/Canvas;->saveLayer(FFFFLandroid/graphics/Paint;I)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -4796,7 +4796,7 @@
 
     iget-object v3, p0, Landroid/view/View;->mLayerPaint:Landroid/graphics/Paint;
 
-    invoke-virtual {v0, v7, v1, v2, v3}, Landroid/view/HardwareCanvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
+    invoke-virtual {v0, v7, v1, v2, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
     .line 12484
     const/4 v8, 0x1
@@ -4821,7 +4821,7 @@
 
     int-to-float v2, v2
 
-    invoke-virtual {v0, v1, v2}, Landroid/view/HardwareCanvas;->translate(FF)V
+    invoke-virtual {v0, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
     .line 12492
     if-nez p2, :cond_c
@@ -4990,7 +4990,7 @@
     .line 6525
     .restart local v1       #vgAncestor:Landroid/view/ViewGroup;
     :cond_0
-    invoke-virtual {v1}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {v1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
@@ -6718,10 +6718,10 @@
     invoke-virtual {p0, v0}, Landroid/view/View;->onPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
     .line 6970
-    invoke-virtual {v0, p3}, Landroid/view/accessibility/AccessibilityEvent;->setFromIndex(I)V
+    invoke-virtual {v0, p3}, Landroid/view/accessibility/AccessibilityRecord;->setFromIndex(I)V
 
     .line 6971
-    invoke-virtual {v0, p4}, Landroid/view/accessibility/AccessibilityEvent;->setToIndex(I)V
+    invoke-virtual {v0, p4}, Landroid/view/accessibility/AccessibilityRecord;->setToIndex(I)V
 
     .line 6972
     invoke-virtual {v0, p1}, Landroid/view/accessibility/AccessibilityEvent;->setAction(I)V
@@ -7500,7 +7500,7 @@
 
     .line 4520
     .local v0, event:Landroid/view/accessibility/AccessibilityEvent;
-    invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityEvent;->getText()Ljava/util/List;
+    invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityRecord;->getText()Ljava/util/List;
 
     move-result-object v1
 
@@ -13910,7 +13910,7 @@
 
     move-object/from16 v0, p2
 
-    invoke-virtual {v0, v3}, Landroid/view/ViewGroup;->invalidate(Z)V
+    invoke-virtual {v0, v3}, Landroid/view/View;->invalidate(Z)V
 
     .line 13482
     invoke-virtual {v7}, Landroid/view/animation/Animation;->hasAlpha()Z
@@ -17249,7 +17249,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v2}, Landroid/view/AccessibilityIterators$WordTextSegmentIterator;->initialize(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Landroid/view/AccessibilityIterators$CharacterTextSegmentIterator;->initialize(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -17282,7 +17282,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v2}, Landroid/view/AccessibilityIterators$ParagraphTextSegmentIterator;->initialize(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Landroid/view/AccessibilityIterators$AbstractTextSegmentIterator;->initialize(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -24179,7 +24179,7 @@
 
     .prologue
     .line 4708
-    invoke-virtual {p1, p0}, Landroid/view/accessibility/AccessibilityEvent;->setSource(Landroid/view/View;)V
+    invoke-virtual {p1, p0}, Landroid/view/accessibility/AccessibilityRecord;->setSource(Landroid/view/View;)V
 
     .line 4709
     const-class v1, Landroid/view/View;
@@ -24188,7 +24188,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p1, v1}, Landroid/view/accessibility/AccessibilityEvent;->setClassName(Ljava/lang/CharSequence;)V
+    invoke-virtual {p1, v1}, Landroid/view/accessibility/AccessibilityRecord;->setClassName(Ljava/lang/CharSequence;)V
 
     .line 4710
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -24206,12 +24206,12 @@
 
     move-result v1
 
-    invoke-virtual {p1, v1}, Landroid/view/accessibility/AccessibilityEvent;->setEnabled(Z)V
+    invoke-virtual {p1, v1}, Landroid/view/accessibility/AccessibilityRecord;->setEnabled(Z)V
 
     .line 4712
     iget-object v1, p0, Landroid/view/View;->mContentDescription:Ljava/lang/CharSequence;
 
-    invoke-virtual {p1, v1}, Landroid/view/accessibility/AccessibilityEvent;->setContentDescription(Ljava/lang/CharSequence;)V
+    invoke-virtual {p1, v1}, Landroid/view/accessibility/AccessibilityRecord;->setContentDescription(Ljava/lang/CharSequence;)V
 
     .line 4714
     invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityEvent;->getEventType()I
@@ -24248,14 +24248,14 @@
 
     move-result v1
 
-    invoke-virtual {p1, v1}, Landroid/view/accessibility/AccessibilityEvent;->setItemCount(I)V
+    invoke-virtual {p1, v1}, Landroid/view/accessibility/AccessibilityRecord;->setItemCount(I)V
 
     .line 4719
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
 
     move-result v1
 
-    invoke-virtual {p1, v1}, Landroid/view/accessibility/AccessibilityEvent;->setCurrentItemIndex(I)V
+    invoke-virtual {p1, v1}, Landroid/view/accessibility/AccessibilityRecord;->setCurrentItemIndex(I)V
 
     .line 4720
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
@@ -27724,7 +27724,7 @@
 
     .line 11546
     .local v0, viewGroup:Landroid/view/ViewGroup;
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->getResolvedLayoutDirection()I
+    invoke-virtual {v0}, Landroid/view/View;->getResolvedLayoutDirection()I
 
     move-result v1
 
@@ -28180,7 +28180,7 @@
 
     .line 16477
     .local v2, viewGroup:Landroid/view/ViewGroup;
-    invoke-virtual {v2}, Landroid/view/ViewGroup;->getResolvedTextDirection()I
+    invoke-virtual {v2}, Landroid/view/View;->getResolvedTextDirection()I
 
     move-result v0
 

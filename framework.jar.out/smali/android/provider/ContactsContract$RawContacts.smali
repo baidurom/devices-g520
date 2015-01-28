@@ -4,9 +4,9 @@
 
 # interfaces
 .implements Landroid/provider/BaseColumns;
-.implements Landroid/provider/ContactsContract$RawContactsColumns;
-.implements Landroid/provider/ContactsContract$ContactOptionsColumns;
 .implements Landroid/provider/ContactsContract$ContactNameColumns;
+.implements Landroid/provider/ContactsContract$ContactOptionsColumns;
+.implements Landroid/provider/ContactsContract$RawContactsColumns;
 .implements Landroid/provider/ContactsContract$SyncColumns;
 
 
@@ -78,7 +78,7 @@
 
     .prologue
     .line 2709
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2710
     return-void

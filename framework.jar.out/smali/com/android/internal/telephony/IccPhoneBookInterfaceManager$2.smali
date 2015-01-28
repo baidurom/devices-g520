@@ -39,7 +39,7 @@
 
     sget-object v1, Lcom/android/internal/telephony/CommandException$Error;->GENERIC_FAILURE:Lcom/android/internal/telephony/CommandException$Error;
 
-    invoke-virtual {v1}, Lcom/android/internal/telephony/CommandException$Error;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -55,7 +55,7 @@
 
     sget-object v1, Lcom/android/internal/telephony/CommandException$Error;->DIAL_STRING_TOO_LONG:Lcom/android/internal/telephony/CommandException$Error;
 
-    invoke-virtual {v1}, Lcom/android/internal/telephony/CommandException$Error;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -71,7 +71,7 @@
 
     sget-object v1, Lcom/android/internal/telephony/CommandException$Error;->SIM_PUK2:Lcom/android/internal/telephony/CommandException$Error;
 
-    invoke-virtual {v1}, Lcom/android/internal/telephony/CommandException$Error;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -87,7 +87,7 @@
 
     sget-object v1, Lcom/android/internal/telephony/CommandException$Error;->PASSWORD_INCORRECT:Lcom/android/internal/telephony/CommandException$Error;
 
-    invoke-virtual {v1}, Lcom/android/internal/telephony/CommandException$Error;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -103,7 +103,7 @@
 
     sget-object v1, Lcom/android/internal/telephony/CommandException$Error;->TEXT_STRING_TOO_LONG:Lcom/android/internal/telephony/CommandException$Error;
 
-    invoke-virtual {v1}, Lcom/android/internal/telephony/CommandException$Error;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -119,7 +119,7 @@
 
     sget-object v1, Lcom/android/internal/telephony/CommandException$Error;->SIM_MEM_FULL:Lcom/android/internal/telephony/CommandException$Error;
 
-    invoke-virtual {v1}, Lcom/android/internal/telephony/CommandException$Error;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -135,7 +135,7 @@
 
     sget-object v1, Lcom/android/internal/telephony/CommandException$Error;->NOT_READY:Lcom/android/internal/telephony/CommandException$Error;
 
-    invoke-virtual {v1}, Lcom/android/internal/telephony/CommandException$Error;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -151,7 +151,7 @@
 
     sget-object v1, Lcom/android/internal/telephony/CommandException$Error;->ADDITIONAL_NUMBER_STRING_TOO_LONG:Lcom/android/internal/telephony/CommandException$Error;
 
-    invoke-virtual {v1}, Lcom/android/internal/telephony/CommandException$Error;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -167,7 +167,7 @@
 
     sget-object v1, Lcom/android/internal/telephony/CommandException$Error;->ADN_LIST_NOT_EXIST:Lcom/android/internal/telephony/CommandException$Error;
 
-    invoke-virtual {v1}, Lcom/android/internal/telephony/CommandException$Error;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -183,7 +183,7 @@
 
     sget-object v1, Lcom/android/internal/telephony/CommandException$Error;->EMAIL_SIZE_LIMIT:Lcom/android/internal/telephony/CommandException$Error;
 
-    invoke-virtual {v1}, Lcom/android/internal/telephony/CommandException$Error;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -199,7 +199,7 @@
 
     sget-object v1, Lcom/android/internal/telephony/CommandException$Error;->EMAIL_NAME_TOOLONG:Lcom/android/internal/telephony/CommandException$Error;
 
-    invoke-virtual {v1}, Lcom/android/internal/telephony/CommandException$Error;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 

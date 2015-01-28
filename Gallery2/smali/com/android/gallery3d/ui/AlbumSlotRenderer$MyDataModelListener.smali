@@ -30,7 +30,7 @@
     .line 167
     iput-object p1, p0, Lcom/android/gallery3d/ui/AlbumSlotRenderer$MyDataModelListener;->this$0:Lcom/android/gallery3d/ui/AlbumSlotRenderer;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -61,7 +61,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/ui/SlotView;->invalidate()V
+    invoke-virtual {v0}, Lcom/android/gallery3d/ui/GLView;->invalidate()V
 
     .line 171
     return-void
@@ -90,7 +90,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/ui/SlotView;->invalidate()V
+    invoke-virtual {v0}, Lcom/android/gallery3d/ui/GLView;->invalidate()V
 
     .line 179
     return-void

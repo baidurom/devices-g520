@@ -3,8 +3,8 @@
 .source "PortDialog.java"
 
 # interfaces
-.implements Landroid/text/TextWatcher;
 .implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/text/TextWatcher;
 
 
 # static fields
@@ -175,7 +175,7 @@
 
     .line 287
     .local v0, e:Landroid/database/sqlite/SQLiteException;
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 .end method
@@ -210,20 +210,20 @@
 
     .line 272
     :goto_0
-    invoke-virtual {p0, v3}, Lcom/mediatek/gallery3d/video/PortDialog;->getButton(I)Landroid/widget/Button;
+    invoke-virtual {p0, v3}, Landroid/app/AlertDialog;->getButton(I)Landroid/widget/Button;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
     .line 273
-    invoke-virtual {p0, v3}, Lcom/mediatek/gallery3d/video/PortDialog;->getButton(I)Landroid/widget/Button;
+    invoke-virtual {p0, v3}, Landroid/app/AlertDialog;->getButton(I)Landroid/widget/Button;
 
     move-result-object v1
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v2}, Landroid/widget/Button;->setEnabled(Z)V
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setEnabled(Z)V
 
     .line 276
     :cond_0
@@ -235,7 +235,7 @@
 
     aget-object v2, v0, v4
 
-    invoke-virtual {v1, v2}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setHint(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
@@ -245,7 +245,7 @@
 
     aget-object v2, v0, v4
 
-    invoke-virtual {v1, v2}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setHint(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
@@ -336,14 +336,14 @@
 
     const-string v5, ""
 
-    invoke-virtual {v4, v5}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
+    invoke-virtual {v4, v5}, Landroid/widget/TextView;->setHint(Ljava/lang/CharSequence;)V
 
     .line 192
     iget-object v4, p0, Lcom/mediatek/gallery3d/video/PortDialog;->mMinField:Landroid/widget/EditText;
 
     const-string v5, ""
 
-    invoke-virtual {v4, v5}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
+    invoke-virtual {v4, v5}, Landroid/widget/TextView;->setHint(Ljava/lang/CharSequence;)V
 
     .line 193
     iget-object v4, p0, Lcom/mediatek/gallery3d/video/PortDialog;->mMaxErrMsg:Landroid/widget/TextView;
@@ -513,7 +513,7 @@
 
     .line 238
     :cond_6
-    invoke-virtual {p0, v6}, Lcom/mediatek/gallery3d/video/PortDialog;->getButton(I)Landroid/widget/Button;
+    invoke-virtual {p0, v6}, Landroid/app/AlertDialog;->getButton(I)Landroid/widget/Button;
 
     move-result-object v4
 
@@ -523,11 +523,11 @@
     if-eqz v1, :cond_8
 
     .line 240
-    invoke-virtual {p0, v6}, Lcom/mediatek/gallery3d/video/PortDialog;->getButton(I)Landroid/widget/Button;
+    invoke-virtual {p0, v6}, Landroid/app/AlertDialog;->getButton(I)Landroid/widget/Button;
 
     move-result-object v4
 
-    invoke-virtual {v4, v9}, Landroid/widget/Button;->setEnabled(Z)V
+    invoke-virtual {v4, v9}, Landroid/widget/TextView;->setEnabled(Z)V
 
     .line 247
     .end local v2           #maxPort:I
@@ -545,7 +545,7 @@
     .local v0, ex:Ljava/lang/NumberFormatException;
     const-string v4, "Gallery3D/PortDialog"
 
-    invoke-virtual {v0}, Ljava/lang/NumberFormatException;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v5
 
@@ -569,7 +569,7 @@
     .restart local v0       #ex:Ljava/lang/NumberFormatException;
     const-string v4, "Gallery3D/PortDialog"
 
-    invoke-virtual {v0}, Ljava/lang/NumberFormatException;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v5
 
@@ -586,11 +586,11 @@
     .line 242
     .end local v0           #ex:Ljava/lang/NumberFormatException;
     :cond_8
-    invoke-virtual {p0, v6}, Lcom/mediatek/gallery3d/video/PortDialog;->getButton(I)Landroid/widget/Button;
+    invoke-virtual {p0, v6}, Landroid/app/AlertDialog;->getButton(I)Landroid/widget/Button;
 
     move-result-object v4
 
-    invoke-virtual {v4, v8}, Landroid/widget/Button;->setEnabled(Z)V
+    invoke-virtual {v4, v8}, Landroid/widget/TextView;->setEnabled(Z)V
 
     goto :goto_2
 .end method
@@ -650,10 +650,10 @@
     .line 111
     const v3, 0x7f0c016e
 
-    invoke-virtual {p0, v3}, Lcom/mediatek/gallery3d/video/PortDialog;->setTitle(I)V
+    invoke-virtual {p0, v3}, Landroid/app/Dialog;->setTitle(I)V
 
     .line 112
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/PortDialog;->getLayoutInflater()Landroid/view/LayoutInflater;
+    invoke-virtual {p0}, Landroid/app/Dialog;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v3
 
@@ -675,7 +675,7 @@
     .line 114
     iget-object v3, p0, Lcom/mediatek/gallery3d/video/PortDialog;->mView:Landroid/view/View;
 
-    invoke-virtual {p0, v3}, Lcom/mediatek/gallery3d/video/PortDialog;->setView(Landroid/view/View;)V
+    invoke-virtual {p0, v3}, Landroid/app/AlertDialog;->setView(Landroid/view/View;)V
 
     .line 118
     :cond_0
@@ -742,12 +742,12 @@
     iget-object v3, p0, Lcom/mediatek/gallery3d/video/PortDialog;->mMax:Ljava/lang/String;
 
     :goto_1
-    invoke-virtual {v4, v3}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v4, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 134
     iget-object v3, p0, Lcom/mediatek/gallery3d/video/PortDialog;->mMaxField:Landroid/widget/EditText;
 
-    invoke-virtual {v3, p0}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
+    invoke-virtual {v3, p0}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     .line 136
     iget-object v3, p0, Lcom/mediatek/gallery3d/video/PortDialog;->mCr:Landroid/content/ContentResolver;
@@ -778,12 +778,12 @@
     iget-object v3, p0, Lcom/mediatek/gallery3d/video/PortDialog;->mMin:Ljava/lang/String;
 
     :goto_3
-    invoke-virtual {v4, v3}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v4, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 148
     iget-object v3, p0, Lcom/mediatek/gallery3d/video/PortDialog;->mMinField:Landroid/widget/EditText;
 
-    invoke-virtual {v3, p0}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
+    invoke-virtual {v3, p0}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     .line 151
     .end local v1           #maxPort:I
@@ -849,7 +849,7 @@
 
     move-result-object v3
 
-    invoke-virtual {p0, v6, v3, p0}, Lcom/mediatek/gallery3d/video/PortDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {p0, v6, v3, p0}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     .line 162
     const/4 v3, -0x2
@@ -862,7 +862,7 @@
 
     move-result-object v4
 
-    invoke-virtual {p0, v3, v4, p0}, Lcom/mediatek/gallery3d/video/PortDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {p0, v3, v4, p0}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     .line 164
     invoke-super {p0, p1}, Landroid/app/AlertDialog;->onCreate(Landroid/os/Bundle;)V
@@ -895,7 +895,7 @@
     .local v0, ex:Ljava/lang/NumberFormatException;
     const-string v3, "Gallery3D/PortDialog"
 
-    invoke-virtual {v0}, Ljava/lang/NumberFormatException;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v4
 
@@ -937,7 +937,7 @@
     .restart local v0       #ex:Ljava/lang/NumberFormatException;
     const-string v3, "Gallery3D/PortDialog"
 
-    invoke-virtual {v0}, Ljava/lang/NumberFormatException;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v4
 

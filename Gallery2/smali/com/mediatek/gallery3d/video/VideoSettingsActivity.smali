@@ -146,7 +146,7 @@
 
     .prologue
     .line 139
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/VideoSettingsActivity;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v0
 
@@ -175,7 +175,7 @@
 
     .prologue
     .line 147
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/VideoSettingsActivity;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v1
 
@@ -218,7 +218,7 @@
     .line 166
     const-string v0, "video_player_data"
 
-    invoke-virtual {p0, v0, v2}, Lcom/mediatek/gallery3d/video/VideoSettingsActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-virtual {p0, v0, v2}, Landroid/content/ContextWrapper;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -254,7 +254,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {p0, v1, v2}, Lcom/mediatek/gallery3d/video/VideoSettingsActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-virtual {p0, v1, v2}, Landroid/content/ContextWrapper;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
@@ -298,10 +298,10 @@
     const/4 v8, 0x1
 
     .line 50
-    invoke-super {p0, p1}, Landroid/app/ListActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 51
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/VideoSettingsActivity;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v6
 
@@ -310,7 +310,7 @@
     invoke-virtual {v6, v8}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
 
     .line 53
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/VideoSettingsActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -325,7 +325,7 @@
     .line 54
     const v1, 0x7f04004c
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/gallery3d/video/VideoSettingsActivity;->setContentView(I)V
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->setContentView(I)V
 
     .line 55
     new-instance v2, Ljava/util/ArrayList;
@@ -344,7 +344,7 @@
 
     const v3, 0x7f0c0157
 
-    invoke-virtual {p0, v3}, Lcom/mediatek/gallery3d/video/VideoSettingsActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -355,7 +355,7 @@
 
     const v3, 0x7f0c0158
 
-    invoke-virtual {p0, v3}, Lcom/mediatek/gallery3d/video/VideoSettingsActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -391,7 +391,7 @@
 
     .line 63
     .local v0, adapter:Landroid/widget/SimpleAdapter;
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/video/VideoSettingsActivity;->setListAdapter(Landroid/widget/ListAdapter;)V
+    invoke-virtual {p0, v0}, Landroid/app/ListActivity;->setListAdapter(Landroid/widget/ListAdapter;)V
 
     .line 64
     invoke-direct {p0}, Lcom/mediatek/gallery3d/video/VideoSettingsActivity;->restoreStepOptionSettings()V
@@ -444,7 +444,7 @@
 
     .line 94
     .local v1, newFragment:Landroid/app/DialogFragment;
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/VideoSettingsActivity;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v0
 
@@ -512,7 +512,7 @@
 
     .line 177
     :pswitch_0
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/VideoSettingsActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 178
     const/4 v0, 0x1
@@ -553,7 +553,7 @@
     invoke-direct {p0}, Lcom/mediatek/gallery3d/video/VideoSettingsActivity;->storeStepOptionSettings()V
 
     .line 70
-    invoke-super {p0, p1}, Landroid/app/ListActivity;->onSaveInstanceState(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Landroid/app/Activity;->onSaveInstanceState(Landroid/os/Bundle;)V
 
     .line 71
     return-void

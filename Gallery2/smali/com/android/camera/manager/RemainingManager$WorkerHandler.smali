@@ -69,12 +69,12 @@
     invoke-static {v0, v1}, Lcom/android/camera/manager/RemainingManager;->access$002(Lcom/android/camera/manager/RemainingManager;Ljava/lang/Long;)Ljava/lang/Long;
 
     .line 68
-    invoke-virtual {p0, v3}, Lcom/android/camera/manager/RemainingManager$WorkerHandler;->removeMessages(I)V
+    invoke-virtual {p0, v3}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 69
     const-wide/16 v0, 0x5dc
 
-    invoke-virtual {p0, v3, v0, v1}, Lcom/android/camera/manager/RemainingManager$WorkerHandler;->sendEmptyMessageDelayed(IJ)Z
+    invoke-virtual {p0, v3, v0, v1}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
     goto :goto_0
 

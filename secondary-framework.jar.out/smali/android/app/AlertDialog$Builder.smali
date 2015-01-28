@@ -46,7 +46,7 @@
 
     .prologue
     .line 373
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 374
     new-instance v0, Lcom/android/internal/app/AlertController$AlertParams;
@@ -105,7 +105,7 @@
 
     iget-boolean v1, v1, Lcom/android/internal/app/AlertController$AlertParams;->mCancelable:Z
 
-    invoke-virtual {v0, v1}, Landroid/app/AlertDialog;->setCancelable(Z)V
+    invoke-virtual {v0, v1}, Landroid/app/Dialog;->setCancelable(Z)V
 
     .line 916
     iget-object v1, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
@@ -117,7 +117,7 @@
     .line 917
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Landroid/app/AlertDialog;->setCanceledOnTouchOutside(Z)V
+    invoke-virtual {v0, v1}, Landroid/app/Dialog;->setCanceledOnTouchOutside(Z)V
 
     .line 919
     :cond_0
@@ -125,7 +125,7 @@
 
     iget-object v1, v1, Lcom/android/internal/app/AlertController$AlertParams;->mOnCancelListener:Landroid/content/DialogInterface$OnCancelListener;
 
-    invoke-virtual {v0, v1}, Landroid/app/AlertDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
+    invoke-virtual {v0, v1}, Landroid/app/Dialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
     .line 920
     iget-object v1, p0, Landroid/app/AlertDialog$Builder;->P:Lcom/android/internal/app/AlertController$AlertParams;
@@ -139,7 +139,7 @@
 
     iget-object v1, v1, Lcom/android/internal/app/AlertController$AlertParams;->mOnKeyListener:Landroid/content/DialogInterface$OnKeyListener;
 
-    invoke-virtual {v0, v1}, Landroid/app/AlertDialog;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)V
+    invoke-virtual {v0, v1}, Landroid/app/Dialog;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)V
 
     .line 923
     :cond_1
@@ -977,7 +977,7 @@
 
     .line 932
     .local v0, dialog:Landroid/app/AlertDialog;
-    invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
+    invoke-virtual {v0}, Landroid/app/Dialog;->show()V
 
     .line 933
     return-object v0

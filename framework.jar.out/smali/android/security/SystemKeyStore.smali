@@ -31,7 +31,7 @@
 
     .prologue
     .line 44
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -326,10 +326,10 @@
 
     .line 95
     .local v0, fos:Ljava/io/FileOutputStream;
-    invoke-virtual {v0, v3}, Ljava/io/FileOutputStream;->write([B)V
+    invoke-virtual {v0, v3}, Ljava/io/OutputStream;->write([B)V
 
     .line 96
-    invoke-virtual {v0}, Ljava/io/FileOutputStream;->flush()V
+    invoke-virtual {v0}, Ljava/io/OutputStream;->flush()V
 
     .line 97
     invoke-static {v0}, Landroid/os/FileUtils;->sync(Ljava/io/FileOutputStream;)Z

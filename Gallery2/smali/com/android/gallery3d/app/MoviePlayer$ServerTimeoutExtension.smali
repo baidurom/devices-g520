@@ -3,8 +3,8 @@
 .source "MoviePlayer.java"
 
 # interfaces
-.implements Lcom/android/gallery3d/app/MoviePlayer$Restorable;
 .implements Landroid/media/MediaPlayer$OnErrorListener;
+.implements Lcom/android/gallery3d/app/MoviePlayer$Restorable;
 
 
 # annotations
@@ -39,7 +39,7 @@
     .line 1517
     iput-object p1, p0, Lcom/android/gallery3d/app/MoviePlayer$ServerTimeoutExtension;->this$0:Lcom/android/gallery3d/app/MoviePlayer;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1520
     const/4 v0, -0x1
@@ -146,7 +146,7 @@
 
     iget-object v0, p0, Lcom/android/gallery3d/app/MoviePlayer$ServerTimeoutExtension;->mServerTimeoutDialog:Landroid/app/AlertDialog;
 
-    invoke-virtual {v0}, Landroid/app/AlertDialog;->isShowing()Z
+    invoke-virtual {v0}, Landroid/app/Dialog;->isShowing()Z
 
     move-result v0
 
@@ -155,7 +155,7 @@
     .line 1618
     iget-object v0, p0, Lcom/android/gallery3d/app/MoviePlayer$ServerTimeoutExtension;->mServerTimeoutDialog:Landroid/app/AlertDialog;
 
-    invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
+    invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
 
     .line 1620
     :cond_0
@@ -193,7 +193,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/mediatek/gallery3d/video/MTKVideoView;->canSeekForward()Z
+    invoke-virtual {v1}, Landroid/widget/VideoView;->canSeekForward()Z
 
     move-result v1
 
@@ -294,7 +294,7 @@
 
     invoke-direct {v2, p0}, Lcom/android/gallery3d/app/MoviePlayer$ServerTimeoutExtension$3;-><init>(Lcom/android/gallery3d/app/MoviePlayer$ServerTimeoutExtension;)V
 
-    invoke-virtual {v1, v2}, Landroid/app/AlertDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+    invoke-virtual {v1, v2}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
     .line 1602
     iget-object v1, p0, Lcom/android/gallery3d/app/MoviePlayer$ServerTimeoutExtension;->mServerTimeoutDialog:Landroid/app/AlertDialog;
@@ -303,14 +303,14 @@
 
     invoke-direct {v2, p0}, Lcom/android/gallery3d/app/MoviePlayer$ServerTimeoutExtension$4;-><init>(Lcom/android/gallery3d/app/MoviePlayer$ServerTimeoutExtension;)V
 
-    invoke-virtual {v1, v2}, Landroid/app/AlertDialog;->setOnShowListener(Landroid/content/DialogInterface$OnShowListener;)V
+    invoke-virtual {v1, v2}, Landroid/app/Dialog;->setOnShowListener(Landroid/content/DialogInterface$OnShowListener;)V
 
     .line 1613
     .end local v0           #builder:Landroid/app/AlertDialog$Builder;
     :cond_2
     iget-object v1, p0, Lcom/android/gallery3d/app/MoviePlayer$ServerTimeoutExtension;->mServerTimeoutDialog:Landroid/app/AlertDialog;
 
-    invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
+    invoke-virtual {v1}, Landroid/app/Dialog;->show()V
 
     .line 1614
     return-void

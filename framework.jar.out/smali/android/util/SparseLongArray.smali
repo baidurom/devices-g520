@@ -34,7 +34,7 @@
 
     .prologue
     .line 46
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 47
     invoke-static {p1}, Lcom/android/internal/util/ArrayUtils;->idealLongArraySize(I)I
@@ -295,7 +295,7 @@
     .line 59
     iget-object v2, p0, Landroid/util/SparseLongArray;->mKeys:[I
 
-    invoke-virtual {v2}, [I->clone()Ljava/lang/Object;
+    invoke-virtual {v2}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v2
 
@@ -306,7 +306,7 @@
     .line 60
     iget-object v2, p0, Landroid/util/SparseLongArray;->mValues:[J
 
-    invoke-virtual {v2}, [J->clone()Ljava/lang/Object;
+    invoke-virtual {v2}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v2
 

@@ -33,7 +33,7 @@
     sparse-switch p1, :sswitch_data_0
 
     .line 53
-    invoke-virtual {p0, p1}, Lcom/android/internal/telephony/cdma/CdmaLteUiccFileHandler;->getCommonIccEFPath(I)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lcom/android/internal/telephony/IccFileHandler;->getCommonIccEFPath(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -106,7 +106,7 @@
 
     const/4 v2, 0x5
 
-    invoke-virtual {p0, v2, p1, v4, p2}, Lcom/android/internal/telephony/cdma/CdmaLteUiccFileHandler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
+    invoke-virtual {p0, v2, p1, v4, p2}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v10
 

@@ -300,7 +300,7 @@
     .line 118
     iget-object v3, p0, Landroid/support/v4/app/FragmentStatePagerAdapter;->mCurTransaction:Landroid/support/v4/app/FragmentTransaction;
 
-    invoke-virtual {p1}, Landroid/view/ViewGroup;->getId()I
+    invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v4
 

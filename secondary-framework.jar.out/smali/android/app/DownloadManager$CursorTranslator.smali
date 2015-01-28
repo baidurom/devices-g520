@@ -184,7 +184,7 @@
     .line 1346
     const-string v5, "destination"
 
-    invoke-virtual {p0, v5}, Landroid/app/DownloadManager$CursorTranslator;->getColumnIndex(Ljava/lang/String;)I
+    invoke-virtual {p0, v5}, Landroid/database/CursorWrapper;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v5
 
@@ -216,7 +216,7 @@
     :cond_0
     const-string v5, "local_filename"
 
-    invoke-virtual {p0, v5}, Landroid/app/DownloadManager$CursorTranslator;->getColumnIndex(Ljava/lang/String;)I
+    invoke-virtual {p0, v5}, Landroid/database/CursorWrapper;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v5
 
@@ -258,7 +258,7 @@
     :cond_2
     const-string v5, "_id"
 
-    invoke-virtual {p0, v5}, Landroid/app/DownloadManager$CursorTranslator;->getColumnIndex(Ljava/lang/String;)I
+    invoke-virtual {p0, v5}, Landroid/database/CursorWrapper;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v5
 
@@ -471,7 +471,7 @@
 
     .prologue
     .line 1330
-    invoke-virtual {p0, p1}, Landroid/app/DownloadManager$CursorTranslator;->getColumnName(I)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Landroid/database/CursorWrapper;->getColumnName(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -486,7 +486,7 @@
     .line 1331
     const-string v0, "status"
 
-    invoke-virtual {p0, v0}, Landroid/app/DownloadManager$CursorTranslator;->getColumnIndex(Ljava/lang/String;)I
+    invoke-virtual {p0, v0}, Landroid/database/CursorWrapper;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v0
 
@@ -504,7 +504,7 @@
 
     .line 1332
     :cond_0
-    invoke-virtual {p0, p1}, Landroid/app/DownloadManager$CursorTranslator;->getColumnName(I)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Landroid/database/CursorWrapper;->getColumnName(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -519,7 +519,7 @@
     .line 1333
     const-string v0, "status"
 
-    invoke-virtual {p0, v0}, Landroid/app/DownloadManager$CursorTranslator;->getColumnIndex(Ljava/lang/String;)I
+    invoke-virtual {p0, v0}, Landroid/database/CursorWrapper;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v0
 
@@ -550,7 +550,7 @@
 
     .prologue
     .line 1341
-    invoke-virtual {p0, p1}, Landroid/app/DownloadManager$CursorTranslator;->getColumnName(I)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Landroid/database/CursorWrapper;->getColumnName(I)Ljava/lang/String;
 
     move-result-object v0
 

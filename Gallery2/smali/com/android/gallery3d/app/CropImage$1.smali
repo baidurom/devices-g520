@@ -58,7 +58,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
+    invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
 
     .line 253
     iget-object v1, p0, Lcom/android/gallery3d/app/CropImage$1;->this$0:Lcom/android/gallery3d/app/CropImage;
@@ -81,7 +81,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
+    invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
 
     .line 258
     iget-object v1, p0, Lcom/android/gallery3d/app/CropImage$1;->this$0:Lcom/android/gallery3d/app/CropImage;
@@ -104,14 +104,14 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
+    invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
 
     .line 263
     iget-object v0, p0, Lcom/android/gallery3d/app/CropImage$1;->this$0:Lcom/android/gallery3d/app/CropImage;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/android/gallery3d/app/CropImage;->setResult(I)V
+    invoke-virtual {v0, v1}, Landroid/app/Activity;->setResult(I)V
 
     .line 264
     iget-object v0, p0, Lcom/android/gallery3d/app/CropImage$1;->this$0:Lcom/android/gallery3d/app/CropImage;
@@ -120,7 +120,7 @@
 
     const v2, 0x7f0c01f2
 
-    invoke-virtual {v1, v2}, Lcom/android/gallery3d/app/CropImage;->getString(I)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -135,7 +135,7 @@
     .line 267
     iget-object v0, p0, Lcom/android/gallery3d/app/CropImage$1;->this$0:Lcom/android/gallery3d/app/CropImage;
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/app/CropImage;->finish()V
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
     .line 270
     :pswitch_3
@@ -146,7 +146,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
+    invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
 
     .line 271
     iget-object v1, p0, Lcom/android/gallery3d/app/CropImage$1;->this$0:Lcom/android/gallery3d/app/CropImage;
@@ -157,12 +157,12 @@
 
     check-cast v0, Landroid/content/Intent;
 
-    invoke-virtual {v1, v2, v0}, Lcom/android/gallery3d/app/CropImage;->setResult(ILandroid/content/Intent;)V
+    invoke-virtual {v1, v2, v0}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
 
     .line 272
     iget-object v0, p0, Lcom/android/gallery3d/app/CropImage$1;->this$0:Lcom/android/gallery3d/app/CropImage;
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/app/CropImage;->finish()V
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 

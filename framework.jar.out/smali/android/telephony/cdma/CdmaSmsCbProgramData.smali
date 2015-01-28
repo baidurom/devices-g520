@@ -89,7 +89,7 @@
 
     .prologue
     .line 99
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 100
     iput p1, p0, Landroid/telephony/cdma/CdmaSmsCbProgramData;->mOperation:I
@@ -119,7 +119,7 @@
 
     .prologue
     .line 109
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 110
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I

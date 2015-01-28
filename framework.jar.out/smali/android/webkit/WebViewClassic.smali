@@ -3,9 +3,9 @@
 .source "WebViewClassic.java"
 
 # interfaces
-.implements Landroid/webkit/WebViewProvider;
 .implements Landroid/webkit/WebViewProvider$ScrollDelegate;
 .implements Landroid/webkit/WebViewProvider$ViewDelegate;
+.implements Landroid/webkit/WebViewProvider;
 
 
 # annotations

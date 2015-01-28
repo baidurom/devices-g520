@@ -54,7 +54,7 @@
     .line 32
     const-string v0, "android.media.effect.effects.LomoishEffect"
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/photoeditor/filters/LomoishFilter;->getEffect(Ljava/lang/String;)Landroid/media/effect/Effect;
+    invoke-virtual {p0, v0}, Lcom/android/gallery3d/photoeditor/filters/Filter;->getEffect(Ljava/lang/String;)Landroid/media/effect/Effect;
 
     move-result-object v0
 

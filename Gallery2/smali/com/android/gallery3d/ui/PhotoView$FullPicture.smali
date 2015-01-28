@@ -50,7 +50,7 @@
     .line 594
     iput-object p1, p0, Lcom/android/gallery3d/ui/PhotoView$FullPicture;->this$0:Lcom/android/gallery3d/ui/PhotoView;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 600
     const/4 v0, 0x0
@@ -93,7 +93,7 @@
 
     iget-object v2, v0, Lcom/android/gallery3d/ui/PhotoView$FullPicture;->this$0:Lcom/android/gallery3d/ui/PhotoView;
 
-    invoke-virtual {v2}, Lcom/android/gallery3d/ui/PhotoView;->getWidth()I
+    invoke-virtual {v2}, Lcom/android/gallery3d/ui/GLView;->getWidth()I
 
     move-result v5
 
@@ -103,7 +103,7 @@
 
     iget-object v2, v0, Lcom/android/gallery3d/ui/PhotoView$FullPicture;->this$0:Lcom/android/gallery3d/ui/PhotoView;
 
-    invoke-virtual {v2}, Lcom/android/gallery3d/ui/PhotoView;->getHeight()I
+    invoke-virtual {v2}, Lcom/android/gallery3d/ui/GLView;->getHeight()I
 
     move-result v6
 
@@ -398,7 +398,7 @@
 
     move-object/from16 v1, v19
 
-    invoke-virtual {v2, v0, v1}, Lcom/android/gallery3d/ui/PhotoView;->renderChild(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/gallery3d/ui/GLView;)V
+    invoke-virtual {v2, v0, v1}, Lcom/android/gallery3d/ui/GLView;->renderChild(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/gallery3d/ui/GLView;)V
 
     .line 762
     const/high16 v2, 0x3f00

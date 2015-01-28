@@ -3,9 +3,9 @@
 .source "RemainingManager.java"
 
 # interfaces
-.implements Lcom/android/camera/Camera$Resumable;
 .implements Lcom/android/camera/Camera$OnFullScreenChangedListener;
 .implements Lcom/android/camera/Camera$OnParametersReadyListener;
+.implements Lcom/android/camera/Camera$Resumable;
 
 
 # annotations
@@ -174,7 +174,7 @@
     .line 88
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/camera/manager/RemainingManager;->setAnimationEnabled(ZZ)V
+    invoke-virtual {p0, v0, v1}, Lcom/android/camera/manager/ViewManager;->setAnimationEnabled(ZZ)V
 
     .line 89
     return-void
@@ -619,11 +619,11 @@
 
     move-result-object v2
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/RemainingManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/android/camera/Camera;->isFullScreen()Z
+    invoke-virtual {v3}, Lcom/android/camera/ActivityBase;->isFullScreen()Z
 
     move-result v3
 
@@ -650,13 +650,13 @@
     if-nez v1, :cond_3
 
     .line 239
-    invoke-virtual {p0}, Lcom/android/camera/manager/RemainingManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v1
 
     const v2, 0x7f0c00d5
 
-    invoke-virtual {v1, v2}, Lcom/android/camera/Camera;->getString(I)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -665,11 +665,11 @@
     :goto_0
     if-eqz v0, :cond_7
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/RemainingManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/camera/Camera;->isFullScreen()Z
+    invoke-virtual {v1}, Lcom/android/camera/ActivityBase;->isFullScreen()Z
 
     move-result v1
 
@@ -681,7 +681,7 @@
     if-nez v1, :cond_6
 
     .line 250
-    invoke-virtual {p0}, Lcom/android/camera/manager/RemainingManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v1
 
@@ -711,13 +711,13 @@
     if-nez v1, :cond_4
 
     .line 241
-    invoke-virtual {p0}, Lcom/android/camera/manager/RemainingManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v1
 
     const v2, 0x7f0c00d7
 
-    invoke-virtual {v1, v2}, Lcom/android/camera/Camera;->getString(I)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -732,13 +732,13 @@
     if-nez v1, :cond_5
 
     .line 243
-    invoke-virtual {p0}, Lcom/android/camera/manager/RemainingManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v1
 
     const v2, 0x7f0c00d8
 
-    invoke-virtual {v1, v2}, Lcom/android/camera/Camera;->getString(I)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -753,7 +753,7 @@
     if-gtz v1, :cond_1
 
     .line 245
-    invoke-virtual {p0}, Lcom/android/camera/manager/RemainingManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v1
 
@@ -761,7 +761,7 @@
 
     move-result v2
 
-    invoke-virtual {v1, v2}, Lcom/android/camera/Camera;->getString(I)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -814,7 +814,7 @@
 
     .line 95
     .local v0, t:Landroid/os/HandlerThread;
-    invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     .line 96
     new-instance v1, Lcom/android/camera/manager/RemainingManager$WorkerHandler;
@@ -832,7 +832,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v2}, Lcom/android/camera/manager/RemainingManager$WorkerHandler;->sendEmptyMessage(I)Z
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     .line 101
     .end local v0           #t:Landroid/os/HandlerThread;
@@ -852,7 +852,7 @@
     .line 127
     iget-object v0, p0, Lcom/android/camera/manager/RemainingManager;->mWorkerHandler:Lcom/android/camera/manager/RemainingManager$WorkerHandler;
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/RemainingManager$WorkerHandler;->getLooper()Landroid/os/Looper;
+    invoke-virtual {v0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
     move-result-object v0
 
@@ -870,7 +870,7 @@
     .line 133
     const v1, 0x7f040046
 
-    invoke-virtual {p0, v1}, Lcom/android/camera/manager/RemainingManager;->inflate(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/camera/manager/ViewManager;->inflate(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1031,7 +1031,7 @@
 
     .prologue
     .line 264
-    invoke-virtual {p0}, Lcom/android/camera/manager/RemainingManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v5
 
@@ -1046,7 +1046,7 @@
     packed-switch v5, :pswitch_data_0
 
     .line 272
-    invoke-virtual {p0}, Lcom/android/camera/manager/RemainingManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v5
 
@@ -1300,7 +1300,7 @@
     .local v0, leftSpace:J
     sget-object v2, Lcom/android/camera/manager/RemainingManager;->MATRIX_REMAINING_TYPE:[I
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/RemainingManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v3
 
@@ -1345,7 +1345,7 @@
 
     move-result-object v3
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/RemainingManager;->isShowing()Z
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->isShowing()Z
 
     move-result v4
 
@@ -1373,7 +1373,7 @@
 
     .line 178
     :cond_2
-    invoke-virtual {p0}, Lcom/android/camera/manager/RemainingManager;->isShowing()Z
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->isShowing()Z
 
     move-result v2
 
@@ -1483,7 +1483,7 @@
     .local v0, leftSpace:J
     sget-object v2, Lcom/android/camera/manager/RemainingManager;->MATRIX_REMAINING_TYPE:[I
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/RemainingManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v3
 
@@ -1532,7 +1532,7 @@
 
     move-result-object v3
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/RemainingManager;->isShowing()Z
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->isShowing()Z
 
     move-result v4
 
@@ -1560,7 +1560,7 @@
 
     .line 161
     :cond_2
-    invoke-virtual {p0}, Lcom/android/camera/manager/RemainingManager;->isShowing()Z
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->isShowing()Z
 
     move-result v2
 
@@ -1572,7 +1572,7 @@
 
     .prologue
     .line 287
-    invoke-virtual {p0}, Lcom/android/camera/manager/RemainingManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v3
 

@@ -30,7 +30,7 @@
     const/4 v8, 0x0
 
     .line 42
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/AbstractSeekBar;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -44,13 +44,13 @@
 
     .line 44
     .local v5, thumb:Landroid/graphics/drawable/Drawable;
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/AbstractSeekBar;->getPaddingTop()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
 
     move-result v6
 
     sub-int v6, p2, v6
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/AbstractSeekBar;->getPaddingBottom()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
 
     move-result v7
 
@@ -104,13 +104,13 @@
 
     invoke-direct {v6, v3, v0}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
-    invoke-virtual {p0, v6}, Lcom/android/gallery3d/photoeditor/actions/AbstractSeekBar;->setThumb(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p0, v6}, Landroid/widget/AbsSeekBar;->setThumb(Landroid/graphics/drawable/Drawable;)V
 
     .line 54
-    invoke-virtual {p0, v8}, Lcom/android/gallery3d/photoeditor/actions/AbstractSeekBar;->setThumbOffset(I)V
+    invoke-virtual {p0, v8}, Landroid/widget/AbsSeekBar;->setThumbOffset(I)V
 
     .line 57
-    invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/SeekBar;->onSizeChanged(IIII)V
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/AbsSeekBar;->onSizeChanged(IIII)V
 
     .line 58
     return-void

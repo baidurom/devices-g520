@@ -3,8 +3,8 @@
 .source "InLineSettingVirtual.java"
 
 # interfaces
-.implements Lcom/android/camera/ui/SettingVirtualLayout$Listener;
 .implements Lcom/android/camera/Camera$OnOrientationListener;
+.implements Lcom/android/camera/ui/SettingVirtualLayout$Listener;
 
 
 # static fields
@@ -113,7 +113,7 @@
     .line 214
     iget-object v0, p0, Lcom/android/camera/ui/InLineSettingItem;->mTitle:Landroid/widget/TextView;
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/InLineSettingVirtual;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -132,7 +132,7 @@
     .line 217
     iget-object v0, p0, Lcom/android/camera/ui/InLineSettingVirtual;->mEntry:Landroid/widget/TextView;
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/InLineSettingVirtual;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -146,7 +146,7 @@
     :cond_1
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/ui/InLineSettingVirtual;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p0, v0}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 220
     return-void
@@ -164,7 +164,7 @@
     .line 224
     iget-object v0, p0, Lcom/android/camera/ui/InLineSettingItem;->mTitle:Landroid/widget/TextView;
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/InLineSettingVirtual;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -185,7 +185,7 @@
     .line 227
     iget-object v0, p0, Lcom/android/camera/ui/InLineSettingVirtual;->mEntry:Landroid/widget/TextView;
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/InLineSettingVirtual;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -201,7 +201,7 @@
     :cond_1
     const v0, 0x7f020142
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/ui/InLineSettingVirtual;->setBackgroundResource(I)V
+    invoke-virtual {p0, v0}, Landroid/view/View;->setBackgroundResource(I)V
 
     .line 230
     return-void
@@ -305,7 +305,7 @@
     .line 197
     iget-object v1, p0, Lcom/android/camera/ui/InLineSettingVirtual;->mSettingLayout:Lcom/android/camera/ui/SettingVirtualLayout;
 
-    invoke-virtual {p0, v1}, Lcom/android/camera/ui/InLineSettingVirtual;->fadeOut(Landroid/view/View;)V
+    invoke-virtual {p0, v1}, Lcom/android/camera/ui/InLineSettingItem;->fadeOut(Landroid/view/View;)V
 
     .line 198
     invoke-direct {p0}, Lcom/android/camera/ui/InLineSettingVirtual;->normalText()V
@@ -420,7 +420,7 @@
 
     const v2, 0x7f0b00dc
 
-    invoke-virtual {v1, v2}, Lcom/android/camera/ui/SettingVirtualLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -464,7 +464,7 @@
     .line 177
     iget-object v1, p0, Lcom/android/camera/ui/InLineSettingVirtual;->mSettingLayout:Lcom/android/camera/ui/SettingVirtualLayout;
 
-    invoke-virtual {p0, v1}, Lcom/android/camera/ui/InLineSettingVirtual;->fadeIn(Landroid/view/View;)V
+    invoke-virtual {p0, v1}, Lcom/android/camera/ui/InLineSettingItem;->fadeIn(Landroid/view/View;)V
 
     .line 178
     invoke-direct {p0}, Lcom/android/camera/ui/InLineSettingVirtual;->highlight()V
@@ -558,7 +558,7 @@
 
     .line 97
     :cond_0
-    invoke-virtual {p0, p1}, Lcom/android/camera/ui/InLineSettingVirtual;->setTitle(Lcom/android/camera/ListPreference;)V
+    invoke-virtual {p0, p1}, Lcom/android/camera/ui/InLineSettingItem;->setTitle(Lcom/android/camera/ListPreference;)V
 
     .line 98
     if-nez p1, :cond_1
@@ -592,7 +592,7 @@
     .line 76
     const v0, 0x7f0b0024
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/ui/InLineSettingVirtual;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -603,7 +603,7 @@
     .line 77
     iget-object v0, p0, Lcom/android/camera/ui/InLineSettingVirtual;->mOnClickListener:Landroid/view/View$OnClickListener;
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/ui/InLineSettingVirtual;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p0, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 78
     return-void
@@ -629,10 +629,10 @@
 
     .prologue
     .line 88
-    invoke-super {p0, p1}, Lcom/android/camera/ui/InLineSettingItem;->onPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
+    invoke-super {p0, p1}, Landroid/view/View;->onPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
     .line 89
-    invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityEvent;->getText()Ljava/util/List;
+    invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityRecord;->getText()Ljava/util/List;
 
     move-result-object v0
 
@@ -642,7 +642,7 @@
 
     iget-object v2, p0, Lcom/android/camera/ui/InLineSettingItem;->mPreference:Lcom/android/camera/ListPreference;
 
-    invoke-virtual {v2}, Lcom/android/camera/ListPreference;->getTitle()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/android/camera/CameraPreference;->getTitle()Ljava/lang/String;
 
     move-result-object v2
 
@@ -835,7 +835,7 @@
     :cond_1
     const/4 v8, 0x0
 
-    invoke-virtual {p0, v8}, Lcom/android/camera/ui/InLineSettingVirtual;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p0, v8}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 128
     iget-object v8, p0, Lcom/android/camera/ui/InLineSettingVirtual;->mChildPrefs:[Lcom/android/camera/ListPreference;
@@ -967,12 +967,12 @@
 
     move-result v8
 
-    invoke-virtual {p0, v8}, Lcom/android/camera/ui/InLineSettingVirtual;->setEnabled(Z)V
+    invoke-virtual {p0, v8}, Lcom/android/camera/ui/InLineSettingItem;->setEnabled(Z)V
 
     .line 157
     iget-object v8, p0, Lcom/android/camera/ui/InLineSettingVirtual;->mOnClickListener:Landroid/view/View$OnClickListener;
 
-    invoke-virtual {p0, v8}, Lcom/android/camera/ui/InLineSettingVirtual;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p0, v8}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 158
     sget-boolean v8, Lcom/android/camera/ui/InLineSettingVirtual;->LOG:Z

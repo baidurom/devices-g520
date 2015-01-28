@@ -267,13 +267,13 @@
     .line 118
     iget-object v3, p0, Lcom/mediatek/bluetooth/share/BluetoothShareProvider;->mDb:Landroid/database/sqlite/SQLiteDatabase;
 
-    invoke-virtual {v3}, Landroid/database/sqlite/SQLiteDatabase;->close()V
+    invoke-virtual {v3}, Landroid/database/sqlite/SQLiteClosable;->close()V
 
     .line 121
     :cond_0
     iget-object v3, p0, Lcom/mediatek/bluetooth/share/BluetoothShareProvider;->mDbHelper:Lcom/mediatek/bluetooth/share/BluetoothShareProvider$DatabaseHelper;
 
-    invoke-virtual {v3}, Lcom/mediatek/bluetooth/share/BluetoothShareProvider$DatabaseHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v3}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v3
 
@@ -326,7 +326,7 @@
     .line 136
     .local v0, count:I
     :goto_0
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/share/BluetoothShareProvider;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -530,7 +530,7 @@
     .line 160
     iget-object v4, p0, Lcom/mediatek/bluetooth/share/BluetoothShareProvider;->mDb:Landroid/database/sqlite/SQLiteDatabase;
 
-    invoke-virtual {v4}, Landroid/database/sqlite/SQLiteDatabase;->close()V
+    invoke-virtual {v4}, Landroid/database/sqlite/SQLiteClosable;->close()V
 
     .line 163
     :cond_0
@@ -803,7 +803,7 @@
     :cond_b
     iget-object v4, p0, Lcom/mediatek/bluetooth/share/BluetoothShareProvider;->mDbHelper:Lcom/mediatek/bluetooth/share/BluetoothShareProvider$DatabaseHelper;
 
-    invoke-virtual {v4}, Lcom/mediatek/bluetooth/share/BluetoothShareProvider$DatabaseHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v4}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v4
 
@@ -835,7 +835,7 @@
 
     .line 220
     .local v1, recordUri:Landroid/net/Uri;
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/share/BluetoothShareProvider;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
@@ -883,7 +883,7 @@
     .line 107
     new-instance v0, Lcom/mediatek/bluetooth/share/BluetoothShareProvider$DatabaseHelper;
 
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/share/BluetoothShareProvider;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -894,7 +894,7 @@
     .line 108
     iget-object v0, p0, Lcom/mediatek/bluetooth/share/BluetoothShareProvider;->mDbHelper:Lcom/mediatek/bluetooth/share/BluetoothShareProvider$DatabaseHelper;
 
-    invoke-virtual {v0}, Lcom/mediatek/bluetooth/share/BluetoothShareProvider$DatabaseHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -1003,13 +1003,13 @@
     .line 257
     iget-object v1, p0, Lcom/mediatek/bluetooth/share/BluetoothShareProvider;->mDb:Landroid/database/sqlite/SQLiteDatabase;
 
-    invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->close()V
+    invoke-virtual {v1}, Landroid/database/sqlite/SQLiteClosable;->close()V
 
     .line 260
     :cond_0
     iget-object v1, p0, Lcom/mediatek/bluetooth/share/BluetoothShareProvider;->mDbHelper:Lcom/mediatek/bluetooth/share/BluetoothShareProvider$DatabaseHelper;
 
-    invoke-virtual {v1}, Lcom/mediatek/bluetooth/share/BluetoothShareProvider$DatabaseHelper;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v1}, Landroid/database/sqlite/SQLiteOpenHelper;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v1
 
@@ -1035,7 +1035,7 @@
     if-eqz v8, :cond_1
 
     .line 265
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/share/BluetoothShareProvider;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -1156,13 +1156,13 @@
     .line 280
     iget-object v3, p0, Lcom/mediatek/bluetooth/share/BluetoothShareProvider;->mDb:Landroid/database/sqlite/SQLiteDatabase;
 
-    invoke-virtual {v3}, Landroid/database/sqlite/SQLiteDatabase;->close()V
+    invoke-virtual {v3}, Landroid/database/sqlite/SQLiteClosable;->close()V
 
     .line 284
     :cond_0
     iget-object v3, p0, Lcom/mediatek/bluetooth/share/BluetoothShareProvider;->mDbHelper:Lcom/mediatek/bluetooth/share/BluetoothShareProvider$DatabaseHelper;
 
-    invoke-virtual {v3}, Lcom/mediatek/bluetooth/share/BluetoothShareProvider$DatabaseHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v3}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v3
 
@@ -1215,7 +1215,7 @@
     .line 299
     .local v0, count:I
     :goto_0
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/share/BluetoothShareProvider;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object v3
 

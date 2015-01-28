@@ -42,7 +42,7 @@
     .prologue
     .line 63
     .local p0, this:Lcom/mediatek/bluetooth/opp/adp/EventQueue;,"Lcom/mediatek/bluetooth/opp/adp/EventQueue<TEventType;>;"
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 48
     const/4 v0, 0x0
@@ -202,7 +202,7 @@
     .local v2, res:Ljava/lang/StringBuilder;
     iget-object v3, p0, Lcom/mediatek/bluetooth/opp/adp/EventQueue;->mQueue:Ljava/util/LinkedList;
 
-    invoke-virtual {v3}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v3}, Ljava/util/AbstractSequentialList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
@@ -412,7 +412,7 @@
     .line 95
     iget-object v4, p0, Lcom/mediatek/bluetooth/opp/adp/EventQueue;->mQueue:Ljava/util/LinkedList;
 
-    invoke-virtual {v4}, Ljava/util/LinkedList;->isEmpty()Z
+    invoke-virtual {v4}, Ljava/util/AbstractCollection;->isEmpty()Z
 
     move-result v4
 
@@ -581,7 +581,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0}, Ljava/lang/IllegalMonitorStateException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v4
 
@@ -621,7 +621,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0}, Ljava/lang/IllegalArgumentException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v4
 

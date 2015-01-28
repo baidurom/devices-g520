@@ -86,7 +86,7 @@
     .line 65
     const-string v0, "android.preference."
 
-    invoke-virtual {p0, v0}, Landroid/preference/PreferenceInflater;->setDefaultPackage(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Landroid/preference/GenericInflater;->setDefaultPackage(Ljava/lang/String;)V
 
     .line 66
     return-void
@@ -156,7 +156,7 @@
     .line 77
     .local v2, intent:Landroid/content/Intent;
     :try_start_0
-    invoke-virtual {p0}, Landroid/preference/PreferenceInflater;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/preference/GenericInflater;->getContext()Landroid/content/Context;
 
     move-result-object v5
 
@@ -197,7 +197,7 @@
 
     .line 81
     .local v1, ex:Lorg/xmlpull/v1/XmlPullParserException;
-    invoke-virtual {v1, v0}, Lorg/xmlpull/v1/XmlPullParserException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v1, v0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     .line 82
     throw v1
@@ -216,7 +216,7 @@
     if-eqz v5, :cond_2
 
     .line 91
-    invoke-virtual {p0}, Landroid/preference/PreferenceInflater;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/preference/GenericInflater;->getContext()Landroid/content/Context;
 
     move-result-object v5
 
@@ -254,7 +254,7 @@
 
     .line 98
     .restart local v1       #ex:Lorg/xmlpull/v1/XmlPullParserException;
-    invoke-virtual {v1, v0}, Lorg/xmlpull/v1/XmlPullParserException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v1, v0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     .line 99
     throw v1
@@ -325,7 +325,7 @@
     .line 113
     iget-object v0, p0, Landroid/preference/PreferenceInflater;->mPreferenceManager:Landroid/preference/PreferenceManager;
 
-    invoke-virtual {p3, v0}, Landroid/preference/PreferenceGroup;->onAttachedToHierarchy(Landroid/preference/PreferenceManager;)V
+    invoke-virtual {p3, v0}, Landroid/preference/Preference;->onAttachedToHierarchy(Landroid/preference/PreferenceManager;)V
 
     .line 116
     .end local p3

@@ -385,7 +385,7 @@
     .line 1224
     iget-object v0, p0, Landroid/net/Uri$HierarchicalUri;->authority:Landroid/net/Uri$Part;
 
-    invoke-virtual {v0}, Landroid/net/Uri$Part;->getDecoded()Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/net/Uri$AbstractPart;->getDecoded()Ljava/lang/String;
 
     move-result-object v0
 
@@ -471,7 +471,7 @@
     .line 1248
     iget-object v0, p0, Landroid/net/Uri$HierarchicalUri;->fragment:Landroid/net/Uri$Part;
 
-    invoke-virtual {v0}, Landroid/net/Uri$Part;->getDecoded()Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/net/Uri$AbstractPart;->getDecoded()Ljava/lang/String;
 
     move-result-object v0
 
@@ -485,7 +485,7 @@
     .line 1236
     iget-object v0, p0, Landroid/net/Uri$HierarchicalUri;->path:Landroid/net/Uri$PathPart;
 
-    invoke-virtual {v0}, Landroid/net/Uri$PathPart;->getDecoded()Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/net/Uri$AbstractPart;->getDecoded()Ljava/lang/String;
 
     move-result-object v0
 
@@ -522,7 +522,7 @@
     .line 1240
     iget-object v0, p0, Landroid/net/Uri$HierarchicalUri;->query:Landroid/net/Uri$Part;
 
-    invoke-virtual {v0}, Landroid/net/Uri$Part;->getDecoded()Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/net/Uri$AbstractPart;->getDecoded()Ljava/lang/String;
 
     move-result-object v0
 
@@ -548,7 +548,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/net/Uri$Part;->getDecoded()Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/net/Uri$AbstractPart;->getDecoded()Ljava/lang/String;
 
     move-result-object v0
 
@@ -648,22 +648,22 @@
     .line 1164
     iget-object v0, p0, Landroid/net/Uri$HierarchicalUri;->authority:Landroid/net/Uri$Part;
 
-    invoke-virtual {v0, p1}, Landroid/net/Uri$Part;->writeTo(Landroid/os/Parcel;)V
+    invoke-virtual {v0, p1}, Landroid/net/Uri$AbstractPart;->writeTo(Landroid/os/Parcel;)V
 
     .line 1165
     iget-object v0, p0, Landroid/net/Uri$HierarchicalUri;->path:Landroid/net/Uri$PathPart;
 
-    invoke-virtual {v0, p1}, Landroid/net/Uri$PathPart;->writeTo(Landroid/os/Parcel;)V
+    invoke-virtual {v0, p1}, Landroid/net/Uri$AbstractPart;->writeTo(Landroid/os/Parcel;)V
 
     .line 1166
     iget-object v0, p0, Landroid/net/Uri$HierarchicalUri;->query:Landroid/net/Uri$Part;
 
-    invoke-virtual {v0, p1}, Landroid/net/Uri$Part;->writeTo(Landroid/os/Parcel;)V
+    invoke-virtual {v0, p1}, Landroid/net/Uri$AbstractPart;->writeTo(Landroid/os/Parcel;)V
 
     .line 1167
     iget-object v0, p0, Landroid/net/Uri$HierarchicalUri;->fragment:Landroid/net/Uri$Part;
 
-    invoke-virtual {v0, p1}, Landroid/net/Uri$Part;->writeTo(Landroid/os/Parcel;)V
+    invoke-virtual {v0, p1}, Landroid/net/Uri$AbstractPart;->writeTo(Landroid/os/Parcel;)V
 
     .line 1168
     return-void

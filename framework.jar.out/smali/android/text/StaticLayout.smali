@@ -356,7 +356,7 @@
     if-eqz p11, :cond_2
 
     .line 120
-    invoke-virtual {p0}, Landroid/text/StaticLayout;->getText()Ljava/lang/CharSequence;
+    invoke-virtual {p0}, Landroid/text/Layout;->getText()Ljava/lang/CharSequence;
 
     move-result-object v14
 
@@ -688,7 +688,7 @@
 
     move/from16 v3, v19
 
-    invoke-virtual {v0, v1, v2, v3}, Landroid/text/TextPaint;->measureText([CII)F
+    invoke-virtual {v0, v1, v2, v3}, Landroid/graphics/Paint;->measureText([CII)F
 
     move-result v6
 
@@ -2207,7 +2207,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v5}, Landroid/text/StaticLayout;->getLineForOffset(I)I
+    invoke-virtual {v0, v5}, Landroid/text/Layout;->getLineForOffset(I)I
 
     move-result v109
 
@@ -2355,7 +2355,7 @@
 
     move/from16 v1, v111
 
-    invoke-virtual {v0, v1}, Landroid/text/StaticLayout;->getLineForOffset(I)I
+    invoke-virtual {v0, v1}, Landroid/text/Layout;->getLineForOffset(I)I
 
     move-result v5
 
@@ -3098,7 +3098,7 @@
 
     int-to-float v5, v5
 
-    invoke-virtual/range {v126 .. v126}, Landroid/text/TextPaint;->ascent()F
+    invoke-virtual/range {v126 .. v126}, Landroid/graphics/Paint;->ascent()F
 
     move-result v6
 

@@ -206,7 +206,7 @@
 
     aput-object v4, v2, v3
 
-    invoke-virtual {v1, v2}, Lcom/android/gallery3d/photoeditor/LoadScreennailTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v1, v2}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     .line 110
     return-void
@@ -265,10 +265,10 @@
     .line 47
     const v2, 0x7f040038
 
-    invoke-virtual {p0, v2}, Lcom/android/gallery3d/photoeditor/PhotoEditor;->setContentView(I)V
+    invoke-virtual {p0, v2}, Landroid/app/Activity;->setContentView(I)V
 
     .line 49
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/PhotoEditor;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
@@ -370,7 +370,7 @@
     :cond_1
     const v2, 0x7f0b0085
 
-    invoke-virtual {p0, v2}, Lcom/android/gallery3d/photoeditor/PhotoEditor;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -381,7 +381,7 @@
     .line 67
     const v2, 0x7f0b0089
 
-    invoke-virtual {p0, v2}, Lcom/android/gallery3d/photoeditor/PhotoEditor;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -394,7 +394,7 @@
 
     const v2, 0x7f0b0086
 
-    invoke-virtual {p0, v2}, Lcom/android/gallery3d/photoeditor/PhotoEditor;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -438,7 +438,7 @@
     :cond_2
     const v2, 0x7f0b0087
 
-    invoke-virtual {p0, v2}, Lcom/android/gallery3d/photoeditor/PhotoEditor;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -456,7 +456,7 @@
     .line 84
     iget-object v2, p0, Lcom/android/gallery3d/photoeditor/PhotoEditor;->effectsBar:Lcom/android/gallery3d/photoeditor/EffectsBar;
 
-    invoke-virtual {v2, v4}, Lcom/android/gallery3d/photoeditor/EffectsBar;->setEnabled(Z)V
+    invoke-virtual {v2, v4}, Landroid/view/View;->setEnabled(Z)V
 
     .line 86
     iget-object v2, p0, Lcom/android/gallery3d/photoeditor/PhotoEditor;->actionBar:Lcom/android/gallery3d/photoeditor/ActionBar;
@@ -467,7 +467,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v5, v3}, Lcom/android/gallery3d/photoeditor/ActionBar;->setClickRunnable(ILjava/lang/Runnable;)V
+    invoke-virtual {v2, v5, v3}, Lcom/android/gallery3d/photoeditor/RestorableView;->setClickRunnable(ILjava/lang/Runnable;)V
 
     .line 87
     iget-object v2, p0, Lcom/android/gallery3d/photoeditor/PhotoEditor;->actionBar:Lcom/android/gallery3d/photoeditor/ActionBar;
@@ -478,7 +478,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v2, v3, v4}, Lcom/android/gallery3d/photoeditor/ActionBar;->setClickRunnable(ILjava/lang/Runnable;)V
+    invoke-virtual {v2, v3, v4}, Lcom/android/gallery3d/photoeditor/RestorableView;->setClickRunnable(ILjava/lang/Runnable;)V
 
     .line 88
     iget-object v2, p0, Lcom/android/gallery3d/photoeditor/PhotoEditor;->actionBar:Lcom/android/gallery3d/photoeditor/ActionBar;
@@ -489,7 +489,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v2, v3, v4}, Lcom/android/gallery3d/photoeditor/ActionBar;->setClickRunnable(ILjava/lang/Runnable;)V
+    invoke-virtual {v2, v3, v4}, Lcom/android/gallery3d/photoeditor/RestorableView;->setClickRunnable(ILjava/lang/Runnable;)V
 
     .line 89
     iget-object v2, p0, Lcom/android/gallery3d/photoeditor/PhotoEditor;->actionBar:Lcom/android/gallery3d/photoeditor/ActionBar;
@@ -500,7 +500,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v2, v3, v4}, Lcom/android/gallery3d/photoeditor/ActionBar;->setClickRunnable(ILjava/lang/Runnable;)V
+    invoke-virtual {v2, v3, v4}, Lcom/android/gallery3d/photoeditor/RestorableView;->setClickRunnable(ILjava/lang/Runnable;)V
 
     .line 90
     iget-object v2, p0, Lcom/android/gallery3d/photoeditor/PhotoEditor;->actionBar:Lcom/android/gallery3d/photoeditor/ActionBar;
@@ -511,7 +511,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v2, v3, v4}, Lcom/android/gallery3d/photoeditor/ActionBar;->setClickRunnable(ILjava/lang/Runnable;)V
+    invoke-virtual {v2, v3, v4}, Lcom/android/gallery3d/photoeditor/RestorableView;->setClickRunnable(ILjava/lang/Runnable;)V
 
     .line 91
     return-void

@@ -176,14 +176,14 @@
 
     aget-object v1, v1, v0
 
-    invoke-virtual {v1, p0}, Lcom/android/camera/ui/RotateImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 144
     iget-object v1, p0, Lcom/android/camera/manager/ModePicker;->mModeViews:[Lcom/android/camera/ui/RotateImageView;
 
     aget-object v1, v1, v0
 
-    invoke-virtual {v1, p0}, Lcom/android/camera/ui/RotateImageView;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
+    invoke-virtual {v1, p0}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
     .line 141
     :cond_0
@@ -223,14 +223,14 @@
 
     aget-object v1, v1, v0
 
-    invoke-virtual {v1, v2}, Lcom/android/camera/ui/RotateImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 153
     iget-object v1, p0, Lcom/android/camera/manager/ModePicker;->mModeViews:[Lcom/android/camera/ui/RotateImageView;
 
     aget-object v1, v1, v0
 
-    invoke-virtual {v1, v2}, Lcom/android/camera/ui/RotateImageView;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
+    invoke-virtual {v1, v2}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
     .line 154
     iget-object v1, p0, Lcom/android/camera/manager/ModePicker;->mModeViews:[Lcom/android/camera/ui/RotateImageView;
@@ -288,7 +288,7 @@
 
     aget v3, v3, v0
 
-    invoke-virtual {v2, v3}, Lcom/android/camera/ui/RotateImageView;->setImageResource(I)V
+    invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 100
     :cond_0
@@ -307,7 +307,7 @@
 
     aget v3, v3, v0
 
-    invoke-virtual {v2, v3}, Lcom/android/camera/ui/RotateImageView;->setImageResource(I)V
+    invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
     goto :goto_1
 
@@ -437,7 +437,7 @@
     .line 126
     const v1, 0x7f040021
 
-    invoke-virtual {p0, v1}, Lcom/android/camera/manager/ModePicker;->inflate(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/camera/manager/ViewManager;->inflate(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -599,7 +599,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/ModePicker;->isEnabled()Z
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->isEnabled()Z
 
     move-result v3
 
@@ -629,17 +629,17 @@
 
     .line 166
     :cond_0
-    invoke-virtual {p0}, Lcom/android/camera/manager/ModePicker;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/camera/Camera;->isFullScreen()Z
+    invoke-virtual {v1}, Lcom/android/camera/ActivityBase;->isFullScreen()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/ModePicker;->isEnabled()Z
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->isEnabled()Z
 
     move-result v1
 
@@ -685,7 +685,7 @@
     if-nez v1, :cond_4
 
     .line 178
-    invoke-virtual {p0}, Lcom/android/camera/manager/ModePicker;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v1
 
@@ -807,11 +807,11 @@
     if-eqz v4, :cond_1
 
     .line 199
-    invoke-virtual {p0}, Lcom/android/camera/manager/ModePicker;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v4
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/ModePicker;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v7
 
@@ -834,7 +834,7 @@
     move v4, v5
 
     :goto_1
-    invoke-virtual {v7, v4}, Lcom/android/camera/ui/RotateImageView;->setVisibility(I)V
+    invoke-virtual {v7, v4}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 202
     invoke-virtual {p0, v1}, Lcom/android/camera/manager/ModePicker;->getModeIndex(I)I
@@ -909,7 +909,7 @@
 
     .line 88
     .local v0, realmode:I
-    invoke-virtual {p0}, Lcom/android/camera/manager/ModePicker;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v1
 
@@ -984,14 +984,14 @@
 
     aget-object v1, v1, v0
 
-    invoke-virtual {v1, p1}, Lcom/android/camera/ui/RotateImageView;->setEnabled(Z)V
+    invoke-virtual {v1, p1}, Lcom/android/camera/ui/TwoStateImageView;->setEnabled(Z)V
 
     .line 238
     iget-object v1, p0, Lcom/android/camera/manager/ModePicker;->mModeViews:[Lcom/android/camera/ui/RotateImageView;
 
     aget-object v1, v1, v0
 
-    invoke-virtual {v1, p1}, Lcom/android/camera/ui/RotateImageView;->setClickable(Z)V
+    invoke-virtual {v1, p1}, Landroid/view/View;->setClickable(Z)V
 
     .line 234
     :cond_1

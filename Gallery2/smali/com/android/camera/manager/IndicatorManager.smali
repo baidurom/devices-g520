@@ -159,7 +159,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/camera/manager/IndicatorManager;->setAnimationEnabled(ZZ)V
+    invoke-virtual {p0, v0, v1}, Lcom/android/camera/manager/ViewManager;->setAnimationEnabled(ZZ)V
 
     .line 64
     return-void
@@ -199,7 +199,7 @@
 
     .line 167
     .local v1, row:I
-    invoke-virtual {p0}, Lcom/android/camera/manager/IndicatorManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v3
 
@@ -230,7 +230,7 @@
 
     .line 169
     :cond_1
-    invoke-virtual {p0}, Lcom/android/camera/manager/IndicatorManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v3
 
@@ -332,7 +332,7 @@
     .line 68
     const v2, 0x7f040024
 
-    invoke-virtual {p0, v2}, Lcom/android/camera/manager/IndicatorManager;->inflate(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/android/camera/manager/ViewManager;->inflate(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -400,7 +400,7 @@
 
     .line 91
     :cond_0
-    invoke-virtual {p0}, Lcom/android/camera/manager/IndicatorManager;->refresh()V
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->refresh()V
 
     .line 92
     return-void
@@ -414,11 +414,11 @@
     const/4 v7, 0x1
 
     .line 198
-    invoke-virtual {p0}, Lcom/android/camera/manager/IndicatorManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/android/camera/Camera;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v4}, Landroid/content/ContextWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -460,7 +460,7 @@
 
     .line 207
     :cond_0
-    invoke-virtual {p0}, Lcom/android/camera/manager/IndicatorManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v4
 
@@ -479,7 +479,7 @@
     if-eqz v4, :cond_4
 
     .line 208
-    invoke-virtual {p0}, Lcom/android/camera/manager/IndicatorManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v4
 
@@ -511,7 +511,7 @@
 
     .line 210
     :cond_1
-    invoke-virtual {v3, v2}, Lcom/android/camera/IconListPreference;->setValue(Ljava/lang/String;)V
+    invoke-virtual {v3, v2}, Lcom/android/camera/ListPreference;->setValue(Ljava/lang/String;)V
 
     .line 211
     iget-object v4, p0, Lcom/android/camera/manager/IndicatorManager;->mOverrides:[Ljava/lang/String;
@@ -521,7 +521,7 @@
     aput-object v5, v4, v7
 
     .line 212
-    invoke-virtual {p0}, Lcom/android/camera/manager/IndicatorManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v4
 
@@ -588,7 +588,7 @@
 
     .line 214
     :cond_4
-    invoke-virtual {v3}, Lcom/android/camera/IconListPreference;->getOriginalEntryValues()[Ljava/lang/CharSequence;
+    invoke-virtual {v3}, Lcom/android/camera/ListPreference;->getOriginalEntryValues()[Ljava/lang/CharSequence;
 
     move-result-object v4
 
@@ -615,7 +615,7 @@
     aput-object v2, v4, v7
 
     .line 218
-    invoke-virtual {p0}, Lcom/android/camera/manager/IndicatorManager;->refresh()V
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->refresh()V
 
     goto :goto_0
 
@@ -635,7 +635,7 @@
 
     .prologue
     .line 77
-    invoke-virtual {p0}, Lcom/android/camera/manager/IndicatorManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v4
 
@@ -677,7 +677,7 @@
     .line 82
     iget-object v4, p0, Lcom/android/camera/manager/IndicatorManager;->mDefaults:[Ljava/lang/String;
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/IndicatorManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v5
 
@@ -721,7 +721,7 @@
 
     if-eqz v6, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/IndicatorManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v6
 
@@ -833,7 +833,7 @@
 
     aget-object v6, v6, v0
 
-    invoke-virtual {v6, v10}, Lcom/android/camera/ui/RotateImageView;->setVisibility(I)V
+    invoke-virtual {v6, v10}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 137
     :cond_5
@@ -948,7 +948,7 @@
     if-eqz v6, :cond_7
 
     .line 110
-    invoke-virtual {p0}, Lcom/android/camera/manager/IndicatorManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v6
 
@@ -964,7 +964,7 @@
 
     .line 113
     :cond_7
-    invoke-virtual {p0}, Lcom/android/camera/manager/IndicatorManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v6
 
@@ -986,7 +986,7 @@
 
     const/4 v7, 0x0
 
-    invoke-virtual {v6, v7}, Lcom/android/camera/ui/RotateImageView;->setVisibility(I)V
+    invoke-virtual {v6, v7}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 122
     if-ne v9, v3, :cond_9
@@ -1000,7 +1000,7 @@
 
     aget-object v6, v6, v0
 
-    invoke-virtual {v6, v10}, Lcom/android/camera/ui/RotateImageView;->setVisibility(I)V
+    invoke-virtual {v6, v10}, Landroid/widget/ImageView;->setVisibility(I)V
 
     goto/16 :goto_2
 
@@ -1021,7 +1021,7 @@
     if-eqz v6, :cond_a
 
     .line 131
-    invoke-virtual {v1}, Lcom/android/camera/IconListPreference;->getOriginalEntryValues()[Ljava/lang/CharSequence;
+    invoke-virtual {v1}, Lcom/android/camera/ListPreference;->getOriginalEntryValues()[Ljava/lang/CharSequence;
 
     move-result-object v6
 
@@ -1041,7 +1041,7 @@
 
     aget v7, v7, v2
 
-    invoke-virtual {v6, v7}, Lcom/android/camera/ui/RotateImageView;->setImageResource(I)V
+    invoke-virtual {v6, v7}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 134
     .end local v2           #index:I
@@ -1084,7 +1084,7 @@
     const/4 v4, 0x1
 
     .line 186
-    invoke-virtual {p0}, Lcom/android/camera/manager/IndicatorManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v2
 
@@ -1131,7 +1131,7 @@
     aput-object v3, v2, v4
 
     .line 191
-    invoke-virtual {p0}, Lcom/android/camera/manager/IndicatorManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v2
 
@@ -1148,7 +1148,7 @@
 
     .prologue
     .line 179
-    invoke-virtual {p0}, Lcom/android/camera/manager/IndicatorManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v0
 

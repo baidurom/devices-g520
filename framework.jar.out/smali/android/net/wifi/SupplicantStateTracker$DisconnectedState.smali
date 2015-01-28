@@ -43,7 +43,7 @@
     .line 243
     iget-object v2, p0, Landroid/net/wifi/SupplicantStateTracker$DisconnectedState;->this$0:Landroid/net/wifi/SupplicantStateTracker;
 
-    #calls: Landroid/net/wifi/SupplicantStateTracker;->getCurrentMessage()Landroid/os/Message;
+    #calls: Lcom/android/internal/util/StateMachine;->getCurrentMessage()Landroid/os/Message;
     invoke-static {v2}, Landroid/net/wifi/SupplicantStateTracker;->access$1100(Landroid/net/wifi/SupplicantStateTracker;)Landroid/os/Message;
 
     move-result-object v0

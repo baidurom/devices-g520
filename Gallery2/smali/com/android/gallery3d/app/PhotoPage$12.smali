@@ -45,7 +45,7 @@
 
     iput-object p2, p0, Lcom/android/gallery3d/app/PhotoPage$12;->val$item:Lcom/android/gallery3d/data/MediaItem;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -79,7 +79,7 @@
 
     iget-object v2, p0, Lcom/android/gallery3d/app/PhotoPage$12;->val$item:Lcom/android/gallery3d/data/MediaItem;
 
-    invoke-virtual {v2}, Lcom/android/gallery3d/data/MediaItem;->getContentUri()Landroid/net/Uri;
+    invoke-virtual {v2}, Lcom/android/gallery3d/data/MediaObject;->getContentUri()Landroid/net/Uri;
 
     move-result-object v2
 
@@ -127,7 +127,7 @@
 
     iget-object v2, p0, Lcom/android/gallery3d/app/PhotoPage$12;->val$item:Lcom/android/gallery3d/data/MediaItem;
 
-    invoke-virtual {v2}, Lcom/android/gallery3d/data/MediaItem;->getContentUri()Landroid/net/Uri;
+    invoke-virtual {v2}, Lcom/android/gallery3d/data/MediaObject;->getContentUri()Landroid/net/Uri;
 
     move-result-object v2
 

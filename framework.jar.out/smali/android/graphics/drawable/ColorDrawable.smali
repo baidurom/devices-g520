@@ -113,7 +113,7 @@
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 70
-    invoke-virtual {p0}, Landroid/graphics/drawable/ColorDrawable;->getBounds()Landroid/graphics/Rect;
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
@@ -338,7 +338,7 @@
     if-eq v1, v3, :cond_0
 
     .line 117
-    invoke-virtual {p0}, Landroid/graphics/drawable/ColorDrawable;->invalidateSelf()V
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     .line 119
     :cond_0
@@ -365,7 +365,7 @@
 
     .line 91
     :cond_0
-    invoke-virtual {p0}, Landroid/graphics/drawable/ColorDrawable;->invalidateSelf()V
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     .line 92
     iget-object v0, p0, Landroid/graphics/drawable/ColorDrawable;->mState:Landroid/graphics/drawable/ColorDrawable$ColorState;

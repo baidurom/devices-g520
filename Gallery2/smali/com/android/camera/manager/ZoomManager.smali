@@ -3,8 +3,8 @@
 .source "ZoomManager.java"
 
 # interfaces
-.implements Lcom/android/camera/Camera$OnParametersReadyListener;
 .implements Lcom/android/camera/Camera$OnFullScreenChangedListener;
+.implements Lcom/android/camera/Camera$OnParametersReadyListener;
 .implements Lcom/android/camera/Camera$Resumable;
 
 
@@ -516,7 +516,7 @@
 
     .prologue
     .line 312
-    invoke-virtual {p0}, Lcom/android/camera/manager/ZoomManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v1
 
@@ -703,7 +703,7 @@
 
     .line 97
     :cond_0
-    invoke-virtual {p0}, Lcom/android/camera/manager/ZoomManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v2
 
@@ -724,7 +724,7 @@
     if-eqz v2, :cond_1
 
     .line 98
-    invoke-virtual {p0}, Lcom/android/camera/manager/ZoomManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v2
 
@@ -780,7 +780,7 @@
 
     .line 110
     .local v1, zoomRation:F
-    invoke-virtual {p0}, Lcom/android/camera/manager/ZoomManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v2
 
@@ -798,7 +798,7 @@
 
     float-to-double v5, v1
 
-    invoke-virtual {v4, v5, v6}, Ljava/text/DecimalFormat;->format(D)Ljava/lang/String;
+    invoke-virtual {v4, v5, v6}, Ljava/text/NumberFormat;->format(D)Ljava/lang/String;
 
     move-result-object v4
 
@@ -835,7 +835,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/ZoomManager;->isEnabled()Z
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->isEnabled()Z
 
     move-result v0
 
@@ -897,7 +897,7 @@
 
     .line 118
     :cond_0
-    invoke-virtual {p0}, Lcom/android/camera/manager/ZoomManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v0
 
@@ -952,7 +952,7 @@
 
     .line 146
     :cond_0
-    invoke-virtual {p0}, Lcom/android/camera/manager/ZoomManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v0
 
@@ -1008,7 +1008,7 @@
     if-eqz v7, :cond_4
 
     .line 281
-    invoke-virtual {p0}, Lcom/android/camera/manager/ZoomManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v7
 
@@ -1023,7 +1023,7 @@
     iput-boolean v7, p0, Lcom/android/camera/manager/ZoomManager;->mDeviceSupport:Z
 
     .line 282
-    invoke-virtual {p0}, Lcom/android/camera/manager/ZoomManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v7
 
@@ -1038,7 +1038,7 @@
     iput-object v7, p0, Lcom/android/camera/manager/ZoomManager;->mZoomRatios:Ljava/util/List;
 
     .line 283
-    invoke-virtual {p0}, Lcom/android/camera/manager/ZoomManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v7
 
@@ -1389,13 +1389,13 @@
     if-eqz v0, :cond_1
 
     .line 70
-    invoke-virtual {p0}, Lcom/android/camera/manager/ZoomManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/android/camera/manager/ZoomManager;->mGalleryGestureListener:Lcom/android/gallery3d/ui/GestureRecognizer$Listener;
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/Camera;->setGestureListener(Lcom/android/gallery3d/ui/GestureRecognizer$Listener;)Lcom/android/gallery3d/ui/GestureRecognizer$Listener;
+    invoke-virtual {v0, v1}, Lcom/android/camera/ActivityBase;->setGestureListener(Lcom/android/gallery3d/ui/GestureRecognizer$Listener;)Lcom/android/gallery3d/ui/GestureRecognizer$Listener;
 
     .line 71
     const/4 v0, 0x0
@@ -1502,24 +1502,24 @@
 
     if-nez v1, :cond_1
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/ZoomManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/camera/Camera;->isFullScreen()Z
+    invoke-virtual {v1}, Lcom/android/camera/ActivityBase;->isFullScreen()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
     .line 53
-    invoke-virtual {p0}, Lcom/android/camera/manager/ZoomManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/android/camera/manager/ZoomManager;->mGestureListener:Lcom/android/camera/manager/ZoomManager$MyListener;
 
-    invoke-virtual {v1, v2}, Lcom/android/camera/Camera;->setGestureListener(Lcom/android/gallery3d/ui/GestureRecognizer$Listener;)Lcom/android/gallery3d/ui/GestureRecognizer$Listener;
+    invoke-virtual {v1, v2}, Lcom/android/camera/ActivityBase;->setGestureListener(Lcom/android/gallery3d/ui/GestureRecognizer$Listener;)Lcom/android/gallery3d/ui/GestureRecognizer$Listener;
 
     move-result-object v0
 

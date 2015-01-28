@@ -72,7 +72,7 @@
     const/4 v0, -0x1
 
     .line 85
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 78
     iput v0, p0, Lcom/mediatek/stereo3d/JpsParser;->mType:I
@@ -700,7 +700,7 @@
     .line 109
     .local v6, readBytes:I
     :try_start_2
-    invoke-virtual {v5, v1}, Ljava/io/FileInputStream;->read([B)I
+    invoke-virtual {v5, v1}, Ljava/io/InputStream;->read([B)I
 
     move-result v6
 
@@ -765,7 +765,7 @@
 
     move-result-object v8
 
-    invoke-virtual {v2}, Ljava/io/IOException;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v9
 
@@ -811,7 +811,7 @@
 
     move-result-object v8
 
-    invoke-virtual {v2}, Ljava/io/FileNotFoundException;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v9
 
@@ -847,7 +847,7 @@
 
     move-result-object v8
 
-    invoke-virtual {v2}, Ljava/io/IOException;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v9
 

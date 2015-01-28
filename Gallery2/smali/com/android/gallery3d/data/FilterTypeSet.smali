@@ -165,7 +165,7 @@
 
     move-result-object v8
 
-    invoke-virtual {v6}, Lcom/android/gallery3d/data/MediaSet;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {v6}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v9
 
@@ -409,7 +409,7 @@
 
     .prologue
     .line 78
-    invoke-virtual {p0}, Lcom/android/gallery3d/data/FilterTypeSet;->notifyContentChanged()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/data/MediaSet;->notifyContentChanged()V
 
     .line 79
     return-void

@@ -157,7 +157,7 @@
     .local v7, paint:Landroid/graphics/Paint;
     iget-object v8, p0, Lcom/android/gallery3d/photoeditor/filters/DoodleFilter;->doodles:Ljava/util/Vector;
 
-    invoke-virtual {v8}, Ljava/util/Vector;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v8}, Ljava/util/AbstractList;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
 
@@ -196,7 +196,7 @@
     :cond_0
     const-string v8, "android.media.effect.effects.BitmapOverlayEffect"
 
-    invoke-virtual {p0, v8}, Lcom/android/gallery3d/photoeditor/filters/DoodleFilter;->getEffect(Ljava/lang/String;)Landroid/media/effect/Effect;
+    invoke-virtual {p0, v8}, Lcom/android/gallery3d/photoeditor/filters/Filter;->getEffect(Ljava/lang/String;)Landroid/media/effect/Effect;
 
     move-result-object v4
 
@@ -291,7 +291,7 @@
     .line 72
     iget-object v2, p0, Lcom/android/gallery3d/photoeditor/filters/DoodleFilter;->doodles:Ljava/util/Vector;
 
-    invoke-virtual {v2}, Ljava/util/Vector;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v2}, Ljava/util/AbstractList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 

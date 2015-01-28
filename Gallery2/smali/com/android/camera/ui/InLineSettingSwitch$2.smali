@@ -30,7 +30,7 @@
     .line 95
     iput-object p1, p0, Lcom/android/camera/ui/InLineSettingSwitch$2;->this$0:Lcom/android/camera/ui/InLineSettingSwitch;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -129,7 +129,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/Switch;->isEnabled()Z
+    invoke-virtual {v0}, Landroid/view/View;->isEnabled()Z
 
     move-result v0
 
@@ -143,7 +143,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/Switch;->performClick()Z
+    invoke-virtual {v0}, Landroid/widget/CompoundButton;->performClick()Z
 
     .line 113
     :cond_2

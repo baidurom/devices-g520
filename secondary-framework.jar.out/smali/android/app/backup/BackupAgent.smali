@@ -45,7 +45,7 @@
 
     invoke-direct {v0, p0, v1}, Landroid/app/backup/BackupAgent$BackupServiceBinder;-><init>(Landroid/app/backup/BackupAgent;Landroid/app/backup/BackupAgent$1;)V
 
-    invoke-virtual {v0}, Landroid/app/backup/BackupAgent$BackupServiceBinder;->asBinder()Landroid/os/IBinder;
+    invoke-virtual {v0}, Landroid/app/IBackupAgent$Stub;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
@@ -63,7 +63,7 @@
 
     .prologue
     .line 471
-    invoke-virtual {p0, p1}, Landroid/app/backup/BackupAgent;->attachBaseContext(Landroid/content/Context;)V
+    invoke-virtual {p0, p1}, Landroid/content/ContextWrapper;->attachBaseContext(Landroid/content/Context;)V
 
     .line 472
     return-void
@@ -76,7 +76,7 @@
 
     .prologue
     .line 279
-    invoke-virtual {p0}, Landroid/app/backup/BackupAgent;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v6
 
@@ -95,7 +95,7 @@
 
     .line 283
     .local v12, mainDir:Ljava/lang/String;
-    invoke-virtual {p0}, Landroid/app/backup/BackupAgent;->getFilesDir()Ljava/io/File;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getFilesDir()Ljava/io/File;
 
     move-result-object v0
 
@@ -107,7 +107,7 @@
     .local v10, filesDir:Ljava/lang/String;
     const-string v0, "foo"
 
-    invoke-virtual {p0, v0}, Landroid/app/backup/BackupAgent;->getDatabasePath(Ljava/lang/String;)Ljava/io/File;
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->getDatabasePath(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
 
@@ -123,7 +123,7 @@
     .local v8, dbDir:Ljava/lang/String;
     const-string v0, "foo"
 
-    invoke-virtual {p0, v0}, Landroid/app/backup/BackupAgent;->getSharedPrefsFile(Ljava/lang/String;)Ljava/io/File;
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->getSharedPrefsFile(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
 
@@ -137,7 +137,7 @@
 
     .line 286
     .local v13, spDir:Ljava/lang/String;
-    invoke-virtual {p0}, Landroid/app/backup/BackupAgent;->getCacheDir()Ljava/io/File;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getCacheDir()Ljava/io/File;
 
     move-result-object v0
 
@@ -308,7 +308,7 @@
     invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 326
-    invoke-virtual {p0}, Landroid/app/backup/BackupAgent;->getPackageName()Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
@@ -751,7 +751,7 @@
 
     .prologue
     .line 220
-    invoke-virtual/range {p0 .. p0}, Landroid/app/backup/BackupAgent;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+    invoke-virtual/range {p0 .. p0}, Landroid/content/ContextWrapper;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v20
 
@@ -771,7 +771,7 @@
 
     .line 223
     .local v4, rootDir:Ljava/lang/String;
-    invoke-virtual/range {p0 .. p0}, Landroid/app/backup/BackupAgent;->getFilesDir()Ljava/io/File;
+    invoke-virtual/range {p0 .. p0}, Landroid/content/ContextWrapper;->getFilesDir()Ljava/io/File;
 
     move-result-object v1
 
@@ -785,7 +785,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v1}, Landroid/app/backup/BackupAgent;->getDatabasePath(Ljava/lang/String;)Ljava/io/File;
+    invoke-virtual {v0, v1}, Landroid/content/ContextWrapper;->getDatabasePath(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v1
 
@@ -803,7 +803,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v1}, Landroid/app/backup/BackupAgent;->getSharedPrefsFile(Ljava/lang/String;)Ljava/io/File;
+    invoke-virtual {v0, v1}, Landroid/content/ContextWrapper;->getSharedPrefsFile(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v1
 
@@ -817,7 +817,7 @@
 
     .line 226
     .local v17, sharedPrefsDir:Ljava/lang/String;
-    invoke-virtual/range {p0 .. p0}, Landroid/app/backup/BackupAgent;->getCacheDir()Ljava/io/File;
+    invoke-virtual/range {p0 .. p0}, Landroid/content/ContextWrapper;->getCacheDir()Ljava/io/File;
 
     move-result-object v1
 
@@ -854,7 +854,7 @@
 
     .line 233
     .local v5, filterSet:Ljava/util/HashSet;,"Ljava/util/HashSet<Ljava/lang/String;>;"
-    invoke-virtual/range {p0 .. p0}, Landroid/app/backup/BackupAgent;->getPackageName()Ljava/lang/String;
+    invoke-virtual/range {p0 .. p0}, Landroid/content/ContextWrapper;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1090,7 +1090,7 @@
     if-eqz v2, :cond_0
 
     .line 432
-    invoke-virtual/range {p0 .. p0}, Landroid/app/backup/BackupAgent;->getFilesDir()Ljava/io/File;
+    invoke-virtual/range {p0 .. p0}, Landroid/content/ContextWrapper;->getFilesDir()Ljava/io/File;
 
     move-result-object v2
 
@@ -1200,7 +1200,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v2}, Landroid/app/backup/BackupAgent;->getDatabasePath(Ljava/lang/String;)Ljava/io/File;
+    invoke-virtual {v0, v2}, Landroid/content/ContextWrapper;->getDatabasePath(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v2
 
@@ -1229,7 +1229,7 @@
     .line 436
     new-instance v2, Ljava/io/File;
 
-    invoke-virtual/range {p0 .. p0}, Landroid/app/backup/BackupAgent;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+    invoke-virtual/range {p0 .. p0}, Landroid/content/ContextWrapper;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v3
 
@@ -1260,7 +1260,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v2}, Landroid/app/backup/BackupAgent;->getSharedPrefsFile(Ljava/lang/String;)Ljava/io/File;
+    invoke-virtual {v0, v2}, Landroid/content/ContextWrapper;->getSharedPrefsFile(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v2
 
@@ -1287,7 +1287,7 @@
     if-eqz v2, :cond_4
 
     .line 440
-    invoke-virtual/range {p0 .. p0}, Landroid/app/backup/BackupAgent;->getCacheDir()Ljava/io/File;
+    invoke-virtual/range {p0 .. p0}, Landroid/content/ContextWrapper;->getCacheDir()Ljava/io/File;
 
     move-result-object v2
 

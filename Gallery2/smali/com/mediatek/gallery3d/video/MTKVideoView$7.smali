@@ -98,7 +98,7 @@
     :pswitch_0
     iget-object v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView$7;->this$0:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    #getter for: Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    #getter for: Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
     invoke-static {v0}, Lcom/mediatek/gallery3d/video/MTKVideoView;->access$6000(Lcom/mediatek/gallery3d/video/MTKVideoView;)Landroid/media/MediaPlayer;
 
     move-result-object v0
@@ -107,7 +107,7 @@
 
     iget-object v0, p0, Lcom/mediatek/gallery3d/video/MTKVideoView$7;->this$0:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    #getter for: Lcom/mediatek/gallery3d/video/MTKVideoView;->mUri:Landroid/net/Uri;
+    #getter for: Landroid/widget/VideoView;->mUri:Landroid/net/Uri;
     invoke-static {v0}, Lcom/mediatek/gallery3d/video/MTKVideoView;->access$6100(Lcom/mediatek/gallery3d/video/MTKVideoView;)Landroid/net/Uri;
 
     move-result-object v0
@@ -130,7 +130,7 @@
 
     iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView$7;->this$0:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    #getter for: Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    #getter for: Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
     invoke-static {v2}, Lcom/mediatek/gallery3d/video/MTKVideoView;->access$6200(Lcom/mediatek/gallery3d/video/MTKVideoView;)Landroid/media/MediaPlayer;
 
     move-result-object v2
@@ -147,7 +147,7 @@
 
     iget-object v2, p0, Lcom/mediatek/gallery3d/video/MTKVideoView$7;->this$0:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    #getter for: Lcom/mediatek/gallery3d/video/MTKVideoView;->mUri:Landroid/net/Uri;
+    #getter for: Landroid/widget/VideoView;->mUri:Landroid/net/Uri;
     invoke-static {v2}, Lcom/mediatek/gallery3d/video/MTKVideoView;->access$6300(Lcom/mediatek/gallery3d/video/MTKVideoView;)Landroid/net/Uri;
 
     move-result-object v2
@@ -170,7 +170,7 @@
 
     iget-object v1, p0, Lcom/mediatek/gallery3d/video/MTKVideoView$7;->this$0:Lcom/mediatek/gallery3d/video/MTKVideoView;
 
-    #getter for: Lcom/mediatek/gallery3d/video/MTKVideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
+    #getter for: Landroid/widget/VideoView;->mMediaPlayer:Landroid/media/MediaPlayer;
     invoke-static {v1}, Lcom/mediatek/gallery3d/video/MTKVideoView;->access$6400(Lcom/mediatek/gallery3d/video/MTKVideoView;)Landroid/media/MediaPlayer;
 
     move-result-object v1

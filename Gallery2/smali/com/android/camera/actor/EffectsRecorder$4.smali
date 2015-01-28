@@ -30,7 +30,7 @@
     .line 915
     iput-object p1, p0, Lcom/android/camera/actor/EffectsRecorder$4;->this$0:Lcom/android/camera/actor/EffectsRecorder;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -235,7 +235,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/filterfw/GraphEnvironment;->getContext()Landroid/filterfw/core/FilterContext;
+    invoke-virtual {v2}, Landroid/filterfw/MffEnvironment;->getContext()Landroid/filterfw/core/FilterContext;
 
     move-result-object v2
 
@@ -276,7 +276,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v4}, Landroid/filterfw/GraphEnvironment;->getContext()Landroid/filterfw/core/FilterContext;
+    invoke-virtual {v4}, Landroid/filterfw/MffEnvironment;->getContext()Landroid/filterfw/core/FilterContext;
 
     move-result-object v4
 

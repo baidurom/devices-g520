@@ -139,7 +139,7 @@
 
     .prologue
     .line 228
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 229
     iput p1, p0, Landroid/net/dhcp/DhcpPacket;->mTransId:I
@@ -491,7 +491,7 @@
 
     .line 378
     .local v11, sum:I
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->position()I
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
 
     move-result v4
 
@@ -499,7 +499,7 @@
     .local v4, bufPosition:I
     move/from16 v0, p3
 
-    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {p1, v0}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
 
     .line 383
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->asShortBuffer()Ljava/nio/ShortBuffer;
@@ -508,7 +508,7 @@
 
     .line 386
     .local v10, shortBuf:Ljava/nio/ShortBuffer;
-    invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {p1, v4}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
 
     .line 388
     sub-int v12, p4, p3
@@ -1032,7 +1032,7 @@
     invoke-virtual {v0, v7}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
     .line 656
-    invoke-virtual/range {p0 .. p0}, Ljava/nio/ByteBuffer;->position()I
+    invoke-virtual/range {p0 .. p0}, Ljava/nio/Buffer;->position()I
 
     move-result v8
 
@@ -1046,7 +1046,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v8}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {v0, v8}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
 
     .line 660
     invoke-virtual/range {p0 .. p0}, Ljava/nio/ByteBuffer;->getInt()I
@@ -1107,11 +1107,11 @@
     .local v49, notFinishedOptions:Z
     :cond_6
     :goto_2
-    invoke-virtual/range {p0 .. p0}, Ljava/nio/ByteBuffer;->position()I
+    invoke-virtual/range {p0 .. p0}, Ljava/nio/Buffer;->position()I
 
     move-result v8
 
-    invoke-virtual/range {p0 .. p0}, Ljava/nio/ByteBuffer;->limit()I
+    invoke-virtual/range {p0 .. p0}, Ljava/nio/Buffer;->limit()I
 
     move-result v9
 
@@ -2173,7 +2173,7 @@
 
     .line 262
     .local v7, udpChecksumOffset:I
-    invoke-virtual/range {p6 .. p6}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
+    invoke-virtual/range {p6 .. p6}, Ljava/nio/Buffer;->clear()Ljava/nio/Buffer;
 
     .line 263
     sget-object v12, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
@@ -2202,7 +2202,7 @@
     invoke-virtual {v0, v12}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
     .line 272
-    invoke-virtual/range {p6 .. p6}, Ljava/nio/ByteBuffer;->position()I
+    invoke-virtual/range {p6 .. p6}, Ljava/nio/Buffer;->position()I
 
     move-result v5
 
@@ -2242,7 +2242,7 @@
     invoke-virtual {v0, v12}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
     .line 278
-    invoke-virtual/range {p6 .. p6}, Ljava/nio/ByteBuffer;->position()I
+    invoke-virtual/range {p6 .. p6}, Ljava/nio/Buffer;->position()I
 
     move-result v4
 
@@ -2264,12 +2264,12 @@
     invoke-virtual {v0, v2}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
     .line 283
-    invoke-virtual/range {p6 .. p6}, Ljava/nio/ByteBuffer;->position()I
+    invoke-virtual/range {p6 .. p6}, Ljava/nio/Buffer;->position()I
 
     move-result v3
 
     .line 286
-    invoke-virtual/range {p6 .. p6}, Ljava/nio/ByteBuffer;->position()I
+    invoke-virtual/range {p6 .. p6}, Ljava/nio/Buffer;->position()I
 
     move-result v8
 
@@ -2288,7 +2288,7 @@
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
     .line 289
-    invoke-virtual/range {p6 .. p6}, Ljava/nio/ByteBuffer;->position()I
+    invoke-virtual/range {p6 .. p6}, Ljava/nio/Buffer;->position()I
 
     move-result v10
 
@@ -2300,7 +2300,7 @@
     invoke-virtual {v0, v12}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
     .line 291
-    invoke-virtual/range {p6 .. p6}, Ljava/nio/ByteBuffer;->position()I
+    invoke-virtual/range {p6 .. p6}, Ljava/nio/Buffer;->position()I
 
     move-result v7
 
@@ -2417,7 +2417,7 @@
     invoke-virtual {v0, v12}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
     .line 314
-    invoke-virtual/range {p6 .. p6}, Ljava/nio/ByteBuffer;->position()I
+    invoke-virtual/range {p6 .. p6}, Ljava/nio/Buffer;->position()I
 
     move-result v12
 
@@ -2435,7 +2435,7 @@
 
     move-object/from16 v0, p6
 
-    invoke-virtual {v0, v12}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {v0, v12}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
 
     .line 318
     const v12, 0x63825363
@@ -2450,7 +2450,7 @@
     invoke-virtual {p0, v0}, Landroid/net/dhcp/DhcpPacket;->finishPacket(Ljava/nio/ByteBuffer;)V
 
     .line 322
-    invoke-virtual/range {p6 .. p6}, Ljava/nio/ByteBuffer;->position()I
+    invoke-virtual/range {p6 .. p6}, Ljava/nio/Buffer;->position()I
 
     move-result v12
 
@@ -2474,7 +2474,7 @@
     if-ne p1, v12, :cond_2
 
     .line 330
-    invoke-virtual/range {p6 .. p6}, Ljava/nio/ByteBuffer;->position()I
+    invoke-virtual/range {p6 .. p6}, Ljava/nio/Buffer;->position()I
 
     move-result v12
 
@@ -2559,7 +2559,7 @@
     add-int/2addr v11, v9
 
     .line 347
-    invoke-virtual/range {p6 .. p6}, Ljava/nio/ByteBuffer;->position()I
+    invoke-virtual/range {p6 .. p6}, Ljava/nio/Buffer;->position()I
 
     move-result v12
 
@@ -2576,7 +2576,7 @@
     invoke-virtual {v0, v7, v12}, Ljava/nio/ByteBuffer;->putShort(IS)Ljava/nio/ByteBuffer;
 
     .line 351
-    invoke-virtual/range {p6 .. p6}, Ljava/nio/ByteBuffer;->position()I
+    invoke-virtual/range {p6 .. p6}, Ljava/nio/Buffer;->position()I
 
     move-result v12
 

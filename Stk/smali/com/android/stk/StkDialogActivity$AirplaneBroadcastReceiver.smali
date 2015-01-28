@@ -86,7 +86,7 @@
     .line 354
     iget-object v1, p0, Lcom/android/stk/StkDialogActivity$AirplaneBroadcastReceiver;->this$0:Lcom/android/stk/StkDialogActivity;
 
-    invoke-virtual {v1}, Lcom/android/stk/StkDialogActivity;->finish()V
+    invoke-virtual {v1}, Landroid/app/Activity;->finish()V
 
     .line 356
     :cond_0

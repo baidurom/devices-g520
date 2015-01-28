@@ -92,7 +92,7 @@
 
     .prologue
     .line 57
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 83
     return-void
@@ -142,17 +142,17 @@
     .line 383
     .local v0, command:Ljava/io/FileWriter;
     :try_start_0
-    invoke-virtual {v0, p1}, Ljava/io/FileWriter;->write(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
     .line 384
     const-string v2, "\n"
 
-    invoke-virtual {v0, v2}, Ljava/io/FileWriter;->write(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Ljava/io/Writer;->write(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 386
-    invoke-virtual {v0}, Ljava/io/FileWriter;->close()V
+    invoke-virtual {v0}, Ljava/io/OutputStreamWriter;->close()V
 
     .line 390
     const-string/jumbo v2, "power"
@@ -183,7 +183,7 @@
     :catchall_0
     move-exception v2
 
-    invoke-virtual {v0}, Ljava/io/FileWriter;->close()V
+    invoke-virtual {v0}, Ljava/io/OutputStreamWriter;->close()V
 
     throw v2
 .end method
@@ -506,12 +506,10 @@
     .end annotation
 
     .prologue
-    .line 327
     invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 328
     .local v1, filename:Ljava/lang/String;
     const-string v2, "RecoverySystem"
 
@@ -1144,7 +1142,7 @@
 
     .line 231
     .local v40, trusted:Ljava/util/HashSet;,"Ljava/util/HashSet<Ljava/security/cert/Certificate;>;"
-    invoke-virtual {v7}, Ljava/security/cert/X509Certificate;->getPublicKey()Ljava/security/PublicKey;
+    invoke-virtual {v7}, Lorg/apache/harmony/security/provider/cert/X509CertImpl;->getPublicKey()Ljava/security/PublicKey;
 
     move-result-object v32
 
@@ -1263,7 +1261,7 @@
 
     .line 259
     :cond_f
-    invoke-virtual {v7}, Ljava/security/cert/X509Certificate;->getSigAlgName()Ljava/lang/String;
+    invoke-virtual {v7}, Lorg/apache/harmony/security/provider/cert/X509CertImpl;->getSigAlgName()Ljava/lang/String;
 
     move-result-object v3
 

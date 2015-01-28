@@ -30,7 +30,7 @@
     .line 17294
     iput-object p1, p0, Landroid/view/View$UnsetPressedState;->this$0:Landroid/view/View;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

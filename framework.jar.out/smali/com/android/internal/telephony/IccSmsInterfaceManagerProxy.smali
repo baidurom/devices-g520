@@ -91,7 +91,7 @@
     .line 67
     iget-object v0, p0, Lcom/android/internal/telephony/IccSmsInterfaceManagerProxy;->mIccSmsInterfaceManager:Lcom/android/internal/telephony/IccSmsInterfaceManager;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/telephony/IccSmsInterfaceManager;->copyMessageToIccEf(I[B[B)Z
+    invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/telephony/ISms$Stub;->copyMessageToIccEf(I[B[B)Z
 
     move-result v0
 
@@ -138,7 +138,7 @@
 
     move-wide v5, p5
 
-    invoke-virtual/range {v0 .. v6}, Lcom/android/internal/telephony/IccSmsInterfaceManager;->copyTextMessageToIccCard(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;IJ)I
+    invoke-virtual/range {v0 .. v6}, Lcom/android/internal/telephony/ISms$Stub;->copyTextMessageToIccCard(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;IJ)I
 
     move-result v0
 
@@ -158,7 +158,7 @@
     .line 97
     iget-object v0, p0, Lcom/android/internal/telephony/IccSmsInterfaceManagerProxy;->mIccSmsInterfaceManager:Lcom/android/internal/telephony/IccSmsInterfaceManager;
 
-    invoke-virtual {v0, p1}, Lcom/android/internal/telephony/IccSmsInterfaceManager;->disableCellBroadcast(I)Z
+    invoke-virtual {v0, p1}, Lcom/android/internal/telephony/ISms$Stub;->disableCellBroadcast(I)Z
 
     move-result v0
 
@@ -179,7 +179,7 @@
     .line 107
     iget-object v0, p0, Lcom/android/internal/telephony/IccSmsInterfaceManagerProxy;->mIccSmsInterfaceManager:Lcom/android/internal/telephony/IccSmsInterfaceManager;
 
-    invoke-virtual {v0, p1, p2}, Lcom/android/internal/telephony/IccSmsInterfaceManager;->disableCellBroadcastRange(II)Z
+    invoke-virtual {v0, p1, p2}, Lcom/android/internal/telephony/ISms$Stub;->disableCellBroadcastRange(II)Z
 
     move-result v0
 
@@ -199,7 +199,7 @@
     .line 93
     iget-object v0, p0, Lcom/android/internal/telephony/IccSmsInterfaceManagerProxy;->mIccSmsInterfaceManager:Lcom/android/internal/telephony/IccSmsInterfaceManager;
 
-    invoke-virtual {v0, p1}, Lcom/android/internal/telephony/IccSmsInterfaceManager;->enableCellBroadcast(I)Z
+    invoke-virtual {v0, p1}, Lcom/android/internal/telephony/ISms$Stub;->enableCellBroadcast(I)Z
 
     move-result v0
 
@@ -220,7 +220,7 @@
     .line 102
     iget-object v0, p0, Lcom/android/internal/telephony/IccSmsInterfaceManagerProxy;->mIccSmsInterfaceManager:Lcom/android/internal/telephony/IccSmsInterfaceManager;
 
-    invoke-virtual {v0, p1, p2}, Lcom/android/internal/telephony/IccSmsInterfaceManager;->enableCellBroadcastRange(II)Z
+    invoke-virtual {v0, p1, p2}, Lcom/android/internal/telephony/ISms$Stub;->enableCellBroadcastRange(II)Z
 
     move-result v0
 
@@ -249,7 +249,7 @@
     .line 71
     iget-object v0, p0, Lcom/android/internal/telephony/IccSmsInterfaceManagerProxy;->mIccSmsInterfaceManager:Lcom/android/internal/telephony/IccSmsInterfaceManager;
 
-    invoke-virtual {v0}, Lcom/android/internal/telephony/IccSmsInterfaceManager;->getAllMessagesFromIccEf()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/android/internal/telephony/ISms$Stub;->getAllMessagesFromIccEf()Ljava/util/List;
 
     move-result-object v0
 
@@ -283,7 +283,7 @@
     .line 240
     iget-object v0, p0, Lcom/android/internal/telephony/IccSmsInterfaceManagerProxy;->mIccSmsInterfaceManager:Lcom/android/internal/telephony/IccSmsInterfaceManager;
 
-    invoke-virtual {v0, p1}, Lcom/android/internal/telephony/IccSmsInterfaceManager;->getMessageFromIccEf(I)Lcom/android/internal/telephony/SmsRawData;
+    invoke-virtual {v0, p1}, Lcom/android/internal/telephony/ISms$Stub;->getMessageFromIccEf(I)Lcom/android/internal/telephony/SmsRawData;
 
     move-result-object v0
 
@@ -302,7 +302,7 @@
     .line 232
     iget-object v0, p0, Lcom/android/internal/telephony/IccSmsInterfaceManagerProxy;->mIccSmsInterfaceManager:Lcom/android/internal/telephony/IccSmsInterfaceManager;
 
-    invoke-virtual {v0}, Lcom/android/internal/telephony/IccSmsInterfaceManager;->getSmsParameters()Landroid/telephony/SmsParameters;
+    invoke-virtual {v0}, Lcom/android/internal/telephony/ISms$Stub;->getSmsParameters()Landroid/telephony/SmsParameters;
 
     move-result-object v0
 
@@ -321,7 +321,7 @@
     .line 157
     iget-object v0, p0, Lcom/android/internal/telephony/IccSmsInterfaceManagerProxy;->mIccSmsInterfaceManager:Lcom/android/internal/telephony/IccSmsInterfaceManager;
 
-    invoke-virtual {v0}, Lcom/android/internal/telephony/IccSmsInterfaceManager;->getSmsSimMemoryStatus()Landroid/telephony/SmsMemoryStatus;
+    invoke-virtual {v0}, Lcom/android/internal/telephony/ISms$Stub;->getSmsSimMemoryStatus()Landroid/telephony/SmsMemoryStatus;
 
     move-result-object v0
 
@@ -343,7 +343,7 @@
     .line 200
     iget-object v0, p0, Lcom/android/internal/telephony/IccSmsInterfaceManagerProxy;->mIccSmsInterfaceManager:Lcom/android/internal/telephony/IccSmsInterfaceManager;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/telephony/IccSmsInterfaceManager;->insertRawMessageToIccCard(I[B[B)Landroid/telephony/SimSmsInsertStatus;
+    invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/telephony/ISms$Stub;->insertRawMessageToIccCard(I[B[B)Landroid/telephony/SimSmsInsertStatus;
 
     move-result-object v0
 
@@ -391,7 +391,7 @@
 
     move-wide v5, p5
 
-    invoke-virtual/range {v0 .. v6}, Lcom/android/internal/telephony/IccSmsInterfaceManager;->insertTextMessageToIccCard(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;IJ)Landroid/telephony/SimSmsInsertStatus;
+    invoke-virtual/range {v0 .. v6}, Lcom/android/internal/telephony/ISms$Stub;->insertTextMessageToIccCard(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;IJ)Landroid/telephony/SimSmsInsertStatus;
 
     move-result-object v0
 
@@ -881,7 +881,7 @@
     .line 244
     iget-object v0, p0, Lcom/android/internal/telephony/IccSmsInterfaceManagerProxy;->mIccSmsInterfaceManager:Lcom/android/internal/telephony/IccSmsInterfaceManager;
 
-    invoke-virtual {v0, p1}, Lcom/android/internal/telephony/IccSmsInterfaceManager;->setEtwsConfig(I)Z
+    invoke-virtual {v0, p1}, Lcom/android/internal/telephony/ISms$Stub;->setEtwsConfig(I)Z
 
     move-result v0
 
@@ -915,7 +915,7 @@
     .line 236
     iget-object v0, p0, Lcom/android/internal/telephony/IccSmsInterfaceManagerProxy;->mIccSmsInterfaceManager:Lcom/android/internal/telephony/IccSmsInterfaceManager;
 
-    invoke-virtual {v0, p1}, Lcom/android/internal/telephony/IccSmsInterfaceManager;->setSmsParameters(Landroid/telephony/SmsParameters;)Z
+    invoke-virtual {v0, p1}, Lcom/android/internal/telephony/ISms$Stub;->setSmsParameters(Landroid/telephony/SmsParameters;)Z
 
     move-result v0
 
@@ -949,7 +949,7 @@
     .line 62
     iget-object v0, p0, Lcom/android/internal/telephony/IccSmsInterfaceManagerProxy;->mIccSmsInterfaceManager:Lcom/android/internal/telephony/IccSmsInterfaceManager;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/telephony/IccSmsInterfaceManager;->updateMessageOnIccEf(II[B)Z
+    invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/telephony/ISms$Stub;->updateMessageOnIccEf(II[B)Z
 
     move-result v0
 

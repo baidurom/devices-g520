@@ -84,7 +84,7 @@
 
     .line 81
     .local v0, e:Ljava/lang/ClassCastException;
-    invoke-virtual {v0}, Ljava/lang/ClassCastException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 .end method
@@ -111,13 +111,13 @@
     const/4 v4, 0x0
 
     .line 87
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/dialogs/SearchChannelsDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
     const v3, 0x7f040013
 
-    invoke-virtual {v2, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -125,7 +125,7 @@
     .local v0, message:Ljava/lang/String;
     new-instance v1, Landroid/app/ProgressDialog;
 
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/dialogs/SearchChannelsDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -141,20 +141,20 @@
     .line 91
     const v2, 0x7f040012
 
-    invoke-virtual {v1, v2}, Landroid/app/ProgressDialog;->setTitle(I)V
+    invoke-virtual {v1, v2}, Landroid/app/Dialog;->setTitle(I)V
 
     .line 92
     const/4 v2, 0x1
 
-    invoke-virtual {v1, v2}, Landroid/app/ProgressDialog;->setCancelable(Z)V
+    invoke-virtual {v1, v2}, Landroid/app/Dialog;->setCancelable(Z)V
 
     .line 94
-    invoke-virtual {v1, v4}, Landroid/app/ProgressDialog;->setCanceledOnTouchOutside(Z)V
+    invoke-virtual {v1, v4}, Landroid/app/Dialog;->setCanceledOnTouchOutside(Z)V
 
     .line 95
     const v2, 0x7f040011
 
-    invoke-virtual {p0, v2}, Lcom/mediatek/FMRadio/dialogs/SearchChannelsDialog;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Landroid/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -162,7 +162,7 @@
 
     invoke-direct {v3, p0}, Lcom/mediatek/FMRadio/dialogs/SearchChannelsDialog$1;-><init>(Lcom/mediatek/FMRadio/dialogs/SearchChannelsDialog;)V
 
-    invoke-virtual {v1, v2, v3}, Landroid/app/ProgressDialog;->setButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog;->setButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     .line 102
     return-object v1

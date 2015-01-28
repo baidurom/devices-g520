@@ -30,7 +30,7 @@
     .line 1831
     iput-object p1, p0, Lcom/android/camera/SettingChecker$1;->this$0:Lcom/android/camera/SettingChecker;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -81,7 +81,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/camera/manager/PickerManager;->refresh()V
+    invoke-virtual {v0}, Lcom/android/camera/manager/ViewManager;->refresh()V
 
     .line 1840
     :cond_0

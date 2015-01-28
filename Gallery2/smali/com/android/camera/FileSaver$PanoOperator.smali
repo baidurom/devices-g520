@@ -337,7 +337,7 @@
     .line 460
     const/4 v6, 0x1
 
-    invoke-virtual {p0, v6}, Lcom/android/camera/FileSaver$PanoOperator;->setIgnoreThumbnail(Z)V
+    invoke-virtual {p0, v6}, Lcom/android/camera/FileSaver$RequestOperator;->setIgnoreThumbnail(Z)V
 
     .line 461
     const-string v6, "FileSaver"
@@ -461,7 +461,7 @@
     iput v6, p0, Lcom/android/camera/FileSaver$RequestOperator;->mMpoType:I
 
     .line 480
-    invoke-virtual {p0, p0}, Lcom/android/camera/FileSaver$PanoOperator;->saveImageToDatabase(Lcom/android/camera/FileSaver$RequestOperator;)V
+    invoke-virtual {p0, p0}, Lcom/android/camera/FileSaver$RequestOperator;->saveImageToDatabase(Lcom/android/camera/FileSaver$RequestOperator;)V
 
     goto :goto_0
 

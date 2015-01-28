@@ -123,7 +123,7 @@
     const/4 v0, -0x1
 
     .line 112
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 62
     iput v0, p0, Landroid/graphics/Bitmap;->mWidth:I
@@ -787,7 +787,7 @@
     .line 558
     sget-object v13, Landroid/graphics/Bitmap$2;->$SwitchMap$android$graphics$Bitmap$Config:[I
 
-    invoke-virtual {v4}, Landroid/graphics/Bitmap$Config;->ordinal()I
+    invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
 
     move-result v14
 

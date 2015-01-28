@@ -179,7 +179,7 @@
     const/4 v1, 0x0
 
     .line 167
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 120
     iput-object v1, p0, Lcom/google/android/mms/pdu/PduComposer;->mMessage:Ljava/io/ByteArrayOutputStream;
@@ -1393,7 +1393,7 @@
 
     check-cast v29, Lcom/google/android/mms/pdu/RetrieveConf;
 
-    invoke-virtual/range {v29 .. v29}, Lcom/google/android/mms/pdu/RetrieveConf;->getBody()Lcom/google/android/mms/pdu/PduBody;
+    invoke-virtual/range {v29 .. v29}, Lcom/google/android/mms/pdu/MultimediaMessagePdu;->getBody()Lcom/google/android/mms/pdu/PduBody;
 
     move-result-object v5
 
@@ -1467,7 +1467,7 @@
 
     check-cast v29, Lcom/google/android/mms/pdu/SendReq;
 
-    invoke-virtual/range {v29 .. v29}, Lcom/google/android/mms/pdu/SendReq;->getBody()Lcom/google/android/mms/pdu/PduBody;
+    invoke-virtual/range {v29 .. v29}, Lcom/google/android/mms/pdu/MultimediaMessagePdu;->getBody()Lcom/google/android/mms/pdu/PduBody;
 
     move-result-object v5
 
@@ -1757,7 +1757,7 @@
 
     .line 957
     .local v18, e:Ljava/lang/ArrayIndexOutOfBoundsException;
-    invoke-virtual/range {v18 .. v18}, Ljava/lang/ArrayIndexOutOfBoundsException;->printStackTrace()V
+    invoke-virtual/range {v18 .. v18}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto/16 :goto_3
 

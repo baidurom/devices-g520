@@ -292,7 +292,7 @@
     const/4 v4, 0x0
 
     .line 267
-    invoke-virtual {p0}, Landroid/nfc/tech/Ndef;->checkConnected()V
+    invoke-virtual {p0}, Landroid/nfc/tech/BasicTagTechnology;->checkConnected()V
 
     .line 270
     :try_start_0
@@ -509,7 +509,7 @@
     const/4 v3, 0x0
 
     .line 374
-    invoke-virtual {p0}, Landroid/nfc/tech/Ndef;->checkConnected()V
+    invoke-virtual {p0}, Landroid/nfc/tech/BasicTagTechnology;->checkConnected()V
 
     .line 377
     :try_start_0
@@ -653,7 +653,7 @@
 
     .prologue
     .line 305
-    invoke-virtual {p0}, Landroid/nfc/tech/Ndef;->checkConnected()V
+    invoke-virtual {p0}, Landroid/nfc/tech/BasicTagTechnology;->checkConnected()V
 
     .line 308
     :try_start_0

@@ -27,7 +27,7 @@
 
     .prologue
     .line 36
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/StopVideoHooker;->getPlayer()Lcom/mediatek/gallery3d/ext/IMoviePlayer;
+    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/MovieHooker;->getPlayer()Lcom/mediatek/gallery3d/ext/IMoviePlayer;
 
     move-result-object v0
 
@@ -40,7 +40,7 @@
     .line 37
     iget-object v0, p0, Lcom/mediatek/gallery3d/video/StopVideoHooker;->mMenuStop:Landroid/view/MenuItem;
 
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/StopVideoHooker;->getPlayer()Lcom/mediatek/gallery3d/ext/IMoviePlayer;
+    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/MovieHooker;->getPlayer()Lcom/mediatek/gallery3d/ext/IMoviePlayer;
 
     move-result-object v1
 
@@ -67,10 +67,10 @@
     const/4 v2, 0x0
 
     .line 14
-    invoke-super {p0, p1}, Lcom/mediatek/gallery3d/video/MovieHooker;->onCreateOptionsMenu(Landroid/view/Menu;)Z
+    invoke-super {p0, p1}, Lcom/mediatek/gallery3d/ext/ActivityHooker;->onCreateOptionsMenu(Landroid/view/Menu;)Z
 
     .line 15
-    invoke-virtual {p0, v3}, Lcom/mediatek/gallery3d/video/StopVideoHooker;->getMenuActivityId(I)I
+    invoke-virtual {p0, v3}, Lcom/mediatek/gallery3d/ext/ActivityHooker;->getMenuActivityId(I)I
 
     move-result v0
 
@@ -92,14 +92,14 @@
 
     .prologue
     .line 26
-    invoke-super {p0, p1}, Lcom/mediatek/gallery3d/video/MovieHooker;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    invoke-super {p0, p1}, Lcom/mediatek/gallery3d/ext/ActivityHooker;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     .line 27
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v0
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/video/StopVideoHooker;->getMenuOriginalId(I)I
+    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/ext/ActivityHooker;->getMenuOriginalId(I)I
 
     move-result v0
 
@@ -113,7 +113,7 @@
 
     .line 29
     :pswitch_0
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/StopVideoHooker;->getPlayer()Lcom/mediatek/gallery3d/ext/IMoviePlayer;
+    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/MovieHooker;->getPlayer()Lcom/mediatek/gallery3d/ext/IMoviePlayer;
 
     move-result-object v0
 
@@ -139,7 +139,7 @@
 
     .prologue
     .line 20
-    invoke-super {p0, p1}, Lcom/mediatek/gallery3d/video/MovieHooker;->onPrepareOptionsMenu(Landroid/view/Menu;)Z
+    invoke-super {p0, p1}, Lcom/mediatek/gallery3d/ext/ActivityHooker;->onPrepareOptionsMenu(Landroid/view/Menu;)Z
 
     .line 21
     invoke-direct {p0}, Lcom/mediatek/gallery3d/video/StopVideoHooker;->updateStop()V

@@ -793,7 +793,7 @@
     .local v1, wwwAuth:Lgov/nist/javax/sip/header/WWWAuthenticate;
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lgov/nist/javax/sip/header/WWWAuthenticate;->getNonce()Ljava/lang/String;
+    invoke-virtual {v1}, Lgov/nist/javax/sip/header/AuthenticationHeader;->getNonce()Ljava/lang/String;
 
     move-result-object v2
 
@@ -820,7 +820,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-virtual {v0}, Lgov/nist/javax/sip/header/ProxyAuthenticate;->getNonce()Ljava/lang/String;
+    invoke-virtual {v0}, Lgov/nist/javax/sip/header/AuthenticationHeader;->getNonce()Ljava/lang/String;
 
     move-result-object v2
 
@@ -845,7 +845,7 @@
     .local v1, wwwAuth:Lgov/nist/javax/sip/header/WWWAuthenticate;
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lgov/nist/javax/sip/header/WWWAuthenticate;->getRealm()Ljava/lang/String;
+    invoke-virtual {v1}, Lgov/nist/javax/sip/header/AuthenticationHeader;->getRealm()Ljava/lang/String;
 
     move-result-object v2
 
@@ -872,7 +872,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-virtual {v0}, Lgov/nist/javax/sip/header/ProxyAuthenticate;->getRealm()Ljava/lang/String;
+    invoke-virtual {v0}, Lgov/nist/javax/sip/header/AuthenticationHeader;->getRealm()Ljava/lang/String;
 
     move-result-object v2
 
@@ -2914,7 +2914,7 @@
     :pswitch_2
     const/4 v0, -0x5
 
-    invoke-virtual {p1}, Ljavax/sip/TimeoutEvent;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/util/EventObject;->toString()Ljava/lang/String;
 
     move-result-object v1
 

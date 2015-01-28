@@ -64,7 +64,7 @@
     .line 93
     const/4 v0, 0x4
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/psm/PsmMessage;->getByte(I)B
+    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/ilm/Message;->getByte(I)B
 
     move-result v0
 
@@ -78,7 +78,7 @@
     .line 87
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/psm/PsmMessage;->getShort(I)S
+    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/ilm/Message;->getShort(I)S
 
     move-result v0
 
@@ -92,7 +92,7 @@
     .line 81
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/psm/PsmMessage;->getByte(I)B
+    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/ilm/Message;->getByte(I)B
 
     move-result v0
 
@@ -107,7 +107,7 @@
     .line 96
     const/4 v0, 0x4
 
-    invoke-virtual {p0, v0, p1}, Lcom/mediatek/bluetooth/psm/PsmMessage;->setByte(IB)V
+    invoke-virtual {p0, v0, p1}, Lcom/mediatek/bluetooth/ilm/Message;->setByte(IB)V
 
     .line 97
     return-void
@@ -121,7 +121,7 @@
     .line 90
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0, p1}, Lcom/mediatek/bluetooth/psm/PsmMessage;->setShort(IS)V
+    invoke-virtual {p0, v0, p1}, Lcom/mediatek/bluetooth/ilm/Message;->setShort(IS)V
 
     .line 91
     return-void
@@ -135,7 +135,7 @@
     .line 84
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0, p1}, Lcom/mediatek/bluetooth/psm/PsmMessage;->setByte(IB)V
+    invoke-virtual {p0, v0, p1}, Lcom/mediatek/bluetooth/ilm/Message;->setByte(IB)V
 
     .line 85
     return-void

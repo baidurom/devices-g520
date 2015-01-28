@@ -58,7 +58,7 @@
     .line 147
     iget-object v1, p0, Landroid/app/MediaRouteActionProvider$RouterCallback;->mAp:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -77,7 +77,7 @@
 
     .line 153
     :cond_0
-    invoke-virtual {v0}, Landroid/app/MediaRouteActionProvider;->refreshVisibility()V
+    invoke-virtual {v0}, Landroid/view/ActionProvider;->refreshVisibility()V
 
     goto :goto_0
 .end method
@@ -91,7 +91,7 @@
     .line 158
     iget-object v1, p0, Landroid/app/MediaRouteActionProvider$RouterCallback;->mAp:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -110,7 +110,7 @@
 
     .line 164
     :cond_0
-    invoke-virtual {v0}, Landroid/app/MediaRouteActionProvider;->refreshVisibility()V
+    invoke-virtual {v0}, Landroid/view/ActionProvider;->refreshVisibility()V
 
     goto :goto_0
 .end method

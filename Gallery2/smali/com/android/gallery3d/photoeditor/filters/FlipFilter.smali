@@ -65,7 +65,7 @@
     .line 41
     const-string v1, "android.media.effect.effects.FlipEffect"
 
-    invoke-virtual {p0, v1}, Lcom/android/gallery3d/photoeditor/filters/FlipFilter;->getEffect(Ljava/lang/String;)Landroid/media/effect/Effect;
+    invoke-virtual {p0, v1}, Lcom/android/gallery3d/photoeditor/filters/Filter;->getEffect(Ljava/lang/String;)Landroid/media/effect/Effect;
 
     move-result-object v0
 

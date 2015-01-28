@@ -67,7 +67,7 @@
     .line 38
     const v1, 0x7f040047
 
-    invoke-virtual {p0, v1}, Lcom/android/camera/manager/ReviewManager;->inflate(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/camera/manager/ViewManager;->inflate(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -110,7 +110,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/ReviewManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v1
 
@@ -131,7 +131,7 @@
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/ReviewManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v1
 
@@ -144,18 +144,18 @@
     .line 46
     iget-object v1, p0, Lcom/android/camera/manager/ReviewManager;->mPlayView:Lcom/android/camera/ui/RotateImageView;
 
-    invoke-virtual {v1, v2}, Lcom/android/camera/ui/RotateImageView;->setVisibility(I)V
+    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 50
     :goto_0
     iget-object v1, p0, Lcom/android/camera/manager/ReviewManager;->mRetakeView:Lcom/android/camera/ui/RotateImageView;
 
-    invoke-virtual {v1, p0}, Lcom/android/camera/ui/RotateImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 51
     iget-object v1, p0, Lcom/android/camera/manager/ReviewManager;->mPlayView:Lcom/android/camera/ui/RotateImageView;
 
-    invoke-virtual {v1, p0}, Lcom/android/camera/ui/RotateImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 52
     return-object v0
@@ -166,7 +166,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v2}, Lcom/android/camera/ui/RotateImageView;->setVisibility(I)V
+    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
     goto :goto_0
 .end method
@@ -186,7 +186,7 @@
     if-ne v1, p1, :cond_2
 
     .line 59
-    invoke-virtual {p0}, Lcom/android/camera/manager/ReviewManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v1
 
@@ -250,7 +250,7 @@
 
     .line 61
     :cond_2
-    invoke-virtual {p0}, Lcom/android/camera/manager/ReviewManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v1
 
@@ -359,7 +359,7 @@
     .line 79
     iget-object v3, p0, Lcom/android/camera/manager/ReviewManager;->mFileDescriptor:Ljava/io/FileDescriptor;
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/ReviewManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v4
 
@@ -391,7 +391,7 @@
 
     .line 88
     .local v0, info:[Landroid/hardware/Camera$CameraInfo;
-    invoke-virtual {p0}, Lcom/android/camera/manager/ReviewManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v3
 
@@ -447,7 +447,7 @@
     .line 81
     iget-object v3, p0, Lcom/android/camera/manager/ReviewManager;->mFilePath:Ljava/lang/String;
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/ReviewManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v4
 
@@ -573,7 +573,7 @@
     iput-object v0, p0, Lcom/android/camera/manager/ReviewManager;->mReviewBitmap:Landroid/graphics/Bitmap;
 
     .line 101
-    invoke-virtual {p0}, Lcom/android/camera/manager/ReviewManager;->show()V
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->show()V
 
     .line 102
     return-void
@@ -634,7 +634,7 @@
     iput-object v0, p0, Lcom/android/camera/manager/ReviewManager;->mReviewBitmap:Landroid/graphics/Bitmap;
 
     .line 110
-    invoke-virtual {p0}, Lcom/android/camera/manager/ReviewManager;->show()V
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->show()V
 
     .line 111
     return-void

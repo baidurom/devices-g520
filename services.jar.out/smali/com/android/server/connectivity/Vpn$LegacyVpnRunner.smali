@@ -2135,7 +2135,7 @@
 
     .prologue
     .line 442
-    invoke-virtual {p0}, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->interrupt()V
+    invoke-virtual {p0}, Ljava/lang/Thread;->interrupt()V
 
     .line 443
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->mSockets:[Landroid/net/LocalSocket;

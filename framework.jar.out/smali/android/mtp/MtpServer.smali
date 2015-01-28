@@ -39,7 +39,7 @@
     const/4 v2, 0x0
 
     .line 38
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 31
     iput-boolean v2, p0, Landroid/mtp/MtpServer;->mServerEndup:Z

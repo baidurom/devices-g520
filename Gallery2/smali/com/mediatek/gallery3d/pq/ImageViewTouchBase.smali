@@ -77,7 +77,7 @@
     const/4 v5, 0x0
 
     .line 43
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 21
     const-string v1, "ImageViewTouchBase"
@@ -886,7 +886,7 @@
 
     move-object/from16 v30, v0
 
-    invoke-virtual/range {v30 .. v30}, Landroid/widget/ImageView;->invalidate()V
+    invoke-virtual/range {v30 .. v30}, Landroid/view/View;->invalidate()V
 
     .line 217
     const/16 v30, 0x1

@@ -85,11 +85,11 @@
     .local v2, n:I
     iget-object v3, p0, Lcom/android/camera/manager/ThumbnailManager$SaveThumbnailTask;->this$0:Lcom/android/camera/manager/ThumbnailManager;
 
-    invoke-virtual {v3}, Lcom/android/camera/manager/ThumbnailManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {v3}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/android/camera/Camera;->getFilesDir()Ljava/io/File;
+    invoke-virtual {v3}, Landroid/content/ContextWrapper;->getFilesDir()Ljava/io/File;
 
     move-result-object v0
 

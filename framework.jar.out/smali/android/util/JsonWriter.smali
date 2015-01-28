@@ -42,7 +42,7 @@
 
     .prologue
     .line 148
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 125
     new-instance v0, Ljava/util/ArrayList;
@@ -173,7 +173,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/util/JsonScope;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 

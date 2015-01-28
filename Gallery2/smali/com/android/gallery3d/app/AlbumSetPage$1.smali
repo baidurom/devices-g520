@@ -114,7 +114,7 @@
 
     const/4 v4, 0x0
 
-    invoke-virtual {v3, v4, v2, v1, v0}, Lcom/android/gallery3d/ui/SlotView;->layout(IIII)V
+    invoke-virtual {v3, v4, v2, v1, v0}, Lcom/android/gallery3d/ui/GLView;->layout(IIII)V
 
     .line 156
     return-void
@@ -148,7 +148,7 @@
     .line 161
     iget-object v0, p0, Lcom/android/gallery3d/app/AlbumSetPage$1;->mMatrix:[F
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/AlbumSetPage$1;->getWidth()I
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->getWidth()I
 
     move-result v1
 
@@ -165,7 +165,7 @@
 
     add-float/2addr v1, v2
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/AlbumSetPage$1;->getHeight()I
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->getHeight()I
 
     move-result v2
 

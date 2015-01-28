@@ -35,7 +35,7 @@
     .prologue
     .line 24
     .local p0, this:Lcom/android/gallery3d/util/RangeArray;,"Lcom/android/gallery3d/util/RangeArray<TT;>;"
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 25
     sub-int v0, p2, p1
@@ -70,7 +70,7 @@
     .line 30
     .local p0, this:Lcom/android/gallery3d/util/RangeArray;,"Lcom/android/gallery3d/util/RangeArray<TT;>;"
     .local p1, src:[Ljava/lang/Object;,"[TT;"
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 31
     sub-int v0, p3, p2

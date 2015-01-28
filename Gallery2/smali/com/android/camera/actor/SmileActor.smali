@@ -234,7 +234,7 @@
     if-ne v1, v0, :cond_1
 
     .line 125
-    invoke-virtual {p0}, Lcom/android/camera/actor/SmileActor;->capture()Z
+    invoke-virtual {p0}, Lcom/android/camera/actor/PhotoActor;->capture()Z
 
     .line 126
     invoke-virtual {p0}, Lcom/android/camera/actor/SmileActor;->stopSmileDetection()V
@@ -275,7 +275,7 @@
     if-eqz p1, :cond_2
 
     .line 158
-    invoke-virtual {p0}, Lcom/android/camera/actor/SmileActor;->startFaceDetection()V
+    invoke-virtual {p0}, Lcom/android/camera/actor/PhotoActor;->startFaceDetection()V
 
     goto :goto_0
 
@@ -304,7 +304,7 @@
     if-ne v1, v3, :cond_0
 
     .line 162
-    invoke-virtual {p0}, Lcom/android/camera/actor/SmileActor;->stopFaceDetection()V
+    invoke-virtual {p0}, Lcom/android/camera/actor/PhotoActor;->stopFaceDetection()V
 
     goto :goto_0
 .end method
@@ -537,7 +537,7 @@
     .line 206
     iget-object v3, p0, Lcom/android/camera/actor/PhotoActor;->mCamera:Lcom/android/camera/Camera;
 
-    invoke-virtual {v3, v6}, Lcom/android/camera/Camera;->getString(I)Ljava/lang/String;
+    invoke-virtual {v3, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -567,7 +567,7 @@
 
     iget-object v4, p0, Lcom/android/camera/actor/PhotoActor;->mCamera:Lcom/android/camera/Camera;
 
-    invoke-virtual {v4, v6}, Lcom/android/camera/Camera;->getString(I)Ljava/lang/String;
+    invoke-virtual {v4, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 

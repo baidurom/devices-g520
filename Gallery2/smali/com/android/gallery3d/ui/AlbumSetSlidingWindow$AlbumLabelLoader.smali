@@ -77,7 +77,7 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1, p0}, Lcom/android/gallery3d/ui/SynchronizedHandler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+    invoke-virtual {v0, v1, p0}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v0
 
@@ -168,7 +168,7 @@
     const/4 v6, 0x1
 
     .line 526
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/AlbumSetSlidingWindow$AlbumLabelLoader;->getBitmap()Landroid/graphics/Bitmap;
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/BitmapLoader;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v0
 

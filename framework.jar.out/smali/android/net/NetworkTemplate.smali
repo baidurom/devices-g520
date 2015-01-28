@@ -88,7 +88,7 @@
 
     .prologue
     .line 151
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 152
     iput p1, p0, Landroid/net/NetworkTemplate;->mMatchRule:I
@@ -117,7 +117,7 @@
 
     .prologue
     .line 164
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 165
     iput p1, p0, Landroid/net/NetworkTemplate;->mMatchRule:I
@@ -141,7 +141,7 @@
 
     .prologue
     .line 172
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 173
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I

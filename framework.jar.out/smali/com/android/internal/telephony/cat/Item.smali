@@ -49,7 +49,7 @@
 
     .prologue
     .line 34
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 35
     iput p1, p0, Lcom/android/internal/telephony/cat/Item;->id:I
@@ -72,7 +72,7 @@
 
     .prologue
     .line 40
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 41
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I

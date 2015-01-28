@@ -30,7 +30,7 @@
     .line 1218
     iput-object p1, p0, Lcom/android/gallery3d/app/MoviePlayer$ControllerRewindAndForwardExt;->this$0:Lcom/android/gallery3d/app/MoviePlayer;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -79,7 +79,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/mediatek/gallery3d/video/MTKVideoView;->canSeekForward()Z
+    invoke-virtual {v2}, Landroid/widget/VideoView;->canSeekForward()Z
 
     move-result v2
 
@@ -310,7 +310,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/mediatek/gallery3d/video/MTKVideoView;->canSeekBackward()Z
+    invoke-virtual {v2}, Landroid/widget/VideoView;->canSeekBackward()Z
 
     move-result v2
 

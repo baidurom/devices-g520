@@ -30,7 +30,7 @@
     .line 373
     iput-object p1, p0, Landroid/app/LauncherActivity$1;->this$0:Landroid/app/LauncherActivity;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -45,7 +45,7 @@
     .line 375
     iget-object v0, p0, Landroid/app/LauncherActivity$1;->this$0:Landroid/app/LauncherActivity;
 
-    invoke-virtual {v0}, Landroid/app/LauncherActivity;->finish()V
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
     .line 376
     return-void

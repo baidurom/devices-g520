@@ -801,7 +801,7 @@
 
     .prologue
     .line 255
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->acquireReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->acquireReference()V
 
     .line 257
     :try_start_0
@@ -814,14 +814,14 @@
     move-result v0
 
     .line 259
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     return v0
 
     :catchall_0
     move-exception v0
 
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     throw v0
 .end method
@@ -831,7 +831,7 @@
 
     .prologue
     .line 180
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->acquireReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->acquireReference()V
 
     .line 182
     const/4 v0, 0x0
@@ -847,7 +847,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 185
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     .line 187
     return-void
@@ -856,7 +856,7 @@
     :catchall_0
     move-exception v0
 
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     throw v0
 .end method
@@ -882,7 +882,7 @@
 
     .line 474
     :cond_0
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->acquireReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->acquireReference()V
 
     .line 476
     :try_start_0
@@ -897,7 +897,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 478
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     .line 480
     return-void
@@ -906,7 +906,7 @@
     :catchall_0
     move-exception v0
 
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     throw v0
 .end method
@@ -967,7 +967,7 @@
 
     .prologue
     .line 267
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->acquireReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->acquireReference()V
 
     .line 269
     :try_start_0
@@ -978,7 +978,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 271
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     .line 273
     return-void
@@ -987,7 +987,7 @@
     :catchall_0
     move-exception v0
 
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     throw v0
 .end method
@@ -999,7 +999,7 @@
 
     .prologue
     .line 397
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->acquireReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->acquireReference()V
 
     .line 399
     :try_start_0
@@ -1016,14 +1016,14 @@
     move-result-object v0
 
     .line 401
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     return-object v0
 
     :catchall_0
     move-exception v0
 
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     throw v0
 .end method
@@ -1035,7 +1035,7 @@
 
     .prologue
     .line 537
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->acquireReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->acquireReference()V
 
     .line 539
     :try_start_0
@@ -1052,14 +1052,14 @@
     move-result-wide v0
 
     .line 541
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     return-wide v0
 
     :catchall_0
     move-exception v0
 
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     throw v0
 .end method
@@ -1103,7 +1103,7 @@
 
     .prologue
     .line 505
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->acquireReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->acquireReference()V
 
     .line 507
     :try_start_0
@@ -1120,14 +1120,14 @@
     move-result-wide v0
 
     .line 509
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     return-wide v0
 
     :catchall_0
     move-exception v0
 
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     throw v0
 .end method
@@ -1147,7 +1147,7 @@
 
     .prologue
     .line 221
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->acquireReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->acquireReference()V
 
     .line 223
     :try_start_0
@@ -1160,14 +1160,14 @@
     move-result v0
 
     .line 225
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     return v0
 
     :catchall_0
     move-exception v0
 
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     throw v0
 .end method
@@ -1207,7 +1207,7 @@
 
     .prologue
     .line 432
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->acquireReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->acquireReference()V
 
     .line 434
     :try_start_0
@@ -1224,14 +1224,14 @@
     move-result-object v0
 
     .line 436
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     return-object v0
 
     :catchall_0
     move-exception v0
 
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     throw v0
 .end method
@@ -1243,7 +1243,7 @@
 
     .prologue
     .line 367
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->acquireReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->acquireReference()V
 
     .line 369
     :try_start_0
@@ -1260,14 +1260,14 @@
     move-result v0
 
     .line 371
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     return v0
 
     :catchall_0
     move-exception v0
 
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     throw v0
 .end method
@@ -1437,7 +1437,7 @@
 
     .prologue
     .line 602
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->acquireReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->acquireReference()V
 
     .line 604
     :try_start_0
@@ -1454,14 +1454,14 @@
     move-result v0
 
     .line 606
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     return v0
 
     :catchall_0
     move-exception v0
 
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     throw v0
 .end method
@@ -1474,7 +1474,7 @@
 
     .prologue
     .line 654
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->acquireReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->acquireReference()V
 
     .line 656
     :try_start_0
@@ -1491,14 +1491,14 @@
     move-result v0
 
     .line 658
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     return v0
 
     :catchall_0
     move-exception v0
 
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     throw v0
 .end method
@@ -1511,7 +1511,7 @@
 
     .prologue
     .line 636
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->acquireReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->acquireReference()V
 
     .line 638
     :try_start_0
@@ -1528,14 +1528,14 @@
     move-result v0
 
     .line 640
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     return v0
 
     :catchall_0
     move-exception v0
 
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     throw v0
 .end method
@@ -1547,7 +1547,7 @@
 
     .prologue
     .line 670
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->acquireReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->acquireReference()V
 
     .line 672
     :try_start_0
@@ -1564,14 +1564,14 @@
     move-result v0
 
     .line 674
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     return v0
 
     :catchall_0
     move-exception v0
 
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     throw v0
 .end method
@@ -1584,7 +1584,7 @@
 
     .prologue
     .line 619
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->acquireReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->acquireReference()V
 
     .line 621
     :try_start_0
@@ -1601,14 +1601,14 @@
     move-result v0
 
     .line 623
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     return v0
 
     :catchall_0
     move-exception v0
 
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     throw v0
 .end method
@@ -1619,7 +1619,7 @@
 
     .prologue
     .line 241
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->acquireReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->acquireReference()V
 
     .line 243
     :try_start_0
@@ -1632,14 +1632,14 @@
     move-result v0
 
     .line 245
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     return v0
 
     :catchall_0
     move-exception v0
 
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     throw v0
 .end method
@@ -1709,7 +1709,7 @@
 
     .prologue
     .line 698
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->acquireReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->acquireReference()V
 
     .line 700
     :try_start_0
@@ -1725,7 +1725,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 703
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     .line 706
     and-int/lit8 v0, p2, 0x1
@@ -1733,7 +1733,7 @@
     if-eqz v0, :cond_0
 
     .line 707
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     .line 709
     :cond_0
@@ -1743,7 +1743,7 @@
     :catchall_0
     move-exception v0
 
-    invoke-virtual {p0}, Landroid/database/CursorWindow;->releaseReference()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->releaseReference()V
 
     throw v0
 .end method

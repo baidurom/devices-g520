@@ -51,7 +51,7 @@
     .line 108
     const-string v0, "android.app.IActivityManager"
 
-    invoke-virtual {p0, p0, v0}, Landroid/app/ActivityManagerNative;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
+    invoke-virtual {p0, p0, v0}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
     .line 109
     return-void
@@ -247,7 +247,6 @@
     packed-switch p1, :pswitch_data_0
 
     .line 1734
-    :goto_59
     :pswitch_0
     invoke-super/range {p0 .. p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
@@ -8765,55 +8764,9 @@
     const/4 v5, 0x1
 
     goto/16 :goto_0
-    
-    :pswitch_95
-    const-string v5, "android.app.IActivityManager"
 
-    move-object/from16 v0, p2
-
-    invoke-virtual {v0, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    .line 1699
-    sget-object v5, Landroid/content/pm/ApplicationInfo;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    move-object/from16 v0, p2
-
-    invoke-interface {v5, v0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Landroid/content/pm/ApplicationInfo;
-
-    .line 1700
-    .local v6, app:Landroid/content/pm/ApplicationInfo;
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result v5
-
-    if-eqz v5, :cond_60
-
-    const/16 v144, 0x1
-
-    .line 1701
-    .local v144, persistent:Z
-    :goto_58
-    move-object/from16 v0, p0
-
-    move/from16 v1, v144
-
-    invoke-virtual {v0, v6, v1}, Landroid/app/ActivityManagerNative;->setPersistent(Landroid/content/pm/ApplicationInfo;Z)V
-
-    .line 1702
-    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
-
-    goto/16 :goto_59
-
-    .line 1700
-    .end local v144           #persistent:Z
-    :cond_60
-    const/16 v144, 0x0
-
-    goto :goto_58
+    .line 113
+    nop
 
     :pswitch_data_0
     .packed-switch 0x1
@@ -9020,6 +8973,5 @@
         :pswitch_92
         :pswitch_93
         :pswitch_94
-	:pswitch_95
     .end packed-switch
 .end method

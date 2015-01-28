@@ -18338,7 +18338,7 @@
 
     iget-object v3, v0, Lcom/android/server/pm/PackageManagerService;->mResolveActivity:Landroid/content/pm/ActivityInfo;
 
-    const v10, #android:style@Theme.DeviceDefault.Dialog.Alert#t
+    const v10, #style@Theme.DeviceDefault.Light.Dialog.Alert#t
 
     iput v10, v3, Landroid/content/pm/ActivityInfo;->theme:I
 
@@ -20294,11 +20294,7 @@
 
     .line 4254
     .local v19, dataPathString:Ljava/lang/String;
-
-    #CL-41990 begin: unpack native binaries for system applications
-    goto :cond_3c
-    #CL-41990 end
-    invoke-static/range {p1 .. p1}, Lcom/android/server/pm/PackageManagerService;->isSystemApp(Landroid/content/pm/PackageParser$Package;)Z
+    invoke-static/range {p1 .. p1}, Lcom/android/server/pm/PackageManagerService;->isSystemAppBaidu(Landroid/content/pm/PackageParser$Package;)Z
 
     move-result v3
 
@@ -45074,6 +45070,16 @@
 
     .line 5942
     return-void
+.end method
+
+.method private static isSystemAppBaidu(Landroid/content/pm/PackageParser$Package;)Z
+    .locals 1
+    .parameter "pkg"
+
+    .prologue
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
 .method findPreferredActivityBaidu(Landroid/content/Intent;Ljava/lang/String;ILjava/util/List;II)Landroid/content/pm/ResolveInfo;

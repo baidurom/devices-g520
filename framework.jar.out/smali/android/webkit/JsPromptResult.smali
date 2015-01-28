@@ -31,7 +31,7 @@
     iput-object p1, p0, Landroid/webkit/JsPromptResult;->mStringResult:Ljava/lang/String;
 
     .line 36
-    invoke-virtual {p0}, Landroid/webkit/JsPromptResult;->confirm()V
+    invoke-virtual {p0}, Landroid/webkit/JsResult;->confirm()V
 
     .line 37
     return-void

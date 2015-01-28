@@ -152,7 +152,7 @@
     :cond_3
     iget-object v1, p0, Landroid/support/v4/content/AsyncTaskLoader;->mTask:Landroid/support/v4/content/AsyncTaskLoader$LoadTask;
 
-    invoke-virtual {v1, v0}, Landroid/support/v4/content/AsyncTaskLoader$LoadTask;->cancel(Z)Z
+    invoke-virtual {v1, v0}, Landroid/support/v4/content/ModernAsyncTask;->cancel(Z)Z
 
     move-result v0
 
@@ -250,7 +250,7 @@
 
     .line 214
     :cond_0
-    invoke-virtual {p0}, Landroid/support/v4/content/AsyncTaskLoader;->isAbandoned()Z
+    invoke-virtual {p0}, Landroid/support/v4/content/Loader;->isAbandoned()Z
 
     move-result v0
 
@@ -275,7 +275,7 @@
     iput-object v0, p0, Landroid/support/v4/content/AsyncTaskLoader;->mTask:Landroid/support/v4/content/AsyncTaskLoader$LoadTask;
 
     .line 221
-    invoke-virtual {p0, p2}, Landroid/support/v4/content/AsyncTaskLoader;->deliverResult(Ljava/lang/Object;)V
+    invoke-virtual {p0, p2}, Landroid/support/v4/content/Loader;->deliverResult(Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
@@ -489,7 +489,7 @@
 
     check-cast v2, [Ljava/lang/Void;
 
-    invoke-virtual {v3, v4, v2}, Landroid/support/v4/content/AsyncTaskLoader$LoadTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/support/v4/content/ModernAsyncTask;
+    invoke-virtual {v3, v4, v2}, Landroid/support/v4/content/ModernAsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/support/v4/content/ModernAsyncTask;
 
     goto :goto_0
 .end method

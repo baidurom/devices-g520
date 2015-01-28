@@ -424,10 +424,10 @@
     invoke-direct {p0, v0}, Landroid/content/ContentQueryMap;->readCursorIntoCache(Landroid/database/Cursor;)V
 
     .line 144
-    invoke-virtual {p0}, Landroid/content/ContentQueryMap;->setChanged()V
+    invoke-virtual {p0}, Ljava/util/Observable;->setChanged()V
 
     .line 145
-    invoke-virtual {p0}, Landroid/content/ContentQueryMap;->notifyObservers()V
+    invoke-virtual {p0}, Ljava/util/Observable;->notifyObservers()V
 
     goto :goto_0
 .end method

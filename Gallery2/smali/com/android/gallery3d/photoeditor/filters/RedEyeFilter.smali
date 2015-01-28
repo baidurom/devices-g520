@@ -88,7 +88,7 @@
     .line 46
     const-string v6, "android.media.effect.effects.RedEyeEffect"
 
-    invoke-virtual {p0, v6}, Lcom/android/gallery3d/photoeditor/filters/RedEyeFilter;->getEffect(Ljava/lang/String;)Landroid/media/effect/Effect;
+    invoke-virtual {p0, v6}, Lcom/android/gallery3d/photoeditor/filters/Filter;->getEffect(Ljava/lang/String;)Landroid/media/effect/Effect;
 
     move-result-object v1
 
@@ -112,7 +112,7 @@
     .local v3, i:I
     iget-object v6, p0, Lcom/android/gallery3d/photoeditor/filters/RedEyeFilter;->redeyes:Ljava/util/Vector;
 
-    invoke-virtual {v6}, Ljava/util/Vector;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v6}, Ljava/util/AbstractList;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
 
@@ -239,7 +239,7 @@
     .line 60
     iget-object v2, p0, Lcom/android/gallery3d/photoeditor/filters/RedEyeFilter;->redeyes:Ljava/util/Vector;
 
-    invoke-virtual {v2}, Ljava/util/Vector;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v2}, Ljava/util/AbstractList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 

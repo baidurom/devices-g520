@@ -30,7 +30,7 @@
     const-wide/16 v0, 0x0
 
     .line 3197
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3194
     iput-wide v0, p0, Landroid/provider/Telephony$GPRSInfo;->mSimId:J

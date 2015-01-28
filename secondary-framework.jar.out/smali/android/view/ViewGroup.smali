@@ -3,8 +3,8 @@
 .source "ViewGroup.java"
 
 # interfaces
-.implements Landroid/view/ViewParent;
 .implements Landroid/view/ViewManager;
+.implements Landroid/view/ViewParent;
 
 
 # annotations
@@ -876,7 +876,7 @@
     if-eqz v2, :cond_6
 
     .line 3500
-    invoke-virtual {p0, v5}, Landroid/view/ViewGroup;->needGlobalAttributesUpdate(Z)V
+    invoke-virtual {p0, v5}, Landroid/view/View;->needGlobalAttributesUpdate(Z)V
 
     .line 3502
     :cond_6
@@ -2370,7 +2370,7 @@
     if-nez v0, :cond_0
 
     .line 445
-    invoke-virtual {p0, v1, v1}, Landroid/view/ViewGroup;->setFlags(II)V
+    invoke-virtual {p0, v1, v1}, Landroid/view/View;->setFlags(II)V
 
     .line 447
     :cond_0
@@ -2533,7 +2533,7 @@
 
     .line 4307
     :cond_2
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getMatrix()Landroid/graphics/Matrix;
+    invoke-virtual {p0}, Landroid/view/View;->getMatrix()Landroid/graphics/Matrix;
 
     move-result-object v0
 
@@ -2544,7 +2544,7 @@
     if-nez v0, :cond_3
 
     .line 4308
-    invoke-virtual {p0, p3}, Landroid/view/ViewGroup;->transformRect(Landroid/graphics/Rect;)V
+    invoke-virtual {p0, p3}, Landroid/view/View;->transformRect(Landroid/graphics/Rect;)V
 
     .line 4311
     :cond_3
@@ -2590,7 +2590,7 @@
 
     .line 2961
     .local v0, end:Ljava/lang/Runnable;
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {p0, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
     .line 2964
     .end local v0           #end:Ljava/lang/Runnable;
@@ -2628,7 +2628,7 @@
     :cond_1
     const/4 v1, 0x1
 
-    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->invalidate(Z)V
+    invoke-virtual {p0, v1}, Landroid/view/View;->invalidate(Z)V
 
     .line 2972
     return-void
@@ -3077,7 +3077,7 @@
 
     .line 3753
     :cond_5
-    invoke-virtual {p0, v4}, Landroid/view/ViewGroup;->needGlobalAttributesUpdate(Z)V
+    invoke-virtual {p0, v4}, Landroid/view/View;->needGlobalAttributesUpdate(Z)V
 
     .line 3755
     if-eqz v0, :cond_6
@@ -3160,7 +3160,7 @@
     invoke-virtual {p0, p2}, Landroid/view/ViewGroup;->clearChildFocus(Landroid/view/View;)V
 
     .line 3768
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->ensureInputFocusOnFirstFocusable()V
+    invoke-virtual {p0}, Landroid/view/View;->ensureInputFocusOnFirstFocusable()V
 
     .line 3771
     :cond_7
@@ -3324,7 +3324,7 @@
 
     .line 3845
     :cond_4
-    invoke-virtual {p0, v7}, Landroid/view/ViewGroup;->needGlobalAttributesUpdate(Z)V
+    invoke-virtual {p0, v7}, Landroid/view/View;->needGlobalAttributesUpdate(Z)V
 
     .line 3847
     invoke-virtual {p0, v6}, Landroid/view/ViewGroup;->onViewRemoved(Landroid/view/View;)V
@@ -3373,7 +3373,7 @@
     invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->clearChildFocus(Landroid/view/View;)V
 
     .line 3854
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->ensureInputFocusOnFirstFocusable()V
+    invoke-virtual {p0}, Landroid/view/View;->ensureInputFocusOnFirstFocusable()V
 
     .line 3856
     :cond_8
@@ -3845,12 +3845,12 @@
 
     .prologue
     .line 3328
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->requestLayout()V
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 
     .line 3329
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->invalidate(Z)V
+    invoke-virtual {p0, v0}, Landroid/view/View;->invalidate(Z)V
 
     .line 3330
     const/4 v0, 0x0
@@ -4132,7 +4132,7 @@
     if-eqz v0, :cond_0
 
     .line 5316
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->refreshDrawableState()V
+    invoke-virtual {p0}, Landroid/view/View;->refreshDrawableState()V
 
     .line 5318
     :cond_0
@@ -4297,7 +4297,7 @@
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
     .line 5016
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     .line 5018
     :cond_0
@@ -4960,7 +4960,7 @@
 
     .line 1111
     .local v15, ty:F
-    invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getViewRootImpl()Landroid/view/ViewRootImpl;
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getViewRootImpl()Landroid/view/ViewRootImpl;
 
     move-result-object v12
 
@@ -5682,7 +5682,7 @@
     .line 2824
     .local v6, cache:Z
     :goto_0
-    invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->isHardwareAccelerated()Z
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->isHardwareAccelerated()Z
 
     move-result v22
 
@@ -6059,7 +6059,7 @@
 
     .line 2874
     .local v19, more:Z
-    invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getDrawingTime()J
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getDrawingTime()J
 
     move-result-wide v14
 
@@ -6296,7 +6296,7 @@
 
     move/from16 v1, v22
 
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->invalidate(Z)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->invalidate(Z)V
 
     .line 2918
     :cond_12
@@ -6360,7 +6360,7 @@
 
     move-object/from16 v1, v16
 
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
     .line 2931
     .end local v16           #end:Ljava/lang/Runnable;
@@ -7483,7 +7483,7 @@
 
     .line 2524
     .local v3, handled:Z
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->includeForAccessibility()Z
+    invoke-virtual {p0}, Landroid/view/View;->includeForAccessibility()Z
 
     move-result v5
 
@@ -8007,7 +8007,7 @@
 
     .line 1814
     .local v14, handled:Z
-    invoke-virtual/range {p0 .. p1}, Landroid/view/ViewGroup;->onFilterTouchEventForSecurity(Landroid/view/MotionEvent;)Z
+    invoke-virtual/range {p0 .. p1}, Landroid/view/View;->onFilterTouchEventForSecurity(Landroid/view/MotionEvent;)Z
 
     move-result v26
 
@@ -9174,7 +9174,7 @@
     .line 5128
     :cond_0
     :goto_0
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     .line 5131
     .end local v0           #disappearingChildren:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/view/View;>;"
@@ -9210,7 +9210,7 @@
 
     .prologue
     .line 828
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->isFocused()Z
+    invoke-virtual {p0}, Landroid/view/View;->isFocused()Z
 
     move-result v0
 
@@ -9464,13 +9464,13 @@
 
     .prologue
     .line 1671
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->includeForAccessibility()Z
+    invoke-virtual {p0}, Landroid/view/View;->includeForAccessibility()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->isActionableForAccessibility()Z
+    invoke-virtual {p0}, Landroid/view/View;->isActionableForAccessibility()Z
 
     move-result v0
 
@@ -9871,7 +9871,7 @@
 
     .prologue
     .line 641
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->isRootNamespace()Z
+    invoke-virtual {p0}, Landroid/view/View;->isRootNamespace()Z
 
     move-result v0
 
@@ -9934,7 +9934,7 @@
 
     if-eq v0, v1, :cond_1
 
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->isFocused()Z
+    invoke-virtual {p0}, Landroid/view/View;->isFocused()Z
 
     move-result v0
 
@@ -10091,7 +10091,7 @@
     .line 4746
     new-instance v0, Landroid/view/ViewGroup$LayoutParams;
 
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -10601,7 +10601,7 @@
 
     .line 847
     :cond_1
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->isFocusable()Z
+    invoke-virtual {p0}, Landroid/view/View;->isFocusable()Z
 
     move-result v7
 
@@ -11219,7 +11219,7 @@
     if-eqz v6, :cond_3
 
     .line 4273
-    invoke-virtual {v4}, Landroid/view/ViewGroup;->invalidate()V
+    invoke-virtual {v4}, Landroid/view/View;->invalidate()V
 
     .line 4274
     const/4 v3, 0x0
@@ -12151,7 +12151,7 @@
     invoke-virtual {v4, p1}, Landroid/view/DisplayList;->offsetTopBottom(I)V
 
     .line 4409
-    invoke-virtual {p0, v5, v5}, Landroid/view/ViewGroup;->invalidateViewProperty(ZZ)V
+    invoke-virtual {p0, v5, v5}, Landroid/view/View;->invalidateViewProperty(ZZ)V
 
     .line 4403
     :cond_0
@@ -12450,7 +12450,7 @@
 
     .line 2711
     .local v2, children:[Landroid/view/View;
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->isHardwareAccelerated()Z
+    invoke-virtual {p0}, Landroid/view/View;->isHardwareAccelerated()Z
 
     move-result v6
 
@@ -12901,7 +12901,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityEvent;->setClassName(Ljava/lang/CharSequence;)V
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityRecord;->setClassName(Ljava/lang/CharSequence;)V
 
     .line 2569
     return-void
@@ -13369,12 +13369,12 @@
     invoke-virtual {p0}, Landroid/view/ViewGroup;->removeAllViewsInLayout()V
 
     .line 3868
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->requestLayout()V
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 
     .line 3869
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->invalidate(Z)V
+    invoke-virtual {p0, v0}, Landroid/view/View;->invalidate(Z)V
 
     .line 3870
     return-void
@@ -13426,7 +13426,7 @@
 
     .line 3898
     .local v1, clearChildFocus:Landroid/view/View;
-    invoke-virtual {p0, v7}, Landroid/view/ViewGroup;->needGlobalAttributesUpdate(Z)V
+    invoke-virtual {p0, v7}, Landroid/view/View;->needGlobalAttributesUpdate(Z)V
 
     .line 3900
     add-int/lit8 v5, v2, -0x1
@@ -13551,7 +13551,7 @@
     invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->clearChildFocus(Landroid/view/View;)V
 
     .line 3936
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->ensureInputFocusOnFirstFocusable()V
+    invoke-virtual {p0}, Landroid/view/View;->ensureInputFocusOnFirstFocusable()V
 
     goto :goto_0
 .end method
@@ -13659,12 +13659,12 @@
     invoke-direct {p0, p1}, Landroid/view/ViewGroup;->removeViewInternal(Landroid/view/View;)V
 
     .line 3640
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->requestLayout()V
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 
     .line 3641
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->invalidate(Z)V
+    invoke-virtual {p0, v0}, Landroid/view/View;->invalidate(Z)V
 
     .line 3642
     return-void
@@ -13683,12 +13683,12 @@
     invoke-direct {p0, p1, v0}, Landroid/view/ViewGroup;->removeViewInternal(ILandroid/view/View;)V
 
     .line 3684
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->requestLayout()V
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 
     .line 3685
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->invalidate(Z)V
+    invoke-virtual {p0, v0}, Landroid/view/View;->invalidate(Z)V
 
     .line 3686
     return-void
@@ -13716,12 +13716,12 @@
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup;->removeViewsInternal(II)V
 
     .line 3700
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->requestLayout()V
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 
     .line 3701
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->invalidate(Z)V
+    invoke-virtual {p0, v0}, Landroid/view/View;->invalidate(Z)V
 
     .line 3702
     return-void
@@ -14016,7 +14016,7 @@
 
     .prologue
     .line 5344
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getViewRootImpl()Landroid/view/ViewRootImpl;
+    invoke-virtual {p0}, Landroid/view/View;->getViewRootImpl()Landroid/view/ViewRootImpl;
 
     move-result-object v0
 
@@ -14134,7 +14134,7 @@
 
     .line 5297
     :goto_0
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->refreshDrawableState()V
+    invoke-virtual {p0}, Landroid/view/View;->refreshDrawableState()V
 
     .line 5298
     return-void
@@ -14272,7 +14272,7 @@
     iput-boolean p1, p0, Landroid/view/ViewGroup;->mDrawLayers:Z
 
     .line 3022
-    invoke-virtual {p0, v4}, Landroid/view/ViewGroup;->invalidate(Z)V
+    invoke-virtual {p0, v4}, Landroid/view/View;->invalidate(Z)V
 
     .line 3024
     if-nez p1, :cond_3
@@ -14559,7 +14559,7 @@
     iput p1, p0, Landroid/view/ViewGroup;->mLayoutMode:I
 
     .line 4733
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->requestLayout()V
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 
     .line 4735
     :cond_0
@@ -14810,7 +14810,7 @@
     iput v0, p0, Landroid/view/ViewGroup;->mGroupFlags:I
 
     .line 4497
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->requestLayout()V
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 
     .line 4499
     :cond_0

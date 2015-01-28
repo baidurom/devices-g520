@@ -28,7 +28,7 @@
     invoke-direct {p0, p1, p2}, Lcom/android/gallery3d/photoeditor/actions/AbstractSeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 51
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/ColorSeekBar;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -86,7 +86,7 @@
 
     add-int/lit8 v2, v2, -0x1
 
-    invoke-virtual {p0, v2}, Lcom/android/gallery3d/photoeditor/actions/ColorSeekBar;->setMax(I)V
+    invoke-virtual {p0, v2}, Landroid/widget/AbsSeekBar;->setMax(I)V
 
     .line 58
     return-void
@@ -112,7 +112,7 @@
     .line 130
     iget-object v0, p0, Lcom/android/gallery3d/photoeditor/actions/ColorSeekBar;->colors:[I
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/ColorSeekBar;->getProgress()I
+    invoke-virtual {p0}, Landroid/widget/ProgressBar;->getProgress()I
 
     move-result v1
 
@@ -144,13 +144,13 @@
 
     .line 67
     :cond_0
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/ColorSeekBar;->getPaddingLeft()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
 
     move-result v2
 
     sub-int v2, p1, v2
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/ColorSeekBar;->getPaddingRight()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
 
     move-result v4
 
@@ -158,13 +158,13 @@
 
     .line 68
     .local v11, width:I
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/ColorSeekBar;->getPaddingTop()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
 
     move-result v2
 
     sub-int v2, p2, v2
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/ColorSeekBar;->getPaddingBottom()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
 
     move-result v4
 
@@ -381,7 +381,7 @@
     .line 104
     new-instance v2, Landroid/graphics/drawable/BitmapDrawable;
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/ColorSeekBar;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -389,7 +389,7 @@
 
     invoke-direct {v2, v4, v5}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
-    invoke-virtual {p0, v2}, Lcom/android/gallery3d/photoeditor/actions/ColorSeekBar;->setProgressDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p0, v2}, Landroid/widget/ProgressBar;->setProgressDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 105
     return-void
@@ -401,7 +401,7 @@
 
     .prologue
     .line 126
-    invoke-virtual {p0, p1}, Lcom/android/gallery3d/photoeditor/actions/ColorSeekBar;->setProgress(I)V
+    invoke-virtual {p0, p1}, Landroid/widget/ProgressBar;->setProgress(I)V
 
     .line 127
     return-void
@@ -418,7 +418,7 @@
     const/4 v0, 0x0
 
     :goto_0
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/photoeditor/actions/ColorSeekBar;->setOnSeekBarChangeListener(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V
+    invoke-virtual {p0, v0}, Landroid/widget/SeekBar;->setOnSeekBarChangeListener(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V
 
     .line 123
     return-void

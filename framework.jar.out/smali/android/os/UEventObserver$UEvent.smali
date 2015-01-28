@@ -35,7 +35,7 @@
 
     .prologue
     .line 49
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 47
     new-instance v4, Ljava/util/HashMap;
@@ -170,7 +170,7 @@
     .line 78
     iget-object v0, p0, Landroid/os/UEventObserver$UEvent;->mMap:Ljava/util/HashMap;
 
-    invoke-virtual {v0}, Ljava/util/HashMap;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/util/AbstractMap;->toString()Ljava/lang/String;
 
     move-result-object v0
 

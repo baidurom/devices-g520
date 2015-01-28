@@ -233,7 +233,7 @@
 
     move-result-object v8
 
-    invoke-virtual {v7, v8}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {v7, v8}, Landroid/content/ContextWrapper;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 288
     iget-object v7, p0, Lcom/mediatek/bluetooth/pan/BluetoothPanService$1;->this$0:Lcom/mediatek/bluetooth/pan/BluetoothPanService;

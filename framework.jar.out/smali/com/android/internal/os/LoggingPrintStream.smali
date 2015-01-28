@@ -1241,7 +1241,7 @@
     .line 133
     iget-object v3, p0, Lcom/android/internal/os/LoggingPrintStream;->encodedBytes:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->remaining()I
+    invoke-virtual {v3}, Ljava/nio/Buffer;->remaining()I
 
     move-result v3
 
@@ -1263,7 +1263,7 @@
     .line 137
     iget-object v3, p0, Lcom/android/internal/os/LoggingPrintStream;->encodedBytes:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
+    invoke-virtual {v3}, Ljava/nio/Buffer;->flip()Ljava/nio/Buffer;
 
     .line 141
     :cond_1
@@ -1283,7 +1283,7 @@
     .local v0, coderResult:Ljava/nio/charset/CoderResult;
     iget-object v3, p0, Lcom/android/internal/os/LoggingPrintStream;->decodedChars:Ljava/nio/CharBuffer;
 
-    invoke-virtual {v3}, Ljava/nio/CharBuffer;->flip()Ljava/nio/Buffer;
+    invoke-virtual {v3}, Ljava/nio/Buffer;->flip()Ljava/nio/Buffer;
 
     .line 145
     iget-object v3, p0, Lcom/android/internal/os/LoggingPrintStream;->builder:Ljava/lang/StringBuilder;
@@ -1295,7 +1295,7 @@
     .line 146
     iget-object v3, p0, Lcom/android/internal/os/LoggingPrintStream;->decodedChars:Ljava/nio/CharBuffer;
 
-    invoke-virtual {v3}, Ljava/nio/CharBuffer;->clear()Ljava/nio/Buffer;
+    invoke-virtual {v3}, Ljava/nio/Buffer;->clear()Ljava/nio/Buffer;
 
     .line 147
     invoke-virtual {v0}, Ljava/nio/charset/CoderResult;->isOverflow()Z

@@ -229,7 +229,7 @@
 
     .prologue
     .line 223
-    invoke-virtual {p0}, Landroid/nfc/tech/MifareUltralight;->getMaxTransceiveLengthInternal()I
+    invoke-virtual {p0}, Landroid/nfc/tech/BasicTagTechnology;->getMaxTransceiveLengthInternal()I
 
     move-result v0
 
@@ -328,7 +328,7 @@
     invoke-static {p1}, Landroid/nfc/tech/MifareUltralight;->validatePageIndex(I)V
 
     .line 161
-    invoke-virtual {p0}, Landroid/nfc/tech/MifareUltralight;->checkConnected()V
+    invoke-virtual {p0}, Landroid/nfc/tech/BasicTagTechnology;->checkConnected()V
 
     .line 163
     const/4 v1, 0x2
@@ -347,7 +347,7 @@
 
     .line 164
     .local v0, cmd:[B
-    invoke-virtual {p0, v0, v3}, Landroid/nfc/tech/MifareUltralight;->transceive([BZ)[B
+    invoke-virtual {p0, v0, v3}, Landroid/nfc/tech/BasicTagTechnology;->transceive([BZ)[B
 
     move-result-object v1
 
@@ -435,7 +435,7 @@
     .line 215
     const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, v0}, Landroid/nfc/tech/MifareUltralight;->transceive([BZ)[B
+    invoke-virtual {p0, p1, v0}, Landroid/nfc/tech/BasicTagTechnology;->transceive([BZ)[B
 
     move-result-object v0
 
@@ -459,7 +459,7 @@
     invoke-static {p1}, Landroid/nfc/tech/MifareUltralight;->validatePageIndex(I)V
 
     .line 186
-    invoke-virtual {p0}, Landroid/nfc/tech/MifareUltralight;->checkConnected()V
+    invoke-virtual {p0}, Landroid/nfc/tech/BasicTagTechnology;->checkConnected()V
 
     .line 188
     array-length v1, p2
@@ -489,7 +489,7 @@
     invoke-static {p2, v3, v0, v1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 193
-    invoke-virtual {p0, v0, v3}, Landroid/nfc/tech/MifareUltralight;->transceive([BZ)[B
+    invoke-virtual {p0, v0, v3}, Landroid/nfc/tech/BasicTagTechnology;->transceive([BZ)[B
 
     .line 194
     return-void

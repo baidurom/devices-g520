@@ -306,7 +306,7 @@
 
     const v24, 0x7f040020
 
-    invoke-virtual/range {v23 .. v24}, Lcom/mediatek/FMRadio/FMRadioActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual/range {v23 .. v24}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v23
 
@@ -1260,7 +1260,7 @@
 
     const v24, 0x7f04002c
 
-    invoke-virtual/range {v23 .. v24}, Lcom/mediatek/FMRadio/FMRadioActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual/range {v23 .. v24}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v23
 
@@ -1299,7 +1299,7 @@
 
     const v25, 0x7f04002b
 
-    invoke-virtual/range {v24 .. v25}, Lcom/mediatek/FMRadio/FMRadioActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual/range {v24 .. v25}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v24
 
@@ -1343,7 +1343,7 @@
 
     move-object/from16 v22, v0
 
-    invoke-virtual/range {v22 .. v22}, Lcom/mediatek/FMRadio/FMRadioActivity;->finish()V
+    invoke-virtual/range {v22 .. v22}, Landroid/app/Activity;->finish()V
 
     goto/16 :goto_0
 

@@ -43,7 +43,7 @@
 
     .prologue
     .line 68
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 55
     new-instance v0, Ljava/util/ArrayList;
@@ -87,7 +87,7 @@
     .line 71
     iget-object v0, p0, Lcom/android/gallery3d/util/Profile$Watchdog;->mHandlerThread:Landroid/os/HandlerThread;
 
-    invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     .line 72
     new-instance v0, Landroid/os/Handler;

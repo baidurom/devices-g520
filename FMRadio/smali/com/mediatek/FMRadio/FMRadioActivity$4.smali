@@ -30,7 +30,7 @@
     .line 623
     iput-object p1, p0, Lcom/mediatek/FMRadio/FMRadioActivity$4;->this$0:Lcom/mediatek/FMRadio/FMRadioActivity;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -83,7 +83,7 @@
     .line 638
     iget-object v7, p0, Lcom/mediatek/FMRadio/FMRadioActivity$4;->this$0:Lcom/mediatek/FMRadio/FMRadioActivity;
 
-    invoke-virtual {v7}, Lcom/mediatek/FMRadio/FMRadioActivity;->finish()V
+    invoke-virtual {v7}, Landroid/app/Activity;->finish()V
 
     .line 745
     :goto_0
@@ -414,7 +414,7 @@
 
     const/4 v8, 0x0
 
-    invoke-virtual {v7, v8}, Landroid/widget/ImageButton;->setEnabled(Z)V
+    invoke-virtual {v7, v8}, Landroid/view/View;->setEnabled(Z)V
 
     .line 693
     :cond_8
@@ -580,7 +580,7 @@
 
     const v8, 0x7f06003f
 
-    invoke-virtual {v7, v8}, Lcom/mediatek/FMRadio/FMRadioActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v7, v8}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v5
 
@@ -618,7 +618,7 @@
 
     const/4 v9, 0x0
 
-    invoke-virtual {v7, v8, v9}, Lcom/mediatek/FMRadio/FMRadioActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-virtual {v7, v8, v9}, Landroid/content/ContextWrapper;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v6
 
@@ -654,7 +654,7 @@
     .line 721
     const/4 v7, 0x0
 
-    invoke-virtual {v5, v7}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+    invoke-virtual {v5, v7}, Landroid/view/View;->setVisibility(I)V
 
     .line 722
     const-string v7, "FmRx/Activity"
@@ -814,7 +814,7 @@
     :cond_13
     const/16 v7, 0x8
 
-    invoke-virtual {v5, v7}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+    invoke-virtual {v5, v7}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_5
 

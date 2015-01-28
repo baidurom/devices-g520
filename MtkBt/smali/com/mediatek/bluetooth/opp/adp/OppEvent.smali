@@ -87,7 +87,7 @@
 
     .prologue
     .line 198
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 200
     iput p1, p0, Lcom/mediatek/bluetooth/opp/adp/OppEvent;->event:I

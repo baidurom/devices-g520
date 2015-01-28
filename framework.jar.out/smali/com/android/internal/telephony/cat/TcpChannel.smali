@@ -61,7 +61,7 @@
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/telephony/cat/TcpChannel;->mInput:Ljava/io/DataInputStream;
 
-    invoke-virtual {v1}, Ljava/io/DataInputStream;->close()V
+    invoke-virtual {v1}, Ljava/io/FilterInputStream;->close()V
 
     .line 319
     iget-object v1, p0, Lcom/android/internal/telephony/cat/TcpChannel;->mOutput:Ljava/io/BufferedOutputStream;
@@ -275,7 +275,7 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
 
     .line 302
-    invoke-virtual {p0}, Lcom/android/internal/telephony/cat/TcpChannel;->checkBufferSize()I
+    invoke-virtual {p0}, Lcom/android/internal/telephony/cat/Channel;->checkBufferSize()I
 
     move-result v2
 
@@ -1429,7 +1429,7 @@
 
     .line 422
     .local v0, e:Ljava/io/IOException;
-    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     move v1, v3
 

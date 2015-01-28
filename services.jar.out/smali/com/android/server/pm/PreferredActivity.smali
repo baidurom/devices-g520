@@ -88,7 +88,7 @@
     if-eqz v0, :cond_0
 
     .line 61
-    invoke-virtual {p0, p2}, Lcom/android/server/pm/PreferredActivity;->readFromXml(Lorg/xmlpull/v1/XmlPullParser;)V
+    invoke-virtual {p0, p2}, Landroid/content/IntentFilter;->readFromXml(Lorg/xmlpull/v1/XmlPullParser;)V
 
     .line 71
     :goto_0

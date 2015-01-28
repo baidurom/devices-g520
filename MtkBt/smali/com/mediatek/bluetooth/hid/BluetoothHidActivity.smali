@@ -289,7 +289,7 @@
 
     .line 718
     .local v0, adapterMenuInfo:Landroid/widget/AdapterView$AdapterContextMenuInfo;
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Landroid/preference/PreferenceActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v3
 
@@ -352,7 +352,7 @@
 
     const/4 v14, 0x0
 
-    invoke-virtual {p0, v13, v14}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-virtual {p0, v13, v14}, Landroid/content/ContextWrapper;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v7
 
@@ -590,7 +590,7 @@
     :goto_2
     sget-object v13, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->sDeviceList:Landroid/preference/PreferenceCategory;
 
-    invoke-virtual {v13, v9}, Landroid/preference/PreferenceCategory;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v13, v9}, Landroid/preference/PreferenceGroup;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v13
 
@@ -620,13 +620,13 @@
     :cond_5
     sget-object v13, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->sDeviceList:Landroid/preference/PreferenceCategory;
 
-    invoke-virtual {v13, v12}, Landroid/preference/PreferenceCategory;->addPreference(Landroid/preference/Preference;)Z
+    invoke-virtual {v13, v12}, Landroid/preference/PreferenceGroup;->addPreference(Landroid/preference/Preference;)Z
 
     .line 499
     :cond_6
     sget-object v13, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->sDeviceList:Landroid/preference/PreferenceCategory;
 
-    invoke-virtual {v13, v9}, Landroid/preference/PreferenceCategory;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v13, v9}, Landroid/preference/PreferenceGroup;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v13
 
@@ -705,7 +705,7 @@
     invoke-virtual {v12, v13}, Landroid/preference/Preference;->setSummary(I)V
 
     .line 487
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_2
 
@@ -843,7 +843,7 @@
     .line 509
     sget-object v13, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->sDeviceList:Landroid/preference/PreferenceCategory;
 
-    invoke-virtual {v13, v12}, Landroid/preference/PreferenceCategory;->addPreference(Landroid/preference/Preference;)Z
+    invoke-virtual {v13, v12}, Landroid/preference/PreferenceGroup;->addPreference(Landroid/preference/Preference;)Z
 
     goto :goto_3
 
@@ -934,7 +934,7 @@
 
     move-result-object v14
 
-    invoke-virtual {v13, v14}, Landroid/preference/PreferenceCategory;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v13, v14}, Landroid/preference/PreferenceGroup;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v13
 
@@ -943,7 +943,7 @@
     .line 526
     sget-object v13, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->sDeviceList:Landroid/preference/PreferenceCategory;
 
-    invoke-virtual {v13, v12}, Landroid/preference/PreferenceCategory;->addPreference(Landroid/preference/Preference;)Z
+    invoke-virtual {v13, v12}, Landroid/preference/PreferenceGroup;->addPreference(Landroid/preference/Preference;)Z
     :try_end_3
     .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_1
 
@@ -961,7 +961,7 @@
     invoke-direct {p0, v13}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->debugLog(Ljava/lang/String;)V
 
     .line 533
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_4
 .end method
@@ -985,7 +985,7 @@
 
     const/4 v5, 0x0
 
-    invoke-virtual {p0, v4, v5}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-virtual {p0, v4, v5}, Landroid/content/ContextWrapper;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v2
 
@@ -993,7 +993,7 @@
     .local v2, settings:Landroid/content/SharedPreferences;
     sget-object v4, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->sDeviceList:Landroid/preference/PreferenceCategory;
 
-    invoke-virtual {v4}, Landroid/preference/PreferenceCategory;->getPreferenceCount()I
+    invoke-virtual {v4}, Landroid/preference/PreferenceGroup;->getPreferenceCount()I
 
     move-result v0
 
@@ -1051,7 +1051,7 @@
     .line 374
     sget-object v4, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->sDeviceList:Landroid/preference/PreferenceCategory;
 
-    invoke-virtual {v4, v1}, Landroid/preference/PreferenceCategory;->getPreference(I)Landroid/preference/Preference;
+    invoke-virtual {v4, v1}, Landroid/preference/PreferenceGroup;->getPreference(I)Landroid/preference/Preference;
 
     move-result-object v3
 
@@ -1206,7 +1206,7 @@
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
     .line 243
     iget-object v0, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
@@ -1228,7 +1228,7 @@
 
     iget-object v1, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->mHidServerNotifyConn:Landroid/content/ServiceConnection;
 
-    invoke-virtual {p0, v0, v1, v3}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
+    invoke-virtual {p0, v0, v1, v3}, Landroid/content/ContextWrapper;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
     move-result v0
 
@@ -1238,7 +1238,7 @@
     sput-boolean v2, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->sServiceBinded:Z
 
     .line 248
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 255
     :cond_0
@@ -1254,7 +1254,7 @@
 
     .line 253
     :cond_1
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_1
 
@@ -1389,7 +1389,7 @@
     invoke-direct {p0, v5}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->debugLog(Ljava/lang/String;)V
 
     .line 565
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 
@@ -1431,7 +1431,7 @@
 
     .line 573
     .local v2, tmpIntent:Landroid/content/Intent;
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->getPackageName()Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
 
@@ -1466,7 +1466,7 @@
     invoke-virtual {v4, v6, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 576
-    invoke-virtual {p0, v2}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v2}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
     move v4, v5
 
@@ -1511,7 +1511,7 @@
 
     .line 583
     .local v3, tmpIntent2:Landroid/content/Intent;
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->getPackageName()Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
 
@@ -1546,7 +1546,7 @@
     invoke-virtual {v4, v6, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 586
-    invoke-virtual {p0, v3}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v3}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
     move v4, v5
 
@@ -1618,7 +1618,7 @@
     invoke-direct {p0, v5}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->debugLog(Ljava/lang/String;)V
 
     .line 596
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto/16 :goto_0
 
@@ -1687,7 +1687,7 @@
     invoke-direct {p0, v5}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->debugLog(Ljava/lang/String;)V
 
     .line 607
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto/16 :goto_0
 
@@ -1756,7 +1756,7 @@
     invoke-direct {p0, v5}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->debugLog(Ljava/lang/String;)V
 
     .line 618
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto/16 :goto_0
 
@@ -1825,7 +1825,7 @@
     invoke-direct {p0, v5}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->debugLog(Ljava/lang/String;)V
 
     .line 629
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto/16 :goto_0
 
@@ -1894,7 +1894,7 @@
     invoke-direct {p0, v5}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->debugLog(Ljava/lang/String;)V
 
     .line 640
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto/16 :goto_0
 
@@ -1963,7 +1963,7 @@
     invoke-direct {p0, v5}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->debugLog(Ljava/lang/String;)V
 
     .line 651
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto/16 :goto_0
 
@@ -2032,7 +2032,7 @@
     invoke-direct {p0, v5}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->debugLog(Ljava/lang/String;)V
 
     .line 662
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto/16 :goto_0
 
@@ -2072,12 +2072,12 @@
     .line 197
     const v2, 0x7f040001
 
-    invoke-virtual {p0, v2}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v2}, Landroid/preference/PreferenceActivity;->addPreferencesFromResource(I)V
 
     .line 198
     const/high16 v2, 0x7f05
 
-    invoke-virtual {p0, v2}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->setTitle(I)V
+    invoke-virtual {p0, v2}, Landroid/app/Activity;->setTitle(I)V
 
     .line 199
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
@@ -2101,7 +2101,7 @@
     invoke-virtual {v2}, Landroid/widget/Toast;->show()V
 
     .line 202
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 231
     :cond_0
@@ -2112,7 +2112,7 @@
     :cond_1
     const-string v2, "hid_device_list"
 
-    invoke-virtual {p0, v2}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v2}, Landroid/preference/PreferenceActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v2
 
@@ -2128,15 +2128,15 @@
     .line 207
     sget-object v2, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->sDeviceList:Landroid/preference/PreferenceCategory;
 
-    invoke-virtual {v2, v4}, Landroid/preference/PreferenceCategory;->setOrderingAsAdded(Z)V
+    invoke-virtual {v2, v4}, Landroid/preference/PreferenceGroup;->setOrderingAsAdded(Z)V
 
     .line 209
     :cond_2
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Landroid/app/ListActivity;->getListView()Landroid/widget/ListView;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->registerForContextMenu(Landroid/view/View;)V
+    invoke-virtual {p0, v2}, Landroid/app/Activity;->registerForContextMenu(Landroid/view/View;)V
 
     .line 211
     new-instance v0, Landroid/content/IntentFilter;
@@ -2162,7 +2162,7 @@
     .line 215
     iget-object v2, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v2, v0}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v2, v0}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 217
     iget-object v2, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
@@ -2210,7 +2210,7 @@
     .line 227
     const/4 v2, 0x2
 
-    invoke-virtual {p0, v1, v2}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v1, v2}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
 
     goto :goto_0
 .end method
@@ -2223,7 +2223,7 @@
 
     .prologue
     .line 674
-    invoke-super {p0, p1, p2, p3}, Landroid/preference/PreferenceActivity;->onCreateContextMenu(Landroid/view/ContextMenu;Landroid/view/View;Landroid/view/ContextMenu$ContextMenuInfo;)V
+    invoke-super {p0, p1, p2, p3}, Landroid/app/Activity;->onCreateContextMenu(Landroid/view/ContextMenu;Landroid/view/View;Landroid/view/ContextMenu$ContextMenuInfo;)V
 
     .line 676
     :try_start_0
@@ -2329,7 +2329,7 @@
     invoke-direct {p0, v3}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->debugLog(Ljava/lang/String;)V
 
     .line 707
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 
@@ -2510,7 +2510,7 @@
     .line 411
     iget-object v0, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 412
     invoke-super {p0}, Landroid/preference/PreferenceActivity;->onDestroy()V
@@ -2524,7 +2524,7 @@
 
     .prologue
     .line 326
-    invoke-super {p0}, Landroid/preference/PreferenceActivity;->onPause()V
+    invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
     .line 327
     const-string v0, "onPause"
@@ -2602,7 +2602,7 @@
     .line 156
     iget-object v4, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->mIntentToDevicePicker:Landroid/content/Intent;
 
-    invoke-virtual {p0, v4}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v4}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
     .line 188
     :goto_0
@@ -2738,7 +2738,7 @@
     invoke-direct {p0, v3}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->debugLog(Ljava/lang/String;)V
 
     .line 185
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     .line 188
     .end local v0           #e:Landroid/os/RemoteException;
@@ -2797,7 +2797,7 @@
 
     .line 177
     .local v2, tmpIntent:Landroid/content/Intent;
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->getPackageName()Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
 
@@ -2832,7 +2832,7 @@
     invoke-virtual {v4, v5, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 180
-    invoke-virtual {p0, v2}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v2}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -2844,7 +2844,7 @@
 
     .prologue
     .line 332
-    invoke-super {p0}, Landroid/preference/PreferenceActivity;->onRestart()V
+    invoke-super {p0}, Landroid/app/Activity;->onRestart()V
 
     .line 333
     const-string v0, "onRestart"
@@ -2905,7 +2905,7 @@
 
     .prologue
     .line 352
-    invoke-super {p0}, Landroid/preference/PreferenceActivity;->onResume()V
+    invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
     .line 353
     const-string v0, "onResume"
@@ -2933,7 +2933,7 @@
     invoke-static {v0, v1}, Lcom/mediatek/xlog/Xlog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 359
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 361
     :cond_0
@@ -2958,7 +2958,7 @@
     const/4 v4, 0x0
 
     .line 288
-    invoke-super {p0}, Landroid/preference/PreferenceActivity;->onStart()V
+    invoke-super {p0}, Landroid/app/Activity;->onStart()V
 
     .line 289
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2984,7 +2984,7 @@
     invoke-direct {p0, v2}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->debugLog(Ljava/lang/String;)V
 
     .line 290
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -3040,7 +3040,7 @@
 
     invoke-direct {v2, p0, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    invoke-virtual {p0, v2}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+    invoke-virtual {p0, v2}, Landroid/content/ContextWrapper;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
     .line 301
     iget-object v2, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
@@ -3062,7 +3062,7 @@
 
     iget-object v5, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->mHidServerNotifyConn:Landroid/content/ServiceConnection;
 
-    invoke-virtual {p0, v2, v5, v3}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
+    invoke-virtual {p0, v2, v5, v3}, Landroid/content/ContextWrapper;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
     move-result v2
 
@@ -3072,7 +3072,7 @@
     sput-boolean v4, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->sServiceBinded:Z
 
     .line 305
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 312
     :cond_1
@@ -3095,7 +3095,7 @@
     .line 310
     .end local v0           #action:Ljava/lang/String;
     :cond_4
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_1
 .end method
@@ -3140,7 +3140,7 @@
     .line 390
     iget-object v1, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->mHidServerNotifyConn:Landroid/content/ServiceConnection;
 
-    invoke-virtual {p0, v1}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->unbindService(Landroid/content/ServiceConnection;)V
+    invoke-virtual {p0, v1}, Landroid/content/ContextWrapper;->unbindService(Landroid/content/ServiceConnection;)V
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -3149,7 +3149,7 @@
     :goto_0
     sget-object v1, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->sDeviceList:Landroid/preference/PreferenceCategory;
 
-    invoke-virtual {v1}, Landroid/preference/PreferenceCategory;->removeAll()V
+    invoke-virtual {v1}, Landroid/preference/PreferenceGroup;->removeAll()V
 
     .line 402
     :cond_1
@@ -3194,7 +3194,7 @@
     invoke-static {v1, v2}, Lcom/mediatek/xlog/Xlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 396
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/hid/BluetoothHidActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 .end method

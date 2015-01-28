@@ -41,14 +41,14 @@
     :goto_0
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Landroid/graphics/drawable/MipmapDrawable$MipmapContainerState;->setConstantSize(Z)V
+    invoke-virtual {p0, v0}, Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;->setConstantSize(Z)V
 
     .line 203
     return-void
 
     .line 198
     :cond_0
-    invoke-virtual {p0}, Landroid/graphics/drawable/MipmapDrawable$MipmapContainerState;->getChildren()[Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;->getChildren()[Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -92,7 +92,7 @@
 
     .prologue
     .line 243
-    invoke-virtual {p0, p1}, Landroid/graphics/drawable/MipmapDrawable$MipmapContainerState;->addChild(Landroid/graphics/drawable/Drawable;)I
+    invoke-virtual {p0, p1}, Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;->addChild(Landroid/graphics/drawable/Drawable;)I
 
     move-result v1
 
@@ -168,7 +168,7 @@
     const/4 v4, 0x0
 
     .line 271
-    invoke-virtual {p0}, Landroid/graphics/drawable/MipmapDrawable$MipmapContainerState;->getChildCount()I
+    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;->getChildCount()I
 
     move-result v0
 
@@ -284,7 +284,7 @@
 
     .line 218
     .local v1, boundsHeight:I
-    invoke-virtual {p0}, Landroid/graphics/drawable/MipmapDrawable$MipmapContainerState;->getChildCount()I
+    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;->getChildCount()I
 
     move-result v0
 

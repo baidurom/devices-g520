@@ -276,7 +276,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 163
-    invoke-virtual {p0}, Landroid/preference/PreferenceGroup;->getPreferenceManager()Landroid/preference/PreferenceManager;
+    invoke-virtual {p0}, Landroid/preference/Preference;->getPreferenceManager()Landroid/preference/PreferenceManager;
 
     move-result-object v1
 
@@ -292,7 +292,7 @@
 
     .line 169
     :cond_5
-    invoke-virtual {p0}, Landroid/preference/PreferenceGroup;->notifyHierarchyChanged()V
+    invoke-virtual {p0}, Landroid/preference/Preference;->notifyHierarchyChanged()V
 
     move v1, v2
 
@@ -393,7 +393,7 @@
 
     .prologue
     .line 234
-    invoke-virtual {p0}, Landroid/preference/PreferenceGroup;->getKey()Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object v5
 
@@ -666,7 +666,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 203
-    invoke-virtual {p0}, Landroid/preference/PreferenceGroup;->notifyHierarchyChanged()V
+    invoke-virtual {p0}, Landroid/preference/Preference;->notifyHierarchyChanged()V
 
     .line 204
     return-void
@@ -697,7 +697,7 @@
 
     .line 182
     .local v0, returnValue:Z
-    invoke-virtual {p0}, Landroid/preference/PreferenceGroup;->notifyHierarchyChanged()V
+    invoke-virtual {p0}, Landroid/preference/Preference;->notifyHierarchyChanged()V
 
     .line 183
     return v0

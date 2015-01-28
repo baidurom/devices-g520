@@ -40,7 +40,7 @@
 
     iput-object p3, p0, Lcom/android/server/pm/PackageManagerService$12;->val$mp:Lcom/android/server/pm/PackageManagerService$MoveParams;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -68,7 +68,7 @@
 
     move-object/from16 v1, p0
 
-    invoke-virtual {v0, v1}, Lcom/android/server/pm/PackageManagerService$PackageHandler;->removeCallbacks(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
     .line 10002
     move-object/from16 v0, p0
@@ -1400,7 +1400,7 @@
 
     move/from16 v0, v19
 
-    invoke-virtual {v15, v0}, Lcom/android/server/pm/PackageSetting;->setFlags(I)V
+    invoke-virtual {v15, v0}, Lcom/android/server/pm/GrantedPermissions;->setFlags(I)V
 
     .line 10110
     move-object/from16 v0, p0

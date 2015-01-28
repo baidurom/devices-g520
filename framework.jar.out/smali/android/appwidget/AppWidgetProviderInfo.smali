@@ -79,7 +79,7 @@
 
     .prologue
     .line 185
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 186
     return-void
@@ -91,7 +91,7 @@
 
     .prologue
     .line 191
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 192
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I

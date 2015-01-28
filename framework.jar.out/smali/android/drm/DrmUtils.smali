@@ -77,7 +77,7 @@
 
     .prologue
     .line 48
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 406
     return-void
@@ -495,7 +495,7 @@
     new-array v1, v3, [B
 
     .line 66
-    invoke-virtual {v0, v1}, Ljava/io/BufferedInputStream;->read([B)I
+    invoke-virtual {v0, v1}, Ljava/io/InputStream;->read([B)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -919,7 +919,7 @@
     .end local v0           #outputStream:Ljava/io/FileOutputStream;
     .local v1, outputStream:Ljava/io/FileOutputStream;
     :try_start_1
-    invoke-virtual {v1, p1}, Ljava/io/FileOutputStream;->write([B)V
+    invoke-virtual {v1, p1}, Ljava/io/OutputStream;->write([B)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 

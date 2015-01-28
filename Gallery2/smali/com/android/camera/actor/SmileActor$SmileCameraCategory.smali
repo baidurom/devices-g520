@@ -178,7 +178,7 @@
     .line 219
     iget-object v0, p0, Lcom/android/camera/actor/SmileActor$SmileCameraCategory;->this$0:Lcom/android/camera/actor/SmileActor;
 
-    invoke-virtual {v0}, Lcom/android/camera/actor/SmileActor;->interruptRenderThread()V
+    invoke-virtual {v0}, Lcom/android/camera/actor/PhotoActor;->interruptRenderThread()V
 
     .line 220
     return-void

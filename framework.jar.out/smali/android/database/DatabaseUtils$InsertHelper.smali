@@ -56,7 +56,7 @@
     const/4 v0, 0x0
 
     .line 1021
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1003
     iput-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mInsertSQL:Ljava/lang/String;
@@ -454,7 +454,7 @@
 
     .line 1104
     .local v5, stmt:Landroid/database/sqlite/SQLiteStatement;
-    invoke-virtual {v5}, Landroid/database/sqlite/SQLiteStatement;->clearBindings()V
+    invoke-virtual {v5}, Landroid/database/sqlite/SQLiteProgram;->clearBindings()V
 
     .line 1106
     invoke-virtual {p1}, Landroid/content/ContentValues;->valueSet()Ljava/util/Set;
@@ -599,7 +599,7 @@
     .line 1144
     iget-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mPreparedStatement:Landroid/database/sqlite/SQLiteStatement;
 
-    invoke-virtual {v0, p1, p2, p3}, Landroid/database/sqlite/SQLiteStatement;->bindDouble(ID)V
+    invoke-virtual {v0, p1, p2, p3}, Landroid/database/sqlite/SQLiteProgram;->bindDouble(ID)V
 
     .line 1145
     return-void
@@ -616,7 +616,7 @@
 
     float-to-double v1, p2
 
-    invoke-virtual {v0, p1, v1, v2}, Landroid/database/sqlite/SQLiteStatement;->bindDouble(ID)V
+    invoke-virtual {v0, p1, v1, v2}, Landroid/database/sqlite/SQLiteProgram;->bindDouble(ID)V
 
     .line 1155
     return-void
@@ -633,7 +633,7 @@
 
     int-to-long v1, p2
 
-    invoke-virtual {v0, p1, v1, v2}, Landroid/database/sqlite/SQLiteStatement;->bindLong(IJ)V
+    invoke-virtual {v0, p1, v1, v2}, Landroid/database/sqlite/SQLiteProgram;->bindLong(IJ)V
 
     .line 1175
     return-void
@@ -648,7 +648,7 @@
     .line 1164
     iget-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mPreparedStatement:Landroid/database/sqlite/SQLiteStatement;
 
-    invoke-virtual {v0, p1, p2, p3}, Landroid/database/sqlite/SQLiteStatement;->bindLong(IJ)V
+    invoke-virtual {v0, p1, p2, p3}, Landroid/database/sqlite/SQLiteProgram;->bindLong(IJ)V
 
     .line 1165
     return-void
@@ -666,7 +666,7 @@
     .line 1218
     iget-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mPreparedStatement:Landroid/database/sqlite/SQLiteStatement;
 
-    invoke-virtual {v0, p1}, Landroid/database/sqlite/SQLiteStatement;->bindNull(I)V
+    invoke-virtual {v0, p1}, Landroid/database/sqlite/SQLiteProgram;->bindNull(I)V
 
     .line 1222
     :goto_0
@@ -676,7 +676,7 @@
     :cond_0
     iget-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mPreparedStatement:Landroid/database/sqlite/SQLiteStatement;
 
-    invoke-virtual {v0, p1, p2}, Landroid/database/sqlite/SQLiteStatement;->bindString(ILjava/lang/String;)V
+    invoke-virtual {v0, p1, p2}, Landroid/database/sqlite/SQLiteProgram;->bindString(ILjava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -695,7 +695,7 @@
     const-wide/16 v0, 0x1
 
     :goto_0
-    invoke-virtual {v2, p1, v0, v1}, Landroid/database/sqlite/SQLiteStatement;->bindLong(IJ)V
+    invoke-virtual {v2, p1, v0, v1}, Landroid/database/sqlite/SQLiteProgram;->bindLong(IJ)V
 
     .line 1185
     return-void
@@ -719,7 +719,7 @@
     .line 1204
     iget-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mPreparedStatement:Landroid/database/sqlite/SQLiteStatement;
 
-    invoke-virtual {v0, p1}, Landroid/database/sqlite/SQLiteStatement;->bindNull(I)V
+    invoke-virtual {v0, p1}, Landroid/database/sqlite/SQLiteProgram;->bindNull(I)V
 
     .line 1208
     :goto_0
@@ -729,7 +729,7 @@
     :cond_0
     iget-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mPreparedStatement:Landroid/database/sqlite/SQLiteStatement;
 
-    invoke-virtual {v0, p1, p2}, Landroid/database/sqlite/SQLiteStatement;->bindBlob(I[B)V
+    invoke-virtual {v0, p1, p2}, Landroid/database/sqlite/SQLiteProgram;->bindBlob(I[B)V
 
     goto :goto_0
 .end method
@@ -742,7 +742,7 @@
     .line 1193
     iget-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mPreparedStatement:Landroid/database/sqlite/SQLiteStatement;
 
-    invoke-virtual {v0, p1}, Landroid/database/sqlite/SQLiteStatement;->bindNull(I)V
+    invoke-virtual {v0, p1}, Landroid/database/sqlite/SQLiteProgram;->bindNull(I)V
 
     .line 1194
     return-void
@@ -762,7 +762,7 @@
     .line 1320
     iget-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mInsertStatement:Landroid/database/sqlite/SQLiteStatement;
 
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteStatement;->close()V
+    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteClosable;->close()V
 
     .line 1321
     iput-object v1, p0, Landroid/database/DatabaseUtils$InsertHelper;->mInsertStatement:Landroid/database/sqlite/SQLiteStatement;
@@ -776,7 +776,7 @@
     .line 1324
     iget-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mReplaceStatement:Landroid/database/sqlite/SQLiteStatement;
 
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteStatement;->close()V
+    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteClosable;->close()V
 
     .line 1325
     iput-object v1, p0, Landroid/database/DatabaseUtils$InsertHelper;->mReplaceStatement:Landroid/database/sqlite/SQLiteStatement;
@@ -974,7 +974,7 @@
     .line 1279
     iget-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mPreparedStatement:Landroid/database/sqlite/SQLiteStatement;
 
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteStatement;->clearBindings()V
+    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteProgram;->clearBindings()V
 
     .line 1280
     return-void
@@ -996,7 +996,7 @@
     .line 1295
     iget-object v0, p0, Landroid/database/DatabaseUtils$InsertHelper;->mPreparedStatement:Landroid/database/sqlite/SQLiteStatement;
 
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteStatement;->clearBindings()V
+    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteProgram;->clearBindings()V
 
     .line 1296
     return-void

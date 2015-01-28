@@ -126,7 +126,7 @@
 
     .line 90
     :cond_0
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/ScrollBarView;->bounds()Landroid/graphics/Rect;
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->bounds()Landroid/graphics/Rect;
 
     move-result-object v6
 
@@ -180,7 +180,7 @@
 
     .line 65
     :cond_0
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/ScrollBarView;->invalidate()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->invalidate()V
 
     .line 67
     iput p1, p0, Lcom/android/gallery3d/ui/ScrollBarView;->mContentPosition:I
@@ -208,7 +208,7 @@
     iput v1, p0, Lcom/android/gallery3d/ui/ScrollBarView;->mGripWidth:I
 
     .line 82
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/ScrollBarView;->getWidth()I
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->getWidth()I
 
     move-result v1
 

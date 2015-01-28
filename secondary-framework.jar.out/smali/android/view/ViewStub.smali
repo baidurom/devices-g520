@@ -181,7 +181,7 @@
     .line 119
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Landroid/view/ViewStub;->setWillNotDraw(Z)V
+    invoke-virtual {p0, v0}, Landroid/view/View;->setWillNotDraw(Z)V
 
     .line 120
     return-void
@@ -242,7 +242,7 @@
 
     .prologue
     .line 247
-    invoke-virtual {p0}, Landroid/view/ViewStub;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v5
 
@@ -308,7 +308,7 @@
     invoke-virtual {v3, p0}, Landroid/view/ViewGroup;->removeViewInLayout(Landroid/view/View;)V
 
     .line 268
-    invoke-virtual {p0}, Landroid/view/ViewStub;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v2
 
@@ -400,7 +400,7 @@
     const/4 v0, 0x0
 
     .line 201
-    invoke-virtual {p0, v0, v0}, Landroid/view/ViewStub;->setMeasuredDimension(II)V
+    invoke-virtual {p0, v0, v0}, Landroid/view/View;->setMeasuredDimension(II)V
 
     .line 202
     return-void
@@ -473,7 +473,7 @@
     .line 225
     iget-object v1, p0, Landroid/view/ViewStub;->mInflatedViewRef:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 

@@ -3,9 +3,9 @@
 .source "NativeDaemonConnector.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
 .implements Landroid/os/Handler$Callback;
 .implements Lcom/android/server/Watchdog$Monitor;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -60,12 +60,12 @@
 
     .prologue
     .line 69
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 64
     new-instance v0, Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/NativeDaemonConnector;->mDaemonLock:Ljava/lang/Object;
 
@@ -2159,7 +2159,7 @@
 
     .line 81
     .local v1, thread:Landroid/os/HandlerThread;
-    invoke-virtual {v1}, Landroid/os/HandlerThread;->start()V
+    invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
     .line 82
     new-instance v2, Landroid/os/Handler;

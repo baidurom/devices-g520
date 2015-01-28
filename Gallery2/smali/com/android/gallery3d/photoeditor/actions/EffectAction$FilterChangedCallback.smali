@@ -34,7 +34,7 @@
     .line 158
     iput-object p1, p0, Lcom/android/gallery3d/photoeditor/actions/EffectAction$FilterChangedCallback;->this$0:Lcom/android/gallery3d/photoeditor/actions/EffectAction;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

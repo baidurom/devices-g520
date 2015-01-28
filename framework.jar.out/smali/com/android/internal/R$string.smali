@@ -1469,10 +1469,6 @@
 
 .field public static final usb_storage_open_notification_title:I = 0x1040507
 
-.field public static final keyguard_password_enter_pin_code_for_subscription:I = 0x1040508
-
-.field public static final keyguard_password_enter_puk_code_for_subscription:I = 0x1040509
-
 .field public static final usb_storage_stop_message:I = 0x1040436
 
 .field public static final usb_storage_stop_notification_message:I = 0x1040434
@@ -1564,7 +1560,7 @@
 
     .prologue
     .line 12300
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

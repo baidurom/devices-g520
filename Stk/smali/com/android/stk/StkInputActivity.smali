@@ -3,8 +3,8 @@
 .source "StkInputActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
 .implements Landroid/text/TextWatcher;
+.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
@@ -182,7 +182,7 @@
     .line 364
     const v7, 0x7f070003
 
-    invoke-virtual {p0, v7}, Lcom/android/stk/StkInputActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v7}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v5
 
@@ -192,7 +192,7 @@
     .local v5, numOfCharsView:Landroid/widget/TextView;
     const v7, 0x7f070004
 
-    invoke-virtual {p0, v7}, Lcom/android/stk/StkInputActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v7}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -245,7 +245,7 @@
 
     invoke-direct {v8, v9}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/graphics/Bitmap;)V
 
-    invoke-virtual {p0, v7, v8}, Lcom/android/stk/StkInputActivity;->setFeatureDrawable(ILandroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p0, v7, v8}, Landroid/app/Activity;->setFeatureDrawable(ILandroid/graphics/drawable/Drawable;)V
 
     .line 381
     :cond_1
@@ -268,7 +268,7 @@
 
     move-result-object v8
 
-    invoke-virtual {v7, v8}, Landroid/widget/EditText;->setKeyListener(Landroid/text/method/KeyListener;)V
+    invoke-virtual {v7, v8}, Landroid/widget/TextView;->setKeyListener(Landroid/text/method/KeyListener;)V
 
     .line 416
     const v0, 0x7f06003e
@@ -341,7 +341,7 @@
 
     const/16 v8, 0x81
 
-    invoke-virtual {v7, v8}, Landroid/widget/EditText;->setInputType(I)V
+    invoke-virtual {v7, v8}, Landroid/widget/TextView;->setInputType(I)V
 
     .line 398
     :cond_4
@@ -358,7 +358,7 @@
 
     iget-object v8, v8, Lcom/android/internal/telephony/cat/Input;->defaultText:Ljava/lang/String;
 
-    invoke-virtual {v7, v8}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v7, v8}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
@@ -439,7 +439,7 @@
 
     .line 427
     .local v0, fontSizes:[F
-    invoke-virtual {p1}, Lcom/android/internal/telephony/cat/FontSize;->ordinal()I
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -647,7 +647,7 @@
     .line 326
     iget-object v3, p0, Lcom/android/stk/StkInputActivity;->mTextIn:Landroid/widget/EditText;
 
-    invoke-virtual {v3}, Landroid/widget/EditText;->getSelectionStart()I
+    invoke-virtual {v3}, Landroid/widget/TextView;->getSelectionStart()I
 
     move-result v1
 
@@ -655,7 +655,7 @@
     .local v1, iStart:I
     iget-object v3, p0, Lcom/android/stk/StkInputActivity;->mTextIn:Landroid/widget/EditText;
 
-    invoke-virtual {v3}, Landroid/widget/EditText;->getSelectionEnd()I
+    invoke-virtual {v3}, Landroid/widget/TextView;->getSelectionEnd()I
 
     move-result v0
 
@@ -707,7 +707,7 @@
     .line 334
     iget-object v3, p0, Lcom/android/stk/StkInputActivity;->mTextIn:Landroid/widget/EditText;
 
-    invoke-virtual {v3, p1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v3, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 335
     const/4 v2, 0x0
@@ -785,7 +785,7 @@
     invoke-direct {p0, v1, v0, v2}, Lcom/android/stk/StkInputActivity;->sendResponse(ILjava/lang/String;Z)V
 
     .line 155
-    invoke-virtual {p0}, Lcom/android/stk/StkInputActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 156
     :cond_0
@@ -878,17 +878,17 @@
     .line 165
     const/4 v5, 0x3
 
-    invoke-virtual {p0, v5}, Lcom/android/stk/StkInputActivity;->requestWindowFeature(I)Z
+    invoke-virtual {p0, v5}, Landroid/app/Activity;->requestWindowFeature(I)Z
 
     .line 166
     const v5, 0x7f030001
 
-    invoke-virtual {p0, v5}, Lcom/android/stk/StkInputActivity;->setContentView(I)V
+    invoke-virtual {p0, v5}, Landroid/app/Activity;->setContentView(I)V
 
     .line 169
     const v5, 0x7f070005
 
-    invoke-virtual {p0, v5}, Lcom/android/stk/StkInputActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v5}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v5
 
@@ -899,7 +899,7 @@
     .line 170
     const/high16 v5, 0x7f07
 
-    invoke-virtual {p0, v5}, Lcom/android/stk/StkInputActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v5}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v5
 
@@ -910,7 +910,7 @@
     .line 173
     const v5, 0x7f070006
 
-    invoke-virtual {p0, v5}, Lcom/android/stk/StkInputActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v5}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
@@ -920,7 +920,7 @@
     .local v3, okButton:Landroid/widget/Button;
     const v5, 0x7f070008
 
-    invoke-virtual {p0, v5}, Lcom/android/stk/StkInputActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v5}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v4
 
@@ -930,7 +930,7 @@
     .local v4, yesButton:Landroid/widget/Button;
     const v5, 0x7f070009
 
-    invoke-virtual {p0, v5}, Lcom/android/stk/StkInputActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v5}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -938,18 +938,18 @@
 
     .line 177
     .local v2, noButton:Landroid/widget/Button;
-    invoke-virtual {v3, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v3, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 178
-    invoke-virtual {v4, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v4, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 179
-    invoke-virtual {v2, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v2, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 181
     const v5, 0x7f070007
 
-    invoke-virtual {p0, v5}, Lcom/android/stk/StkInputActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v5}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v5
 
@@ -958,14 +958,14 @@
     .line 182
     const v5, 0x7f070001
 
-    invoke-virtual {p0, v5}, Lcom/android/stk/StkInputActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v5}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v5
 
     iput-object v5, p0, Lcom/android/stk/StkInputActivity;->mNormalLayout:Landroid/view/View;
 
     .line 186
-    invoke-virtual {p0}, Lcom/android/stk/StkInputActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
@@ -990,11 +990,11 @@
     if-nez v5, :cond_0
 
     .line 190
-    invoke-virtual {p0}, Lcom/android/stk/StkInputActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 198
     :goto_0
-    invoke-virtual {p0}, Lcom/android/stk/StkInputActivity;->getBaseContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
 
     move-result-object v5
 
@@ -1011,7 +1011,7 @@
     .local v1, intentFilter:Landroid/content/IntentFilter;
     iget-object v5, p0, Lcom/android/stk/StkInputActivity;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v5, v1}, Lcom/android/stk/StkInputActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v5, v1}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 203
     return-void
@@ -1043,7 +1043,7 @@
 
     .line 196
     :cond_2
-    invoke-virtual {p0}, Lcom/android/stk/StkInputActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 .end method
@@ -1133,7 +1133,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/stk/StkInputActivity;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/android/stk/StkInputActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 239
     return-void
@@ -1167,7 +1167,7 @@
     invoke-direct {p0, v0, v1, v2}, Lcom/android/stk/StkInputActivity;->sendResponse(ILjava/lang/String;Z)V
 
     .line 246
-    invoke-virtual {p0}, Lcom/android/stk/StkInputActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 
@@ -1210,7 +1210,7 @@
     invoke-direct {p0, v1}, Lcom/android/stk/StkInputActivity;->sendResponse(I)V
 
     .line 303
-    invoke-virtual {p0}, Lcom/android/stk/StkInputActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 
@@ -1299,7 +1299,7 @@
     .line 209
     iget-object v0, p0, Lcom/android/stk/StkInputActivity;->mTextIn:Landroid/widget/EditText;
 
-    invoke-virtual {v0, p0}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
+    invoke-virtual {v0, p0}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     .line 210
     return-void

@@ -46,7 +46,7 @@
     .line 43
     const v0, 0x106000d
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/ui/ModePickerRotateLayout;->setBackgroundResource(I)V
+    invoke-virtual {p0, v0}, Landroid/view/View;->setBackgroundResource(I)V
 
     .line 44
     return-void
@@ -63,7 +63,7 @@
     .line 48
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/ui/ModePickerRotateLayout;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -162,7 +162,7 @@
 
     .line 92
     :goto_0
-    invoke-virtual {p0, v1, v0}, Lcom/android/camera/ui/ModePickerRotateLayout;->setMeasuredDimension(II)V
+    invoke-virtual {p0, v1, v0}, Landroid/view/View;->setMeasuredDimension(II)V
 
     .line 94
     sparse-switch v3, :sswitch_data_1
@@ -182,7 +182,7 @@
     :sswitch_0
     iget-object v2, p0, Lcom/android/camera/ui/ModePickerRotateLayout;->mChild:Landroid/view/View;
 
-    invoke-virtual {p0, v2, p1, p2}, Lcom/android/camera/ui/ModePickerRotateLayout;->measureChild(Landroid/view/View;II)V
+    invoke-virtual {p0, v2, p1, p2}, Landroid/view/ViewGroup;->measureChild(Landroid/view/View;II)V
 
     .line 80
     iget-object v2, p0, Lcom/android/camera/ui/ModePickerRotateLayout;->mChild:Landroid/view/View;
@@ -205,7 +205,7 @@
     :sswitch_1
     iget-object v2, p0, Lcom/android/camera/ui/ModePickerRotateLayout;->mChild:Landroid/view/View;
 
-    invoke-virtual {p0, v2, p2, p1}, Lcom/android/camera/ui/ModePickerRotateLayout;->measureChild(Landroid/view/View;II)V
+    invoke-virtual {p0, v2, p2, p1}, Landroid/view/ViewGroup;->measureChild(Landroid/view/View;II)V
 
     .line 86
     iget-object v2, p0, Lcom/android/camera/ui/ModePickerRotateLayout;->mChild:Landroid/view/View;
@@ -385,7 +385,7 @@
     invoke-static {v0, v1, v2}, Lcom/android/camera/Util;->setOrientation(Landroid/view/View;IZ)V
 
     .line 132
-    invoke-virtual {p0}, Lcom/android/camera/ui/ModePickerRotateLayout;->requestLayout()V
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 
     .line 134
     :cond_1

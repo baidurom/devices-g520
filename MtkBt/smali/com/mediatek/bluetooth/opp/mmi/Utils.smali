@@ -29,7 +29,7 @@
 
     .prologue
     .line 56
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -400,7 +400,7 @@
 
     move-result-object v12
 
-    invoke-virtual {v6}, Ljava/io/IOException;->toString()Ljava/lang/String;
+    invoke-virtual {v6}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v13
 
@@ -445,7 +445,7 @@
 
     move-result-object v12
 
-    invoke-virtual {v6}, Ljava/io/IOException;->toString()Ljava/lang/String;
+    invoke-virtual {v6}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v13
 
@@ -682,7 +682,7 @@
     invoke-virtual {v9, v2, v12, v13}, Ljava/io/FileOutputStream;->write([BII)V
 
     .line 269
-    invoke-virtual {v9}, Ljava/io/FileOutputStream;->flush()V
+    invoke-virtual {v9}, Ljava/io/OutputStream;->flush()V
 
     .line 272
     new-instance v12, Ljava/io/File;
@@ -740,7 +740,7 @@
 
     move-result-object v12
 
-    invoke-virtual {v6}, Ljava/io/IOException;->toString()Ljava/lang/String;
+    invoke-virtual {v6}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v13
 
@@ -844,7 +844,7 @@
 
     move-result-object v13
 
-    invoke-virtual {v6}, Ljava/io/IOException;->toString()Ljava/lang/String;
+    invoke-virtual {v6}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v14
 
@@ -1335,7 +1335,7 @@
 
     move-result-object v6
 
-    invoke-virtual {v5, v6}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+    invoke-virtual {v5, v6}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object v2
 

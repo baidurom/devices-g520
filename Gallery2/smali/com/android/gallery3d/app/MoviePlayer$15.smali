@@ -39,7 +39,7 @@
 
     sget-object v1, Lcom/android/gallery3d/app/MoviePlayer$TState;->RETRY_ERROR:Lcom/android/gallery3d/app/MoviePlayer$TState;
 
-    invoke-virtual {v1}, Lcom/android/gallery3d/app/MoviePlayer$TState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -55,7 +55,7 @@
 
     sget-object v1, Lcom/android/gallery3d/app/MoviePlayer$TState;->STOPED:Lcom/android/gallery3d/app/MoviePlayer$TState;
 
-    invoke-virtual {v1}, Lcom/android/gallery3d/app/MoviePlayer$TState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -71,7 +71,7 @@
 
     sget-object v1, Lcom/android/gallery3d/app/MoviePlayer$TState;->COMPELTED:Lcom/android/gallery3d/app/MoviePlayer$TState;
 
-    invoke-virtual {v1}, Lcom/android/gallery3d/app/MoviePlayer$TState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -87,7 +87,7 @@
 
     sget-object v1, Lcom/android/gallery3d/app/MoviePlayer$TState;->PAUSED:Lcom/android/gallery3d/app/MoviePlayer$TState;
 
-    invoke-virtual {v1}, Lcom/android/gallery3d/app/MoviePlayer$TState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 

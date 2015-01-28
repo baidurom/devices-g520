@@ -69,7 +69,7 @@
     .local v0, albumPath:Ljava/lang/String;
     new-instance v4, Lcom/android/gallery3d/gadget/WidgetService$PhotoRVFactory;
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/gadget/WidgetService;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v3
 

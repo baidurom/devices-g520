@@ -85,7 +85,7 @@
     const/4 v2, 0x0
 
     .line 206
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 184
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -565,7 +565,7 @@
 
     move-object/from16 v19, v0
 
-    invoke-virtual/range {v19 .. v19}, Landroid/net/rtp/AudioStream;->getLocalPort()I
+    invoke-virtual/range {v19 .. v19}, Landroid/net/rtp/RtpStream;->getLocalPort()I
 
     move-result v19
 
@@ -902,7 +902,7 @@
 
     iget-object v5, p0, Landroid/net/sip/SipAudioCall;->mAudioStream:Landroid/net/rtp/AudioStream;
 
-    invoke-virtual {v5}, Landroid/net/rtp/AudioStream;->getLocalPort()I
+    invoke-virtual {v5}, Landroid/net/rtp/RtpStream;->getLocalPort()I
 
     move-result v5
 
@@ -1017,7 +1017,7 @@
 
     iget-object v8, p0, Landroid/net/sip/SipAudioCall;->mAudioStream:Landroid/net/rtp/AudioStream;
 
-    invoke-virtual {v8}, Landroid/net/rtp/AudioStream;->getLocalPort()I
+    invoke-virtual {v8}, Landroid/net/rtp/RtpStream;->getLocalPort()I
 
     move-result v8
 
@@ -1638,7 +1638,7 @@
 
     move/from16 v0, v16
 
-    invoke-virtual {v13, v15, v0}, Landroid/net/rtp/AudioStream;->associate(Ljava/net/InetAddress;I)V
+    invoke-virtual {v13, v15, v0}, Landroid/net/rtp/RtpStream;->associate(Ljava/net/InetAddress;I)V
 
     .line 1035
     const/4 v15, -0x1
@@ -1726,7 +1726,7 @@
     .line 1048
     const/4 v15, 0x0
 
-    invoke-virtual {v13, v15}, Landroid/net/rtp/AudioStream;->setMode(I)V
+    invoke-virtual {v13, v15}, Landroid/net/rtp/RtpStream;->setMode(I)V
 
     .line 1064
     .end local v1           #address:Ljava/lang/String;
@@ -1765,7 +1765,7 @@
     .line 1050
     const/4 v15, 0x1
 
-    invoke-virtual {v13, v15}, Landroid/net/rtp/AudioStream;->setMode(I)V
+    invoke-virtual {v13, v15}, Landroid/net/rtp/RtpStream;->setMode(I)V
 
     goto :goto_3
 
@@ -1782,7 +1782,7 @@
     .line 1052
     const/4 v15, 0x2
 
-    invoke-virtual {v13, v15}, Landroid/net/rtp/AudioStream;->setMode(I)V
+    invoke-virtual {v13, v15}, Landroid/net/rtp/RtpStream;->setMode(I)V
 
     goto :goto_3
 
@@ -1799,7 +1799,7 @@
     .line 1054
     const/4 v15, 0x1
 
-    invoke-virtual {v13, v15}, Landroid/net/rtp/AudioStream;->setMode(I)V
+    invoke-virtual {v13, v15}, Landroid/net/rtp/RtpStream;->setMode(I)V
 
     goto :goto_3
 
@@ -1816,7 +1816,7 @@
     .line 1056
     const/4 v15, 0x2
 
-    invoke-virtual {v13, v15}, Landroid/net/rtp/AudioStream;->setMode(I)V
+    invoke-virtual {v13, v15}, Landroid/net/rtp/RtpStream;->setMode(I)V
 
     goto :goto_3
 
@@ -1824,7 +1824,7 @@
     :cond_b
     const/4 v15, 0x0
 
-    invoke-virtual {v13, v15}, Landroid/net/rtp/AudioStream;->setMode(I)V
+    invoke-virtual {v13, v15}, Landroid/net/rtp/RtpStream;->setMode(I)V
 
     goto :goto_3
 
@@ -1933,7 +1933,7 @@
     .line 1105
     iget-object v0, p0, Landroid/net/sip/SipAudioCall;->mAudioStream:Landroid/net/rtp/AudioStream;
 
-    invoke-virtual {v0}, Landroid/net/rtp/AudioStream;->release()V
+    invoke-virtual {v0}, Landroid/net/rtp/RtpStream;->release()V
 
     .line 1106
     iput-object v2, p0, Landroid/net/sip/SipAudioCall;->mAudioStream:Landroid/net/rtp/AudioStream;
@@ -3286,7 +3286,7 @@
     .local v0, e:Ljava/net/UnknownHostException;
     const/4 v1, -0x7
 
-    invoke-virtual {v0}, Ljava/net/UnknownHostException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v2
 

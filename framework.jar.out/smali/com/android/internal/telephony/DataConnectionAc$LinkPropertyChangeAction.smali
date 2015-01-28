@@ -116,7 +116,7 @@
     .line 138
     sget-object v0, Lcom/android/internal/telephony/DataConnectionAc$LinkPropertyChangeAction;->NONE:Lcom/android/internal/telephony/DataConnectionAc$LinkPropertyChangeAction;
 
-    invoke-virtual {v0}, Lcom/android/internal/telephony/DataConnectionAc$LinkPropertyChangeAction;->ordinal()I
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v0
 
@@ -133,7 +133,7 @@
     :cond_0
     sget-object v0, Lcom/android/internal/telephony/DataConnectionAc$LinkPropertyChangeAction;->CHANGED:Lcom/android/internal/telephony/DataConnectionAc$LinkPropertyChangeAction;
 
-    invoke-virtual {v0}, Lcom/android/internal/telephony/DataConnectionAc$LinkPropertyChangeAction;->ordinal()I
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v0
 
@@ -148,7 +148,7 @@
     :cond_1
     sget-object v0, Lcom/android/internal/telephony/DataConnectionAc$LinkPropertyChangeAction;->RESET:Lcom/android/internal/telephony/DataConnectionAc$LinkPropertyChangeAction;
 
-    invoke-virtual {v0}, Lcom/android/internal/telephony/DataConnectionAc$LinkPropertyChangeAction;->ordinal()I
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v0
 
@@ -210,7 +210,7 @@
     .line 134
     sget-object v0, Lcom/android/internal/telephony/DataConnectionAc$LinkPropertyChangeAction;->$VALUES:[Lcom/android/internal/telephony/DataConnectionAc$LinkPropertyChangeAction;
 
-    invoke-virtual {v0}, [Lcom/android/internal/telephony/DataConnectionAc$LinkPropertyChangeAction;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

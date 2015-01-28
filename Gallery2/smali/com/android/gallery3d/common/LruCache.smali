@@ -61,7 +61,7 @@
     .prologue
     .line 37
     .local p0, this:Lcom/android/gallery3d/common/LruCache;,"Lcom/android/gallery3d/common/LruCache<TK;TV;>;"
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 32
     new-instance v0, Ljava/util/HashMap;
@@ -287,7 +287,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-virtual {v0}, Lcom/android/gallery3d/common/LruCache$Entry;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -361,7 +361,7 @@
 
     :cond_0
     :try_start_1
-    invoke-virtual {v0}, Lcom/android/gallery3d/common/LruCache$Entry;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 

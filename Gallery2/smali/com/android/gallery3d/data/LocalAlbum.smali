@@ -1378,7 +1378,7 @@
     invoke-static {v1, v3}, Lcom/android/gallery3d/data/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 210
-    invoke-virtual {p0}, Lcom/android/gallery3d/data/LocalAlbum;->notifyContentChanged()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/data/MediaSet;->notifyContentChanged()V
 
     goto :goto_0
 

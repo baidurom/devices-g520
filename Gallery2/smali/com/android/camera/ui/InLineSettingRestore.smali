@@ -27,13 +27,13 @@
     .line 35
     const v0, 0x7f0b000d
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/ui/InLineSettingRestore;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/TextView;
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/InLineSettingRestore;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 

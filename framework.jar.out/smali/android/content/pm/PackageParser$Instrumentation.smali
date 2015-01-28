@@ -87,7 +87,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Landroid/content/pm/PackageParser$Instrumentation;->getComponentShortName()Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/content/pm/PackageParser$Component;->getComponentShortName()Ljava/lang/String;
 
     move-result-object v1
 

@@ -163,7 +163,7 @@
     const/4 v1, 0x1
 
     .line 89
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 52
     new-array v0, v3, [F
@@ -1293,7 +1293,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v4, v6}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {v4, v6}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
 
     .line 180
     new-array v1, v9, [I
@@ -1313,7 +1313,7 @@
     invoke-interface {v0, v10, v4}, Ljavax/microedition/khronos/opengles/GL11;->glBindBuffer(II)V
 
     .line 185
-    invoke-virtual {v3}, Ljava/nio/FloatBuffer;->capacity()I
+    invoke-virtual {v3}, Ljava/nio/Buffer;->capacity()I
 
     move-result v4
 

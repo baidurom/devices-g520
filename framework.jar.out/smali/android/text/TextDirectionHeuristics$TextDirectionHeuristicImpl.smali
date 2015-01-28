@@ -28,7 +28,7 @@
 
     .prologue
     .line 80
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 81
     iput-object p1, p0, Landroid/text/TextDirectionHeuristics$TextDirectionHeuristicImpl;->mAlgorithm:Landroid/text/TextDirectionHeuristics$TextDirectionAlgorithm;
@@ -53,7 +53,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/text/TextDirectionHeuristics$TriState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 

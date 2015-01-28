@@ -45,7 +45,7 @@
     const/4 v1, 0x0
 
     .line 37
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 38
     const/4 v0, 0x1
@@ -407,7 +407,7 @@
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 223
-    invoke-virtual {v7}, Ljava/net/UnknownHostException;->printStackTrace()V
+    invoke-virtual {v7}, Ljava/lang/Throwable;->printStackTrace()V
 
     .line 224
     sget-object v13, Lcom/android/internal/telephony/DataCallState$SetupResult;->ERR_UnacceptableParameter:Lcom/android/internal/telephony/DataCallState$SetupResult;

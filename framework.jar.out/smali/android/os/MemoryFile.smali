@@ -58,7 +58,7 @@
     const/4 v1, 0x0
 
     .line 69
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 60
     iput-boolean v1, p0, Landroid/os/MemoryFile;->mAllowPurging:Z
@@ -352,7 +352,7 @@
     .local v0, ex:Ljava/io/IOException;
     sget-object v1, Landroid/os/MemoryFile;->TAG:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/io/IOException;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v2
 

@@ -70,7 +70,7 @@
 
     .prologue
     .line 1784
-    invoke-virtual {p0}, Lcom/android/server/sip/SipSessionGroup$MakeCallCommand;->getSource()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/util/EventObject;->getSource()Ljava/lang/Object;
 
     move-result-object v0
 

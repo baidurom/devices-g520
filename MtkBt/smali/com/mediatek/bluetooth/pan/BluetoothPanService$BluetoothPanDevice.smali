@@ -33,7 +33,7 @@
     .line 500
     iput-object p1, p0, Lcom/mediatek/bluetooth/pan/BluetoothPanService$BluetoothPanDevice;->this$0:Lcom/mediatek/bluetooth/pan/BluetoothPanService;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 501
     iput p2, p0, Lcom/mediatek/bluetooth/pan/BluetoothPanService$BluetoothPanDevice;->mState:I

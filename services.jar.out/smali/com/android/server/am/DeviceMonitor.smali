@@ -180,7 +180,7 @@
 
     .prologue
     .line 46
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 41
     const/16 v0, 0x400
@@ -199,7 +199,7 @@
 
     invoke-direct {v0, p0}, Lcom/android/server/am/DeviceMonitor$1;-><init>(Lcom/android/server/am/DeviceMonitor;)V
 
-    invoke-virtual {v0}, Lcom/android/server/am/DeviceMonitor$1;->start()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     .line 52
     return-void
@@ -398,7 +398,7 @@
     :try_start_1
     iget-object v3, p0, Lcom/android/server/am/DeviceMonitor;->buffer:[B
 
-    invoke-virtual {v2, v3}, Ljava/io/FileInputStream;->read([B)I
+    invoke-virtual {v2, v3}, Ljava/io/InputStream;->read([B)I
 
     move-result v0
 

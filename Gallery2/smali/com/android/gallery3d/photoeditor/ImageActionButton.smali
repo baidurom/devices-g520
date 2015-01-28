@@ -31,7 +31,7 @@
 
     .prologue
     .line 38
-    invoke-super {p0, p1}, Landroid/widget/ImageButton;->setEnabled(Z)V
+    invoke-super {p0, p1}, Landroid/view/View;->setEnabled(Z)V
 
     .line 39
     if-eqz p1, :cond_0
@@ -39,7 +39,7 @@
     const/high16 v0, 0x3f80
 
     :goto_0
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/photoeditor/ImageActionButton;->setAlpha(F)V
+    invoke-virtual {p0, v0}, Landroid/view/View;->setAlpha(F)V
 
     .line 40
     return-void

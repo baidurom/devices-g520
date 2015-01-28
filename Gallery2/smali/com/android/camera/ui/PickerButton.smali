@@ -146,7 +146,7 @@
     :cond_1
     iget-object v4, p0, Lcom/android/camera/ui/PickerButton;->mPreference:Lcom/android/camera/IconListPreference;
 
-    invoke-virtual {v4}, Lcom/android/camera/IconListPreference;->getValue()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/android/camera/ListPreference;->getValue()Ljava/lang/String;
 
     move-result-object v2
 
@@ -154,7 +154,7 @@
     .local v2, value:Ljava/lang/String;
     iget-object v4, p0, Lcom/android/camera/ui/PickerButton;->mPreference:Lcom/android/camera/IconListPreference;
 
-    invoke-virtual {v4, v2}, Lcom/android/camera/IconListPreference;->findIndexOfValue(Ljava/lang/String;)I
+    invoke-virtual {v4, v2}, Lcom/android/camera/ListPreference;->findIndexOfValue(Ljava/lang/String;)I
 
     move-result v0
 
@@ -171,7 +171,7 @@
     :cond_2
     iget-object v4, p0, Lcom/android/camera/ui/PickerButton;->mPreference:Lcom/android/camera/IconListPreference;
 
-    invoke-virtual {v4}, Lcom/android/camera/IconListPreference;->getEntryValues()[Ljava/lang/CharSequence;
+    invoke-virtual {v4}, Lcom/android/camera/ListPreference;->getEntryValues()[Ljava/lang/CharSequence;
 
     move-result-object v3
 
@@ -187,7 +187,7 @@
     .line 108
     iget-object v4, p0, Lcom/android/camera/ui/PickerButton;->mPreference:Lcom/android/camera/IconListPreference;
 
-    invoke-virtual {v4, v0}, Lcom/android/camera/IconListPreference;->isEnabled(I)Z
+    invoke-virtual {v4, v0}, Lcom/android/camera/ListPreference;->isEnabled(I)Z
 
     move-result v4
 
@@ -210,7 +210,7 @@
 
     iget-object v5, p0, Lcom/android/camera/ui/PickerButton;->mPreference:Lcom/android/camera/IconListPreference;
 
-    invoke-virtual {v5}, Lcom/android/camera/IconListPreference;->getKey()Ljava/lang/String;
+    invoke-virtual {v5}, Lcom/android/camera/ListPreference;->getKey()Ljava/lang/String;
 
     move-result-object v5
 
@@ -223,7 +223,7 @@
     .line 111
     iget-object v4, p0, Lcom/android/camera/ui/PickerButton;->mPreference:Lcom/android/camera/IconListPreference;
 
-    invoke-virtual {v4, v0}, Lcom/android/camera/IconListPreference;->setValueIndex(I)V
+    invoke-virtual {v4, v0}, Lcom/android/camera/ListPreference;->setValueIndex(I)V
 
     .line 112
     invoke-virtual {p0}, Lcom/android/camera/ui/PickerButton;->reloadPreference()V
@@ -273,7 +273,7 @@
 
     iget-object v3, p0, Lcom/android/camera/ui/PickerButton;->mPreference:Lcom/android/camera/IconListPreference;
 
-    invoke-virtual {v3}, Lcom/android/camera/IconListPreference;->getEntries()[Ljava/lang/CharSequence;
+    invoke-virtual {v3}, Lcom/android/camera/ListPreference;->getEntries()[Ljava/lang/CharSequence;
 
     move-result-object v3
 
@@ -281,7 +281,7 @@
 
     iget-object v3, p0, Lcom/android/camera/ui/PickerButton;->mPreference:Lcom/android/camera/IconListPreference;
 
-    invoke-virtual {v3}, Lcom/android/camera/IconListPreference;->getEntries()[Ljava/lang/CharSequence;
+    invoke-virtual {v3}, Lcom/android/camera/ListPreference;->getEntries()[Ljava/lang/CharSequence;
 
     move-result-object v3
 
@@ -293,7 +293,7 @@
 
     iget-object v3, p0, Lcom/android/camera/ui/PickerButton;->mPreference:Lcom/android/camera/IconListPreference;
 
-    invoke-virtual {v3}, Lcom/android/camera/IconListPreference;->isEnabled()Z
+    invoke-virtual {v3}, Lcom/android/camera/ListPreference;->isEnabled()Z
 
     move-result v3
 
@@ -301,7 +301,7 @@
 
     iget-object v3, p0, Lcom/android/camera/ui/PickerButton;->mPreference:Lcom/android/camera/IconListPreference;
 
-    invoke-virtual {v3}, Lcom/android/camera/IconListPreference;->getOverrideValue()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/android/camera/ListPreference;->getOverrideValue()Ljava/lang/String;
 
     move-result-object v3
 
@@ -311,7 +311,7 @@
     :cond_1
     const/16 v3, 0x8
 
-    invoke-virtual {p0, v3}, Lcom/android/camera/ui/PickerButton;->setVisibility(I)V
+    invoke-virtual {p0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 81
     :goto_0
@@ -321,12 +321,12 @@
     :cond_2
     const/4 v3, 0x0
 
-    invoke-virtual {p0, v3}, Lcom/android/camera/ui/PickerButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p0, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 67
     iget-object v3, p0, Lcom/android/camera/ui/PickerButton;->mPreference:Lcom/android/camera/IconListPreference;
 
-    invoke-virtual {v3}, Lcom/android/camera/IconListPreference;->getValue()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/android/camera/ListPreference;->getValue()Ljava/lang/String;
 
     move-result-object v2
 
@@ -334,7 +334,7 @@
     .local v2, value:Ljava/lang/String;
     iget-object v3, p0, Lcom/android/camera/ui/PickerButton;->mPreference:Lcom/android/camera/IconListPreference;
 
-    invoke-virtual {v3, v2}, Lcom/android/camera/IconListPreference;->findIndexOfValue(Ljava/lang/String;)I
+    invoke-virtual {v3, v2}, Lcom/android/camera/ListPreference;->findIndexOfValue(Ljava/lang/String;)I
 
     move-result v1
 
@@ -360,17 +360,17 @@
     .line 72
     aget v3, v0, v1
 
-    invoke-virtual {p0, v3}, Lcom/android/camera/ui/PickerButton;->setImageResource(I)V
+    invoke-virtual {p0, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 78
     :cond_3
     :goto_1
-    invoke-virtual {p0, p0}, Lcom/android/camera/ui/PickerButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 79
     const/4 v3, 0x0
 
-    invoke-virtual {p0, v3}, Lcom/android/camera/ui/PickerButton;->setVisibility(I)V
+    invoke-virtual {p0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
     goto :goto_0
 
@@ -383,7 +383,7 @@
     .line 75
     aget v3, v0, v1
 
-    invoke-virtual {p0, v3}, Lcom/android/camera/ui/PickerButton;->setImageResource(I)V
+    invoke-virtual {p0, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
     goto :goto_1
 .end method
@@ -455,7 +455,7 @@
 
     iget-object v0, p0, Lcom/android/camera/ui/PickerButton;->mPreference:Lcom/android/camera/IconListPreference;
 
-    invoke-virtual {v0}, Lcom/android/camera/IconListPreference;->getValue()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/android/camera/ListPreference;->getValue()Ljava/lang/String;
 
     move-result-object v0
 
@@ -468,7 +468,7 @@
     .line 121
     iget-object v0, p0, Lcom/android/camera/ui/PickerButton;->mPreference:Lcom/android/camera/IconListPreference;
 
-    invoke-virtual {v0, p1}, Lcom/android/camera/IconListPreference;->setValue(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/android/camera/ListPreference;->setValue(Ljava/lang/String;)V
 
     .line 122
     invoke-virtual {p0}, Lcom/android/camera/ui/PickerButton;->reloadPreference()V
@@ -489,7 +489,7 @@
 
     iget-object v0, p0, Lcom/android/camera/ui/PickerButton;->mPreference:Lcom/android/camera/IconListPreference;
 
-    invoke-virtual {v0}, Lcom/android/camera/IconListPreference;->getEntries()[Ljava/lang/CharSequence;
+    invoke-virtual {v0}, Lcom/android/camera/ListPreference;->getEntries()[Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -497,7 +497,7 @@
 
     iget-object v0, p0, Lcom/android/camera/ui/PickerButton;->mPreference:Lcom/android/camera/IconListPreference;
 
-    invoke-virtual {v0}, Lcom/android/camera/IconListPreference;->getEntries()[Ljava/lang/CharSequence;
+    invoke-virtual {v0}, Lcom/android/camera/ListPreference;->getEntries()[Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -509,7 +509,7 @@
 
     iget-object v0, p0, Lcom/android/camera/ui/PickerButton;->mPreference:Lcom/android/camera/IconListPreference;
 
-    invoke-virtual {v0}, Lcom/android/camera/IconListPreference;->isEnabled()Z
+    invoke-virtual {v0}, Lcom/android/camera/ListPreference;->isEnabled()Z
 
     move-result v0
 
@@ -519,7 +519,7 @@
     :cond_0
     const/16 v0, 0x8
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/ui/PickerButton;->setVisibility(I)V
+    invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 91
     :goto_0
@@ -529,7 +529,7 @@
     :cond_1
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/ui/PickerButton;->setVisibility(I)V
+    invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setVisibility(I)V
 
     goto :goto_0
 .end method

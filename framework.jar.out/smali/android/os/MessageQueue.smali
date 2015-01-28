@@ -49,7 +49,7 @@
 
     .prologue
     .line 103
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 40
     new-instance v0, Ljava/util/ArrayList;
@@ -395,7 +395,7 @@
     .local v0, e:Ljava/lang/RuntimeException;
     const-string v4, "MessageQueue"
 
-    invoke-virtual {v0}, Ljava/lang/RuntimeException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v5
 

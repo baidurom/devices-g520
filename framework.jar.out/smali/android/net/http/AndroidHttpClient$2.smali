@@ -49,7 +49,7 @@
     .local v0, context:Lorg/apache/http/protocol/HttpContext;
     const-string v1, "http.authscheme-registry"
 
-    invoke-virtual {p0}, Landroid/net/http/AndroidHttpClient$2;->getAuthSchemes()Lorg/apache/http/auth/AuthSchemeRegistry;
+    invoke-virtual {p0}, Lorg/apache/http/impl/client/AbstractHttpClient;->getAuthSchemes()Lorg/apache/http/auth/AuthSchemeRegistry;
 
     move-result-object v2
 
@@ -58,7 +58,7 @@
     .line 199
     const-string v1, "http.cookiespec-registry"
 
-    invoke-virtual {p0}, Landroid/net/http/AndroidHttpClient$2;->getCookieSpecs()Lorg/apache/http/cookie/CookieSpecRegistry;
+    invoke-virtual {p0}, Lorg/apache/http/impl/client/AbstractHttpClient;->getCookieSpecs()Lorg/apache/http/cookie/CookieSpecRegistry;
 
     move-result-object v2
 
@@ -67,7 +67,7 @@
     .line 202
     const-string v1, "http.auth.credentials-provider"
 
-    invoke-virtual {p0}, Landroid/net/http/AndroidHttpClient$2;->getCredentialsProvider()Lorg/apache/http/client/CredentialsProvider;
+    invoke-virtual {p0}, Lorg/apache/http/impl/client/AbstractHttpClient;->getCredentialsProvider()Lorg/apache/http/client/CredentialsProvider;
 
     move-result-object v2
 

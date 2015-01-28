@@ -64,7 +64,7 @@
     const/4 v0, 0x0
 
     .line 129
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 112
     iput-object v0, p0, Lcom/mediatek/bluetooth/pbap/BluetoothPbapServer;->mSimAdn:Lcom/android/bluetooth/pbap/BluetoothPbapSimAdn;
@@ -2894,7 +2894,7 @@
     :try_start_0
     iget-object v1, p0, Lcom/mediatek/bluetooth/pbap/BluetoothPbapServer;->mListener:Lcom/mediatek/bluetooth/pbap/BluetoothPbapServer$PbapSocketListener;
 
-    invoke-virtual {v1}, Lcom/mediatek/bluetooth/pbap/BluetoothPbapServer$PbapSocketListener;->join()V
+    invoke-virtual {v1}, Ljava/lang/Thread;->join()V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2986,7 +2986,7 @@
     .line 283
     iget-object v1, p0, Lcom/mediatek/bluetooth/pbap/BluetoothPbapServer;->mListener:Lcom/mediatek/bluetooth/pbap/BluetoothPbapServer$PbapSocketListener;
 
-    invoke-virtual {v1}, Lcom/mediatek/bluetooth/pbap/BluetoothPbapServer$PbapSocketListener;->start()V
+    invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
     .line 284
     const/4 v0, 0x1

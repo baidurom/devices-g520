@@ -55,7 +55,7 @@
 
     .prologue
     .line 70
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 71
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -100,7 +100,7 @@
 
     .prologue
     .line 64
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 65
     iput-object p1, p0, Landroid/view/inputmethod/BaseInputConnection;->mIMM:Landroid/view/inputmethod/InputMethodManager;

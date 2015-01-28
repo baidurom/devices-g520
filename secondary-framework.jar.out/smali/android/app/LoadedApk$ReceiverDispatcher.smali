@@ -52,7 +52,7 @@
 
     .prologue
     .line 810
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 811
     if-nez p3, :cond_0
@@ -106,7 +106,7 @@
     .line 822
     iget-object v0, p0, Landroid/app/LoadedApk$ReceiverDispatcher;->mLocation:Landroid/app/IntentReceiverLeaked;
 
-    invoke-virtual {v0}, Landroid/app/IntentReceiverLeaked;->fillInStackTrace()Ljava/lang/Throwable;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->fillInStackTrace()Ljava/lang/Throwable;
 
     .line 823
     return-void
@@ -213,7 +213,7 @@
 
     .line 873
     .local v8, mgr:Landroid/app/IActivityManager;
-    invoke-virtual {v0, v8}, Landroid/app/LoadedApk$ReceiverDispatcher$Args;->sendFinished(Landroid/app/IActivityManager;)V
+    invoke-virtual {v0, v8}, Landroid/content/BroadcastReceiver$PendingResult;->sendFinished(Landroid/app/IActivityManager;)V
 
     .line 876
     .end local v8           #mgr:Landroid/app/IActivityManager;

@@ -284,19 +284,19 @@
 
     .line 82
     .local v5, nextValue:F
-    invoke-virtual {v7}, Landroid/animation/Keyframe$FloatKeyframe;->getFraction()F
+    invoke-virtual {v7}, Landroid/animation/Keyframe;->getFraction()F
 
     move-result v6
 
     .line 83
     .local v6, prevFraction:F
-    invoke-virtual {v4}, Landroid/animation/Keyframe$FloatKeyframe;->getFraction()F
+    invoke-virtual {v4}, Landroid/animation/Keyframe;->getFraction()F
 
     move-result v3
 
     .line 84
     .local v3, nextFraction:F
-    invoke-virtual {v4}, Landroid/animation/Keyframe$FloatKeyframe;->getInterpolator()Landroid/animation/TimeInterpolator;
+    invoke-virtual {v4}, Landroid/animation/Keyframe;->getInterpolator()Landroid/animation/TimeInterpolator;
 
     move-result-object v1
 
@@ -411,19 +411,19 @@
 
     .line 98
     .restart local v5       #nextValue:F
-    invoke-virtual {v7}, Landroid/animation/Keyframe$FloatKeyframe;->getFraction()F
+    invoke-virtual {v7}, Landroid/animation/Keyframe;->getFraction()F
 
     move-result v6
 
     .line 99
     .restart local v6       #prevFraction:F
-    invoke-virtual {v4}, Landroid/animation/Keyframe$FloatKeyframe;->getFraction()F
+    invoke-virtual {v4}, Landroid/animation/Keyframe;->getFraction()F
 
     move-result v3
 
     .line 100
     .restart local v3       #nextFraction:F
-    invoke-virtual {v4}, Landroid/animation/Keyframe$FloatKeyframe;->getInterpolator()Landroid/animation/TimeInterpolator;
+    invoke-virtual {v4}, Landroid/animation/Keyframe;->getInterpolator()Landroid/animation/TimeInterpolator;
 
     move-result-object v1
 
@@ -520,7 +520,7 @@
 
     .line 113
     .restart local v4       #nextKeyframe:Landroid/animation/Keyframe$FloatKeyframe;
-    invoke-virtual {v4}, Landroid/animation/Keyframe$FloatKeyframe;->getFraction()F
+    invoke-virtual {v4}, Landroid/animation/Keyframe;->getFraction()F
 
     move-result v9
 
@@ -529,7 +529,7 @@
     if-gez v9, :cond_c
 
     .line 114
-    invoke-virtual {v4}, Landroid/animation/Keyframe$FloatKeyframe;->getInterpolator()Landroid/animation/TimeInterpolator;
+    invoke-virtual {v4}, Landroid/animation/Keyframe;->getInterpolator()Landroid/animation/TimeInterpolator;
 
     move-result-object v1
 
@@ -544,17 +544,17 @@
 
     .line 118
     :cond_a
-    invoke-virtual {v7}, Landroid/animation/Keyframe$FloatKeyframe;->getFraction()F
+    invoke-virtual {v7}, Landroid/animation/Keyframe;->getFraction()F
 
     move-result v9
 
     sub-float v9, p1, v9
 
-    invoke-virtual {v4}, Landroid/animation/Keyframe$FloatKeyframe;->getFraction()F
+    invoke-virtual {v4}, Landroid/animation/Keyframe;->getFraction()F
 
     move-result v10
 
-    invoke-virtual {v7}, Landroid/animation/Keyframe$FloatKeyframe;->getFraction()F
+    invoke-virtual {v7}, Landroid/animation/Keyframe;->getFraction()F
 
     move-result v11
 

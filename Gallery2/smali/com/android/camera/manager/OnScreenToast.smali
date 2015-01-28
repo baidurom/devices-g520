@@ -60,7 +60,7 @@
     const/4 v1, -0x1
 
     .line 72
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 60
     new-instance v0, Landroid/view/WindowManager$LayoutParams;
@@ -536,7 +536,7 @@
     .line 234
     iget-object v2, p0, Lcom/android/camera/manager/OnScreenToast;->mLayout:Landroid/widget/RelativeLayout;
 
-    invoke-virtual {v2}, Landroid/widget/RelativeLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
@@ -550,7 +550,7 @@
     .line 237
     iget-object v2, p0, Lcom/android/camera/manager/OnScreenToast;->mLayout:Landroid/widget/RelativeLayout;
 
-    invoke-virtual {v2, v1}, Landroid/widget/RelativeLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v2, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 238
     new-instance v0, Landroid/widget/RelativeLayout$LayoutParams;
@@ -571,7 +571,7 @@
     .line 243
     iget-object v2, p0, Lcom/android/camera/manager/OnScreenToast;->mText:Landroid/widget/TextView;
 
-    invoke-virtual {v2, v0}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v2, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 255
     :goto_0
@@ -589,7 +589,7 @@
     :cond_2
     iget-object v2, p0, Lcom/android/camera/manager/OnScreenToast;->mLayout:Landroid/widget/RelativeLayout;
 
-    invoke-virtual {v2}, Landroid/widget/RelativeLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
@@ -603,7 +603,7 @@
     .line 248
     iget-object v2, p0, Lcom/android/camera/manager/OnScreenToast;->mLayout:Landroid/widget/RelativeLayout;
 
-    invoke-virtual {v2, v1}, Landroid/widget/RelativeLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v2, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 249
     new-instance v0, Landroid/widget/RelativeLayout$LayoutParams;
@@ -619,7 +619,7 @@
     .line 253
     iget-object v2, p0, Lcom/android/camera/manager/OnScreenToast;->mText:Landroid/widget/TextView;
 
-    invoke-virtual {v2, v0}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v2, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     goto :goto_0
 .end method

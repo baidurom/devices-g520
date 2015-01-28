@@ -285,13 +285,13 @@
 
     const/16 v8, 0x400
 
-    invoke-virtual {v3, v0, v7, v8}, Ljava/io/FileReader;->read([CII)I
+    invoke-virtual {v3, v0, v7, v8}, Ljava/io/InputStreamReader;->read([CII)I
 
     move-result v5
 
     .line 209
     .local v5, len:I
-    invoke-virtual {v3}, Ljava/io/FileReader;->close()V
+    invoke-virtual {v3}, Ljava/io/InputStreamReader;->close()V
 
     .line 210
     new-instance v7, Ljava/lang/String;

@@ -660,7 +660,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/BootReceiver$1;-><init>(Lcom/android/server/BootReceiver;Landroid/content/Context;)V
 
-    invoke-virtual {v0}, Lcom/android/server/BootReceiver$1;->start()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     .line 79
     return-void

@@ -45,7 +45,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Landroid/net/wifi/WifiStateMachine$DriverLoadedState;->getName()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/internal/util/State;->getName()Ljava/lang/String;
 
     move-result-object v2
 
@@ -69,7 +69,7 @@
     .line 2448
     const v0, 0xc365
 
-    invoke-virtual {p0}, Landroid/net/wifi/WifiStateMachine$DriverLoadedState;->getName()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/internal/util/State;->getName()Ljava/lang/String;
 
     move-result-object v1
 
@@ -107,7 +107,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Landroid/net/wifi/WifiStateMachine$DriverLoadedState;->getName()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/internal/util/State;->getName()Ljava/lang/String;
 
     move-result-object v7
 
@@ -414,11 +414,11 @@
 
     const/4 v8, 0x4
 
-    invoke-virtual {v6, v7, v8, v3}, Landroid/net/wifi/WifiStateMachine;->obtainMessage(III)Landroid/os/Message;
+    invoke-virtual {v6, v7, v8, v3}, Lcom/android/internal/util/StateMachine;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object v3
 
-    invoke-virtual {v5, v3}, Landroid/net/wifi/WifiStateMachine;->sendMessage(Landroid/os/Message;)V
+    invoke-virtual {v5, v3}, Lcom/android/internal/util/StateMachine;->sendMessage(Landroid/os/Message;)V
 
     goto/16 :goto_1
 

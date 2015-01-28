@@ -96,7 +96,7 @@
     iput-boolean v0, p0, Lcom/android/camera/manager/ShutterManager;->mFullScreen:Z
 
     .line 49
-    invoke-virtual {p0, v1}, Lcom/android/camera/manager/ShutterManager;->setFileter(Z)V
+    invoke-virtual {p0, v1}, Lcom/android/camera/manager/ViewManager;->setFileter(Z)V
 
     .line 50
     invoke-virtual {p1, p0}, Lcom/android/camera/Camera;->addOnFullScreenChangedListener(Lcom/android/camera/Camera$OnFullScreenChangedListener;)Z
@@ -337,7 +337,7 @@
 
     .line 76
     :goto_0
-    invoke-virtual {p0, v0}, Lcom/android/camera/manager/ShutterManager;->inflate(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/android/camera/manager/ViewManager;->inflate(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -567,7 +567,7 @@
     iput-boolean p1, p0, Lcom/android/camera/manager/ShutterManager;->mFullScreen:Z
 
     .line 275
-    invoke-virtual {p0}, Lcom/android/camera/manager/ShutterManager;->refresh()V
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->refresh()V
 
     .line 276
     return-void
@@ -623,7 +623,7 @@
 
     move-result-object v5
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/ShutterManager;->isEnabled()Z
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->isEnabled()Z
 
     move-result v6
 
@@ -644,11 +644,11 @@
     if-eqz v4, :cond_1
 
     .line 159
-    invoke-virtual {p0}, Lcom/android/camera/manager/ShutterManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v4
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/ShutterManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v5
 
@@ -668,7 +668,7 @@
 
     if-eqz v4, :cond_5
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/ShutterManager;->isEnabled()Z
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->isEnabled()Z
 
     move-result v4
 
@@ -680,7 +680,7 @@
 
     if-eqz v1, :cond_5
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/ShutterManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v4
 
@@ -701,12 +701,12 @@
     :goto_0
     iget-object v4, p0, Lcom/android/camera/manager/ShutterManager;->mVideoShutter:Lcom/android/camera/ui/ShutterButton;
 
-    invoke-virtual {v4, v0}, Lcom/android/camera/ui/ShutterButton;->setEnabled(Z)V
+    invoke-virtual {v4, v0}, Lcom/android/camera/ui/TwoStateImageView;->setEnabled(Z)V
 
     .line 164
     iget-object v4, p0, Lcom/android/camera/manager/ShutterManager;->mVideoShutter:Lcom/android/camera/ui/ShutterButton;
 
-    invoke-virtual {v4, v0}, Lcom/android/camera/ui/ShutterButton;->setClickable(Z)V
+    invoke-virtual {v4, v0}, Landroid/view/View;->setClickable(Z)V
 
     .line 165
     iget-boolean v4, p0, Lcom/android/camera/manager/ShutterManager;->mVideoShutterMasked:Z
@@ -718,7 +718,7 @@
 
     const v5, 0x7f020030
 
-    invoke-virtual {v4, v5}, Lcom/android/camera/ui/ShutterButton;->setImageResource(I)V
+    invoke-virtual {v4, v5}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 171
     .end local v0           #enabled:Z
@@ -734,7 +734,7 @@
 
     if-eqz v4, :cond_7
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/ShutterManager;->isEnabled()Z
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->isEnabled()Z
 
     move-result v4
 
@@ -751,12 +751,12 @@
     :goto_2
     iget-object v4, p0, Lcom/android/camera/manager/ShutterManager;->mPhotoShutter:Lcom/android/camera/ui/ShutterButton;
 
-    invoke-virtual {v4, v0}, Lcom/android/camera/ui/ShutterButton;->setEnabled(Z)V
+    invoke-virtual {v4, v0}, Lcom/android/camera/ui/TwoStateImageView;->setEnabled(Z)V
 
     .line 174
     iget-object v4, p0, Lcom/android/camera/manager/ShutterManager;->mPhotoShutter:Lcom/android/camera/ui/ShutterButton;
 
-    invoke-virtual {v4, v0}, Lcom/android/camera/ui/ShutterButton;->setClickable(Z)V
+    invoke-virtual {v4, v0}, Landroid/view/View;->setClickable(Z)V
 
     .line 176
     .end local v0           #enabled:Z
@@ -766,7 +766,7 @@
     if-eqz v4, :cond_3
 
     .line 177
-    invoke-virtual {p0}, Lcom/android/camera/manager/ShutterManager;->isEnabled()Z
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->isEnabled()Z
 
     move-result v4
 
@@ -802,7 +802,7 @@
 
     if-eqz v4, :cond_9
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/ShutterManager;->isEnabled()Z
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->isEnabled()Z
 
     move-result v4
 
@@ -845,7 +845,7 @@
 
     const v5, 0x7f02002f
 
-    invoke-virtual {v4, v5}, Lcom/android/camera/ui/ShutterButton;->setImageResource(I)V
+    invoke-virtual {v4, v5}, Landroid/widget/ImageView;->setImageResource(I)V
 
     goto :goto_1
 
@@ -951,7 +951,7 @@
 
     iget-object v1, p0, Lcom/android/camera/manager/ShutterManager;->mPhotoShutter:Lcom/android/camera/ui/ShutterButton;
 
-    invoke-virtual {v1}, Lcom/android/camera/ui/ShutterButton;->isEnabled()Z
+    invoke-virtual {v1}, Landroid/view/View;->isEnabled()Z
 
     move-result v1
 
@@ -1057,7 +1057,7 @@
     iput-boolean p1, p0, Lcom/android/camera/manager/ShutterManager;->mCancelButtonEnabled:Z
 
     .line 247
-    invoke-virtual {p0}, Lcom/android/camera/manager/ShutterManager;->refresh()V
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->refresh()V
 
     .line 248
     return-void
@@ -1072,7 +1072,7 @@
     invoke-super {p0, p1}, Lcom/android/camera/manager/ViewManager;->setEnabled(Z)V
 
     .line 269
-    invoke-virtual {p0}, Lcom/android/camera/manager/ShutterManager;->refresh()V
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->refresh()V
 
     .line 270
     return-void
@@ -1122,7 +1122,7 @@
     iput-boolean p1, p0, Lcom/android/camera/manager/ShutterManager;->mPhotoShutterEnabled:Z
 
     .line 216
-    invoke-virtual {p0}, Lcom/android/camera/manager/ShutterManager;->refresh()V
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->refresh()V
 
     .line 217
     return-void
@@ -1199,7 +1199,7 @@
     iput-boolean p1, p0, Lcom/android/camera/manager/ShutterManager;->mVideoShutterEnabled:Z
 
     .line 231
-    invoke-virtual {p0}, Lcom/android/camera/manager/ShutterManager;->refresh()V
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->refresh()V
 
     .line 232
     return-void
@@ -1249,7 +1249,7 @@
     iput-boolean p1, p0, Lcom/android/camera/manager/ShutterManager;->mVideoShutterMasked:Z
 
     .line 262
-    invoke-virtual {p0}, Lcom/android/camera/manager/ShutterManager;->refresh()V
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->refresh()V
 
     .line 263
     return-void
@@ -1310,7 +1310,7 @@
     iput p1, p0, Lcom/android/camera/manager/ShutterManager;->mShutterType:I
 
     .line 143
-    invoke-virtual {p0}, Lcom/android/camera/manager/ShutterManager;->reInflate()V
+    invoke-virtual {p0}, Lcom/android/camera/manager/ViewManager;->reInflate()V
 
     .line 145
     :cond_1

@@ -24,7 +24,7 @@
     const/4 v4, 0x1
 
     .line 10
-    invoke-super {p0, p1}, Landroid/support/v13/dreams/BasicDream;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 11
     new-instance v1, Landroid/content/Intent;
@@ -47,7 +47,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/SlideshowDream;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -61,10 +61,10 @@
 
     .line 19
     .local v0, i:Landroid/content/Intent;
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/app/SlideshowDream;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
     .line 20
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/SlideshowDream;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 21
     return-void

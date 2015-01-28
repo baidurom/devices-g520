@@ -181,24 +181,24 @@
     .line 112
     iget-object v0, p0, Lcom/android/gallery3d/ui/CropView;->mImageView:Lcom/android/gallery3d/ui/TileImageView;
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/ui/CropView;->addComponent(Lcom/android/gallery3d/ui/GLView;)V
+    invoke-virtual {p0, v0}, Lcom/android/gallery3d/ui/GLView;->addComponent(Lcom/android/gallery3d/ui/GLView;)V
 
     .line 113
     iget-object v0, p0, Lcom/android/gallery3d/ui/CropView;->mFaceDetectionView:Lcom/android/gallery3d/ui/CropView$FaceHighlightView;
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/ui/CropView;->addComponent(Lcom/android/gallery3d/ui/GLView;)V
+    invoke-virtual {p0, v0}, Lcom/android/gallery3d/ui/GLView;->addComponent(Lcom/android/gallery3d/ui/GLView;)V
 
     .line 114
     iget-object v0, p0, Lcom/android/gallery3d/ui/CropView;->mHighlightRectangle:Lcom/android/gallery3d/ui/CropView$HighlightRectangle;
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/ui/CropView;->addComponent(Lcom/android/gallery3d/ui/GLView;)V
+    invoke-virtual {p0, v0}, Lcom/android/gallery3d/ui/GLView;->addComponent(Lcom/android/gallery3d/ui/GLView;)V
 
     .line 116
     iget-object v0, p0, Lcom/android/gallery3d/ui/CropView;->mHighlightRectangle:Lcom/android/gallery3d/ui/CropView$HighlightRectangle;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/android/gallery3d/ui/CropView$HighlightRectangle;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Lcom/android/gallery3d/ui/GLView;->setVisibility(I)V
 
     .line 119
     invoke-static {}, Lcom/mediatek/gallery3d/util/MediatekFeature;->isThemeManagerSupported()Z
@@ -626,7 +626,7 @@
 
     invoke-direct {v8, p0, v1}, Lcom/android/gallery3d/ui/CropView$DetectFaceTask;-><init>(Lcom/android/gallery3d/ui/CropView;Landroid/graphics/Bitmap;)V
 
-    invoke-virtual {v8}, Lcom/android/gallery3d/ui/CropView$DetectFaceTask;->start()V
+    invoke-virtual {v8}, Ljava/lang/Thread;->start()V
 
     .line 828
     return-void
@@ -735,7 +735,7 @@
     .line 193
     iget-object v2, p0, Lcom/android/gallery3d/ui/CropView;->mHighlightRectangle:Lcom/android/gallery3d/ui/CropView$HighlightRectangle;
 
-    invoke-virtual {v2}, Lcom/android/gallery3d/ui/CropView$HighlightRectangle;->getVisibility()I
+    invoke-virtual {v2}, Lcom/android/gallery3d/ui/GLView;->getVisibility()I
 
     move-result v2
 
@@ -845,7 +845,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/android/gallery3d/ui/CropView$HighlightRectangle;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Lcom/android/gallery3d/ui/GLView;->setVisibility(I)V
 
     .line 833
     return-void
@@ -873,17 +873,17 @@
     .local v0, height:I
     iget-object v2, p0, Lcom/android/gallery3d/ui/CropView;->mFaceDetectionView:Lcom/android/gallery3d/ui/CropView$FaceHighlightView;
 
-    invoke-virtual {v2, v3, v3, v1, v0}, Lcom/android/gallery3d/ui/CropView$FaceHighlightView;->layout(IIII)V
+    invoke-virtual {v2, v3, v3, v1, v0}, Lcom/android/gallery3d/ui/GLView;->layout(IIII)V
 
     .line 154
     iget-object v2, p0, Lcom/android/gallery3d/ui/CropView;->mHighlightRectangle:Lcom/android/gallery3d/ui/CropView$HighlightRectangle;
 
-    invoke-virtual {v2, v3, v3, v1, v0}, Lcom/android/gallery3d/ui/CropView$HighlightRectangle;->layout(IIII)V
+    invoke-virtual {v2, v3, v3, v1, v0}, Lcom/android/gallery3d/ui/GLView;->layout(IIII)V
 
     .line 155
     iget-object v2, p0, Lcom/android/gallery3d/ui/CropView;->mImageView:Lcom/android/gallery3d/ui/TileImageView;
 
-    invoke-virtual {v2, v3, v3, v1, v0}, Lcom/android/gallery3d/ui/TileImageView;->layout(IIII)V
+    invoke-virtual {v2, v3, v3, v1, v0}, Lcom/android/gallery3d/ui/GLView;->layout(IIII)V
 
     .line 156
     iget v2, p0, Lcom/android/gallery3d/ui/CropView;->mImageHeight:I
@@ -900,7 +900,7 @@
     .line 158
     iget-object v2, p0, Lcom/android/gallery3d/ui/CropView;->mHighlightRectangle:Lcom/android/gallery3d/ui/CropView$HighlightRectangle;
 
-    invoke-virtual {v2}, Lcom/android/gallery3d/ui/CropView$HighlightRectangle;->getVisibility()I
+    invoke-virtual {v2}, Lcom/android/gallery3d/ui/GLView;->getVisibility()I
 
     move-result v2
 
@@ -950,13 +950,13 @@
 
     move-result-wide v1
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/gallery3d/ui/CropView$AnimationController;->calculate(J)Z
+    invoke-virtual {v0, v1, v2}, Lcom/android/gallery3d/anim/Animation;->calculate(J)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/CropView;->invalidate()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->invalidate()V
 
     .line 183
     :cond_0
@@ -1144,7 +1144,7 @@
     iput-boolean p1, p0, Lcom/android/gallery3d/ui/CropView;->mStereoMode:Z
 
     .line 855
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/CropView;->getGLRoot()Lcom/android/gallery3d/ui/GLRoot;
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->getGLRoot()Lcom/android/gallery3d/ui/GLRoot;
 
     move-result-object v0
 

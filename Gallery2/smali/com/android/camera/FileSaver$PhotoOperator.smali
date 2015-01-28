@@ -438,7 +438,7 @@
     :try_start_1
     iget-object v6, p0, Lcom/android/camera/FileSaver$RequestOperator;->mData:[B
 
-    invoke-virtual {v4, v6}, Ljava/io/FileOutputStream;->write([B)V
+    invoke-virtual {v4, v6}, Ljava/io/OutputStream;->write([B)V
 
     .line 393
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
@@ -497,7 +497,7 @@
     iput v6, p0, Lcom/android/camera/FileSaver$RequestOperator;->mMpoType:I
 
     .line 408
-    invoke-virtual {p0, p0}, Lcom/android/camera/FileSaver$PhotoOperator;->saveImageToDatabase(Lcom/android/camera/FileSaver$RequestOperator;)V
+    invoke-virtual {p0, p0}, Lcom/android/camera/FileSaver$RequestOperator;->saveImageToDatabase(Lcom/android/camera/FileSaver$RequestOperator;)V
 
     .line 409
     invoke-static {}, Lcom/android/camera/FileSaver;->access$300()Z

@@ -168,7 +168,7 @@
     .line 146
     sget-object v0, Lcom/android/internal/telephony/Phone$IccServiceStatus;->$VALUES:[Lcom/android/internal/telephony/Phone$IccServiceStatus;
 
-    invoke-virtual {v0}, [Lcom/android/internal/telephony/Phone$IccServiceStatus;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

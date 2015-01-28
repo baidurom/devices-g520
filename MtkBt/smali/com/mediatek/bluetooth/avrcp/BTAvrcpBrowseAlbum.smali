@@ -70,7 +70,7 @@
     const/4 v3, 0x1
 
     .line 90
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 50
     const-wide/16 v0, 0x1

@@ -151,7 +151,7 @@
     const/4 v2, 0x0
 
     .line 234
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 67
     iput-boolean v2, p0, Landroid/view/ViewPropertyAnimator;->mDurationSet:Z
@@ -924,7 +924,7 @@
     .line 753
     iget-object v6, p0, Landroid/view/ViewPropertyAnimator;->mAnimatorEventListener:Landroid/view/ViewPropertyAnimator$AnimatorEventListener;
 
-    invoke-virtual {v0, v6}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+    invoke-virtual {v0, v6}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
     .line 754
     iget-boolean v6, p0, Landroid/view/ViewPropertyAnimator;->mStartDelaySet:Z

@@ -77,7 +77,7 @@
 
     move-result v3
 
-    invoke-virtual {v1, v2, v3, v0}, Lcom/android/gallery3d/photoeditor/actions/TouchView;->mapPhotoPoint(FFLandroid/graphics/PointF;)V
+    invoke-virtual {v1, v2, v3, v0}, Lcom/android/gallery3d/photoeditor/actions/FullscreenToolView;->mapPhotoPoint(FFLandroid/graphics/PointF;)V
 
     .line 59
     iget-object v1, p0, Lcom/android/gallery3d/photoeditor/actions/TouchView$1;->this$0:Lcom/android/gallery3d/photoeditor/actions/TouchView;

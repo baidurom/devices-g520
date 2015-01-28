@@ -37,7 +37,7 @@
 
     .prologue
     .line 23
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 14
     const-string v0, "SeekBarTouchBase"
@@ -295,7 +295,7 @@
     :cond_0
     iget-object v7, p0, Lcom/mediatek/gallery3d/pq/SeekBarTouchBase;->left:Landroid/widget/TextView;
 
-    invoke-virtual {v7}, Landroid/widget/TextView;->getVisibility()I
+    invoke-virtual {v7}, Landroid/view/View;->getVisibility()I
 
     move-result v7
 
@@ -306,17 +306,17 @@
     .line 49
     iget-object v7, p0, Lcom/mediatek/gallery3d/pq/SeekBarTouchBase;->left:Landroid/widget/TextView;
 
-    invoke-virtual {v7, v11}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v7, v11}, Landroid/view/View;->setVisibility(I)V
 
     .line 50
     iget-object v7, p0, Lcom/mediatek/gallery3d/pq/SeekBarTouchBase;->right:Landroid/widget/TextView;
 
-    invoke-virtual {v7, v11}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v7, v11}, Landroid/view/View;->setVisibility(I)V
 
     .line 51
     iget-object v7, p0, Lcom/mediatek/gallery3d/pq/SeekBarTouchBase;->center:Landroid/widget/TextView;
 
-    invoke-virtual {v7, v11}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v7, v11}, Landroid/view/View;->setVisibility(I)V
 
     .line 53
     :cond_1
@@ -438,7 +438,7 @@
     .local v4, paramsLeft:Landroid/widget/AbsoluteLayout$LayoutParams;
     iget-object v7, p0, Lcom/mediatek/gallery3d/pq/SeekBarTouchBase;->left:Landroid/widget/TextView;
 
-    invoke-virtual {v7, v4}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v7, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 79
     new-instance v5, Landroid/widget/AbsoluteLayout$LayoutParams;
@@ -455,7 +455,7 @@
     .local v5, paramsRight:Landroid/widget/AbsoluteLayout$LayoutParams;
     iget-object v7, p0, Lcom/mediatek/gallery3d/pq/SeekBarTouchBase;->right:Landroid/widget/TextView;
 
-    invoke-virtual {v7, v5}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v7, v5}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 82
     new-instance v3, Landroid/widget/AbsoluteLayout$LayoutParams;
@@ -478,7 +478,7 @@
     .local v3, paramsCenter:Landroid/widget/AbsoluteLayout$LayoutParams;
     iget-object v7, p0, Lcom/mediatek/gallery3d/pq/SeekBarTouchBase;->center:Landroid/widget/TextView;
 
-    invoke-virtual {v7, v3}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v7, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     goto/16 :goto_0
 

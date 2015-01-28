@@ -254,7 +254,7 @@
     .line 22
     sget-object v0, Landroid/util/JsonToken;->$VALUES:[Landroid/util/JsonToken;
 
-    invoke-virtual {v0}, [Landroid/util/JsonToken;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

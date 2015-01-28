@@ -3,8 +3,8 @@
 .source "WebView.java"
 
 # interfaces
-.implements Landroid/view/ViewTreeObserver$OnGlobalFocusChangeListener;
 .implements Landroid/view/ViewGroup$OnHierarchyChangeListener;
+.implements Landroid/view/ViewTreeObserver$OnGlobalFocusChangeListener;
 
 
 # annotations

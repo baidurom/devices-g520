@@ -40,7 +40,7 @@
 
     iput-boolean p3, p0, Lcom/android/gallery3d/app/AlbumPage$3;->val$onlyPickAs2D:Z
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -95,7 +95,7 @@
 
     iget-object v3, p0, Lcom/android/gallery3d/app/AlbumPage$3;->val$fItem:Lcom/android/gallery3d/data/MediaItem;
 
-    invoke-virtual {v3}, Lcom/android/gallery3d/data/MediaItem;->getContentUri()Landroid/net/Uri;
+    invoke-virtual {v3}, Lcom/android/gallery3d/data/MediaObject;->getContentUri()Landroid/net/Uri;
 
     move-result-object v3
 

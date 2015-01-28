@@ -90,7 +90,7 @@
 
     const/16 v2, 0x23
 
-    invoke-virtual {v1, v2}, Lcom/android/internal/telephony/cat/CatService;->removeMessages(I)V
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 713
     new-instance v0, Ljava/lang/Thread;

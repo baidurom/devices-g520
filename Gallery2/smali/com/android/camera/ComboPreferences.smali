@@ -3,8 +3,8 @@
 .source "ComboPreferences.java"
 
 # interfaces
-.implements Landroid/content/SharedPreferences;
 .implements Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
+.implements Landroid/content/SharedPreferences;
 
 
 # annotations
@@ -67,7 +67,7 @@
 
     .prologue
     .line 36
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 37
     invoke-static {p1}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;

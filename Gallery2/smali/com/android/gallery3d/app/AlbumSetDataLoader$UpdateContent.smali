@@ -43,7 +43,7 @@
     .line 264
     iput-object p1, p0, Lcom/android/gallery3d/app/AlbumSetDataLoader$UpdateContent;->this$0:Lcom/android/gallery3d/app/AlbumSetDataLoader;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 265
     iput-object p2, p0, Lcom/android/gallery3d/app/AlbumSetDataLoader$UpdateContent;->mUpdateInfo:Lcom/android/gallery3d/app/AlbumSetDataLoader$UpdateInfo;
@@ -265,7 +265,7 @@
     .line 284
     iget-object v4, v0, Lcom/android/gallery3d/app/AlbumSetDataLoader$UpdateInfo;->item:Lcom/android/gallery3d/data/MediaSet;
 
-    invoke-virtual {v4}, Lcom/android/gallery3d/data/MediaSet;->getDataVersion()J
+    invoke-virtual {v4}, Lcom/android/gallery3d/data/MediaObject;->getDataVersion()J
 
     move-result-wide v1
 

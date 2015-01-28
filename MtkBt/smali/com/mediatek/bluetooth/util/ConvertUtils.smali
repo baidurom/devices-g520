@@ -13,7 +13,7 @@
 
     .prologue
     .line 42
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -460,7 +460,7 @@
 
     .line 140
     :cond_0
-    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->capacity()I
+    invoke-virtual {p0}, Ljava/nio/Buffer;->capacity()I
 
     move-result v3
 

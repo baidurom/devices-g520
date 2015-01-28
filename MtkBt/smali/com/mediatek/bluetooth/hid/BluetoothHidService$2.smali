@@ -271,7 +271,7 @@
     .local v0, intent:Landroid/content/Intent;
     iget-object v1, p0, Lcom/mediatek/bluetooth/hid/BluetoothHidService$2;->this$0:Lcom/mediatek/bluetooth/hid/BluetoothHidService;
 
-    invoke-virtual {v1, v0}, Lcom/mediatek/bluetooth/hid/BluetoothHidService;->sendBroadcast(Landroid/content/Intent;)V
+    invoke-virtual {v1, v0}, Landroid/content/ContextWrapper;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 601
     return-void

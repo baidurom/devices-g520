@@ -51,7 +51,7 @@
 
     .prologue
     .line 70
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 53
     const/4 v0, 0x1
@@ -95,7 +95,7 @@
     const/4 v2, 0x1
 
     .line 87
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 53
     iput v2, p0, Landroid/net/wifi/p2p/WifiP2pProvDiscEvent;->wfdState:I

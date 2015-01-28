@@ -225,7 +225,7 @@
 
     check-cast v0, Landroid/view/View;
 
-    invoke-virtual {p1, v0}, Landroid/support/v4/view/ViewPager;->removeView(Landroid/view/View;)V
+    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
     .line 443
     return-void
@@ -311,7 +311,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {p1, v0, v1}, Landroid/support/v4/view/ViewPager;->addView(Landroid/view/View;I)V
+    invoke-virtual {p1, v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
 
     .line 460
     iget-object v0, p0, Lcom/android/camera/manager/SettingManager$MyPagerAdapter;->mPageViews:Ljava/util/List;

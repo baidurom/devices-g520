@@ -45,7 +45,7 @@
 
     iput p4, p0, Lcom/android/gallery3d/photoeditor/EffectsMenu$1;->val$effectsId:I
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -61,7 +61,7 @@
 
     iget v2, p0, Lcom/android/gallery3d/photoeditor/EffectsMenu$1;->val$toggleId:I
 
-    invoke-virtual {v1, v2}, Lcom/android/gallery3d/photoeditor/EffectsMenu;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -83,7 +83,7 @@
 
     move-result v3
 
-    invoke-virtual {v1, v2, v3}, Lcom/android/gallery3d/photoeditor/EffectsMenu;->setViewSelected(IZ)V
+    invoke-virtual {v1, v2, v3}, Lcom/android/gallery3d/photoeditor/RestorableView;->setViewSelected(IZ)V
 
     .line 68
     return-void

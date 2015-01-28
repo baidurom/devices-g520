@@ -46,7 +46,7 @@
     const/4 v0, 0x0
 
     .line 81
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 73
     iput-object v0, p0, Lcom/android/server/location/LocationBindServiceSelection;->mContext:Landroid/content/Context;
@@ -278,7 +278,7 @@
     :try_start_3
     const-string v14, "LocationBindServiceSelection"
 
-    invoke-virtual {v3}, Ljava/io/IOException;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v15
 
@@ -307,7 +307,7 @@
     .line 214
     const-string v14, "LocationBindServiceSelection"
 
-    invoke-virtual {v3}, Ljava/io/IOException;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v15
 
@@ -327,7 +327,7 @@
     :try_start_5
     const-string v14, "LocationBindServiceSelection"
 
-    invoke-virtual {v3}, Lorg/xmlpull/v1/XmlPullParserException;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v15
 
@@ -357,7 +357,7 @@
     .local v3, e:Ljava/io/IOException;
     const-string v14, "LocationBindServiceSelection"
 
-    invoke-virtual {v3}, Ljava/io/IOException;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v15
 
@@ -390,7 +390,7 @@
     .restart local v3       #e:Ljava/io/IOException;
     const-string v15, "LocationBindServiceSelection"
 
-    invoke-virtual {v3}, Ljava/io/IOException;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v16
 
@@ -412,7 +412,7 @@
     .restart local v3       #e:Ljava/io/IOException;
     const-string v14, "LocationBindServiceSelection"
 
-    invoke-virtual {v3}, Ljava/io/IOException;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v15
 

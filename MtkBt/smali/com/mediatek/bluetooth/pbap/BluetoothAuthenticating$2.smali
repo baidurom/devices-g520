@@ -58,7 +58,7 @@
     .line 119
     iget-object v0, p0, Lcom/mediatek/bluetooth/pbap/BluetoothAuthenticating$2;->this$0:Lcom/mediatek/bluetooth/pbap/BluetoothAuthenticating;
 
-    invoke-virtual {v0}, Lcom/mediatek/bluetooth/pbap/BluetoothAuthenticating;->finish()V
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
     .line 120
     return-void

@@ -3,12 +3,12 @@
 .source "HTML5Audio.java"
 
 # interfaces
+.implements Landroid/media/AudioManager$OnAudioFocusChangeListener;
 .implements Landroid/media/MediaPlayer$OnBufferingUpdateListener;
 .implements Landroid/media/MediaPlayer$OnCompletionListener;
 .implements Landroid/media/MediaPlayer$OnErrorListener;
 .implements Landroid/media/MediaPlayer$OnPreparedListener;
 .implements Landroid/media/MediaPlayer$OnSeekCompleteListener;
-.implements Landroid/media/AudioManager$OnAudioFocusChangeListener;
 
 
 # annotations

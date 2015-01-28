@@ -76,7 +76,7 @@
     .prologue
     .line 64
     .local p5, headers:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 50
     const/4 v0, 0x0
@@ -1641,7 +1641,7 @@
 
     .line 181
     .local v1, e:Landroid/net/ParseException;
-    invoke-virtual {v1}, Landroid/net/ParseException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_1
 

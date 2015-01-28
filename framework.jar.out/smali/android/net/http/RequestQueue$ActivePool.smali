@@ -41,7 +41,7 @@
     .line 80
     iput-object p1, p0, Landroid/net/http/RequestQueue$ActivePool;->this$0:Landroid/net/http/RequestQueue;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 81
     new-instance v1, Landroid/net/http/IdleCache;
@@ -518,7 +518,7 @@
 
     aget-object v1, v1, v0
 
-    invoke-virtual {v1}, Landroid/net/http/ConnectionThread;->start()V
+    invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
     .line 92
     add-int/lit8 v0, v0, 0x1

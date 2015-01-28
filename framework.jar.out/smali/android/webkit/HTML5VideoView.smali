@@ -95,7 +95,7 @@
     const/4 v0, 0x0
 
     .line 163
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 66
     iput-boolean v0, p0, Landroid/webkit/HTML5VideoView;->mSkipPrepare:Z
@@ -656,7 +656,7 @@
 
     .line 212
     .local v0, e:Ljava/lang/IllegalArgumentException;
-    invoke-virtual {v0}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 
@@ -667,7 +667,7 @@
 
     .line 214
     .local v0, e:Ljava/lang/IllegalStateException;
-    invoke-virtual {v0}, Ljava/lang/IllegalStateException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 
@@ -678,7 +678,7 @@
 
     .line 216
     .local v0, e:Ljava/io/IOException;
-    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 

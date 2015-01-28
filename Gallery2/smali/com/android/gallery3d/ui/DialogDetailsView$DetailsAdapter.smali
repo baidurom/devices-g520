@@ -734,7 +734,7 @@
     invoke-virtual {v0, v1, p1}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
     .line 227
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/DialogDetailsView$DetailsAdapter;->notifyDataSetChanged()V
+    invoke-virtual {p0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
 
     .line 228
     return-void

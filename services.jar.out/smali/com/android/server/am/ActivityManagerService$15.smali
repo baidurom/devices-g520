@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 16353
+    .line 16362
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$15;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +40,7 @@
     .parameter "intent"
 
     .prologue
-    .line 16356
+    .line 16365
     const-string v0, "android.intent.action.IDLE_SCREEN_NEEDED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -53,7 +53,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 16357
+    .line 16366
     const-string v0, "_enable"
 
     const/4 v1, 0x0
@@ -64,7 +64,7 @@
 
     sput-boolean v0, Lcom/android/server/am/ActivityManagerService;->mNotifyNeeded:Z
 
-    .line 16358
+    .line 16367
     const-string v0, "ActivityManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -89,7 +89,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 16360
+    .line 16369
     :cond_0
     return-void
 .end method

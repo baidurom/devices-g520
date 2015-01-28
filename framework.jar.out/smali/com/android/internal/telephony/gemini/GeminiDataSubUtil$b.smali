@@ -148,7 +148,7 @@
     .line 178
     sget-object v0, Lcom/android/internal/telephony/gemini/GeminiDataSubUtil$b;->e:[Lcom/android/internal/telephony/gemini/GeminiDataSubUtil$b;
 
-    invoke-virtual {v0}, [Lcom/android/internal/telephony/gemini/GeminiDataSubUtil$b;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -166,7 +166,7 @@
     .line 182
     sget-object v0, Lcom/android/internal/telephony/gemini/GeminiDataSubUtil$1;->b:[I
 
-    invoke-virtual {p0}, Lcom/android/internal/telephony/gemini/GeminiDataSubUtil$b;->ordinal()I
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 

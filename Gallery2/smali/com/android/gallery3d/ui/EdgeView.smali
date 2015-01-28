@@ -107,7 +107,7 @@
     if-nez v0, :cond_0
 
     .line 126
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/EdgeView;->invalidate()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->invalidate()V
 
     .line 128
     :cond_0
@@ -301,7 +301,7 @@
 
     if-nez v1, :cond_1
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/EdgeView;->getWidth()I
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->getWidth()I
 
     move-result v0
 
@@ -332,7 +332,7 @@
     if-nez v1, :cond_0
 
     .line 104
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/EdgeView;->invalidate()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->invalidate()V
 
     .line 106
     :cond_0
@@ -341,7 +341,7 @@
     .line 101
     .end local v0           #fullLength:I
     :cond_1
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/EdgeView;->getHeight()I
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->getHeight()I
 
     move-result v0
 
@@ -404,7 +404,7 @@
     if-eqz v1, :cond_2
 
     .line 116
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/EdgeView;->invalidate()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->invalidate()V
 
     .line 118
     :cond_2
@@ -468,7 +468,7 @@
     if-eqz v1, :cond_1
 
     .line 94
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/EdgeView;->invalidate()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/ui/GLView;->invalidate()V
 
     .line 96
     :cond_1

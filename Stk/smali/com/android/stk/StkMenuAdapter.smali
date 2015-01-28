@@ -90,7 +90,7 @@
 
     .prologue
     .line 86
-    invoke-virtual {p0, p1}, Lcom/android/stk/StkMenuAdapter;->getItem(I)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Landroid/widget/ArrayAdapter;->getItem(I)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -143,7 +143,7 @@
     .line 96
     sget-object v6, Lcom/android/stk/StkMenuAdapter$1;->$SwitchMap$com$android$internal$telephony$cat$AppInterface$CommandType:[I
 
-    invoke-virtual {v5}, Lcom/android/internal/telephony/cat/AppInterface$CommandType;->ordinal()I
+    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
 
     move-result v7
 
@@ -161,7 +161,7 @@
     if-eqz v0, :cond_2
 
     .line 224
-    invoke-virtual {p0}, Lcom/android/stk/StkMenuAdapter;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/ArrayAdapter;->getContext()Landroid/content/Context;
 
     move-result-object v6
 
@@ -579,7 +579,7 @@
 
     const/16 v7, 0x8
 
-    invoke-virtual {v6, v7}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v6, v7}, Landroid/view/View;->setVisibility(I)V
 
     .line 246
     const v6, 0x7f07000a

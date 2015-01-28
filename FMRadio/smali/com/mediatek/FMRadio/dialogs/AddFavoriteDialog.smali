@@ -80,7 +80,7 @@
     invoke-virtual {v0, v2, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 76
-    invoke-virtual {v1, v0}, Lcom/mediatek/FMRadio/dialogs/AddFavoriteDialog;->setArguments(Landroid/os/Bundle;)V
+    invoke-virtual {v1, v0}, Landroid/app/Fragment;->setArguments(Landroid/os/Bundle;)V
 
     .line 77
     return-object v1
@@ -115,7 +115,7 @@
 
     .line 97
     .local v0, e:Ljava/lang/ClassCastException;
-    invoke-virtual {v0}, Ljava/lang/ClassCastException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 .end method
@@ -128,7 +128,7 @@
     const/4 v9, 0x0
 
     .line 104
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/dialogs/AddFavoriteDialog;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v6
 
@@ -140,7 +140,7 @@
 
     .line 105
     .local v4, stationName:Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/dialogs/AddFavoriteDialog;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v6
 
@@ -152,11 +152,11 @@
 
     .line 106
     .local v3, stationFreq:I
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/dialogs/AddFavoriteDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
-    invoke-virtual {v6}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {v6}, Landroid/content/ContextWrapper;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -168,7 +168,7 @@
 
     .line 108
     .local v2, projectStringExt:Lcom/mediatek/FMRadio/ext/IProjectStringExt;
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/dialogs/AddFavoriteDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
@@ -219,24 +219,24 @@
     :cond_0
     const v6, 0x7f040017
 
-    invoke-virtual {v1, v6}, Landroid/widget/EditText;->setHint(I)V
+    invoke-virtual {v1, v6}, Landroid/widget/TextView;->setHint(I)V
 
     .line 119
     :goto_0
-    invoke-virtual {v1}, Landroid/widget/EditText;->requestFocus()Z
+    invoke-virtual {v1}, Landroid/view/View;->requestFocus()Z
 
     .line 120
-    invoke-virtual {v1}, Landroid/widget/EditText;->requestFocusFromTouch()Z
+    invoke-virtual {v1}, Landroid/view/View;->requestFocusFromTouch()Z
 
     .line 121
     const-string v6, ""
 
-    invoke-virtual {v1, v6}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 122
     new-instance v6, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/dialogs/AddFavoriteDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v7
 
@@ -282,7 +282,7 @@
 
     .line 117
     :cond_1
-    invoke-virtual {v1, v4}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v4}, Landroid/widget/TextView;->setHint(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 .end method

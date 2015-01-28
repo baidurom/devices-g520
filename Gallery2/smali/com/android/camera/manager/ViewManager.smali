@@ -87,7 +87,7 @@
     const/4 v0, 0x1
 
     .line 40
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 30
     iput-boolean v0, p0, Lcom/android/camera/manager/ViewManager;->mEnabled:Z
@@ -144,7 +144,7 @@
     .line 114
     iget-object v1, p0, Lcom/android/camera/manager/ViewManager;->mContext:Lcom/android/camera/Camera;
 
-    invoke-virtual {v1}, Lcom/android/camera/Camera;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v1}, Landroid/content/ContextWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -745,7 +745,7 @@
     .line 95
     iget-object v0, p0, Lcom/android/camera/manager/ViewManager;->mContext:Lcom/android/camera/Camera;
 
-    invoke-virtual {v0}, Lcom/android/camera/Camera;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0}, Landroid/content/ContextWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 

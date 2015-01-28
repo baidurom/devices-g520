@@ -49,7 +49,7 @@
     .line 713
     const-string v0, "face-detect"
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/ui/CropView$DetectFaceTask;->setName(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
 
     .line 714
     return-void
@@ -413,7 +413,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2, v4}, Lcom/android/gallery3d/ui/CropView$FaceHighlightView;->setVisibility(I)V
+    invoke-virtual {v2, v4}, Lcom/android/gallery3d/ui/GLView;->setVisibility(I)V
 
     .line 772
     iget-object v2, p0, Lcom/android/gallery3d/ui/CropView$DetectFaceTask;->this$0:Lcom/android/gallery3d/ui/CropView;
@@ -455,7 +455,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2, v3}, Lcom/android/gallery3d/ui/CropView$FaceHighlightView;->setVisibility(I)V
+    invoke-virtual {v2, v3}, Lcom/android/gallery3d/ui/GLView;->setVisibility(I)V
 
     .line 776
     iget-object v2, p0, Lcom/android/gallery3d/ui/CropView$DetectFaceTask;->this$0:Lcom/android/gallery3d/ui/CropView;
@@ -483,7 +483,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2, v4}, Lcom/android/gallery3d/ui/CropView$HighlightRectangle;->setVisibility(I)V
+    invoke-virtual {v2, v4}, Lcom/android/gallery3d/ui/GLView;->setVisibility(I)V
 
     goto :goto_1
 
@@ -506,7 +506,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2, v4}, Lcom/android/gallery3d/ui/CropView$HighlightRectangle;->setVisibility(I)V
+    invoke-virtual {v2, v4}, Lcom/android/gallery3d/ui/GLView;->setVisibility(I)V
 
     goto :goto_1
 .end method

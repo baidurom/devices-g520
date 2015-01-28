@@ -40,7 +40,7 @@
     .line 2001
     iput-object p1, p0, Lcom/android/gallery3d/app/PhotoDataAdapter$GifAnimationRunnable;->this$0:Lcom/android/gallery3d/app/PhotoDataAdapter;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2002
     iput-object p2, p0, Lcom/android/gallery3d/app/PhotoDataAdapter$GifAnimationRunnable;->mPath:Lcom/android/gallery3d/data/Path;
@@ -101,7 +101,7 @@
     .local v2, item:Lcom/android/gallery3d/data/MediaItem;
     if-eqz v2, :cond_4
 
-    invoke-virtual {v2}, Lcom/android/gallery3d/data/MediaItem;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {v2}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v0
 
@@ -308,7 +308,7 @@
     .local v6, item:Lcom/android/gallery3d/data/MediaItem;
     if-eqz v6, :cond_4
 
-    invoke-virtual {v6}, Lcom/android/gallery3d/data/MediaItem;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {v6}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v3
 

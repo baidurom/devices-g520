@@ -585,7 +585,7 @@
     .line 144
     .end local v0           #appWidgetId:I
     :cond_0
-    invoke-virtual {v2}, Lcom/android/gallery3d/gadget/WidgetDatabaseHelper;->close()V
+    invoke-virtual {v2}, Landroid/database/sqlite/SQLiteOpenHelper;->close()V
 
     .line 145
     return-void
@@ -789,14 +789,14 @@
     :catchall_0
     move-exception v7
 
-    invoke-virtual {v2}, Lcom/android/gallery3d/gadget/WidgetDatabaseHelper;->close()V
+    invoke-virtual {v2}, Landroid/database/sqlite/SQLiteOpenHelper;->close()V
 
     throw v7
 
     .restart local v3       #i$:I
     .restart local v5       #len$:I
     :cond_2
-    invoke-virtual {v2}, Lcom/android/gallery3d/gadget/WidgetDatabaseHelper;->close()V
+    invoke-virtual {v2}, Landroid/database/sqlite/SQLiteOpenHelper;->close()V
 
     .line 78
     invoke-super {p0, p1, p2, p3}, Landroid/appwidget/AppWidgetProvider;->onUpdate(Landroid/content/Context;Landroid/appwidget/AppWidgetManager;[I)V

@@ -60,7 +60,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/mediatek/gallery3d/video/MTKVideoView;->isPlaying()Z
+    invoke-virtual {v0}, Landroid/widget/VideoView;->isPlaying()Z
 
     move-result v0
 
@@ -73,7 +73,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/mediatek/gallery3d/video/MTKVideoView;->canPause()Z
+    invoke-virtual {v0}, Landroid/widget/VideoView;->canPause()Z
 
     move-result v0
 

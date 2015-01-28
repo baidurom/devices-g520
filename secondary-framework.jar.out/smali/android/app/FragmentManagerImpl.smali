@@ -3461,7 +3461,7 @@
 
     sget-object v6, Lcom/android/internal/R$styleable;->FragmentAnimation:[I
 
-    invoke-virtual {v5, p4, v6}, Landroid/app/Activity;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
+    invoke-virtual {v5, p4, v6}, Landroid/content/Context;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
 
     move-result-object v2
 
@@ -6242,7 +6242,7 @@
 
     iget-object v6, p0, Landroid/app/FragmentManagerImpl;->mActivity:Landroid/app/Activity;
 
-    invoke-virtual {v6}, Landroid/app/Activity;->getClassLoader()Ljava/lang/ClassLoader;
+    invoke-virtual {v6}, Landroid/content/ContextWrapper;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v6
 

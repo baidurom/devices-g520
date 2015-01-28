@@ -333,7 +333,7 @@
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 200
-    invoke-virtual {p0}, Landroid/telephony/gemini/GeminiSmsMessage;->getPdu()[B
+    invoke-virtual {p0}, Landroid/telephony/SmsMessage;->getPdu()[B
 
     move-result-object v1
 
@@ -479,7 +479,7 @@
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 247
-    invoke-virtual {p0}, Landroid/telephony/gemini/GeminiSmsMessage;->getPdu()[B
+    invoke-virtual {p0}, Landroid/telephony/SmsMessage;->getPdu()[B
 
     move-result-object v1
 

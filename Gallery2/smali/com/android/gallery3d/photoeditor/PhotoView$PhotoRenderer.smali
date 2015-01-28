@@ -57,7 +57,7 @@
     .line 100
     iput-object p1, p0, Lcom/android/gallery3d/photoeditor/PhotoView$PhotoRenderer;->this$0:Lcom/android/gallery3d/photoeditor/PhotoView;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 102
     new-instance v0, Ljava/util/Vector;
@@ -201,7 +201,7 @@
     .line 177
     iget-object v2, p0, Lcom/android/gallery3d/photoeditor/PhotoView$PhotoRenderer;->this$0:Lcom/android/gallery3d/photoeditor/PhotoView;
 
-    invoke-virtual {v2}, Lcom/android/gallery3d/photoeditor/PhotoView;->requestRender()V
+    invoke-virtual {v2}, Landroid/opengl/GLSurfaceView;->requestRender()V
 
     .line 179
     :cond_2

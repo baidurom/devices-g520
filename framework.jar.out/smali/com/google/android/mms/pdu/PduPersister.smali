@@ -1405,7 +1405,7 @@
 
     .prologue
     .line 298
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1594
     const/4 v0, 0x0
@@ -4928,7 +4928,7 @@
 
     move-object/from16 v0, p1
 
-    invoke-virtual {v4, v0}, Lcom/google/android/mms/util/PduCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v4, v0}, Lcom/google/android/mms/util/AbstractCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -4968,7 +4968,7 @@
 
     move-object/from16 v0, p1
 
-    invoke-virtual {v6, v0}, Lcom/google/android/mms/util/PduCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v6, v0}, Lcom/google/android/mms/util/AbstractCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v6
 
@@ -5045,7 +5045,7 @@
 
     move-object/from16 v0, p1
 
-    invoke-virtual {v6, v0}, Lcom/google/android/mms/util/PduCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v6, v0}, Lcom/google/android/mms/util/AbstractCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v6
 
@@ -5706,7 +5706,7 @@
 
     move-object/from16 v0, p1
 
-    invoke-virtual {v4, v0}, Lcom/google/android/mms/util/PduCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v4, v0}, Lcom/google/android/mms/util/AbstractCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -8021,7 +8021,7 @@
 
     .line 1059
     :cond_1
-    invoke-virtual/range {p2 .. p2}, Lcom/google/android/mms/pdu/SendReq;->getDate()J
+    invoke-virtual/range {p2 .. p2}, Lcom/google/android/mms/pdu/MultimediaMessagePdu;->getDate()J
 
     move-result-wide v14
 
@@ -8105,7 +8105,7 @@
 
     .line 1079
     :cond_5
-    invoke-virtual/range {p2 .. p2}, Lcom/google/android/mms/pdu/SendReq;->getPriority()I
+    invoke-virtual/range {p2 .. p2}, Lcom/google/android/mms/pdu/MultimediaMessagePdu;->getPriority()I
 
     move-result v30
 
@@ -8162,7 +8162,7 @@
 
     .line 1094
     :cond_8
-    invoke-virtual/range {p2 .. p2}, Lcom/google/android/mms/pdu/SendReq;->getSubject()Lcom/google/android/mms/pdu/EncodedStringValue;
+    invoke-virtual/range {p2 .. p2}, Lcom/google/android/mms/pdu/MultimediaMessagePdu;->getSubject()Lcom/google/android/mms/pdu/EncodedStringValue;
 
     move-result-object v33
 
@@ -8221,7 +8221,7 @@
 
     .line 1107
     :cond_9
-    invoke-virtual/range {p2 .. p2}, Lcom/google/android/mms/pdu/SendReq;->getPduHeaders()Lcom/google/android/mms/pdu/PduHeaders;
+    invoke-virtual/range {p2 .. p2}, Lcom/google/android/mms/pdu/GenericPdu;->getPduHeaders()Lcom/google/android/mms/pdu/PduHeaders;
 
     move-result-object v20
 
@@ -8558,7 +8558,7 @@
 
     move-object/from16 v1, p1
 
-    invoke-virtual {v0, v1}, Lcom/google/android/mms/util/PduCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/google/android/mms/util/AbstractCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v5
 

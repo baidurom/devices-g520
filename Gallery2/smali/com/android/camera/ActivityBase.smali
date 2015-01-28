@@ -263,7 +263,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p0}, Lcom/android/camera/ActivityBase;->isFinishing()Z
+    invoke-virtual {p0}, Landroid/app/Activity;->isFinishing()Z
 
     move-result v3
 
@@ -319,7 +319,7 @@
 
     if-nez v1, :cond_1
 
-    invoke-virtual {p0}, Lcom/android/camera/ActivityBase;->isFinishing()Z
+    invoke-virtual {p0}, Landroid/app/Activity;->isFinishing()Z
 
     move-result v1
 
@@ -390,7 +390,7 @@
 
     .line 320
     :cond_1
-    invoke-virtual {p0}, Lcom/android/camera/ActivityBase;->getGLRoot()Lcom/android/gallery3d/ui/GLRoot;
+    invoke-virtual {p0}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->getGLRoot()Lcom/android/gallery3d/ui/GLRoot;
 
     move-result-object v1
 
@@ -507,7 +507,7 @@
     .line 148
     const v2, 0x7f0b0010
 
-    invoke-virtual {p0, v2}, Lcom/android/camera/ActivityBase;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -553,7 +553,7 @@
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     .line 162
-    invoke-virtual {p0}, Lcom/android/camera/ActivityBase;->getStateManager()Lcom/android/gallery3d/app/StateManager;
+    invoke-virtual {p0}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->getStateManager()Lcom/android/gallery3d/app/StateManager;
 
     move-result-object v2
 
@@ -709,10 +709,10 @@
     .line 64
     const v0, 0x7f0d005a
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/ActivityBase;->setTheme(I)V
+    invoke-virtual {p0, v0}, Landroid/view/ContextThemeWrapper;->setTheme(I)V
 
     .line 65
-    invoke-virtual {p0}, Lcom/android/camera/ActivityBase;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
@@ -723,7 +723,7 @@
     .line 66
     const/16 v0, 0x9
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/ActivityBase;->requestWindowFeature(I)Z
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->requestWindowFeature(I)Z
 
     .line 68
     invoke-super {p0, p1}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->onCreate(Landroid/os/Bundle;)V
@@ -738,10 +738,10 @@
 
     .prologue
     .line 137
-    invoke-super {p0, p1}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->onCreateOptionsMenu(Landroid/view/Menu;)Z
+    invoke-super {p0, p1}, Landroid/app/Activity;->onCreateOptionsMenu(Landroid/view/Menu;)Z
 
     .line 138
-    invoke-virtual {p0}, Lcom/android/camera/ActivityBase;->getStateManager()Lcom/android/gallery3d/app/StateManager;
+    invoke-virtual {p0}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->getStateManager()Lcom/android/gallery3d/app/StateManager;
 
     move-result-object v0
 
@@ -793,7 +793,7 @@
     return v0
 
     :cond_1
-    invoke-super {p0, p1, p2}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->onKeyDown(ILandroid/view/KeyEvent;)Z
+    invoke-super {p0, p1, p2}, Landroid/app/Activity;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
     move-result v0
 
@@ -874,7 +874,7 @@
 
     .line 287
     :goto_1
-    invoke-virtual {p0}, Lcom/android/camera/ActivityBase;->getGLRoot()Lcom/android/gallery3d/ui/GLRoot;
+    invoke-virtual {p0}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->getGLRoot()Lcom/android/gallery3d/ui/GLRoot;
 
     move-result-object v7
 
@@ -1194,7 +1194,7 @@
     iput p1, p0, Lcom/android/camera/ActivityBase;->mResultCodeForTesting:I
 
     .line 113
-    invoke-virtual {p0, p1}, Lcom/android/camera/ActivityBase;->setResult(I)V
+    invoke-virtual {p0, p1}, Landroid/app/Activity;->setResult(I)V
 
     .line 114
     return-void
@@ -1213,7 +1213,7 @@
     iput-object p2, p0, Lcom/android/camera/ActivityBase;->mResultDataForTesting:Landroid/content/Intent;
 
     .line 119
-    invoke-virtual {p0, p1, p2}, Lcom/android/camera/ActivityBase;->setResult(ILandroid/content/Intent;)V
+    invoke-virtual {p0, p1, p2}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
 
     .line 120
     return-void

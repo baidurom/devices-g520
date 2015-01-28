@@ -283,7 +283,7 @@
 
     const/4 v11, 0x2
 
-    invoke-virtual {p0, v11}, Lcom/android/internal/telephony/IccCard$2;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {p0, v11}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v11
 
@@ -359,7 +359,7 @@
 
     const/4 v11, 0x2
 
-    invoke-virtual {p0, v11}, Lcom/android/internal/telephony/IccCard$2;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {p0, v11}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v11
 
@@ -378,7 +378,7 @@
 
     const/4 v13, 0x7
 
-    invoke-virtual {p0, v13}, Lcom/android/internal/telephony/IccCard$2;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {p0, v13}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v13
 
@@ -397,7 +397,7 @@
 
     const/16 v13, 0xa
 
-    invoke-virtual {p0, v13}, Lcom/android/internal/telephony/IccCard$2;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {p0, v13}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v13
 
@@ -438,7 +438,7 @@
 
     const/4 v11, 0x2
 
-    invoke-virtual {p0, v11}, Lcom/android/internal/telephony/IccCard$2;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {p0, v11}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v11
 
@@ -457,7 +457,7 @@
 
     const/4 v13, 0x7
 
-    invoke-virtual {p0, v13}, Lcom/android/internal/telephony/IccCard$2;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {p0, v13}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v13
 
@@ -529,7 +529,7 @@
 
     const/4 v13, 0x7
 
-    invoke-virtual {p0, v13}, Lcom/android/internal/telephony/IccCard$2;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {p0, v13}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v13
 
@@ -546,7 +546,7 @@
 
     iget-object v12, v1, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
-    invoke-virtual {p0, v11, v12}, Lcom/android/internal/telephony/IccCard$2;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+    invoke-virtual {p0, v11, v12}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v11
 
@@ -924,7 +924,7 @@
 
     const/4 v13, 0x7
 
-    invoke-virtual {p0, v13}, Lcom/android/internal/telephony/IccCard$2;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {p0, v13}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v13
 
@@ -941,7 +941,7 @@
 
     iget-object v12, v1, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
-    invoke-virtual {p0, v11, v12}, Lcom/android/internal/telephony/IccCard$2;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+    invoke-virtual {p0, v11, v12}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v11
 
@@ -1267,7 +1267,7 @@
 
     const/16 v13, 0xa
 
-    invoke-virtual {p0, v13}, Lcom/android/internal/telephony/IccCard$2;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {p0, v13}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v13
 
@@ -1371,7 +1371,7 @@
 
     const/4 v11, 0x2
 
-    invoke-virtual {p0, v11}, Lcom/android/internal/telephony/IccCard$2;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {p0, v11}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v11
 
@@ -1536,7 +1536,7 @@
 
     const/16 v11, 0x6f
 
-    invoke-virtual {p0, v11}, Lcom/android/internal/telephony/IccCard$2;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {p0, v11}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v11
 
@@ -1554,7 +1554,7 @@
 
     const/16 v11, 0x6f
 
-    invoke-virtual {p0, v11}, Lcom/android/internal/telephony/IccCard$2;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {p0, v11}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v11
 
@@ -1631,7 +1631,7 @@
 
     const/4 v11, 0x2
 
-    invoke-virtual {p0, v11}, Lcom/android/internal/telephony/IccCard$2;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {p0, v11}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v11
 
@@ -1658,7 +1658,7 @@
     :cond_1b
     const/16 v10, 0x69
 
-    invoke-virtual {p0, v10}, Lcom/android/internal/telephony/IccCard$2;->sendEmptyMessage(I)Z
+    invoke-virtual {p0, v10}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     goto/16 :goto_0
 
@@ -1683,7 +1683,7 @@
 
     const-wide/16 v11, 0x3e8
 
-    invoke-virtual {p0, v10, v11, v12}, Lcom/android/internal/telephony/IccCard$2;->sendEmptyMessageDelayed(IJ)Z
+    invoke-virtual {p0, v10, v11, v12}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
     goto/16 :goto_0
 
@@ -1731,7 +1731,7 @@
 
     const/4 v11, 0x2
 
-    invoke-virtual {p0, v11}, Lcom/android/internal/telephony/IccCard$2;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {p0, v11}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v11
 
@@ -1797,7 +1797,7 @@
 
     const/4 v11, 0x2
 
-    invoke-virtual {p0, v11}, Lcom/android/internal/telephony/IccCard$2;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {p0, v11}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v11
 
@@ -1985,7 +1985,7 @@
 
     const/4 v11, 0x2
 
-    invoke-virtual {p0, v11}, Lcom/android/internal/telephony/IccCard$2;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {p0, v11}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v11
 

@@ -52,7 +52,7 @@
 
     .prologue
     .line 107
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 97
     const/4 v0, 0x0
@@ -147,15 +147,15 @@
 
     .line 156
     .local v5, codecSpec:Ljava/lang/String;
-    invoke-virtual {p1}, Landroid/net/rtp/AudioStream;->getMode()I
+    invoke-virtual {p1}, Landroid/net/rtp/RtpStream;->getMode()I
 
     move-result v1
 
-    invoke-virtual {p1}, Landroid/net/rtp/AudioStream;->getSocket()I
+    invoke-virtual {p1}, Landroid/net/rtp/RtpStream;->getSocket()I
 
     move-result v2
 
-    invoke-virtual {p1}, Landroid/net/rtp/AudioStream;->getRemoteAddress()Ljava/net/InetAddress;
+    invoke-virtual {p1}, Landroid/net/rtp/RtpStream;->getRemoteAddress()Ljava/net/InetAddress;
 
     move-result-object v0
 
@@ -163,7 +163,7 @@
 
     move-result-object v3
 
-    invoke-virtual {p1}, Landroid/net/rtp/AudioStream;->getRemotePort()I
+    invoke-virtual {p1}, Landroid/net/rtp/RtpStream;->getRemotePort()I
 
     move-result v4
 

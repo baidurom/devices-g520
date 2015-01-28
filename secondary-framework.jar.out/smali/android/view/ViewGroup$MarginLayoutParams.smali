@@ -108,7 +108,7 @@
     .local v0, a:Landroid/content/res/TypedArray;
     const/4 v2, 0x1
 
-    invoke-virtual {p0, v0, v4, v2}, Landroid/view/ViewGroup$MarginLayoutParams;->setBaseAttributes(Landroid/content/res/TypedArray;II)V
+    invoke-virtual {p0, v0, v4, v2}, Landroid/view/ViewGroup$LayoutParams;->setBaseAttributes(Landroid/content/res/TypedArray;II)V
 
     .line 5700
     const/4 v2, 0x2

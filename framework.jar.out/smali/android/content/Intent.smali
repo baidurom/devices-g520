@@ -244,9 +244,9 @@
 
 .field public static final ACTION_SYSTEM_TUTORIAL:Ljava/lang/String; = "android.intent.action.SYSTEM_TUTORIAL"
 
-.field public static final ACTION_TETHERING_CHANGE:Ljava/lang/String; = "android.intent.action.TETHERING_CHANGED"
-
 .field public static final ACTION_THEME_CHANGED:Ljava/lang/String; = "android.intent.action.THEME_CHANGED"
+
+.field public static final ACTION_TETHERING_CHANGE:Ljava/lang/String; = "android.intent.action.TETHERING_CHANGED"
 
 .field public static final ACTION_TIMEZONE_CHANGED:Ljava/lang/String; = "android.intent.action.TIMEZONE_CHANGED"
 
@@ -417,6 +417,8 @@
 .field public static final EXTRA_DUAL_SIM_MODE:Ljava/lang/String; = "mode"
 
 .field public static final EXTRA_EMAIL:Ljava/lang/String; = "android.intent.extra.EMAIL"
+
+.field public static final EXTRA_EXCLUDE_PACKAGES:Ljava/lang/String; = "yi.intent.extra.EXCLUDE_PACKAGES"
 
 .field public static final EXTRA_HTML_TEXT:Ljava/lang/String; = "android.intent.extra.HTML_TEXT"
 
@@ -614,7 +616,7 @@
 
     .prologue
     .line 3380
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3381
     return-void
@@ -636,7 +638,7 @@
     .prologue
     .line 3485
     .local p2, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3486
     new-instance v0, Landroid/content/ComponentName;
@@ -655,7 +657,7 @@
 
     .prologue
     .line 3386
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3387
     iget-object v0, p1, Landroid/content/Intent;->mAction:Ljava/lang/String;
@@ -773,7 +775,7 @@
 
     .prologue
     .line 3415
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3416
     iget-object v0, p1, Landroid/content/Intent;->mAction:Ljava/lang/String;
@@ -825,7 +827,7 @@
 
     .prologue
     .line 6669
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 6670
     invoke-virtual {p0, p1}, Landroid/content/Intent;->readFromParcel(Landroid/os/Parcel;)V
@@ -840,7 +842,7 @@
 
     .prologue
     .line 3444
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3445
     invoke-virtual {p0, p1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
@@ -856,7 +858,7 @@
 
     .prologue
     .line 3464
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3465
     invoke-virtual {p0, p1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
@@ -888,7 +890,7 @@
     .prologue
     .line 3513
     .local p4, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3514
     invoke-virtual {p0, p1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
@@ -2583,7 +2585,7 @@
     :try_start_2
     new-instance v11, Ljava/net/URISyntaxException;
 
-    invoke-virtual {v3}, Ljava/lang/IllegalArgumentException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v12
 
@@ -3212,7 +3214,7 @@
     :try_start_5
     new-instance v11, Ljava/net/URISyntaxException;
 
-    invoke-virtual {v3}, Ljava/lang/IllegalArgumentException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v12
 
@@ -4195,7 +4197,7 @@
 
     iget-object v2, p1, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
-    invoke-virtual {v1, v2}, Ljava/util/HashSet;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Ljava/util/AbstractSet;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -4283,7 +4285,7 @@
 
     iget-object v2, p0, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
-    invoke-virtual {v1, v2}, Ljava/util/HashSet;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Ljava/util/AbstractSet;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -4383,7 +4385,7 @@
     .line 6342
     iget-object v1, p0, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
-    invoke-virtual {v1}, Ljava/util/HashSet;->hashCode()I
+    invoke-virtual {v1}, Ljava/util/AbstractSet;->hashCode()I
 
     move-result v1
 

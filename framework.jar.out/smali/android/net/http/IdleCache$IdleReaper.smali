@@ -57,7 +57,7 @@
     .local v0, check:I
     const-string v1, "IdleReaper"
 
-    invoke-virtual {p0, v1}, Landroid/net/http/IdleCache$IdleReaper;->setName(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
 
     .line 150
     const/16 v1, 0xa

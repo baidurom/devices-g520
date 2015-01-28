@@ -79,11 +79,11 @@
     :cond_0
     iget-object v5, p0, Lcom/android/camera/manager/ThumbnailManager$LoadThumbnailTask;->this$0:Lcom/android/camera/manager/ThumbnailManager;
 
-    invoke-virtual {v5}, Lcom/android/camera/manager/ThumbnailManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {v5}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/android/camera/Camera;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v5}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -106,11 +106,11 @@
     .line 205
     iget-object v5, p0, Lcom/android/camera/manager/ThumbnailManager$LoadThumbnailTask;->this$0:Lcom/android/camera/manager/ThumbnailManager;
 
-    invoke-virtual {v5}, Lcom/android/camera/manager/ThumbnailManager;->getContext()Lcom/android/camera/Camera;
+    invoke-virtual {v5}, Lcom/android/camera/manager/ViewManager;->getContext()Lcom/android/camera/Camera;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/android/camera/Camera;->getFilesDir()Ljava/io/File;
+    invoke-virtual {v5}, Landroid/content/ContextWrapper;->getFilesDir()Ljava/io/File;
 
     move-result-object v5
 
@@ -149,7 +149,7 @@
 
     move-result-object v6
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/ThumbnailManager$LoadThumbnailTask;->isCancelled()Z
+    invoke-virtual {p0}, Landroid/os/AsyncTask;->isCancelled()Z
 
     move-result v7
 
@@ -165,7 +165,7 @@
 
     .line 210
     :cond_2
-    invoke-virtual {p0}, Lcom/android/camera/manager/ThumbnailManager$LoadThumbnailTask;->isCancelled()Z
+    invoke-virtual {p0}, Landroid/os/AsyncTask;->isCancelled()Z
 
     move-result v5
 
@@ -255,7 +255,7 @@
 
     .line 225
     :pswitch_2
-    invoke-virtual {p0, v8}, Lcom/android/camera/manager/ThumbnailManager$LoadThumbnailTask;->cancel(Z)Z
+    invoke-virtual {p0, v8}, Landroid/os/AsyncTask;->cancel(Z)Z
 
     move-object v3, v4
 
@@ -372,7 +372,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/camera/manager/ThumbnailManager$LoadThumbnailTask;->isCancelled()Z
+    invoke-virtual {p0}, Landroid/os/AsyncTask;->isCancelled()Z
 
     move-result v2
 
@@ -388,7 +388,7 @@
 
     .line 246
     :cond_0
-    invoke-virtual {p0}, Lcom/android/camera/manager/ThumbnailManager$LoadThumbnailTask;->isCancelled()Z
+    invoke-virtual {p0}, Landroid/os/AsyncTask;->isCancelled()Z
 
     move-result v0
 

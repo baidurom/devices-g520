@@ -35,7 +35,7 @@
 
     iput p2, p0, Lcom/android/gallery3d/photoeditor/actions/RotateAction$1$1;->val$degrees:F
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

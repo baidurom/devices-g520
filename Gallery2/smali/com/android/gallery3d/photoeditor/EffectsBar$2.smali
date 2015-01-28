@@ -35,7 +35,7 @@
 
     iput-object p2, p0, Lcom/android/gallery3d/photoeditor/EffectsBar$2;->val$effect:Lcom/android/gallery3d/photoeditor/actions/EffectAction;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -50,7 +50,7 @@
     .line 92
     iget-object v1, p0, Lcom/android/gallery3d/photoeditor/EffectsBar$2;->this$0:Lcom/android/gallery3d/photoeditor/EffectsBar;
 
-    invoke-virtual {v1}, Lcom/android/gallery3d/photoeditor/EffectsBar;->isEnabled()Z
+    invoke-virtual {v1}, Landroid/view/View;->isEnabled()Z
 
     move-result v1
 
@@ -86,7 +86,7 @@
 
     iget-object v2, p0, Lcom/android/gallery3d/photoeditor/EffectsBar$2;->this$0:Lcom/android/gallery3d/photoeditor/EffectsBar;
 
-    invoke-virtual {v2}, Lcom/android/gallery3d/photoeditor/EffectsBar;->getRootView()Landroid/view/View;
+    invoke-virtual {v2}, Landroid/view/View;->getRootView()Landroid/view/View;
 
     move-result-object v2
 

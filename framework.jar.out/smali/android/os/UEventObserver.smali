@@ -47,7 +47,7 @@
 
     .prologue
     .line 39
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 85
     return-void
@@ -100,7 +100,7 @@
     .line 147
     sget-object v0, Landroid/os/UEventObserver;->sThread:Landroid/os/UEventObserver$UEventThread;
 
-    invoke-virtual {v0}, Landroid/os/UEventObserver$UEventThread;->start()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     .line 148
     const/4 v0, 0x1

@@ -96,7 +96,7 @@
     .line 111
     new-instance v0, Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/location/ComprehensiveCountryDetector;->mObject:Ljava/lang/Object;
 
@@ -840,7 +840,7 @@
     iput-object p2, p0, Lcom/android/server/location/ComprehensiveCountryDetector;->mNotifyCountry:Landroid/location/Country;
 
     .line 538
-    invoke-virtual {p0, p2}, Lcom/android/server/location/ComprehensiveCountryDetector;->notifyListener(Landroid/location/Country;)V
+    invoke-virtual {p0, p2}, Lcom/android/server/location/CountryDetectorBase;->notifyListener(Landroid/location/Country;)V
 
     .line 540
     :cond_1

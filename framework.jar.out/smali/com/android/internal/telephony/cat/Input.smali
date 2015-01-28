@@ -71,7 +71,7 @@
     const/4 v1, 0x0
 
     .line 80
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 81
     const-string v0, ""
@@ -132,7 +132,7 @@
     const/4 v1, 0x1
 
     .line 99
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 100
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;

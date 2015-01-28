@@ -230,7 +230,7 @@
 
     .line 882
     .local v0, e:Ljava/net/SocketException;
-    invoke-virtual {v0}, Ljava/net/SocketException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     .line 886
     .end local v0           #e:Ljava/net/SocketException;
@@ -246,7 +246,7 @@
 
     .line 884
     .local v0, e:Ljava/lang/Exception;
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_1
 .end method
@@ -1802,7 +1802,7 @@
 
     .line 961
     .local v8, e:Ljava/lang/Exception;
-    invoke-virtual {v8}, Ljava/lang/Exception;->printStackTrace()V
+    invoke-virtual {v8}, Ljava/lang/Throwable;->printStackTrace()V
 
     move v0, v1
 
@@ -2028,7 +2028,7 @@
 
     .line 977
     .local v8, e:Ljava/lang/NullPointerException;
-    invoke-virtual {v8}, Ljava/lang/NullPointerException;->printStackTrace()V
+    invoke-virtual {v8}, Ljava/lang/Throwable;->printStackTrace()V
 
     move v0, v1
 

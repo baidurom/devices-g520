@@ -153,7 +153,7 @@
     const/4 v1, 0x0
 
     .line 677
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 68
     iput v1, p0, Lcom/android/camera/FocusManager;->mState:I
@@ -227,7 +227,7 @@
     const/4 v1, 0x0
 
     .line 148
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 68
     iput v1, p0, Lcom/android/camera/FocusManager;->mState:I
@@ -1473,7 +1473,7 @@
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/camera/ui/FocusIndicatorRotateLayout;->setOrientation(IZ)V
+    invoke-virtual {v0, v1, v2}, Lcom/android/camera/ui/RotateLayout;->setOrientation(IZ)V
 
     .line 700
     :cond_0
@@ -1717,7 +1717,7 @@
     :cond_3
     iget-object v0, p0, Lcom/android/camera/FocusManager;->mFocusIndicatorRotateLayout:Lcom/android/camera/ui/FocusIndicatorRotateLayout;
 
-    invoke-virtual {v0}, Lcom/android/camera/ui/FocusIndicatorRotateLayout;->getWidth()I
+    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
     move-result v1
 
@@ -1725,7 +1725,7 @@
     .local v1, focusWidth:I
     iget-object v0, p0, Lcom/android/camera/FocusManager;->mFocusIndicatorRotateLayout:Lcom/android/camera/ui/FocusIndicatorRotateLayout;
 
-    invoke-virtual {v0}, Lcom/android/camera/ui/FocusIndicatorRotateLayout;->getHeight()I
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
 
     move-result v2
 
@@ -1853,7 +1853,7 @@
     .line 389
     iget-object v0, p0, Lcom/android/camera/FocusManager;->mFocusIndicatorRotateLayout:Lcom/android/camera/ui/FocusIndicatorRotateLayout;
 
-    invoke-virtual {v0}, Lcom/android/camera/ui/FocusIndicatorRotateLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v10
 
@@ -1893,7 +1893,7 @@
 
     const/4 v3, 0x0
 
-    invoke-virtual {v10, v9, v12, v0, v3}, Landroid/widget/RelativeLayout$LayoutParams;->setMargins(IIII)V
+    invoke-virtual {v10, v9, v12, v0, v3}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
 
     .line 395
     invoke-virtual {v10}, Landroid/widget/RelativeLayout$LayoutParams;->getRules()[I
@@ -1911,7 +1911,7 @@
     .line 397
     iget-object v0, p0, Lcom/android/camera/FocusManager;->mFocusIndicatorRotateLayout:Lcom/android/camera/ui/FocusIndicatorRotateLayout;
 
-    invoke-virtual {v0}, Lcom/android/camera/ui/FocusIndicatorRotateLayout;->requestLayout()V
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
 
     .line 400
     iget-object v0, p0, Lcom/android/camera/FocusManager;->mListener:Lcom/android/camera/FocusManager$Listener;
@@ -2023,7 +2023,7 @@
     :cond_0
     iget-object v2, p0, Lcom/android/camera/FocusManager;->mFocusIndicatorRotateLayout:Lcom/android/camera/ui/FocusIndicatorRotateLayout;
 
-    invoke-virtual {v2}, Lcom/android/camera/ui/FocusIndicatorRotateLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
@@ -2044,7 +2044,7 @@
     aput v3, v1, v2
 
     .line 554
-    invoke-virtual {v0, v4, v4, v4, v4}, Landroid/widget/RelativeLayout$LayoutParams;->setMargins(IIII)V
+    invoke-virtual {v0, v4, v4, v4, v4}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
 
     .line 555
     iget-object v2, p0, Lcom/android/camera/FocusManager;->mFocusIndicatorRotateLayout:Lcom/android/camera/ui/FocusIndicatorRotateLayout;

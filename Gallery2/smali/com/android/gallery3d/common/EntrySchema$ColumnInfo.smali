@@ -50,7 +50,7 @@
 
     .prologue
     .line 525
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 526
     invoke-virtual {p1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
@@ -83,7 +83,7 @@
     .line 535
     const/4 v0, 0x1
 
-    invoke-virtual {p7, v0}, Ljava/lang/reflect/Field;->setAccessible(Z)V
+    invoke-virtual {p7, v0}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
 
     .line 536
     return-void

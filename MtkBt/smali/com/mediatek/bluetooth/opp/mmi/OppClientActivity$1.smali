@@ -113,7 +113,7 @@
     .local v3, uri:Landroid/net/Uri;
     iget-object v5, p0, Lcom/mediatek/bluetooth/opp/mmi/OppClientActivity$1;->this$0:Lcom/mediatek/bluetooth/opp/mmi/OppClientActivity;
 
-    invoke-virtual {v5}, Lcom/mediatek/bluetooth/opp/mmi/OppClientActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v5}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
@@ -162,7 +162,7 @@
 
     aput-object v3, v7, v8
 
-    invoke-virtual {v5, v6, v7}, Lcom/mediatek/bluetooth/opp/mmi/OppClientActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v5, v6, v7}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -174,7 +174,7 @@
 
     invoke-direct {v6, p0, v4}, Lcom/mediatek/bluetooth/opp/mmi/OppClientActivity$1$1;-><init>(Lcom/mediatek/bluetooth/opp/mmi/OppClientActivity$1;Ljava/lang/String;)V
 
-    invoke-virtual {v5, v6}, Lcom/mediatek/bluetooth/opp/mmi/OppClientActivity;->runOnUiThread(Ljava/lang/Runnable;)V
+    invoke-virtual {v5, v6}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
     .line 250
     .end local v0           #i$:Ljava/util/Iterator;
@@ -277,7 +277,7 @@
 
     invoke-direct {v6, p0}, Lcom/mediatek/bluetooth/opp/mmi/OppClientActivity$1$2;-><init>(Lcom/mediatek/bluetooth/opp/mmi/OppClientActivity$1;)V
 
-    invoke-virtual {v5, v6}, Lcom/mediatek/bluetooth/opp/mmi/OppClientActivity;->runOnUiThread(Ljava/lang/Runnable;)V
+    invoke-virtual {v5, v6}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
     goto :goto_1
 .end method

@@ -443,7 +443,7 @@
 
     .line 581
     .local v7, ex:Landroid/os/RemoteException;
-    invoke-virtual {v7}, Landroid/os/RemoteException;->toString()Ljava/lang/String;
+    invoke-virtual {v7}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -458,7 +458,7 @@
 
     .line 583
     .local v7, ex:Ljava/lang/SecurityException;
-    invoke-virtual {v7}, Ljava/lang/SecurityException;->toString()Ljava/lang/String;
+    invoke-virtual {v7}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -666,7 +666,7 @@
 
     .line 619
     .local v13, ex:Landroid/os/RemoteException;
-    invoke-virtual {v13}, Landroid/os/RemoteException;->toString()Ljava/lang/String;
+    invoke-virtual {v13}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -681,7 +681,7 @@
 
     .line 621
     .local v13, ex:Ljava/lang/SecurityException;
-    invoke-virtual {v13}, Ljava/lang/SecurityException;->toString()Ljava/lang/String;
+    invoke-virtual {v13}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -828,7 +828,7 @@
 
     .line 761
     .local v7, ex:Landroid/os/RemoteException;
-    invoke-virtual {v7}, Landroid/os/RemoteException;->toString()Ljava/lang/String;
+    invoke-virtual {v7}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -843,7 +843,7 @@
 
     .line 763
     .local v7, ex:Ljava/lang/SecurityException;
-    invoke-virtual {v7}, Ljava/lang/SecurityException;->toString()Ljava/lang/String;
+    invoke-virtual {v7}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -966,7 +966,7 @@
 
     .line 784
     .local v6, ex:Landroid/os/RemoteException;
-    invoke-virtual {v6}, Landroid/os/RemoteException;->toString()Ljava/lang/String;
+    invoke-virtual {v6}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -981,7 +981,7 @@
 
     .line 786
     .local v6, ex:Ljava/lang/SecurityException;
-    invoke-virtual {v6}, Ljava/lang/SecurityException;->toString()Ljava/lang/String;
+    invoke-virtual {v6}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1137,7 +1137,7 @@
 
     .line 808
     .local v13, ex:Landroid/os/RemoteException;
-    invoke-virtual {v13}, Landroid/os/RemoteException;->toString()Ljava/lang/String;
+    invoke-virtual {v13}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1152,7 +1152,7 @@
 
     .line 810
     .local v13, ex:Ljava/lang/SecurityException;
-    invoke-virtual {v13}, Ljava/lang/SecurityException;->toString()Ljava/lang/String;
+    invoke-virtual {v13}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1268,7 +1268,7 @@
 
     .line 830
     .local v8, ex:Landroid/os/RemoteException;
-    invoke-virtual {v8}, Landroid/os/RemoteException;->toString()Ljava/lang/String;
+    invoke-virtual {v8}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1283,7 +1283,7 @@
 
     .line 832
     .local v8, ex:Ljava/lang/SecurityException;
-    invoke-virtual {v8}, Ljava/lang/SecurityException;->toString()Ljava/lang/String;
+    invoke-virtual {v8}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1621,7 +1621,7 @@
 
     .line 537
     .local v2, ex:Landroid/os/RemoteException;
-    invoke-virtual {v2}, Landroid/os/RemoteException;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v6
 
@@ -1636,7 +1636,7 @@
 
     .line 539
     .local v2, ex:Ljava/lang/SecurityException;
-    invoke-virtual {v2}, Ljava/lang/SecurityException;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v6
 
@@ -2158,7 +2158,7 @@
 
     .line 644
     .local v8, ex:Landroid/os/RemoteException;
-    invoke-virtual {v8}, Landroid/os/RemoteException;->toString()Ljava/lang/String;
+    invoke-virtual {v8}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -2173,7 +2173,7 @@
 
     .line 646
     .local v8, ex:Ljava/lang/SecurityException;
-    invoke-virtual {v8}, Ljava/lang/SecurityException;->toString()Ljava/lang/String;
+    invoke-virtual {v8}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -2308,7 +2308,7 @@
 
     .line 668
     .local v6, ex:Landroid/os/RemoteException;
-    invoke-virtual {v6}, Landroid/os/RemoteException;->toString()Ljava/lang/String;
+    invoke-virtual {v6}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -2323,7 +2323,7 @@
 
     .line 670
     .local v6, ex:Ljava/lang/SecurityException;
-    invoke-virtual {v6}, Ljava/lang/SecurityException;->toString()Ljava/lang/String;
+    invoke-virtual {v6}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -2436,7 +2436,7 @@
 
     .line 951
     .local v0, ex:Landroid/os/RemoteException;
-    invoke-virtual {v0}, Landroid/os/RemoteException;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v3
 
@@ -2451,7 +2451,7 @@
 
     .line 953
     .local v0, ex:Ljava/lang/SecurityException;
-    invoke-virtual {v0}, Ljava/lang/SecurityException;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v3
 
@@ -2564,7 +2564,7 @@
 
     .line 929
     .local v0, ex:Landroid/os/RemoteException;
-    invoke-virtual {v0}, Landroid/os/RemoteException;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v3
 
@@ -2579,7 +2579,7 @@
 
     .line 931
     .local v0, ex:Ljava/lang/SecurityException;
-    invoke-virtual {v0}, Ljava/lang/SecurityException;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v3
 
@@ -2790,7 +2790,7 @@
 
     .line 702
     .local v13, ex:Landroid/os/RemoteException;
-    invoke-virtual {v13}, Landroid/os/RemoteException;->toString()Ljava/lang/String;
+    invoke-virtual {v13}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -2805,7 +2805,7 @@
 
     .line 704
     .local v13, ex:Ljava/lang/SecurityException;
-    invoke-virtual {v13}, Ljava/lang/SecurityException;->toString()Ljava/lang/String;
+    invoke-virtual {v13}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -2987,7 +2987,7 @@
 
     .line 735
     .local v9, ex:Landroid/os/RemoteException;
-    invoke-virtual {v9}, Landroid/os/RemoteException;->toString()Ljava/lang/String;
+    invoke-virtual {v9}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -3002,7 +3002,7 @@
 
     .line 737
     .local v9, ex:Ljava/lang/SecurityException;
-    invoke-virtual {v9}, Ljava/lang/SecurityException;->toString()Ljava/lang/String;
+    invoke-virtual {v9}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v2
 

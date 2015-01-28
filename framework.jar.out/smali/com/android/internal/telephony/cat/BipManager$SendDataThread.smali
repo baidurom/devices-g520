@@ -36,7 +36,7 @@
     .line 389
     iput-object p1, p0, Lcom/android/internal/telephony/cat/BipManager$SendDataThread;->this$0:Lcom/android/internal/telephony/cat/BipManager;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 390
     const-string v0, "[BIP]"
@@ -142,7 +142,7 @@
 
     iget-object v4, p0, Lcom/android/internal/telephony/cat/BipManager$SendDataThread;->response:Landroid/os/Message;
 
-    invoke-virtual {v3, v4}, Lcom/android/internal/telephony/cat/CatService;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v3, v4}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     .line 419
     return-void

@@ -559,7 +559,7 @@
 
     aput-object v1, v7, v9
 
-    invoke-virtual {p0, v6, v7}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v6, v7}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -681,7 +681,7 @@
 
     aput-object v1, v7, v9
 
-    invoke-virtual {p0, v6, v7}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v6, v7}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -734,7 +734,7 @@
 
     aput-object v1, v7, v9
 
-    invoke-virtual {p0, v6, v7}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v6, v7}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -786,7 +786,7 @@
 
     aput-object v1, v7, v9
 
-    invoke-virtual {p0, v6, v7}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v6, v7}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -1015,7 +1015,7 @@
 
     aput-object v6, v5, v7
 
-    invoke-virtual {p0, v4, v5}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v4, v5}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -1284,7 +1284,7 @@
 
     aput-object v1, v7, v8
 
-    invoke-virtual {p0, v6, v7}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v6, v7}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -1359,7 +1359,7 @@
 
     aput-object v1, v7, v8
 
-    invoke-virtual {p0, v6, v7}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v6, v7}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -1384,7 +1384,7 @@
 
     aput-object v1, v7, v8
 
-    invoke-virtual {p0, v6, v7}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v6, v7}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -1420,7 +1420,7 @@
 
     aput-object v1, v7, v8
 
-    invoke-virtual {p0, v6, v7}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v6, v7}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -1512,7 +1512,7 @@
 
     aput-object v1, v5, v6
 
-    invoke-virtual {p0, v4, v5}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v4, v5}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -1594,7 +1594,7 @@
 
     aput-object v1, v5, v6
 
-    invoke-virtual {p0, v4, v5}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v4, v5}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -2432,7 +2432,7 @@
     move-result-object v2
 
     .line 1099
-    invoke-virtual/range {p0 .. p0}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->getPackageName()Ljava/lang/String;
+    invoke-virtual/range {p0 .. p0}, Landroid/content/ContextWrapper;->getPackageName()Ljava/lang/String;
 
     move-result-object v13
 
@@ -2492,7 +2492,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v13, v14}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v13, v14}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -2501,7 +2501,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v13}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v13}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
@@ -2510,7 +2510,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v13}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v13}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v9
 
@@ -2557,7 +2557,7 @@
     invoke-virtual {v11, v13, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 1141
-    invoke-virtual/range {p0 .. p0}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual/range {p0 .. p0}, Landroid/content/ContextWrapper;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v13
 
@@ -2602,7 +2602,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v13, v14}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v13, v14}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -2611,7 +2611,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v13}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v13}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
@@ -2620,7 +2620,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v13}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v13}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v9
 
@@ -2664,7 +2664,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v13, v14}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v13, v14}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -2673,7 +2673,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v13}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v13}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
@@ -2682,7 +2682,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v13}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v13}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v9
 
@@ -2715,7 +2715,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v13, v14}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v13, v14}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -2724,7 +2724,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v13}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v13}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
@@ -2733,7 +2733,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v13}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v13}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v9
 
@@ -2908,7 +2908,7 @@
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 221
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 
@@ -2926,7 +2926,7 @@
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 229
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 .end method
@@ -2972,7 +2972,7 @@
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 241
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     .line 242
     const/4 v1, 0x0
@@ -3473,7 +3473,7 @@
 
     const-wide/16 v9, 0x3e8
 
-    invoke-virtual {v8, v9, v10}, Lcom/mediatek/bluetooth/pan/BluetoothPanService$SocketListenerThread;->join(J)V
+    invoke-virtual {v8, v9, v10}, Ljava/lang/Thread;->join(J)V
 
     .line 787
     const/4 v8, 0x0
@@ -3598,7 +3598,7 @@
 
     const-string v1, "BTPanSocketListener"
 
-    invoke-virtual {v0, v1}, Lcom/mediatek/bluetooth/pan/BluetoothPanService$SocketListenerThread;->setName(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
 
     .line 812
     iget-object v0, p0, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->mSocketListener:Lcom/mediatek/bluetooth/pan/BluetoothPanService$SocketListenerThread;
@@ -3610,7 +3610,7 @@
     .line 813
     iget-object v0, p0, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->mSocketListener:Lcom/mediatek/bluetooth/pan/BluetoothPanService$SocketListenerThread;
 
-    invoke-virtual {v0}, Lcom/mediatek/bluetooth/pan/BluetoothPanService$SocketListenerThread;->start()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     .line 814
     const-string v0, "SocketListener started."
@@ -3713,7 +3713,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 636
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -3822,7 +3822,7 @@
     .line 718
     iget-object v0, p0, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 719
     invoke-virtual {p0}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->localClearService()V
@@ -3876,7 +3876,7 @@
     .line 665
     const-string v3, "notification"
 
-    invoke-virtual {p0, v3}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v3}, Landroid/content/ContextWrapper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -3897,7 +3897,7 @@
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 670
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->stopSelf()V
+    invoke-virtual {p0}, Landroid/app/Service;->stopSelf()V
 
     .line 673
     :cond_0
@@ -3919,10 +3919,10 @@
     .line 676
     iget-object v3, p0, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v3, v1}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v3, v1}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 678
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -3948,7 +3948,7 @@
 
     .line 683
     :cond_1
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -4010,7 +4010,7 @@
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 693
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/pan/BluetoothPanService;->stopSelf()V
+    invoke-virtual {p0}, Landroid/app/Service;->stopSelf()V
 
     .line 696
     :cond_4

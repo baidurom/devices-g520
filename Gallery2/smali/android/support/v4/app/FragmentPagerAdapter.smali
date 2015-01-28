@@ -189,7 +189,7 @@
 
     .line 91
     .local v1, itemId:J
-    invoke-virtual {p1}, Landroid/view/ViewGroup;->getId()I
+    invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v4
 
@@ -239,11 +239,11 @@
     .line 99
     iget-object v4, p0, Landroid/support/v4/app/FragmentPagerAdapter;->mCurTransaction:Landroid/support/v4/app/FragmentTransaction;
 
-    invoke-virtual {p1}, Landroid/view/ViewGroup;->getId()I
+    invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v5
 
-    invoke-virtual {p1}, Landroid/view/ViewGroup;->getId()I
+    invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v6
 

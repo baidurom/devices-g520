@@ -35,7 +35,7 @@
 
     iput-object p2, p0, Lcom/android/gallery3d/data/SizeClustering$1;->val$group:[Ljava/util/ArrayList;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -106,7 +106,7 @@
 
     .line 71
     :cond_1
-    invoke-virtual {p2}, Lcom/android/gallery3d/data/MediaItem;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {p2}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v4
 

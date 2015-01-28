@@ -50,7 +50,7 @@
     .line 309
     const/16 v0, 0x4e2
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/ui/CropView$AnimationController;->setDuration(I)V
+    invoke-virtual {p0, v0}, Lcom/android/gallery3d/anim/Animation;->setDuration(I)V
 
     .line 310
     new-instance v0, Landroid/view/animation/DecelerateInterpolator;
@@ -59,7 +59,7 @@
 
     invoke-direct {v0, v1}, Landroid/view/animation/DecelerateInterpolator;-><init>(F)V
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/ui/CropView$AnimationController;->setInterpolator(Landroid/view/animation/Interpolator;)V
+    invoke-virtual {p0, v0}, Lcom/android/gallery3d/anim/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
     .line 311
     return-void
@@ -77,7 +77,7 @@
     .line 394
     iget-object v8, p0, Lcom/android/gallery3d/ui/CropView$AnimationController;->this$0:Lcom/android/gallery3d/ui/CropView;
 
-    invoke-virtual {v8}, Lcom/android/gallery3d/ui/CropView;->getWidth()I
+    invoke-virtual {v8}, Lcom/android/gallery3d/ui/GLView;->getWidth()I
 
     move-result v8
 
@@ -87,7 +87,7 @@
     .local v7, width:F
     iget-object v8, p0, Lcom/android/gallery3d/ui/CropView$AnimationController;->this$0:Lcom/android/gallery3d/ui/CropView;
 
-    invoke-virtual {v8}, Lcom/android/gallery3d/ui/CropView;->getHeight()I
+    invoke-virtual {v8}, Lcom/android/gallery3d/ui/GLView;->getHeight()I
 
     move-result v8
 
@@ -489,7 +489,7 @@
 
     iget-object v1, p0, Lcom/android/gallery3d/ui/CropView$AnimationController;->this$0:Lcom/android/gallery3d/ui/CropView;
 
-    invoke-virtual {v1}, Lcom/android/gallery3d/ui/CropView;->getWidth()I
+    invoke-virtual {v1}, Lcom/android/gallery3d/ui/GLView;->getWidth()I
 
     move-result v1
 
@@ -508,7 +508,7 @@
 
     iget-object v2, p0, Lcom/android/gallery3d/ui/CropView$AnimationController;->this$0:Lcom/android/gallery3d/ui/CropView;
 
-    invoke-virtual {v2}, Lcom/android/gallery3d/ui/CropView;->getHeight()I
+    invoke-virtual {v2}, Lcom/android/gallery3d/ui/GLView;->getHeight()I
 
     move-result v2
 
@@ -559,7 +559,7 @@
 
     iget-object v2, p0, Lcom/android/gallery3d/ui/CropView$AnimationController;->this$0:Lcom/android/gallery3d/ui/CropView;
 
-    invoke-virtual {v2}, Lcom/android/gallery3d/ui/CropView;->getWidth()I
+    invoke-virtual {v2}, Lcom/android/gallery3d/ui/GLView;->getWidth()I
 
     move-result v2
 
@@ -599,7 +599,7 @@
 
     iget-object v2, p0, Lcom/android/gallery3d/ui/CropView$AnimationController;->this$0:Lcom/android/gallery3d/ui/CropView;
 
-    invoke-virtual {v2}, Lcom/android/gallery3d/ui/CropView;->getHeight()I
+    invoke-virtual {v2}, Lcom/android/gallery3d/ui/GLView;->getHeight()I
 
     move-result v2
 
@@ -649,7 +649,7 @@
     .line 358
     iget-object v5, p0, Lcom/android/gallery3d/ui/CropView$AnimationController;->this$0:Lcom/android/gallery3d/ui/CropView;
 
-    invoke-virtual {v5}, Lcom/android/gallery3d/ui/CropView;->getWidth()I
+    invoke-virtual {v5}, Lcom/android/gallery3d/ui/GLView;->getWidth()I
 
     move-result v5
 
@@ -661,7 +661,7 @@
     .local v0, offsetX:F
     iget-object v5, p0, Lcom/android/gallery3d/ui/CropView$AnimationController;->this$0:Lcom/android/gallery3d/ui/CropView;
 
-    invoke-virtual {v5}, Lcom/android/gallery3d/ui/CropView;->getHeight()I
+    invoke-virtual {v5}, Lcom/android/gallery3d/ui/GLView;->getHeight()I
 
     move-result v5
 
@@ -861,7 +861,7 @@
     if-nez v0, :cond_0
 
     .line 378
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/CropView$AnimationController;->forceStop()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/anim/Animation;->forceStop()V
 
     .line 379
     :cond_0
@@ -877,7 +877,7 @@
     invoke-direct {p0, p1}, Lcom/android/gallery3d/ui/CropView$AnimationController;->calculateTarget(Landroid/graphics/RectF;)V
 
     .line 343
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/CropView$AnimationController;->forceStop()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/anim/Animation;->forceStop()V
 
     .line 344
     iget v0, p0, Lcom/android/gallery3d/ui/CropView$AnimationController;->mTargetX:I
@@ -935,7 +935,7 @@
     .local v3, r:Landroid/graphics/RectF;
     iget-object v6, p0, Lcom/android/gallery3d/ui/CropView$AnimationController;->this$0:Lcom/android/gallery3d/ui/CropView;
 
-    invoke-virtual {v6}, Lcom/android/gallery3d/ui/CropView;->getWidth()I
+    invoke-virtual {v6}, Lcom/android/gallery3d/ui/GLView;->getWidth()I
 
     move-result v4
 
@@ -943,7 +943,7 @@
     .local v4, width:I
     iget-object v6, p0, Lcom/android/gallery3d/ui/CropView$AnimationController;->this$0:Lcom/android/gallery3d/ui/CropView;
 
-    invoke-virtual {v6}, Lcom/android/gallery3d/ui/CropView;->getHeight()I
+    invoke-virtual {v6}, Lcom/android/gallery3d/ui/GLView;->getHeight()I
 
     move-result v1
 
@@ -1045,7 +1045,7 @@
     invoke-direct {p0, p1}, Lcom/android/gallery3d/ui/CropView$AnimationController;->calculateTarget(Landroid/graphics/RectF;)V
 
     .line 338
-    invoke-virtual {p0}, Lcom/android/gallery3d/ui/CropView$AnimationController;->start()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/anim/Animation;->start()V
 
     goto :goto_0
 .end method

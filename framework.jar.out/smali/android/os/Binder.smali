@@ -26,7 +26,7 @@
 
     .prologue
     .line 175
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 176
     invoke-direct {p0}, Landroid/os/Binder;->init()V
@@ -91,7 +91,7 @@
 
     .line 369
     .local v1, e:Landroid/os/RemoteException;
-    invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
 
     .line 370
     invoke-virtual {v3, v6}, Landroid/os/Parcel;->setDataPosition(I)V
@@ -114,7 +114,7 @@
 
     .line 374
     .local v1, e:Ljava/lang/RuntimeException;
-    invoke-virtual {v1}, Ljava/lang/RuntimeException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
 
     .line 375
     invoke-virtual {v3, v6}, Landroid/os/Parcel;->setDataPosition(I)V
@@ -145,7 +145,7 @@
 
     .line 380
     .local v2, re:Ljava/lang/RuntimeException;
-    invoke-virtual {v2}, Ljava/lang/RuntimeException;->printStackTrace()V
+    invoke-virtual {v2}, Ljava/lang/Throwable;->printStackTrace()V
 
     .line 381
     invoke-virtual {v3, v6}, Landroid/os/Parcel;->setDataPosition(I)V

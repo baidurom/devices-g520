@@ -326,7 +326,7 @@
 
     .prologue
     .line 810
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 811
     iput p1, p0, Lcom/android/bluetooth/pbap/ContactStruct;->mVCardType:I
@@ -5108,7 +5108,7 @@
 
     const/4 v5, 0x0
 
-    invoke-virtual {v10}, Landroid/os/RemoteException;->toString()Ljava/lang/String;
+    invoke-virtual {v10}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v6
 
@@ -5116,7 +5116,7 @@
 
     const/4 v5, 0x1
 
-    invoke-virtual {v10}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v10}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v6
 
@@ -5147,7 +5147,7 @@
 
     const/4 v5, 0x0
 
-    invoke-virtual {v10}, Landroid/content/OperationApplicationException;->toString()Ljava/lang/String;
+    invoke-virtual {v10}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v6
 
@@ -5155,7 +5155,7 @@
 
     const/4 v5, 0x1
 
-    invoke-virtual {v10}, Landroid/content/OperationApplicationException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v10}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v6
 

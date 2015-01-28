@@ -255,7 +255,7 @@
 
     .line 140
     :cond_2
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/CropView;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     .line 141
     return-void
@@ -512,7 +512,7 @@
     :goto_2
     iget-object v3, p0, Lcom/android/gallery3d/photoeditor/actions/CropView;->cropBounds:Landroid/graphics/RectF;
 
-    invoke-virtual {p0, v0, v3}, Lcom/android/gallery3d/photoeditor/actions/CropView;->mapPhotoRect(Landroid/graphics/RectF;Landroid/graphics/RectF;)V
+    invoke-virtual {p0, v0, v3}, Lcom/android/gallery3d/photoeditor/actions/FullscreenToolView;->mapPhotoRect(Landroid/graphics/RectF;Landroid/graphics/RectF;)V
 
     .line 171
     const/4 v3, 0x1
@@ -564,7 +564,7 @@
 
     mul-float/2addr v3, v6
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/CropView;->getPhotoWidth()F
+    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/FullscreenToolView;->getPhotoWidth()F
 
     move-result v4
 
@@ -580,7 +580,7 @@
 
     mul-float/2addr v3, v6
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/CropView;->getPhotoHeight()F
+    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/FullscreenToolView;->getPhotoHeight()F
 
     move-result v4
 
@@ -710,7 +710,7 @@
 
     .line 85
     :cond_0
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/CropView;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     .line 86
     return-void
@@ -724,7 +724,7 @@
 
     .prologue
     .line 223
-    invoke-super {p0, p1}, Lcom/android/gallery3d/photoeditor/actions/FullscreenToolView;->onDraw(Landroid/graphics/Canvas;)V
+    invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
     .line 226
     invoke-direct {p0}, Lcom/android/gallery3d/photoeditor/actions/CropView;->getCropBoundsDisplayed()Landroid/graphics/RectF;
@@ -927,10 +927,10 @@
 
     .prologue
     .line 176
-    invoke-super {p0, p1}, Lcom/android/gallery3d/photoeditor/actions/FullscreenToolView;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    invoke-super {p0, p1}, Landroid/view/View;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     .line 178
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/CropView;->isEnabled()Z
+    invoke-virtual {p0}, Landroid/view/View;->isEnabled()Z
 
     move-result v2
 
@@ -1011,7 +1011,7 @@
     iput v2, p0, Lcom/android/gallery3d/photoeditor/actions/CropView;->movingEdges:I
 
     .line 200
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/CropView;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     goto :goto_0
 
@@ -1043,7 +1043,7 @@
 
     move-result v0
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/CropView;->getPhotoWidth()F
+    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/FullscreenToolView;->getPhotoWidth()F
 
     move-result v1
 
@@ -1066,7 +1066,7 @@
 
     move-result v0
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/CropView;->getPhotoHeight()F
+    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/FullscreenToolView;->getPhotoHeight()F
 
     move-result v1
 

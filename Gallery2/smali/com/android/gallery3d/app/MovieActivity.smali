@@ -243,7 +243,7 @@
 
     new-array v5, v5, [Ljava/lang/Void;
 
-    invoke-virtual {v4, v5}, Lcom/android/gallery3d/app/MovieActivity$3;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v4, v5}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     .line 439
     const-string v4, "MovieActivity"
@@ -402,7 +402,7 @@
     const/4 v4, 0x4
 
     .line 133
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/MovieActivity;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
@@ -423,7 +423,7 @@
     .line 136
     new-instance v2, Landroid/graphics/drawable/BitmapDrawable;
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/MovieActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -485,7 +485,7 @@
     .line 336
     const-string v1, "keyguard"
 
-    invoke-virtual {p0, v1}, Lcom/android/gallery3d/app/MovieActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -681,7 +681,7 @@
     .line 393
     iget-object v1, p0, Lcom/android/gallery3d/app/MovieActivity;->mScreenOffReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v1, v0}, Lcom/android/gallery3d/app/MovieActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v1, v0}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 394
     return-void
@@ -694,7 +694,7 @@
     .line 397
     iget-object v0, p0, Lcom/android/gallery3d/app/MovieActivity;->mScreenOffReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/app/MovieActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 398
     return-void
@@ -719,27 +719,27 @@
     .line 80
     const/16 v0, 0x8
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/app/MovieActivity;->requestWindowFeature(I)Z
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->requestWindowFeature(I)Z
 
     .line 81
     const/16 v0, 0x9
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/app/MovieActivity;->requestWindowFeature(I)Z
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->requestWindowFeature(I)Z
 
     .line 82
     const/4 v0, 0x3
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/app/MovieActivity;->setVolumeControlStream(I)V
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->setVolumeControlStream(I)V
 
     .line 83
     const v0, 0x7f040022
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/app/MovieActivity;->setContentView(I)V
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->setContentView(I)V
 
     .line 84
     const v0, 0x7f0b003f
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/app/MovieActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -750,7 +750,7 @@
     invoke-virtual {v2, v0}, Landroid/view/View;->setSystemUiVisibility(I)V
 
     .line 88
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/MovieActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v7
 
@@ -826,19 +826,19 @@
 
     .line 111
     .local v8, orientation:I
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/MovieActivity;->getRequestedOrientation()I
+    invoke-virtual {p0}, Landroid/app/Activity;->getRequestedOrientation()I
 
     move-result v0
 
     if-eq v8, v0, :cond_0
 
     .line 112
-    invoke-virtual {p0, v8}, Lcom/android/gallery3d/app/MovieActivity;->setRequestedOrientation(I)V
+    invoke-virtual {p0, v8}, Landroid/app/Activity;->setRequestedOrientation(I)V
 
     .line 115
     .end local v8           #orientation:I
     :cond_0
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/MovieActivity;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v9
 
@@ -945,7 +945,7 @@
 
     .line 182
     .local v0, local:Z
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/MovieActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -986,7 +986,7 @@
 
     .line 186
     :cond_1
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/MovieActivity;->getMenuInflater()Landroid/view/MenuInflater;
+    invoke-virtual {p0}, Landroid/app/Activity;->getMenuInflater()Landroid/view/MenuInflater;
 
     move-result-object v2
 
@@ -1140,7 +1140,7 @@
     if-eqz v0, :cond_0
 
     .line 223
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/MovieActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 228
     :goto_0
@@ -1158,10 +1158,10 @@
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/app/MovieActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
     .line 226
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/MovieActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 
@@ -1446,7 +1446,7 @@
     .line 245
     const-string v0, "audio"
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/app/MovieActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1742,7 +1742,7 @@
     invoke-static {v1, v2}, Lcom/mediatek/gallery3d/ext/MtkLog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 447
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/MovieActivity;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 

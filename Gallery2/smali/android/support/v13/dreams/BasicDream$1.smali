@@ -129,7 +129,7 @@
     .line 75
     iget-object v2, p0, Landroid/support/v13/dreams/BasicDream$1;->this$0:Landroid/support/v13/dreams/BasicDream;
 
-    invoke-virtual {v2}, Landroid/support/v13/dreams/BasicDream;->getWindow()Landroid/view/Window;
+    invoke-virtual {v2}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v2
 
@@ -158,7 +158,7 @@
     :cond_3
     iget-object v2, p0, Landroid/support/v13/dreams/BasicDream$1;->this$0:Landroid/support/v13/dreams/BasicDream;
 
-    invoke-virtual {v2}, Landroid/support/v13/dreams/BasicDream;->getWindow()Landroid/view/Window;
+    invoke-virtual {v2}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v2
 

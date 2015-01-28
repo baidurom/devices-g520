@@ -32,7 +32,7 @@
     .line 595
     iput-object p1, p0, Lcom/android/gallery3d/ui/TileImageView$TileUploader;->this$0:Lcom/android/gallery3d/ui/TileImageView;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 596
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -147,7 +147,7 @@
     .line 608
     .restart local v1       #tile:Lcom/android/gallery3d/ui/TileImageView$Tile;
     :cond_3
-    invoke-virtual {v1}, Lcom/android/gallery3d/ui/TileImageView$Tile;->isContentValid()Z
+    invoke-virtual {v1}, Lcom/android/gallery3d/ui/UploadedTexture;->isContentValid()Z
 
     move-result v2
 
@@ -166,7 +166,7 @@
     invoke-static {v2}, Lcom/android/gallery3d/common/Utils;->assertTrue(Z)V
 
     .line 610
-    invoke-virtual {v1, p1}, Lcom/android/gallery3d/ui/TileImageView$Tile;->updateContent(Lcom/android/gallery3d/ui/GLCanvas;)V
+    invoke-virtual {v1, p1}, Lcom/android/gallery3d/ui/UploadedTexture;->updateContent(Lcom/android/gallery3d/ui/GLCanvas;)V
 
     .line 611
     add-int/lit8 v0, v0, -0x1

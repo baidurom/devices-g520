@@ -66,7 +66,7 @@
     .line 1551
     iget-object v0, p0, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService$ServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -94,7 +94,7 @@
     .line 1567
     iget-object v0, p0, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService$ServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -130,7 +130,7 @@
     .line 1672
     iget-object v0, p0, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService$ServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -141,13 +141,13 @@
     .line 1673
     iget-object v0, p0, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService$ServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService;
 
-    invoke-virtual {v0}, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService;->stopSelf()V
+    invoke-virtual {v0}, Landroid/app/Service;->stopSelf()V
 
     move v0, v1
 
@@ -159,7 +159,7 @@
     :cond_0
     iget-object v0, p0, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService$ServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -191,7 +191,7 @@
     .line 1679
     iget-object v0, p0, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService$ServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -225,7 +225,7 @@
     .line 1559
     iget-object v0, p0, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService$ServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -246,7 +246,7 @@
     .line 1575
     iget-object v0, p0, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService$ServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -284,7 +284,7 @@
     .local v0, playerId:S
     iget-object v1, p0, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService$ServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -303,7 +303,7 @@
     :cond_0
     iget-object v1, p0, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService$ServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -337,7 +337,7 @@
 
     iget-object v1, p0, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService$ServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -360,7 +360,7 @@
 
     iget-object v1, p0, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService$ServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -384,7 +384,7 @@
     .line 1646
     iget-object v1, p0, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService$ServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -400,7 +400,7 @@
     .line 1648
     iget-object v1, p0, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService$ServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -412,7 +412,7 @@
     .line 1649
     iget-object v1, p0, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService$ServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -424,7 +424,7 @@
     :cond_1
     iget-object v1, p0, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService$ServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -440,7 +440,7 @@
     .line 1656
     iget-object v1, p0, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService$ServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -452,7 +452,7 @@
     .line 1657
     iget-object v1, p0, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService$ServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -536,7 +536,7 @@
     .line 1593
     iget-object v0, p0, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService$ServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -585,7 +585,7 @@
     .line 1616
     iget-object v0, p0, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService$ServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -598,7 +598,7 @@
     .line 1618
     iget-object v0, p0, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService$ServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -615,7 +615,7 @@
     .line 1619
     iget-object v0, p0, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService$ServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -632,7 +632,7 @@
     .line 1620
     iget-object v0, p0, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService$ServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -649,7 +649,7 @@
     .line 1621
     iget-object v0, p0, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService$ServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -666,7 +666,7 @@
     .line 1622
     iget-object v0, p0, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService$ServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -714,7 +714,7 @@
     .line 1627
     iget-object v0, p0, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService$ServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -752,7 +752,7 @@
     .line 1630
     iget-object v0, p0, Lcom/mediatek/bluetooth/avrcp/BluetoothAvrcpService$ServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 

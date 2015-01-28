@@ -13,7 +13,7 @@
 
     .prologue
     .line 42
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 43
     return-void
@@ -207,7 +207,7 @@
     invoke-virtual {v4, v7}, Ljava/io/DataOutputStream;->writeInt(I)V
 
     .line 71
-    invoke-virtual {v4}, Ljava/io/DataOutputStream;->close()V
+    invoke-virtual {v4}, Ljava/io/FilterOutputStream;->close()V
 
     .line 72
     invoke-static {v2}, Llibcore/io/IoUtils;->closeQuietly(Ljava/io/FileDescriptor;)V

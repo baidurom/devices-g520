@@ -261,7 +261,7 @@
     .line 313
     iget-object v4, p0, Lcom/mediatek/FMRadio/FMRadioActivity$FMBroadcastReceiver;->this$0:Lcom/mediatek/FMRadio/FMRadioActivity;
 
-    invoke-virtual {v4}, Lcom/mediatek/FMRadio/FMRadioActivity;->finish()V
+    invoke-virtual {v4}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 

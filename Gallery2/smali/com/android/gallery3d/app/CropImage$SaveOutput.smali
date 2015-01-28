@@ -43,7 +43,7 @@
     .line 335
     iput-object p1, p0, Lcom/android/gallery3d/app/CropImage$SaveOutput;->this$0:Lcom/android/gallery3d/app/CropImage;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 336
     iput-object p2, p0, Lcom/android/gallery3d/app/CropImage$SaveOutput;->mCropRect:Landroid/graphics/RectF;
@@ -73,7 +73,7 @@
     .local v0, cropRect:Landroid/graphics/RectF;
     iget-object v8, p0, Lcom/android/gallery3d/app/CropImage$SaveOutput;->this$0:Lcom/android/gallery3d/app/CropImage;
 
-    invoke-virtual {v8}, Lcom/android/gallery3d/app/CropImage;->getIntent()Landroid/content/Intent;
+    invoke-virtual {v8}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v8
 
@@ -296,7 +296,7 @@
 
     iget-object v9, p0, Lcom/android/gallery3d/app/CropImage$SaveOutput;->this$0:Lcom/android/gallery3d/app/CropImage;
 
-    invoke-virtual {v9}, Lcom/android/gallery3d/app/CropImage;->getIntent()Landroid/content/Intent;
+    invoke-virtual {v9}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v9
 

@@ -49,7 +49,7 @@
     .prologue
     .line 80
     .local p0, this:Landroid/util/LruCache;,"Landroid/util/LruCache<TK;TV;>;"
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 81
     if-gtz p1, :cond_0
@@ -165,7 +165,7 @@
 
     iget-object v3, p0, Landroid/util/LruCache;->map:Ljava/util/LinkedHashMap;
 
-    invoke-virtual {v3}, Ljava/util/LinkedHashMap;->isEmpty()Z
+    invoke-virtual {v3}, Ljava/util/HashMap;->isEmpty()Z
 
     move-result v3
 
@@ -266,7 +266,7 @@
     .local v2, value:Ljava/lang/Object;,"TV;"
     iget-object v3, p0, Landroid/util/LruCache;->map:Ljava/util/LinkedHashMap;
 
-    invoke-virtual {v3, v0}, Ljava/util/LinkedHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3, v0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 214
     iget v3, p0, Landroid/util/LruCache;->size:I
@@ -519,7 +519,7 @@
     .line 140
     iget-object v2, p0, Landroid/util/LruCache;->map:Ljava/util/LinkedHashMap;
 
-    invoke-virtual {v2, p1, v0}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -529,7 +529,7 @@
     .line 144
     iget-object v2, p0, Landroid/util/LruCache;->map:Ljava/util/LinkedHashMap;
 
-    invoke-virtual {v2, p1, v1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 148
     :goto_1
@@ -714,7 +714,7 @@
     .line 174
     iget-object v1, p0, Landroid/util/LruCache;->map:Ljava/util/LinkedHashMap;
 
-    invoke-virtual {v1, p1, p2}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -826,7 +826,7 @@
     :try_start_0
     iget-object v1, p0, Landroid/util/LruCache;->map:Ljava/util/LinkedHashMap;
 
-    invoke-virtual {v1, p1}, Ljava/util/LinkedHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 

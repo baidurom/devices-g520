@@ -87,7 +87,7 @@
 
     .prologue
     .line 169
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 166
     new-instance v0, Ljava/lang/IllegalStateException;
@@ -201,7 +201,7 @@
     invoke-virtual {v2, p0}, Ljava/io/OutputStream;->write([B)V
 
     .line 328
-    invoke-virtual {v2}, Ljava/io/OutputStream;->close()V
+    invoke-virtual {v2}, Ljava/util/zip/DeflaterOutputStream;->close()V
 
     .line 329
     new-instance v1, Lorg/apache/http/entity/ByteArrayEntity;
@@ -1330,7 +1330,7 @@
 
     check-cast v0, Lorg/apache/http/impl/client/DefaultHttpClient;
 
-    invoke-virtual {v0, p1}, Lorg/apache/http/impl/client/DefaultHttpClient;->setHttpRequestRetryHandler(Lorg/apache/http/client/HttpRequestRetryHandler;)V
+    invoke-virtual {v0, p1}, Lorg/apache/http/impl/client/AbstractHttpClient;->setHttpRequestRetryHandler(Lorg/apache/http/client/HttpRequestRetryHandler;)V
 
     .line 531
     return-void

@@ -61,7 +61,7 @@
     invoke-virtual {v1, v2}, Lcom/android/gallery3d/photoeditor/filters/TintFilter;->setTint(I)V
 
     .line 53
-    invoke-virtual {p0, v1}, Lcom/android/gallery3d/photoeditor/actions/TintAction;->notifyChanged(Lcom/android/gallery3d/photoeditor/filters/Filter;)V
+    invoke-virtual {p0, v1}, Lcom/android/gallery3d/photoeditor/actions/EffectAction;->notifyChanged(Lcom/android/gallery3d/photoeditor/filters/Filter;)V
 
     .line 54
     return-void

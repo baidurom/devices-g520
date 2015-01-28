@@ -91,7 +91,7 @@
 
     iget-object v1, p0, Landroid/app/ActivityThread$ReceiverData;->info:Landroid/content/pm/ActivityInfo;
 
-    iget-object v1, v1, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
+    iget-object v1, v1, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -103,7 +103,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Landroid/app/ActivityThread$ReceiverData;->getResultCode()I
+    invoke-virtual {p0}, Landroid/content/BroadcastReceiver$PendingResult;->getResultCode()I
 
     move-result v1
 
@@ -117,7 +117,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Landroid/app/ActivityThread$ReceiverData;->getResultData()Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/content/BroadcastReceiver$PendingResult;->getResultData()Ljava/lang/String;
 
     move-result-object v1
 
@@ -133,7 +133,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {p0, v1}, Landroid/app/ActivityThread$ReceiverData;->getResultExtras(Z)Landroid/os/Bundle;
+    invoke-virtual {p0, v1}, Landroid/content/BroadcastReceiver$PendingResult;->getResultExtras(Z)Landroid/os/Bundle;
 
     move-result-object v1
 

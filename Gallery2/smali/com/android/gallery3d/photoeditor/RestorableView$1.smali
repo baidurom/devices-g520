@@ -35,7 +35,7 @@
 
     iput-object p2, p0, Lcom/android/gallery3d/photoeditor/RestorableView$1;->val$r:Ljava/lang/Runnable;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -50,7 +50,7 @@
     .line 83
     iget-object v0, p0, Lcom/android/gallery3d/photoeditor/RestorableView$1;->this$0:Lcom/android/gallery3d/photoeditor/RestorableView;
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/photoeditor/RestorableView;->isEnabled()Z
+    invoke-virtual {v0}, Landroid/view/View;->isEnabled()Z
 
     move-result v0
 

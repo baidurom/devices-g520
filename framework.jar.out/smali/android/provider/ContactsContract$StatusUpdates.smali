@@ -3,8 +3,8 @@
 .source "ContactsContract.java"
 
 # interfaces
-.implements Landroid/provider/ContactsContract$StatusColumns;
 .implements Landroid/provider/ContactsContract$PresenceColumns;
+.implements Landroid/provider/ContactsContract$StatusColumns;
 
 
 # annotations
@@ -63,7 +63,7 @@
 
     .prologue
     .line 5086
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

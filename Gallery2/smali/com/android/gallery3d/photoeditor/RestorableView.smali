@@ -74,14 +74,14 @@
 
     .prologue
     .line 47
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/RestorableView;->getChildCount()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 48
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/RestorableView;->removeAllViews()V
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->removeAllViews()V
 
     .line 50
     :cond_0
@@ -110,12 +110,12 @@
 
     .prologue
     .line 61
-    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Landroid/view/View;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 64
     const/4 v5, 0x0
 
-    invoke-virtual {p0, v5}, Lcom/android/gallery3d/photoeditor/RestorableView;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v5}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v4
 
@@ -231,7 +231,7 @@
 
     .prologue
     .line 55
-    invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
+    invoke-super {p0}, Landroid/view/View;->onFinishInflate()V
 
     .line 56
     invoke-direct {p0}, Lcom/android/gallery3d/photoeditor/RestorableView;->recreateChildView()V
@@ -247,7 +247,7 @@
 
     .prologue
     .line 79
-    invoke-virtual {p0, p1}, Lcom/android/gallery3d/photoeditor/RestorableView;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -277,7 +277,7 @@
 
     .prologue
     .line 92
-    invoke-virtual {p0, p1}, Lcom/android/gallery3d/photoeditor/RestorableView;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -303,7 +303,7 @@
 
     .prologue
     .line 98
-    invoke-virtual {p0, p1}, Lcom/android/gallery3d/photoeditor/RestorableView;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 

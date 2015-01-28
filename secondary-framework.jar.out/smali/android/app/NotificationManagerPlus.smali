@@ -59,7 +59,7 @@
 
     .prologue
     .line 335
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 68
     const/4 v0, 0x1
@@ -504,7 +504,7 @@
     invoke-interface {v6}, Ljava/util/Iterator;->remove()V
 
     .line 119
-    invoke-virtual {v2}, Landroid/app/NotificationManagerPlus$DialogPlus;->cancel()V
+    invoke-virtual {v2}, Landroid/app/Dialog;->cancel()V
 
     .line 123
     .end local v2           #dialog:Landroid/app/NotificationManagerPlus$DialogPlus;
@@ -562,7 +562,7 @@
     invoke-interface {v6}, Ljava/util/Iterator;->remove()V
 
     .line 130
-    invoke-virtual {v2}, Landroid/app/NotificationManagerPlus$DialogPlus;->cancel()V
+    invoke-virtual {v2}, Landroid/app/Dialog;->cancel()V
 
     goto :goto_0
 
@@ -676,7 +676,7 @@
 
     move-result-object v14
 
-    invoke-virtual {v9, v14}, Landroid/app/NotificationManagerPlus$DialogPlus;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {v9, v14}, Landroid/app/AlertDialog;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 154
     const-string v14, "mediatek.intent.extra.content.text"
@@ -687,7 +687,7 @@
 
     move-result-object v14
 
-    invoke-virtual {v9, v14}, Landroid/app/NotificationManagerPlus$DialogPlus;->setMessage(Ljava/lang/CharSequence;)V
+    invoke-virtual {v9, v14}, Landroid/app/AlertDialog;->setMessage(Ljava/lang/CharSequence;)V
 
     .line 155
     move-object/from16 v0, p0
@@ -721,7 +721,7 @@
 
     move-object/from16 v0, v16
 
-    invoke-virtual {v9, v14, v15, v0}, Landroid/app/NotificationManagerPlus$DialogPlus;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {v9, v14, v15, v0}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     .line 166
     :cond_b
@@ -757,7 +757,7 @@
 
     move-object/from16 v0, v16
 
-    invoke-virtual {v9, v14, v15, v0}, Landroid/app/NotificationManagerPlus$DialogPlus;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {v9, v14, v15, v0}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     .line 177
     :cond_c
@@ -793,7 +793,7 @@
 
     move-object/from16 v0, v16
 
-    invoke-virtual {v9, v14, v15, v0}, Landroid/app/NotificationManagerPlus$DialogPlus;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {v9, v14, v15, v0}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     .line 188
     :cond_d
@@ -822,7 +822,7 @@
 
     iget-object v14, v14, Landroid/app/NotificationManagerPlus$Parameters;->mOnCancelListener:Landroid/content/DialogInterface$OnCancelListener;
 
-    invoke-virtual {v9, v14}, Landroid/app/NotificationManagerPlus$DialogPlus;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
+    invoke-virtual {v9, v14}, Landroid/app/Dialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
     .line 206
     :cond_e
@@ -831,23 +831,23 @@
 
     iget-object v14, v0, Landroid/app/NotificationManagerPlus;->mOnDismissListener:Landroid/content/DialogInterface$OnDismissListener;
 
-    invoke-virtual {v9, v14}, Landroid/app/NotificationManagerPlus$DialogPlus;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+    invoke-virtual {v9, v14}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
     .line 207
     move-object/from16 v0, p0
 
     iget-object v14, v0, Landroid/app/NotificationManagerPlus;->mOnShowListener:Landroid/content/DialogInterface$OnShowListener;
 
-    invoke-virtual {v9, v14}, Landroid/app/NotificationManagerPlus$DialogPlus;->setOnShowListener(Landroid/content/DialogInterface$OnShowListener;)V
+    invoke-virtual {v9, v14}, Landroid/app/Dialog;->setOnShowListener(Landroid/content/DialogInterface$OnShowListener;)V
 
     .line 208
-    invoke-virtual {v9}, Landroid/app/NotificationManagerPlus$DialogPlus;->show()V
+    invoke-virtual {v9}, Landroid/app/Dialog;->show()V
 
     .line 209
     if-eqz v3, :cond_f
 
     .line 210
-    invoke-virtual {v3}, Landroid/app/NotificationManagerPlus$DialogPlus;->dismiss()V
+    invoke-virtual {v3}, Landroid/app/Dialog;->dismiss()V
 
     .line 213
     :cond_f
@@ -930,7 +930,7 @@
 
     move-object/from16 v0, v16
 
-    invoke-virtual {v9, v14, v15, v0}, Landroid/app/NotificationManagerPlus$DialogPlus;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {v9, v14, v15, v0}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     goto/16 :goto_1
 
@@ -978,7 +978,7 @@
 
     move-object/from16 v0, v16
 
-    invoke-virtual {v9, v14, v15, v0}, Landroid/app/NotificationManagerPlus$DialogPlus;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {v9, v14, v15, v0}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     goto/16 :goto_2
 
@@ -1026,7 +1026,7 @@
 
     move-object/from16 v0, v16
 
-    invoke-virtual {v9, v14, v15, v0}, Landroid/app/NotificationManagerPlus$DialogPlus;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {v9, v14, v15, v0}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     goto/16 :goto_3
 
@@ -1087,7 +1087,7 @@
 
     move-result-object v14
 
-    invoke-virtual {v9, v14}, Landroid/app/NotificationManagerPlus$DialogPlus;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
+    invoke-virtual {v9, v14}, Landroid/app/Dialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
     goto/16 :goto_4
 .end method
@@ -1188,7 +1188,7 @@
     if-eqz v2, :cond_0
 
     .line 414
-    invoke-virtual {v0}, Landroid/app/NotificationManagerPlus$DialogPlus;->cancel()V
+    invoke-virtual {v0}, Landroid/app/Dialog;->cancel()V
 
     goto :goto_0
 
@@ -1319,7 +1319,7 @@
     if-eqz v2, :cond_0
 
     .line 443
-    invoke-virtual {v0}, Landroid/app/NotificationManagerPlus$DialogPlus;->dismiss()V
+    invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
 
     goto :goto_0
 

@@ -34,7 +34,7 @@
 
     .prologue
     .line 210
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 211
     iput p1, p0, Lcom/android/bluetooth/pbap/ContactStruct$EmailData;->type:I

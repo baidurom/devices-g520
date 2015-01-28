@@ -43,7 +43,7 @@
     .line 810
     iput-object p1, p0, Lcom/android/gallery3d/app/PhotoDataAdapter$ScreenNailJob;->this$0:Lcom/android/gallery3d/app/PhotoDataAdapter;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 811
     iput-object p2, p0, Lcom/android/gallery3d/app/PhotoDataAdapter$ScreenNailJob;->mItem:Lcom/android/gallery3d/data/MediaItem;

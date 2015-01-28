@@ -83,7 +83,7 @@
     :cond_0
     const-string v1, "android.media.effect.effects.RotateEffect"
 
-    invoke-virtual {p0, v1}, Lcom/android/gallery3d/photoeditor/filters/RotateFilter;->getEffect(Ljava/lang/String;)Landroid/media/effect/Effect;
+    invoke-virtual {p0, v1}, Lcom/android/gallery3d/photoeditor/filters/Filter;->getEffect(Ljava/lang/String;)Landroid/media/effect/Effect;
 
     move-result-object v0
 

@@ -313,7 +313,7 @@
     .line 228
     sget-object v6, Landroid/net/UsbDataStateTracker$1;->$SwitchMap$com$android$internal$telephony$Phone$DataState:[I
 
-    invoke-virtual {v5}, Lcom/android/internal/telephony/Phone$DataState;->ordinal()I
+    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
 
     move-result v8
 

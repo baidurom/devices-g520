@@ -25,7 +25,7 @@
     invoke-super {p0, p1}, Lcom/android/gallery3d/app/PickerActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 30
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/DialogPicker;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v4
 
@@ -39,10 +39,10 @@
 
     move-result v4
 
-    invoke-virtual {p0, v4}, Lcom/android/gallery3d/app/DialogPicker;->setTitle(I)V
+    invoke-virtual {p0, v4}, Landroid/app/Activity;->setTitle(I)V
 
     .line 32
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/DialogPicker;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -72,7 +72,7 @@
     .line 37
     const-string v4, "media-path"
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/DialogPicker;->getDataManager()Lcom/android/gallery3d/data/DataManager;
+    invoke-virtual {p0}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->getDataManager()Lcom/android/gallery3d/data/DataManager;
 
     move-result-object v5
 
@@ -83,7 +83,7 @@
     invoke-virtual {v0, v4, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 39
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/DialogPicker;->getStateManager()Lcom/android/gallery3d/app/StateManager;
+    invoke-virtual {p0}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->getStateManager()Lcom/android/gallery3d/app/StateManager;
 
     move-result-object v4
 

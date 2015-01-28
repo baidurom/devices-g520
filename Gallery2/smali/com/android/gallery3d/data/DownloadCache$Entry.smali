@@ -33,7 +33,7 @@
     .line 254
     iput-object p1, p0, Lcom/android/gallery3d/data/DownloadCache$Entry;->this$0:Lcom/android/gallery3d/data/DownloadCache;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 255
     iput-wide p2, p0, Lcom/android/gallery3d/data/DownloadCache$Entry;->mId:J

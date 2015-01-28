@@ -3,8 +3,8 @@
 .source "FaceView.java"
 
 # interfaces
-.implements Lcom/android/camera/ui/FocusIndicator;
 .implements Lcom/android/camera/Camera$OnOrientationListener;
+.implements Lcom/android/camera/ui/FocusIndicator;
 
 
 # static fields
@@ -83,7 +83,7 @@
     iput-object v0, p0, Lcom/android/camera/ui/FaceView;->mRect:Landroid/graphics/RectF;
 
     .line 58
-    invoke-virtual {p0}, Lcom/android/camera/ui/FaceView;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -96,7 +96,7 @@
     iput-object v0, p0, Lcom/android/camera/ui/FaceView;->mDrawableFocusing:Landroid/graphics/drawable/Drawable;
 
     .line 59
-    invoke-virtual {p0}, Lcom/android/camera/ui/FaceView;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -109,7 +109,7 @@
     iput-object v0, p0, Lcom/android/camera/ui/FaceView;->mDrawableFocused:Landroid/graphics/drawable/Drawable;
 
     .line 60
-    invoke-virtual {p0}, Lcom/android/camera/ui/FaceView;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -122,7 +122,7 @@
     iput-object v0, p0, Lcom/android/camera/ui/FaceView;->mDrawableFocusFailed:Landroid/graphics/drawable/Drawable;
 
     .line 61
-    invoke-virtual {p0}, Lcom/android/camera/ui/FaceView;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -166,7 +166,7 @@
     iput-object v0, p0, Lcom/android/camera/ui/FaceView;->mFaces:[Landroid/hardware/Camera$Face;
 
     .line 122
-    invoke-virtual {p0}, Lcom/android/camera/ui/FaceView;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     .line 123
     return-void
@@ -261,11 +261,11 @@
 
     iget v3, p0, Lcom/android/camera/ui/FaceView;->mDisplayOrientation:I
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/FaceView;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v4
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/FaceView;->getHeight()I
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result v5
 
@@ -416,7 +416,7 @@
     iput p1, p0, Lcom/android/camera/ui/FaceView;->mOrientation:I
 
     .line 181
-    invoke-virtual {p0}, Lcom/android/camera/ui/FaceView;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     .line 182
     return-void
@@ -440,7 +440,7 @@
 
     .prologue
     .line 185
-    invoke-virtual {p0}, Lcom/android/camera/ui/FaceView;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -560,7 +560,7 @@
 
     .line 75
     :cond_2
-    invoke-virtual {p0}, Lcom/android/camera/ui/FaceView;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     goto :goto_0
 .end method
@@ -629,7 +629,7 @@
     iput-object v0, p0, Lcom/android/camera/ui/FaceView;->mFaceIndicator:Landroid/graphics/drawable/Drawable;
 
     .line 113
-    invoke-virtual {p0}, Lcom/android/camera/ui/FaceView;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     .line 114
     return-void
@@ -645,7 +645,7 @@
     iput-object v0, p0, Lcom/android/camera/ui/FaceView;->mFaceIndicator:Landroid/graphics/drawable/Drawable;
 
     .line 99
-    invoke-virtual {p0}, Lcom/android/camera/ui/FaceView;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     .line 100
     return-void
@@ -662,7 +662,7 @@
     iput-object v0, p0, Lcom/android/camera/ui/FaceView;->mFaceIndicator:Landroid/graphics/drawable/Drawable;
 
     .line 106
-    invoke-virtual {p0}, Lcom/android/camera/ui/FaceView;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     .line 107
     return-void

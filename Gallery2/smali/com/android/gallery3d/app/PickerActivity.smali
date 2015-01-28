@@ -37,7 +37,7 @@
 
     if-ne v0, v1, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/PickerActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 89
     :cond_0
@@ -55,7 +55,7 @@
     invoke-super {p0, p1}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 42
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/PickerActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -72,18 +72,18 @@
     .line 45
     const/16 v2, 0x8
 
-    invoke-virtual {p0, v2}, Lcom/android/gallery3d/app/PickerActivity;->requestWindowFeature(I)Z
+    invoke-virtual {p0, v2}, Landroid/app/Activity;->requestWindowFeature(I)Z
 
     .line 46
     const/16 v2, 0x9
 
-    invoke-virtual {p0, v2}, Lcom/android/gallery3d/app/PickerActivity;->requestWindowFeature(I)Z
+    invoke-virtual {p0, v2}, Landroid/app/Activity;->requestWindowFeature(I)Z
 
     .line 49
     :cond_0
     const v2, 0x7f040015
 
-    invoke-virtual {p0, v2}, Lcom/android/gallery3d/app/PickerActivity;->setContentView(I)V
+    invoke-virtual {p0, v2}, Lcom/android/gallery3d/app/AbstractGalleryActivity;->setContentView(I)V
 
     .line 51
     if-eqz v0, :cond_1
@@ -91,7 +91,7 @@
     .line 54
     const v2, 0x7f0b001a
 
-    invoke-virtual {p0, v2}, Lcom/android/gallery3d/app/PickerActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -105,7 +105,7 @@
     .line 58
     const v2, 0x7f0b001e
 
-    invoke-virtual {p0, v2}, Lcom/android/gallery3d/app/PickerActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -124,7 +124,7 @@
 
     .prologue
     .line 72
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/PickerActivity;->getMenuInflater()Landroid/view/MenuInflater;
+    invoke-virtual {p0}, Landroid/app/Activity;->getMenuInflater()Landroid/view/MenuInflater;
 
     move-result-object v0
 
@@ -155,7 +155,7 @@
     if-ne v0, v1, :cond_0
 
     .line 80
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/PickerActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 81
     const/4 v0, 0x1

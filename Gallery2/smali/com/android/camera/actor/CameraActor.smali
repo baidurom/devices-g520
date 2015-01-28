@@ -22,7 +22,7 @@
 
     .prologue
     .line 37
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 38
     iput-object p1, p0, Lcom/android/camera/actor/CameraActor;->mContext:Lcom/android/camera/Camera;
@@ -295,7 +295,7 @@
     .line 198
     iget-object v2, p0, Lcom/android/camera/actor/CameraActor;->mContext:Lcom/android/camera/Camera;
 
-    invoke-virtual {v2}, Lcom/android/camera/Camera;->getIntent()Landroid/content/Intent;
+    invoke-virtual {v2}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 

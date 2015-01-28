@@ -92,7 +92,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/ImageView;->invalidate()V
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
     goto :goto_0
 
@@ -223,7 +223,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/ImageView;->invalidate()V
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
     goto/16 :goto_0
 

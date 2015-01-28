@@ -47,7 +47,7 @@
     const/4 v0, 0x0
 
     .line 61
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 62
     iput v0, p0, Landroid/telephony/SmsMemoryStatus;->mUsed:I
@@ -66,7 +66,7 @@
 
     .prologue
     .line 66
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 67
     iput p1, p0, Landroid/telephony/SmsMemoryStatus;->mUsed:I

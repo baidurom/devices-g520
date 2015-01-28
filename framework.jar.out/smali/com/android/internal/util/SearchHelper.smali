@@ -24,6 +24,8 @@
 
 .field private static final SEMIVIEW_DATA:Ljava/lang/String; = "Data"
 
+.field private static final SEMIVIEW_KEY_HOSTAPPNAME:Ljava/lang/String; = "HostAppName"
+
 .field private static final SEMIVIEW_STYLE:Ljava/lang/String; = "Style"
 
 .field private static final SEMIVIEW_TOUCH_POINT_X:Ljava/lang/String; = "Touch_Point_X"
@@ -52,7 +54,7 @@
     .locals 0
 
     .prologue
-    .line 16
+    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -66,10 +68,10 @@
     .parameter "startPointerY"
 
     .prologue
-    .line 57
+    .line 59
     const/16 v5, 0xe
 
-    .line 58
+    .line 60
     .local v5, style:I
     const/4 v4, 0x2
 
@@ -87,7 +89,7 @@
 
     invoke-static/range {v0 .. v7}, Lcom/android/internal/util/SearchHelper;->startSearch(Landroid/content/Context;Ljava/lang/String;IIIIILjava/lang/String;)V
 
-    .line 60
+    .line 62
     return-void
 .end method
 
@@ -100,10 +102,10 @@
     .parameter "type"
 
     .prologue
-    .line 73
+    .line 75
     const/16 v5, 0xe
 
-    .line 74
+    .line 76
     .local v5, style:I
     const/4 v6, 0x3
 
@@ -121,12 +123,12 @@
 
     invoke-static/range {v0 .. v7}, Lcom/android/internal/util/SearchHelper;->startSearch(Landroid/content/Context;Ljava/lang/String;IIIIILjava/lang/String;)V
 
-    .line 76
+    .line 78
     return-void
 .end method
 
 .method public static startSearch(Landroid/content/Context;Ljava/lang/String;IIIIILjava/lang/String;)V
-    .locals 2
+    .locals 4
     .parameter "context"
     .parameter "searchText"
     .parameter "startPointerX"
@@ -137,89 +139,111 @@
     .parameter "callAppId"
 
     .prologue
-    .line 92
+    .line 94
     if-eqz p1, :cond_0
 
-    .line 93
+    .line 95
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 96
+    .line 98
     :cond_0
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v1
+    move-result v3
 
-    if-eqz v1, :cond_2
+    if-eqz v3, :cond_2
 
-    .line 115
+    .line 123
     :cond_1
     :goto_0
     return-void
 
-    .line 100
-    :cond_2
-    new-instance v0, Landroid/content/Intent;
-
-    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
-
-    .line 101
-    .local v0, intent:Landroid/content/Intent;
-    const-string v1, "android.intent.action.QUICKVIEW"
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
     .line 102
-    const-string v1, "Data"
+    :cond_2
+    new-instance v2, Landroid/content/Intent;
 
-    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
     .line 103
-    const-string v1, "Type"
+    .local v2, intent:Landroid/content/Intent;
+    const-string v3, "android.intent.action.QUICKVIEW"
 
-    invoke-virtual {v0, v1, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    invoke-virtual {v2, v3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     .line 104
-    const-string v1, "Style"
+    const-string v3, "Data"
 
-    invoke-virtual {v0, v1, p5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    invoke-virtual {v2, v3, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 105
-    const-string v1, "AnimType"
+    const-string v3, "Type"
 
-    invoke-virtual {v0, v1, p6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    invoke-virtual {v2, v3, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 106
-    const-string v1, "CallAppID"
+    const-string v3, "Style"
 
-    invoke-virtual {v0, v1, p7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v2, v3, p5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 107
-    if-nez p2, :cond_3
+    const-string v3, "AnimType"
 
-    if-eqz p3, :cond_4
+    invoke-virtual {v2, v3, p6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 108
-    :cond_3
-    const-string v1, "Touch_Point_X"
+    const-string v3, "CallAppID"
 
-    invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    invoke-virtual {v2, v3, p7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 109
-    const-string v1, "Touch_Point_Y"
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
-    invoke-virtual {v0, v1, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    move-result-object v0
+
+    .line 110
+    .local v0, appInfo:Landroid/content/pm/ApplicationInfo;
+    const-string v1, ""
+
+    .line 111
+    .local v1, appPackageName:Ljava/lang/String;
+    if-eqz v0, :cond_3
 
     .line 112
+    iget-object v1, v0, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    .line 114
+    :cond_3
+    const-string v3, "HostAppName"
+
+    invoke-virtual {v2, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 115
+    if-nez p2, :cond_4
+
+    if-eqz p3, :cond_5
+
+    .line 116
     :cond_4
-    invoke-virtual {p0, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+    const-string v3, "Touch_Point_X"
 
-    move-result-object v1
+    invoke-virtual {v2, v3, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    if-nez v1, :cond_1
+    .line 117
+    const-string v3, "Touch_Point_Y"
 
-    .line 113
+    invoke-virtual {v2, v3, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 120
+    :cond_5
+    invoke-virtual {p0, v2}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+
+    move-result-object v3
+
+    if-nez v3, :cond_1
+
+    .line 121
     invoke-static {p0, p1}, Lcom/android/internal/util/SearchHelper;->useBaiduSearch(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_0
@@ -231,55 +255,55 @@
     .parameter "searchText"
 
     .prologue
-    .line 119
+    .line 127
     :try_start_0
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 120
+    .line 128
     .local v1, intent:Landroid/content/Intent;
     const-string v2, "android.intent.category.DEFAULT"
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 121
+    .line 129
     const-string v2, "com.baidu.searchbox.action.SEARCH"
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 122
+    .line 130
     const/high16 v2, 0x1000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 123
+    .line 131
     const-string v2, "key_value"
 
     invoke-virtual {v1, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 124
+    .line 132
     const-string v2, "BROWSER_RESTART"
 
     const/4 v3, 0x1
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 125
+    .line 133
     invoke-virtual {p0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 129
+    .line 137
     .end local v1           #intent:Landroid/content/Intent;
     :goto_0
     return-void
 
-    .line 126
+    .line 134
     :catch_0
     move-exception v0
 
-    .line 127
+    .line 135
     .local v0, e:Landroid/content/ActivityNotFoundException;
     invoke-static {p0, p1}, Lcom/android/internal/util/SearchHelper;->useBrowerSearch(Landroid/content/Context;Ljava/lang/String;)V
 
@@ -298,7 +322,7 @@
 
     const/4 v6, 0x0
 
-    .line 132
+    .line 140
     new-array v4, v4, [Ljava/lang/Object;
 
     const-string v5, " "
@@ -309,7 +333,7 @@
 
     move-result-object v2
 
-    .line 134
+    .line 142
     .local v2, url:Ljava/lang/String;
     const v4, #string@search_baidu_web#t
 
@@ -334,7 +358,7 @@
 
     move-result-object v2
 
-    .line 141
+    .line 149
     :goto_0
     :try_start_1
     new-instance v3, Landroid/content/Intent;
@@ -347,43 +371,43 @@
 
     invoke-direct {v3, v4, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 142
+    .line 150
     .local v3, webSearchIntent:Landroid/content/Intent;
     const-string v4, "android.intent.category.BROWSABLE"
 
     invoke-virtual {v3, v4}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 143
+    .line 151
     const/high16 v4, 0x1000
 
     invoke-virtual {v3, v4}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 144
+    .line 152
     invoke-virtual {p0, v3}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
     :try_end_1
     .catch Landroid/content/ActivityNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 148
+    .line 156
     .end local v3           #webSearchIntent:Landroid/content/Intent;
     :goto_1
     return-void
 
-    .line 136
+    .line 144
     :catch_0
     move-exception v1
 
-    .line 137
+    .line 145
     .local v1, ex:Ljava/io/UnsupportedEncodingException;
     invoke-virtual {v1}, Ljava/io/UnsupportedEncodingException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 145
+    .line 153
     .end local v1           #ex:Ljava/io/UnsupportedEncodingException;
     :catch_1
     move-exception v0
 
-    .line 146
+    .line 154
     .local v0, ee:Landroid/content/ActivityNotFoundException;
     invoke-virtual {v0}, Landroid/content/ActivityNotFoundException;->printStackTrace()V
 

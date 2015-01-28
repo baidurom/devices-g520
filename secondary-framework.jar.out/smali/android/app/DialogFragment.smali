@@ -160,7 +160,7 @@
     if-ltz v1, :cond_2
 
     .line 283
-    invoke-virtual {p0}, Landroid/app/DialogFragment;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v1
 
@@ -177,7 +177,7 @@
 
     .line 287
     :cond_2
-    invoke-virtual {p0}, Landroid/app/DialogFragment;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v1
 
@@ -479,7 +479,7 @@
 
     .line 464
     :cond_1
-    invoke-virtual {p0}, Landroid/app/DialogFragment;->getView()Landroid/view/View;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getView()Landroid/view/View;
 
     move-result-object v1
 
@@ -513,7 +513,7 @@
     :cond_3
     iget-object v2, p0, Landroid/app/DialogFragment;->mDialog:Landroid/app/Dialog;
 
-    invoke-virtual {p0}, Landroid/app/DialogFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -694,7 +694,7 @@
     .line 440
     new-instance v0, Landroid/app/Dialog;
 
-    invoke-virtual {p0}, Landroid/app/DialogFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 

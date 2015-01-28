@@ -20,7 +20,7 @@
 
     .prologue
     .line 34
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 35
     iput-object p1, p0, Lcom/mediatek/gallery3d/gif/GifDecoderWrapper;->mGifDecoder:Lcom/mediatek/common/gifdecoder/IGifDecoder;

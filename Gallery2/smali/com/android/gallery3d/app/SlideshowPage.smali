@@ -374,7 +374,7 @@
 
     move-result-object v8
 
-    invoke-virtual {p0, v13, v8}, Lcom/android/gallery3d/app/SlideshowPage;->setStateResult(ILandroid/content/Intent;)V
+    invoke-virtual {p0, v13, v8}, Lcom/android/gallery3d/app/ActivityState;->setStateResult(ILandroid/content/Intent;)V
 
     .line 238
     :goto_1
@@ -468,7 +468,7 @@
 
     move-result-object v8
 
-    invoke-virtual {p0, v13, v8}, Lcom/android/gallery3d/app/SlideshowPage;->setStateResult(ILandroid/content/Intent;)V
+    invoke-virtual {p0, v13, v8}, Lcom/android/gallery3d/app/ActivityState;->setStateResult(ILandroid/content/Intent;)V
 
     goto :goto_1
 
@@ -519,7 +519,7 @@
     .line 243
     iget-object v0, p0, Lcom/android/gallery3d/app/SlideshowPage;->mRootPane:Lcom/android/gallery3d/ui/GLView;
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/app/SlideshowPage;->setContentPane(Lcom/android/gallery3d/ui/GLView;)V
+    invoke-virtual {p0, v0}, Lcom/android/gallery3d/app/ActivityState;->setContentPane(Lcom/android/gallery3d/ui/GLView;)V
 
     .line 244
     return-void
@@ -597,7 +597,7 @@
 
     iget-object v4, v0, Lcom/android/gallery3d/app/SlideshowPage$Slide;->item:Lcom/android/gallery3d/data/MediaItem;
 
-    invoke-virtual {v4}, Lcom/android/gallery3d/data/MediaItem;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {v4}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v4
 
@@ -617,7 +617,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p0, v1, v2}, Lcom/android/gallery3d/app/SlideshowPage;->setStateResult(ILandroid/content/Intent;)V
+    invoke-virtual {p0, v1, v2}, Lcom/android/gallery3d/app/ActivityState;->setStateResult(ILandroid/content/Intent;)V
 
     .line 172
     iget-object v1, p0, Lcom/android/gallery3d/app/SlideshowPage;->mHandler:Landroid/os/Handler;

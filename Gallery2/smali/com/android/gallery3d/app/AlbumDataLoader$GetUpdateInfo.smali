@@ -43,7 +43,7 @@
     .line 230
     iput-object p1, p0, Lcom/android/gallery3d/app/AlbumDataLoader$GetUpdateInfo;->this$0:Lcom/android/gallery3d/app/AlbumDataLoader;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 231
     iput-wide p2, p0, Lcom/android/gallery3d/app/AlbumDataLoader$GetUpdateInfo;->mVersion:J

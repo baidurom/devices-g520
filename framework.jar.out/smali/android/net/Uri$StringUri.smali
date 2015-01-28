@@ -891,7 +891,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/net/Uri$Part;->getDecoded()Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/net/Uri$AbstractPart;->getDecoded()Ljava/lang/String;
 
     move-result-object v0
 
@@ -987,7 +987,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/net/Uri$Part;->getDecoded()Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/net/Uri$AbstractPart;->getDecoded()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1003,7 +1003,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/net/Uri$PathPart;->getDecoded()Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/net/Uri$AbstractPart;->getDecoded()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1044,7 +1044,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/net/Uri$Part;->getDecoded()Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/net/Uri$AbstractPart;->getDecoded()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1104,7 +1104,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/net/Uri$Part;->getDecoded()Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/net/Uri$AbstractPart;->getDecoded()Ljava/lang/String;
 
     move-result-object v0
 

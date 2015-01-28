@@ -98,7 +98,7 @@
     .line 103
     iget-object v0, p0, Lcom/android/gallery3d/app/MovieActivity$1;->this$0:Lcom/android/gallery3d/app/MovieActivity;
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/app/MovieActivity;->finish()V
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
     .line 105
     :cond_0

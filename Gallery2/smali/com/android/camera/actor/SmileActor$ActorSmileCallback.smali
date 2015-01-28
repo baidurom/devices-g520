@@ -30,7 +30,7 @@
     .line 132
     iput-object p1, p0, Lcom/android/camera/actor/SmileActor$ActorSmileCallback;->this$0:Lcom/android/camera/actor/SmileActor;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -128,7 +128,7 @@
     .line 143
     iget-object v0, p0, Lcom/android/camera/actor/SmileActor$ActorSmileCallback;->this$0:Lcom/android/camera/actor/SmileActor;
 
-    invoke-virtual {v0}, Lcom/android/camera/actor/SmileActor;->capture()Z
+    invoke-virtual {v0}, Lcom/android/camera/actor/PhotoActor;->capture()Z
 
     .line 144
     iget-object v0, p0, Lcom/android/camera/actor/SmileActor$ActorSmileCallback;->this$0:Lcom/android/camera/actor/SmileActor;

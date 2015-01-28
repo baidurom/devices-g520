@@ -71,7 +71,7 @@
     .line 100
     iget-object v2, p0, Lcom/mediatek/bluetooth/pan/BluetoothPanAlert$2;->this$0:Lcom/mediatek/bluetooth/pan/BluetoothPanAlert;
 
-    invoke-virtual {v2}, Lcom/mediatek/bluetooth/pan/BluetoothPanAlert;->finish()V
+    invoke-virtual {v2}, Landroid/app/Activity;->finish()V
 
     .line 103
     .end local v1           #state:I

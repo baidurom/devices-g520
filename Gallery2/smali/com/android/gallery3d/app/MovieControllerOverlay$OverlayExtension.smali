@@ -40,7 +40,7 @@
     .line 571
     iput-object p1, p0, Lcom/android/gallery3d/app/MovieControllerOverlay$OverlayExtension;->this$0:Lcom/android/gallery3d/app/MovieControllerOverlay;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 656
     const/4 v0, 0x1
@@ -478,7 +478,7 @@
     .local v0, msgId:I
     iget-object v2, p0, Lcom/android/gallery3d/app/MovieControllerOverlay$OverlayExtension;->this$0:Lcom/android/gallery3d/app/MovieControllerOverlay;
 
-    invoke-virtual {v2}, Lcom/android/gallery3d/app/MovieControllerOverlay;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v2}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -701,12 +701,12 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/android/gallery3d/app/MovieControllerOverlay;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 680
     iget-object v0, p0, Lcom/android/gallery3d/app/MovieControllerOverlay$OverlayExtension;->this$0:Lcom/android/gallery3d/app/MovieControllerOverlay;
 
-    invoke-virtual {v0, v2}, Lcom/android/gallery3d/app/MovieControllerOverlay;->setBackgroundColor(I)V
+    invoke-virtual {v0, v2}, Landroid/view/View;->setBackgroundColor(I)V
 
     .line 690
     :cond_0
@@ -758,7 +758,7 @@
 
     const v1, 0x7f020106
 
-    invoke-virtual {v0, v1}, Lcom/android/gallery3d/app/MovieControllerOverlay;->setBackgroundResource(I)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
     .line 683
     if-eqz p2, :cond_0
@@ -766,7 +766,7 @@
     .line 684
     iget-object v0, p0, Lcom/android/gallery3d/app/MovieControllerOverlay$OverlayExtension;->this$0:Lcom/android/gallery3d/app/MovieControllerOverlay;
 
-    invoke-virtual {v0, v2}, Lcom/android/gallery3d/app/MovieControllerOverlay;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_0
 .end method
@@ -879,7 +879,7 @@
     :goto_0
     iget-object v1, p0, Lcom/android/gallery3d/app/MovieControllerOverlay$OverlayExtension;->this$0:Lcom/android/gallery3d/app/MovieControllerOverlay;
 
-    invoke-virtual {v1}, Lcom/android/gallery3d/app/MovieControllerOverlay;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -1087,7 +1087,7 @@
     .local v0, msgId:I
     iget-object v2, p0, Lcom/android/gallery3d/app/MovieControllerOverlay$OverlayExtension;->this$0:Lcom/android/gallery3d/app/MovieControllerOverlay;
 
-    invoke-virtual {v2}, Lcom/android/gallery3d/app/MovieControllerOverlay;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v2}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -1221,7 +1221,7 @@
     .local v0, msgId:I
     iget-object v2, p0, Lcom/android/gallery3d/app/MovieControllerOverlay$OverlayExtension;->this$0:Lcom/android/gallery3d/app/MovieControllerOverlay;
 
-    invoke-virtual {v2}, Lcom/android/gallery3d/app/MovieControllerOverlay;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v2}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -1320,7 +1320,7 @@
     .local v0, msgId:I
     iget-object v2, p0, Lcom/android/gallery3d/app/MovieControllerOverlay$OverlayExtension;->this$0:Lcom/android/gallery3d/app/MovieControllerOverlay;
 
-    invoke-virtual {v2}, Lcom/android/gallery3d/app/MovieControllerOverlay;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v2}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 

@@ -65,7 +65,7 @@
 
     .prologue
     .line 54
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 46
     new-instance v0, Landroid/graphics/Rect;
@@ -294,7 +294,7 @@
 
     .line 153
     :sswitch_0
-    invoke-virtual {p1}, Landroid/view/ViewGroup;->isLayoutRtl()Z
+    invoke-virtual {p1}, Landroid/view/View;->isLayoutRtl()Z
 
     move-result v0
 
@@ -313,7 +313,7 @@
 
     .line 141
     :sswitch_2
-    invoke-virtual {p1}, Landroid/view/ViewGroup;->isLayoutRtl()Z
+    invoke-virtual {p1}, Landroid/view/View;->isLayoutRtl()Z
 
     move-result v0
 
@@ -446,7 +446,7 @@
     invoke-virtual {v5}, Ljava/util/ArrayList;->clear()V
 
     .line 100
-    invoke-virtual {p1, v5, p4}, Landroid/view/ViewGroup;->addFocusables(Ljava/util/ArrayList;I)V
+    invoke-virtual {p1, v5, p4}, Landroid/view/View;->addFocusables(Ljava/util/ArrayList;I)V
 
     .line 101
     invoke-virtual {v5}, Ljava/util/ArrayList;->isEmpty()Z
@@ -662,7 +662,7 @@
     .prologue
     .line 287
     .local p2, focusables:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/view/View;>;"
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->isLayoutRtl()Z
+    invoke-virtual {p0}, Landroid/view/View;->isLayoutRtl()Z
 
     move-result v0
 
@@ -705,7 +705,7 @@
     .prologue
     .line 267
     .local p2, focusables:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/view/View;>;"
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->isLayoutRtl()Z
+    invoke-virtual {p0}, Landroid/view/View;->isLayoutRtl()Z
 
     move-result v0
 
@@ -1291,11 +1291,11 @@
 
     .prologue
     .line 214
-    invoke-virtual {p1}, Landroid/view/ViewGroup;->getScrollY()I
+    invoke-virtual {p1}, Landroid/view/View;->getScrollY()I
 
     move-result v2
 
-    invoke-virtual {p1}, Landroid/view/ViewGroup;->getHeight()I
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
     move-result v3
 
@@ -1303,11 +1303,11 @@
 
     .line 215
     .local v0, rootBottom:I
-    invoke-virtual {p1}, Landroid/view/ViewGroup;->getScrollX()I
+    invoke-virtual {p1}, Landroid/view/View;->getScrollX()I
 
     move-result v2
 
-    invoke-virtual {p1}, Landroid/view/ViewGroup;->getWidth()I
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result v3
 
@@ -1328,13 +1328,13 @@
 
     .prologue
     .line 220
-    invoke-virtual {p1}, Landroid/view/ViewGroup;->getScrollY()I
+    invoke-virtual {p1}, Landroid/view/View;->getScrollY()I
 
     move-result v1
 
     .line 221
     .local v1, rootTop:I
-    invoke-virtual {p1}, Landroid/view/ViewGroup;->getScrollX()I
+    invoke-virtual {p1}, Landroid/view/View;->getScrollX()I
 
     move-result v0
 
@@ -1505,7 +1505,7 @@
 
     .prologue
     .line 550
-    invoke-virtual/range {p1 .. p1}, Landroid/view/ViewGroup;->getTouchables()Ljava/util/ArrayList;
+    invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getTouchables()Ljava/util/ArrayList;
 
     move-result-object v12
 

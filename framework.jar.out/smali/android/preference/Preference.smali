@@ -3,8 +3,8 @@
 .source "Preference.java"
 
 # interfaces
-.implements Ljava/lang/Comparable;
 .implements Landroid/preference/OnDependencyChangeListener;
+.implements Ljava/lang/Comparable;
 
 
 # annotations

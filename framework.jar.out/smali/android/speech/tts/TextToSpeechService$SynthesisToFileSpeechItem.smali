@@ -291,7 +291,7 @@
 
     .prologue
     .line 658
-    invoke-virtual {p0}, Landroid/speech/tts/TextToSpeechService$SynthesisToFileSpeechItem;->dispatchOnStart()V
+    invoke-virtual {p0}, Landroid/speech/tts/TextToSpeechService$SpeechItem;->dispatchOnStart()V
 
     .line 659
     invoke-super {p0}, Landroid/speech/tts/TextToSpeechService$SynthesisSpeechItem;->playImpl()I
@@ -303,7 +303,7 @@
     if-nez v0, :cond_0
 
     .line 661
-    invoke-virtual {p0}, Landroid/speech/tts/TextToSpeechService$SynthesisToFileSpeechItem;->dispatchOnDone()V
+    invoke-virtual {p0}, Landroid/speech/tts/TextToSpeechService$SpeechItem;->dispatchOnDone()V
 
     .line 665
     :goto_0
@@ -311,7 +311,7 @@
 
     .line 663
     :cond_0
-    invoke-virtual {p0}, Landroid/speech/tts/TextToSpeechService$SynthesisToFileSpeechItem;->dispatchOnError()V
+    invoke-virtual {p0}, Landroid/speech/tts/TextToSpeechService$SpeechItem;->dispatchOnError()V
 
     goto :goto_0
 .end method

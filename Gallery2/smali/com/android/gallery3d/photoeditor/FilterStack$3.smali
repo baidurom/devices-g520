@@ -35,7 +35,7 @@
 
     iput-object p2, p0, Lcom/android/gallery3d/photoeditor/FilterStack$3;->val$callback:Lcom/android/gallery3d/photoeditor/OnDoneBitmapCallback;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -54,7 +54,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v3}, Ljava/util/Stack;->size()I
+    invoke-virtual {v3}, Ljava/util/Vector;->size()I
 
     move-result v4
 
@@ -106,7 +106,7 @@
 
     invoke-direct {v4, p0, v0}, Lcom/android/gallery3d/photoeditor/FilterStack$3$1;-><init>(Lcom/android/gallery3d/photoeditor/FilterStack$3;Landroid/graphics/Bitmap;)V
 
-    invoke-virtual {v3, v4}, Lcom/android/gallery3d/photoeditor/PhotoView;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v3, v4}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
     .line 174
     return-void

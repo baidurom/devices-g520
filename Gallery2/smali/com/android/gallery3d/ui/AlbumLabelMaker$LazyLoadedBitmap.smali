@@ -32,7 +32,7 @@
     .line 111
     iput-object p1, p0, Lcom/android/gallery3d/ui/AlbumLabelMaker$LazyLoadedBitmap;->this$0:Lcom/android/gallery3d/ui/AlbumLabelMaker;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 112
     iput p2, p0, Lcom/android/gallery3d/ui/AlbumLabelMaker$LazyLoadedBitmap;->mResId:I

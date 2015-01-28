@@ -36,7 +36,7 @@
 
     .line 41
     .local v0, filter:Lcom/android/gallery3d/photoeditor/filters/RotateFilter;
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/RotateAction;->disableFilterOutput()V
+    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/actions/EffectAction;->disableFilterOutput()V
 
     .line 43
     iget-object v2, p0, Lcom/android/gallery3d/photoeditor/actions/EffectAction;->toolKit:Lcom/android/gallery3d/photoeditor/actions/EffectToolKit;

@@ -88,11 +88,11 @@
     .line 116
     new-instance v0, Lcom/android/internal/app/AlertController;
 
-    invoke-virtual {p0}, Landroid/app/AlertDialog;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object v2
 
@@ -126,15 +126,15 @@
     invoke-virtual {v0}, Landroid/view/Window;->alwaysReadCloseOnTouchAttr()V
 
     .line 122
-    invoke-virtual {p0, p2}, Landroid/app/AlertDialog;->setCancelable(Z)V
+    invoke-virtual {p0, p2}, Landroid/app/Dialog;->setCancelable(Z)V
 
     .line 123
-    invoke-virtual {p0, p3}, Landroid/app/AlertDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
+    invoke-virtual {p0, p3}, Landroid/app/Dialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
     .line 124
     new-instance v0, Lcom/android/internal/app/AlertController;
 
-    invoke-virtual {p0}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object v1
 

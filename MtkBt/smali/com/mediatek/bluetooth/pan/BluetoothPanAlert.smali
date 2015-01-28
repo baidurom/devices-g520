@@ -116,7 +116,7 @@
     const/4 v5, 0x0
 
     .line 176
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/pan/BluetoothPanAlert;->getLayoutInflater()Landroid/view/LayoutInflater;
+    invoke-virtual {p0}, Landroid/app/Activity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v2
 
@@ -171,7 +171,7 @@
 
     aput-object v4, v3, v5
 
-    invoke-virtual {p0, v2, v3}, Lcom/mediatek/bluetooth/pan/BluetoothPanAlert;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v2, v3}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -207,7 +207,7 @@
 
     aput-object v4, v3, v5
 
-    invoke-virtual {p0, v2, v3}, Lcom/mediatek/bluetooth/pan/BluetoothPanAlert;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v2, v3}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -234,7 +234,7 @@
 
     aput-object v4, v3, v5
 
-    invoke-virtual {p0, v2, v3}, Lcom/mediatek/bluetooth/pan/BluetoothPanAlert;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v2, v3}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -261,7 +261,7 @@
 
     aput-object v4, v3, v5
 
-    invoke-virtual {p0, v2, v3}, Lcom/mediatek/bluetooth/pan/BluetoothPanAlert;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v2, v3}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -320,7 +320,7 @@
     sput-boolean v4, Lcom/mediatek/bluetooth/pan/BluetoothPanAlert;->sOnlyOnce:Z
 
     .line 226
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/pan/BluetoothPanAlert;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 227
     return-void
@@ -368,7 +368,7 @@
 
     .line 223
     .local v0, e:Landroid/os/RemoteException;
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 
@@ -480,7 +480,7 @@
     if-eqz v2, :cond_8
 
     .line 113
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/pan/BluetoothPanAlert;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -554,7 +554,7 @@
 
     .line 125
     :cond_1
-    iget-object v1, p0, Lcom/mediatek/bluetooth/pan/BluetoothPanAlert;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
+    iget-object v1, p0, Lcom/android/internal/app/AlertActivity;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
 
     .line 126
     .local v1, p:Lcom/android/internal/app/AlertController$AlertParams;
@@ -581,7 +581,7 @@
     .line 129
     const v2, 0x7f050041
 
-    invoke-virtual {p0, v2}, Lcom/mediatek/bluetooth/pan/BluetoothPanAlert;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -600,7 +600,7 @@
     :cond_3
     const v2, 0x7f050049
 
-    invoke-virtual {p0, v2}, Lcom/mediatek/bluetooth/pan/BluetoothPanAlert;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -612,7 +612,7 @@
     .line 142
     const v2, 0x7f05004a
 
-    invoke-virtual {p0, v2}, Lcom/mediatek/bluetooth/pan/BluetoothPanAlert;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -627,7 +627,7 @@
     sput-boolean v2, Lcom/mediatek/bluetooth/pan/BluetoothPanAlert;->sOnlyOnce:Z
 
     .line 145
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/pan/BluetoothPanAlert;->setupAlert()V
+    invoke-virtual {p0}, Lcom/android/internal/app/AlertActivity;->setupAlert()V
 
     .line 147
     iget-object v2, p0, Lcom/mediatek/bluetooth/pan/BluetoothPanAlert;->mReceiver:Landroid/content/BroadcastReceiver;
@@ -638,7 +638,7 @@
 
     invoke-direct {v3, v4}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0, v2, v3}, Lcom/mediatek/bluetooth/pan/BluetoothPanAlert;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v2, v3}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 152
     .end local v0           #data:Landroid/os/Bundle;
@@ -669,7 +669,7 @@
     .line 131
     const v2, 0x7f050042
 
-    invoke-virtual {p0, v2}, Lcom/mediatek/bluetooth/pan/BluetoothPanAlert;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -692,7 +692,7 @@
     .line 133
     const v2, 0x7f050045
 
-    invoke-virtual {p0, v2}, Lcom/mediatek/bluetooth/pan/BluetoothPanAlert;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -715,7 +715,7 @@
     .line 135
     const v2, 0x7f050046
 
-    invoke-virtual {p0, v2}, Lcom/mediatek/bluetooth/pan/BluetoothPanAlert;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -727,10 +727,10 @@
     .end local v0           #data:Landroid/os/Bundle;
     .end local v1           #p:Lcom/android/internal/app/AlertController$AlertParams;
     :cond_8
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/pan/BluetoothPanAlert;->dismiss()V
+    invoke-virtual {p0}, Lcom/android/internal/app/AlertActivity;->dismiss()V
 
     .line 150
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/pan/BluetoothPanAlert;->cancel()V
+    invoke-virtual {p0}, Lcom/android/internal/app/AlertActivity;->cancel()V
 
     goto :goto_2
 .end method
@@ -740,7 +740,7 @@
 
     .prologue
     .line 241
-    invoke-super {p0}, Lcom/android/internal/app/AlertActivity;->onDestroy()V
+    invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
     .line 243
     const-string v0, "[BT][PAN][BluetoothPanAlert]"
@@ -752,7 +752,7 @@
     .line 245
     iget-object v0, p0, Lcom/mediatek/bluetooth/pan/BluetoothPanAlert;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/pan/BluetoothPanAlert;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 246
     return-void
@@ -816,7 +816,7 @@
     sput-boolean v1, Lcom/mediatek/bluetooth/pan/BluetoothPanAlert;->sOnlyOnce:Z
 
     .line 278
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/pan/BluetoothPanAlert;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 280
     :cond_3
@@ -832,7 +832,7 @@
 
     .line 274
     .local v0, e:Landroid/os/RemoteException;
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 .end method
@@ -842,7 +842,7 @@
 
     .prologue
     .line 250
-    invoke-super {p0}, Lcom/android/internal/app/AlertActivity;->onPause()V
+    invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
     .line 252
     const-string v0, "[BT][PAN][BluetoothPanAlert]"
@@ -862,7 +862,7 @@
     const/4 v3, 0x1
 
     .line 157
-    invoke-super {p0}, Lcom/android/internal/app/AlertActivity;->onStart()V
+    invoke-super {p0}, Landroid/app/Activity;->onStart()V
 
     .line 159
     const-string v1, "[BT][PAN][BluetoothPanAlert]"
@@ -890,7 +890,7 @@
     invoke-virtual {v1}, Landroid/widget/Toast;->show()V
 
     .line 164
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/pan/BluetoothPanAlert;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 173
     :goto_0
@@ -915,13 +915,13 @@
 
     iget-object v2, p0, Lcom/mediatek/bluetooth/pan/BluetoothPanAlert;->mPanAction:Landroid/content/ServiceConnection;
 
-    invoke-virtual {p0, v1, v2, v3}, Lcom/mediatek/bluetooth/pan/BluetoothPanAlert;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
+    invoke-virtual {p0, v1, v2, v3}, Landroid/content/ContextWrapper;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
     goto :goto_0
 
     .line 171
     :cond_1
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/pan/BluetoothPanAlert;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 .end method
@@ -931,7 +931,7 @@
 
     .prologue
     .line 258
-    invoke-super {p0}, Lcom/android/internal/app/AlertActivity;->onStop()V
+    invoke-super {p0}, Landroid/app/Activity;->onStop()V
 
     .line 260
     const-string v0, "[BT][PAN][BluetoothPanAlert]"
@@ -948,7 +948,7 @@
     .line 263
     iget-object v0, p0, Lcom/mediatek/bluetooth/pan/BluetoothPanAlert;->mPanAction:Landroid/content/ServiceConnection;
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/bluetooth/pan/BluetoothPanAlert;->unbindService(Landroid/content/ServiceConnection;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->unbindService(Landroid/content/ServiceConnection;)V
 
     .line 264
     return-void

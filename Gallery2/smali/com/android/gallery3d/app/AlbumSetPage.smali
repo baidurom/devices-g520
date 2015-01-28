@@ -3,10 +3,10 @@
 .source "AlbumSetPage.java"
 
 # interfaces
-.implements Lcom/android/gallery3d/ui/SelectionManager$SelectionListener;
-.implements Lcom/android/gallery3d/app/GalleryActionBar$ClusterRunner;
 .implements Lcom/android/gallery3d/app/EyePosition$EyePositionListener;
+.implements Lcom/android/gallery3d/app/GalleryActionBar$ClusterRunner;
 .implements Lcom/android/gallery3d/data/MediaSet$SyncListener;
+.implements Lcom/android/gallery3d/ui/SelectionManager$SelectionListener;
 
 
 # annotations
@@ -589,7 +589,7 @@
     .line 768
     iget-object v1, p0, Lcom/android/gallery3d/app/AlbumSetPage;->emptySetTxt:Landroid/widget/TextView;
 
-    invoke-virtual {v1, p1}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v1, p1}, Landroid/view/View;->setVisibility(I)V
 
     .line 769
     const-string v1, "AlbumSetPage"
@@ -795,7 +795,7 @@
     .line 630
     iget-object v0, p0, Lcom/android/gallery3d/app/AlbumSetPage;->mSlotView:Lcom/android/gallery3d/ui/SlotView;
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/ui/SlotView;->invalidate()V
+    invoke-virtual {v0}, Lcom/android/gallery3d/ui/GLView;->invalidate()V
 
     .line 631
     return-void
@@ -1105,7 +1105,7 @@
     if-eqz v6, :cond_0
 
     .line 223
-    invoke-virtual {v6}, Lcom/android/gallery3d/data/MediaSet;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {v6}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v7
 
@@ -1117,7 +1117,7 @@
     .local v4, mediaPath:Ljava/lang/String;
     new-instance v2, Landroid/os/Bundle;
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/AlbumSetPage;->getData()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/android/gallery3d/app/ActivityState;->getData()Landroid/os/Bundle;
 
     move-result-object v7
 
@@ -1162,7 +1162,7 @@
 
     const-string v8, "album-path"
 
-    invoke-virtual {v6}, Lcom/android/gallery3d/data/MediaSet;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {v6}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v9
 
@@ -1240,7 +1240,7 @@
 
     if-nez v7, :cond_6
 
-    invoke-virtual {v6}, Lcom/android/gallery3d/data/MediaSet;->getSupportedOperations()I
+    invoke-virtual {v6}, Lcom/android/gallery3d/data/MediaObject;->getSupportedOperations()I
 
     move-result v7
 
@@ -1393,7 +1393,7 @@
     .line 287
     iget-object v3, p0, Lcom/android/gallery3d/app/AlbumSetPage;->mMediaSet:Lcom/android/gallery3d/data/MediaSet;
 
-    invoke-virtual {v3}, Lcom/android/gallery3d/data/MediaSet;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {v3}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v3
 
@@ -1434,7 +1434,7 @@
     .line 290
     new-instance v1, Landroid/os/Bundle;
 
-    invoke-virtual {p0}, Lcom/android/gallery3d/app/AlbumSetPage;->getData()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/android/gallery3d/app/ActivityState;->getData()Landroid/os/Bundle;
 
     move-result-object v3
 
@@ -1825,7 +1825,7 @@
 
     iget-object v11, p0, Lcom/android/gallery3d/app/AlbumSetPage;->mMediaSet:Lcom/android/gallery3d/data/MediaSet;
 
-    invoke-virtual {v11}, Lcom/android/gallery3d/data/MediaSet;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {v11}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v11
 
@@ -2039,7 +2039,7 @@
     :cond_1
     const v3, 0x7f0c0224
 
-    invoke-virtual {v0, v3}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {v0, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v3
 
@@ -2108,7 +2108,7 @@
     .line 280
     iget-object v1, p0, Lcom/android/gallery3d/app/AlbumSetPage;->mSelectionManager:Lcom/android/gallery3d/ui/SelectionManager;
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/data/MediaSet;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {v0}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v2
 
@@ -2122,7 +2122,7 @@
     .line 282
     iget-object v1, p0, Lcom/android/gallery3d/app/AlbumSetPage;->mSlotView:Lcom/android/gallery3d/ui/SlotView;
 
-    invoke-virtual {v1}, Lcom/android/gallery3d/ui/SlotView;->invalidate()V
+    invoke-virtual {v1}, Lcom/android/gallery3d/ui/GLView;->invalidate()V
 
     goto :goto_0
 .end method
@@ -2212,7 +2212,7 @@
     .line 392
     iget-object v0, p0, Lcom/android/gallery3d/app/AlbumSetPage;->mRootPane:Lcom/android/gallery3d/ui/GLView;
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/app/AlbumSetPage;->setContentPane(Lcom/android/gallery3d/ui/GLView;)V
+    invoke-virtual {p0, v0}, Lcom/android/gallery3d/app/ActivityState;->setContentPane(Lcom/android/gallery3d/ui/GLView;)V
 
     .line 395
     invoke-direct {p0, v1}, Lcom/android/gallery3d/app/AlbumSetPage;->setLoadingBit(I)V
@@ -2442,7 +2442,7 @@
     .line 206
     iget-object v1, p0, Lcom/android/gallery3d/app/AlbumSetPage;->mSelectionManager:Lcom/android/gallery3d/ui/SelectionManager;
 
-    invoke-virtual {v0}, Lcom/android/gallery3d/data/MediaSet;->getPath()Lcom/android/gallery3d/data/Path;
+    invoke-virtual {v0}, Lcom/android/gallery3d/data/MediaObject;->getPath()Lcom/android/gallery3d/data/Path;
 
     move-result-object v2
 
@@ -2451,7 +2451,7 @@
     .line 207
     iget-object v1, p0, Lcom/android/gallery3d/app/AlbumSetPage;->mSlotView:Lcom/android/gallery3d/ui/SlotView;
 
-    invoke-virtual {v1}, Lcom/android/gallery3d/ui/SlotView;->invalidate()V
+    invoke-virtual {v1}, Lcom/android/gallery3d/ui/GLView;->invalidate()V
 
     goto :goto_0
 

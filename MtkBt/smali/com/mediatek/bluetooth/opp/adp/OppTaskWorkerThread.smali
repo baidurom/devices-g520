@@ -69,7 +69,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/adp/OppTaskWorkerThread;->getName()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Thread;->getName()Ljava/lang/String;
 
     move-result-object v1
 
@@ -128,7 +128,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/adp/OppTaskWorkerThread;->getName()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Thread;->getName()Ljava/lang/String;
 
     move-result-object v2
 
@@ -150,7 +150,7 @@
     .line 64
     :cond_0
     :goto_0
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/adp/OppTaskWorkerThread;->isInterrupted()Z
+    invoke-virtual {p0}, Ljava/lang/Thread;->isInterrupted()Z
 
     move-result v1
 
@@ -168,7 +168,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/adp/OppTaskWorkerThread;->getName()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Thread;->getName()Ljava/lang/String;
 
     move-result-object v2
 
@@ -208,7 +208,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/adp/OppTaskWorkerThread;->getName()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Thread;->getName()Ljava/lang/String;
 
     move-result-object v2
 
@@ -242,7 +242,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/adp/OppTaskWorkerThread;->getName()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Thread;->getName()Ljava/lang/String;
 
     move-result-object v2
 
@@ -278,7 +278,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/adp/OppTaskWorkerThread;->getName()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Thread;->getName()Ljava/lang/String;
 
     move-result-object v2
 
@@ -318,7 +318,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/adp/OppTaskWorkerThread;->getName()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Thread;->getName()Ljava/lang/String;
 
     move-result-object v2
 
@@ -332,7 +332,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0}, Ljava/lang/InterruptedException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v2
 
@@ -359,7 +359,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/mediatek/bluetooth/opp/adp/OppTaskWorkerThread;->getName()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Thread;->getName()Ljava/lang/String;
 
     move-result-object v2
 

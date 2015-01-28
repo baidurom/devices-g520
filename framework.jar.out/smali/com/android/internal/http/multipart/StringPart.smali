@@ -124,7 +124,7 @@
     .line 114
     iget-object v0, p0, Lcom/android/internal/http/multipart/StringPart;->value:Ljava/lang/String;
 
-    invoke-virtual {p0}, Lcom/android/internal/http/multipart/StringPart;->getCharSet()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/internal/http/multipart/PartBase;->getCharSet()Ljava/lang/String;
 
     move-result-object v1
 

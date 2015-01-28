@@ -51,7 +51,7 @@
     .prologue
     .line 1441
     .local p2, dataList:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1442
     iput-object p1, p0, Lcom/android/vcard/VCardEntry$AndroidCustomData;->mMimeType:Ljava/lang/String;

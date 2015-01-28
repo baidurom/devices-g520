@@ -151,7 +151,7 @@
     .line 57
     sget-object v0, Landroid/widget/AppSecurityPermissions$State;->$VALUES:[Landroid/widget/AppSecurityPermissions$State;
 
-    invoke-virtual {v0}, [Landroid/widget/AppSecurityPermissions$State;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

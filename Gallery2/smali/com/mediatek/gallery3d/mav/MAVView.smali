@@ -3,8 +3,8 @@
 .source "MAVView.java"
 
 # interfaces
-.implements Landroid/view/GestureDetector$OnGestureListener;
 .implements Landroid/hardware/SensorEventListener;
+.implements Landroid/view/GestureDetector$OnGestureListener;
 
 
 # annotations
@@ -548,7 +548,7 @@
     const/4 v3, 0x0
 
     .line 214
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/mav/MAVView;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v2
 
@@ -556,7 +556,7 @@
 
     .line 215
     .local v1, viewWidth:F
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/mav/MAVView;->getHeight()I
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result v2
 
@@ -601,7 +601,7 @@
     .line 315
     sget-object v0, Landroid/widget/ImageView$ScaleType;->MATRIX:Landroid/widget/ImageView$ScaleType;
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/mav/MAVView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
+    invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
     move-object v0, p1
 
@@ -776,7 +776,7 @@
     .line 228
     iget-object v10, p0, Lcom/mediatek/gallery3d/mav/MAVView;->mBaseMatrix:Landroid/graphics/Matrix;
 
-    invoke-virtual {p0, v10}, Lcom/mediatek/gallery3d/mav/MAVView;->setImageMatrix(Landroid/graphics/Matrix;)V
+    invoke-virtual {p0, v10}, Landroid/widget/ImageView;->setImageMatrix(Landroid/graphics/Matrix;)V
 
     .line 271
     :goto_0
@@ -784,7 +784,7 @@
 
     .line 232
     :cond_1
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/mav/MAVView;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v10
 
@@ -792,7 +792,7 @@
 
     .line 233
     .local v7, viewWidth:F
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/mav/MAVView;->getHeight()I
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result v10
 
@@ -936,7 +936,7 @@
     .line 270
     iget-object v10, p0, Lcom/mediatek/gallery3d/mav/MAVView;->mBaseMatrix:Landroid/graphics/Matrix;
 
-    invoke-virtual {p0, v10}, Lcom/mediatek/gallery3d/mav/MAVView;->setImageMatrix(Landroid/graphics/Matrix;)V
+    invoke-virtual {p0, v10}, Landroid/widget/ImageView;->setImageMatrix(Landroid/graphics/Matrix;)V
 
     goto :goto_0
 
@@ -1258,7 +1258,7 @@
     if-eqz v3, :cond_0
 
     .line 594
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/mav/MAVView;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     .line 596
     :cond_0
@@ -1317,7 +1317,7 @@
     if-eqz v3, :cond_2
 
     .line 606
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/mav/MAVView;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     .line 608
     :cond_2
@@ -1536,7 +1536,7 @@
 
     .prologue
     .line 51
-    invoke-super/range {p0 .. p5}, Landroid/widget/ImageView;->onLayout(ZIIII)V
+    invoke-super/range {p0 .. p5}, Landroid/view/View;->onLayout(ZIIII)V
 
     .line 52
     iget-object v0, p0, Lcom/mediatek/gallery3d/mav/MAVView;->mBitmapArr:[Landroid/graphics/Bitmap;
@@ -1851,7 +1851,7 @@
     invoke-virtual {v1, v2}, Landroid/widget/EdgeEffect;->onPull(F)V
 
     .line 541
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/mav/MAVView;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     goto :goto_1
 
@@ -1939,7 +1939,7 @@
     invoke-virtual {v1, v2}, Landroid/widget/EdgeEffect;->onPull(F)V
 
     .line 547
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/mav/MAVView;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     goto/16 :goto_1
 .end method

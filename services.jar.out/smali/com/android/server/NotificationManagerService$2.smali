@@ -307,7 +307,6 @@
     #setter for: Lcom/android/server/NotificationManagerService;->mScreenOn:Z
     invoke-static {v11, v12}, Lcom/android/server/NotificationManagerService;->access$1102(Lcom/android/server/NotificationManagerService;Z)Z
 
-    .line 553
     iget-object v11, p0, Lcom/android/server/NotificationManagerService$2;->this$0:Lcom/android/server/NotificationManagerService;
 
     #calls: Lcom/android/server/NotificationManagerService;->updateNotificationPulse()V
@@ -315,7 +314,6 @@
 
     goto :goto_3
 
-    .line 555
     :cond_9
     const-string v11, "android.intent.action.PHONE_STATE"
 
@@ -325,6 +323,7 @@
 
     if-eqz v11, :cond_a
 
+    .line 553
     .line 556
     iget-object v11, p0, Lcom/android/server/NotificationManagerService$2;->this$0:Lcom/android/server/NotificationManagerService;
 

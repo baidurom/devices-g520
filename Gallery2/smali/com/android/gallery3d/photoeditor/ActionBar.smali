@@ -26,7 +26,7 @@
     .line 69
     const v3, 0x7f0b0079
 
-    invoke-virtual {p0, v3}, Lcom/android/gallery3d/photoeditor/ActionBar;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
@@ -36,7 +36,7 @@
 
     if-eqz v3, :cond_3
 
-    invoke-virtual {p0, v4}, Lcom/android/gallery3d/photoeditor/ActionBar;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
@@ -53,7 +53,7 @@
     :goto_0
     const v3, 0x7f0b007b
 
-    invoke-virtual {p0, v3}, Lcom/android/gallery3d/photoeditor/ActionBar;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -84,7 +84,7 @@
 
     .line 75
     :cond_1
-    invoke-virtual {v2}, Landroid/widget/ViewSwitcher;->showNext()V
+    invoke-virtual {v2}, Landroid/widget/ViewAnimator;->showNext()V
 
     .line 77
     :cond_2
@@ -109,7 +109,7 @@
     .line 96
     const v0, 0x7f0b007c
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/photoeditor/ActionBar;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -137,7 +137,7 @@
     .line 92
     const v0, 0x7f0b0076
 
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/photoeditor/ActionBar;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -188,7 +188,7 @@
 
     .prologue
     .line 42
-    invoke-super/range {p0 .. p5}, Lcom/android/gallery3d/photoeditor/RestorableView;->onLayout(ZIIII)V
+    invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
 
     .line 45
     const/4 v1, 0x0
@@ -199,14 +199,14 @@
 
     .local v0, i:I
     :goto_0
-    invoke-virtual {p0}, Lcom/android/gallery3d/photoeditor/ActionBar;->getChildCount()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v2
 
     if-ge v0, v2, :cond_0
 
     .line 47
-    invoke-virtual {p0, v0}, Lcom/android/gallery3d/photoeditor/ActionBar;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -225,7 +225,7 @@
     :cond_0
     const v2, 0x7f0b0078
 
-    invoke-virtual {p0, v2}, Lcom/android/gallery3d/photoeditor/ActionBar;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
@@ -257,17 +257,17 @@
     .line 80
     const v0, 0x7f0b0079
 
-    invoke-virtual {p0, v0, p1}, Lcom/android/gallery3d/photoeditor/ActionBar;->setViewEnabled(IZ)V
+    invoke-virtual {p0, v0, p1}, Lcom/android/gallery3d/photoeditor/RestorableView;->setViewEnabled(IZ)V
 
     .line 81
     const v0, 0x7f0b007a
 
-    invoke-virtual {p0, v0, p2}, Lcom/android/gallery3d/photoeditor/ActionBar;->setViewEnabled(IZ)V
+    invoke-virtual {p0, v0, p2}, Lcom/android/gallery3d/photoeditor/RestorableView;->setViewEnabled(IZ)V
 
     .line 82
     const v0, 0x7f0b007c
 
-    invoke-virtual {p0, v0, p1}, Lcom/android/gallery3d/photoeditor/ActionBar;->setViewEnabled(IZ)V
+    invoke-virtual {p0, v0, p1}, Lcom/android/gallery3d/photoeditor/RestorableView;->setViewEnabled(IZ)V
 
     .line 83
     invoke-direct {p0}, Lcom/android/gallery3d/photoeditor/ActionBar;->showSaveOrShare()V
@@ -284,7 +284,7 @@
     .line 87
     const v0, 0x7f0b007c
 
-    invoke-virtual {p0, v0, p1}, Lcom/android/gallery3d/photoeditor/ActionBar;->setViewEnabled(IZ)V
+    invoke-virtual {p0, v0, p1}, Lcom/android/gallery3d/photoeditor/RestorableView;->setViewEnabled(IZ)V
 
     .line 88
     invoke-direct {p0}, Lcom/android/gallery3d/photoeditor/ActionBar;->showSaveOrShare()V

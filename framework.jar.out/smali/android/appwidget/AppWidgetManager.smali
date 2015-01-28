@@ -90,7 +90,7 @@
 
     .prologue
     .line 307
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 308
     iput-object p1, p0, Landroid/appwidget/AppWidgetManager;->mContext:Landroid/content/Context;
@@ -161,7 +161,7 @@
     if-eqz v1, :cond_1
 
     .line 297
-    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v2
 

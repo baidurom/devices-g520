@@ -151,10 +151,10 @@
     .line 95
     const v0, 0x7f0c018a
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/video/DetailDialog;->setTitle(I)V
+    invoke-virtual {p0, v0}, Landroid/app/Dialog;->setTitle(I)V
 
     .line 96
-    invoke-virtual {p0}, Lcom/mediatek/gallery3d/video/DetailDialog;->getLayoutInflater()Landroid/view/LayoutInflater;
+    invoke-virtual {p0}, Landroid/app/Dialog;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v0
 
@@ -176,7 +176,7 @@
     .line 98
     iget-object v0, p0, Lcom/mediatek/gallery3d/video/DetailDialog;->mView:Landroid/view/View;
 
-    invoke-virtual {p0, v0}, Lcom/mediatek/gallery3d/video/DetailDialog;->setView(Landroid/view/View;)V
+    invoke-virtual {p0, v0}, Landroid/app/AlertDialog;->setView(Landroid/view/View;)V
 
     .line 100
     :cond_0
@@ -286,7 +286,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0, v0, v1, p0}, Lcom/mediatek/gallery3d/video/DetailDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {p0, v0, v1, p0}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     .line 108
     invoke-super {p0, p1}, Landroid/app/AlertDialog;->onCreate(Landroid/os/Bundle;)V

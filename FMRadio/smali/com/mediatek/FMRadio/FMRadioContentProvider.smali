@@ -117,7 +117,7 @@
     .local v0, rows:I
     iget-object v2, p0, Lcom/mediatek/FMRadio/FMRadioContentProvider;->mDbHelper:Lcom/mediatek/FMRadio/FMRadioContentProvider$DatabaseHelper;
 
-    invoke-virtual {v2}, Lcom/mediatek/FMRadio/FMRadioContentProvider$DatabaseHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v2}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v2
 
@@ -170,7 +170,7 @@
     move-result v0
 
     .line 133
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRadioContentProvider;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -238,7 +238,7 @@
     move-result v0
 
     .line 144
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRadioContentProvider;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -321,7 +321,7 @@
     .local v2, rowUri:Landroid/net/Uri;
     iget-object v5, p0, Lcom/mediatek/FMRadio/FMRadioContentProvider;->mDbHelper:Lcom/mediatek/FMRadio/FMRadioContentProvider$DatabaseHelper;
 
-    invoke-virtual {v5}, Lcom/mediatek/FMRadio/FMRadioContentProvider$DatabaseHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v5}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v5
 
@@ -434,7 +434,7 @@
     move-result-object v2
 
     .line 181
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRadioContentProvider;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object v5
 
@@ -459,7 +459,7 @@
     .line 190
     new-instance v0, Lcom/mediatek/FMRadio/FMRadioContentProvider$DatabaseHelper;
 
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRadioContentProvider;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -503,7 +503,7 @@
     .local v0, qb:Landroid/database/sqlite/SQLiteQueryBuilder;
     iget-object v2, p0, Lcom/mediatek/FMRadio/FMRadioContentProvider;->mDbHelper:Lcom/mediatek/FMRadio/FMRadioContentProvider$DatabaseHelper;
 
-    invoke-virtual {v2}, Lcom/mediatek/FMRadio/FMRadioContentProvider$DatabaseHelper;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v2}, Landroid/database/sqlite/SQLiteOpenHelper;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v1
 
@@ -580,7 +580,7 @@
     if-eqz v8, :cond_1
 
     .line 217
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRadioContentProvider;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -619,7 +619,7 @@
     .local v0, rows:I
     iget-object v2, p0, Lcom/mediatek/FMRadio/FMRadioContentProvider;->mDbHelper:Lcom/mediatek/FMRadio/FMRadioContentProvider$DatabaseHelper;
 
-    invoke-virtual {v2}, Lcom/mediatek/FMRadio/FMRadioContentProvider$DatabaseHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v2}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v2
 
@@ -672,7 +672,7 @@
     move-result v0
 
     .line 237
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRadioContentProvider;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -740,7 +740,7 @@
     move-result v0
 
     .line 248
-    invoke-virtual {p0}, Lcom/mediatek/FMRadio/FMRadioContentProvider;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object v2
 

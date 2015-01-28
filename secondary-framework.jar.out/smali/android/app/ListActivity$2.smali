@@ -30,7 +30,7 @@
     .line 316
     iput-object p1, p0, Landroid/app/ListActivity$2;->this$0:Landroid/app/ListActivity;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

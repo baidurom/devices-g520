@@ -30,7 +30,7 @@
     .line 1699
     iput-object p1, p0, Lcom/android/gallery3d/app/PhotoPage$15$1;->this$1:Lcom/android/gallery3d/app/PhotoPage$15;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -80,7 +80,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
+    invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
 
     .line 1707
     :cond_0

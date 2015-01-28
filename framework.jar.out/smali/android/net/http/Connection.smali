@@ -104,7 +104,7 @@
     const/4 v1, 0x0
 
     .line 106
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 59
     iput-object v1, p0, Landroid/net/http/Connection;->mHttpClientConnection:Landroid/net/http/AndroidHttpClientConnection;
@@ -169,7 +169,7 @@
     .line 334
     :goto_0
     :try_start_0
-    invoke-virtual {p1}, Ljava/util/LinkedList;->isEmpty()Z
+    invoke-virtual {p1}, Ljava/util/AbstractCollection;->isEmpty()Z
 
     move-result v2
 
@@ -335,7 +335,7 @@
 
     .line 442
     :cond_1
-    invoke-virtual {p3}, Ljava/lang/Exception;->getCause()Ljava/lang/Throwable;
+    invoke-virtual {p3}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
     move-result-object v0
 
@@ -353,7 +353,7 @@
 
     .end local v1           #error:Ljava/lang/String;
     :cond_2
-    invoke-virtual {p3}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+    invoke-virtual {p3}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v1
 

@@ -82,7 +82,7 @@
     const-wide/high16 v5, 0x4024
 
     .line 73
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 63
     const-string v1, "FDTimer"
@@ -114,7 +114,7 @@
 
     sget-object v2, Lcom/android/internal/telephony/gsm/FDTimerType;->ScreenOffLegacyFD:Lcom/android/internal/telephony/gsm/FDTimerType;
 
-    invoke-virtual {v2}, Lcom/android/internal/telephony/gsm/FDTimerType;->ordinal()I
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
 
     move-result v2
 
@@ -150,7 +150,7 @@
 
     sget-object v2, Lcom/android/internal/telephony/gsm/FDTimerType;->ScreenOnLegacyFD:Lcom/android/internal/telephony/gsm/FDTimerType;
 
-    invoke-virtual {v2}, Lcom/android/internal/telephony/gsm/FDTimerType;->ordinal()I
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
 
     move-result v2
 
@@ -186,7 +186,7 @@
 
     sget-object v2, Lcom/android/internal/telephony/gsm/FDTimerType;->ScreenOffR8FD:Lcom/android/internal/telephony/gsm/FDTimerType;
 
-    invoke-virtual {v2}, Lcom/android/internal/telephony/gsm/FDTimerType;->ordinal()I
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
 
     move-result v2
 
@@ -222,7 +222,7 @@
 
     sget-object v2, Lcom/android/internal/telephony/gsm/FDTimerType;->ScreenOnR8FD:Lcom/android/internal/telephony/gsm/FDTimerType;
 
-    invoke-virtual {v2}, Lcom/android/internal/telephony/gsm/FDTimerType;->ordinal()I
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
 
     move-result v2
 
@@ -344,7 +344,7 @@
     .line 88
     sget-object v0, Lcom/android/internal/telephony/gsm/FDTimerType;->SupportedTimerTypes:Lcom/android/internal/telephony/gsm/FDTimerType;
 
-    invoke-virtual {v0}, Lcom/android/internal/telephony/gsm/FDTimerType;->ordinal()I
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v0
 
@@ -442,13 +442,13 @@
 
     sget-object v5, Lcom/android/internal/telephony/gsm/FDModeType;->SET_FD_INACTIVITY_TIMER:Lcom/android/internal/telephony/gsm/FDModeType;
 
-    invoke-virtual {v5}, Lcom/android/internal/telephony/gsm/FDModeType;->ordinal()I
+    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
 
     move-result v5
 
     sget-object v6, Lcom/android/internal/telephony/gsm/FDTimerType;->ScreenOffLegacyFD:Lcom/android/internal/telephony/gsm/FDTimerType;
 
-    invoke-virtual {v6}, Lcom/android/internal/telephony/gsm/FDTimerType;->ordinal()I
+    invoke-virtual {v6}, Ljava/lang/Enum;->ordinal()I
 
     move-result v6
 
@@ -456,7 +456,7 @@
 
     sget-object v8, Lcom/android/internal/telephony/gsm/FDTimerType;->ScreenOffLegacyFD:Lcom/android/internal/telephony/gsm/FDTimerType;
 
-    invoke-virtual {v8}, Lcom/android/internal/telephony/gsm/FDTimerType;->ordinal()I
+    invoke-virtual {v8}, Ljava/lang/Enum;->ordinal()I
 
     move-result v8
 
@@ -475,13 +475,13 @@
 
     sget-object v5, Lcom/android/internal/telephony/gsm/FDModeType;->SET_FD_INACTIVITY_TIMER:Lcom/android/internal/telephony/gsm/FDModeType;
 
-    invoke-virtual {v5}, Lcom/android/internal/telephony/gsm/FDModeType;->ordinal()I
+    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
 
     move-result v5
 
     sget-object v6, Lcom/android/internal/telephony/gsm/FDTimerType;->ScreenOnLegacyFD:Lcom/android/internal/telephony/gsm/FDTimerType;
 
-    invoke-virtual {v6}, Lcom/android/internal/telephony/gsm/FDTimerType;->ordinal()I
+    invoke-virtual {v6}, Ljava/lang/Enum;->ordinal()I
 
     move-result v6
 
@@ -489,7 +489,7 @@
 
     sget-object v8, Lcom/android/internal/telephony/gsm/FDTimerType;->ScreenOnLegacyFD:Lcom/android/internal/telephony/gsm/FDTimerType;
 
-    invoke-virtual {v8}, Lcom/android/internal/telephony/gsm/FDTimerType;->ordinal()I
+    invoke-virtual {v8}, Ljava/lang/Enum;->ordinal()I
 
     move-result v8
 
@@ -508,13 +508,13 @@
 
     sget-object v5, Lcom/android/internal/telephony/gsm/FDModeType;->SET_FD_INACTIVITY_TIMER:Lcom/android/internal/telephony/gsm/FDModeType;
 
-    invoke-virtual {v5}, Lcom/android/internal/telephony/gsm/FDModeType;->ordinal()I
+    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
 
     move-result v5
 
     sget-object v6, Lcom/android/internal/telephony/gsm/FDTimerType;->ScreenOffR8FD:Lcom/android/internal/telephony/gsm/FDTimerType;
 
-    invoke-virtual {v6}, Lcom/android/internal/telephony/gsm/FDTimerType;->ordinal()I
+    invoke-virtual {v6}, Ljava/lang/Enum;->ordinal()I
 
     move-result v6
 
@@ -522,7 +522,7 @@
 
     sget-object v8, Lcom/android/internal/telephony/gsm/FDTimerType;->ScreenOffR8FD:Lcom/android/internal/telephony/gsm/FDTimerType;
 
-    invoke-virtual {v8}, Lcom/android/internal/telephony/gsm/FDTimerType;->ordinal()I
+    invoke-virtual {v8}, Ljava/lang/Enum;->ordinal()I
 
     move-result v8
 
@@ -541,13 +541,13 @@
 
     sget-object v5, Lcom/android/internal/telephony/gsm/FDModeType;->SET_FD_INACTIVITY_TIMER:Lcom/android/internal/telephony/gsm/FDModeType;
 
-    invoke-virtual {v5}, Lcom/android/internal/telephony/gsm/FDModeType;->ordinal()I
+    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
 
     move-result v5
 
     sget-object v6, Lcom/android/internal/telephony/gsm/FDTimerType;->ScreenOnR8FD:Lcom/android/internal/telephony/gsm/FDTimerType;
 
-    invoke-virtual {v6}, Lcom/android/internal/telephony/gsm/FDTimerType;->ordinal()I
+    invoke-virtual {v6}, Ljava/lang/Enum;->ordinal()I
 
     move-result v6
 
@@ -555,7 +555,7 @@
 
     sget-object v8, Lcom/android/internal/telephony/gsm/FDTimerType;->ScreenOnR8FD:Lcom/android/internal/telephony/gsm/FDTimerType;
 
-    invoke-virtual {v8}, Lcom/android/internal/telephony/gsm/FDTimerType;->ordinal()I
+    invoke-virtual {v8}, Ljava/lang/Enum;->ordinal()I
 
     move-result v8
 

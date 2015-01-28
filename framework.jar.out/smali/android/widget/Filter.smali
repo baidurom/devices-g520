@@ -43,12 +43,12 @@
 
     .prologue
     .line 56
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 51
     new-instance v0, Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/widget/Filter;->mLock:Ljava/lang/Object;
 
@@ -177,7 +177,7 @@
 
     .line 106
     .local v4, thread:Landroid/os/HandlerThread;
-    invoke-virtual {v4}, Landroid/os/HandlerThread;->start()V
+    invoke-virtual {v4}, Ljava/lang/Thread;->start()V
 
     .line 107
     new-instance v7, Landroid/widget/Filter$RequestHandler;

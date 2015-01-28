@@ -149,6 +149,10 @@ baidu_modify_jars := framework-yi
 override_property += \
     ro.product.device.alias=G520,g520,hwG520,hwg520
 
+# adjust the audio source value for the call record
+override_property += \
+    ro.call.record.audio_source=1
+
 ##############################################################################
 # The value decides which property you will remove from the build.prop.
 # The default value is nothing.

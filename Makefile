@@ -153,6 +153,10 @@ override_property += \
 override_property += \
     ro.call.record.audio_source=1
 
+# adjust dsdsmode=single for backuprestore
+override_property += \
+    ro.baidu.config.dsdsmode=single
+
 ##############################################################################
 # The value decides which property you will remove from the build.prop.
 # The default value is nothing.

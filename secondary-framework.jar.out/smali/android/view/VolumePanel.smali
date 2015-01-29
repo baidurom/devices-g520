@@ -591,7 +591,7 @@
 
     .prologue
     .line 61
-    invoke-direct {p0}, Landroid/view/VolumePanel;->createSliders()V
+    invoke-virtual {p0}, Landroid/view/VolumePanel;->createSliders()V
 
     return-void
 .end method

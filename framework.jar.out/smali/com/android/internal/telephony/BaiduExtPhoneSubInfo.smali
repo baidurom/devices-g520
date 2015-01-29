@@ -27,6 +27,19 @@
     return-void
 .end method
 
+.method public constructor <init>(Lcom/android/internal/telephony/PhoneSubInfo;I)V
+    .locals 0
+    .parameter "phoneSubInfo"
+    .parameter "simId"
+
+    .prologue
+    .line 67
+    invoke-direct {p0, p1}, Lcom/android/internal/telephony/BaiduExtPhoneSubInfo;-><init>(Lcom/android/internal/telephony/PhoneSubInfo;)V
+
+    .line 68
+    return-void
+.end method
+
 
 # virtual methods
 .method public onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
